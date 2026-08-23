@@ -7,18 +7,20 @@ import { withBase } from "../lib/paths";
 interface Props {
   title: string;
   description?: string;
+  collection?: "grok" | "html";
 }
 
 const {
   title,
   description = "精选 Grok Bot 优质用法，每日更新。非官方案例库。",
+  collection = "grok",
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-collection={collection}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

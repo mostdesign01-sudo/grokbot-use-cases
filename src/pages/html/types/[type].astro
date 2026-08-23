@@ -1,0 +1,39 @@
+---
+import HtmlCard from "../../../components/HtmlCard.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getHtmlByType, uniqueHtmlTypes } from "../../../lib/html";
+import { htmlTypeIntro, htmlTypeLabel } from "../../../lib/html-labels";
+import { withBase } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  return uniqueHtmlTypes().map((type) => ({
+    params: { type },
+    props: { type, items: getHtmlByType(type) },
+  }));
+}
+
+const { type, items } = Astro.props;
+const title = htmlTypeLabel(type);
+---
+
+<BaseLayout collection="html" title={`${title} · HTML 收集`} description={`${title}类型下的公开 HTML 页面。`}>
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="crumb">
+        <a href={withBase("html/types/")}>按类型浏览</a> / {title}
+      </p>
+      <p class="kicker">{type}</p>
+      <h1>{title}</h1>
+      <p class="lede">{htmlTypeIntro(type)} 当前 {items.length} 条。</p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("html/types/")}>全部类型</a>
+        <a class="btn btn-ghost" href={withBase("html/")}>HTML 总览</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="grid">
+        {items.map((item) => <HtmlCard item={item} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

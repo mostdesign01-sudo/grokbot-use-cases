@@ -12,6 +12,22 @@ export const categoryLabels: Record<string, string> = {
   finance: "财务",
   "multi-agent": "多 Agent",
   coding: "编程",
+  ops: "运营",
+};
+
+export const categoryIntros: Record<string, string> = {
+  sales: "销售外呼、CRM 管道、客户跟进与账户运营相关用法。",
+  automation: "定时例行、事件触发与把工作落到真实系统里的自动化。",
+  content: "邮件、视频、网站与 newsletter 等内容产出用法。",
+  engineering: "性能调查、预发复现、升级与工程值班相关用法。",
+  "daily-digest": "晨间摘要、记分板、周报等周期性消化用法。",
+  recruiting: "寻源、候选人研究与只起草外联的招聘用法。",
+  research: "调查包、情报蜂群与带证据的研究用法。",
+  marketing: "投放监控、预算建议与增长团队更新。",
+  finance: "费用对账、发票起草与财务交接。",
+  "multi-agent": "多 Bot 群聊、交接与蜂群协作。",
+  coding: "建站、代码审查与工程工厂相邻用法。",
+  ops: "日常运营与流程卫生相关用法。",
 };
 
 export const sourceTypeLabels: Record<SourceType, string> = {
@@ -31,6 +47,10 @@ export const difficultyLabels: Record<Difficulty, string> = {
 
 export function categoryLabel(value: string): string {
   return categoryLabels[value] ?? value;
+}
+
+export function categoryIntro(value: string): string {
+  return categoryIntros[value] ?? "该类型下收录的 Grok Bot 用法。";
 }
 
 export function sourceTypeLabel(value: SourceType): string {

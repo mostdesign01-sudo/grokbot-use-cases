@@ -1,29 +1,65 @@
 ---
-import { withBase, isCurrentPath } from "../lib/paths";
+import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
 
-const links = [
+const path = Astro.url.pathname;
+const htmlRoot = withBase("html/");
+const isHtml = isSectionPath(path, htmlRoot);
+
+const grokLinks = [
   { href: withBase("/"), label: "首页" },
+  { href: withBase("featured/"), label: "精选" },
+  { href: withBase("latest/"), label: "最新" },
+  { href: withBase("types/"), label: "类型", section: true },
   { href: withBase("cases/"), label: "案例" },
   { href: withBase("docs/"), label: "文档" },
   { href: withBase("changelog/"), label: "更新日志" },
 ];
+
+const htmlLinks = [
+  { href: withBase("html/"), label: "总览" },
+  { href: withBase("html/featured/"), label: "精选" },
+  { href: withBase("html/latest/"), label: "最新" },
+  { href: withBase("html/types/"), label: "类型", section: true },
+];
+
+const links = isHtml ? htmlLinks : grokLinks;
 ---
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href={withBase("/")}>
-      <span class="brand-mark">库</span>
+      <span class="brand-mark">{isHtml ? "H" : "库"}</span>
       <span class="brand-text">
-        <strong>Grok Bot 案例库</strong>
-        <span>每日更新 · 非官方</span>
+        <strong>{isHtml ? "HTML 收集" : "Grok Bot 案例库"}</strong>
+        <span>{isHtml ? "公开网页范例 · 非官方" : "每日更新 · 非官方"}</span>
       </span>
     </a>
-    <nav class="nav" aria-label="主导航">
+    <nav class="collection-tabs" aria-label="内容库">
+      <a
+        class="tab-grok"
+        href={withBase("/")}
+        aria-current={!isHtml ? "page" : undefined}
+      >
+        Grok Bot
+      </a>
+      <a
+        class="tab-html"
+        href={withBase("html/")}
+        aria-current={isHtml ? "page" : undefined}
+      >
+        HTML 收集
+      </a>
+    </nav>
+    <nav class="nav" aria-label="栏目">
       {
         links.map((link) => (
           <a
             href={link.href}
-            aria-current={isCurrentPath(Astro.url.pathname, link.href) ? "page" : undefined}
+            aria-current={(link.section
+              ? isSectionPath(path, link.href)
+              : isCurrentPath(path, link.href))
+              ? "page"
+              : undefined}
           >
             {link.label}
           </a>

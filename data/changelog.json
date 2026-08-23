@@ -4,6 +4,11 @@
       "date": "2026-08-23",
       "title": "v1.0.0 种子数据入库",
       "body": "收录 20 条公开资料中的精选用法，覆盖官方文档与发布稿、社区多 Agent 实践，以及 Cursor Automations 相邻的工程工厂模式。原始记录见 data/cases.json。"
+    },
+    {
+      "date": "2026-08-23",
+      "title": "新增独立「HTML 收集」库",
+      "body": "顶部增加 HTML 收集标签，数据在 data/html-items.json，与 Grok Bot 案例分开。首批收录 12 条可公开访问的演示、模板、组件与工具页。"
     }
   ]
 }

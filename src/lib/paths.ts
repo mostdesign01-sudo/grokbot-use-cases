@@ -10,3 +10,10 @@ export function isCurrentPath(pathname: string, href: string): boolean {
   const normalize = (value: string) => value.replace(/\/+$/, "") || "/";
   return normalize(pathname) === normalize(href);
 }
+
+export function isSectionPath(pathname: string, href: string): boolean {
+  if (isCurrentPath(pathname, href)) return true;
+  const normalize = (value: string) => `${value.replace(/\/+$/, "")}/`;
+  const section = normalize(href);
+  return section !== "/" && normalize(pathname).startsWith(section);
+}
