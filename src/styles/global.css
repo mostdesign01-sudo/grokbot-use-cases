@@ -346,6 +346,66 @@ h3 {
   color: var(--muted);
 }
 
+.section-head a {
+  color: var(--brass);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.collection-hero {
+  padding-bottom: 4px;
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+
+.collection-card .case-card {
+  flex: 1;
+}
+
+.collection-date {
+  margin: 0;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.type-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  text-decoration: none;
+}
+
+.type-chip span {
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.type-chip:hover {
+  border-color: var(--line-strong);
+}
+
+.type-card h3 {
+  margin-top: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

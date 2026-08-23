@@ -1,0 +1,43 @@
+---
+import CaseCard from "../../components/CaseCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCasesByCategory, uniqueCategories } from "../../lib/cases";
+import { categoryIntro, categoryLabel } from "../../lib/labels";
+import { withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return uniqueCategories().map((category) => ({
+    params: { category },
+    props: {
+      category,
+      items: getCasesByCategory(category),
+    },
+  }));
+}
+
+const { category, items } = Astro.props;
+const title = categoryLabel(category);
+---
+
+<BaseLayout title={`${title} · Grok Bot 案例库`} description={`${title}类型下的 Grok Bot 用法收集。`}>
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="crumb">
+        <a href={withBase("types/")}>按类型浏览</a> / {title}
+      </p>
+      <p class="kicker">{category}</p>
+      <h1>{title}</h1>
+      <p class="lede">{categoryIntro(category)} 当前 {items.length} 条，均来自 <code>categories</code> 含「{category}」的记录。</p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("types/")}>全部类型</a>
+        <a class="btn btn-ghost" href={withBase("cases/")}>筛选全部案例</a>
+      </div>
+    </section>
+
+    <section class="section" aria-label={`${title}案例列表`}>
+      <div class="grid">
+        {items.map((item) => <CaseCard caseItem={item} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -62,6 +62,15 @@ export function getFeaturedCases(): CaseItem[] {
   return cases.filter((item) => item.featured);
 }
 
+export function getLatestCases(limit?: number): CaseItem[] {
+  const sorted = [...cases].sort((a, b) => {
+    const byPublished = b.publishedAt.localeCompare(a.publishedAt);
+    if (byPublished !== 0) return byPublished;
+    return b.updatedAt.localeCompare(a.updatedAt);
+  });
+  return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
+}
+
 export function getRelatedCases(current: CaseItem, limit = 3): CaseItem[] {
   return cases
     .filter((item) => item.id !== current.id)
@@ -77,6 +86,19 @@ export function getRelatedCases(current: CaseItem, limit = 3): CaseItem[] {
 
 export function uniqueCategories(): string[] {
   return [...new Set(cases.flatMap((item) => item.categories))].sort();
+}
+
+export function getCasesByCategory(category: string): CaseItem[] {
+  return cases.filter((item) => item.categories.includes(category));
+}
+
+export function getCategoryCollections(): { category: string; count: number }[] {
+  return uniqueCategories()
+    .map((category) => ({
+      category,
+      count: getCasesByCategory(category).length,
+    }))
+    .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category));
 }
 
 export function uniqueSourceTypes(): SourceType[] {

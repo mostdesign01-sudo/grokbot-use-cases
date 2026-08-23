@@ -1,8 +1,11 @@
 ---
-import { withBase, isCurrentPath } from "../lib/paths";
+import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
 
 const links = [
   { href: withBase("/"), label: "首页" },
+  { href: withBase("featured/"), label: "精选" },
+  { href: withBase("latest/"), label: "最新" },
+  { href: withBase("types/"), label: "类型", section: true },
   { href: withBase("cases/"), label: "案例" },
   { href: withBase("docs/"), label: "文档" },
   { href: withBase("changelog/"), label: "更新日志" },
@@ -23,7 +26,11 @@ const links = [
         links.map((link) => (
           <a
             href={link.href}
-            aria-current={isCurrentPath(Astro.url.pathname, link.href) ? "page" : undefined}
+            aria-current={(link.section
+              ? isSectionPath(Astro.url.pathname, link.href)
+              : isCurrentPath(Astro.url.pathname, link.href))
+              ? "page"
+              : undefined}
           >
             {link.label}
           </a>

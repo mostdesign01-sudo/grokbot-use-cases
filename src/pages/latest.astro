@@ -1,0 +1,41 @@
+---
+import CaseCard from "../components/CaseCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getLatestCases } from "../lib/cases";
+import { formatPublishedDate, formatShanghaiDateTime } from "../lib/format";
+import { withBase } from "../lib/paths";
+
+const latest = getLatestCases();
+---
+
+<BaseLayout title="最新案例 · Grok Bot 案例库" description="按公开日期排序的 Grok Bot 用法，最新在前。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Latest</p>
+      <h1>最新案例</h1>
+      <p class="lede">
+        按 <code>publishedAt</code> 再按 <code>updatedAt</code> 从新到旧排列，便于先看最近公开的用法。当前共 {latest.length} 条。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("featured/")}>查看精选</a>
+        <a class="btn btn-ghost" href={withBase("types/")}>按类型浏览</a>
+        <a class="btn btn-ghost" href={withBase("cases/")}>全部案例</a>
+      </div>
+    </section>
+
+    <section class="section" aria-label="最新案例列表">
+      <div class="grid">
+        {
+          latest.map((item) => (
+            <div class="collection-card">
+              <p class="collection-date">
+                发布 {formatPublishedDate(item.publishedAt)} · 校对 {formatShanghaiDateTime(item.updatedAt)}
+              </p>
+              <CaseCard caseItem={item} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

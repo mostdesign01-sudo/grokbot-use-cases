@@ -5,6 +5,9 @@ const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.m
 const requiredPages = [
   "index.html",
   "cases/index.html",
+  "featured/index.html",
+  "latest/index.html",
+  "types/index.html",
   "docs/index.html",
   "changelog/index.html",
   "data.json",
@@ -19,8 +22,17 @@ for (const page of requiredPages) {
   }
 }
 
+const categories = [...new Set(dataset.cases.flatMap((item) => item.categories))];
+
 for (const item of dataset.cases) {
   const path = `cases/${item.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
+for (const category of categories) {
+  const path = `types/${category}/index.html`;
   if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
     missing.push(path);
   }

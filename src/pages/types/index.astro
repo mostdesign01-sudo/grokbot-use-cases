@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCategoryCollections } from "../../lib/cases";
+import { categoryIntro, categoryLabel } from "../../lib/labels";
+import { withBase } from "../../lib/paths";
+
+const collections = getCategoryCollections();
+---
+
+<BaseLayout title="按类型浏览 · Grok Bot 案例库" description="按销售、工程、自动化等类型浏览 Grok Bot 用法。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Types</p>
+      <h1>按类型浏览</h1>
+      <p class="lede">
+        每个类型对应 <code>data/cases.json</code> 里出现过的 <code>categories[]</code> 值，单独生成静态 HTML 收集页。当前 {collections.length} 个类型。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("featured/")}>精选案例</a>
+        <a class="btn btn-ghost" href={withBase("latest/")}>最新案例</a>
+        <a class="btn btn-ghost" href={withBase("cases/")}>全部案例</a>
+      </div>
+    </section>
+
+    <section class="section" aria-label="类型列表">
+      <div class="doc-grid">
+        {
+          collections.map((item) => (
+            <a class="card type-card" href={withBase(`types/${item.category}/`)}>
+              <p class="title-en">{item.category}</p>
+              <h3>{categoryLabel(item.category)}</h3>
+              <p class="summary">{categoryIntro(item.category)}</p>
+              <p class="card-meta">{item.count} 条案例</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

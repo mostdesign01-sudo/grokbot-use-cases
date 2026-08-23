@@ -1,11 +1,15 @@
 ---
 import CaseCard from "../components/CaseCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { cases, getFeaturedCases, meta } from "../lib/cases";
+import { cases, getCategoryCollections, getFeaturedCases, getLatestCases, meta } from "../lib/cases";
 import { formatShanghaiDateTime } from "../lib/format";
+import { categoryLabel } from "../lib/labels";
 import { withBase } from "../lib/paths";
 
 const featured = getFeaturedCases();
+const featuredPreview = featured.slice(0, 6);
+const latestPreview = getLatestCases(6);
+const typeCollections = getCategoryCollections();
 const officialCount = cases.filter((item) => item.sourceType.startsWith("official")).length;
 const communityCount = cases.filter((item) =>
   ["community", "tutorial", "case-study"].includes(item.sourceType),
@@ -23,8 +27,10 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
           Grok Bot 是可以交付真实工作的 AI 同事：自带持久云电脑，能登录你的应用，在工具里把活干完，只在需要审批时回来。本站从公开文档与社区实践中整理可复用的用法，方便对照角色、例行与审批边界。
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href={withBase("cases/")}>浏览全部案例</a>
-          <a class="btn btn-ghost" href={withBase("docs/")}>官方文档</a>
+          <a class="btn btn-primary" href={withBase("featured/")}>精选案例</a>
+          <a class="btn btn-ghost" href={withBase("latest/")}>最新案例</a>
+          <a class="btn btn-ghost" href={withBase("types/")}>按类型</a>
+          <a class="btn btn-ghost" href={withBase("cases/")}>浏览全部</a>
         </div>
         <p class="meta-line">最近更新（Asia/Shanghai）：{updated} · 数据版本 {meta.version} · 共 {meta.count} 条</p>
       </div>
@@ -60,16 +66,49 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="home-featured">
       <div class="section-head">
         <div>
-          <h2>精选案例</h2>
-          <p>适合作为第一个 Bot 或团队协作模板的用法。</p>
+          <h2 id="home-featured">精选</h2>
+          <p>编辑标为 featured 的用法，适合作为第一个 Bot 或团队协作模板。</p>
         </div>
-        <a href={withBase("cases/")}>查看全部 →</a>
+        <a href={withBase("featured/")}>查看全部精选</a>
       </div>
       <div class="grid">
-        {featured.map((item) => <CaseCard caseItem={item} />)}
+        {featuredPreview.map((item) => <CaseCard caseItem={item} />)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="home-latest">
+      <div class="section-head">
+        <div>
+          <h2 id="home-latest">最新</h2>
+          <p>按公开日期从新到旧排列，先看最近收录的用法。</p>
+        </div>
+        <a href={withBase("latest/")}>查看全部最新</a>
+      </div>
+      <div class="grid">
+        {latestPreview.map((item) => <CaseCard caseItem={item} />)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="home-types">
+      <div class="section-head">
+        <div>
+          <h2 id="home-types">按类型</h2>
+          <p>每个类型一页静态 HTML，只列出该 <code>categories</code> 下的案例。</p>
+        </div>
+        <a href={withBase("types/")}>查看全部类型</a>
+      </div>
+      <div class="type-chips" aria-label="类型入口">
+        {
+          typeCollections.map((item) => (
+            <a class="type-chip" href={withBase(`types/${item.category}/`)}>
+              <strong>{categoryLabel(item.category)}</strong>
+              <span>{item.count}</span>
+            </a>
+          ))
+        }
       </div>
     </section>
 

@@ -73,7 +73,11 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | 简介、精选案例、上海时间的最近更新 |
+| `/` | 简介、精选与最新预览、上海时间的最近更新 |
+| `/featured/` | 精选案例（`featured === true`） |
+| `/latest/` | 最新案例（按 `publishedAt`、`updatedAt` 从新到旧） |
+| `/types/` | 按类型浏览枢纽 |
+| `/types/[category]/` | 某一 `categories` 值的收集页 |
 | `/cases/` | 可筛选网格（分类、来源、难度、例行、多Agent、需审批、搜索） |
 | `/cases/[slug]/` | 案例详情 |
 | `/docs/` | 官方与相邻文档链接 |
