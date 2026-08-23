@@ -1,0 +1,84 @@
+---
+import HtmlCard from "../../components/HtmlCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getFeaturedHtml, getHtmlTypeCollections, getLatestHtml, htmlMeta, htmlItems } from "../../lib/html";
+import { formatShanghaiDateTime } from "../../lib/format";
+import { htmlTypeLabel } from "../../lib/html-labels";
+import { withBase } from "../../lib/paths";
+
+const featured = getFeaturedHtml();
+const latest = getLatestHtml(6);
+const types = getHtmlTypeCollections();
+---
+
+<BaseLayout
+  collection="html"
+  title="HTML 收集 · Grok Bot 案例库"
+  description="从公开网页收集的 HTML 演示、模板、组件与工具页。"
+>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <p class="kicker">HTML 收集</p>
+        <h1>公开网页里的 HTML 范例</h1>
+        <p class="lede">
+          这里收录的是网上能直接打开的 HTML / CSS 演示、模板、组件库与工具页，和 Grok Bot 用法案例分开存放。数据在 <code>data/html-items.json</code>，只链真实公开地址。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={withBase("html/featured/")}>精选 HTML</a>
+          <a class="btn btn-ghost" href={withBase("html/latest/")}>最新 HTML</a>
+          <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+        </div>
+        <p class="meta-line">
+          最近校对（Asia/Shanghai）：{formatShanghaiDateTime(htmlMeta.updatedAt)} · {htmlItems.length} 条
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="html-featured">
+      <div class="section-head">
+        <div>
+          <h2 id="html-featured">精选</h2>
+          <p>编辑标为 featured 的公开页面。</p>
+        </div>
+        <a href={withBase("html/featured/")}>查看全部精选</a>
+      </div>
+      <div class="grid">
+        {featured.slice(0, 6).map((item) => <HtmlCard item={item} />)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="html-latest">
+      <div class="section-head">
+        <div>
+          <h2 id="html-latest">最新</h2>
+          <p>按来源公开日期从新到旧。</p>
+        </div>
+        <a href={withBase("html/latest/")}>查看全部最新</a>
+      </div>
+      <div class="grid">
+        {latest.map((item) => <HtmlCard item={item} />)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="html-types">
+      <div class="section-head">
+        <div>
+          <h2 id="html-types">按类型</h2>
+          <p>落地页、动效、组件、工具页等各自一页。</p>
+        </div>
+        <a href={withBase("html/types/")}>查看全部类型</a>
+      </div>
+      <div class="type-chips">
+        {
+          types.map((item) => (
+            <a class="type-chip" href={withBase(`html/types/${item.type}/`)}>
+              <strong>{htmlTypeLabel(item.type)}</strong>
+              <span>{item.count}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

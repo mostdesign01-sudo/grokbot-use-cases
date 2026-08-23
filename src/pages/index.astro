@@ -17,8 +17,21 @@ const communityCount = cases.filter((item) =>
 const updated = formatShanghaiDateTime(meta.updatedAt);
 ---
 
-<BaseLayout title="Grok Bot 案例库" description="精选 Grok Bot 优质用法，每日更新。">
+<BaseLayout title="Grok Bot 案例库" description="精选 Grok Bot 优质用法，每日更新。另有独立 HTML 收集库。">
   <div class="wrap">
+    <section class="chooser" aria-label="选择内容库">
+      <a class="chooser-card chooser-grok" href={withBase("/")}>
+        <p class="kicker">当前库</p>
+        <h2>Grok Bot</h2>
+        <p class="summary">精选 Bot 用法：例行、多 Agent、审批边界。数据在 cases.json。</p>
+      </a>
+      <a class="chooser-card chooser-html" href={withBase("html/")}>
+        <p class="kicker">另一库</p>
+        <h2>HTML 收集</h2>
+        <p class="summary">公开网页里的 HTML 演示、模板、组件与工具页。数据在 html-items.json。</p>
+      </a>
+    </section>
+
     <section class="hero">
       <div>
         <p class="kicker">Grok Bot 案例库</p>

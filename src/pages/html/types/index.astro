@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getHtmlTypeCollections } from "../../../lib/html";
+import { htmlTypeIntro, htmlTypeLabel } from "../../../lib/html-labels";
+import { withBase } from "../../../lib/paths";
+
+const collections = getHtmlTypeCollections();
+---
+
+<BaseLayout collection="html" title="HTML 类型 · HTML 收集" description="按落地页、动效、组件等类型浏览 HTML 收集。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">HTML Types</p>
+      <h1>按类型浏览</h1>
+      <p class="lede">类型来自 <code>data/html-items.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。</p>
+    </section>
+    <section class="section">
+      <div class="doc-grid">
+        {
+          collections.map((item) => (
+            <a class="card type-card" href={withBase(`html/types/${item.type}/`)}>
+              <p class="title-en">{item.type}</p>
+              <h3>{htmlTypeLabel(item.type)}</h3>
+              <p class="summary">{htmlTypeIntro(item.type)}</p>
+              <p class="card-meta">{item.count} 条</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

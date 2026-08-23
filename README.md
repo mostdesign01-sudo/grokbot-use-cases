@@ -29,12 +29,14 @@ npm run preview  # 预览生产构建
 
 应用逻辑（页面、筛选、样式）与数据分离。日常更新**只改数据文件**，不必改组件。
 
-1. 编辑 [`data/cases.json`](data/cases.json)
+1. **Grok Bot 案例**：编辑 [`data/cases.json`](data/cases.json)
    - 新增或修订 `cases[]` 条目
    - 更新 `meta.updatedAt`（UTC ISO）、`meta.version`、`meta.count`
-   - 需要时更新 `meta.sourcesCrawled`
-2. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`
-3. 字段含义见 [`data/schema.md`](data/schema.md)
+   - 字段见 [`data/schema.md`](data/schema.md)
+2. **HTML 收集**：编辑 [`data/html-items.json`](data/html-items.json)
+   - 只收录真实公开 URL，勿与 cases 混写
+   - 字段见 [`data/html-schema.md`](data/html-schema.md)
+3. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`
 4. 提交并推送到 `main`
 
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
@@ -73,14 +75,16 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | 简介、精选与最新预览、上海时间的最近更新 |
-| `/featured/` | 精选案例（`featured === true`） |
-| `/latest/` | 最新案例（按 `publishedAt`、`updatedAt` 从新到旧） |
-| `/types/` | 按类型浏览枢纽 |
-| `/types/[category]/` | 某一 `categories` 值的收集页 |
-| `/cases/` | 可筛选网格（分类、来源、难度、例行、多Agent、需审批、搜索） |
-| `/cases/[slug]/` | 案例详情 |
-| `/docs/` | 官方与相邻文档链接 |
-| `/changelog/` | `meta.updatedAt` 与近期说明 |
+顶栏两个内容库：**Grok Bot** 与 **HTML 收集**。
 
-徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。
+| 路径 | 内容 |
+| --- | --- |
+| `/` | Grok Bot 首页：双库入口 + 精选/最新/类型预览 |
+| `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页 |
+| `/cases/` `/cases/[slug]/` | 可筛选案例与详情 |
+| `/docs/` `/changelog/` | 文档枢纽与更新日志 |
+| `/html/` | HTML 收集总览（精选、最新、类型） |
+| `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
+| `/html/[slug]/` | 单条 HTML 条目详情 |
+
+徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。HTML 条目另有类型徽章与原文链接。

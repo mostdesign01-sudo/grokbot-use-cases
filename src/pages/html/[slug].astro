@@ -1,0 +1,111 @@
+---
+import Badge from "../../components/Badge.astro";
+import HtmlCard from "../../components/HtmlCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
+import { getHtmlBySlug, htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
+import { htmlTypeLabel } from "../../lib/html-labels";
+import { withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return htmlItems
+    .filter((item) => !RESERVED_HTML_SLUGS.has(item.slug))
+    .map((item) => ({
+      params: { slug: item.slug },
+      props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const related = htmlItems
+  .filter((other) => other.id !== item.id && other.types.some((type) => item.types.includes(type)))
+  .slice(0, 3);
+const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
+---
+
+<BaseLayout collection="html" title={`${item.title} · HTML 收集`} description={item.summary}>
+  <div class="wrap">
+    <article class="detail-hero">
+      <p class="crumb">
+        <a href={withBase("html/")}>HTML 收集</a> / {item.title}
+      </p>
+      <div class="badges">
+        {item.featured && <Badge kind="official" label="精选" />}
+        {item.types.map((type) => <Badge label={htmlTypeLabel(type)} />)}
+      </div>
+      <h1>{item.title}</h1>
+      <p class="lede">{item.summary}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href={item.sourceUrl} rel="noreferrer">打开原文</a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+      </div>
+    </article>
+
+    <div class="detail-grid">
+      <div>
+        <section class="panel">
+          <h2>为何收录</h2>
+          <p>{item.qualityNote}</p>
+          {
+            item.previewImage && (
+              <p>
+                <img src={item.previewImage} alt={`${item.title} 预览`} />
+              </p>
+            )
+          }
+        </section>
+        {
+          related.length > 0 && (
+            <section class="section">
+              <h2>同类型</h2>
+              <div class="grid">
+                {related.map((other) => (
+                  <HtmlCard item={other} />
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+      <aside>
+        <section class="panel">
+          <h2>元信息</h2>
+          <dl class="kv">
+            <div>
+              <dt>类型</dt>
+              <dd class="chips">
+                {item.types.map((type) => (
+                  <a class="chip" href={withBase(`html/types/${type}/`)}>
+                    {htmlTypeLabel(type)}
+                  </a>
+                ))}
+              </dd>
+            </div>
+            <div>
+              <dt>标签</dt>
+              <dd>{item.tags.join(" · ")}</dd>
+            </div>
+            <div>
+              <dt>公开约</dt>
+              <dd>{formatPublishedDate(item.publishedAt)}</dd>
+            </div>
+            <div>
+              <dt>本库校对</dt>
+              <dd>{formatShanghaiDateTime(item.updatedAt)}</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="panel">
+          <h2>公开来源</h2>
+          <div class="source-list">
+            {sources.map((href) => (
+              <a href={href} rel="noreferrer">
+                {href}
+              </a>
+            ))}
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

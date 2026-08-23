@@ -8,30 +8,42 @@ const product = officialDocs.filter((item) => item.group === "product");
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div>
-      <strong>Grok Bot 案例库</strong>
-      <p>精选公开资料中的优质用法，数据保存在仓库的 <code>data/cases.json</code>，可按日更新。</p>
-      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor 无隶属关系。请以官方文档为准。</p>
+      <strong>双库站点</strong>
+      <p>
+        <strong>Grok Bot</strong> 用法来自 <code>data/cases.json</code>；
+        <strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>。两套数据互不混写。
+      </p>
+      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor 及所列原文站点无隶属关系。</p>
     </div>
     <div>
-      <strong>站点</strong>
+      <strong>Grok Bot</strong>
       <div class="footer-links">
+        <a href={withBase("/")}>案例首页</a>
         <a href={withBase("featured/")}>精选案例</a>
         <a href={withBase("latest/")}>最新案例</a>
-        <a href={withBase("types/")}>按类型浏览</a>
-        <a href={withBase("cases/")}>浏览案例</a>
-        <a href={withBase("docs/")}>官方文档枢纽</a>
+        <a href={withBase("types/")}>按类型</a>
+        <a href={withBase("cases/")}>全部案例</a>
+        <a href={withBase("docs/")}>官方文档</a>
         <a href={withBase("changelog/")}>更新日志</a>
-        <a href={withBase("data.json")}>原始 JSON</a>
+      </div>
+    </div>
+    <div>
+      <strong>HTML 收集</strong>
+      <div class="footer-links">
+        <a href={withBase("html/")}>HTML 总览</a>
+        <a href={withBase("html/featured/")}>精选 HTML</a>
+        <a href={withBase("html/latest/")}>最新 HTML</a>
+        <a href={withBase("html/types/")}>HTML 类型</a>
+        <a href={withBase("html-items.json")}>HTML JSON</a>
         <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases">GitHub 仓库</a>
       </div>
     </div>
-    <div>
-      <strong>数据来源（公开链接）</strong>
-      <div class="footer-links">
-        {product.map((item) => <a href={item.href} rel="noreferrer">{item.title}</a>)}
-        <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">官方用例</a>
-        <a href="https://docs.x.ai/grok-bot/approvals-security-and-privacy" rel="noreferrer">审批与安全</a>
-      </div>
+  </div>
+  <div class="wrap footer-sources">
+    <strong>Grok Bot 数据来源（公开链接）</strong>
+    <div class="footer-links">
+      {product.map((item) => <a href={item.href} rel="noreferrer">{item.title}</a>)}
+      <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">官方用例</a>
     </div>
   </div>
 </footer>

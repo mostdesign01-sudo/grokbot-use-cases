@@ -1,0 +1,35 @@
+---
+import HtmlCard from "../../components/HtmlCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatPublishedDate } from "../../lib/format";
+import { getLatestHtml } from "../../lib/html";
+import { withBase } from "../../lib/paths";
+
+const latest = getLatestHtml();
+---
+
+<BaseLayout collection="html" title="最新 HTML · HTML 收集" description="按公开日期排序的 HTML 页面收集。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Latest HTML</p>
+      <h1>最新 HTML</h1>
+      <p class="lede">按 <code>publishedAt</code> 再按 <code>updatedAt</code> 从新到旧。当前 {latest.length} 条。</p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("html/featured/")}>精选 HTML</a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="grid">
+        {
+          latest.map((item) => (
+            <div class="collection-card">
+              <p class="collection-date">公开约 {formatPublishedDate(item.publishedAt)}</p>
+              <HtmlCard item={item} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

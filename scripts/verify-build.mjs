@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 
 const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.meta.url), "utf8"));
+const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
 const requiredPages = [
   "index.html",
   "cases/index.html",
@@ -11,6 +12,11 @@ const requiredPages = [
   "docs/index.html",
   "changelog/index.html",
   "data.json",
+  "html-items.json",
+  "html/index.html",
+  "html/featured/index.html",
+  "html/latest/index.html",
+  "html/types/index.html",
   "404.html",
 ];
 
@@ -38,8 +44,29 @@ for (const category of categories) {
   }
 }
 
+const htmlTypes = [...new Set(htmlDataset.items.flatMap((item) => item.types))];
+
+for (const item of htmlDataset.items) {
+  const path = `html/${item.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
+for (const type of htmlTypes) {
+  const path = `html/types/${type}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
 if (dataset.cases.length !== 20) {
   console.error(`Expected 20 cases, found ${dataset.cases.length}`);
+  process.exit(1);
+}
+
+if (htmlDataset.items.length < 8) {
+  console.error(`Expected at least 8 HTML items, found ${htmlDataset.items.length}`);
   process.exit(1);
 }
 
@@ -48,4 +75,6 @@ if (missing.length) {
   process.exit(1);
 }
 
-console.log(`Build verified: ${dataset.cases.length} case pages and core routes present.`);
+console.log(
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, and core routes present.`,
+);
