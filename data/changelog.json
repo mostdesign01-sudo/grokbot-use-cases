@@ -1,0 +1,9 @@
+{
+  "notes": [
+    {
+      "date": "2026-08-23",
+      "title": "v1.0.0 种子数据入库",
+      "body": "收录 20 条公开资料中的精选用法，覆盖官方文档与发布稿、社区多 Agent 实践，以及 Cursor Automations 相邻的工程工厂模式。原始记录见 data/cases.json。"
+    }
+  ]
+}

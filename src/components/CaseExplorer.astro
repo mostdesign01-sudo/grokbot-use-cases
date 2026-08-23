@@ -1,0 +1,162 @@
+---
+import type { CaseItem, Difficulty, SourceType } from "../lib/cases";
+import { uniqueCategories, uniqueDifficulties, uniqueSourceTypes } from "../lib/cases";
+import { categoryLabel, difficultyLabel, sourceTypeLabel } from "../lib/labels";
+import CaseCard from "./CaseCard.astro";
+
+interface Props {
+  cases: CaseItem[];
+}
+
+const { cases } = Astro.props;
+const categories = uniqueCategories();
+const sourceTypes = uniqueSourceTypes();
+const difficulties = uniqueDifficulties();
+---
+
+<div class="explorer" data-explorer>
+  <form class="filters" data-filters>
+    <div class="filter-row">
+      <label class="field">
+        搜索
+        <input type="search" name="q" placeholder="标题、角色、摘要、连接器…" autocomplete="off" />
+      </label>
+      <label class="field">
+        分类
+        <select name="category">
+          <option value="">全部分类</option>
+          {categories.map((value) => <option value={value}>{categoryLabel(value)}</option>)}
+        </select>
+      </label>
+      <label class="field">
+        来源
+        <select name="sourceType">
+          <option value="">全部来源</option>
+          {sourceTypes.map((value: SourceType) => <option value={value}>{sourceTypeLabel(value)}</option>)}
+        </select>
+      </label>
+      <label class="field">
+        难度
+        <select name="difficulty">
+          <option value="">全部难度</option>
+          {difficulties.map((value: Difficulty) => <option value={value}>{difficultyLabel(value)}</option>)}
+        </select>
+      </label>
+    </div>
+    <div class="filter-toggles">
+      <label class="toggle">
+        <input type="checkbox" name="hasRoutine" />
+        例行
+      </label>
+      <label class="toggle">
+        <input type="checkbox" name="hasMultiAgent" />
+        多Agent
+      </label>
+      <label class="toggle">
+        <input type="checkbox" name="requiresApproval" />
+        需审批
+      </label>
+      <button class="reset" type="reset">清除筛选</button>
+    </div>
+  </form>
+
+  <div class="count-row">
+    <p data-count></p>
+  </div>
+
+  <div class="grid" data-grid>
+    {
+      cases.map((item) => (
+        <div
+          class="item"
+          data-item
+          data-categories={item.categories.join(",")}
+          data-source={item.sourceType}
+          data-difficulty={item.difficulty}
+          data-routine={String(item.hasRoutine)}
+          data-multi={String(item.hasMultiAgent)}
+          data-approval={String(item.requiresApproval)}
+          data-text={`${item.title} ${item.titleEn} ${item.summary} ${item.role} ${item.connectors.join(" ")} ${item.id}`}
+        >
+          <CaseCard caseItem={item} />
+        </div>
+      ))
+    }
+  </div>
+  <p class="empty" hidden data-empty>没有符合条件的案例。试试减少筛选条件。</p>
+</div>
+
+<script>
+  const root = document.querySelector("[data-explorer]");
+  if (root) {
+    const form = root.querySelector("[data-filters]") as HTMLFormElement;
+    const items = [...root.querySelectorAll<HTMLElement>("[data-item]")];
+    const count = root.querySelector("[data-count]");
+    const empty = root.querySelector("[data-empty]");
+    const total = items.length;
+
+    const apply = () => {
+      const data = new FormData(form);
+      const q = String(data.get("q") ?? "").trim().toLowerCase();
+      const category = String(data.get("category") ?? "");
+      const sourceType = String(data.get("sourceType") ?? "");
+      const difficulty = String(data.get("difficulty") ?? "");
+      const hasRoutine = form.hasRoutine.checked;
+      const hasMultiAgent = form.hasMultiAgent.checked;
+      const requiresApproval = form.requiresApproval.checked;
+
+      let visible = 0;
+      for (const item of items) {
+        const text = item.dataset.text ?? "";
+        const categories = (item.dataset.categories ?? "").split(",");
+        const match =
+          (!q || text.toLowerCase().includes(q)) &&
+          (!category || categories.includes(category)) &&
+          (!sourceType || item.dataset.source === sourceType) &&
+          (!difficulty || item.dataset.difficulty === difficulty) &&
+          (!hasRoutine || item.dataset.routine === "true") &&
+          (!hasMultiAgent || item.dataset.multi === "true") &&
+          (!requiresApproval || item.dataset.approval === "true");
+        item.hidden = !match;
+        if (match) visible += 1;
+      }
+
+      if (count) count.textContent = `显示 ${visible} / ${total} 条案例`;
+      if (empty) empty.toggleAttribute("hidden", visible !== 0);
+    };
+
+    const params = new URLSearchParams(location.search);
+    for (const [key, value] of params.entries()) {
+      const field = form.elements.namedItem(key);
+      if (field instanceof HTMLInputElement && field.type === "checkbox") {
+        field.checked = value === "1" || value === "true";
+      } else if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) {
+        field.value = value;
+      }
+    }
+
+    const syncUrl = () => {
+      const data = new FormData(form);
+      const next = new URLSearchParams();
+      for (const [key, value] of data.entries()) {
+        if (!value) continue;
+        if (value === "on") next.set(key, "1");
+        else next.set(key, String(value));
+      }
+      const qs = next.toString();
+      history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+    };
+
+    form.addEventListener("input", () => {
+      apply();
+      syncUrl();
+    });
+    form.addEventListener("reset", () => {
+      requestAnimationFrame(() => {
+        apply();
+        syncUrl();
+      });
+    });
+    apply();
+  }
+</script>

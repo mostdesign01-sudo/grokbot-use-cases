@@ -1,0 +1,137 @@
+---
+import Badge from "../../components/Badge.astro";
+import CaseCard from "../../components/CaseCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { cases, getRelatedCases } from "../../lib/cases";
+import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
+import {
+  categoryLabel,
+  connectorLabel,
+  difficultyLabel,
+  isCommunity,
+  isCursorAdjacent,
+  isOfficial,
+  sourceTypeLabel,
+} from "../../lib/labels";
+import { withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return cases.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const related = getRelatedCases(item);
+const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
+---
+
+<BaseLayout title={`${item.title} · Grok Bot 案例库`} description={item.summary}>
+  <div class="wrap">
+    <article class="detail-hero">
+      <p class="crumb">
+        <a href={withBase("/")}>首页</a> /
+        <a href={withBase("cases/")}>案例</a> /
+        {item.title}
+      </p>
+      <div class="badges">
+        {isOfficial(item.sourceType) && <Badge kind="official" label="官方" />}
+        {isCommunity(item.sourceType) && <Badge kind="community" label="社区" />}
+        {isCursorAdjacent(item.sourceType) && <Badge kind="cursor" label="Cursor相邻" />}
+        {item.requiresApproval && <Badge kind="approval" label="需审批" />}
+        {item.hasRoutine && <Badge kind="routine" label="例行" />}
+        {item.hasMultiAgent && <Badge kind="multi" label="多Agent" />}
+        {item.hasSkill && <Badge label="Skill" />}
+      </div>
+      <h1>{item.title}</h1>
+      <p class="title-en">{item.titleEn}</p>
+      <p class="lede">{item.summary}</p>
+    </article>
+
+    <div class="detail-grid">
+      <div>
+        <section class="panel">
+          <h2>这条用法在做什么</h2>
+          <p>{item.summary}</p>
+          <p>{item.qualityNote}</p>
+          {
+            item.approvalBoundary && (
+              <p>
+                <strong>审批边界：</strong>
+                {item.approvalBoundary}
+              </p>
+            )
+          }
+        </section>
+
+        {
+          related.length > 0 && (
+            <section class="section">
+              <h2>相关案例</h2>
+              <div class="grid">
+                {related.map((relatedItem) => (
+                  <CaseCard caseItem={relatedItem} />
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+
+      <aside>
+        <section class="panel">
+          <h2>元信息</h2>
+          <dl class="kv">
+            <div>
+              <dt>角色</dt>
+              <dd>{item.role}</dd>
+            </div>
+            <div>
+              <dt>来源类型</dt>
+              <dd>{sourceTypeLabel(item.sourceType)}</dd>
+            </div>
+            <div>
+              <dt>难度</dt>
+              <dd>{difficultyLabel(item.difficulty)}</dd>
+            </div>
+            <div>
+              <dt>分类</dt>
+              <dd class="chips">
+                {item.categories.map((cat) => (
+                  <span class="chip">{categoryLabel(cat)}</span>
+                ))}
+              </dd>
+            </div>
+            <div>
+              <dt>连接器 / 工具</dt>
+              <dd class="chips">
+                {item.connectors.length
+                  ? item.connectors.map((value) => <span class="chip">{connectorLabel(value)}</span>)
+                  : "未列出"}
+              </dd>
+            </div>
+            <div>
+              <dt>发布</dt>
+              <dd>{formatPublishedDate(item.publishedAt)}</dd>
+            </div>
+            <div>
+              <dt>条目更新</dt>
+              <dd>{formatShanghaiDateTime(item.updatedAt)}</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="panel">
+          <h2>公开来源</h2>
+          <div class="source-list">
+            {sources.map((href) => (
+              <a href={href} rel="noreferrer">
+                {href}
+              </a>
+            ))}
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

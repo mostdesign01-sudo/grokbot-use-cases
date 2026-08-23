@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { changelogNotes, meta } from "../lib/cases";
+import { formatShanghaiDate, formatShanghaiDateTime } from "../lib/format";
+---
+
+<BaseLayout title="更新日志 · Grok Bot 案例库" description="案例库数据更新时间与近期说明。">
+  <div class="wrap">
+    <p class="kicker">Changelog</p>
+    <h1>更新日志</h1>
+    <p class="lede">数据更新时间以 <code>data/cases.json</code> 的 <code>meta.updatedAt</code> 为准，并按 Asia/Shanghai 显示。</p>
+
+    <section class="stats" aria-label="数据版本">
+      <div class="stat">
+        <b>{meta.version}</b>
+        <span>数据集版本</span>
+      </div>
+      <div class="stat">
+        <b>{meta.count}</b>
+        <span>当前案例数</span>
+      </div>
+      <div class="stat">
+        <b>{formatShanghaiDate(meta.updatedAt)}</b>
+        <span>最近更新日期</span>
+      </div>
+      <div class="stat">
+        <b>{meta.timezone}</b>
+        <span>展示时区</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>meta.updatedAt</h2>
+      <p>ISO：<code>{meta.updatedAt}</code></p>
+      <p>上海时间：{formatShanghaiDateTime(meta.updatedAt)}</p>
+    </section>
+
+    <section class="section">
+      <h2>近期说明</h2>
+      <div class="timeline">
+        {
+          changelogNotes.map((note) => (
+            <article class="note">
+              <time datetime={note.date}>{note.date}</time>
+              <h3>{note.title}</h3>
+              <p>{note.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>本次爬取 / 对照来源</h2>
+      <div class="source-list">
+        {meta.sourcesCrawled.map((href) => (
+          <a href={href} rel="noreferrer">
+            {href}
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

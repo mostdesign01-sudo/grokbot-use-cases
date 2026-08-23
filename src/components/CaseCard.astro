@@ -1,0 +1,31 @@
+---
+import type { CaseItem } from "../lib/cases";
+import { categoryLabel, difficultyLabel, isCommunity, isCursorAdjacent, isOfficial } from "../lib/labels";
+import { withBase } from "../lib/paths";
+import Badge from "./Badge.astro";
+
+interface Props {
+  caseItem: CaseItem;
+}
+
+const { caseItem } = Astro.props;
+---
+
+<a class="case-card" href={withBase(`cases/${caseItem.slug}/`)}>
+  <div class="badges">
+    {isOfficial(caseItem.sourceType) && <Badge kind="official" label="官方" />}
+    {isCommunity(caseItem.sourceType) && <Badge kind="community" label="社区" />}
+    {isCursorAdjacent(caseItem.sourceType) && <Badge kind="cursor" label="Cursor相邻" />}
+    {caseItem.requiresApproval && <Badge kind="approval" label="需审批" />}
+    {caseItem.hasRoutine && <Badge kind="routine" label="例行" />}
+    {caseItem.hasMultiAgent && <Badge kind="multi" label="多Agent" />}
+  </div>
+  <h3>{caseItem.title}</h3>
+  <p class="title-en">{caseItem.titleEn}</p>
+  <p class="summary">{caseItem.summary}</p>
+  <div class="card-meta">
+    <span>{caseItem.role}</span>
+    <span>{difficultyLabel(caseItem.difficulty)}</span>
+    <span>{caseItem.categories.map(categoryLabel).join(" · ")}</span>
+  </div>
+</a>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+---
+
+<BaseLayout title="未找到 · Grok Bot 案例库">
+  <div class="wrap">
+    <p class="kicker">404</p>
+    <h1>没有这页</h1>
+    <p class="lede">链接可能已变更。回到案例列表继续浏览。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={withBase("cases/")}>浏览案例</a>
+      <a class="btn btn-ghost" href={withBase("/")}>返回首页</a>
+    </div>
+  </div>
+</BaseLayout>

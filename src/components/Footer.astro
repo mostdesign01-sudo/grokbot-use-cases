@@ -1,0 +1,34 @@
+---
+import { officialDocs } from "../lib/docs";
+import { withBase } from "../lib/paths";
+
+const product = officialDocs.filter((item) => item.group === "product");
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <strong>Grok Bot 案例库</strong>
+      <p>精选公开资料中的优质用法，数据保存在仓库的 <code>data/cases.json</code>，可按日更新。</p>
+      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor 无隶属关系。请以官方文档为准。</p>
+    </div>
+    <div>
+      <strong>站点</strong>
+      <div class="footer-links">
+        <a href={withBase("cases/")}>浏览案例</a>
+        <a href={withBase("docs/")}>官方文档枢纽</a>
+        <a href={withBase("changelog/")}>更新日志</a>
+        <a href={withBase("data.json")}>原始 JSON</a>
+        <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases">GitHub 仓库</a>
+      </div>
+    </div>
+    <div>
+      <strong>数据来源（公开链接）</strong>
+      <div class="footer-links">
+        {product.map((item) => <a href={item.href} rel="noreferrer">{item.title}</a>)}
+        <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">官方用例</a>
+        <a href="https://docs.x.ai/grok-bot/approvals-security-and-privacy" rel="noreferrer">审批与安全</a>
+      </div>
+    </div>
+  </div>
+</footer>

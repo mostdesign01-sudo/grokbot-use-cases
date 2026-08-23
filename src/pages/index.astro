@@ -1,0 +1,99 @@
+---
+import CaseCard from "../components/CaseCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { cases, getFeaturedCases, meta } from "../lib/cases";
+import { formatShanghaiDateTime } from "../lib/format";
+import { withBase } from "../lib/paths";
+
+const featured = getFeaturedCases();
+const officialCount = cases.filter((item) => item.sourceType.startsWith("official")).length;
+const communityCount = cases.filter((item) =>
+  ["community", "tutorial", "case-study"].includes(item.sourceType),
+).length;
+const updated = formatShanghaiDateTime(meta.updatedAt);
+---
+
+<BaseLayout title="Grok Bot 案例库" description="精选 Grok Bot 优质用法，每日更新。">
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <p class="kicker">Grok Bot 案例库</p>
+        <h1>精选 Grok Bot 优质用法，每日更新</h1>
+        <p class="lede">
+          Grok Bot 是可以交付真实工作的 AI 同事：自带持久云电脑，能登录你的应用，在工具里把活干完，只在需要审批时回来。本站从公开文档与社区实践中整理可复用的用法，方便对照角色、例行与审批边界。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={withBase("cases/")}>浏览全部案例</a>
+          <a class="btn btn-ghost" href={withBase("docs/")}>官方文档</a>
+        </div>
+        <p class="meta-line">最近更新（Asia/Shanghai）：{updated} · 数据版本 {meta.version} · 共 {meta.count} 条</p>
+      </div>
+      <div class="hero-stack" aria-hidden="true">
+        {
+          featured.slice(0, 3).map((item, index) => (
+            <article class="stack-card">
+              <small>精选 0{index + 1}</small>
+              <strong>{item.title}</strong>
+              <p class="title-en">{item.titleEn}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="stats" aria-label="案例概览">
+      <div class="stat">
+        <b>{meta.count}</b>
+        <span>精选案例</span>
+      </div>
+      <div class="stat">
+        <b>{officialCount}</b>
+        <span>来自官方文档 / 发布</span>
+      </div>
+      <div class="stat">
+        <b>{communityCount}</b>
+        <span>社区与教程实践</span>
+      </div>
+      <div class="stat">
+        <b>{featured.length}</b>
+        <span>首页精选</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>精选案例</h2>
+          <p>适合作为第一个 Bot 或团队协作模板的用法。</p>
+        </div>
+        <a href={withBase("cases/")}>查看全部 →</a>
+      </div>
+      <div class="grid">
+        {featured.map((item) => <CaseCard caseItem={item} />)}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Grok Bot 怎么工作</h2>
+          <p>摘自官方定位，便于理解案例里的审批、例行与多 Agent。</p>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="card">
+          <h3>自带电脑</h3>
+          <p class="summary">每个 Bot 跑在持久云电脑上，能用浏览器、文件和终端，在真实应用里完成工作，而不只是聊天草稿。</p>
+        </article>
+        <article class="card">
+          <h3>多 Bot 协作</h3>
+          <p class="summary">多个 Bot 共享同一账号电脑，可并行、互相传话和交接。你不必当路由器。</p>
+        </article>
+        <article class="card">
+          <h3>例行与审批</h3>
+          <p class="summary">演示一次即可固化为 skill / routine。外发、改预算、改生产等动作默认停在待审。</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
