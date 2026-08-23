@@ -1,0 +1,17 @@
+---
+import CaseExplorer from "../../components/CaseExplorer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { cases, meta } from "../../lib/cases";
+import { formatShanghaiDateTime } from "../../lib/format";
+---
+
+<BaseLayout title="全部案例 · Grok Bot 案例库" description="按分类、来源、难度与能力筛选 Grok Bot 用法。">
+  <div class="wrap">
+    <p class="kicker">Cases</p>
+    <h1>全部案例</h1>
+    <p class="lede">
+      当前收录 {meta.count} 条。可用分类、来源、难度，以及「例行 / 多Agent / 需审批」筛选。更新时间（Asia/Shanghai）：{formatShanghaiDateTime(meta.updatedAt)}。
+    </p>
+    <CaseExplorer cases={cases} />
+  </div>
+</BaseLayout>
