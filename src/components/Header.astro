@@ -5,19 +5,32 @@ import { siteName } from "../lib/site";
 const path = Astro.url.pathname;
 const htmlRoot = withBase("html/");
 const agentUiRoot = withBase("agent-ui/");
-const isHtml = isSectionPath(path, htmlRoot);
-const isAgentUi = isSectionPath(path, agentUiRoot);
-const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : "grok";
+const searchRoot = withBase("search/");
+const libParam = Astro.url.searchParams.get("lib");
+const isHtml = isSectionPath(path, htmlRoot) || (isCurrentPath(path, searchRoot) && libParam === "html");
+const isAgentUi = isSectionPath(path, agentUiRoot) || (isCurrentPath(path, searchRoot) && libParam === "agent-ui");
+const isGrok =
+  isSectionPath(path, withBase("cases/")) ||
+  isSectionPath(path, withBase("featured/")) ||
+  isSectionPath(path, withBase("latest/")) ||
+  isSectionPath(path, withBase("types/")) ||
+  (isCurrentPath(path, searchRoot) && libParam === "grok");
 
-const grokLinks = [
+const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : isGrok ? "grok" : "lab";
+
+const labLinks = [
   { href: withBase("/"), label: "首页" },
-  { href: withBase("featured/"), label: "精选" },
-  { href: withBase("latest/"), label: "最新" },
-  { href: withBase("types/"), label: "类型", section: true },
-  { href: withBase("cases/"), label: "案例" },
   { href: withBase("search/"), label: "搜索" },
   { href: withBase("docs/"), label: "文档" },
   { href: withBase("changelog/"), label: "更新日志" },
+];
+
+const grokLinks = [
+  { href: withBase("cases/"), label: "总览" },
+  { href: withBase("featured/"), label: "精选" },
+  { href: withBase("latest/"), label: "最新" },
+  { href: withBase("types/"), label: "类型", section: true },
+  { href: withBase("search/?lib=grok"), label: "搜索" },
 ];
 
 const htmlLinks = [
@@ -36,10 +49,17 @@ const agentUiLinks = [
   { href: withBase("search/?lib=agent-ui"), label: "搜索" },
 ];
 
-const links = currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : grokLinks;
+const links =
+  currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : currentLib === "grok" ? grokLinks : labLinks;
 
 const brandLine =
-  currentLib === "agent-ui" ? "Agent UI · 每日更新" : currentLib === "html" ? "HTML 收集 · 每日更新" : "Grok Bot · 每日更新";
+  currentLib === "agent-ui"
+    ? "Agent UI · 每日更新"
+    : currentLib === "html"
+      ? "HTML 收集 · 每日更新"
+      : currentLib === "grok"
+        ? "Grok Bot · 每日更新"
+        : "可复用的精选实验室";
 ---
 
 <header class="site-header">
@@ -58,7 +78,7 @@ const brandLine =
       <nav class="collection-tabs" aria-label="内容库">
         <a
           class="tab-grok"
-          href={withBase("/")}
+          href={withBase("cases/")}
           aria-current={currentLib === "grok" ? "page" : undefined}
         >
           Grok Bot

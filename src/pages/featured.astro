@@ -7,8 +7,8 @@ import { withBase } from "../lib/paths";
 const featured = getFeaturedCases();
 ---
 
-<BaseLayout title="精选案例 · AI UP LAB" description="编辑精选的 Grok Bot 用法，适合作为第一个 Bot 或团队协作模板。">
-  <div class="wrap">
+<BaseLayout collection="grok" title="精选案例 · AI UP LAB" description="编辑精选的 Grok Bot 用法，适合作为第一个 Bot 或团队协作模板。">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured</p>
       <h1>精选案例</h1>
@@ -23,7 +23,7 @@ const featured = getFeaturedCases();
     </section>
 
     <section class="section" aria-label="精选案例列表">
-      <div class="grid">
+      <div class="masonry">
         {featured.map((item) => <CaseCard caseItem={item} />)}
       </div>
     </section>

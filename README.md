@@ -81,20 +81,20 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | AI UP LAB 首页（当前展示 Grok Bot 库）：三库入口、搜索、近日更新时间线、精选/最新/类型 |
-| `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页 |
-| `/cases/` `/cases/[slug]/` | 可筛选案例与详情（含上手路径） |
+| `/` | 实验室首页：三张库海报 + 跨库精选瀑布流 |
+| `/cases/` `/cases/[slug]/` | Grok Bot 总览（筛选 + masonry）与详情（含上手路径） |
+| `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页（masonry） |
 | `/search/` | 三库检索：标题、摘要、标签、收录理由 |
 | `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
-| `/html/` | HTML 收集总览（搜索、近日更新、精选、最新、类型） |
+| `/html/` | HTML 收集总览（masonry 浏览墙） |
 | `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
 | `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |
-| `/agent-ui/` | Agent UI 总览（ThreeUI Community 免费件） |
+| `/agent-ui/` | Agent UI 总览（ThreeUI Community 免费件，masonry） |
 | `/agent-ui/featured/` `/agent-ui/latest/` `/agent-ui/types/` `/agent-ui/types/[type]/` | Agent UI 收集页 |
 | `/agent-ui/[slug]/` | 单条 Agent UI 详情（打开原文、给 Agent 的换主题提示） |
 
-徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。卡片底部用 `qualityNote` 展示「收录理由」。HTML / Agent UI 条目另有类型徽章与原文链接。
+徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。详情页用 `qualityNote` 展示「收录理由」。HTML / Agent UI 条目另有类型徽章与原文链接。
 
 ## 界面
 
-2026-08 做了一次信息密度刷新：首页用日期分组的「今日收录 / 近日更新」时间线，卡片补上来源/难度/收录理由，并加上当前库搜索。视觉仍是纸色底 + 琥珀 / 青绿 / 靛紫三强调色，没有做成 AI 新闻站或假评分。
+首页是三张海报（琥珀 / 青绿 / 靛紫）加 Pinterest 式精选墙。各库浏览以视觉卡片为主：有 `previewImage` 用图，否则用 CSS 库海报。不是 AI 新闻站。

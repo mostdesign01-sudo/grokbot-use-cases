@@ -8,7 +8,7 @@ const featured = getFeaturedAgentUi();
 ---
 
 <BaseLayout collection="agent-ui" title="精选 Agent UI · AI UP LAB" description="编辑精选的 ThreeUI Community 免费组件。">
-  <div class="wrap">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured Agent UI</p>
       <h1>精选 Agent UI</h1>
@@ -21,7 +21,7 @@ const featured = getFeaturedAgentUi();
       </div>
     </section>
     <section class="section">
-      <div class="grid">
+      <div class="masonry">
         {featured.map((item) => <AgentUiCard item={item} />)}
       </div>
     </section>

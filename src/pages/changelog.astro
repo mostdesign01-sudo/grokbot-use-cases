@@ -6,7 +6,7 @@ import { formatShanghaiDate, formatShanghaiDateTime, groupByShanghaiDay } from "
 const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
 ---
 
-<BaseLayout title="更新日志 · AI UP LAB" description="AI UP LAB 数据更新时间与近期说明。">
+<BaseLayout collection="lab" title="更新日志 · AI UP LAB" description="AI UP LAB 数据更新时间与近期说明。">
   <div class="wrap">
     <p class="kicker">Changelog</p>
     <h1>更新日志</h1>

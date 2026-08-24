@@ -1,21 +1,16 @@
 ---
 import HtmlCard from "../../components/HtmlCard.astro";
-import LibraryChooser from "../../components/LibraryChooser.astro";
 import LibrarySearch from "../../components/LibrarySearch.astro";
-import TimelineFeed from "../../components/TimelineFeed.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { formatShanghaiDateTime, hasShanghaiToday } from "../../lib/format";
-import { getFeaturedHtml, getHtmlTypeCollections, getLatestHtml, getRecentlyUpdatedHtml, htmlItems, htmlMeta, htmlSearchText } from "../../lib/html";
+import { formatShanghaiDateTime } from "../../lib/format";
+import { getFeaturedHtml, getHtmlTypeCollections, htmlItems, htmlMeta, htmlSearchText } from "../../lib/html";
 import { htmlTypeLabel } from "../../lib/html-labels";
 import { withBase } from "../../lib/paths";
 import { pageTitle, siteName } from "../../lib/site";
-import { htmlToTimeline } from "../../lib/timeline";
 
-const featured = getFeaturedHtml();
-const latest = getLatestHtml(6);
-const recent = getRecentlyUpdatedHtml(12);
+const featuredIds = new Set(getFeaturedHtml().map((item) => item.id));
+const wall = [...htmlItems].sort((a, b) => Number(featuredIds.has(b.id)) - Number(featuredIds.has(a.id)));
 const types = getHtmlTypeCollections();
-const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
 ---
 
 <BaseLayout
@@ -23,104 +18,20 @@ const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日
   title={pageTitle("HTML 收集")}
   description={`${siteName} 的 HTML 收集库：从公开网页收集的演示、模板、组件与工具页。`}
 >
-  <div class="wrap" data-hub>
-    <LibraryChooser current="html" />
-
-    <section class="hero hero-single">
-      <div>
-        <p class="kicker">{siteName} · HTML 收集</p>
-        <h1>公开网页里的 HTML 范例</h1>
-        <p class="lede">
-          这是 {siteName} 里的 HTML 收集库：网上能直接打开的演示、模板、组件与工具页，和 Grok Bot、Agent UI 分开存放。数据在 <code>data/html-items.json</code>，只链真实公开地址。
-        </p>
-        <LibrarySearch library="html" placeholder="搜索 HTML 标题、摘要、标签、收录理由…" />
-        <div class="hero-actions">
-          <a class="btn btn-primary" href={withBase("html/featured/")}>精选 HTML</a>
-          <a class="btn btn-ghost" href={withBase("html/latest/")}>最新 HTML</a>
-          <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
-        </div>
-        <p class="meta-line">
-          最近校对（Asia/Shanghai）：{formatShanghaiDateTime(htmlMeta.updatedAt)} · {htmlItems.length} 条
-        </p>
+  <div class="wrap-wide" data-hub>
+    <section class="hub-intro">
+      <p class="kicker">{siteName} · HTML 收集</p>
+      <h1>公开网页里的 HTML 范例</h1>
+      <p class="lede">
+        演示、模板、组件与工具页，和 Grok Bot、Agent UI 分开。有预览图就上墙，没有就用青绿海报。
+      </p>
+      <LibrarySearch library="html" placeholder="搜索 HTML 标题、摘要、标签、收录理由…" />
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("html/featured/")}>精选</a>
+        <a class="btn btn-ghost" href={withBase("html/latest/")}>最新</a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
       </div>
-    </section>
-
-    <section class="stats" aria-label="HTML 收集概览">
-      <div class="stat">
-        <b>{htmlMeta.count}</b>
-        <span>公开页面</span>
-      </div>
-      <div class="stat">
-        <b>{featured.length}</b>
-        <span>精选 HTML</span>
-      </div>
-      <div class="stat">
-        <b>{types.length}</b>
-        <span>类型</span>
-      </div>
-      <div class="stat">
-        <b>{htmlMeta.version}</b>
-        <span>数据版本</span>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="html-recent">
-      <div class="section-head">
-        <div>
-          <h2 id="html-recent">{recentTitle}</h2>
-          <p>按条目 <code>updatedAt</code> 分组，只看 HTML 收集库。</p>
-        </div>
-        <a href={withBase("html/latest/")}>查看全部最新</a>
-      </div>
-      <TimelineFeed items={recent.map(htmlToTimeline)} />
-    </section>
-
-    <section class="section" aria-labelledby="html-featured">
-      <div class="section-head">
-        <div>
-          <h2 id="html-featured">精选</h2>
-          <p>编辑标为 featured 的公开页面。</p>
-        </div>
-        <a href={withBase("html/featured/")}>查看全部精选</a>
-      </div>
-      <div class="grid">
-        {
-          featured.slice(0, 6).map((item) => (
-            <div data-filter-card data-filter-text={htmlSearchText(item)}>
-              <HtmlCard item={item} />
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="html-latest">
-      <div class="section-head">
-        <div>
-          <h2 id="html-latest">最新</h2>
-          <p>按来源公开日期从新到旧。</p>
-        </div>
-        <a href={withBase("html/latest/")}>查看全部最新</a>
-      </div>
-      <div class="grid">
-        {
-          latest.map((item) => (
-            <div data-filter-card data-filter-text={htmlSearchText(item)}>
-              <HtmlCard item={item} />
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="html-types">
-      <div class="section-head">
-        <div>
-          <h2 id="html-types">按类型</h2>
-          <p>落地页、动效、组件、工具页等各自一页。</p>
-        </div>
-        <a href={withBase("html/types/")}>查看全部类型</a>
-      </div>
+      <p class="meta-line">最近校对（Asia/Shanghai）：{formatShanghaiDateTime(htmlMeta.updatedAt)} · {htmlItems.length} 条</p>
       <div class="type-chips">
         {
           types.map((item) => (
@@ -128,6 +39,24 @@ const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日
               <strong>{htmlTypeLabel(item.type)}</strong>
               <span>{item.count}</span>
             </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="html-wall">
+      <div class="section-head">
+        <div>
+          <h2 id="html-wall">浏览墙</h2>
+          <p>精选靠前。点卡片进详情，原文仍在站外。</p>
+        </div>
+      </div>
+      <div class="masonry">
+        {
+          wall.map((item) => (
+            <div data-filter-card data-filter-text={htmlSearchText(item)}>
+              <HtmlCard item={item} />
+            </div>
           ))
         }
       </div>

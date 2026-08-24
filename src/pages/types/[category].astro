@@ -19,8 +19,8 @@ const { category, items } = Astro.props;
 const title = categoryLabel(category);
 ---
 
-<BaseLayout title={`${title} · AI UP LAB`} description={`${title}类型下的 Grok Bot 用法收集。`}>
-  <div class="wrap">
+<BaseLayout collection="grok" title={`${title} · AI UP LAB`} description={`${title}类型下的 Grok Bot 用法收集。`}>
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="crumb">
         <a href={withBase("types/")}>按类型浏览</a> / {title}
@@ -35,7 +35,7 @@ const title = categoryLabel(category);
     </section>
 
     <section class="section" aria-label={`${title}案例列表`}>
-      <div class="grid">
+      <div class="masonry">
         {items.map((item) => <CaseCard caseItem={item} />)}
       </div>
     </section>

@@ -1,17 +1,33 @@
 ---
 import CaseExplorer from "../../components/CaseExplorer.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { cases, meta } from "../../lib/cases";
+import { cases, getCategoryCollections, meta } from "../../lib/cases";
 import { formatShanghaiDateTime } from "../../lib/format";
+import { categoryLabel } from "../../lib/labels";
+import { withBase } from "../../lib/paths";
+
+const types = getCategoryCollections();
 ---
 
-<BaseLayout title="全部案例 · AI UP LAB" description="按分类、来源、难度与能力筛选 Grok Bot 用法。">
-  <div class="wrap">
-    <p class="kicker">Cases</p>
-    <h1>全部案例</h1>
-    <p class="lede">
-      当前收录 {meta.count} 条。可用分类、来源、难度，以及「例行 / 多Agent / 需审批」筛选。更新时间（Asia/Shanghai）：{formatShanghaiDateTime(meta.updatedAt)}。
-    </p>
+<BaseLayout collection="grok" title="Grok Bot · AI UP LAB" description="按分类、来源、难度与能力筛选 Grok Bot 用法。">
+  <div class="wrap-wide">
+    <section class="hub-intro">
+      <p class="kicker">Grok Bot</p>
+      <h1>可对照的 Bot 用法墙</h1>
+      <p class="lede">
+        例行、多 Agent、审批边界。卡片先看海报与标题，点进去再看上手路径。当前 {meta.count} 条 · 校对 {formatShanghaiDateTime(meta.updatedAt)}。
+      </p>
+      <div class="type-chips" aria-label="类型入口">
+        {
+          types.map((item) => (
+            <a class="type-chip" href={withBase(`types/${item.category}/`)}>
+              <strong>{categoryLabel(item.category)}</strong>
+              <span>{item.count}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
     <CaseExplorer cases={cases} />
   </div>
 </BaseLayout>

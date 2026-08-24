@@ -1,7 +1,6 @@
 ---
 import HtmlCard from "../../components/HtmlCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { formatPublishedDate } from "../../lib/format";
 import { getLatestHtml } from "../../lib/html";
 import { withBase } from "../../lib/paths";
 
@@ -9,7 +8,7 @@ const latest = getLatestHtml();
 ---
 
 <BaseLayout collection="html" title="最新 HTML · AI UP LAB" description="按公开日期排序的 HTML 页面收集。">
-  <div class="wrap">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Latest HTML</p>
       <h1>最新 HTML</h1>
@@ -20,15 +19,8 @@ const latest = getLatestHtml();
       </div>
     </section>
     <section class="section">
-      <div class="grid">
-        {
-          latest.map((item) => (
-            <div class="collection-card">
-              <p class="collection-date">公开约 {formatPublishedDate(item.publishedAt)}</p>
-              <HtmlCard item={item} />
-            </div>
-          ))
-        }
+      <div class="masonry">
+        {latest.map((item) => <HtmlCard item={item} />)}
       </div>
     </section>
   </div>

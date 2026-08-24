@@ -25,7 +25,8 @@
   --radius-xs: 6px;
   --font-sans: "Geist", "Noto Sans SC", "Segoe UI", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
-  --max: 1080px;
+  --max: 1120px;
+  --max-wide: 1280px;
   --accent: var(--brass);
   --accent-ink: #1a1308;
   --text-hero: clamp(1.85rem, 3.8vw, 2.5rem);
@@ -79,6 +80,11 @@ html[data-theme="light"][data-collection="agent-ui"] {
   --accent-ink: #f6f1ff;
 }
 
+html[data-collection="lab"] {
+  --accent: var(--brass);
+  --accent-ink: #1a1308;
+}
+
 *,
 *::before,
 *::after {
@@ -126,6 +132,14 @@ html[data-collection="agent-ui"] body {
     var(--bg);
 }
 
+html[data-collection="lab"] body {
+  background:
+    radial-gradient(820px 380px at 8% -8%, color-mix(in srgb, var(--brass) 16%, transparent), transparent 50%),
+    radial-gradient(720px 340px at 50% -12%, color-mix(in srgb, var(--teal) 10%, transparent), transparent 46%),
+    radial-gradient(780px 360px at 100% 0%, color-mix(in srgb, var(--violet) 12%, transparent), transparent 48%),
+    var(--bg);
+}
+
 img {
   max-width: 100%;
 }
@@ -156,6 +170,11 @@ code {
 
 .wrap {
   width: min(var(--max), calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.wrap-wide {
+  width: min(var(--max-wide), calc(100% - 28px));
   margin-inline: auto;
 }
 
@@ -1490,6 +1509,369 @@ select:focus {
   padding-left: 0;
 }
 
+.landing-intro,
+.hub-intro {
+  padding: 4px 0 16px;
+}
+
+.landing-intro h1,
+.hub-intro h1 {
+  max-width: 18ch;
+}
+
+.hub-intro .library-search,
+.landing-intro + .posters {
+  margin-top: 0;
+}
+
+.hub-intro .type-chips,
+.hub-intro .hero-actions {
+  margin-top: 14px;
+}
+
+.posters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.poster {
+  position: relative;
+  isolation: isolate;
+  min-height: 320px;
+  padding: 22px 22px 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  color: #f7f1e6;
+  border: 1px solid color-mix(in srgb, #fff 10%, transparent);
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.poster:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.poster-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.poster-grok .poster-art {
+  background:
+    radial-gradient(90% 70% at 12% 0%, rgba(232, 160, 92, 0.55), transparent 52%),
+    radial-gradient(70% 60% at 92% 88%, rgba(212, 160, 84, 0.28), transparent 48%),
+    repeating-linear-gradient(-18deg, transparent, transparent 22px, rgba(255, 220, 160, 0.06) 22px, rgba(255, 220, 160, 0.06) 23px),
+    linear-gradient(165deg, #3a2610 0%, #1a1208 58%, #4a3014 100%);
+}
+
+.poster-html .poster-art {
+  background:
+    radial-gradient(90% 70% at 88% 0%, rgba(94, 200, 197, 0.5), transparent 52%),
+    radial-gradient(60% 50% at 8% 90%, rgba(126, 176, 228, 0.22), transparent 46%),
+    repeating-linear-gradient(24deg, transparent, transparent 18px, rgba(180, 255, 248, 0.07) 18px, rgba(180, 255, 248, 0.07) 19px),
+    linear-gradient(165deg, #0c2c2b 0%, #071614 58%, #13403d 100%);
+}
+
+.poster-agent-ui .poster-art {
+  background:
+    radial-gradient(90% 70% at 20% 100%, rgba(201, 160, 255, 0.48), transparent 52%),
+    radial-gradient(55% 45% at 100% 10%, rgba(126, 176, 228, 0.2), transparent 46%),
+    repeating-linear-gradient(8deg, transparent, transparent 16px, rgba(230, 210, 255, 0.07) 16px, rgba(230, 210, 255, 0.07) 17px),
+    linear-gradient(165deg, #26143a 0%, #140c22 58%, #3a2160 100%);
+}
+
+html[data-theme="light"] .poster {
+  color: #1a1713;
+  border-color: var(--line);
+}
+
+html[data-theme="light"] .poster-grok .poster-art {
+  background:
+    radial-gradient(90% 70% at 12% 0%, rgba(212, 160, 84, 0.42), transparent 52%),
+    repeating-linear-gradient(-18deg, transparent, transparent 22px, rgba(168, 116, 40, 0.08) 22px, rgba(168, 116, 40, 0.08) 23px),
+    linear-gradient(165deg, #f6e6c8, #efe0bc 60%, #f3d9a4);
+}
+
+html[data-theme="light"] .poster-html .poster-art {
+  background:
+    radial-gradient(90% 70% at 88% 0%, rgba(31, 139, 136, 0.28), transparent 52%),
+    repeating-linear-gradient(24deg, transparent, transparent 18px, rgba(31, 139, 136, 0.08) 18px, rgba(31, 139, 136, 0.08) 19px),
+    linear-gradient(165deg, #d9efed, #cfe8e6 60%, #b9e0dc);
+}
+
+html[data-theme="light"] .poster-agent-ui .poster-art {
+  background:
+    radial-gradient(90% 70% at 20% 100%, rgba(123, 79, 191, 0.26), transparent 52%),
+    repeating-linear-gradient(8deg, transparent, transparent 16px, rgba(123, 79, 191, 0.08) 16px, rgba(123, 79, 191, 0.08) 17px),
+    linear-gradient(165deg, #efe6fb, #e6d9f7 60%, #d8c4f0);
+}
+
+.poster-copy {
+  width: 100%;
+}
+
+.poster-copy .kicker {
+  color: inherit;
+  opacity: 0.72;
+  margin-bottom: 8px;
+}
+
+.poster h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0 0 8px;
+}
+
+.poster-pitch {
+  margin: 0 0 16px;
+  max-width: 28ch;
+  font-size: 14.5px;
+  line-height: 1.5;
+  opacity: 0.82;
+}
+
+.poster-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.poster-cta span {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 12px;
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.masonry-related {
+  column-count: 2;
+}
+
+.pin-card,
+a.pin-card.case-card,
+a.pin-card.html-card,
+a.pin-card.agent-ui-card {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+.pin-card::before,
+a.pin-card.case-card::before,
+a.pin-card.html-card::before,
+a.pin-card.agent-ui-card::before {
+  display: none;
+}
+
+.pin-card:hover,
+a.pin-card.case-card:hover,
+a.pin-card.html-card:hover,
+a.pin-card.agent-ui-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+}
+
+.pin-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.pin-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pin-ratio-0 { aspect-ratio: 4 / 5; }
+.pin-ratio-1 { aspect-ratio: 1 / 1; }
+.pin-ratio-2 { aspect-ratio: 3 / 4; }
+.pin-ratio-3 { aspect-ratio: 2 / 3; }
+.pin-ratio-4 { aspect-ratio: 5 / 6; }
+
+.pin-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 14px;
+}
+
+.pin-art-title {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 550;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.pin-grok .pin-art {
+  color: #f7eedc;
+  background:
+    radial-gradient(80% 60% at 20% 0%, rgba(232, 160, 92, 0.45), transparent 50%),
+    linear-gradient(165deg, #3a2610, #1a1208 62%, #4a3014);
+}
+
+.pin-html .pin-art {
+  color: #e8f8f7;
+  background:
+    radial-gradient(80% 60% at 90% 10%, rgba(94, 200, 197, 0.42), transparent 50%),
+    linear-gradient(165deg, #0c2c2b, #071614 62%, #13403d);
+}
+
+.pin-agent-ui .pin-art {
+  color: #f3eaff;
+  background:
+    radial-gradient(80% 60% at 10% 90%, rgba(201, 160, 255, 0.4), transparent 50%),
+    linear-gradient(165deg, #26143a, #140c22 62%, #3a2160);
+}
+
+.pin-pattern-1.pin-art {
+  background-image:
+    repeating-linear-gradient(135deg, transparent, transparent 14px, rgba(255, 255, 255, 0.05) 14px, rgba(255, 255, 255, 0.05) 15px),
+    radial-gradient(80% 60% at 20% 0%, rgba(255, 255, 255, 0.08), transparent 50%),
+    var(--pin-base, linear-gradient(#222, #111));
+}
+
+.pin-pattern-2.pin-art {
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.08), transparent 26%),
+    var(--pin-base, linear-gradient(#222, #111));
+}
+
+.pin-pattern-3.pin-art {
+  background-image:
+    repeating-linear-gradient(-12deg, transparent, transparent 20px, rgba(255, 255, 255, 0.045) 20px, rgba(255, 255, 255, 0.045) 21px),
+    var(--pin-base, linear-gradient(#222, #111));
+}
+
+.pin-pattern-4.pin-art {
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.14), transparent 42%),
+    var(--pin-base, linear-gradient(#222, #111));
+}
+
+.pin-grok .pin-pattern-1,
+.pin-grok .pin-pattern-2,
+.pin-grok .pin-pattern-3,
+.pin-grok .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #3a2610, #1a1208 62%, #4a3014);
+}
+
+.pin-html .pin-pattern-1,
+.pin-html .pin-pattern-2,
+.pin-html .pin-pattern-3,
+.pin-html .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #0c2c2b, #071614 62%, #13403d);
+}
+
+.pin-agent-ui .pin-pattern-1,
+.pin-agent-ui .pin-pattern-2,
+.pin-agent-ui .pin-pattern-3,
+.pin-agent-ui .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #26143a, #140c22 62%, #3a2160);
+}
+
+html[data-theme="light"] .pin-grok .pin-art {
+  color: #1a1308;
+  background: radial-gradient(80% 60% at 20% 0%, rgba(212, 160, 84, 0.38), transparent 50%), linear-gradient(165deg, #f6e6c8, #ead4a6);
+}
+
+html[data-theme="light"] .pin-html .pin-art {
+  color: #042422;
+  background: radial-gradient(80% 60% at 90% 10%, rgba(31, 139, 136, 0.26), transparent 50%), linear-gradient(165deg, #d9efed, #b9e0dc);
+}
+
+html[data-theme="light"] .pin-agent-ui .pin-art {
+  color: #140c22;
+  background: radial-gradient(80% 60% at 10% 90%, rgba(123, 79, 191, 0.22), transparent 50%), linear-gradient(165deg, #efe6fb, #d8c4f0);
+}
+
+html[data-theme="light"] .pin-grok .pin-pattern-1,
+html[data-theme="light"] .pin-grok .pin-pattern-2,
+html[data-theme="light"] .pin-grok .pin-pattern-3,
+html[data-theme="light"] .pin-grok .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #f6e6c8, #ead4a6);
+}
+
+html[data-theme="light"] .pin-html .pin-pattern-1,
+html[data-theme="light"] .pin-html .pin-pattern-2,
+html[data-theme="light"] .pin-html .pin-pattern-3,
+html[data-theme="light"] .pin-html .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #d9efed, #b9e0dc);
+}
+
+html[data-theme="light"] .pin-agent-ui .pin-pattern-1,
+html[data-theme="light"] .pin-agent-ui .pin-pattern-2,
+html[data-theme="light"] .pin-agent-ui .pin-pattern-3,
+html[data-theme="light"] .pin-agent-ui .pin-pattern-4 {
+  --pin-base: linear-gradient(165deg, #efe6fb, #d8c4f0);
+}
+
+.pin-body {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px 12px;
+}
+
+.pin-body h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.pin-card .pin-reveal {
+  display: none;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pin-card:hover .pin-reveal,
+.pin-card:focus-within .pin-reveal {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.masonry .library-search {
+  max-width: none;
+}
+
 @media (max-width: 900px) {
   .hero,
   .detail-grid,
@@ -1498,8 +1880,18 @@ select:focus {
   .stats,
   .filter-row,
   .doc-grid,
-  .chooser {
+  .chooser,
+  .posters {
     grid-template-columns: 1fr;
+  }
+
+  .poster {
+    min-height: 220px;
+  }
+
+  .masonry,
+  .masonry-related {
+    column-count: 2;
   }
 
   .stack-card:nth-child(2),
@@ -1552,5 +1944,17 @@ select:focus {
     width: auto;
     text-align: left;
     margin-bottom: 5px;
+  }
+
+  .landing-intro h1,
+  .hub-intro h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry,
+  .masonry-related {
+    column-count: 1;
   }
 }

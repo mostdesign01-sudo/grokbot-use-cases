@@ -8,13 +8,13 @@ import { siteDescription, siteName } from "../lib/site";
 interface Props {
   title: string;
   description?: string;
-  collection?: "grok" | "html" | "agent-ui";
+  collection?: "lab" | "grok" | "html" | "agent-ui";
 }
 
 const {
   title,
   description = siteDescription,
-  collection = "grok",
+  collection = "lab",
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
