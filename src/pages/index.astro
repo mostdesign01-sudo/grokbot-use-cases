@@ -1,170 +1,50 @@
 ---
+import AgentUiCard from "../components/AgentUiCard.astro";
 import CaseCard from "../components/CaseCard.astro";
-import LibraryChooser from "../components/LibraryChooser.astro";
+import HtmlCard from "../components/HtmlCard.astro";
 import LibrarySearch from "../components/LibrarySearch.astro";
-import TimelineFeed from "../components/TimelineFeed.astro";
+import PosterBanners from "../components/PosterBanners.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { caseSearchText, cases, getCategoryCollections, getFeaturedCases, getLatestCases, getRecentlyUpdatedCases, meta } from "../lib/cases";
-import { formatShanghaiDateTime, hasShanghaiToday } from "../lib/format";
-import { categoryLabel } from "../lib/labels";
-import { withBase } from "../lib/paths";
+import { landingPinSearchText, getLandingPins } from "../lib/pins";
 import { siteDescription, siteName } from "../lib/site";
-import { caseToTimeline } from "../lib/timeline";
 
-const featured = getFeaturedCases();
-const featuredPreview = featured.slice(0, 6);
-const latestPreview = getLatestCases(6);
-const recent = getRecentlyUpdatedCases(12);
-const typeCollections = getCategoryCollections();
-const officialCount = cases.filter((item) => item.sourceType.startsWith("official")).length;
-const communityCount = cases.filter((item) =>
-  ["community", "tutorial", "case-study"].includes(item.sourceType),
-).length;
-const updated = formatShanghaiDateTime(meta.updatedAt);
-const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
+const pins = getLandingPins(24);
 ---
 
-<BaseLayout title={siteName} description={siteDescription}>
-  <div class="wrap" data-hub>
-    <LibraryChooser current="grok" />
-
-    <section class="hero">
-      <div>
-        <p class="kicker">{siteName}</p>
-        <h1>可复用的 AI 精选实验室</h1>
-        <p class="lede">
-          案例 / 页面 / Agent UI，每日更新。这一页看 Grok Bot 用法；旁边还有 HTML 收集，以及可交给 Agent 换主题的 Agent UI。从公开资料里挑能对照、能复用的，不当新闻站。
-        </p>
-        <LibrarySearch library="grok" placeholder="搜索 Grok Bot 标题、摘要、收录理由…" />
-        <div class="hero-actions">
-          <a class="btn btn-primary" href={withBase("featured/")}>精选案例</a>
-          <a class="btn btn-ghost" href={withBase("latest/")}>最新案例</a>
-          <a class="btn btn-ghost" href={withBase("types/")}>按类型</a>
-          <a class="btn btn-ghost" href={withBase("cases/")}>浏览全部</a>
-        </div>
-        <p class="meta-line">最近更新（Asia/Shanghai）：{updated} · 数据版本 {meta.version} · 共 {meta.count} 条</p>
-      </div>
-      <div class="hero-stack" aria-hidden="true">
-        {
-          featured.slice(0, 3).map((item, index) => (
-            <article class="stack-card">
-              <small>精选 0{index + 1}</small>
-              <strong>{item.title}</strong>
-              <p class="title-en">{item.titleEn}</p>
-            </article>
-          ))
-        }
-      </div>
+<BaseLayout collection="lab" title={siteName} description={siteDescription}>
+  <div class="wrap-wide">
+    <section class="landing-intro">
+      <p class="kicker">{siteName}</p>
+      <h1>可复用的 AI 精选实验室</h1>
+      <p class="lede">
+        案例 / 页面 / Agent UI。先看三张海报进库，再在下面的墙里按视觉浏览精选。不是新闻站。
+      </p>
     </section>
 
-    <section class="stats" aria-label="案例概览">
-      <div class="stat">
-        <b>{meta.count}</b>
-        <span>精选案例</span>
-      </div>
-      <div class="stat">
-        <b>{officialCount}</b>
-        <span>来自官方文档 / 发布</span>
-      </div>
-      <div class="stat">
-        <b>{communityCount}</b>
-        <span>社区与教程实践</span>
-      </div>
-      <div class="stat">
-        <b>{featured.length}</b>
-        <span>首页精选</span>
-      </div>
-    </section>
+    <PosterBanners />
 
-    <section class="section" aria-labelledby="home-recent">
+    <section class="section" aria-labelledby="landing-wall" data-hub>
       <div class="section-head">
         <div>
-          <h2 id="home-recent">{recentTitle}</h2>
-          <p>按条目 <code>updatedAt</code> 分组，先看今天和近日校对过的用法。</p>
+          <h2 id="landing-wall">精选墙</h2>
+          <p>三库精选与近日条目混排。有图用图，没有就用库海报。点进详情再看原文与收录理由。</p>
         </div>
-        <a href={withBase("latest/")}>查看全部最新</a>
       </div>
-      <TimelineFeed items={recent.map(caseToTimeline)} />
-    </section>
-
-    <section class="section" aria-labelledby="home-featured">
-      <div class="section-head">
-        <div>
-          <h2 id="home-featured">精选</h2>
-          <p>编辑标为 featured 的用法，适合作为第一个 Bot 或团队协作模板。</p>
-        </div>
-        <a href={withBase("featured/")}>查看全部精选</a>
-      </div>
-      <div class="grid">
+      <LibrarySearch library="all" placeholder="在精选墙里筛标题、摘要、收录理由…" />
+      <div class="masonry">
         {
-          featuredPreview.map((item) => (
-            <div data-filter-card data-filter-text={caseSearchText(item)}>
-              <CaseCard caseItem={item} />
+          pins.map((pin) => (
+            <div data-filter-card data-filter-text={landingPinSearchText(pin)}>
+              {pin.lib === "grok" ? (
+                <CaseCard caseItem={pin.item} showLibBadge />
+              ) : pin.lib === "html" ? (
+                <HtmlCard item={pin.item} showLibBadge />
+              ) : (
+                <AgentUiCard item={pin.item} showLibBadge />
+              )}
             </div>
           ))
         }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="home-latest">
-      <div class="section-head">
-        <div>
-          <h2 id="home-latest">最新</h2>
-          <p>按公开日期从新到旧排列，先看最近收录的用法。</p>
-        </div>
-        <a href={withBase("latest/")}>查看全部最新</a>
-      </div>
-      <div class="grid">
-        {
-          latestPreview.map((item) => (
-            <div data-filter-card data-filter-text={caseSearchText(item)}>
-              <CaseCard caseItem={item} />
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="home-types">
-      <div class="section-head">
-        <div>
-          <h2 id="home-types">按类型</h2>
-          <p>每个类型一页静态 HTML，只列出该 <code>categories</code> 下的案例。</p>
-        </div>
-        <a href={withBase("types/")}>查看全部类型</a>
-      </div>
-      <div class="type-chips" aria-label="类型入口">
-        {
-          typeCollections.map((item) => (
-            <a class="type-chip" href={withBase(`types/${item.category}/`)}>
-              <strong>{categoryLabel(item.category)}</strong>
-              <span>{item.count}</span>
-            </a>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <h2>Grok Bot 怎么工作</h2>
-          <p>摘自官方定位，便于理解案例里的审批、例行与多 Agent。</p>
-        </div>
-      </div>
-      <div class="feature-grid">
-        <article class="card">
-          <h3>自带电脑</h3>
-          <p class="summary">每个 Bot 跑在持久云电脑上，能用浏览器、文件和终端，在真实应用里完成工作，而不只是聊天草稿。</p>
-        </article>
-        <article class="card">
-          <h3>多 Bot 协作</h3>
-          <p class="summary">多个 Bot 共享同一账号电脑，可并行、互相传话和交接。你不必当路由器。</p>
-        </article>
-        <article class="card">
-          <h3>例行与审批</h3>
-          <p class="summary">演示一次即可固化为 skill / routine。外发、改预算、改生产等动作默认停在待审。</p>
-        </article>
       </div>
     </section>
   </div>

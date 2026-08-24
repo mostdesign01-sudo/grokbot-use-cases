@@ -1,0 +1,36 @@
+---
+import { agentUiMeta } from "../lib/agent-ui";
+import { meta } from "../lib/cases";
+import { htmlMeta } from "../lib/html";
+import { withBase } from "../lib/paths";
+---
+
+<section class="posters" aria-label="三套内容库">
+  <a class="poster poster-grok" href={withBase("cases/")}>
+    <div class="poster-art" aria-hidden="true"></div>
+    <div class="poster-copy">
+      <p class="kicker">01 · Grok Bot</p>
+      <h2>Grok Bot</h2>
+      <p class="poster-pitch">精选 Bot 用法：例行、多 Agent、审批边界</p>
+      <p class="poster-cta"><span>{meta.count} 条</span> 进入</p>
+    </div>
+  </a>
+  <a class="poster poster-html" href={withBase("html/")}>
+    <div class="poster-art" aria-hidden="true"></div>
+    <div class="poster-copy">
+      <p class="kicker">02 · HTML 收集</p>
+      <h2>HTML 收集</h2>
+      <p class="poster-pitch">公开网页里的演示、模板、组件与工具页</p>
+      <p class="poster-cta"><span>{htmlMeta.count} 条</span> 进入</p>
+    </div>
+  </a>
+  <a class="poster poster-agent-ui" href={withBase("agent-ui/")}>
+    <div class="poster-art" aria-hidden="true"></div>
+    <div class="poster-copy">
+      <p class="kicker">03 · Agent UI</p>
+      <h2>Agent UI</h2>
+      <p class="poster-pitch">ThreeUI 免费件：复制 prompt / Skill.md 换主题</p>
+      <p class="poster-cta"><span>{agentUiMeta.count} 条</span> 进入</p>
+    </div>
+  </a>
+</section>

@@ -17,7 +17,7 @@ const title = agentUiTypeLabel(type);
 ---
 
 <BaseLayout collection="agent-ui" title={`${title} · AI UP LAB`} description={`${title}类型下的 ThreeUI Community 免费组件。`}>
-  <div class="wrap">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="crumb">
         <a href={withBase("agent-ui/types/")}>按类型浏览</a> / {title}
@@ -31,7 +31,7 @@ const title = agentUiTypeLabel(type);
       </div>
     </section>
     <section class="section">
-      <div class="grid">
+      <div class="masonry">
         {items.map((item) => <AgentUiCard item={item} />)}
       </div>
     </section>

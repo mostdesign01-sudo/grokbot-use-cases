@@ -3,30 +3,31 @@ import type { CaseItem } from "../lib/cases";
 import { categoryLabel, difficultyLabel, sourceBadgeKind, sourceBadgeLabel } from "../lib/labels";
 import { withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
-import QualityNote from "./QualityNote.astro";
+import PinVisual from "./PinVisual.astro";
 
 interface Props {
   caseItem: CaseItem;
+  showLibBadge?: boolean;
 }
 
-const { caseItem } = Astro.props;
+const { caseItem, showLibBadge = false } = Astro.props;
 ---
 
-<a class="case-card" href={withBase(`cases/${caseItem.slug}/`)}>
-  <div class="badges">
-    <Badge kind={sourceBadgeKind(caseItem.sourceType)} label={sourceBadgeLabel(caseItem.sourceType)} />
-    <Badge kind="difficulty" label={difficultyLabel(caseItem.difficulty)} />
-    {caseItem.requiresApproval && <Badge kind="approval" label="需审批" />}
-    {caseItem.hasRoutine && <Badge kind="routine" label="例行" />}
-    {caseItem.hasMultiAgent && <Badge kind="multi" label="多Agent" />}
-    {caseItem.featured && <Badge kind="featured" label="+ 精选" />}
-  </div>
-  <h3>{caseItem.title}</h3>
-  <p class="title-en">{caseItem.titleEn}</p>
-  <p class="summary">{caseItem.summary}</p>
-  <QualityNote note={caseItem.qualityNote} />
-  <div class="card-meta">
-    <span>{caseItem.role}</span>
-    <span>{caseItem.categories.map(categoryLabel).join(" · ")}</span>
+<a class="pin-card case-card pin-grok" href={withBase(`cases/${caseItem.slug}/`)}>
+  <PinVisual lib="grok" title={caseItem.title} seed={caseItem.slug} />
+  <div class="pin-body">
+    <div class="badges">
+      {showLibBadge && <Badge kind="approval" label="Grok Bot" />}
+      <Badge kind={sourceBadgeKind(caseItem.sourceType)} label={sourceBadgeLabel(caseItem.sourceType)} />
+      {caseItem.featured && <Badge kind="featured" label="+ 精选" />}
+      {caseItem.requiresApproval && <Badge kind="approval" label="需审批" />}
+    </div>
+    <h3>{caseItem.title}</h3>
+    <p class="title-en">{caseItem.titleEn}</p>
+    <p class="pin-reveal summary">{caseItem.summary}</p>
+    <div class="card-meta">
+      <span>{difficultyLabel(caseItem.difficulty)}</span>
+      <span>{caseItem.categories.map(categoryLabel).slice(0, 2).join(" · ")}</span>
+    </div>
   </div>
 </a>

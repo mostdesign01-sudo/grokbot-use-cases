@@ -2,6 +2,16 @@
   "notes": [
     {
       "date": "2026-08-24",
+      "title": "界面：三张海报 + Pinterest 式浏览墙",
+      "body": "首页改为三张库海报（Grok Bot / HTML 收集 / Agent UI）加跨库精选瀑布流。Grok Bot 总览移到 /cases/。各库与精选/最新/类型页改为视觉优先的 masonry 卡片：有 previewImage 用图，否则用库海报，不再用时间线当主界面。"
+    },
+    {
+      "date": "2026-08-24",
+      "title": "界面：字号、密度与表面打磨",
+      "body": "全站改用 Geist + Noto Sans SC（中文一等），收紧标题字重与字距；卡片、顶栏分段开关、库选择、时间线与搜索更密一档，边框与阴影更克制。三库配色（琥珀 / 青绿 / 靛紫）与案例、HTML、Agent UI 数据不变。"
+    },
+    {
+      "date": "2026-08-24",
       "title": "站点更名为 AI UP LAB，并新增 Agent UI 库",
       "body": "对外品牌定为 AI UP LAB：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI。顶栏现为三库：Grok Bot（琥珀）、HTML 收集（青绿）、Agent UI（靛紫）。Agent UI 首批收录 ThreeUI Community 免费组件（MIT，免登录），可复制 prompt / Skill.md 换主题；不含 Pro，也不提供 MCP。Grok Bot 与 HTML 数据、路由保持不变。"
     },

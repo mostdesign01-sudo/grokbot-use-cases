@@ -8,7 +8,7 @@ const featured = getFeaturedHtml();
 ---
 
 <BaseLayout collection="html" title="精选 HTML · AI UP LAB" description="编辑精选的公开 HTML 演示与模板。">
-  <div class="wrap">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured HTML</p>
       <h1>精选 HTML</h1>
@@ -21,7 +21,7 @@ const featured = getFeaturedHtml();
       </div>
     </section>
     <section class="section">
-      <div class="grid">
+      <div class="masonry">
         {featured.map((item) => <HtmlCard item={item} />)}
       </div>
     </section>

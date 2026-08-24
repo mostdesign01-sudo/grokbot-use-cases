@@ -12,8 +12,8 @@ import { htmlTypeLabel } from "../lib/html-labels";
 import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels";
 ---
 
-<BaseLayout title="搜索 · AI UP LAB" description="在 AI UP LAB 的 Grok Bot、HTML 收集与 Agent UI 三套库里检索标题、摘要、标签与收录理由。">
-  <div class="wrap">
+<BaseLayout collection="lab" title="搜索 · AI UP LAB" description="在 AI UP LAB 的 Grok Bot、HTML 收集与 Agent UI 三套库里检索标题、摘要、标签与收录理由。">
+  <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Search</p>
       <h1>搜索三套收集库</h1>
@@ -31,7 +31,7 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
         <button type="button" class="search-tab" data-lib="agent-ui" aria-selected="false">Agent UI</button>
       </div>
       <p class="count-row" data-count></p>
-      <div class="grid" data-results>
+      <div class="masonry" data-results>
         {
           cases.map((item) => (
             <div
