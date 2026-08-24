@@ -14,7 +14,10 @@ const { current } = Astro.props;
     href={withBase("/")}
     aria-current={current === "grok" ? "page" : undefined}
   >
-    <p class="kicker">{current === "grok" ? "当前库" : "去看看"}</p>
+    <div class="chooser-top">
+      <p class="kicker">{current === "grok" ? "当前库" : "去看看"}</p>
+      <span class="chooser-index">01</span>
+    </div>
     <h2>Grok Bot</h2>
     <p class="summary">精选 Bot 用法：例行、多 Agent、审批边界。数据在 cases.json。</p>
   </a>
@@ -23,7 +26,10 @@ const { current } = Astro.props;
     href={withBase("html/")}
     aria-current={current === "html" ? "page" : undefined}
   >
-    <p class="kicker">{current === "html" ? "当前库" : "去看看"}</p>
+    <div class="chooser-top">
+      <p class="kicker">{current === "html" ? "当前库" : "去看看"}</p>
+      <span class="chooser-index">02</span>
+    </div>
     <h2>HTML 收集</h2>
     <p class="summary">公开网页里的 HTML 演示、模板、组件与工具页。数据在 html-items.json。</p>
   </a>
@@ -32,7 +38,10 @@ const { current } = Astro.props;
     href={withBase("agent-ui/")}
     aria-current={current === "agent-ui" ? "page" : undefined}
   >
-    <p class="kicker">{current === "agent-ui" ? "当前库" : "去看看"}</p>
+    <div class="chooser-top">
+      <p class="kicker">{current === "agent-ui" ? "当前库" : "去看看"}</p>
+      <span class="chooser-index">03</span>
+    </div>
     <h2>Agent UI</h2>
     <p class="summary">ThreeUI Community 免费组件：可复制 prompt / Skill.md 换主题。数据在 agent-ui.json。</p>
   </a>

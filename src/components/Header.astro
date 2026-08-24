@@ -44,36 +44,41 @@ const brandLine =
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href={withBase("/")}>
-      <span class="brand-mark">AI</span>
-      <span class="brand-text">
-        <strong>{siteName}</strong>
-        <span>{brandLine}</span>
-      </span>
-    </a>
-    <nav class="collection-tabs" aria-label="内容库">
-      <a
-        class="tab-grok"
-        href={withBase("/")}
-        aria-current={currentLib === "grok" ? "page" : undefined}
-      >
-        Grok Bot
+    <div class="header-start">
+      <a class="brand" href={withBase("/")}>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letters">AI</span>
+          <span class="brand-mark-dots"><i></i><i></i><i></i></span>
+        </span>
+        <span class="brand-text">
+          <strong>{siteName}</strong>
+          <span>{brandLine}</span>
+        </span>
       </a>
-      <a
-        class="tab-html"
-        href={withBase("html/")}
-        aria-current={currentLib === "html" ? "page" : undefined}
-      >
-        HTML 收集
-      </a>
-      <a
-        class="tab-agent-ui"
-        href={withBase("agent-ui/")}
-        aria-current={currentLib === "agent-ui" ? "page" : undefined}
-      >
-        Agent UI
-      </a>
-    </nav>
+      <nav class="collection-tabs" aria-label="内容库">
+        <a
+          class="tab-grok"
+          href={withBase("/")}
+          aria-current={currentLib === "grok" ? "page" : undefined}
+        >
+          Grok Bot
+        </a>
+        <a
+          class="tab-html"
+          href={withBase("html/")}
+          aria-current={currentLib === "html" ? "page" : undefined}
+        >
+          HTML 收集
+        </a>
+        <a
+          class="tab-agent-ui"
+          href={withBase("agent-ui/")}
+          aria-current={currentLib === "agent-ui" ? "page" : undefined}
+        >
+          Agent UI
+        </a>
+      </nav>
+    </div>
     <nav class="nav" aria-label="栏目">
       {
         links.map((link) => (
