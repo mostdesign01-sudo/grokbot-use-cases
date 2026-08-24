@@ -1,14 +1,20 @@
 ---
 import HtmlCard from "../../components/HtmlCard.astro";
+import LibraryChooser from "../../components/LibraryChooser.astro";
+import LibrarySearch from "../../components/LibrarySearch.astro";
+import TimelineFeed from "../../components/TimelineFeed.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getFeaturedHtml, getHtmlTypeCollections, getLatestHtml, htmlMeta, htmlItems } from "../../lib/html";
-import { formatShanghaiDateTime } from "../../lib/format";
+import { formatShanghaiDateTime, hasShanghaiToday } from "../../lib/format";
+import { getFeaturedHtml, getHtmlTypeCollections, getLatestHtml, getRecentlyUpdatedHtml, htmlItems, htmlMeta, htmlSearchText } from "../../lib/html";
 import { htmlTypeLabel } from "../../lib/html-labels";
 import { withBase } from "../../lib/paths";
+import { htmlToTimeline } from "../../lib/timeline";
 
 const featured = getFeaturedHtml();
 const latest = getLatestHtml(6);
+const recent = getRecentlyUpdatedHtml(12);
 const types = getHtmlTypeCollections();
+const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
 ---
 
 <BaseLayout
@@ -16,14 +22,17 @@ const types = getHtmlTypeCollections();
   title="HTML 收集 · Grok Bot 案例库"
   description="从公开网页收集的 HTML 演示、模板、组件与工具页。"
 >
-  <div class="wrap">
-    <section class="hero">
+  <div class="wrap" data-hub>
+    <LibraryChooser current="html" />
+
+    <section class="hero hero-single">
       <div>
         <p class="kicker">HTML 收集</p>
         <h1>公开网页里的 HTML 范例</h1>
         <p class="lede">
           这里收录的是网上能直接打开的 HTML / CSS 演示、模板、组件库与工具页，和 Grok Bot 用法案例分开存放。数据在 <code>data/html-items.json</code>，只链真实公开地址。
         </p>
+        <LibrarySearch library="html" placeholder="搜索 HTML 标题、摘要、标签、收录理由…" />
         <div class="hero-actions">
           <a class="btn btn-primary" href={withBase("html/featured/")}>精选 HTML</a>
           <a class="btn btn-ghost" href={withBase("html/latest/")}>最新 HTML</a>
@@ -35,6 +44,36 @@ const types = getHtmlTypeCollections();
       </div>
     </section>
 
+    <section class="stats" aria-label="HTML 收集概览">
+      <div class="stat">
+        <b>{htmlMeta.count}</b>
+        <span>公开页面</span>
+      </div>
+      <div class="stat">
+        <b>{featured.length}</b>
+        <span>精选 HTML</span>
+      </div>
+      <div class="stat">
+        <b>{types.length}</b>
+        <span>类型</span>
+      </div>
+      <div class="stat">
+        <b>{htmlMeta.version}</b>
+        <span>数据版本</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="html-recent">
+      <div class="section-head">
+        <div>
+          <h2 id="html-recent">{recentTitle}</h2>
+          <p>按条目 <code>updatedAt</code> 分组，只看 HTML 收集库。</p>
+        </div>
+        <a href={withBase("html/latest/")}>查看全部最新</a>
+      </div>
+      <TimelineFeed items={recent.map(htmlToTimeline)} />
+    </section>
+
     <section class="section" aria-labelledby="html-featured">
       <div class="section-head">
         <div>
@@ -44,7 +83,13 @@ const types = getHtmlTypeCollections();
         <a href={withBase("html/featured/")}>查看全部精选</a>
       </div>
       <div class="grid">
-        {featured.slice(0, 6).map((item) => <HtmlCard item={item} />)}
+        {
+          featured.slice(0, 6).map((item) => (
+            <div data-filter-card data-filter-text={htmlSearchText(item)}>
+              <HtmlCard item={item} />
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -57,7 +102,13 @@ const types = getHtmlTypeCollections();
         <a href={withBase("html/latest/")}>查看全部最新</a>
       </div>
       <div class="grid">
-        {latest.map((item) => <HtmlCard item={item} />)}
+        {
+          latest.map((item) => (
+            <div data-filter-card data-filter-text={htmlSearchText(item)}>
+              <HtmlCard item={item} />
+            </div>
+          ))
+        }
       </div>
     </section>
 

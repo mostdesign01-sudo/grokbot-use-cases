@@ -4,7 +4,7 @@ import HtmlCard from "../../components/HtmlCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { getHtmlBySlug, htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
-import { htmlTypeLabel } from "../../lib/html-labels";
+import { htmlTypeIntro, htmlTypeLabel } from "../../lib/html-labels";
 import { withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -36,7 +36,7 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
       <h1>{item.title}</h1>
       <p class="lede">{item.summary}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href={item.sourceUrl} rel="noreferrer">打开原文</a>
+        <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">打开原文</a>
         <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
       </div>
     </article>
@@ -44,8 +44,21 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2>为何收录</h2>
-          <p>{item.qualityNote}</p>
+          <h2>适合学什么</h2>
+          <ul class="learn-list">
+            {
+              item.types.map((type) => (
+                <li>
+                  <strong>{htmlTypeLabel(type)}</strong>
+                  <p>{htmlTypeIntro(type)}</p>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="quality-note">
+            <strong>收录理由</strong>
+            {item.qualityNote}
+          </p>
           {
             item.previewImage && (
               <p>

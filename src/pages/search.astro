@@ -1,0 +1,126 @@
+---
+import CaseCard from "../components/CaseCard.astro";
+import HtmlCard from "../components/HtmlCard.astro";
+import LibrarySearch from "../components/LibrarySearch.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { caseSearchText, cases } from "../lib/cases";
+import { htmlItems, htmlSearchText } from "../lib/html";
+import { htmlTypeLabel } from "../lib/html-labels";
+import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels";
+---
+
+<BaseLayout title="搜索 · Grok Bot 案例库" description="在 Grok Bot 案例与 HTML 收集两套数据里检索标题、摘要、标签与收录理由。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Search</p>
+      <h1>搜索两套收集库</h1>
+      <p class="lede">
+        在当前页面筛选 <code>cases.json</code> 与 <code>html-items.json</code>。不会混写成一套新闻流，只检索已收录的可复用条目。
+      </p>
+      <LibrarySearch library="all" liveFilter={false} />
+    </section>
+
+    <div class="search-page" data-search-page>
+      <div class="search-tabs" role="tablist" aria-label="搜索范围">
+        <button type="button" class="search-tab" data-lib="all" aria-selected="true">全部</button>
+        <button type="button" class="search-tab" data-lib="grok" aria-selected="false">Grok Bot</button>
+        <button type="button" class="search-tab" data-lib="html" aria-selected="false">HTML 收集</button>
+      </div>
+      <p class="count-row" data-count></p>
+      <div class="grid" data-results>
+        {
+          cases.map((item) => (
+            <div
+              class="item"
+              data-item
+              data-lib="grok"
+              data-text={`${caseSearchText(item)} ${item.categories.map(categoryLabel).join(" ")} ${sourceBadgeLabel(item.sourceType)} ${difficultyLabel(item.difficulty)}`}
+            >
+              <CaseCard caseItem={item} />
+            </div>
+          ))
+        }
+        {
+          htmlItems.map((item) => (
+            <div class="item" data-item data-lib="html" data-text={`${htmlSearchText(item)} ${item.types.map(htmlTypeLabel).join(" ")}`}>
+              <HtmlCard item={item} />
+            </div>
+          ))
+        }
+      </div>
+      <p class="empty" hidden data-empty>没有符合条件的条目。试试更短的关键词，或切换到另一库。</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const root = document.querySelector("[data-search-page]");
+  const form = document.querySelector<HTMLFormElement>(".library-search");
+  const input = form?.querySelector<HTMLInputElement>("input[name='q']");
+  if (root && form && input) {
+    const items = [...root.querySelectorAll<HTMLElement>("[data-item]")];
+    const count = root.querySelector("[data-count]");
+    const empty = root.querySelector("[data-empty]");
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>("[data-lib]")];
+    const params = new URLSearchParams(location.search);
+    let lib = params.get("lib") === "html" || params.get("lib") === "grok" ? params.get("lib")! : "all";
+
+    if (params.get("q")) input.value = params.get("q") ?? "";
+
+    const syncUrl = () => {
+      const next = new URLSearchParams();
+      const query = input.value.trim();
+      if (query) next.set("q", query);
+      if (lib !== "all") next.set("lib", lib);
+      const qs = next.toString();
+      history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+    };
+
+    const apply = () => {
+      const query = input.value.trim().toLowerCase();
+      let visible = 0;
+      let grokVisible = 0;
+      let htmlVisible = 0;
+
+      for (const item of items) {
+        const text = (item.dataset.text ?? "").toLowerCase();
+        const matchLib = lib === "all" || item.dataset.lib === lib;
+        const matchQuery = !query || text.includes(query);
+        const match = matchLib && matchQuery;
+        item.hidden = !match;
+        if (match) {
+          visible += 1;
+          if (item.dataset.lib === "grok") grokVisible += 1;
+          else htmlVisible += 1;
+        }
+      }
+
+      for (const tab of tabs) {
+        tab.setAttribute("aria-selected", tab.dataset.lib === lib ? "true" : "false");
+      }
+
+      if (count) {
+        count.textContent =
+          lib === "all"
+            ? `显示 ${visible} 条（Grok Bot ${grokVisible} · HTML ${htmlVisible}）`
+            : `显示 ${visible} 条`;
+      }
+      if (empty) empty.toggleAttribute("hidden", visible !== 0);
+      syncUrl();
+    };
+
+    for (const tab of tabs) {
+      tab.addEventListener("click", () => {
+        lib = tab.dataset.lib ?? "all";
+        apply();
+      });
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      apply();
+    });
+    input.addEventListener("input", apply);
+    apply();
+  }
+</script>

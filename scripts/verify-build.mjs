@@ -11,6 +11,7 @@ const requiredPages = [
   "types/index.html",
   "docs/index.html",
   "changelog/index.html",
+  "search/index.html",
   "data.json",
   "html-items.json",
   "html/index.html",

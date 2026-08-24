@@ -35,7 +35,7 @@
 | `sourceUrl` | string | 主来源 URL |
 | `secondaryUrls` | string[] | 可选补充来源 |
 | `sourceType` | string | `official-docs` `official-launch` `community` `tutorial` `case-study` `adjacent-cursor` |
-| `qualityNote` | string | 为何收录、适用边界 |
+| `qualityNote` | string | 为何收录、适用边界；页面展示为「收录理由」 |
 | `difficulty` | string | `starter` `intermediate` `advanced` |
 | `hasRoutine` | boolean | 是否包含例行 / 定时或事件触发 |
 | `hasSkill` | boolean | 是否包含可复用 skill |

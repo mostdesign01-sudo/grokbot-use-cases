@@ -57,6 +57,20 @@ export function sourceTypeLabel(value: SourceType): string {
   return sourceTypeLabels[value];
 }
 
+export function sourceBadgeLabel(value: SourceType): string {
+  if (value === "official-docs" || value === "official-launch") return "官方";
+  if (value === "adjacent-cursor") return "Cursor相邻";
+  if (value === "case-study") return "案例";
+  if (value === "tutorial") return "教程";
+  return "社区";
+}
+
+export function sourceBadgeKind(value: SourceType): "official" | "community" | "cursor" {
+  if (isOfficial(value)) return "official";
+  if (isCursorAdjacent(value)) return "cursor";
+  return "community";
+}
+
 export function difficultyLabel(value: Difficulty): string {
   return difficultyLabels[value];
 }

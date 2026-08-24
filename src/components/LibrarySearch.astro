@@ -1,0 +1,60 @@
+---
+import { withBase } from "../lib/paths";
+
+interface Props {
+  library?: "grok" | "html" | "all";
+  placeholder?: string;
+  value?: string;
+  liveFilter?: boolean;
+}
+
+const {
+  library = "all",
+  placeholder = "搜索标题、摘要、收录理由…",
+  value = "",
+  liveFilter = true,
+} = Astro.props;
+---
+
+<form
+  class="library-search"
+  action={withBase("search/")}
+  method="get"
+  role="search"
+  data-hub-filter={liveFilter ? "" : undefined}
+>
+  {library !== "all" && <input type="hidden" name="lib" value={library} />}
+  <label class="library-search-field">
+    <span class="sr-only">搜索当前库</span>
+    <input
+      type="search"
+      name="q"
+      value={value}
+      placeholder={placeholder}
+      autocomplete="off"
+      data-hub-q
+    />
+  </label>
+  <button class="btn btn-primary" type="submit">搜索</button>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-hub-filter]");
+  const input = form?.querySelector<HTMLInputElement>("[data-hub-q]");
+  if (form && input) {
+    const apply = () => {
+      const query = input.value.trim().toLowerCase();
+      const cards = document.querySelectorAll<HTMLElement>("[data-filter-card]");
+      for (const card of cards) {
+        const text = (card.dataset.filterText ?? "").toLowerCase();
+        card.hidden = Boolean(query) && !text.includes(query);
+      }
+      for (const group of document.querySelectorAll<HTMLElement>("[data-filter-group]")) {
+        const visible = [...group.querySelectorAll<HTMLElement>("[data-filter-card]")].some((card) => !card.hidden);
+        group.hidden = !visible;
+      }
+    };
+
+    input.addEventListener("input", apply);
+  }
+</script>

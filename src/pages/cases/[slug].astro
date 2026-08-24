@@ -54,15 +54,54 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
         <section class="panel">
           <h2>这条用法在做什么</h2>
           <p>{item.summary}</p>
-          <p>{item.qualityNote}</p>
+          <p class="quality-note">
+            <strong>收录理由</strong>
+            {item.qualityNote}
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>上手路径</h2>
           {
             item.approvalBoundary && (
-              <p>
-                <strong>审批边界：</strong>
-                {item.approvalBoundary}
-              </p>
+              <div class="approval-callout">
+                <strong>审批边界</strong>
+                <p>{item.approvalBoundary}</p>
+              </div>
             )
           }
+          <ol class="start-path">
+            <li>
+              <strong>先跑一次安全范围</strong>
+              <p>
+                {
+                  item.approvalBoundary
+                    ? `先在可撤回、不外发的范围内试跑。本条未批准前：${item.approvalBoundary}。`
+                    : "先在可撤回、不外发的范围内试跑一遍，确认输出可用，再考虑扩大权限。"
+                }
+              </p>
+            </li>
+            <li>
+              <strong>存 Skill</strong>
+              <p>
+                {
+                  item.hasSkill
+                    ? "这条用法已包含可复用 Skill。跑通安全范围后，立刻把步骤固化下来。"
+                    : "把跑通的步骤存成 Skill，下次同类任务直接复用，而不是重新口述。"
+                }
+              </p>
+            </li>
+            <li>
+              <strong>再上 Routine</strong>
+              <p>
+                {
+                  item.hasRoutine
+                    ? "输出稳定后再打开例行 / 定时。本条已有例行形态，不要一上来就无人值守外发。"
+                    : "确认输出可靠后，再考虑定时或事件触发；例行默认仍应停在待审。"
+                }
+              </p>
+            </li>
+          </ol>
         </section>
 
         {

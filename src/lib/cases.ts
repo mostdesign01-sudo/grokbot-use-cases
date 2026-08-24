@@ -71,6 +71,27 @@ export function getLatestCases(limit?: number): CaseItem[] {
   return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
 }
 
+export function getRecentlyUpdatedCases(limit = 12): CaseItem[] {
+  return [...cases]
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit);
+}
+
+export function caseSearchText(item: CaseItem): string {
+  return [
+    item.title,
+    item.titleEn,
+    item.summary,
+    item.qualityNote,
+    item.role,
+    item.id,
+    item.slug,
+    item.connectors.join(" "),
+    item.categories.join(" "),
+    item.approvalBoundary ?? "",
+  ].join(" ");
+}
+
 export function getRelatedCases(current: CaseItem, limit = 3): CaseItem[] {
   return cases
     .filter((item) => item.id !== current.id)

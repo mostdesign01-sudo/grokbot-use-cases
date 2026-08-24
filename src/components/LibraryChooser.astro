@@ -1,0 +1,30 @@
+---
+import { withBase } from "../lib/paths";
+
+interface Props {
+  current: "grok" | "html";
+}
+
+const { current } = Astro.props;
+---
+
+<section class="chooser" aria-label="选择内容库">
+  <a
+    class:list={["chooser-card", "chooser-grok", current === "grok" && "is-current"]}
+    href={withBase("/")}
+    aria-current={current === "grok" ? "page" : undefined}
+  >
+    <p class="kicker">{current === "grok" ? "当前库" : "另一库"}</p>
+    <h2>Grok Bot</h2>
+    <p class="summary">精选 Bot 用法：例行、多 Agent、审批边界。数据在 cases.json。</p>
+  </a>
+  <a
+    class:list={["chooser-card", "chooser-html", current === "html" && "is-current"]}
+    href={withBase("html/")}
+    aria-current={current === "html" ? "page" : undefined}
+  >
+    <p class="kicker">{current === "html" ? "当前库" : "另一库"}</p>
+    <h2>HTML 收集</h2>
+    <p class="summary">公开网页里的 HTML 演示、模板、组件与工具页。数据在 html-items.json。</p>
+  </a>
+</section>

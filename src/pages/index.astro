@@ -1,36 +1,31 @@
 ---
 import CaseCard from "../components/CaseCard.astro";
+import LibraryChooser from "../components/LibraryChooser.astro";
+import LibrarySearch from "../components/LibrarySearch.astro";
+import TimelineFeed from "../components/TimelineFeed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { cases, getCategoryCollections, getFeaturedCases, getLatestCases, meta } from "../lib/cases";
-import { formatShanghaiDateTime } from "../lib/format";
+import { caseSearchText, cases, getCategoryCollections, getFeaturedCases, getLatestCases, getRecentlyUpdatedCases, meta } from "../lib/cases";
+import { formatShanghaiDateTime, hasShanghaiToday } from "../lib/format";
 import { categoryLabel } from "../lib/labels";
 import { withBase } from "../lib/paths";
+import { caseToTimeline } from "../lib/timeline";
 
 const featured = getFeaturedCases();
 const featuredPreview = featured.slice(0, 6);
 const latestPreview = getLatestCases(6);
+const recent = getRecentlyUpdatedCases(12);
 const typeCollections = getCategoryCollections();
 const officialCount = cases.filter((item) => item.sourceType.startsWith("official")).length;
 const communityCount = cases.filter((item) =>
   ["community", "tutorial", "case-study"].includes(item.sourceType),
 ).length;
 const updated = formatShanghaiDateTime(meta.updatedAt);
+const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
 ---
 
 <BaseLayout title="Grok Bot 案例库" description="精选 Grok Bot 优质用法，每日更新。另有独立 HTML 收集库。">
-  <div class="wrap">
-    <section class="chooser" aria-label="选择内容库">
-      <a class="chooser-card chooser-grok" href={withBase("/")}>
-        <p class="kicker">当前库</p>
-        <h2>Grok Bot</h2>
-        <p class="summary">精选 Bot 用法：例行、多 Agent、审批边界。数据在 cases.json。</p>
-      </a>
-      <a class="chooser-card chooser-html" href={withBase("html/")}>
-        <p class="kicker">另一库</p>
-        <h2>HTML 收集</h2>
-        <p class="summary">公开网页里的 HTML 演示、模板、组件与工具页。数据在 html-items.json。</p>
-      </a>
-    </section>
+  <div class="wrap" data-hub>
+    <LibraryChooser current="grok" />
 
     <section class="hero">
       <div>
@@ -39,6 +34,7 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
         <p class="lede">
           Grok Bot 是可以交付真实工作的 AI 同事：自带持久云电脑，能登录你的应用，在工具里把活干完，只在需要审批时回来。本站从公开文档与社区实践中整理可复用的用法，方便对照角色、例行与审批边界。
         </p>
+        <LibrarySearch library="grok" placeholder="搜索 Grok Bot 标题、摘要、收录理由…" />
         <div class="hero-actions">
           <a class="btn btn-primary" href={withBase("featured/")}>精选案例</a>
           <a class="btn btn-ghost" href={withBase("latest/")}>最新案例</a>
@@ -79,6 +75,17 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
       </div>
     </section>
 
+    <section class="section" aria-labelledby="home-recent">
+      <div class="section-head">
+        <div>
+          <h2 id="home-recent">{recentTitle}</h2>
+          <p>按条目 <code>updatedAt</code> 分组，先看今天和近日校对过的用法。</p>
+        </div>
+        <a href={withBase("latest/")}>查看全部最新</a>
+      </div>
+      <TimelineFeed items={recent.map(caseToTimeline)} />
+    </section>
+
     <section class="section" aria-labelledby="home-featured">
       <div class="section-head">
         <div>
@@ -88,7 +95,13 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
         <a href={withBase("featured/")}>查看全部精选</a>
       </div>
       <div class="grid">
-        {featuredPreview.map((item) => <CaseCard caseItem={item} />)}
+        {
+          featuredPreview.map((item) => (
+            <div data-filter-card data-filter-text={caseSearchText(item)}>
+              <CaseCard caseItem={item} />
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -101,7 +114,13 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
         <a href={withBase("latest/")}>查看全部最新</a>
       </div>
       <div class="grid">
-        {latestPreview.map((item) => <CaseCard caseItem={item} />)}
+        {
+          latestPreview.map((item) => (
+            <div data-filter-card data-filter-text={caseSearchText(item)}>
+              <CaseCard caseItem={item} />
+            </div>
+          ))
+        }
       </div>
     </section>
 
