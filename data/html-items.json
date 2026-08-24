@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-23T04:16:00Z",
+    "updatedAt": "2026-08-24T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.0.0",
-    "count": 12
+    "version": "1.1.0",
+    "count": 17
   },
   "items": [
     {
@@ -11,163 +11,371 @@
       "slug": "flexbox-froggy",
       "title": "Flexbox Froggy",
       "summary": "用闯关游戏学习 CSS Flexbox：写属性把青蛙放到荷叶上。Thomas Park / Codepip 出品，开源，支持简体中文。",
-      "types": ["interactive"],
+      "types": [
+        "interactive"
+      ],
       "sourceUrl": "https://flexboxfroggy.com/",
-      "secondaryUrls": ["https://github.com/thomaspark/flexboxfroggy/"],
+      "secondaryUrls": [
+        "https://github.com/thomaspark/flexboxfroggy/"
+      ],
       "featured": true,
       "publishedAt": "2015-11-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "经典互动教学页，适合收集「游戏/互动」类 HTML 学习界面。",
-      "tags": ["flexbox", "css", "game", "codepip"]
+      "tags": [
+        "flexbox",
+        "css",
+        "game",
+        "codepip"
+      ]
     },
     {
       "id": "css-grid-garden",
       "slug": "css-grid-garden",
       "title": "CSS Grid Garden",
       "summary": "用浇水闯关学习 CSS Grid。与 Flexbox Froggy 同一作者系列，开源，可在浏览器里直接玩。",
-      "types": ["interactive"],
+      "types": [
+        "interactive"
+      ],
       "sourceUrl": "https://cssgridgarden.com/",
-      "secondaryUrls": ["https://github.com/thomaspark/gridgarden/"],
+      "secondaryUrls": [
+        "https://github.com/thomaspark/gridgarden/"
+      ],
       "featured": false,
       "publishedAt": "2017-04-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "Grid 布局的对照练习页，URL 长期稳定。",
-      "tags": ["grid", "css", "game", "codepip"]
+      "tags": [
+        "grid",
+        "css",
+        "game",
+        "codepip"
+      ]
     },
     {
       "id": "animate-css",
       "slug": "animate-css",
       "title": "Animate.css",
       "summary": "即加即用的跨浏览器 CSS 动画库官网：可预览 bounce、fade、flip 等类，并查看安装与无障碍说明。",
-      "types": ["motion"],
+      "types": [
+        "motion"
+      ],
       "sourceUrl": "https://animate.style/",
-      "secondaryUrls": ["https://github.com/animate-css/animate.css"],
+      "secondaryUrls": [
+        "https://github.com/animate-css/animate.css"
+      ],
       "featured": true,
       "publishedAt": "2011-10-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "动效类参考站，示范如何用纯 CSS class 展示动画。",
-      "tags": ["animation", "css", "library"]
+      "tags": [
+        "animation",
+        "css",
+        "library"
+      ]
     },
     {
       "id": "a-single-div",
       "slug": "a-single-div",
       "title": "A Single Div",
       "summary": "Lynn Fisher 的 CSS 绘画项目：每幅画只用一个 HTML div。既是作品集，也是纯 CSS 图形实验。",
-      "types": ["motion", "portfolio"],
+      "types": [
+        "motion",
+        "portfolio"
+      ],
       "sourceUrl": "https://a.singlediv.com/",
-      "secondaryUrls": ["https://github.com/lynnandtonic/a-single-div"],
+      "secondaryUrls": [
+        "https://github.com/lynnandtonic/a-single-div"
+      ],
       "featured": true,
       "publishedAt": "2014-10-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "展示 HTML+CSS 极限表达的作品集，源码公开。",
-      "tags": ["css-art", "single-div", "portfolio"]
+      "tags": [
+        "css-art",
+        "single-div",
+        "portfolio"
+      ]
     },
     {
       "id": "pico-css",
       "slug": "pico-css",
       "title": "Pico CSS",
       "summary": "面向语义 HTML 的极简 CSS 框架官网：几乎不用 class，直接美化原生表单、按钮与排版。",
-      "types": ["component", "docs"],
+      "types": [
+        "component",
+        "docs"
+      ],
       "sourceUrl": "https://picocss.com/",
       "featured": false,
       "publishedAt": "2019-06-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "适合对照「少 class、多语义标签」的组件/文档站写法。",
-      "tags": ["framework", "semantic-html", "css"]
+      "tags": [
+        "framework",
+        "semantic-html",
+        "css"
+      ]
     },
     {
       "id": "shoelace",
       "slug": "shoelace",
       "title": "Shoelace",
       "summary": "基于 Web Components 的开源组件库文档站（现导向 Web Awesome）。可用 CDN 直接插入 <sl-button> 等自定义元素。",
-      "types": ["component", "docs"],
+      "types": [
+        "component",
+        "docs"
+      ],
       "sourceUrl": "https://shoelace.style/",
       "featured": false,
       "publishedAt": "2020-02-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "框架无关的 HTML 自定义元素示范；站点本身也是组件文档页。",
-      "tags": ["web-components", "design-system"]
+      "tags": [
+        "web-components",
+        "design-system"
+      ]
     },
     {
       "id": "mdn-css-examples",
       "slug": "mdn-css-examples",
       "title": "MDN CSS Examples",
       "summary": "MDN CSS 文档配套的可运行示例仓库页：含 object-fit、overscroll、计数器样式与小工具等独立 HTML 演示。",
-      "types": ["docs", "tool"],
+      "types": [
+        "docs",
+        "tool"
+      ],
       "sourceUrl": "https://mdn.github.io/css-examples/",
-      "secondaryUrls": ["https://github.com/mdn/css-examples"],
+      "secondaryUrls": [
+        "https://github.com/mdn/css-examples"
+      ],
       "featured": true,
       "publishedAt": "2018-01-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "官方文档站的示例索引，链接稳定，适合作为 HTML 演示收集入口。",
-      "tags": ["mdn", "css", "examples"]
+      "tags": [
+        "mdn",
+        "css",
+        "examples"
+      ]
     },
     {
       "id": "html5up",
       "slug": "html5up",
       "title": "HTML5 UP",
       "summary": "免费响应式 HTML5/CSS3 站点模板库：落地页、作品集等可下载模板，CCA 许可。",
-      "types": ["landing", "portfolio"],
+      "types": [
+        "landing",
+        "portfolio"
+      ],
       "sourceUrl": "https://html5up.net/",
       "featured": true,
       "publishedAt": "2013-01-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "长期维护的开源模板目录，适合收集落地页与作品集 HTML。",
-      "tags": ["templates", "html5", "responsive"]
+      "tags": [
+        "templates",
+        "html5",
+        "responsive"
+      ]
     },
     {
       "id": "open-props",
       "slug": "open-props",
       "title": "Open Props",
       "summary": "Adam Argyle 的 CSS 变量设计令牌项目官网：颜色、阴影、动画等 props 可直接引入普通 HTML 页。",
-      "types": ["docs", "component"],
+      "types": [
+        "docs",
+        "component"
+      ],
       "sourceUrl": "https://open-props.style/",
-      "secondaryUrls": ["https://github.com/argyleink/open-props"],
+      "secondaryUrls": [
+        "https://github.com/argyleink/open-props"
+      ],
       "featured": false,
       "publishedAt": "2021-08-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "文档站本身演示令牌与组件用法，适合对照设计系统页。",
-      "tags": ["design-tokens", "css-variables"]
+      "tags": [
+        "design-tokens",
+        "css-variables"
+      ]
     },
     {
       "id": "shadow-palette",
       "slug": "shadow-palette",
       "title": "CSS Shadow Palette Generator",
       "summary": "Josh Comeau 的阴影色板生成器：调整高度与光线后复制 CSS 自定义属性，工具页即用。",
-      "types": ["tool"],
+      "types": [
+        "tool"
+      ],
       "sourceUrl": "https://www.joshwcomeau.com/shadow-palette/",
       "featured": false,
       "publishedAt": "2021-09-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "高质量前端工具页，输出可直接用于 HTML/CSS。",
-      "tags": ["shadow", "generator", "css"]
+      "tags": [
+        "shadow",
+        "generator",
+        "css"
+      ]
     },
     {
       "id": "threejs-examples",
       "slug": "threejs-examples",
       "title": "three.js examples",
       "summary": "three.js 官方示例墙：大量可在浏览器运行的 WebGL / HTML 互动演示，可点进查看源码。",
-      "types": ["interactive"],
+      "types": [
+        "interactive"
+      ],
       "sourceUrl": "https://threejs.org/examples/",
-      "secondaryUrls": ["https://github.com/mrdoob/three.js"],
+      "secondaryUrls": [
+        "https://github.com/mrdoob/three.js"
+      ],
       "featured": false,
       "publishedAt": "2010-04-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "官方互动示例索引，适合收集 3D/游戏向 HTML 演示。",
-      "tags": ["webgl", "threejs", "examples"]
+      "tags": [
+        "webgl",
+        "threejs",
+        "examples"
+      ]
     },
     {
       "id": "bootstrap-examples",
       "slug": "bootstrap-examples",
       "title": "Bootstrap Examples",
       "summary": "Bootstrap 5.3 官方示例：封面、定价、仪表盘、博客、相册等完整 HTML 页面片段与起步模板。",
-      "types": ["landing", "component"],
+      "types": [
+        "landing",
+        "component"
+      ],
       "sourceUrl": "https://getbootstrap.com/docs/5.3/examples/",
       "featured": false,
       "publishedAt": "2023-05-30",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "官方落地页/组件示例目录，可直接对照源码结构。",
-      "tags": ["bootstrap", "templates", "examples"]
+      "tags": [
+        "bootstrap",
+        "templates",
+        "examples"
+      ]
+    },
+    {
+      "id": "css-zen-garden",
+      "slug": "css-zen-garden",
+      "title": "CSS Zen Garden",
+      "summary": "同一份 HTML，切换不同作者的外部样式表，展示纯 CSS 能把页面做成完全不同的视觉设计。Dave Shea 发起的经典 CSS 设计展览。",
+      "types": [
+        "portfolio",
+        "docs"
+      ],
+      "sourceUrl": "https://csszengarden.com/",
+      "secondaryUrls": [],
+      "featured": true,
+      "publishedAt": "2003-05-08",
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "qualityNote": "结构与表现分离的教科书级公开页，适合「作品集 / 文档站」类收集。",
+      "tags": [
+        "css",
+        "design",
+        "gallery"
+      ]
+    },
+    {
+      "id": "scroll-driven-animations",
+      "slug": "scroll-driven-animations",
+      "title": "Scroll-driven Animations",
+      "summary": "Chrome 开发者布拉姆斯做的演示站：阅读进度、封面流转、堆叠卡片、横向卷轴等，全部用滚动驱动动画，演示页本身就是手写 HTML/CSS/JS，无构建步骤。",
+      "types": [
+        "motion",
+        "interactive",
+        "docs"
+      ],
+      "sourceUrl": "https://scroll-driven-animations.style/",
+      "secondaryUrls": [
+        "https://developer.chrome.com/docs/web-platform/scroll-driven-animations"
+      ],
+      "featured": true,
+      "publishedAt": "2023-05-01",
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "qualityNote": "官方质量的动效实验室，类型覆盖动效、互动与文档。",
+      "tags": [
+        "scroll",
+        "css",
+        "waapi",
+        "chrome"
+      ]
+    },
+    {
+      "id": "squoosh",
+      "slug": "squoosh",
+      "title": "Squoosh",
+      "summary": "GoogleChromeLabs 的浏览器内图片压缩工具：本地编解码、并排对比、不上传原图。是高质量 Web 工具页的代表。",
+      "types": [
+        "tool"
+      ],
+      "sourceUrl": "https://squoosh.app/",
+      "secondaryUrls": [
+        "https://github.com/GoogleChromeLabs/squoosh"
+      ],
+      "featured": false,
+      "publishedAt": "2018-10-01",
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "qualityNote": "开源、可离线工作的实用工具页，适合「工具页」分类。",
+      "tags": [
+        "image",
+        "wasm",
+        "pwa",
+        "google"
+      ]
+    },
+    {
+      "id": "clippy",
+      "slug": "clippy-css-clip-path",
+      "title": "Clippy：CSS clip-path 生成器",
+      "summary": "Bennett Feely 的可视化 clip-path 编辑器，拖点生成 circle / ellipse / polygon / inset，并可复制 CSS。",
+      "types": [
+        "tool"
+      ],
+      "sourceUrl": "https://bennettfeely.com/clippy/",
+      "secondaryUrls": [
+        "https://github.com/bennettfeely/clippy"
+      ],
+      "featured": false,
+      "publishedAt": "2014-10-01",
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "qualityNote": "长期维护的经典 CSS 工具页，链接有效。",
+      "tags": [
+        "clip-path",
+        "css",
+        "generator"
+      ]
+    },
+    {
+      "id": "css-doodle",
+      "slug": "css-doodle",
+      "title": "css-doodle",
+      "summary": "基于 Web Components 的 CSS 图案生成器：用扩展 CSS 语法画网格、图形与动画，文档站本身就是可点击的现场演示。",
+      "types": [
+        "motion",
+        "component",
+        "interactive"
+      ],
+      "sourceUrl": "https://css-doodle.com/",
+      "secondaryUrls": [
+        "https://github.com/css-doodle/css-doodle"
+      ],
+      "featured": false,
+      "publishedAt": "2018-01-01",
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "qualityNote": "文档即画布，适合动效 / 组件 / 互动三类。",
+      "tags": [
+        "web-components",
+        "css",
+        "generative"
+      ]
     }
   ]
 }
