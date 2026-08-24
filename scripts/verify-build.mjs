@@ -60,8 +60,18 @@ for (const type of htmlTypes) {
   }
 }
 
-if (dataset.cases.length !== 20) {
-  console.error(`Expected 20 cases, found ${dataset.cases.length}`);
+if (dataset.cases.length !== dataset.meta.count) {
+  console.error(`cases.json meta.count ${dataset.meta.count} does not match items ${dataset.cases.length}`);
+  process.exit(1);
+}
+
+if (dataset.cases.length < 20) {
+  console.error(`Expected at least 20 cases, found ${dataset.cases.length}`);
+  process.exit(1);
+}
+
+if (htmlDataset.items.length !== htmlDataset.meta.count) {
+  console.error(`html-items.json meta.count ${htmlDataset.meta.count} does not match items ${htmlDataset.items.length}`);
   process.exit(1);
 }
 
