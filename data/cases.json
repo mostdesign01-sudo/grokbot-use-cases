@@ -1,16 +1,17 @@
 {
   "meta": {
-    "updatedAt": "2026-08-23T03:45:00Z",
+    "updatedAt": "2026-08-24T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.0.0",
-    "count": 20,
+    "version": "1.1.0",
+    "count": 21,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
       "https://docs.x.ai/grok-bot/skills-routines-and-automations",
       "https://cursor.com/blog/automations",
       "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
-      "https://composio.dev/content/guide-to-frok-bot"
+      "https://composio.dev/content/guide-to-frok-bot",
+      "https://docs.x.ai/grok-bot/faq"
     ]
   },
   "cases": [
@@ -20,10 +21,16 @@
       "title": "隔夜销售外呼管道",
       "titleEn": "Overnight Sales Outbound Pipeline",
       "summary": "Sales Outbound Bot 隔夜研究 CRM 客户、按 ICP/意向打分、找联系人，并用销售本人语气起草邮件与 LinkedIn 内容，只留下待审收件箱。官方要求：未批准前不发送、不入组。",
-      "categories": ["sales", "automation", "content"],
+      "categories": [
+        "sales",
+        "automation",
+        "content"
+      ],
       "role": "Sales Outbound",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
-      "secondaryUrls": ["https://x.ai/news/introducing-grok-bot"],
+      "secondaryUrls": [
+        "https://x.ai/news/introducing-grok-bot"
+      ],
       "sourceType": "official-docs",
       "qualityNote": "官方 canonical 流程，带 starter prompt 与清晰审批边界。",
       "difficulty": "starter",
@@ -32,7 +39,11 @@
       "hasMultiAgent": false,
       "requiresApproval": true,
       "approvalBoundary": "不发送、不入组；停在待审列表",
-      "connectors": ["crm", "email", "linkedin"],
+      "connectors": [
+        "crm",
+        "email",
+        "linkedin"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -44,7 +55,11 @@
       "title": "演示环境就绪检查清单",
       "titleEn": "Demo Environment Readiness Checklist",
       "summary": "Demo Bot 隔夜拉起环境，检查产品 UI/演示数据，修复坏种子与过期数据，在客户通话前交出「演示就绪」清单。",
-      "categories": ["sales", "engineering", "automation"],
+      "categories": [
+        "sales",
+        "engineering",
+        "automation"
+      ],
       "role": "Demo Bot",
       "sourceUrl": "https://x.ai/news/introducing-grok-bot",
       "sourceType": "official-launch",
@@ -54,7 +69,10 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": true,
-      "connectors": ["staging", "product-ui"],
+      "connectors": [
+        "staging",
+        "product-ui"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -66,7 +84,11 @@
       "title": "CRM 管道周一记分板",
       "titleEn": "CRM Pipeline Ops / Monday Scoreboard",
       "summary": "Bot 维护 CRM 与组织架构卫生，标记停滞与承诺风险，并在周一发布记分板，让团队一开始就对齐。",
-      "categories": ["sales", "daily-digest", "automation"],
+      "categories": [
+        "sales",
+        "daily-digest",
+        "automation"
+      ],
       "role": "CRM Ops",
       "sourceUrl": "https://x.ai/news/introducing-grok-bot",
       "sourceType": "official-launch",
@@ -76,7 +98,10 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": false,
-      "connectors": ["crm", "slack"],
+      "connectors": [
+        "crm",
+        "slack"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -88,7 +113,10 @@
       "title": "客户跟进与温度运营",
       "titleEn": "Account Follow-up & Warmth Ops",
       "summary": "根据通话纪要更新 CRM 备注、起草产品更新、开支持工单、在团队现有工具里同步下一步——工作落在真实系统里，而不只在聊天中。",
-      "categories": ["sales", "automation"],
+      "categories": [
+        "sales",
+        "automation"
+      ],
       "role": "Account Ops",
       "sourceUrl": "https://x.ai/news/introducing-grok-bot",
       "sourceType": "official-launch",
@@ -98,7 +126,11 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": true,
-      "connectors": ["crm", "support", "email"],
+      "connectors": [
+        "crm",
+        "support",
+        "email"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -110,7 +142,11 @@
       "title": "人才侦察（招聘寻源）",
       "titleEn": "Talent Scout (Recruiting Sourcer)",
       "summary": "负责寻源、候选人研究、外联草稿与日程准备。示例：找 20 名符合硬性条件的候选人、排除 ATS 重复、引用证据、起草个性化外联——不主动联系。",
-      "categories": ["recruiting", "research", "automation"],
+      "categories": [
+        "recruiting",
+        "research",
+        "automation"
+      ],
       "role": "Talent Scout",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
       "sourceType": "official-docs",
@@ -121,7 +157,11 @@
       "hasMultiAgent": false,
       "requiresApproval": true,
       "approvalBoundary": "不联系候选人",
-      "connectors": ["ats", "email", "calendar"],
+      "connectors": [
+        "ats",
+        "email",
+        "calendar"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -133,7 +173,11 @@
       "title": "付费投放监控与预算建议（仅推荐）",
       "titleEn": "Paid Media Monitor & Budget Reallocator",
       "summary": "拉取各活动花费与表现，对照月度预算与目标 CAC，给出带数字的再分配建议，并起草给增长团队的 Slack 更新——不改预算、不发送。",
-      "categories": ["marketing", "research", "automation"],
+      "categories": [
+        "marketing",
+        "research",
+        "automation"
+      ],
       "role": "Paid Media",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
       "sourceType": "official-docs",
@@ -144,7 +188,10 @@
       "hasMultiAgent": false,
       "requiresApproval": true,
       "approvalBoundary": "不改预算、不发送",
-      "connectors": ["ads", "slack"],
+      "connectors": [
+        "ads",
+        "slack"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -156,10 +203,16 @@
       "title": "每周费用管家",
       "titleEn": "Weekly Expense Manager",
       "summary": "从费用系统+政策汇总周报，匹配财务收件箱收据，标记缺失分类与政策例外并引用出处，为每位负责人起草一封跟进——只返回摘要与草稿。",
-      "categories": ["finance", "automation", "daily-digest"],
+      "categories": [
+        "finance",
+        "automation",
+        "daily-digest"
+      ],
       "role": "Expense Manager",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
-      "secondaryUrls": ["https://x.ai/news/introducing-grok-bot"],
+      "secondaryUrls": [
+        "https://x.ai/news/introducing-grok-bot"
+      ],
       "sourceType": "official-docs",
       "qualityNote": "高重复性财务杂务，文档强调与源数据对账。",
       "difficulty": "starter",
@@ -167,7 +220,10 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": true,
-      "connectors": ["expense", "gmail"],
+      "connectors": [
+        "expense",
+        "gmail"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -179,7 +235,10 @@
       "title": "产品性能调查包",
       "titleEn": "Product Performance Investigation Pack",
       "summary": "例如调查昨日发布后的结账延迟：查仪表盘/链路/火焰图，返回带截图与链接的短报告，区分事实与假设，不改生产、不改告警。",
-      "categories": ["engineering", "research"],
+      "categories": [
+        "engineering",
+        "research"
+      ],
       "role": "Performance Investigator",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
       "sourceType": "official-docs",
@@ -190,7 +249,10 @@
       "hasMultiAgent": false,
       "requiresApproval": true,
       "approvalBoundary": "不改生产/告警",
-      "connectors": ["datadog", "grafana"],
+      "connectors": [
+        "datadog",
+        "grafana"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -202,10 +264,15 @@
       "title": "预发环境 Bug 复现包",
       "titleEn": "Bug Reproduction Pack (Staging)",
       "summary": "阅读缺陷报告，在预发用全新测试账号复现，返回精确步骤、期望/实际、截图、浏览器/OS、控制台与网络笔记、最小用例。示例触发：Slack #customer-escalations +「needs repro」。",
-      "categories": ["engineering", "automation"],
+      "categories": [
+        "engineering",
+        "automation"
+      ],
       "role": "Bug Reproduction",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
-      "secondaryUrls": ["https://docs.x.ai/grok-bot/skills-routines-and-automations"],
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
       "sourceType": "official-docs",
       "qualityNote": "最佳官方事件触发工程工作流。",
       "difficulty": "intermediate",
@@ -213,7 +280,11 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["slack", "staging", "ticket"],
+      "connectors": [
+        "slack",
+        "staging",
+        "ticket"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -225,10 +296,16 @@
       "title": "客户健康 / 流失风险观察名单",
       "titleEn": "Account Health / Customer-Risk Watch List",
       "summary": "按用量、支持升级、续约时点、干系人活跃度给组合账户打分；给出证据、为何重要、建议下一步——不联系客户、不改 CRM。可升为工作日 8:00 skill+routine。",
-      "categories": ["research", "daily-digest", "automation"],
+      "categories": [
+        "research",
+        "daily-digest",
+        "automation"
+      ],
       "role": "Account Health",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
-      "secondaryUrls": ["https://docs.x.ai/grok-bot/skills-routines-and-automations"],
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
       "sourceType": "official-docs",
       "qualityNote": "文档旗舰「skill → routine」示例。",
       "difficulty": "intermediate",
@@ -237,7 +314,11 @@
       "hasMultiAgent": false,
       "requiresApproval": true,
       "approvalBoundary": "不联系客户、不改 CRM",
-      "connectors": ["crm", "support", "product-analytics"],
+      "connectors": [
+        "crm",
+        "support",
+        "product-analytics"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -249,10 +330,16 @@
       "title": "幕僚长晨间摘要",
       "titleEn": "Chief of Staff Morning Digest",
       "summary": "对照优先级文档，回顾昨日至今的 Slack/邮件/日历/会议笔记；只返回匹配项，并附来源、为何重要、建议下一步、以及你是否欠一个决策——不发送、不改会议。",
-      "categories": ["daily-digest", "research", "automation"],
+      "categories": [
+        "daily-digest",
+        "research",
+        "automation"
+      ],
       "role": "Chief of Staff",
       "sourceUrl": "https://docs.x.ai/grok-bot/use-cases",
-      "secondaryUrls": ["https://opencloudai.substack.com/p/grok-bot-the-ultimate-guide-for-2026"],
+      "secondaryUrls": [
+        "https://opencloudai.substack.com/p/grok-bot-the-ultimate-guide-for-2026"
+      ],
       "sourceType": "official-docs",
       "qualityNote": "最常被引用的「第一个 Bot」角色。",
       "difficulty": "starter",
@@ -260,7 +347,11 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["slack", "email", "calendar"],
+      "connectors": [
+        "slack",
+        "email",
+        "calendar"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
@@ -272,7 +363,11 @@
       "title": "收件箱分拣 → ClickUp 交接",
       "titleEn": "Inbox Triage → ClickUp (Agent Handoff)",
       "summary": "定时 Inbox Triage Bot 抓取 Gmail（+日历）、标记紧急项，把结构化简报交给幕僚长，由其在 ClickUp 创建带截止日期与优先级的任务——团队看看板而不是只看聊天。",
-      "categories": ["daily-digest", "automation", "multi-agent"],
+      "categories": [
+        "daily-digest",
+        "automation",
+        "multi-agent"
+      ],
       "role": "Inbox Triage + Chief of Staff",
       "sourceUrl": "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "sourceType": "community",
@@ -282,7 +377,11 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["gmail", "calendar", "clickup"],
+      "connectors": [
+        "gmail",
+        "calendar",
+        "clickup"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-13",
@@ -294,7 +393,11 @@
       "title": "发票 Agent + 收件箱交接管道",
       "titleEn": "Invoice Agent + Inbox Handoff Pipeline",
       "summary": "上传参考发票 PDF；Invoice Agent 起草同类发票、带附件的 Gmail 回复草稿，并在 ClickUp「Invoices and Payments」看板跟踪状态。可与 Inbox Triage 群聊交接，让发票邮件自动路由。",
-      "categories": ["automation", "multi-agent", "finance"],
+      "categories": [
+        "automation",
+        "multi-agent",
+        "finance"
+      ],
       "role": "Invoice Agent",
       "sourceUrl": "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "sourceType": "community",
@@ -304,7 +407,10 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["gmail", "clickup"],
+      "connectors": [
+        "gmail",
+        "clickup"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
@@ -316,7 +422,10 @@
       "title": "会议笔记 → 带截止日任务（Granola @ 17:00）",
       "titleEn": "Meeting Notes → Due-Dated Tasks",
       "summary": "每天 17:00 例行抓取 Granola 笔记，提取行动项，按规则路由到正确的 ClickUp 看板（如代理 vs YouTube），并填负责人、优先级与截止日期。",
-      "categories": ["automation", "daily-digest"],
+      "categories": [
+        "automation",
+        "daily-digest"
+      ],
       "role": "Meeting Ops",
       "sourceUrl": "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "sourceType": "community",
@@ -326,7 +435,10 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": false,
-      "connectors": ["granola", "clickup"],
+      "connectors": [
+        "granola",
+        "clickup"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
@@ -338,7 +450,10 @@
       "title": "手机拍照生成产品广告视频",
       "titleEn": "Product Ad Video from Phone Photo",
       "summary": "Video Agent + Higgsfield 插件 + 已保存的产品广告 skill：在 iOS 拍产品照，提示「生成产品广告」，几分钟得到成片；skill 可用 / 引用。",
-      "categories": ["content", "automation"],
+      "categories": [
+        "content",
+        "automation"
+      ],
       "role": "Video Agent",
       "sourceUrl": "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "sourceType": "community",
@@ -348,7 +463,9 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": false,
-      "connectors": ["higgsfield"],
+      "connectors": [
+        "higgsfield"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
@@ -360,7 +477,11 @@
       "title": "竞争情报 / 公司模拟蜂群",
       "titleEn": "Competitive Intelligence / Company Simulation Swarm",
       "summary": "多个角色 Bot（研究、核实、策略、工程、营销）通过群聊共享上下文；可用 Composio 接多应用。示例：并行负责人对比编码 Agent 评测，或竞品定价/功能蜂群 → 高管简报。",
-      "categories": ["research", "multi-agent", "content"],
+      "categories": [
+        "research",
+        "multi-agent",
+        "content"
+      ],
       "role": "Multi-agent swarm",
       "sourceUrl": "https://composio.dev/content/guide-to-frok-bot",
       "sourceType": "tutorial",
@@ -370,7 +491,9 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["composio"],
+      "connectors": [
+        "composio"
+      ],
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-15",
@@ -382,10 +505,17 @@
       "title": "一人公司 / Newsletter 运营栈",
       "titleEn": "One-Person Company / Newsletter Ops Stack",
       "summary": "幕僚长审计业务并命名首批 Agent（研究、销售、平台专家）；一项目一账户控制上下文/token；例行把 newsletter、目录、Shopify 等工作挪到夜间。",
-      "categories": ["content", "research", "sales", "multi-agent"],
+      "categories": [
+        "content",
+        "research",
+        "sales",
+        "multi-agent"
+      ],
       "role": "Chief of Staff + specialists",
       "sourceUrl": "https://startup.whatfinger.com/2026/08/21/grok-bot-build-a-1-person-company-with-ai-agents/",
-      "secondaryUrls": ["https://archive.ph/Wf7Zl"],
+      "secondaryUrls": [
+        "https://archive.ph/Wf7Zl"
+      ],
       "sourceType": "case-study",
       "qualityNote": "可执行的创始人运营模型：审计 → 招聘 Agent → 周报。",
       "difficulty": "advanced",
@@ -393,7 +523,10 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "connectors": ["shopify", "email"],
+      "connectors": [
+        "shopify",
+        "email"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
@@ -405,7 +538,11 @@
       "title": "网站上线多 Bot 小组",
       "titleEn": "Website Launch Multi-Bot Group",
       "summary": "文档模式：Website Launch 群组含上线协调、内容编辑、分析审阅；协调员分派，交接在同一对话可见。社区也有 EA 用自然语言把建站交给工程 Bot。",
-      "categories": ["content", "coding", "multi-agent"],
+      "categories": [
+        "content",
+        "coding",
+        "multi-agent"
+      ],
       "role": "Website Launch pod",
       "sourceUrl": "https://docs.x.ai/grok-bot/bots",
       "sourceType": "official-docs",
@@ -427,7 +564,10 @@
       "title": "Slack 触发的复现 / 升级例行",
       "titleEn": "Slack-Triggered Repro / Escalation Routine",
       "summary": "窄事件规则：当 #customer-escalations 出现工单链接 +「needs repro」时，Bot 打开工单、在预发复现、在对话中贴复现包——未经批准不回帖到 Slack。避免「每条新消息」监听。",
-      "categories": ["engineering", "automation"],
+      "categories": [
+        "engineering",
+        "automation"
+      ],
       "role": "Bug Reproduction",
       "sourceUrl": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
       "sourceType": "official-docs",
@@ -437,7 +577,11 @@
       "hasSkill": true,
       "hasMultiAgent": false,
       "requiresApproval": true,
-      "connectors": ["slack", "ticket", "staging"],
+      "connectors": [
+        "slack",
+        "ticket",
+        "staging"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
@@ -449,10 +593,17 @@
       "title": "Cursor Automations：工程工厂模式（相邻）",
       "titleEn": "Cursor Automations: Engineering Factory Patterns",
       "summary": "同生态的 Cursor 云端 Agent：main 推送安全审查→Slack；PR agentic codeowners；PagerDuty→Datadog 调查→Slack+修复 PR；周仓 digest；晨间覆盖率 PR；Slack 缺陷分拣→Linear→尝试修复。",
-      "categories": ["coding", "automation", "daily-digest", "engineering"],
+      "categories": [
+        "coding",
+        "automation",
+        "daily-digest",
+        "engineering"
+      ],
       "role": "Cursor Cloud Agent",
       "sourceUrl": "https://cursor.com/blog/automations",
-      "secondaryUrls": ["https://cursor.com/docs/cloud-agent/automations"],
+      "secondaryUrls": [
+        "https://cursor.com/docs/cloud-agent/automations"
+      ],
       "sourceType": "adjacent-cursor",
       "qualityNote": "非 Grok Bot UI，但同属 Cursor 生态「常开 Agent」模式，适合 Coding/DevOps 筛选。",
       "difficulty": "advanced",
@@ -460,11 +611,49 @@
       "hasSkill": false,
       "hasMultiAgent": false,
       "requiresApproval": true,
-      "connectors": ["github", "slack", "pagerduty", "linear"],
+      "connectors": [
+        "github",
+        "slack",
+        "pagerduty",
+        "linear"
+      ],
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-01",
       "updatedAt": "2026-08-23T03:45:00Z"
+    },
+    {
+      "id": "teach-a-task-skill",
+      "slug": "teach-a-task-demo-to-skill",
+      "title": "演示教学：把浏览器流程存成 Skill",
+      "titleEn": "Teach a Task: Demo a Browser Workflow into a Skill",
+      "summary": "官方 Skills / Routines 文档给出的可执行模式：在一对一对话打开电脑视图，选 Teach a task，演示最多约 10 分钟的浏览器流程，Bot 生成草稿 Skill。补上决策规则、失败处理和审批边界后再用 Test run，最后才做成例行。不录音频，演示中不要暴露密钥，凭证走安全交接。",
+      "categories": [
+        "automation",
+        "engineering"
+      ],
+      "role": "Workflow Coach",
+      "sourceUrl": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/faq",
+        "https://docs.x.ai/grok-bot/overview"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方「先一次性任务 → Skill → Routine」闭环，和现有业务角色案例互补，可直接照文档操作。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "写操作与外发保持审批；演示时不暴露密钥",
+      "connectors": [
+        "browser",
+        "computer"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-11",
+      "updatedAt": "2026-08-24T01:10:00Z"
     }
   ]
 }
