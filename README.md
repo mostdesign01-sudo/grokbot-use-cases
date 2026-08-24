@@ -97,4 +97,11 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 ## 界面
 
-首页是三张海报（琥珀 / 青绿 / 靛紫）加 Pinterest 式精选墙。各库浏览以视觉卡片为主：有 `previewImage` 用图，否则用 CSS 库海报。不是 AI 新闻站。
+首页是三张海报（琥珀 / 青绿 / 靛紫）加 Pinterest 式精选墙。HTML 收集与 Agent UI 卡片使用 `public/previews/` 里的自托管缩略图（JSON 里写 `/previews/{id}.webp`，构建时走 Astro `base`）。缺图或加载失败时回退 CSS 库海报。Grok Bot 案例默认海报。不是 AI 新闻站。
+
+重新截取预览（可选，需本机 Chrome + Playwright）：
+
+```bash
+npm i -D playwright sharp
+node scripts/capture-previews.mjs
+```

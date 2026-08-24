@@ -29,7 +29,7 @@
 | `types` | string[] | 见下方类型枚举 |
 | `sourceUrl` | string | 公开原文 / 演示 URL |
 | `secondaryUrls` | string[] | 可选，仓库或其他来源 |
-| `previewImage` | string | 可选，预览图 URL |
+| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base` 加上 `/grokbot-use-cases` 前缀。缺省或加载失败时卡片回退 CSS 海报。 |
 | `featured` | boolean | 是否出现在精选 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |

@@ -14,7 +14,7 @@ const { item, showLibBadge = false } = Astro.props;
 ---
 
 <a class="pin-card agent-ui-card pin-agent-ui" href={withBase(`agent-ui/${item.slug}/`)}>
-  <PinVisual lib="agent-ui" title={item.title} seed={item.slug} />
+  <PinVisual lib="agent-ui" title={item.title} seed={item.slug} image={item.previewImage} />
   <div class="pin-body">
     <div class="badges">
       {showLibBadge && <Badge kind="cursor" label="Agent UI" />}

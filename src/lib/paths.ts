@@ -6,6 +6,13 @@ export function withBase(path = "/"): string {
   return `${base}${relative}`;
 }
 
+/** Site-root paths like `/previews/id.webp` pick up Astro `base` (GitHub Pages). */
+export function assetUrl(path?: string): string | undefined {
+  if (!path) return undefined;
+  if (/^(https?:)?\/\//i.test(path) || path.startsWith("data:")) return path;
+  return withBase(path);
+}
+
 export function isCurrentPath(pathname: string, href: string): boolean {
   const normalize = (value: string) => value.replace(/\/+$/, "") || "/";
   return normalize(pathname) === normalize(href);

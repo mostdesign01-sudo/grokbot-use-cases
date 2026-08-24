@@ -2,6 +2,11 @@
   "notes": [
     {
       "date": "2026-08-24",
+      "title": "补全预览缩略图",
+      "body": "HTML 收集与 Agent UI 的 masonry 卡片改为自托管预览缩略图（public/previews），Pinterest 墙显示真实界面/效果，而不是纯色海报。图片路径走 Astro base，适配 GitHub Pages。缺图或加载失败时仍回退库海报。同时把 ThreeUI 原文改成现用的 /{category}/{slug} Community 路由。"
+    },
+    {
+      "date": "2026-08-24",
       "title": "界面：三张海报 + Pinterest 式浏览墙",
       "body": "首页改为三张库海报（Grok Bot / HTML 收集 / Agent UI）加跨库精选瀑布流。Grok Bot 总览移到 /cases/。各库与精选/最新/类型页改为视觉优先的 masonry 卡片：有 previewImage 用图，否则用库海报，不再用时间线当主界面。"
     },

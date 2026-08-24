@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { agentUiItems, RESERVED_AGENT_UI_SLUGS } from "../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../lib/agent-ui-labels";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
-import { withBase } from "../../lib/paths";
+import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
   return agentUiItems
@@ -66,6 +66,13 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
                 <strong>给 Agent</strong>
                 {item.promptHint}
               </p>
+            )
+          }
+          {
+            item.previewImage && (
+              <figure class="item-preview">
+                <img src={assetUrl(item.previewImage)} alt={`${item.title} 预览`} />
+              </figure>
             )
           }
         </section>

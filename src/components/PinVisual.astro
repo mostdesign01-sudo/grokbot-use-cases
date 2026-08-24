@@ -1,4 +1,5 @@
 ---
+import { assetUrl } from "../lib/paths";
 import { pinRatio, type PinLib } from "../lib/pins";
 
 interface Props {
@@ -10,16 +11,25 @@ interface Props {
 
 const { lib, title, seed, image } = Astro.props;
 const ratio = pinRatio(seed);
+const src = assetUrl(image);
 ---
 
-<div class:list={["pin-visual", `pin-${lib}`, `pin-ratio-${ratio}`]} aria-hidden="true">
+<div
+  class:list={["pin-visual", `pin-${lib}`, `pin-ratio-${ratio}`, src && "has-image"]}
+  aria-hidden="true"
+>
+  <div class:list={["pin-art", `pin-pattern-${ratio}`]}>
+    <span class="pin-art-title">{title}</span>
+  </div>
   {
-    image ? (
-      <img src={image} alt="" loading="lazy" />
-    ) : (
-      <div class:list={["pin-art", `pin-pattern-${ratio}`]}>
-        <span class="pin-art-title">{title}</span>
-      </div>
+    src && (
+      <img
+        src={src}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        onerror="this.hidden=true;this.removeAttribute('src');this.parentElement&&this.parentElement.classList.remove('has-image');"
+      />
     )
   }
 </div>

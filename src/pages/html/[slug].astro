@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { getHtmlBySlug, htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
 import { htmlTypeIntro, htmlTypeLabel } from "../../lib/html-labels";
-import { withBase } from "../../lib/paths";
+import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
   return htmlItems
@@ -61,9 +61,9 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
           </p>
           {
             item.previewImage && (
-              <p>
-                <img src={item.previewImage} alt={`${item.title} 预览`} />
-              </p>
+              <figure class="item-preview">
+                <img src={assetUrl(item.previewImage)} alt={`${item.title} 预览`} />
+              </figure>
             )
           }
         </section>

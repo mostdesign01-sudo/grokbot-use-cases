@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-08-24T01:10:00Z",
+    "updatedAt": "2026-08-24T09:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "count": 17
   },
   "items": [
@@ -27,7 +27,8 @@
         "css",
         "game",
         "codepip"
-      ]
+      ],
+      "previewImage": "/previews/flexbox-froggy.webp"
     },
     {
       "id": "css-grid-garden",
@@ -50,7 +51,8 @@
         "css",
         "game",
         "codepip"
-      ]
+      ],
+      "previewImage": "/previews/css-grid-garden.webp"
     },
     {
       "id": "animate-css",
@@ -72,7 +74,8 @@
         "animation",
         "css",
         "library"
-      ]
+      ],
+      "previewImage": "/previews/animate-css.webp"
     },
     {
       "id": "a-single-div",
@@ -95,7 +98,8 @@
         "css-art",
         "single-div",
         "portfolio"
-      ]
+      ],
+      "previewImage": "/previews/a-single-div.webp"
     },
     {
       "id": "pico-css",
@@ -115,7 +119,8 @@
         "framework",
         "semantic-html",
         "css"
-      ]
+      ],
+      "previewImage": "/previews/pico-css.webp"
     },
     {
       "id": "shoelace",
@@ -134,7 +139,8 @@
       "tags": [
         "web-components",
         "design-system"
-      ]
+      ],
+      "previewImage": "/previews/shoelace.webp"
     },
     {
       "id": "mdn-css-examples",
@@ -157,7 +163,8 @@
         "mdn",
         "css",
         "examples"
-      ]
+      ],
+      "previewImage": "/previews/mdn-css-examples.webp"
     },
     {
       "id": "html5up",
@@ -177,7 +184,8 @@
         "templates",
         "html5",
         "responsive"
-      ]
+      ],
+      "previewImage": "/previews/html5up.webp"
     },
     {
       "id": "open-props",
@@ -199,7 +207,8 @@
       "tags": [
         "design-tokens",
         "css-variables"
-      ]
+      ],
+      "previewImage": "/previews/open-props.webp"
     },
     {
       "id": "shadow-palette",
@@ -218,7 +227,8 @@
         "shadow",
         "generator",
         "css"
-      ]
+      ],
+      "previewImage": "/previews/shadow-palette.webp"
     },
     {
       "id": "threejs-examples",
@@ -240,7 +250,8 @@
         "webgl",
         "threejs",
         "examples"
-      ]
+      ],
+      "previewImage": "/previews/threejs-examples.webp"
     },
     {
       "id": "bootstrap-examples",
@@ -260,7 +271,8 @@
         "bootstrap",
         "templates",
         "examples"
-      ]
+      ],
+      "previewImage": "/previews/bootstrap-examples.webp"
     },
     {
       "id": "css-zen-garden",
@@ -281,7 +293,8 @@
         "css",
         "design",
         "gallery"
-      ]
+      ],
+      "previewImage": "/previews/css-zen-garden.webp"
     },
     {
       "id": "scroll-driven-animations",
@@ -306,7 +319,8 @@
         "css",
         "waapi",
         "chrome"
-      ]
+      ],
+      "previewImage": "/previews/scroll-driven-animations.webp"
     },
     {
       "id": "squoosh",
@@ -329,7 +343,8 @@
         "wasm",
         "pwa",
         "google"
-      ]
+      ],
+      "previewImage": "/previews/squoosh.webp"
     },
     {
       "id": "clippy",
@@ -351,7 +366,8 @@
         "clip-path",
         "css",
         "generator"
-      ]
+      ],
+      "previewImage": "/previews/clippy.webp"
     },
     {
       "id": "css-doodle",
@@ -375,7 +391,8 @@
         "web-components",
         "css",
         "generative"
-      ]
+      ],
+      "previewImage": "/previews/css-doodle.webp"
     }
   ]
 }

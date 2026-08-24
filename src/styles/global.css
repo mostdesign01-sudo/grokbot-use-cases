@@ -944,6 +944,23 @@ select:focus {
   margin-bottom: 10px;
 }
 
+.item-preview {
+  margin: 16px 0 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+
+.item-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
 .kv {
   display: grid;
   gap: 11px;
@@ -1705,13 +1722,33 @@ a.pin-card.agent-ui-card:hover {
 .pin-visual {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .pin-visual img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+}
+
+.pin-visual.has-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 58%, rgba(8, 8, 10, 0.32) 100%);
+}
+
+.pin-card:hover .pin-visual.has-image img {
+  transform: scale(1.07);
 }
 
 .pin-ratio-0 { aspect-ratio: 4 / 5; }

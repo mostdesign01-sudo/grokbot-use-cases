@@ -19,6 +19,7 @@ export interface AgentUiItem {
   types: AgentUiType[];
   sourceUrl: string;
   secondaryUrls?: string[];
+  previewImage?: string;
   featured: boolean;
   publishedAt: string;
   updatedAt: string;
