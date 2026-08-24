@@ -28,15 +28,15 @@
   --max: 1080px;
   --accent: var(--brass);
   --accent-ink: #1a1308;
-  --text-hero: clamp(2rem, 4.2vw, 2.75rem);
+  --text-hero: clamp(1.85rem, 3.8vw, 2.5rem);
   --text-h1: clamp(1.7rem, 3vw, 2.15rem);
-  --text-h2: clamp(1.2rem, 1.7vw, 1.375rem);
-  --text-h3: 1.0625rem;
+  --text-h2: clamp(1.15rem, 1.6vw, 1.3rem);
+  --text-h3: 1.05rem;
   --text-body: 0.9375rem;
-  --text-lede: 1.05rem;
+  --text-lede: 1.025rem;
   --text-meta: 0.75rem;
   --text-badge: 0.6875rem;
-  --space-section: 2.15rem;
+  --space-section: 1.9rem;
 }
 
 html[data-theme="light"] {
@@ -304,9 +304,9 @@ main {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 28px;
+  gap: 24px;
   align-items: center;
-  padding: 8px 0 4px;
+  padding: 4px 0 2px;
 }
 
 .hero-single {
@@ -339,8 +339,9 @@ h4 {
 
 h1 {
   font-size: var(--text-hero);
-  letter-spacing: -0.028em;
-  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.16;
   margin-bottom: 12px;
 }
 
@@ -1241,6 +1242,14 @@ select:focus {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.panel > .quality-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg-soft));
 }
 
 .library-search {
