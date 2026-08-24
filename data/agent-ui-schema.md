@@ -29,8 +29,9 @@
 | `title` | string | 展示标题（专有名词可保持原文） |
 | `summary` | string | 中文摘要 |
 | `types` | string[] | 见下方类型枚举 |
-| `sourceUrl` | string | ThreeUI 免费组件页 |
+| `sourceUrl` | string | ThreeUI Community 免费组件页，形态为 `https://threeui.com/{category}/{slug}`（可带 `/variant`） |
 | `secondaryUrls` | string[] | 可选，GitHub / browse |
+| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base` 加上 `/grokbot-use-cases` 前缀。缺省或加载失败时卡片回退 CSS 海报。 |
 | `featured` | boolean | 是否出现在精选 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |

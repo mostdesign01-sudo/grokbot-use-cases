@@ -113,6 +113,23 @@ if (agentUiDataset.items.length < 10) {
   process.exit(1);
 }
 
+const previewItems = [
+  ...htmlDataset.items.map((item) => ({ lib: "html", ...item })),
+  ...agentUiDataset.items.map((item) => ({ lib: "agent-ui", ...item })),
+];
+
+for (const item of previewItems) {
+  if (!item.previewImage) continue;
+  if (!item.previewImage.startsWith("/previews/")) {
+    missing.push(`previewImage for ${item.lib}:${item.id} should be /previews/…, got ${item.previewImage}`);
+    continue;
+  }
+  const file = item.previewImage.replace(/^\//, "");
+  if (!existsSync(new URL(`../dist/${file}`, import.meta.url))) {
+    missing.push(`dist/${file}`);
+  }
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
