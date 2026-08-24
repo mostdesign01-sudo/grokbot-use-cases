@@ -8,6 +8,7 @@ import { caseSearchText, cases, getCategoryCollections, getFeaturedCases, getLat
 import { formatShanghaiDateTime, hasShanghaiToday } from "../lib/format";
 import { categoryLabel } from "../lib/labels";
 import { withBase } from "../lib/paths";
+import { siteDescription, siteName } from "../lib/site";
 import { caseToTimeline } from "../lib/timeline";
 
 const featured = getFeaturedCases();
@@ -23,16 +24,16 @@ const updated = formatShanghaiDateTime(meta.updatedAt);
 const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
 ---
 
-<BaseLayout title="Grok Bot 案例库" description="精选 Grok Bot 优质用法，每日更新。另有独立 HTML 收集库。">
+<BaseLayout title={siteName} description={siteDescription}>
   <div class="wrap" data-hub>
     <LibraryChooser current="grok" />
 
     <section class="hero">
       <div>
-        <p class="kicker">Grok Bot 案例库</p>
-        <h1>精选 Grok Bot 优质用法，每日更新</h1>
+        <p class="kicker">{siteName}</p>
+        <h1>可复用的 AI 精选实验室</h1>
         <p class="lede">
-          Grok Bot 是可以交付真实工作的 AI 同事：自带持久云电脑，能登录你的应用，在工具里把活干完，只在需要审批时回来。本站从公开文档与社区实践中整理可复用的用法，方便对照角色、例行与审批边界。
+          案例与页面每日更新。这一页看 Grok Bot 用法；HTML 收集是另一套库。之后还会慢慢加更多 AI 精选。从公开资料里挑能对照、能复用的，不当新闻站。
         </p>
         <LibrarySearch library="grok" placeholder="搜索 Grok Bot 标题、摘要、收录理由…" />
         <div class="hero-actions">

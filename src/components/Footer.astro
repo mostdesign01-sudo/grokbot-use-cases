@@ -1,6 +1,7 @@
 ---
 import { officialDocs } from "../lib/docs";
 import { withBase } from "../lib/paths";
+import { siteName, siteTagline } from "../lib/site";
 
 const product = officialDocs.filter((item) => item.group === "product");
 ---
@@ -8,11 +9,8 @@ const product = officialDocs.filter((item) => item.group === "product");
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div>
-      <strong>双库站点</strong>
-      <p>
-        <strong>Grok Bot</strong> 用法来自 <code>data/cases.json</code>；
-        <strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>。两套数据互不混写。
-      </p>
+      <strong>{siteName}</strong>
+      <p>{siteTagline}。眼下两套库：<strong>Grok Bot</strong> 用法来自 <code>data/cases.json</code>；<strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>。数据分开，之后还会加更多。</p>
       <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor 及所列原文站点无隶属关系。</p>
     </div>
     <div>

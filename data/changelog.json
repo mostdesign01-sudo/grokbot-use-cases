@@ -2,6 +2,11 @@
   "notes": [
     {
       "date": "2026-08-24",
+      "title": "站点更名为 AI UP LAB",
+      "body": "对外品牌从「Grok Bot 案例库」改为 AI UP LAB：可复用的 AI 精选实验室。Grok Bot 与 HTML 收集仍是站内两套库，数据与路由不变，之后还会加更多 AI 精选。"
+    },
+    {
+      "date": "2026-08-24",
       "title": "界面：近日更新时间线与收录理由",
       "body": "双库首页增加按 updatedAt 分组的「今日收录 / 近日更新」，卡片展示收录理由（qualityNote），并加上当前库搜索、上手路径与 /search 两库检索。不是行业新闻站。"
     },

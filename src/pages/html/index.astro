@@ -8,6 +8,7 @@ import { formatShanghaiDateTime, hasShanghaiToday } from "../../lib/format";
 import { getFeaturedHtml, getHtmlTypeCollections, getLatestHtml, getRecentlyUpdatedHtml, htmlItems, htmlMeta, htmlSearchText } from "../../lib/html";
 import { htmlTypeLabel } from "../../lib/html-labels";
 import { withBase } from "../../lib/paths";
+import { pageTitle, siteName } from "../../lib/site";
 import { htmlToTimeline } from "../../lib/timeline";
 
 const featured = getFeaturedHtml();
@@ -19,18 +20,18 @@ const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日
 
 <BaseLayout
   collection="html"
-  title="HTML 收集 · Grok Bot 案例库"
-  description="从公开网页收集的 HTML 演示、模板、组件与工具页。"
+  title={pageTitle("HTML 收集")}
+  description={`${siteName} 的 HTML 收集库：从公开网页收集的演示、模板、组件与工具页。`}
 >
   <div class="wrap" data-hub>
     <LibraryChooser current="html" />
 
     <section class="hero hero-single">
       <div>
-        <p class="kicker">HTML 收集</p>
+        <p class="kicker">{siteName} · HTML 收集</p>
         <h1>公开网页里的 HTML 范例</h1>
         <p class="lede">
-          这里收录的是网上能直接打开的 HTML / CSS 演示、模板、组件库与工具页，和 Grok Bot 用法案例分开存放。数据在 <code>data/html-items.json</code>，只链真实公开地址。
+          这是 {siteName} 里的 HTML 收集库：网上能直接打开的演示、模板、组件与工具页，和 Grok Bot 用法分开存放。数据在 <code>data/html-items.json</code>，只链真实公开地址。
         </p>
         <LibrarySearch library="html" placeholder="搜索 HTML 标题、摘要、标签、收录理由…" />
         <div class="hero-actions">

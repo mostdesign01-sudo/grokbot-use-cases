@@ -1,9 +1,10 @@
-# Grok Bot 案例库
+# AI UP LAB
 
-精选 Grok Bot 优质用法的静态展示站，主界面为简体中文，英文标题作为次要信息。
+可复用的 AI 精选实验室。案例与页面每日更新。主界面为简体中文，英文标题作为次要信息。
 
-- 站点名：Grok Bot 案例库
-- 标语：精选 Grok Bot 优质用法，每日更新
+- 站点名：AI UP LAB
+- 标语：可复用的 AI 精选实验室 · 案例与页面每日更新
+- 当前内容库：Grok Bot 案例、HTML 收集（之后还会加更多）
 - 仓库：https://github.com/mostdesign01-sudo/grokbot-use-cases
 - 预期公开地址：https://mostdesign01-sudo.github.io/grokbot-use-cases/
 
@@ -73,11 +74,11 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 ## 站点结构
 
-顶栏两个内容库：**Grok Bot**（琥珀色）与 **HTML 收集**（青绿色）。两套数据分开，不是行业新闻站。
+**AI UP LAB** 是伞品牌。顶栏两个内容库：**Grok Bot**（琥珀色）与 **HTML 收集**（青绿色）。两套数据分开，不是行业新闻站。
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | Grok Bot 首页：双库入口、搜索、近日更新时间线、精选/最新/类型 |
+| `/` | AI UP LAB 首页（当前展示 Grok Bot 库）：双库入口、搜索、近日更新时间线、精选/最新/类型 |
 | `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页 |
 | `/cases/` `/cases/[slug]/` | 可筛选案例与详情（含上手路径） |
 | `/search/` | 两库检索：标题、摘要、标签、收录理由 |

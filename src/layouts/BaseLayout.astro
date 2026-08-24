@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { withBase } from "../lib/paths";
+import { siteDescription, siteName } from "../lib/site";
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = "精选 Grok Bot 优质用法，每日更新。非官方案例库。",
+  description = siteDescription,
   collection = "grok",
 } = Astro.props;
 
@@ -26,6 +27,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={siteName} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

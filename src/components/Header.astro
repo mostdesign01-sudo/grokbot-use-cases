@@ -1,5 +1,6 @@
 ---
 import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
+import { siteName } from "../lib/site";
 
 const path = Astro.url.pathname;
 const htmlRoot = withBase("html/");
@@ -30,10 +31,10 @@ const links = isHtml ? htmlLinks : grokLinks;
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href={withBase("/")}>
-      <span class="brand-mark">{isHtml ? "H" : "库"}</span>
+      <span class="brand-mark">AI</span>
       <span class="brand-text">
-        <strong>{isHtml ? "HTML 收集" : "Grok Bot 案例库"}</strong>
-        <span>{isHtml ? "公开网页范例 · 非官方" : "每日更新 · 非官方"}</span>
+        <strong>{siteName}</strong>
+        <span>{isHtml ? "HTML 收集 · 每日更新" : "Grok Bot · 每日更新"}</span>
       </span>
     </a>
     <nav class="collection-tabs" aria-label="内容库">
