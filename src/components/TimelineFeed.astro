@@ -1,0 +1,52 @@
+---
+import { formatShanghaiTime, groupByShanghaiDay } from "../lib/format";
+import type { TimelineEntry } from "../lib/timeline";
+import Badge from "./Badge.astro";
+import QualityNote from "./QualityNote.astro";
+
+interface Props {
+  items: TimelineEntry[];
+  emptyLabel?: string;
+}
+
+const { items, emptyLabel = "最近还没有校对过的条目。" } = Astro.props;
+const groups = groupByShanghaiDay(items, (item) => item.updatedAt);
+---
+
+{
+  groups.length === 0 ? (
+    <p class="empty">{emptyLabel}</p>
+  ) : (
+    <div class="feed">
+      {groups.map((group) => (
+        <section class="feed-day" data-filter-group>
+          <h3 class="feed-day-title">{group.title}</h3>
+          <div class="feed-list">
+            {group.items.map((item) => (
+              <article
+                class="feed-item"
+                data-filter-card
+                data-filter-text={`${item.title} ${item.summary} ${item.qualityNote}`}
+              >
+                <time class="feed-time" datetime={item.updatedAt}>
+                  {formatShanghaiTime(item.updatedAt)}
+                </time>
+                <a class="feed-card" href={item.href}>
+                  <div class="badges">
+                    {item.badges.map((badge) => (
+                      <Badge kind={badge.kind} label={badge.label} />
+                    ))}
+                    {item.featured && <Badge kind="featured" label="+ 精选" />}
+                  </div>
+                  <h4>{item.title}</h4>
+                  <p class="summary">{item.summary}</p>
+                  <QualityNote note={item.qualityNote} />
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  )
+}

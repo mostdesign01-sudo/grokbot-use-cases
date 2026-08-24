@@ -33,7 +33,7 @@
 | `featured` | boolean | 是否出现在精选 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |
-| `qualityNote` | string | 为何收录 |
+| `qualityNote` | string | 为何收录；页面展示为「收录理由」 |
 | `tags` | string[] | 检索用标签 |
 
 ## 类型枚举

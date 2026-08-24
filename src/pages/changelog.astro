@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { changelogNotes, meta } from "../lib/cases";
-import { formatShanghaiDate, formatShanghaiDateTime } from "../lib/format";
+import { formatShanghaiDate, formatShanghaiDateTime, groupByShanghaiDay } from "../lib/format";
+
+const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
 ---
 
 <BaseLayout title="更新日志 · Grok Bot 案例库" description="案例库数据更新时间与近期说明。">
@@ -37,14 +39,21 @@ import { formatShanghaiDate, formatShanghaiDateTime } from "../lib/format";
 
     <section class="section">
       <h2>近期说明</h2>
-      <div class="timeline">
+      <div class="feed changelog-feed">
         {
-          changelogNotes.map((note) => (
-            <article class="note">
-              <time datetime={note.date}>{note.date}</time>
-              <h3>{note.title}</h3>
-              <p>{note.body}</p>
-            </article>
+          groups.map((group) => (
+            <section class="feed-day">
+              <h3 class="feed-day-title">{group.title}</h3>
+              <div class="timeline">
+                {group.items.map((note) => (
+                  <article class="note">
+                    <time datetime={note.date}>{note.date}</time>
+                    <h3>{note.title}</h3>
+                    <p>{note.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
           ))
         }
       </div>

@@ -51,6 +51,18 @@ export function getLatestHtml(limit?: number): HtmlItem[] {
   return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
 }
 
+export function getRecentlyUpdatedHtml(limit = 12): HtmlItem[] {
+  return [...htmlItems]
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit);
+}
+
+export function htmlSearchText(item: HtmlItem): string {
+  return [item.title, item.summary, item.qualityNote, item.tags.join(" "), item.types.join(" "), item.id, item.slug].join(
+    " ",
+  );
+}
+
 export function getHtmlBySlug(slug: string): HtmlItem | undefined {
   return htmlItems.find((item) => item.slug === slug);
 }

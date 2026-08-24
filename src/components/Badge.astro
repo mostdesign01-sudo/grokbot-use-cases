@@ -1,6 +1,16 @@
 ---
 interface Props {
-  kind?: "official" | "community" | "cursor" | "approval" | "routine" | "multi" | "plain";
+  kind?:
+    | "official"
+    | "community"
+    | "cursor"
+    | "approval"
+    | "routine"
+    | "multi"
+    | "featured"
+    | "difficulty"
+    | "plain"
+    | string;
   label: string;
 }
 

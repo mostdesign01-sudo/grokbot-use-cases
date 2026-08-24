@@ -2,6 +2,11 @@
   "notes": [
     {
       "date": "2026-08-24",
+      "title": "界面：近日更新时间线与收录理由",
+      "body": "双库首页增加按 updatedAt 分组的「今日收录 / 近日更新」，卡片展示收录理由（qualityNote），并加上当前库搜索、上手路径与 /search 两库检索。不是行业新闻站。"
+    },
+    {
+      "date": "2026-08-24",
       "title": "Bot 补 1 条官方 Skill 教学，HTML 收集 +5",
       "body": "Grok Bot：新增官方「Teach a task → Skill → Routine」演示教学案例。HTML 收集：新增 CSS Zen Garden、Scroll-driven Animations、Squoosh、Clippy、css-doodle。"
     },

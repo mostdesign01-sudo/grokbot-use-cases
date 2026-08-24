@@ -11,6 +11,7 @@ const grokLinks = [
   { href: withBase("latest/"), label: "最新" },
   { href: withBase("types/"), label: "类型", section: true },
   { href: withBase("cases/"), label: "案例" },
+  { href: withBase("search/"), label: "搜索" },
   { href: withBase("docs/"), label: "文档" },
   { href: withBase("changelog/"), label: "更新日志" },
 ];
@@ -20,6 +21,7 @@ const htmlLinks = [
   { href: withBase("html/featured/"), label: "精选" },
   { href: withBase("html/latest/"), label: "最新" },
   { href: withBase("html/types/"), label: "类型", section: true },
+  { href: withBase("search/?lib=html"), label: "搜索" },
 ];
 
 const links = isHtml ? htmlLinks : grokLinks;

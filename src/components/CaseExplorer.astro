@@ -19,7 +19,7 @@ const difficulties = uniqueDifficulties();
     <div class="filter-row">
       <label class="field">
         搜索
-        <input type="search" name="q" placeholder="标题、角色、摘要、连接器…" autocomplete="off" />
+        <input type="search" name="q" placeholder="标题、摘要、收录理由、角色、标签…" autocomplete="off" />
       </label>
       <label class="field">
         分类
@@ -76,7 +76,7 @@ const difficulties = uniqueDifficulties();
           data-routine={String(item.hasRoutine)}
           data-multi={String(item.hasMultiAgent)}
           data-approval={String(item.requiresApproval)}
-          data-text={`${item.title} ${item.titleEn} ${item.summary} ${item.role} ${item.connectors.join(" ")} ${item.id}`}
+          data-text={`${item.title} ${item.titleEn} ${item.summary} ${item.qualityNote} ${item.role} ${item.connectors.join(" ")} ${item.categories.join(" ")} ${item.id}`}
         >
           <CaseCard caseItem={item} />
         </div>

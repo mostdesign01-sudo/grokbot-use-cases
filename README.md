@@ -73,18 +73,21 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 ## 站点结构
 
-| 路径 | 内容 |
-| --- | --- |
-顶栏两个内容库：**Grok Bot** 与 **HTML 收集**。
+顶栏两个内容库：**Grok Bot**（琥珀色）与 **HTML 收集**（青绿色）。两套数据分开，不是行业新闻站。
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | Grok Bot 首页：双库入口 + 精选/最新/类型预览 |
+| `/` | Grok Bot 首页：双库入口、搜索、近日更新时间线、精选/最新/类型 |
 | `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页 |
-| `/cases/` `/cases/[slug]/` | 可筛选案例与详情 |
-| `/docs/` `/changelog/` | 文档枢纽与更新日志 |
-| `/html/` | HTML 收集总览（精选、最新、类型） |
+| `/cases/` `/cases/[slug]/` | 可筛选案例与详情（含上手路径） |
+| `/search/` | 两库检索：标题、摘要、标签、收录理由 |
+| `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
+| `/html/` | HTML 收集总览（搜索、近日更新、精选、最新、类型） |
 | `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
-| `/html/[slug]/` | 单条 HTML 条目详情 |
+| `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |
 
-徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。HTML 条目另有类型徽章与原文链接。
+徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。卡片底部用 `qualityNote` 展示「收录理由」。HTML 条目另有类型徽章与原文链接。
+
+## 界面
+
+2026-08 做了一次信息密度刷新：首页用日期分组的「今日收录 / 近日更新」时间线，卡片补上来源/难度/收录理由，并加上当前库搜索。视觉仍是纸色底 + 琥珀/青绿双强调色，没有做成 AI 新闻站或假评分。
