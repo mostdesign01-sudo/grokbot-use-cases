@@ -2,6 +2,11 @@
   "notes": [
     {
       "date": "2026-08-24",
+      "title": "站点更名为 AI UP LAB，并新增 Agent UI 库",
+      "body": "对外品牌定为 AI UP LAB：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI。顶栏现为三库：Grok Bot（琥珀）、HTML 收集（青绿）、Agent UI（靛紫）。Agent UI 首批收录 ThreeUI Community 免费组件（MIT，免登录），可复制 prompt / Skill.md 换主题；不含 Pro，也不提供 MCP。Grok Bot 与 HTML 数据、路由保持不变。"
+    },
+    {
+      "date": "2026-08-24",
       "title": "界面：近日更新时间线与收录理由",
       "body": "双库首页增加按 updatedAt 分组的「今日收录 / 近日更新」，卡片展示收录理由（qualityNote），并加上当前库搜索、上手路径与 /search 两库检索。不是行业新闻站。"
     },

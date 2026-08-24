@@ -1,15 +1,15 @@
 ---
+import AgentUiCard from "../../components/AgentUiCard.astro";
 import Badge from "../../components/Badge.astro";
-import HtmlCard from "../../components/HtmlCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { agentUiItems, RESERVED_AGENT_UI_SLUGS } from "../../lib/agent-ui";
+import { agentUiTypeIntro, agentUiTypeLabel } from "../../lib/agent-ui-labels";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
-import { getHtmlBySlug, htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
-import { htmlTypeIntro, htmlTypeLabel } from "../../lib/html-labels";
 import { withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
-  return htmlItems
-    .filter((item) => !RESERVED_HTML_SLUGS.has(item.slug))
+  return agentUiItems
+    .filter((item) => !RESERVED_AGENT_UI_SLUGS.has(item.slug))
     .map((item) => ({
       params: { slug: item.slug },
       props: { item },
@@ -17,40 +17,41 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
-const related = htmlItems
+const related = agentUiItems
   .filter((other) => other.id !== item.id && other.types.some((type) => item.types.includes(type)))
   .slice(0, 3);
 const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
 ---
 
-<BaseLayout collection="html" title={`${item.title} · AI UP LAB`} description={item.summary}>
+<BaseLayout collection="agent-ui" title={`${item.title} · AI UP LAB`} description={item.summary}>
   <div class="wrap">
     <article class="detail-hero">
       <p class="crumb">
-        <a href={withBase("html/")}>HTML 收集</a> / {item.title}
+        <a href={withBase("agent-ui/")}>Agent UI</a> / {item.title}
       </p>
       <div class="badges">
         {item.featured && <Badge kind="official" label="精选" />}
-        {item.types.map((type) => <Badge label={htmlTypeLabel(type)} />)}
+        <Badge kind="community" label="ThreeUI Community" />
+        {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} />)}
       </div>
       <h1>{item.title}</h1>
       <p class="lede">{item.summary}</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">打开原文</a>
-        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
       </div>
     </article>
 
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2>适合学什么</h2>
+          <h2>适合怎么用</h2>
           <ul class="learn-list">
             {
               item.types.map((type) => (
                 <li>
-                  <strong>{htmlTypeLabel(type)}</strong>
-                  <p>{htmlTypeIntro(type)}</p>
+                  <strong>{agentUiTypeLabel(type)}</strong>
+                  <p>{agentUiTypeIntro(type)}</p>
                 </li>
               ))
             }
@@ -60,9 +61,10 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
             {item.qualityNote}
           </p>
           {
-            item.previewImage && (
-              <p>
-                <img src={item.previewImage} alt={`${item.title} 预览`} />
+            item.promptHint && (
+              <p class="quality-note">
+                <strong>给 Agent</strong>
+                {item.promptHint}
               </p>
             )
           }
@@ -73,7 +75,7 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
               <h2>同类型</h2>
               <div class="grid">
                 {related.map((other) => (
-                  <HtmlCard item={other} />
+                  <AgentUiCard item={other} />
                 ))}
               </div>
             </section>
@@ -88,8 +90,8 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
               <dt>类型</dt>
               <dd class="chips">
                 {item.types.map((type) => (
-                  <a class="chip" href={withBase(`html/types/${type}/`)}>
-                    {htmlTypeLabel(type)}
+                  <a class="chip" href={withBase(`agent-ui/types/${type}/`)}>
+                    {agentUiTypeLabel(type)}
                   </a>
                 ))}
               </dd>
@@ -98,6 +100,14 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
               <dt>标签</dt>
               <dd>{item.tags.join(" · ")}</dd>
             </div>
+            {
+              item.npmPackage && (
+                <div>
+                  <dt>npm</dt>
+                  <dd><code>{item.npmPackage}</code></dd>
+                </div>
+              )
+            }
             <div>
               <dt>公开约</dt>
               <dd>{formatPublishedDate(item.publishedAt)}</dd>

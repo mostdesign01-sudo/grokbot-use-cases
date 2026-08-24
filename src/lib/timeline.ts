@@ -1,3 +1,5 @@
+import type { AgentUiItem } from "./agent-ui";
+import { agentUiTypeLabel } from "./agent-ui-labels";
 import type { CaseItem } from "./cases";
 import type { HtmlItem } from "./html";
 import { htmlTypeLabel } from "./html-labels";
@@ -48,5 +50,20 @@ export function htmlToTimeline(item: HtmlItem): TimelineEntry {
     updatedAt: item.updatedAt,
     featured: item.featured,
     badges: item.types.map((type) => ({ label: htmlTypeLabel(type) })),
+  };
+}
+
+export function agentUiToTimeline(item: AgentUiItem): TimelineEntry {
+  return {
+    href: withBase(`agent-ui/${item.slug}/`),
+    title: item.title,
+    summary: item.summary,
+    qualityNote: item.qualityNote,
+    updatedAt: item.updatedAt,
+    featured: item.featured,
+    badges: [
+      { kind: "community", label: "ThreeUI" },
+      ...item.types.map((type) => ({ label: agentUiTypeLabel(type) })),
+    ],
   };
 }

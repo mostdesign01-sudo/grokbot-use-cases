@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "updatedAt": "2026-08-24T04:00:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.0.0",
+    "count": 14
+  },
+  "items": [
+    {
+      "id": "structure-flow",
+      "slug": "structure-flow",
+      "title": "Structure Flow",
+      "summary": "ThreeUI Community 的三维场研究：结构流、轨道球、点阵、星云与流体场等免费变体。免登录，可在浏览页直接预览。",
+      "types": ["threejs", "background", "hero"],
+      "sourceUrl": "https://threeui.com/structure-flow",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "适合当 Agent 的第一块三维 Hero：复制页面里的 prompt / Skill.md，只改色相、点大小和运动速度，不必手改 procedural JS。",
+      "tags": ["threeui", "community", "threejs", "hero", "field"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Structure Flow 做产品首屏背景。保持免费 Community 变体，换成我们的主色，放慢速度，点更疏一点。"
+    },
+    {
+      "id": "predictive-arc",
+      "slug": "predictive-arc",
+      "title": "Predictive Arc",
+      "summary": "Canvas / WebGL 信号弧：预测弧、像素弧、粒子、网格与半调流动。免费变体都在 Community 目录里。",
+      "types": ["background", "motion", "ui"],
+      "sourceUrl": "https://threeui.com/predictive-arc",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "仪表盘或「推理中」状态很好用。把 prompt 交给 Agent，调 hue / speed，做成自己的数据弧，不要去碰 Pro 变体。",
+      "tags": ["threeui", "community", "canvas", "webgl", "signal"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "把 Predictive Arc 嵌进控制台顶栏。用免费变体，改成品牌琥珀色，速度放慢，保持可读。"
+    },
+    {
+      "id": "brand-orbs",
+      "slug": "brand-orbs",
+      "title": "Brand Orbs",
+      "summary": "一组 Canvas 品牌球：Claude、Cursor、GitHub、Figma 等免费变体，适合做工具墙或集成列表。",
+      "types": ["ui", "motion"],
+      "sourceUrl": "https://threeui.com/brand-orbs",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "集成页图标墙的现成起点。Skill 侧只需换 logo 与尺寸，主题可整组一起改。",
+      "tags": ["threeui", "community", "brand", "orb", "canvas"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Brand Orbs 做「已接入工具」一排。只保留免费变体，尺寸统一，悬停轻轻转。"
+    },
+    {
+      "id": "rectangle-buttons",
+      "slug": "rectangle-buttons",
+      "title": "Rectangle Buttons",
+      "summary": "Community 矩形按钮族：暗玻璃、Launch、点边框、滑动文字、渐变光束等免费 CTA，纯 CSS/DOM。",
+      "types": ["button", "ui"],
+      "sourceUrl": "https://threeui.com/rectangle-buttons",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "落地页主按钮最快可换的一套。复制 prompt，改主色和文案即可，Agent 不用重写动效。",
+      "tags": ["threeui", "community", "button", "cta", "css"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "从 Rectangle Buttons 挑一个免费 CTA。文案改成「开始试用」，主色换成站点强调色。"
+    },
+    {
+      "id": "shader-buttons",
+      "slug": "shader-buttons",
+      "title": "Shader Buttons",
+      "summary": "着色器按钮：Star Portal、Ignition、Plasma、Thinking 等免费 WebGL 变体，适合高能量 CTA。",
+      "types": ["button", "threejs", "motion"],
+      "sourceUrl": "https://threeui.com/shader-buttons",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "想让 Agent 做出「会呼吸」的按钮时用这组。Skill.md 里改色相就够，别手写 GLSL。",
+      "tags": ["threeui", "community", "shader", "button", "webgl"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Shader Buttons 的免费 Thinking 变体做「生成中」按钮。换成靛紫色，亮度略降。"
+    },
+    {
+      "id": "constellation-field",
+      "slug": "constellation-field",
+      "title": "Constellation Field",
+      "summary": "粒子星座场：漂移、网络、关口流、连线与等高线等免费 Canvas 变体，适合做连接感背景。",
+      "types": ["background", "motion"],
+      "sourceUrl": "https://threeui.com/constellation-field",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "多 Agent / 网络叙事的背景。把 prompt 交给 Agent，调密度和描边，主题一换就走。",
+      "tags": ["threeui", "community", "particles", "network", "canvas"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Constellation Field 做「协作网络」背景。粒子疏一点，线细一点，颜色跟纸色底和解。"
+    },
+    {
+      "id": "landscape",
+      "slug": "landscape",
+      "title": "Landscape",
+      "summary": "可切换晨昏与天气的三维地貌：日出、正午、日落、夜晚、雨、雪等免费变体。",
+      "types": ["threejs", "background", "hero"],
+      "sourceUrl": "https://threeui.com/landscape",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "氛围页或天气产品的现成场景。Agent 按 Skill 换时段即可，不必重建地形。",
+      "tags": ["threeui", "community", "landscape", "weather", "threejs"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Landscape 的日落变体做封面。保持 Community 免费集，不要换成 Pro 地貌。"
+    },
+    {
+      "id": "sketchbook",
+      "slug": "sketchbook",
+      "title": "Sketchbook",
+      "summary": "MengTo Sketchbook 落地页：像一本可翻的速写本，Community 整页可打开，免登录。",
+      "types": ["landing", "section"],
+      "sourceUrl": "https://threeui.com/sketchbook",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "作品集叙事的整页模板。把 prompt 交给 Agent，换封面字与纸色，结构先别拆。",
+      "tags": ["threeui", "community", "landing", "sketchbook", "portfolio"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "以 Sketchbook 落地页为骨架，改成我们的作品集首页。保留翻页节奏，只换文案与主色。"
+    },
+    {
+      "id": "kage",
+      "slug": "kage",
+      "title": "Kage",
+      "summary": "Kage 落地页：偏影与留白的整页模板，Community 免费，可调标题字体与主色。",
+      "types": ["landing", "hero"],
+      "sourceUrl": "https://threeui.com/kage",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "安静品牌站的好起点。Skill 控制字体与主色，Agent 换主题比重写布局更快。",
+      "tags": ["threeui", "community", "landing", "kage", "editorial"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Kage 做品牌介绍页。标题换成我们的中文名，主色用靛蓝，保持大留白。"
+    },
+    {
+      "id": "complete-shelf",
+      "slug": "complete-shelf",
+      "title": "Complete Shelf",
+      "summary": "整面书架落地页：适合书店、课程目录或「全部作品」索引。Community 免费整页。",
+      "types": ["landing", "section"],
+      "sourceUrl": "https://threeui.com/complete-shelf",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "目录型站点可直接复用。让 Agent 按 Skill 换书脊颜色与标题，不要重做货架几何。",
+      "tags": ["threeui", "community", "landing", "shelf", "catalog"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Complete Shelf 做课程目录。每本书脊写一门课名，主色跟随站点纸色。"
+    },
+    {
+      "id": "sylva-living-green",
+      "slug": "sylva-living-green",
+      "title": "Sylva · Living Green",
+      "summary": "Sylva 落地页的免费 Living Green 变体：整页森林氛围。同系列 Sakura / Maple / Sequoia 是 Pro，本库不收录。",
+      "types": ["landing", "hero", "threejs"],
+      "sourceUrl": "https://threeui.com/sylva",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "自然向产品的免费整页。只链 Living Green； sakura / maple 等 Pro 变体不要打开、不要写进 prompt。",
+      "tags": ["threeui", "community", "sylva", "landing", "forest"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "只用 Sylva 的 Living Green。改标题和主色，不要切换到标了 PRO 的季节变体。"
+    },
+    {
+      "id": "text-path-studies",
+      "slug": "text-path-studies",
+      "title": "Text Path Studies",
+      "summary": "路径字研究：地球字、轮廓流动、字形云、布料、涟漪与球体等免费 Canvas 变体。",
+      "types": ["text-animation", "motion"],
+      "sourceUrl": "https://threeui.com/text-path-studies",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "章节标题想「会走路径」时用。Agent 改字与色相即可，几何交给现成 Skill。",
+      "tags": ["threeui", "community", "typography", "path", "canvas"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Text Path Studies 做章节大标题。文字改成中文产品名，色相跟纸色底协调。"
+    },
+    {
+      "id": "gallery-heading",
+      "slug": "gallery-heading",
+      "title": "Gallery Heading",
+      "summary": "画廊字标：斜向升起、坠落、横扫与循环等免费变体，适合作品集分节。",
+      "types": ["text-animation", "section"],
+      "sourceUrl": "https://threeui.com/gallery-heading",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "分节标题的现成动效。复制 prompt 换字体与色相，Agent 不用重做扫光。",
+      "tags": ["threeui", "community", "gallery", "heading", "typography"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Gallery Heading 做作品集分节。标题换成「精选」，字体粗一点，色相偏靛。"
+    },
+    {
+      "id": "article-headings",
+      "slug": "article-headings",
+      "title": "Article Headings",
+      "summary": "文章开头字标：介绍字、粒子词标与音频词标等免费变体，适合长文或更新日志顶栏。",
+      "types": ["text-animation", "section", "ui"],
+      "sourceUrl": "https://threeui.com/article-headings",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-24T04:00:00Z",
+      "qualityNote": "博客/日志标题可复用。把 Skill 交给 Agent 换文案和节奏，粒子密度别开太高。",
+      "tags": ["threeui", "community", "article", "heading", "wordmark"],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Article Headings 做更新日志顶栏。文字改成「今日收录」，粒子少一点，方便阅读。"
+    }
+  ]
+}

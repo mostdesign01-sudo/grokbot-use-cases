@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 
 const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.meta.url), "utf8"));
 const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
+const agentUiDataset = JSON.parse(await readFile(new URL("../data/agent-ui.json", import.meta.url), "utf8"));
 const requiredPages = [
   "index.html",
   "cases/index.html",
@@ -14,10 +15,15 @@ const requiredPages = [
   "search/index.html",
   "data.json",
   "html-items.json",
+  "agent-ui.json",
   "html/index.html",
   "html/featured/index.html",
   "html/latest/index.html",
   "html/types/index.html",
+  "agent-ui/index.html",
+  "agent-ui/featured/index.html",
+  "agent-ui/latest/index.html",
+  "agent-ui/types/index.html",
   "404.html",
 ];
 
@@ -81,11 +87,37 @@ if (htmlDataset.items.length < 8) {
   process.exit(1);
 }
 
+const agentUiTypes = [...new Set(agentUiDataset.items.flatMap((item) => item.types))];
+
+for (const item of agentUiDataset.items) {
+  const path = `agent-ui/${item.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
+for (const type of agentUiTypes) {
+  const path = `agent-ui/types/${type}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
+if (agentUiDataset.items.length !== agentUiDataset.meta.count) {
+  console.error(`agent-ui.json meta.count ${agentUiDataset.meta.count} does not match items ${agentUiDataset.items.length}`);
+  process.exit(1);
+}
+
+if (agentUiDataset.items.length < 10) {
+  console.error(`Expected at least 10 Agent UI items, found ${agentUiDataset.items.length}`);
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
 }
 
 console.log(
-  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, and core routes present.`,
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, and core routes present.`,
 );

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getAgentUiTypeCollections } from "../../../lib/agent-ui";
+import { agentUiTypeIntro, agentUiTypeLabel } from "../../../lib/agent-ui-labels";
+import { withBase } from "../../../lib/paths";
+
+const collections = getAgentUiTypeCollections();
+---
+
+<BaseLayout collection="agent-ui" title="Agent UI 类型 · AI UP LAB" description="按落地页、背景场、按钮等类型浏览 Agent UI。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Agent UI Types</p>
+      <h1>按类型浏览</h1>
+      <p class="lede">类型来自 <code>data/agent-ui.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。</p>
+    </section>
+    <section class="section">
+      <div class="doc-grid">
+        {
+          collections.map((item) => (
+            <a class="card type-card" href={withBase(`agent-ui/types/${item.type}/`)}>
+              <p class="title-en">{item.type}</p>
+              <h3>{agentUiTypeLabel(item.type)}</h3>
+              <p class="summary">{agentUiTypeIntro(item.type)}</p>
+              <p class="card-meta">{item.count} 条</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

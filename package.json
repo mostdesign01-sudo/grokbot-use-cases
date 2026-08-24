@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "Grok Bot 案例库 — 精选用法展示站",
+  "description": "AI UP LAB — 可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/verify-build.mjs",

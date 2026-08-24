@@ -1,0 +1,28 @@
+---
+import type { AgentUiItem } from "../lib/agent-ui";
+import { agentUiTypeLabel } from "../lib/agent-ui-labels";
+import { withBase } from "../lib/paths";
+import Badge from "./Badge.astro";
+import QualityNote from "./QualityNote.astro";
+
+interface Props {
+  item: AgentUiItem;
+}
+
+const { item } = Astro.props;
+---
+
+<article class="case-card agent-ui-card">
+  <div class="badges">
+    {item.featured && <Badge kind="featured" label="+ 精选" />}
+    <Badge kind="community" label="ThreeUI" />
+    {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} />)}
+  </div>
+  <h3><a href={withBase(`agent-ui/${item.slug}/`)}>{item.title}</a></h3>
+  <p class="summary">{item.summary}</p>
+  <QualityNote note={item.qualityNote} />
+  <div class="card-meta">
+    <a class="source-out" href={item.sourceUrl} rel="noreferrer">打开原文</a>
+    <span>{item.tags.slice(0, 3).join(" · ")}</span>
+  </div>
+</article>
