@@ -1,0 +1,144 @@
+---
+import AgentUiCard from "../../components/AgentUiCard.astro";
+import LibraryChooser from "../../components/LibraryChooser.astro";
+import LibrarySearch from "../../components/LibrarySearch.astro";
+import TimelineFeed from "../../components/TimelineFeed.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  agentUiItems,
+  agentUiMeta,
+  agentUiSearchText,
+  getAgentUiTypeCollections,
+  getFeaturedAgentUi,
+  getLatestAgentUi,
+  getRecentlyUpdatedAgentUi,
+} from "../../lib/agent-ui";
+import { agentUiTypeLabel } from "../../lib/agent-ui-labels";
+import { formatShanghaiDateTime, hasShanghaiToday } from "../../lib/format";
+import { withBase } from "../../lib/paths";
+import { pageTitle, siteName } from "../../lib/site";
+import { agentUiToTimeline } from "../../lib/timeline";
+
+const featured = getFeaturedAgentUi();
+const latest = getLatestAgentUi(6);
+const recent = getRecentlyUpdatedAgentUi(12);
+const types = getAgentUiTypeCollections();
+const recentTitle = hasShanghaiToday(recent, (item) => item.updatedAt) ? "今日收录" : "近日更新";
+---
+
+<BaseLayout
+  collection="agent-ui"
+  title={pageTitle("Agent UI")}
+  description={`${siteName} 的 Agent UI 库：ThreeUI Community 免费组件，可复制 prompt / Skill.md 换主题。`}
+>
+  <div class="wrap" data-hub>
+    <LibraryChooser current="agent-ui" />
+
+    <section class="hero hero-single">
+      <div>
+        <p class="kicker">{siteName} · Agent UI</p>
+        <h1>可交给 Agent 换主题的界面件</h1>
+        <p class="lede">
+          这是 {siteName} 里的第三套库：只收 ThreeUI Community 免费、免登录条目。复制页面里的 prompt 或 Skill.md，换主题与运动，不要手改 procedural JS。不含 Pro，也不提供 MCP。
+        </p>
+        <LibrarySearch library="agent-ui" placeholder="搜索 Agent UI 标题、摘要、收录理由…" />
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={withBase("agent-ui/featured/")}>精选 Agent UI</a>
+          <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}>最新</a>
+          <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+        </div>
+        <p class="meta-line">
+          最近校对（Asia/Shanghai）：{formatShanghaiDateTime(agentUiMeta.updatedAt)} · {agentUiItems.length} 条
+        </p>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Agent UI 概览">
+      <div class="stat">
+        <b>{agentUiMeta.count}</b>
+        <span>免费组件</span>
+      </div>
+      <div class="stat">
+        <b>{featured.length}</b>
+        <span>精选</span>
+      </div>
+      <div class="stat">
+        <b>{types.length}</b>
+        <span>类型</span>
+      </div>
+      <div class="stat">
+        <b>{agentUiMeta.version}</b>
+        <span>数据版本</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="agent-ui-recent">
+      <div class="section-head">
+        <div>
+          <h2 id="agent-ui-recent">{recentTitle}</h2>
+          <p>按条目 <code>updatedAt</code> 分组，只看 Agent UI 库。</p>
+        </div>
+        <a href={withBase("agent-ui/latest/")}>查看全部最新</a>
+      </div>
+      <TimelineFeed items={recent.map(agentUiToTimeline)} />
+    </section>
+
+    <section class="section" aria-labelledby="agent-ui-featured">
+      <div class="section-head">
+        <div>
+          <h2 id="agent-ui-featured">精选</h2>
+          <p>编辑标为 featured 的免费组件，适合先交给 Agent 试换主题。</p>
+        </div>
+        <a href={withBase("agent-ui/featured/")}>查看全部精选</a>
+      </div>
+      <div class="grid">
+        {
+          featured.slice(0, 6).map((item) => (
+            <div data-filter-card data-filter-text={agentUiSearchText(item)}>
+              <AgentUiCard item={item} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="agent-ui-latest">
+      <div class="section-head">
+        <div>
+          <h2 id="agent-ui-latest">最新</h2>
+          <p>按来源公开日期从新到旧。</p>
+        </div>
+        <a href={withBase("agent-ui/latest/")}>查看全部最新</a>
+      </div>
+      <div class="grid">
+        {
+          latest.map((item) => (
+            <div data-filter-card data-filter-text={agentUiSearchText(item)}>
+              <AgentUiCard item={item} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="agent-ui-types">
+      <div class="section-head">
+        <div>
+          <h2 id="agent-ui-types">按类型</h2>
+          <p>落地页、背景场、按钮、文字动效等各自一页。</p>
+        </div>
+        <a href={withBase("agent-ui/types/")}>查看全部类型</a>
+      </div>
+      <div class="type-chips">
+        {
+          types.map((item) => (
+            <a class="type-chip" href={withBase(`agent-ui/types/${item.type}/`)}>
+              <strong>{agentUiTypeLabel(item.type)}</strong>
+              <span>{item.count}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

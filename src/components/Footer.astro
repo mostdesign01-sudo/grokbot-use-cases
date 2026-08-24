@@ -10,8 +10,8 @@ const product = officialDocs.filter((item) => item.group === "product");
   <div class="wrap footer-inner">
     <div>
       <strong>{siteName}</strong>
-      <p>{siteTagline}。眼下两套库：<strong>Grok Bot</strong> 用法来自 <code>data/cases.json</code>；<strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>。数据分开，之后还会加更多。</p>
-      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor 及所列原文站点无隶属关系。</p>
+      <p>{siteTagline}。眼下三套库：<strong>Grok Bot</strong> 来自 <code>data/cases.json</code>；<strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>；<strong>Agent UI</strong> 来自 <code>data/agent-ui.json</code>。数据分开，之后还会加更多。</p>
+      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor / ThreeUI 及所列原文站点无隶属关系。</p>
     </div>
     <div>
       <strong>Grok Bot</strong>
@@ -35,15 +35,28 @@ const product = officialDocs.filter((item) => item.group === "product");
         <a href={withBase("html/types/")}>HTML 类型</a>
         <a href={withBase("search/?lib=html")}>搜索 HTML</a>
         <a href={withBase("html-items.json")}>HTML JSON</a>
+      </div>
+    </div>
+    <div>
+      <strong>Agent UI</strong>
+      <div class="footer-links">
+        <a href={withBase("agent-ui/")}>Agent UI 总览</a>
+        <a href={withBase("agent-ui/featured/")}>精选</a>
+        <a href={withBase("agent-ui/latest/")}>最新</a>
+        <a href={withBase("agent-ui/types/")}>类型</a>
+        <a href={withBase("search/?lib=agent-ui")}>搜索 Agent UI</a>
+        <a href={withBase("agent-ui.json")}>Agent UI JSON</a>
         <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases">GitHub 仓库</a>
       </div>
     </div>
   </div>
   <div class="wrap footer-sources">
-    <strong>Grok Bot 数据来源（公开链接）</strong>
+    <strong>公开来源</strong>
     <div class="footer-links">
       {product.map((item) => <a href={item.href} rel="noreferrer">{item.title}</a>)}
       <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">官方用例</a>
+      <a href="https://threeui.com/browse" rel="noreferrer">ThreeUI Community</a>
+      <a href="https://github.com/MengTo/threeui" rel="noreferrer">MengTo/threeui</a>
     </div>
   </div>
 </footer>

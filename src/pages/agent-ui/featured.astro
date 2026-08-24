@@ -1,0 +1,29 @@
+---
+import AgentUiCard from "../../components/AgentUiCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getFeaturedAgentUi } from "../../lib/agent-ui";
+import { withBase } from "../../lib/paths";
+
+const featured = getFeaturedAgentUi();
+---
+
+<BaseLayout collection="agent-ui" title="精选 Agent UI · AI UP LAB" description="编辑精选的 ThreeUI Community 免费组件。">
+  <div class="wrap">
+    <section class="collection-hero">
+      <p class="kicker">Featured Agent UI</p>
+      <h1>精选 Agent UI</h1>
+      <p class="lede">
+        <code>featured === true</code> 的免费组件，当前 {featured.length} 条。原文在 ThreeUI，本站只做索引。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}>最新</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="grid">
+        {featured.map((item) => <AgentUiCard item={item} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

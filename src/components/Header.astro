@@ -4,7 +4,10 @@ import { siteName } from "../lib/site";
 
 const path = Astro.url.pathname;
 const htmlRoot = withBase("html/");
+const agentUiRoot = withBase("agent-ui/");
 const isHtml = isSectionPath(path, htmlRoot);
+const isAgentUi = isSectionPath(path, agentUiRoot);
+const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : "grok";
 
 const grokLinks = [
   { href: withBase("/"), label: "首页" },
@@ -25,7 +28,18 @@ const htmlLinks = [
   { href: withBase("search/?lib=html"), label: "搜索" },
 ];
 
-const links = isHtml ? htmlLinks : grokLinks;
+const agentUiLinks = [
+  { href: withBase("agent-ui/"), label: "总览" },
+  { href: withBase("agent-ui/featured/"), label: "精选" },
+  { href: withBase("agent-ui/latest/"), label: "最新" },
+  { href: withBase("agent-ui/types/"), label: "类型", section: true },
+  { href: withBase("search/?lib=agent-ui"), label: "搜索" },
+];
+
+const links = currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : grokLinks;
+
+const brandLine =
+  currentLib === "agent-ui" ? "Agent UI · 每日更新" : currentLib === "html" ? "HTML 收集 · 每日更新" : "Grok Bot · 每日更新";
 ---
 
 <header class="site-header">
@@ -34,23 +48,30 @@ const links = isHtml ? htmlLinks : grokLinks;
       <span class="brand-mark">AI</span>
       <span class="brand-text">
         <strong>{siteName}</strong>
-        <span>{isHtml ? "HTML 收集 · 每日更新" : "Grok Bot · 每日更新"}</span>
+        <span>{brandLine}</span>
       </span>
     </a>
     <nav class="collection-tabs" aria-label="内容库">
       <a
         class="tab-grok"
         href={withBase("/")}
-        aria-current={!isHtml ? "page" : undefined}
+        aria-current={currentLib === "grok" ? "page" : undefined}
       >
         Grok Bot
       </a>
       <a
         class="tab-html"
         href={withBase("html/")}
-        aria-current={isHtml ? "page" : undefined}
+        aria-current={currentLib === "html" ? "page" : undefined}
       >
         HTML 收集
+      </a>
+      <a
+        class="tab-agent-ui"
+        href={withBase("agent-ui/")}
+        aria-current={currentLib === "agent-ui" ? "page" : undefined}
+      >
+        Agent UI
       </a>
     </nav>
     <nav class="nav" aria-label="栏目">
