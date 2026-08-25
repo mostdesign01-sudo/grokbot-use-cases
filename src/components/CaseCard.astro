@@ -14,7 +14,7 @@ const { caseItem, showLibBadge = false } = Astro.props;
 ---
 
 <a class="pin-card case-card pin-grok" href={withBase(`cases/${caseItem.slug}/`)}>
-  <PinVisual lib="grok" title={caseItem.title} seed={caseItem.slug} />
+  <PinVisual lib="grok" title={caseItem.title} seed={caseItem.slug} image={caseItem.previewImage} />
   <div class="pin-body">
     <div class="badges">
       {showLibBadge && <Badge kind="approval" label="Grok Bot" />}
