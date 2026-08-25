@@ -1,23 +1,29 @@
 ---
+import Loc from "../components/Loc.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { docGroups, officialDocs } from "../lib/docs";
+import { ui } from "../lib/i18n";
 ---
 
-<BaseLayout collection="lab" title="文档枢纽 · AI UP LAB" description="Grok Bot 与 Cursor Automations 官方链接。">
+<BaseLayout
+  collection="lab"
+  title={ui.pages.docsTitle.zh}
+  titleEn={ui.pages.docsTitle.en}
+  description={ui.pages.docsDesc.zh}
+  descriptionEn={ui.pages.docsDesc.en}
+>
   <div class="wrap">
     <p class="kicker">Docs</p>
-    <h1>文档枢纽</h1>
-    <p class="lede">
-      下列均为官方或产品文档链接。本站只做导航与对照，不替代原文档。
-    </p>
+    <h1><Loc zh={ui.pages.docsH1.zh} en={ui.pages.docsH1.en} /></h1>
+    <p class="lede"><Loc zh={ui.pages.docsLede.zh} en={ui.pages.docsLede.en} /></p>
 
     {
       docGroups.map((group) => (
         <section class="section">
           <div class="section-head">
             <div>
-              <h2>{group.title}</h2>
-              <p>{group.blurb}</p>
+              <h2><Loc zh={group.title} en={group.titleEn} /></h2>
+              <p><Loc zh={group.blurb} en={group.blurbEn} /></p>
             </div>
           </div>
           <div class="doc-grid">
@@ -25,8 +31,8 @@ import { docGroups, officialDocs } from "../lib/docs";
               .filter((item) => item.group === group.id)
               .map((item) => (
                 <a class="card" href={item.href} rel="noreferrer">
-                  <h3>{item.title}</h3>
-                  <p class="summary">{item.description}</p>
+                  <h3><Loc zh={item.title} en={item.titleEn} /></h3>
+                  <p class="summary"><Loc zh={item.description} en={item.descriptionEn} /></p>
                   <p class="title-en">{item.href}</p>
                 </a>
               ))}

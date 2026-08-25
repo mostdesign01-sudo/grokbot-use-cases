@@ -316,6 +316,54 @@ code {
   margin-left: 2px;
 }
 
+.locale-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  margin-left: 4px;
+  padding: 2px 4px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-soft) 78%, var(--bg));
+  color: var(--faint);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
+.locale-toggle button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 3px 6px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.locale-toggle button:hover {
+  color: var(--ink);
+}
+
+.locale-toggle button[aria-pressed="true"] {
+  background: var(--bg-card);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.loc-en {
+  display: none;
+}
+
+html[data-locale="en"] .loc-zh {
+  display: none;
+}
+
+html[data-locale="en"] .loc-en {
+  display: revert;
+}
+
 main {
   padding: 22px 0 56px;
 }

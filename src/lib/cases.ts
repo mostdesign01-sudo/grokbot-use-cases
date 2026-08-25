@@ -17,18 +17,21 @@ export interface CaseItem {
   title: string;
   titleEn: string;
   summary: string;
+  summaryEn?: string;
   categories: string[];
   role: string;
   sourceUrl: string;
   secondaryUrls?: string[];
   sourceType: SourceType;
   qualityNote: string;
+  qualityNoteEn?: string;
   difficulty: Difficulty;
   hasRoutine: boolean;
   hasSkill: boolean;
   hasMultiAgent: boolean;
   requiresApproval: boolean;
   approvalBoundary?: string;
+  approvalBoundaryEn?: string;
   connectors: string[];
   language: string;
   featured: boolean;
@@ -48,7 +51,9 @@ export interface CasesMeta {
 export interface ChangelogNote {
   date: string;
   title: string;
+  titleEn?: string;
   body: string;
+  bodyEn?: string;
 }
 
 export const meta = dataset.meta as CasesMeta;
@@ -83,13 +88,16 @@ export function caseSearchText(item: CaseItem): string {
     item.title,
     item.titleEn,
     item.summary,
+    item.summaryEn ?? "",
     item.qualityNote,
+    item.qualityNoteEn ?? "",
     item.role,
     item.id,
     item.slug,
     item.connectors.join(" "),
     item.categories.join(" "),
     item.approvalBoundary ?? "",
+    item.approvalBoundaryEn ?? "",
   ].join(" ");
 }
 

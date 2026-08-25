@@ -1,23 +1,36 @@
 ---
 import HtmlCard from "../../components/HtmlCard.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getFeaturedHtml } from "../../lib/html";
+import { ui } from "../../lib/i18n";
 import { withBase } from "../../lib/paths";
 
 const featured = getFeaturedHtml();
 ---
 
-<BaseLayout collection="html" title="精选 HTML · AI UP LAB" description="编辑精选的公开 HTML 演示与模板。">
+<BaseLayout
+  collection="html"
+  title={ui.html.featuredTitle.zh}
+  titleEn={ui.html.featuredTitle.en}
+  description={ui.html.featuredDesc.zh}
+  descriptionEn={ui.html.featuredDesc.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured HTML</p>
-      <h1>精选 HTML</h1>
+      <h1><Loc zh={ui.html.featuredH1.zh} en={ui.html.featuredH1.en} /></h1>
       <p class="lede">
-        <code>featured === true</code> 的公开页面，当前 {featured.length} 条。原文均在站外，本站只做索引。
+        <span class="loc-zh">
+          <code>featured === true</code> 的公开页面，当前 {featured.length} 条。原文均在站外，本站只做索引。
+        </span>
+        <span class="loc-en">
+          Public pages with <code>featured === true</code>. {featured.length} now. Originals stay off-site; this is an index.
+        </span>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("html/latest/")}>最新 HTML</a>
-        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("html/latest/")}><Loc zh={ui.html.latestHtml.zh} en={ui.html.latestHtml.en} /></a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </section>
     <section class="section">

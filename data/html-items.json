@@ -28,7 +28,10 @@
         "game",
         "codepip"
       ],
-      "previewImage": "/previews/flexbox-froggy.webp"
+      "previewImage": "/previews/flexbox-froggy.webp",
+      "titleEn": "Flexbox Froggy",
+      "summaryEn": "Learn CSS Flexbox as a game: write properties to put frogs on lily pads. By Thomas Park / Codepip, open source, with Simplified Chinese.",
+      "qualityNoteEn": "A classic interactive teaching page. Fits the “game / interactive” HTML learning UI collection."
     },
     {
       "id": "css-grid-garden",
@@ -52,7 +55,10 @@
         "game",
         "codepip"
       ],
-      "previewImage": "/previews/css-grid-garden.webp"
+      "previewImage": "/previews/css-grid-garden.webp",
+      "titleEn": "CSS Grid Garden",
+      "summaryEn": "Learn CSS Grid by watering a garden. Same author series as Flexbox Froggy, open source, playable in the browser.",
+      "qualityNoteEn": "A counterpart practice page for Grid layout. The URL has been stable for years."
     },
     {
       "id": "animate-css",
@@ -75,7 +81,10 @@
         "css",
         "library"
       ],
-      "previewImage": "/previews/animate-css.webp"
+      "previewImage": "/previews/animate-css.webp",
+      "titleEn": "Animate.css",
+      "summaryEn": "Drop-in cross-browser CSS animation library site: preview bounce, fade, flip, and more, plus install and accessibility notes.",
+      "qualityNoteEn": "A motion reference site that shows how to demo animations with plain CSS classes."
     },
     {
       "id": "a-single-div",
@@ -99,7 +108,10 @@
         "single-div",
         "portfolio"
       ],
-      "previewImage": "/previews/a-single-div.webp"
+      "previewImage": "/previews/a-single-div.webp",
+      "titleEn": "A Single Div",
+      "summaryEn": "Lynn Fisher’s CSS drawing project: each picture uses one HTML div. Both a portfolio and a pure-CSS graphics experiment.",
+      "qualityNoteEn": "A portfolio that shows how far HTML+CSS can go. Source is public."
     },
     {
       "id": "pico-css",
@@ -120,7 +132,10 @@
         "semantic-html",
         "css"
       ],
-      "previewImage": "/previews/pico-css.webp"
+      "previewImage": "/previews/pico-css.webp",
+      "titleEn": "Pico CSS",
+      "summaryEn": "Minimal CSS framework site for semantic HTML: almost no classes, styles native forms, buttons, and type directly.",
+      "qualityNoteEn": "Useful for comparing “few classes, more semantic tags” component/docs writing."
     },
     {
       "id": "shoelace",
@@ -140,7 +155,10 @@
         "web-components",
         "design-system"
       ],
-      "previewImage": "/previews/shoelace.webp"
+      "previewImage": "/previews/shoelace.webp",
+      "titleEn": "Shoelace",
+      "summaryEn": "Open-source Web Components library docs (now pointing to Web Awesome). Drop custom elements such as <sl-button> in via CDN.",
+      "qualityNoteEn": "A framework-agnostic custom-element demo; the site itself is a component docs page."
     },
     {
       "id": "mdn-css-examples",
@@ -164,7 +182,10 @@
         "css",
         "examples"
       ],
-      "previewImage": "/previews/mdn-css-examples.webp"
+      "previewImage": "/previews/mdn-css-examples.webp",
+      "titleEn": "MDN CSS Examples",
+      "summaryEn": "Runnable example index that accompanies MDN’s CSS docs: standalone HTML demos for object-fit, overscroll, counter styles, and small tools.",
+      "qualityNoteEn": "An official docs example index with stable links. A good HTML-demo collection entry."
     },
     {
       "id": "html5up",
@@ -185,7 +206,10 @@
         "html5",
         "responsive"
       ],
-      "previewImage": "/previews/html5up.webp"
+      "previewImage": "/previews/html5up.webp",
+      "titleEn": "HTML5 UP",
+      "summaryEn": "Free responsive HTML5/CSS3 template library: downloadable landings, portfolios, and more, CCA licensed.",
+      "qualityNoteEn": "A long-maintained open template directory. Fits landing and portfolio HTML."
     },
     {
       "id": "open-props",
@@ -208,7 +232,10 @@
         "design-tokens",
         "css-variables"
       ],
-      "previewImage": "/previews/open-props.webp"
+      "previewImage": "/previews/open-props.webp",
+      "titleEn": "Open Props",
+      "summaryEn": "Adam Argyle’s CSS-variable design-token site: colors, shadows, motion, and other props you can drop into a plain HTML page.",
+      "qualityNoteEn": "The docs site itself demos tokens and components. Useful as a design-system page comparison."
     },
     {
       "id": "shadow-palette",
@@ -228,7 +255,10 @@
         "generator",
         "css"
       ],
-      "previewImage": "/previews/shadow-palette.webp"
+      "previewImage": "/previews/shadow-palette.webp",
+      "titleEn": "CSS Shadow Palette Generator",
+      "summaryEn": "Josh Comeau’s shadow-palette generator: tune height and light, then copy CSS custom properties. A ready-to-use tool page.",
+      "qualityNoteEn": "A high-quality front-end tool page. Output can go straight into HTML/CSS."
     },
     {
       "id": "threejs-examples",
@@ -251,7 +281,10 @@
         "threejs",
         "examples"
       ],
-      "previewImage": "/previews/threejs-examples.webp"
+      "previewImage": "/previews/threejs-examples.webp",
+      "titleEn": "three.js examples",
+      "summaryEn": "Official three.js example wall: many in-browser WebGL / HTML interactive demos you can open to read the source.",
+      "qualityNoteEn": "Official interactive example index. Fits 3D/game-leaning HTML demos."
     },
     {
       "id": "bootstrap-examples",
@@ -272,7 +305,10 @@
         "templates",
         "examples"
       ],
-      "previewImage": "/previews/bootstrap-examples.webp"
+      "previewImage": "/previews/bootstrap-examples.webp",
+      "titleEn": "Bootstrap Examples",
+      "summaryEn": "Official Bootstrap 5.3 examples: full HTML page fragments and starter templates for covers, pricing, dashboards, blogs, albums, and more.",
+      "qualityNoteEn": "Official landing/component example directory. You can compare the source structure directly."
     },
     {
       "id": "css-zen-garden",
@@ -294,7 +330,10 @@
         "design",
         "gallery"
       ],
-      "previewImage": "/previews/css-zen-garden.webp"
+      "previewImage": "/previews/css-zen-garden.webp",
+      "titleEn": "CSS Zen Garden",
+      "summaryEn": "The same HTML, different authors’ external stylesheets — a show of how far pure CSS can restyle a page. Dave Shea’s classic CSS design exhibit.",
+      "qualityNoteEn": "A textbook public page on separating structure from presentation. Fits “portfolio / docs.”"
     },
     {
       "id": "scroll-driven-animations",
@@ -320,7 +359,10 @@
         "waapi",
         "chrome"
       ],
-      "previewImage": "/previews/scroll-driven-animations.webp"
+      "previewImage": "/previews/scroll-driven-animations.webp",
+      "titleEn": "Scroll-driven Animations",
+      "summaryEn": "Bramus’s Chrome-developer demo site: reading progress, cover-flow, stacked cards, horizontal scroll, all scroll-driven. The demo itself is handwritten HTML/CSS/JS with no build step.",
+      "qualityNoteEn": "Official-quality motion lab. Types cover motion, interactive, and docs."
     },
     {
       "id": "squoosh",
@@ -344,7 +386,10 @@
         "pwa",
         "google"
       ],
-      "previewImage": "/previews/squoosh.webp"
+      "previewImage": "/previews/squoosh.webp",
+      "titleEn": "Squoosh",
+      "summaryEn": "GoogleChromeLabs in-browser image compressor: local codecs, side-by-side compare, originals never upload. A high-quality web tool page.",
+      "qualityNoteEn": "Open source, works offline. Fits the “tool” type."
     },
     {
       "id": "clippy",
@@ -367,7 +412,10 @@
         "css",
         "generator"
       ],
-      "previewImage": "/previews/clippy.webp"
+      "previewImage": "/previews/clippy.webp",
+      "titleEn": "Clippy: CSS clip-path maker",
+      "summaryEn": "Bennett Feely’s visual clip-path editor. Drag points to make circle / ellipse / polygon / inset, then copy the CSS.",
+      "qualityNoteEn": "A long-maintained classic CSS tool page. The link still works."
     },
     {
       "id": "css-doodle",
@@ -392,7 +440,10 @@
         "css",
         "generative"
       ],
-      "previewImage": "/previews/css-doodle.webp"
+      "previewImage": "/previews/css-doodle.webp",
+      "titleEn": "css-doodle",
+      "summaryEn": "Web Components CSS pattern generator: draw grids, shapes, and motion with an extended CSS syntax. The docs site is a clickable live demo.",
+      "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive."
     }
   ]
 }

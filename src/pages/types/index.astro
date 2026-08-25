@@ -1,38 +1,60 @@
 ---
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCategoryCollections } from "../../lib/cases";
+import { fill, ui } from "../../lib/i18n";
 import { categoryIntro, categoryLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 
 const collections = getCategoryCollections();
 ---
 
-<BaseLayout collection="grok" title="按类型浏览 · AI UP LAB" description="按销售、工程、自动化等类型浏览 Grok Bot 用法。">
+<BaseLayout
+  collection="grok"
+  title={ui.grok.typesTitle.zh}
+  titleEn={ui.grok.typesTitle.en}
+  description={ui.grok.typesDesc.zh}
+  descriptionEn={ui.grok.typesDesc.en}
+>
   <div class="wrap">
     <section class="collection-hero">
       <p class="kicker">Types</p>
-      <h1>按类型浏览</h1>
+      <h1><Loc zh={ui.grok.typesH1.zh} en={ui.grok.typesH1.en} /></h1>
       <p class="lede">
-        每个类型对应 <code>data/cases.json</code> 里出现过的 <code>categories[]</code> 值，单独生成静态 HTML 收集页。当前 {collections.length} 个类型。
+        <span class="loc-zh">
+          每个类型对应 <code>data/cases.json</code> 里出现过的 <code>categories[]</code> 值，单独生成静态 HTML 收集页。当前 {collections.length} 个类型。
+        </span>
+        <span class="loc-en">
+          Each type is a <code>categories[]</code> value that appears in <code>data/cases.json</code>, with its own static HTML page. {collections.length} types now.
+        </span>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("featured/")}>精选案例</a>
-        <a class="btn btn-ghost" href={withBase("latest/")}>最新案例</a>
-        <a class="btn btn-ghost" href={withBase("cases/")}>全部案例</a>
+        <a class="btn btn-ghost" href={withBase("featured/")}><Loc zh={ui.grok.featuredCases.zh} en={ui.grok.featuredCases.en} /></a>
+        <a class="btn btn-ghost" href={withBase("latest/")}><Loc zh={ui.grok.latestCases.zh} en={ui.grok.latestCases.en} /></a>
+        <a class="btn btn-ghost" href={withBase("cases/")}><Loc zh={ui.grok.allCases.zh} en={ui.grok.allCases.en} /></a>
       </div>
     </section>
 
-    <section class="section" aria-label="类型列表">
+    <section class="section" aria-label={ui.grok.typeList.zh} data-aria-zh={ui.grok.typeList.zh} data-aria-en={ui.grok.typeList.en}>
       <div class="doc-grid">
         {
-          collections.map((item) => (
-            <a class="card type-card" href={withBase(`types/${item.category}/`)}>
-              <p class="title-en">{item.category}</p>
-              <h3>{categoryLabel(item.category)}</h3>
-              <p class="summary">{categoryIntro(item.category)}</p>
-              <p class="card-meta">{item.count} 条案例</p>
-            </a>
-          ))
+          collections.map((item) => {
+            const count = fill(ui.meta.cases, { n: item.count });
+            return (
+              <a class="card type-card" href={withBase(`types/${item.category}/`)}>
+                <p class="title-en">{item.category}</p>
+                <h3>
+                  <span class="loc-zh">{categoryLabel(item.category)}</span>
+                  <span class="loc-en">{categoryLabel(item.category, "en")}</span>
+                </h3>
+                <p class="summary">
+                  <span class="loc-zh">{categoryIntro(item.category)}</span>
+                  <span class="loc-en">{categoryIntro(item.category, "en")}</span>
+                </p>
+                <p class="card-meta"><Loc zh={count.zh} en={count.en} /></p>
+              </a>
+            );
+          })
         }
       </div>
     </section>

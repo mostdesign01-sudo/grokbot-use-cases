@@ -15,7 +15,9 @@ export interface AgentUiItem {
   id: string;
   slug: string;
   title: string;
+  titleEn?: string;
   summary: string;
+  summaryEn?: string;
   types: AgentUiType[];
   sourceUrl: string;
   secondaryUrls?: string[];
@@ -24,9 +26,11 @@ export interface AgentUiItem {
   publishedAt: string;
   updatedAt: string;
   qualityNote: string;
+  qualityNoteEn?: string;
   tags: string[];
   npmPackage?: string;
   promptHint?: string;
+  promptHintEn?: string;
 }
 
 export interface AgentUiMeta {
@@ -63,9 +67,13 @@ export function getRecentlyUpdatedAgentUi(limit = 12): AgentUiItem[] {
 export function agentUiSearchText(item: AgentUiItem): string {
   return [
     item.title,
+    item.titleEn ?? "",
     item.summary,
+    item.summaryEn ?? "",
     item.qualityNote,
+    item.qualityNoteEn ?? "",
     item.promptHint ?? "",
+    item.promptHintEn ?? "",
     item.npmPackage ?? "",
     item.tags.join(" "),
     item.types.join(" "),

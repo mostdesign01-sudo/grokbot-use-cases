@@ -1,16 +1,18 @@
 ---
+import Loc from "../components/Loc.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 ---
 
-<BaseLayout collection="lab" title="未找到 · AI UP LAB">
+<BaseLayout collection="lab" title={ui.pages.notFoundTitle.zh} titleEn={ui.pages.notFoundTitle.en}>
   <div class="wrap">
     <p class="kicker">404</p>
-    <h1>没有这页</h1>
-    <p class="lede">链接可能已变更。回到 AI UP LAB 继续浏览。</p>
+    <h1><Loc zh={ui.pages.notFoundH1.zh} en={ui.pages.notFoundH1.en} /></h1>
+    <p class="lede"><Loc zh={ui.pages.notFoundLede.zh} en={ui.pages.notFoundLede.en} /></p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href={withBase("cases/")}>浏览案例</a>
-      <a class="btn btn-ghost" href={withBase("/")}>返回首页</a>
+      <a class="btn btn-primary" href={withBase("cases/")}><Loc zh={ui.pages.browseCases.zh} en={ui.pages.browseCases.en} /></a>
+      <a class="btn btn-ghost" href={withBase("/")}><Loc zh={ui.pages.backHome.zh} en={ui.pages.backHome.en} /></a>
     </div>
   </div>
 </BaseLayout>

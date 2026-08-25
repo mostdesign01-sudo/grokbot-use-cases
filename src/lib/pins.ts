@@ -44,7 +44,24 @@ export function getLandingPins(limit = 24): LandingPin[] {
 
 export function landingPinSearchText(pin: LandingPin): string {
   if (pin.lib === "grok") {
-    return [pin.item.title, pin.item.titleEn, pin.item.summary, pin.item.qualityNote, "Grok Bot"].join(" ");
+    return [
+      pin.item.title,
+      pin.item.titleEn,
+      pin.item.summary,
+      pin.item.summaryEn ?? "",
+      pin.item.qualityNote,
+      pin.item.qualityNoteEn ?? "",
+      "Grok Bot",
+    ].join(" ");
   }
-  return [pin.item.title, pin.item.summary, pin.item.qualityNote, pin.item.tags.join(" "), pin.lib].join(" ");
+  return [
+    pin.item.title,
+    pin.item.titleEn ?? "",
+    pin.item.summary,
+    pin.item.summaryEn ?? "",
+    pin.item.qualityNote,
+    pin.item.qualityNoteEn ?? "",
+    pin.item.tags.join(" "),
+    pin.lib,
+  ].join(" ");
 }

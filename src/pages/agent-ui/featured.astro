@@ -1,23 +1,36 @@
 ---
 import AgentUiCard from "../../components/AgentUiCard.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getFeaturedAgentUi } from "../../lib/agent-ui";
+import { ui } from "../../lib/i18n";
 import { withBase } from "../../lib/paths";
 
 const featured = getFeaturedAgentUi();
 ---
 
-<BaseLayout collection="agent-ui" title="精选 Agent UI · AI UP LAB" description="编辑精选的 ThreeUI Community 免费组件。">
+<BaseLayout
+  collection="agent-ui"
+  title={ui.agent.featuredTitle.zh}
+  titleEn={ui.agent.featuredTitle.en}
+  description={ui.agent.featuredDesc.zh}
+  descriptionEn={ui.agent.featuredDesc.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured Agent UI</p>
-      <h1>精选 Agent UI</h1>
+      <h1><Loc zh={ui.agent.featuredH1.zh} en={ui.agent.featuredH1.en} /></h1>
       <p class="lede">
-        <code>featured === true</code> 的免费组件，当前 {featured.length} 条。原文在 ThreeUI，本站只做索引。
+        <span class="loc-zh">
+          <code>featured === true</code> 的免费组件，当前 {featured.length} 条。原文在 ThreeUI，本站只做索引。
+        </span>
+        <span class="loc-en">
+          Free components with <code>featured === true</code>. {featured.length} now. Originals live on ThreeUI; this is an index.
+        </span>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}>最新</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}><Loc zh={ui.nav.latest.zh} en={ui.nav.latest.en} /></a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </section>
     <section class="section">

@@ -5,11 +5,12 @@ import { pinRatio, type PinLib } from "../lib/pins";
 interface Props {
   lib: PinLib;
   title: string;
+  titleEn?: string;
   seed: string;
   image?: string;
 }
 
-const { lib, title, seed, image } = Astro.props;
+const { lib, title, titleEn = title, seed, image } = Astro.props;
 const ratio = pinRatio(seed);
 const src = assetUrl(image);
 ---
@@ -19,7 +20,8 @@ const src = assetUrl(image);
   aria-hidden="true"
 >
   <div class:list={["pin-art", `pin-pattern-${ratio}`]}>
-    <span class="pin-art-title">{title}</span>
+    <span class="pin-art-title loc-zh">{title}</span>
+    <span class="pin-art-title loc-en">{titleEn}</span>
   </div>
   {
     src && (

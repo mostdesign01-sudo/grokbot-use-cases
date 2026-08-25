@@ -26,8 +26,10 @@
 | --- | --- | --- |
 | `id` | string | 稳定主键 |
 | `slug` | string | 详情路径 `/agent-ui/[slug]/`，勿使用 `featured` `latest` `types` |
-| `title` | string | 展示标题（专有名词可保持原文） |
+| `title` | string | 展示标题（专有名词可保持原文；ThreeUI 英文名两边都用） |
+| `titleEn` | string | 英文标题（专有名词可与 `title` 相同） |
 | `summary` | string | 中文摘要 |
+| `summaryEn` | string | 英文摘要（EN 模式展示；翻译已有中文，勿新增条目） |
 | `types` | string[] | 见下方类型枚举 |
 | `sourceUrl` | string | ThreeUI Community 免费组件页，形态为 `https://threeui.com/{category}/{slug}`（可带 `/variant`） |
 | `secondaryUrls` | string[] | 可选，GitHub / browse |
@@ -36,9 +38,11 @@
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |
 | `qualityNote` | string | 为何收录；页面展示为「收录理由」 |
+| `qualityNoteEn` | string | 英文收录理由 |
 | `tags` | string[] | 检索用标签 |
 | `npmPackage` | string | 可选，如 `@designcodeio/threeui` |
 | `promptHint` | string | 可选，给 Agent 的换主题 / Skill 提示 |
+| `promptHintEn` | string | 可选，英文 Agent 提示 |
 
 ## 类型枚举
 

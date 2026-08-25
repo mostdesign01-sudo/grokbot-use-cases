@@ -1,6 +1,7 @@
 ---
 import AgentUiCard from "../../components/AgentUiCard.astro";
 import LibrarySearch from "../../components/LibrarySearch.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   agentUiItems,
@@ -11,40 +12,46 @@ import {
 } from "../../lib/agent-ui";
 import { agentUiTypeLabel } from "../../lib/agent-ui-labels";
 import { formatShanghaiDateTime } from "../../lib/format";
+import { ui } from "../../lib/i18n";
 import { withBase } from "../../lib/paths";
-import { pageTitle, siteName } from "../../lib/site";
+import { pageTitle } from "../../lib/site";
 
 const featuredIds = new Set(getFeaturedAgentUi().map((item) => item.id));
 const wall = [...agentUiItems].sort((a, b) => Number(featuredIds.has(b.id)) - Number(featuredIds.has(a.id)));
 const types = getAgentUiTypeCollections();
+const whenZh = formatShanghaiDateTime(agentUiMeta.updatedAt);
+const whenEn = formatShanghaiDateTime(agentUiMeta.updatedAt, "en-US");
 ---
 
 <BaseLayout
   collection="agent-ui"
   title={pageTitle("Agent UI")}
-  description={`${siteName} 的 Agent UI 库：ThreeUI Community 免费组件，可复制 prompt / Skill.md 换主题。`}
+  description={ui.agent.hubDesc.zh}
+  descriptionEn={ui.agent.hubDesc.en}
 >
   <div class="wrap-wide" data-hub>
     <section class="hub-intro">
-      <p class="kicker">{siteName} · Agent UI</p>
-      <h1>可交给 Agent 换主题的界面件</h1>
-      <p class="lede">
-        只收 ThreeUI Community 免费、免登录条目。复制 prompt 或 Skill.md，不要手改 procedural JS。不含 Pro，也不提供 MCP。
-      </p>
-      <LibrarySearch library="agent-ui" placeholder="搜索 Agent UI 标题、摘要、收录理由…" />
+      <p class="kicker"><Loc zh={ui.agent.hubKicker.zh} en={ui.agent.hubKicker.en} /></p>
+      <h1><Loc zh={ui.agent.hubH1.zh} en={ui.agent.hubH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.agent.hubLede.zh} en={ui.agent.hubLede.en} /></p>
+      <LibrarySearch library="agent-ui" placeholder={ui.search.agentUi.zh} placeholderEn={ui.search.agentUi.en} />
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("agent-ui/featured/")}>精选</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}>最新</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/featured/")}><Loc zh={ui.nav.featured.zh} en={ui.nav.featured.en} /></a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/latest/")}><Loc zh={ui.nav.latest.zh} en={ui.nav.latest.en} /></a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
       <p class="meta-line">
-        最近校对（Asia/Shanghai）：{formatShanghaiDateTime(agentUiMeta.updatedAt)} · {agentUiItems.length} 条
+        <span class="loc-zh">{ui.meta.proofed.zh}：{whenZh} · {agentUiItems.length} 条</span>
+        <span class="loc-en">{ui.meta.proofed.en}: {whenEn} · {agentUiItems.length} items</span>
       </p>
       <div class="type-chips">
         {
           types.map((item) => (
             <a class="type-chip" href={withBase(`agent-ui/types/${item.type}/`)}>
-              <strong>{agentUiTypeLabel(item.type)}</strong>
+              <strong>
+                <span class="loc-zh">{agentUiTypeLabel(item.type)}</span>
+                <span class="loc-en">{agentUiTypeLabel(item.type, "en")}</span>
+              </strong>
               <span>{item.count}</span>
             </a>
           ))
@@ -55,8 +62,8 @@ const types = getAgentUiTypeCollections();
     <section class="section" aria-labelledby="agent-ui-wall">
       <div class="section-head">
         <div>
-          <h2 id="agent-ui-wall">浏览墙</h2>
-          <p>精选靠前。卡片是靛紫海报；原文与换主题提示在详情页。</p>
+          <h2 id="agent-ui-wall"><Loc zh={ui.agent.wall.zh} en={ui.agent.wall.en} /></h2>
+          <p><Loc zh={ui.agent.wallLede.zh} en={ui.agent.wallLede.en} /></p>
         </div>
       </div>
       <div class="masonry">

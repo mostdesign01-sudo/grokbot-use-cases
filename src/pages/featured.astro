@@ -1,28 +1,41 @@
 ---
 import CaseCard from "../components/CaseCard.astro";
+import Loc from "../components/Loc.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getFeaturedCases } from "../lib/cases";
+import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 
 const featured = getFeaturedCases();
 ---
 
-<BaseLayout collection="grok" title="精选案例 · AI UP LAB" description="编辑精选的 Grok Bot 用法，适合作为第一个 Bot 或团队协作模板。">
+<BaseLayout
+  collection="grok"
+  title={ui.grok.featuredTitle.zh}
+  titleEn={ui.grok.featuredTitle.en}
+  description={ui.grok.featuredDesc.zh}
+  descriptionEn={ui.grok.featuredDesc.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Featured</p>
-      <h1>精选案例</h1>
+      <h1><Loc zh={ui.grok.featuredH1.zh} en={ui.grok.featuredH1.en} /></h1>
       <p class="lede">
-        从 <code>data/cases.json</code> 中 <code>featured === true</code> 的条目整理而来，适合对照官方角色、例行与审批边界，作为第一个 Bot 或团队协作模板。当前 {featured.length} 条。
+        <span class="loc-zh">
+          从 <code>data/cases.json</code> 中 <code>featured === true</code> 的条目整理而来，适合对照官方角色、例行与审批边界，作为第一个 Bot 或团队协作模板。当前 {featured.length} 条。
+        </span>
+        <span class="loc-en">
+          Items with <code>featured === true</code> in <code>data/cases.json</code>. Use them to compare official roles, routines, and approval bounds as a first Bot or team template. {featured.length} now.
+        </span>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("latest/")}>查看最新</a>
-        <a class="btn btn-ghost" href={withBase("types/")}>按类型浏览</a>
-        <a class="btn btn-ghost" href={withBase("cases/")}>全部案例</a>
+        <a class="btn btn-ghost" href={withBase("latest/")}><Loc zh={ui.grok.viewLatest.zh} en={ui.grok.viewLatest.en} /></a>
+        <a class="btn btn-ghost" href={withBase("types/")}><Loc zh={ui.grok.browseTypes.zh} en={ui.grok.browseTypes.en} /></a>
+        <a class="btn btn-ghost" href={withBase("cases/")}><Loc zh={ui.grok.allCases.zh} en={ui.grok.allCases.en} /></a>
       </div>
     </section>
 
-    <section class="section" aria-label="精选案例列表">
+    <section class="section" aria-label={ui.grok.featuredList.zh} data-aria-zh={ui.grok.featuredList.zh} data-aria-en={ui.grok.featuredList.en}>
       <div class="masonry">
         {featured.map((item) => <CaseCard caseItem={item} />)}
       </div>

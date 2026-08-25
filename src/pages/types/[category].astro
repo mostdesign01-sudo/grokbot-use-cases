@@ -1,7 +1,9 @@
 ---
 import CaseCard from "../../components/CaseCard.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCasesByCategory, uniqueCategories } from "../../lib/cases";
+import { fill, ui } from "../../lib/i18n";
 import { categoryIntro, categoryLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 
@@ -16,25 +18,48 @@ export function getStaticPaths() {
 }
 
 const { category, items } = Astro.props;
-const title = categoryLabel(category);
+const titleZh = categoryLabel(category);
+const titleEn = categoryLabel(category, "en");
+const desc = fill(ui.grok.typePageDesc, { title: titleZh });
+const descEn = fill(ui.grok.typePageDesc, { title: titleEn });
+const listLabel = fill(ui.grok.typeListLabel, { title: titleZh });
+const listLabelEn = fill(ui.grok.typeListLabel, { title: titleEn });
 ---
 
-<BaseLayout collection="grok" title={`${title} · AI UP LAB`} description={`${title}类型下的 Grok Bot 用法收集。`}>
+<BaseLayout
+  collection="grok"
+  title={`${titleZh} · AI UP LAB`}
+  titleEn={`${titleEn} · AI UP LAB`}
+  description={desc.zh}
+  descriptionEn={descEn.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="crumb">
-        <a href={withBase("types/")}>按类型浏览</a> / {title}
+        <a href={withBase("types/")}><Loc zh={ui.grok.browseTypes.zh} en={ui.grok.browseTypes.en} /></a> /
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
       </p>
       <p class="kicker">{category}</p>
-      <h1>{title}</h1>
-      <p class="lede">{categoryIntro(category)} 当前 {items.length} 条，均来自 <code>categories</code> 含「{category}」的记录。</p>
+      <h1>
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
+      </h1>
+      <p class="lede">
+        <span class="loc-zh">
+          {categoryIntro(category)} 当前 {items.length} 条，均来自 <code>categories</code> 含「{category}」的记录。
+        </span>
+        <span class="loc-en">
+          {categoryIntro(category, "en")} {items.length} items whose <code>categories</code> include “{category}”.
+        </span>
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("types/")}>全部类型</a>
-        <a class="btn btn-ghost" href={withBase("cases/")}>筛选全部案例</a>
+        <a class="btn btn-ghost" href={withBase("types/")}><Loc zh={ui.grok.allTypes.zh} en={ui.grok.allTypes.en} /></a>
+        <a class="btn btn-ghost" href={withBase("cases/")}><Loc zh={ui.grok.filterAll.zh} en={ui.grok.filterAll.en} /></a>
       </div>
     </section>
 
-    <section class="section" aria-label={`${title}案例列表`}>
+    <section class="section" aria-label={listLabel.zh} data-aria-zh={listLabel.zh} data-aria-en={listLabelEn.en}>
       <div class="masonry">
         {items.map((item) => <CaseCard caseItem={item} />)}
       </div>

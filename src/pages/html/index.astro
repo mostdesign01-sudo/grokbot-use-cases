@@ -1,42 +1,52 @@
 ---
 import HtmlCard from "../../components/HtmlCard.astro";
 import LibrarySearch from "../../components/LibrarySearch.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatShanghaiDateTime } from "../../lib/format";
 import { getFeaturedHtml, getHtmlTypeCollections, htmlItems, htmlMeta, htmlSearchText } from "../../lib/html";
 import { htmlTypeLabel } from "../../lib/html-labels";
+import { pageTitle } from "../../lib/site";
+import { ui } from "../../lib/i18n";
 import { withBase } from "../../lib/paths";
-import { pageTitle, siteName } from "../../lib/site";
 
 const featuredIds = new Set(getFeaturedHtml().map((item) => item.id));
 const wall = [...htmlItems].sort((a, b) => Number(featuredIds.has(b.id)) - Number(featuredIds.has(a.id)));
 const types = getHtmlTypeCollections();
+const whenZh = formatShanghaiDateTime(htmlMeta.updatedAt);
+const whenEn = formatShanghaiDateTime(htmlMeta.updatedAt, "en-US");
 ---
 
 <BaseLayout
   collection="html"
-  title={pageTitle("HTML 收集")}
-  description={`${siteName} 的 HTML 收集库：从公开网页收集的演示、模板、组件与工具页。`}
+  title={pageTitle(ui.html.hubTitle.zh)}
+  titleEn={pageTitle(ui.html.hubTitle.en)}
+  description={ui.html.hubDesc.zh}
+  descriptionEn={ui.html.hubDesc.en}
 >
   <div class="wrap-wide" data-hub>
     <section class="hub-intro">
-      <p class="kicker">{siteName} · HTML 收集</p>
-      <h1>公开网页里的 HTML 范例</h1>
-      <p class="lede">
-        演示、模板、组件与工具页，和 Grok Bot、Agent UI 分开。有预览图就上墙，没有就用青绿海报。
-      </p>
-      <LibrarySearch library="html" placeholder="搜索 HTML 标题、摘要、标签、收录理由…" />
+      <p class="kicker"><Loc zh={ui.html.hubKicker.zh} en={ui.html.hubKicker.en} /></p>
+      <h1><Loc zh={ui.html.hubH1.zh} en={ui.html.hubH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.html.hubLede.zh} en={ui.html.hubLede.en} /></p>
+      <LibrarySearch library="html" placeholder={ui.search.html.zh} placeholderEn={ui.search.html.en} />
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("html/featured/")}>精选</a>
-        <a class="btn btn-ghost" href={withBase("html/latest/")}>最新</a>
-        <a class="btn btn-ghost" href={withBase("html/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("html/featured/")}><Loc zh={ui.nav.featured.zh} en={ui.nav.featured.en} /></a>
+        <a class="btn btn-ghost" href={withBase("html/latest/")}><Loc zh={ui.nav.latest.zh} en={ui.nav.latest.en} /></a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
-      <p class="meta-line">最近校对（Asia/Shanghai）：{formatShanghaiDateTime(htmlMeta.updatedAt)} · {htmlItems.length} 条</p>
+      <p class="meta-line">
+        <span class="loc-zh">{ui.meta.proofed.zh}：{whenZh} · {htmlItems.length} 条</span>
+        <span class="loc-en">{ui.meta.proofed.en}: {whenEn} · {htmlItems.length} items</span>
+      </p>
       <div class="type-chips">
         {
           types.map((item) => (
             <a class="type-chip" href={withBase(`html/types/${item.type}/`)}>
-              <strong>{htmlTypeLabel(item.type)}</strong>
+              <strong>
+                <span class="loc-zh">{htmlTypeLabel(item.type)}</span>
+                <span class="loc-en">{htmlTypeLabel(item.type, "en")}</span>
+              </strong>
               <span>{item.count}</span>
             </a>
           ))
@@ -47,8 +57,8 @@ const types = getHtmlTypeCollections();
     <section class="section" aria-labelledby="html-wall">
       <div class="section-head">
         <div>
-          <h2 id="html-wall">浏览墙</h2>
-          <p>精选靠前。点卡片进详情，原文仍在站外。</p>
+          <h2 id="html-wall"><Loc zh={ui.html.wall.zh} en={ui.html.wall.en} /></h2>
+          <p><Loc zh={ui.html.wallLede.zh} en={ui.html.wallLede.en} /></p>
         </div>
       </div>
       <div class="masonry">

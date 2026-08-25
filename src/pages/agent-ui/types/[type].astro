@@ -1,8 +1,10 @@
 ---
 import AgentUiCard from "../../../components/AgentUiCard.astro";
+import Loc from "../../../components/Loc.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getAgentUiByType, uniqueAgentUiTypes } from "../../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../../lib/agent-ui-labels";
+import { fill, ui } from "../../../lib/i18n";
 import { withBase } from "../../../lib/paths";
 
 export function getStaticPaths() {
@@ -13,21 +15,38 @@ export function getStaticPaths() {
 }
 
 const { type, items } = Astro.props;
-const title = agentUiTypeLabel(type);
+const titleZh = agentUiTypeLabel(type);
+const titleEn = agentUiTypeLabel(type, "en");
+const desc = fill(ui.agent.typePageDesc, { title: titleZh });
+const descEn = fill(ui.agent.typePageDesc, { title: titleEn });
 ---
 
-<BaseLayout collection="agent-ui" title={`${title} · AI UP LAB`} description={`${title}类型下的 ThreeUI Community 免费组件。`}>
+<BaseLayout
+  collection="agent-ui"
+  title={`${titleZh} · AI UP LAB`}
+  titleEn={`${titleEn} · AI UP LAB`}
+  description={desc.zh}
+  descriptionEn={descEn.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="crumb">
-        <a href={withBase("agent-ui/types/")}>按类型浏览</a> / {title}
+        <a href={withBase("agent-ui/types/")}><Loc zh={ui.agent.typesH1.zh} en={ui.agent.typesH1.en} /></a> /
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
       </p>
       <p class="kicker">{type}</p>
-      <h1>{title}</h1>
-      <p class="lede">{agentUiTypeIntro(type)} 当前 {items.length} 条。</p>
+      <h1>
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
+      </h1>
+      <p class="lede">
+        <span class="loc-zh">{agentUiTypeIntro(type)} 当前 {items.length} 条。</span>
+        <span class="loc-en">{agentUiTypeIntro(type, "en")} {items.length} items now.</span>
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>全部类型</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/")}>Agent UI 总览</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.grok.allTypes.zh} en={ui.grok.allTypes.en} /></a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/")}><Loc zh={ui.agent.overview.zh} en={ui.agent.overview.en} /></a>
       </div>
     </section>
     <section class="section">

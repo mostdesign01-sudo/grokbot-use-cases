@@ -3,22 +3,22 @@ import AgentUiCard from "../components/AgentUiCard.astro";
 import CaseCard from "../components/CaseCard.astro";
 import HtmlCard from "../components/HtmlCard.astro";
 import LibrarySearch from "../components/LibrarySearch.astro";
+import Loc from "../components/Loc.astro";
 import PosterBanners from "../components/PosterBanners.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { ui } from "../lib/i18n";
 import { landingPinSearchText, getLandingPins } from "../lib/pins";
-import { siteDescription, siteName } from "../lib/site";
+import { siteDescription, siteDescriptionEn, siteName } from "../lib/site";
 
 const pins = getLandingPins(24);
 ---
 
-<BaseLayout collection="lab" title={siteName} description={siteDescription}>
+<BaseLayout collection="lab" title={siteName} description={siteDescription} descriptionEn={siteDescriptionEn}>
   <div class="wrap-wide">
     <section class="landing-intro">
       <p class="kicker">{siteName}</p>
-      <h1>可复用的 AI 精选实验室</h1>
-      <p class="lede">
-        案例 / 页面 / Agent UI。先看三张海报进库，再在下面的墙里按视觉浏览精选。不是新闻站。
-      </p>
+      <h1><Loc zh={ui.pages.landingH1.zh} en={ui.pages.landingH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.pages.landingLede.zh} en={ui.pages.landingLede.en} /></p>
     </section>
 
     <PosterBanners />
@@ -26,11 +26,11 @@ const pins = getLandingPins(24);
     <section class="section" aria-labelledby="landing-wall" data-hub>
       <div class="section-head">
         <div>
-          <h2 id="landing-wall">精选墙</h2>
-          <p>三库精选与近日条目混排。有图用图，没有就用库海报。点进详情再看原文与收录理由。</p>
+          <h2 id="landing-wall"><Loc zh={ui.pages.landingWall.zh} en={ui.pages.landingWall.en} /></h2>
+          <p><Loc zh={ui.pages.landingWallLede.zh} en={ui.pages.landingWallLede.en} /></p>
         </div>
       </div>
-      <LibrarySearch library="all" placeholder="在精选墙里筛标题、摘要、收录理由…" />
+      <LibrarySearch library="all" placeholder={ui.search.wall.zh} placeholderEn={ui.search.wall.en} />
       <div class="masonry">
         {
           pins.map((pin) => (

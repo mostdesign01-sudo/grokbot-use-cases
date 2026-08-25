@@ -1,5 +1,6 @@
 ---
 import { formatShanghaiTime, groupByShanghaiDay } from "../lib/format";
+import { ui } from "../lib/i18n";
 import type { TimelineEntry } from "../lib/timeline";
 import Badge from "./Badge.astro";
 import QualityNote from "./QualityNote.astro";
@@ -7,20 +8,27 @@ import QualityNote from "./QualityNote.astro";
 interface Props {
   items: TimelineEntry[];
   emptyLabel?: string;
+  emptyLabelEn?: string;
 }
 
-const { items, emptyLabel = "最近还没有校对过的条目。" } = Astro.props;
+const { items, emptyLabel = "最近还没有校对过的条目。", emptyLabelEn = "No recently checked items." } = Astro.props;
 const groups = groupByShanghaiDay(items, (item) => item.updatedAt);
 ---
 
 {
   groups.length === 0 ? (
-    <p class="empty">{emptyLabel}</p>
+    <p class="empty">
+      <span class="loc-zh">{emptyLabel}</span>
+      <span class="loc-en">{emptyLabelEn}</span>
+    </p>
   ) : (
     <div class="feed">
       {groups.map((group) => (
         <section class="feed-day" data-filter-group>
-          <h3 class="feed-day-title">{group.title}</h3>
+          <h3 class="feed-day-title">
+            <span class="loc-zh">{group.title}</span>
+            <span class="loc-en">{group.titleEn}</span>
+          </h3>
           <div class="feed-list">
             {group.items.map((item) => (
               <article
@@ -36,7 +44,7 @@ const groups = groupByShanghaiDay(items, (item) => item.updatedAt);
                     {item.badges.map((badge) => (
                       <Badge kind={badge.kind} label={badge.label} />
                     ))}
-                    {item.featured && <Badge kind="featured" label="+ 精选" />}
+                    {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
                   </div>
                   <h4>{item.title}</h4>
                   <p class="summary">{item.summary}</p>

@@ -1,5 +1,7 @@
 ---
+import Loc from "./Loc.astro";
 import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
+import { ui } from "../lib/i18n";
 import { siteName } from "../lib/site";
 
 const path = Astro.url.pathname;
@@ -19,34 +21,34 @@ const isGrok =
 const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : isGrok ? "grok" : "lab";
 
 const labLinks = [
-  { href: withBase("/"), label: "首页" },
-  { href: withBase("search/"), label: "搜索" },
-  { href: withBase("docs/"), label: "文档" },
-  { href: withBase("changelog/"), label: "更新日志" },
+  { href: withBase("/"), label: ui.nav.home },
+  { href: withBase("search/"), label: ui.nav.search },
+  { href: withBase("docs/"), label: ui.nav.docs },
+  { href: withBase("changelog/"), label: ui.nav.changelog },
 ];
 
 const grokLinks = [
-  { href: withBase("cases/"), label: "总览" },
-  { href: withBase("featured/"), label: "精选" },
-  { href: withBase("latest/"), label: "最新" },
-  { href: withBase("types/"), label: "类型", section: true },
-  { href: withBase("search/?lib=grok"), label: "搜索" },
+  { href: withBase("cases/"), label: ui.nav.overview },
+  { href: withBase("featured/"), label: ui.nav.featured },
+  { href: withBase("latest/"), label: ui.nav.latest },
+  { href: withBase("types/"), label: ui.nav.types, section: true },
+  { href: withBase("search/?lib=grok"), label: ui.nav.search },
 ];
 
 const htmlLinks = [
-  { href: withBase("html/"), label: "总览" },
-  { href: withBase("html/featured/"), label: "精选" },
-  { href: withBase("html/latest/"), label: "最新" },
-  { href: withBase("html/types/"), label: "类型", section: true },
-  { href: withBase("search/?lib=html"), label: "搜索" },
+  { href: withBase("html/"), label: ui.nav.overview },
+  { href: withBase("html/featured/"), label: ui.nav.featured },
+  { href: withBase("html/latest/"), label: ui.nav.latest },
+  { href: withBase("html/types/"), label: ui.nav.types, section: true },
+  { href: withBase("search/?lib=html"), label: ui.nav.search },
 ];
 
 const agentUiLinks = [
-  { href: withBase("agent-ui/"), label: "总览" },
-  { href: withBase("agent-ui/featured/"), label: "精选" },
-  { href: withBase("agent-ui/latest/"), label: "最新" },
-  { href: withBase("agent-ui/types/"), label: "类型", section: true },
-  { href: withBase("search/?lib=agent-ui"), label: "搜索" },
+  { href: withBase("agent-ui/"), label: ui.nav.overview },
+  { href: withBase("agent-ui/featured/"), label: ui.nav.featured },
+  { href: withBase("agent-ui/latest/"), label: ui.nav.latest },
+  { href: withBase("agent-ui/types/"), label: ui.nav.types, section: true },
+  { href: withBase("search/?lib=agent-ui"), label: ui.nav.search },
 ];
 
 const links =
@@ -54,12 +56,12 @@ const links =
 
 const brandLine =
   currentLib === "agent-ui"
-    ? "Agent UI · 每日更新"
+    ? ui.brand.agentUi
     : currentLib === "html"
-      ? "HTML 收集 · 每日更新"
+      ? ui.brand.html
       : currentLib === "grok"
-        ? "Grok Bot · 每日更新"
-        : "可复用的精选实验室";
+        ? ui.brand.grok
+        : ui.brand.lab;
 ---
 
 <header class="site-header">
@@ -72,10 +74,10 @@ const brandLine =
         </span>
         <span class="brand-text">
           <strong>{siteName}</strong>
-          <span>{brandLine}</span>
+          <span><Loc zh={brandLine.zh} en={brandLine.en} /></span>
         </span>
       </a>
-      <nav class="collection-tabs" aria-label="内容库">
+      <nav class="collection-tabs" aria-label={ui.header.collections.zh} data-aria-zh={ui.header.collections.zh} data-aria-en={ui.header.collections.en}>
         <a
           class="tab-grok"
           href={withBase("cases/")}
@@ -88,7 +90,7 @@ const brandLine =
           href={withBase("html/")}
           aria-current={currentLib === "html" ? "page" : undefined}
         >
-          HTML 收集
+          <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} />
         </a>
         <a
           class="tab-agent-ui"
@@ -99,7 +101,7 @@ const brandLine =
         </a>
       </nav>
     </div>
-    <nav class="nav" aria-label="栏目">
+    <nav class="nav" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
       {
         links.map((link) => (
           <a
@@ -110,11 +112,23 @@ const brandLine =
               ? "page"
               : undefined}
           >
-            {link.label}
+            <Loc zh={link.label.zh} en={link.label.en} />
           </a>
         ))
       }
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换浅色或深色主题">
+      <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
+        <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-locale-set="en" aria-pressed="false">EN</button>
+      </div>
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-label={ui.header.theme.zh}
+        data-aria-zh={ui.header.theme.zh}
+        data-aria-en={ui.header.theme.en}
+      >
         <span aria-hidden="true">◐</span>
       </button>
     </nav>
@@ -122,8 +136,18 @@ const brandLine =
 </header>
 
 <script>
-  const button = document.querySelector("[data-theme-toggle]");
-  button?.addEventListener("click", () => {
+  document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const next = button.dataset.localeSet === "en" ? "en" : "zh";
+      const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
+      apply?.(next, true);
+    });
+  });
+
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  themeButton?.addEventListener("click", () => {
     const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
     localStorage.setItem("theme", next);

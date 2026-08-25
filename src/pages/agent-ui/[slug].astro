@@ -1,10 +1,12 @@
 ---
 import AgentUiCard from "../../components/AgentUiCard.astro";
 import Badge from "../../components/Badge.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { agentUiItems, RESERVED_AGENT_UI_SLUGS } from "../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../lib/agent-ui-labels";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
+import { fill, ui } from "../../lib/i18n";
 import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -21,57 +23,87 @@ const related = agentUiItems
   .filter((other) => other.id !== item.id && other.types.some((type) => item.types.includes(type)))
   .slice(0, 3);
 const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
+const titleEn = item.titleEn ?? item.title;
+const summaryEn = item.summaryEn ?? item.summary;
+const qualityEn = item.qualityNoteEn ?? item.qualityNote;
+const hintEn = item.promptHintEn ?? item.promptHint;
+const previewAlt = fill(ui.detail.previewAlt, { title: item.title });
+const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 ---
 
-<BaseLayout collection="agent-ui" title={`${item.title} · AI UP LAB`} description={item.summary}>
+<BaseLayout
+  collection="agent-ui"
+  title={`${item.title} · AI UP LAB`}
+  titleEn={`${titleEn} · AI UP LAB`}
+  description={item.summary}
+  descriptionEn={summaryEn}
+>
   <div class="wrap">
     <article class="detail-hero">
       <p class="crumb">
-        <a href={withBase("agent-ui/")}>Agent UI</a> / {item.title}
+        <a href={withBase("agent-ui/")}>Agent UI</a> /
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{titleEn}</span>
       </p>
       <div class="badges">
-        {item.featured && <Badge kind="official" label="精选" />}
+        {item.featured && <Badge kind="official" label={ui.badge.featuredPlain.zh} labelEn={ui.badge.featuredPlain.en} />}
         <Badge kind="community" label="ThreeUI Community" />
-        {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} />)}
+        {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} labelEn={agentUiTypeLabel(type, "en")} />)}
       </div>
-      <h1>{item.title}</h1>
-      <p class="lede">{item.summary}</p>
+      <h1>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{titleEn}</span>
+      </h1>
+      <p class="lede">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{summaryEn}</span>
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">打开原文</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+        <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
+          <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
+        </a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </article>
 
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2>适合怎么用</h2>
+          <h2><Loc zh={ui.detail.howToUse.zh} en={ui.detail.howToUse.en} /></h2>
           <ul class="learn-list">
             {
               item.types.map((type) => (
                 <li>
-                  <strong>{agentUiTypeLabel(type)}</strong>
-                  <p>{agentUiTypeIntro(type)}</p>
+                  <strong>
+                    <span class="loc-zh">{agentUiTypeLabel(type)}</span>
+                    <span class="loc-en">{agentUiTypeLabel(type, "en")}</span>
+                  </strong>
+                  <p>
+                    <span class="loc-zh">{agentUiTypeIntro(type)}</span>
+                    <span class="loc-en">{agentUiTypeIntro(type, "en")}</span>
+                  </p>
                 </li>
               ))
             }
           </ul>
           <p class="quality-note">
-            <strong>收录理由</strong>
-            {item.qualityNote}
+            <strong><Loc zh={ui.quality.zh} en={ui.quality.en} /></strong>
+            <span class="loc-zh">{item.qualityNote}</span>
+            <span class="loc-en">{qualityEn}</span>
           </p>
           {
             item.promptHint && (
               <p class="quality-note">
-                <strong>给 Agent</strong>
-                {item.promptHint}
+                <strong><Loc zh={ui.detail.forAgent.zh} en={ui.detail.forAgent.en} /></strong>
+                <span class="loc-zh">{item.promptHint}</span>
+                <span class="loc-en">{hintEn}</span>
               </p>
             )
           }
           {
             item.previewImage && (
               <figure class="item-preview">
-                <img src={assetUrl(item.previewImage)} alt={`${item.title} 预览`} />
+                <img src={assetUrl(item.previewImage)} alt={previewAlt.zh} />
               </figure>
             )
           }
@@ -79,7 +111,7 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
         {
           related.length > 0 && (
             <section class="section">
-              <h2>同类型</h2>
+              <h2><Loc zh={ui.detail.sameType.zh} en={ui.detail.sameType.en} /></h2>
               <div class="masonry masonry-related">
                 {related.map((other) => (
                   <AgentUiCard item={other} />
@@ -91,20 +123,21 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
       </div>
       <aside>
         <section class="panel">
-          <h2>元信息</h2>
+          <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
           <dl class="kv">
             <div>
-              <dt>类型</dt>
+              <dt><Loc zh={ui.meta.types.zh} en={ui.meta.types.en} /></dt>
               <dd class="chips">
                 {item.types.map((type) => (
                   <a class="chip" href={withBase(`agent-ui/types/${type}/`)}>
-                    {agentUiTypeLabel(type)}
+                    <span class="loc-zh">{agentUiTypeLabel(type)}</span>
+                    <span class="loc-en">{agentUiTypeLabel(type, "en")}</span>
                   </a>
                 ))}
               </dd>
             </div>
             <div>
-              <dt>标签</dt>
+              <dt><Loc zh={ui.meta.tags.zh} en={ui.meta.tags.en} /></dt>
               <dd>{item.tags.join(" · ")}</dd>
             </div>
             {
@@ -116,17 +149,23 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
               )
             }
             <div>
-              <dt>公开约</dt>
-              <dd>{formatPublishedDate(item.publishedAt)}</dd>
+              <dt><Loc zh={ui.meta.publishedAbout.zh} en={ui.meta.publishedAbout.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+                <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+              </dd>
             </div>
             <div>
-              <dt>本库校对</dt>
-              <dd>{formatShanghaiDateTime(item.updatedAt)}</dd>
+              <dt><Loc zh={ui.meta.libraryChecked.zh} en={ui.meta.libraryChecked.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatShanghaiDateTime(item.updatedAt)}</span>
+                <span class="loc-en">{formatShanghaiDateTime(item.updatedAt, "en-US")}</span>
+              </dd>
             </div>
           </dl>
         </section>
         <section class="panel">
-          <h2>公开来源</h2>
+          <h2><Loc zh={ui.meta.publicSources.zh} en={ui.meta.publicSources.en} /></h2>
           <div class="source-list">
             {sources.map((href) => (
               <a href={href} rel="noreferrer">

@@ -1,6 +1,6 @@
 # AI UP LAB
 
-可复用的 AI 精选实验室。案例 / 页面 / Agent UI 每日更新。主界面为简体中文，英文标题作为次要信息。
+可复用的 AI 精选实验室。案例 / 页面 / Agent UI 每日更新。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
 
 - 站点名：AI UP LAB
 - 标语：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI
@@ -40,8 +40,9 @@ npm run preview  # 预览生产构建
 3. **Agent UI**：编辑 [`data/agent-ui.json`](data/agent-ui.json)
    - 只收录 ThreeUI Community 免费、免登录条目，勿写 Pro / MCP
    - 字段见 [`data/agent-ui-schema.md`](data/agent-ui-schema.md)
-4. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`
-5. 提交并推送到 `main`
+4. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
+5. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
+6. 提交并推送到 `main`
 
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
 

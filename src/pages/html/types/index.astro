@@ -1,30 +1,54 @@
 ---
+import Loc from "../../../components/Loc.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getHtmlTypeCollections } from "../../../lib/html";
 import { htmlTypeIntro, htmlTypeLabel } from "../../../lib/html-labels";
+import { fill, ui } from "../../../lib/i18n";
 import { withBase } from "../../../lib/paths";
 
 const collections = getHtmlTypeCollections();
 ---
 
-<BaseLayout collection="html" title="HTML 类型 · AI UP LAB" description="按落地页、动效、组件等类型浏览 HTML 收集。">
+<BaseLayout
+  collection="html"
+  title={ui.html.typesTitle.zh}
+  titleEn={ui.html.typesTitle.en}
+  description={ui.html.typesDesc.zh}
+  descriptionEn={ui.html.typesDesc.en}
+>
   <div class="wrap">
     <section class="collection-hero">
       <p class="kicker">HTML Types</p>
-      <h1>按类型浏览</h1>
-      <p class="lede">类型来自 <code>data/html-items.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。</p>
+      <h1><Loc zh={ui.html.typesH1.zh} en={ui.html.typesH1.en} /></h1>
+      <p class="lede">
+        <span class="loc-zh">
+          类型来自 <code>data/html-items.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。
+        </span>
+        <span class="loc-en">
+          Types are <code>types[]</code> values that actually appear in <code>data/html-items.json</code>. {collections.length} now.
+        </span>
+      </p>
     </section>
     <section class="section">
       <div class="doc-grid">
         {
-          collections.map((item) => (
-            <a class="card type-card" href={withBase(`html/types/${item.type}/`)}>
-              <p class="title-en">{item.type}</p>
-              <h3>{htmlTypeLabel(item.type)}</h3>
-              <p class="summary">{htmlTypeIntro(item.type)}</p>
-              <p class="card-meta">{item.count} 条</p>
-            </a>
-          ))
+          collections.map((item) => {
+            const count = fill(ui.poster.items, { n: item.count });
+            return (
+              <a class="card type-card" href={withBase(`html/types/${item.type}/`)}>
+                <p class="title-en">{item.type}</p>
+                <h3>
+                  <span class="loc-zh">{htmlTypeLabel(item.type)}</span>
+                  <span class="loc-en">{htmlTypeLabel(item.type, "en")}</span>
+                </h3>
+                <p class="summary">
+                  <span class="loc-zh">{htmlTypeIntro(item.type)}</span>
+                  <span class="loc-en">{htmlTypeIntro(item.type, "en")}</span>
+                </p>
+                <p class="card-meta"><Loc zh={count.zh} en={count.en} /></p>
+              </a>
+            );
+          })
         }
       </div>
     </section>

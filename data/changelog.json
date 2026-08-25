@@ -3,52 +3,72 @@
     {
       "date": "2026-08-25",
       "title": "Grok Bot：收录官方扩容帖 3 个新角色",
-      "body": "来源 https://x.ai/news/grok-bot-more-plans ：数字断舍离、会议替身、建站 Bot。HTML 收集与 Agent UI 今日无新增（避免无预览的色块条目）。"
+      "body": "来源 https://x.ai/news/grok-bot-more-plans ：数字断舍离、会议替身、建站 Bot。HTML 收集与 Agent UI 今日无新增（避免无预览的色块条目）。",
+      "titleEn": "Grok Bot: three new roles from the official expansion post",
+      "bodyEn": "Source https://x.ai/news/grok-bot-more-plans : Digital Declutterer, Meeting Stand-in, Website Builder. No HTML Collection or Agent UI adds today (avoid color-block pins without previews)."
     },
     {
       "date": "2026-08-25",
       "title": "Grok Bot 收录 Kanekoa 视频研究剪辑案例",
-      "body": "社区案例：@KanekoaTheGreat 用 Grok Bot 将 38 条 Seheult 相关视频转写、精选 13 段剪成 19:35，并生成带时间戳的 Markdown。卡片使用推文截图作为预览。"
+      "body": "社区案例：@KanekoaTheGreat 用 Grok Bot 将 38 条 Seheult 相关视频转写、精选 13 段剪成 19:35，并生成带时间戳的 Markdown。卡片使用推文截图作为预览。",
+      "titleEn": "Grok Bot lists the Kanekoa video-research cutdown case",
+      "bodyEn": "Community case: @KanekoaTheGreat used Grok Bot to transcribe 38 Seheult-related videos, select 13 segments into a 19:35 cut, and generate timestamped Markdown. The card uses a tweet screenshot as the preview."
     },
     {
       "date": "2026-08-24",
       "title": "补全预览缩略图",
-      "body": "HTML 收集与 Agent UI 的 masonry 卡片改为自托管预览缩略图（public/previews），Pinterest 墙显示真实界面/效果，而不是纯色海报。图片路径走 Astro base，适配 GitHub Pages。缺图或加载失败时仍回退库海报。同时把 ThreeUI 原文改成现用的 /{category}/{slug} Community 路由。"
+      "body": "HTML 收集与 Agent UI 的 masonry 卡片改为自托管预览缩略图（public/previews），Pinterest 墙显示真实界面/效果，而不是纯色海报。图片路径走 Astro base，适配 GitHub Pages。缺图或加载失败时仍回退库海报。同时把 ThreeUI 原文改成现用的 /{category}/{slug} Community 路由。",
+      "titleEn": "Fill in preview thumbnails",
+      "bodyEn": "HTML Collection and Agent UI masonry cards now use self-hosted preview thumbnails (public/previews). The Pinterest wall shows real UI/effects instead of flat-color posters. Image paths go through the Astro base for GitHub Pages. Missing or failed images still fall back to the library poster. ThreeUI source links now use the current /{category}/{slug} Community routes."
     },
     {
       "date": "2026-08-24",
       "title": "界面：三张海报 + Pinterest 式浏览墙",
-      "body": "首页改为三张库海报（Grok Bot / HTML 收集 / Agent UI）加跨库精选瀑布流。Grok Bot 总览移到 /cases/。各库与精选/最新/类型页改为视觉优先的 masonry 卡片：有 previewImage 用图，否则用库海报，不再用时间线当主界面。"
+      "body": "首页改为三张库海报（Grok Bot / HTML 收集 / Agent UI）加跨库精选瀑布流。Grok Bot 总览移到 /cases/。各库与精选/最新/类型页改为视觉优先的 masonry 卡片：有 previewImage 用图，否则用库海报，不再用时间线当主界面。",
+      "titleEn": "UI: three posters + a Pinterest-style wall",
+      "bodyEn": "Home is now three library posters (Grok Bot / HTML Collection / Agent UI) plus a cross-library featured masonry. Grok Bot overview moved to /cases/. Each library and featured/latest/types page is now visual-first masonry: previewImage when present, otherwise the library poster. The timeline is no longer the main UI."
     },
     {
       "date": "2026-08-24",
       "title": "界面：字号、密度与表面打磨",
-      "body": "全站改用 Geist + Noto Sans SC（中文一等），收紧标题字重与字距；卡片、顶栏分段开关、库选择、时间线与搜索更密一档，边框与阴影更克制。三库配色（琥珀 / 青绿 / 靛紫）与案例、HTML、Agent UI 数据不变。"
+      "body": "全站改用 Geist + Noto Sans SC（中文一等），收紧标题字重与字距；卡片、顶栏分段开关、库选择、时间线与搜索更密一档，边框与阴影更克制。三库配色（琥珀 / 青绿 / 靛紫）与案例、HTML、Agent UI 数据不变。",
+      "titleEn": "UI: type size, density, and surface polish",
+      "bodyEn": "The site now uses Geist + Noto Sans SC (Chinese first), with tighter title weight and tracking. Cards, header segmented controls, library picker, timeline, and search are one step denser; borders and shadows are quieter. The three library colors (amber / teal / violet) and the Grok, HTML, and Agent UI data are unchanged."
     },
     {
       "date": "2026-08-24",
       "title": "站点更名为 AI UP LAB，并新增 Agent UI 库",
-      "body": "对外品牌定为 AI UP LAB：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI。顶栏现为三库：Grok Bot（琥珀）、HTML 收集（青绿）、Agent UI（靛紫）。Agent UI 首批收录 ThreeUI Community 免费组件（MIT，免登录），可复制 prompt / Skill.md 换主题；不含 Pro，也不提供 MCP。Grok Bot 与 HTML 数据、路由保持不变。"
+      "body": "对外品牌定为 AI UP LAB：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI。顶栏现为三库：Grok Bot（琥珀）、HTML 收集（青绿）、Agent UI（靛紫）。Agent UI 首批收录 ThreeUI Community 免费组件（MIT，免登录），可复制 prompt / Skill.md 换主题；不含 Pro，也不提供 MCP。Grok Bot 与 HTML 数据、路由保持不变。",
+      "titleEn": "Site renamed AI UP LAB, Agent UI library added",
+      "bodyEn": "Public brand is AI UP LAB: a reusable AI collection lab · cases / pages / Agent UI. The header now has three libraries: Grok Bot (amber), HTML Collection (teal), Agent UI (violet). Agent UI’s first batch is free ThreeUI Community components (MIT, no login); copy a prompt / Skill.md to retheme. No Pro, no MCP. Grok Bot and HTML data and routes stay the same."
     },
     {
       "date": "2026-08-24",
       "title": "界面：近日更新时间线与收录理由",
-      "body": "双库首页增加按 updatedAt 分组的「今日收录 / 近日更新」，卡片展示收录理由（qualityNote），并加上当前库搜索、上手路径与 /search 两库检索。不是行业新闻站。"
+      "body": "双库首页增加按 updatedAt 分组的「今日收录 / 近日更新」，卡片展示收录理由（qualityNote），并加上当前库搜索、上手路径与 /search 两库检索。不是行业新闻站。",
+      "titleEn": "UI: recent-update timeline and why we listed it",
+      "bodyEn": "The dual-library home gained “listed today / recent updates” grouped by updatedAt. Cards show why we listed it (qualityNote), plus in-library search, a start path, and /search across both libraries. Not an industry news site."
     },
     {
       "date": "2026-08-24",
       "title": "Bot 补 1 条官方 Skill 教学，HTML 收集 +5",
-      "body": "Grok Bot：新增官方「Teach a task → Skill → Routine」演示教学案例。HTML 收集：新增 CSS Zen Garden、Scroll-driven Animations、Squoosh、Clippy、css-doodle。"
+      "body": "Grok Bot：新增官方「Teach a task → Skill → Routine」演示教学案例。HTML 收集：新增 CSS Zen Garden、Scroll-driven Animations、Squoosh、Clippy、css-doodle。",
+      "titleEn": "Bot adds 1 official Skill lesson; HTML Collection +5",
+      "bodyEn": "Grok Bot: added the official “Teach a task → Skill → Routine” demo case. HTML Collection: added CSS Zen Garden, Scroll-driven Animations, Squoosh, Clippy, and css-doodle."
     },
     {
       "date": "2026-08-23",
       "title": "v1.0.0 种子数据入库",
-      "body": "收录 20 条公开资料中的精选用法，覆盖官方文档与发布稿、社区多 Agent 实践，以及 Cursor Automations 相邻的工程工厂模式。原始记录见 data/cases.json。"
+      "body": "收录 20 条公开资料中的精选用法，覆盖官方文档与发布稿、社区多 Agent 实践，以及 Cursor Automations 相邻的工程工厂模式。原始记录见 data/cases.json。",
+      "titleEn": "v1.0.0 seed data checked in",
+      "bodyEn": "Listed 20 selected uses from public sources, covering official docs and launch posts, community multi-agent practice, and Cursor Automations-adjacent engineering-factory patterns. Raw records are in data/cases.json."
     },
     {
       "date": "2026-08-23",
       "title": "新增独立「HTML 收集」库",
-      "body": "顶部增加 HTML 收集标签，数据在 data/html-items.json，与 Grok Bot 案例分开。首批收录 12 条可公开访问的演示、模板、组件与工具页。"
+      "body": "顶部增加 HTML 收集标签，数据在 data/html-items.json，与 Grok Bot 案例分开。首批收录 12 条可公开访问的演示、模板、组件与工具页。",
+      "titleEn": "Added a separate HTML Collection library",
+      "bodyEn": "The header gained an HTML Collection tab. Data lives in data/html-items.json, separate from Grok Bot cases. First batch: 12 publicly reachable demos, templates, components, and tool pages."
     }
   ]
 }

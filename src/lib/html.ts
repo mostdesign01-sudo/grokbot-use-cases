@@ -14,7 +14,9 @@ export interface HtmlItem {
   id: string;
   slug: string;
   title: string;
+  titleEn?: string;
   summary: string;
+  summaryEn?: string;
   types: HtmlType[];
   sourceUrl: string;
   secondaryUrls?: string[];
@@ -23,6 +25,7 @@ export interface HtmlItem {
   publishedAt: string;
   updatedAt: string;
   qualityNote: string;
+  qualityNoteEn?: string;
   tags: string[];
 }
 
@@ -58,7 +61,18 @@ export function getRecentlyUpdatedHtml(limit = 12): HtmlItem[] {
 }
 
 export function htmlSearchText(item: HtmlItem): string {
-  return [item.title, item.summary, item.qualityNote, item.tags.join(" "), item.types.join(" "), item.id, item.slug].join(
+  return [
+    item.title,
+    item.titleEn ?? "",
+    item.summary,
+    item.summaryEn ?? "",
+    item.qualityNote,
+    item.qualityNoteEn ?? "",
+    item.tags.join(" "),
+    item.types.join(" "),
+    item.id,
+    item.slug,
+  ].join(
     " ",
   );
 }
