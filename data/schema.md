@@ -45,6 +45,7 @@
 | `connectors` | string[] | 涉及的系统或工具 |
 | `language` | string | 条目文案语言，当前为 `zh` |
 | `featured` | boolean | 是否出现在首页精选 |
+| `previewImage` | string | 可选，站点根路径如 `/previews/id.webp` |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目最近校对时间 |
 
