@@ -114,6 +114,7 @@ if (agentUiDataset.items.length < 10) {
 }
 
 const previewItems = [
+  ...dataset.cases.map((item) => ({ lib: "grok", ...item })),
   ...htmlDataset.items.map((item) => ({ lib: "html", ...item })),
   ...agentUiDataset.items.map((item) => ({ lib: "agent-ui", ...item })),
 ];
