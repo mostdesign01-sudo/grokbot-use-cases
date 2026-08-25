@@ -21,24 +21,55 @@ function pinKey(pin: LandingPin): string {
   return `${pin.lib}:${pin.item.id}`;
 }
 
-export function getLandingPins(limit = 24): LandingPin[] {
-  const featured: LandingPin[] = [
-    ...getFeaturedCases().map((item) => ({ lib: "grok" as const, item })),
-    ...getFeaturedHtml().map((item) => ({ lib: "html" as const, item })),
-    ...getFeaturedAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
-  ].sort((a, b) => b.item.updatedAt.localeCompare(a.item.updatedAt));
+function collectPins(featured: LandingPin[], extras: LandingPin[], limit: number): LandingPin[] {
+  const sortedFeatured = [...featured].sort((a, b) => b.item.updatedAt.localeCompare(a.item.updatedAt));
+  if (sortedFeatured.length >= limit) return sortedFeatured.slice(0, limit);
 
-  if (featured.length >= limit) return featured.slice(0, limit);
-
-  const seen = new Set(featured.map(pinKey));
-  const extras: LandingPin[] = [
-    ...getLatestCases().map((item) => ({ lib: "grok" as const, item })),
-    ...getLatestHtml().map((item) => ({ lib: "html" as const, item })),
-    ...getLatestAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
-  ]
+  const seen = new Set(sortedFeatured.map(pinKey));
+  const sortedExtras = extras
     .filter((pin) => !seen.has(pinKey(pin)))
     .sort((a, b) => b.item.updatedAt.localeCompare(a.item.updatedAt));
 
+  return [...sortedFeatured, ...sortedExtras].slice(0, limit);
+}
+
+export function getLandingPins(limit = 24): LandingPin[] {
+  return collectPins(
+    [
+      ...getFeaturedCases().map((item) => ({ lib: "grok" as const, item })),
+      ...getFeaturedHtml().map((item) => ({ lib: "html" as const, item })),
+      ...getFeaturedAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
+    ],
+    [
+      ...getLatestCases().map((item) => ({ lib: "grok" as const, item })),
+      ...getLatestHtml().map((item) => ({ lib: "html" as const, item })),
+      ...getLatestAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
+    ],
+    limit,
+  );
+}
+
+/** Homepage visual wall: HTML / Agent UI only — no Grok color-block pins. */
+export function getLandingVisualPins(limit = 24): LandingPin[] {
+  return collectPins(
+    [
+      ...getFeaturedHtml().map((item) => ({ lib: "html" as const, item })),
+      ...getFeaturedAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
+    ],
+    [
+      ...getLatestHtml().map((item) => ({ lib: "html" as const, item })),
+      ...getLatestAgentUi().map((item) => ({ lib: "agent-ui" as const, item })),
+    ],
+    limit,
+  );
+}
+
+export function getLandingGrokCases(limit = 12): CaseItem[] {
+  const featured = getFeaturedCases().sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  if (featured.length >= limit) return featured.slice(0, limit);
+
+  const seen = new Set(featured.map((item) => item.id));
+  const extras = getLatestCases().filter((item) => !seen.has(item.id));
   return [...featured, ...extras].slice(0, limit);
 }
 

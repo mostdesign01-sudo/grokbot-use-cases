@@ -81,7 +81,7 @@ export const ui = {
     button: { zh: "搜索", en: "Search" },
     currentLib: { zh: "搜索当前库", en: "Search this library" },
     placeholder: { zh: "搜索标题、摘要、收录理由…", en: "Search titles, summaries, why we listed it…" },
-    wall: { zh: "在精选墙里筛标题、摘要、收录理由…", en: "Filter the featured wall by title, summary, or note…" },
+    wall: { zh: "在预览墙与 Grok 时间线里筛标题、摘要、收录理由…", en: "Filter the preview wall and Grok timeline by title, summary, or note…" },
     html: { zh: "搜索 HTML 标题、摘要、标签、收录理由…", en: "Search HTML titles, summaries, tags, notes…" },
     agentUi: { zh: "搜索 Agent UI 标题、摘要、收录理由…", en: "Search Agent UI titles, summaries, notes…" },
     explorer: { zh: "标题、摘要、收录理由、角色、标签…", en: "Title, summary, note, role, tags…" },
@@ -214,14 +214,20 @@ export const ui = {
   pages: {
     landingH1: { zh: "可复用的 AI 精选实验室", en: "A reusable AI collection lab" },
     landingLede: {
-      zh: "案例 / 页面 / Agent UI。先看三张海报进库，再在下面的墙里按视觉浏览精选。不是新闻站。",
-      en: "Cases / pages / Agent UI. Enter a library from the three posters, then browse featured pins below. Not a news site.",
+      zh: "案例 / 页面 / Agent UI。先看三张海报进库。HTML 与 Agent UI 在预览墙里浏览；Grok Bot 在下面的时间线里读标题与摘要。不是新闻站。",
+      en: "Cases / pages / Agent UI. Enter a library from the three posters. Browse HTML and Agent UI on the preview wall; read Grok Bot titles and summaries in the timeline below. Not a news site.",
     },
-    landingWall: { zh: "精选墙", en: "Featured wall" },
+    landingWall: { zh: "预览墙", en: "Preview wall" },
     landingWallLede: {
-      zh: "三库精选与近日条目混排。有图用图，没有就用库海报。点进详情再看原文与收录理由。",
-      en: "Featured and recent items from all three libraries. Real previews when we have them; library posters otherwise. Open a pin for the source and why we listed it.",
+      zh: "HTML 收集与 Agent UI 的精选与近日条目。卡片按 3:2 显示完整页面截图。",
+      en: "Featured and recent HTML Collection and Agent UI items. Cards use a 3:2 frame so the page screenshot stays readable.",
     },
+    landingGrok: { zh: "Grok Bot 时间线", en: "Grok Bot timeline" },
+    landingGrokLede: {
+      zh: "按上海时间排列的标题与摘要。没有预览图就不做色块海报；有图的一条带紧凑附件。",
+      en: "Titles and summaries in Asia/Shanghai time. No color-block posters when a case has no preview; the one with an image keeps a compact attachment.",
+    },
+    landingGrokAll: { zh: "全部 Grok 案例", en: "All Grok cases" },
     searchH1: { zh: "搜索三套收集库", en: "Search the three libraries" },
     searchLede: {
       zh: "在当前页面筛选 cases.json、html-items.json 与 agent-ui.json。不会混写成一套新闻流，只检索已收录的可复用条目。",
@@ -298,10 +304,10 @@ export const ui = {
     featuredList: { zh: "精选案例列表", en: "Featured case list" },
     latestList: { zh: "最新案例列表", en: "Latest case list" },
     typeList: { zh: "类型列表", en: "Type list" },
-    hubH1: { zh: "可对照的 Bot 用法墙", en: "A wall of comparable Bot uses" },
+    hubH1: { zh: "可对照的 Bot 用法时间线", en: "A timeline of comparable Bot uses" },
     hubLede: {
-      zh: "例行、多 Agent、审批边界。卡片先看海报与标题，点进去再看上手路径。当前 {n} 条 · 校对 {when}。",
-      en: "Routines, multi-agent, approval bounds. Scan posters and titles, then open a pin for the start path. {n} items · checked {when}.",
+      zh: "例行、多 Agent、审批边界。按时间线读标题与摘要，点进去再看上手路径。当前 {n} 条 · 校对 {when}。",
+      en: "Routines, multi-agent, approval bounds. Read titles and summaries in the timeline, then open a row for the start path. {n} items · checked {when}.",
     },
     hubTitle: { zh: "Grok Bot · AI UP LAB", en: "Grok Bot · AI UP LAB" },
     hubDesc: {
@@ -337,8 +343,8 @@ export const ui = {
     hubKicker: { zh: "AI UP LAB · HTML 收集", en: "AI UP LAB · HTML Collection" },
     hubH1: { zh: "公开网页里的 HTML 范例", en: "HTML examples from public pages" },
     hubLede: {
-      zh: "演示、模板、组件与工具页，和 Grok Bot、Agent UI 分开。有预览图就上墙，没有就用青绿海报。",
-      en: "Demos, templates, components, and tool pages — separate from Grok Bot and Agent UI. Real previews on the wall when we have them; teal posters otherwise.",
+      zh: "演示、模板、组件与工具页，和 Grok Bot、Agent UI 分开。预览按 3:2 显示完整页面截图。",
+      en: "Demos, templates, components, and tool pages — separate from Grok Bot and Agent UI. Previews use a 3:2 frame so the full page screenshot stays readable.",
     },
     hubTitle: { zh: "HTML 收集", en: "HTML Collection" },
     hubDesc: {
@@ -402,8 +408,8 @@ export const ui = {
     },
     wall: { zh: "浏览墙", en: "Browse wall" },
     wallLede: {
-      zh: "精选靠前。卡片是靛紫海报；原文与换主题提示在详情页。",
-      en: "Featured items first. Cards use the violet poster; the source and retheme hint are on the detail page.",
+      zh: "精选靠前。卡片按 3:2 显示预览；原文与换主题提示在详情页。",
+      en: "Featured items first. Cards use a 3:2 preview; the source and retheme hint are on the detail page.",
     },
     featuredH1: { zh: "精选 Agent UI", en: "Featured Agent UI" },
     featuredLede: {

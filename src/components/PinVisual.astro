@@ -11,15 +11,15 @@ interface Props {
 }
 
 const { lib, title, titleEn = title, seed, image } = Astro.props;
-const ratio = pinRatio(seed);
 const src = assetUrl(image);
+const ratio = src ? "shot" : String(pinRatio(seed));
 ---
 
 <div
   class:list={["pin-visual", `pin-${lib}`, `pin-ratio-${ratio}`, src && "has-image"]}
   aria-hidden="true"
 >
-  <div class:list={["pin-art", `pin-pattern-${ratio}`]}>
+  <div class:list={["pin-art", src ? "pin-pattern-shot" : `pin-pattern-${ratio}`]}>
     <span class="pin-art-title loc-zh">{title}</span>
     <span class="pin-art-title loc-en">{titleEn}</span>
   </div>

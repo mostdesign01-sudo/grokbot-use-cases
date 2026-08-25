@@ -87,6 +87,15 @@ export function formatShanghaiTime(iso: string): string {
   return `${parts.hour}:${parts.minute}`;
 }
 
+/** Compact Asia/Shanghai stamp for the Grok tweet/timeline row. */
+export function formatShanghaiStamp(iso: string, locale: "zh-CN" | "en-US" = "zh-CN"): string {
+  const parts = shanghaiParts(iso, locale);
+  if (locale === "en-US") {
+    return `${parts.hour}:${parts.minute} · ${parts.month}/${parts.day}`;
+  }
+  return `${parts.hour}:${parts.minute} · ${parts.month}月${parts.day}日`;
+}
+
 export function formatShanghaiDayTitle(input: string | Date, count: number, now = new Date()): string {
   return formatShanghaiDayTitleLocale(input, count, now, "zh");
 }

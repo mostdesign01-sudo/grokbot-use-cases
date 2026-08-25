@@ -26,10 +26,10 @@ const whenEn = formatShanghaiDateTime(meta.updatedAt, "en-US");
       <h1><Loc zh={ui.grok.hubH1.zh} en={ui.grok.hubH1.en} /></h1>
       <p class="lede">
         <span class="loc-zh">
-          例行、多 Agent、审批边界。卡片先看海报与标题，点进去再看上手路径。当前 {meta.count} 条 · 校对 {whenZh}。
+          例行、多 Agent、审批边界。按时间线读标题与摘要，点进去再看上手路径。当前 {meta.count} 条 · 校对 {whenZh}。
         </span>
         <span class="loc-en">
-          Routines, multi-agent, approval bounds. Scan posters and titles, then open a pin for the start path. {meta.count} items · checked {whenEn}.
+          Routines, multi-agent, approval bounds. Read titles and summaries in the timeline, then open a row for the start path. {meta.count} items · checked {whenEn}.
         </span>
       </p>
       <div class="type-chips" aria-label={ui.grok.typeEntry.zh} data-aria-zh={ui.grok.typeEntry.zh} data-aria-en={ui.grok.typeEntry.en}>
