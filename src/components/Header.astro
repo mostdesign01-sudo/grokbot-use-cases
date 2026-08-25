@@ -136,10 +136,12 @@ const brandLine =
 </header>
 
 <script>
-  const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
   document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const next = button.dataset.localeSet === "en" ? "en" : "zh";
+      const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
       apply?.(next, true);
     });
   });
