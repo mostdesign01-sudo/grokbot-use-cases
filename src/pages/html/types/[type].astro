@@ -1,8 +1,10 @@
 ---
 import HtmlCard from "../../../components/HtmlCard.astro";
+import Loc from "../../../components/Loc.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getHtmlByType, uniqueHtmlTypes } from "../../../lib/html";
 import { htmlTypeIntro, htmlTypeLabel } from "../../../lib/html-labels";
+import { fill, ui } from "../../../lib/i18n";
 import { withBase } from "../../../lib/paths";
 
 export function getStaticPaths() {
@@ -13,21 +15,38 @@ export function getStaticPaths() {
 }
 
 const { type, items } = Astro.props;
-const title = htmlTypeLabel(type);
+const titleZh = htmlTypeLabel(type);
+const titleEn = htmlTypeLabel(type, "en");
+const desc = fill(ui.html.typePageDesc, { title: titleZh });
+const descEn = fill(ui.html.typePageDesc, { title: titleEn });
 ---
 
-<BaseLayout collection="html" title={`${title} · AI UP LAB`} description={`${title}类型下的公开 HTML 页面。`}>
+<BaseLayout
+  collection="html"
+  title={`${titleZh} · AI UP LAB`}
+  titleEn={`${titleEn} · AI UP LAB`}
+  description={desc.zh}
+  descriptionEn={descEn.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="crumb">
-        <a href={withBase("html/types/")}>按类型浏览</a> / {title}
+        <a href={withBase("html/types/")}><Loc zh={ui.html.typesH1.zh} en={ui.html.typesH1.en} /></a> /
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
       </p>
       <p class="kicker">{type}</p>
-      <h1>{title}</h1>
-      <p class="lede">{htmlTypeIntro(type)} 当前 {items.length} 条。</p>
+      <h1>
+        <span class="loc-zh">{titleZh}</span>
+        <span class="loc-en">{titleEn}</span>
+      </h1>
+      <p class="lede">
+        <span class="loc-zh">{htmlTypeIntro(type)} 当前 {items.length} 条。</span>
+        <span class="loc-en">{htmlTypeIntro(type, "en")} {items.length} items now.</span>
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("html/types/")}>全部类型</a>
-        <a class="btn btn-ghost" href={withBase("html/")}>HTML 总览</a>
+        <a class="btn btn-ghost" href={withBase("html/types/")}><Loc zh={ui.grok.allTypes.zh} en={ui.grok.allTypes.en} /></a>
+        <a class="btn btn-ghost" href={withBase("html/")}><Loc zh={ui.html.htmlOverview.zh} en={ui.html.htmlOverview.en} /></a>
       </div>
     </section>
     <section class="section">

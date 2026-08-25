@@ -1,16 +1,21 @@
 ---
+import Loc from "./Loc.astro";
+import { ui } from "../lib/i18n";
+
 interface Props {
   note?: string;
+  noteEn?: string;
 }
 
-const { note } = Astro.props;
+const { note, noteEn = note } = Astro.props;
 ---
 
 {
   note ? (
     <p class="quality-note">
-      <span class="quality-label">收录理由</span>
-      {note}
+      <span class="quality-label"><Loc zh={ui.quality.zh} en={ui.quality.en} /></span>
+      <span class="loc-zh">{note}</span>
+      <span class="loc-en">{noteEn}</span>
     </p>
   ) : null
 }

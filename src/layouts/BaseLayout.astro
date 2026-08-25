@@ -3,17 +3,21 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { withBase } from "../lib/paths";
-import { siteDescription, siteName } from "../lib/site";
+import { siteDescription, siteDescriptionEn, siteName } from "../lib/site";
 
 interface Props {
   title: string;
+  titleEn?: string;
   description?: string;
+  descriptionEn?: string;
   collection?: "lab" | "grok" | "html" | "agent-ui";
 }
 
 const {
   title,
+  titleEn = title,
   description = siteDescription,
+  descriptionEn = siteDescriptionEn,
   collection = "lab",
 } = Astro.props;
 
@@ -21,21 +25,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="zh-CN" data-collection={collection}>
+<html lang="zh-CN" data-collection={collection} data-locale="zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <title data-title-zh={title} data-title-en={titleEn}>{title}</title>
+    <meta name="description" content={description} data-desc-zh={description} data-desc-en={descriptionEn} />
+    <meta property="og:title" content={title} data-og-title-zh={title} data-og-title-en={titleEn} />
+    <meta property="og:description" content={description} data-og-desc-zh={description} data-og-desc-en={descriptionEn} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:site_name" content={siteName} />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={title} data-tw-title-zh={title} data-tw-title-en={titleEn} />
+    <meta name="twitter:description" content={description} data-tw-desc-zh={description} data-tw-desc-en={descriptionEn} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,10 +50,82 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     />
     <script is:inline>
       (function () {
+        var KEY = "locale";
+        function readLocale() {
+          try {
+            var stored = localStorage.getItem(KEY);
+            if (stored === "en" || stored === "zh") return stored;
+          } catch (e) {}
+          return "zh";
+        }
+        function applyLocale(locale, persist) {
+          var root = document.documentElement;
+          root.dataset.locale = locale;
+          root.lang = locale === "en" ? "en" : "zh-CN";
+          var pick = locale === "en" ? "en" : "zh";
+          var titleEl = document.querySelector("title");
+          if (titleEl) {
+            var nextTitle = titleEl.getAttribute("data-title-" + pick);
+            if (nextTitle) document.title = nextTitle;
+          }
+          var desc = document.querySelector('meta[name="description"]');
+          if (desc) {
+            var nextDesc = desc.getAttribute("data-desc-" + pick);
+            if (nextDesc) desc.setAttribute("content", nextDesc);
+          }
+          var ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) {
+            var nextOgTitle = ogTitle.getAttribute("data-og-title-" + pick);
+            if (nextOgTitle) ogTitle.setAttribute("content", nextOgTitle);
+          }
+          var ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) {
+            var nextOgDesc = ogDesc.getAttribute("data-og-desc-" + pick);
+            if (nextOgDesc) ogDesc.setAttribute("content", nextOgDesc);
+          }
+          var ogLocale = document.querySelector('meta[property="og:locale"]');
+          if (ogLocale) ogLocale.setAttribute("content", locale === "en" ? "en_US" : "zh_CN");
+          var twTitle = document.querySelector('meta[name="twitter:title"]');
+          if (twTitle) {
+            var nextTwTitle = twTitle.getAttribute("data-tw-title-" + pick);
+            if (nextTwTitle) twTitle.setAttribute("content", nextTwTitle);
+          }
+          var twDesc = document.querySelector('meta[name="twitter:description"]');
+          if (twDesc) {
+            var nextTwDesc = twDesc.getAttribute("data-tw-desc-" + pick);
+            if (nextTwDesc) twDesc.setAttribute("content", nextTwDesc);
+          }
+          document.querySelectorAll("[data-ph-zh]").forEach(function (el) {
+            var value = el.getAttribute(pick === "en" ? "data-ph-en" : "data-ph-zh");
+            if (value != null) el.setAttribute("placeholder", value);
+          });
+          document.querySelectorAll("[data-label-zh]").forEach(function (el) {
+            var value = el.getAttribute(pick === "en" ? "data-label-en" : "data-label-zh");
+            if (value != null) el.textContent = value;
+          });
+          document.querySelectorAll("[data-aria-zh]").forEach(function (el) {
+            var value = el.getAttribute(pick === "en" ? "data-aria-en" : "data-aria-zh");
+            if (value != null) el.setAttribute("aria-label", value);
+          });
+          document.querySelectorAll("[data-locale-set]").forEach(function (el) {
+            el.setAttribute("aria-pressed", el.getAttribute("data-locale-set") === locale ? "true" : "false");
+          });
+          if (persist) {
+            try {
+              localStorage.setItem(KEY, locale);
+            } catch (e) {}
+          }
+          document.dispatchEvent(new CustomEvent("localechange", { detail: locale }));
+        }
+        window.__applyLocale = applyLocale;
+        applyLocale(readLocale(), false);
+        document.addEventListener("DOMContentLoaded", function () {
+          applyLocale(readLocale(), false);
+        });
         try {
-          var stored = localStorage.getItem("theme");
+          var storedTheme = localStorage.getItem("theme");
           var theme =
-            stored ||
+            storedTheme ||
             (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
           document.documentElement.dataset.theme = theme;
         } catch (e) {

@@ -1,30 +1,54 @@
 ---
+import Loc from "../../../components/Loc.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getAgentUiTypeCollections } from "../../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../../lib/agent-ui-labels";
+import { fill, ui } from "../../../lib/i18n";
 import { withBase } from "../../../lib/paths";
 
 const collections = getAgentUiTypeCollections();
 ---
 
-<BaseLayout collection="agent-ui" title="Agent UI 类型 · AI UP LAB" description="按落地页、背景场、按钮等类型浏览 Agent UI。">
+<BaseLayout
+  collection="agent-ui"
+  title={ui.agent.typesTitle.zh}
+  titleEn={ui.agent.typesTitle.en}
+  description={ui.agent.typesDesc.zh}
+  descriptionEn={ui.agent.typesDesc.en}
+>
   <div class="wrap">
     <section class="collection-hero">
       <p class="kicker">Agent UI Types</p>
-      <h1>按类型浏览</h1>
-      <p class="lede">类型来自 <code>data/agent-ui.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。</p>
+      <h1><Loc zh={ui.agent.typesH1.zh} en={ui.agent.typesH1.en} /></h1>
+      <p class="lede">
+        <span class="loc-zh">
+          类型来自 <code>data/agent-ui.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。
+        </span>
+        <span class="loc-en">
+          Types are <code>types[]</code> values that actually appear in <code>data/agent-ui.json</code>. {collections.length} now.
+        </span>
+      </p>
     </section>
     <section class="section">
       <div class="doc-grid">
         {
-          collections.map((item) => (
-            <a class="card type-card" href={withBase(`agent-ui/types/${item.type}/`)}>
-              <p class="title-en">{item.type}</p>
-              <h3>{agentUiTypeLabel(item.type)}</h3>
-              <p class="summary">{agentUiTypeIntro(item.type)}</p>
-              <p class="card-meta">{item.count} 条</p>
-            </a>
-          ))
+          collections.map((item) => {
+            const count = fill(ui.poster.items, { n: item.count });
+            return (
+              <a class="card type-card" href={withBase(`agent-ui/types/${item.type}/`)}>
+                <p class="title-en">{item.type}</p>
+                <h3>
+                  <span class="loc-zh">{agentUiTypeLabel(item.type)}</span>
+                  <span class="loc-en">{agentUiTypeLabel(item.type, "en")}</span>
+                </h3>
+                <p class="summary">
+                  <span class="loc-zh">{agentUiTypeIntro(item.type)}</span>
+                  <span class="loc-en">{agentUiTypeIntro(item.type, "en")}</span>
+                </p>
+                <p class="card-meta"><Loc zh={count.zh} en={count.en} /></p>
+              </a>
+            );
+          })
         }
       </div>
     </section>

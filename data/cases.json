@@ -49,7 +49,10 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Sales Outbound Bot researches CRM accounts overnight, scores them by ICP/intent, finds contacts, and drafts email and LinkedIn copy in the seller’s voice — leaving only a review inbox. Official rule: do not send or add to sequences until approved.",
+      "qualityNoteEn": "Official canonical flow, with a starter prompt and a clear approval boundary.",
+      "approvalBoundaryEn": "Do not send or add to sequences; stop at the review list"
     },
     {
       "id": "demo-env-readiness",
@@ -78,7 +81,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Demo Bot stands up the environment overnight, checks product UI/demo data, fixes bad seeds and stale data, and hands over a “demo-ready” checklist before the customer call.",
+      "qualityNoteEn": "Binary, clear outcome: demo-ready. A good sales + engineering collaboration story."
     },
     {
       "id": "crm-monday-scoreboard",
@@ -107,7 +112,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "The Bot keeps CRM and org hygiene, flags stalled deals and commitment risk, and posts a Monday scoreboard so the team starts aligned.",
+      "qualityNoteEn": "A typical recurring ops-digest pattern."
     },
     {
       "id": "account-followup-warmth",
@@ -136,7 +143,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Updates CRM notes from call recaps, drafts product updates, opens support tickets, and syncs next steps in the tools the team already uses — work lands in real systems, not only in chat.",
+      "qualityNoteEn": "An internal practice case that stresses “results land in the systems people use.”"
     },
     {
       "id": "talent-scout",
@@ -167,7 +176,10 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Owns sourcing, candidate research, outreach drafts, and calendar prep. Example: find 20 candidates who meet hard criteria, drop ATS duplicates, cite evidence, and draft personalized outreach — do not contact anyone.",
+      "qualityNoteEn": "Official role with privacy/compliance notes. Fits “draft outreach only.”",
+      "approvalBoundaryEn": "Do not contact candidates"
     },
     {
       "id": "paid-media-monitor",
@@ -197,7 +209,10 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Pulls spend and performance by campaign, compares them to the monthly budget and target CAC, writes a numbered reallocation recommendation, and drafts a Slack update for growth — does not change budgets or send.",
+      "qualityNoteEn": "A clear analyze → recommend → approve loop.",
+      "approvalBoundaryEn": "Do not change budgets or send"
     },
     {
       "id": "weekly-expense-manager",
@@ -229,7 +244,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Builds a weekly report from the expense system + policy, matches receipts in the finance inbox, flags missing categories and policy exceptions with sources, and drafts one follow-up per owner — returns only the summary and drafts.",
+      "qualityNoteEn": "High-repetition finance chores; the docs stress reconciling against source data."
     },
     {
       "id": "product-perf-investigation",
@@ -258,7 +275,10 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Example: investigate checkout latency after yesterday’s release. Check dashboards/traces/flame graphs and return a short report with screenshots and links, separating facts from guesses. Do not change production or alerts.",
+      "qualityNoteEn": "An evidence-first engineering investigation pattern.",
+      "approvalBoundaryEn": "Do not change production/alerts"
     },
     {
       "id": "bug-repro-staging",
@@ -290,7 +310,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Reads the bug report, reproduces it on staging with a fresh test account, and returns exact steps, expected/actual, screenshots, browser/OS, console and network notes, and a minimal case. Example trigger: Slack #customer-escalations + “needs repro.”",
+      "qualityNoteEn": "The best official event-triggered engineering workflow."
     },
     {
       "id": "account-health-watch",
@@ -324,7 +346,10 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Scores a portfolio of accounts by usage, support escalations, renewal timing, and stakeholder activity; returns evidence, why it matters, and a suggested next step — does not contact customers or edit CRM. Can be promoted to a weekday 8:00 skill+routine.",
+      "qualityNoteEn": "The docs’ flagship “skill → routine” example.",
+      "approvalBoundaryEn": "Do not contact customers or edit CRM"
     },
     {
       "id": "chief-of-staff-digest",
@@ -357,7 +382,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Against a priority doc, reviews Slack/email/calendar/meeting notes since yesterday; returns only matches, with source, why it matters, a suggested next step, and whether you owe a decision — does not send or change meetings.",
+      "qualityNoteEn": "The most-cited “first Bot” role."
     },
     {
       "id": "inbox-triage-clickup",
@@ -387,7 +414,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-13",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "A scheduled Inbox Triage Bot pulls Gmail (+ calendar), flags urgent items, and hands a structured brief to the chief of staff, who creates dated, prioritized ClickUp tasks — the team looks at a board, not only chat.",
+      "qualityNoteEn": "A strong community demo: two narrow Agents + an existing PM tool as system of record."
     },
     {
       "id": "invoice-agent-pipeline",
@@ -416,7 +445,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Upload a reference invoice PDF. Invoice Agent drafts a matching invoice, a Gmail reply draft with attachment, and tracks status on the ClickUp “Invoices and Payments” board. Can hand off in a group chat with Inbox Triage so invoice mail routes automatically.",
+      "qualityNoteEn": "End-to-end SMB ops loop; sending in production still needs approval."
     },
     {
       "id": "meeting-notes-tasks",
@@ -444,7 +475,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "A 17:00 daily routine pulls Granola notes, extracts action items, routes them to the right ClickUp board (e.g. agency vs YouTube) by rule, and fills owner, priority, and due date.",
+      "qualityNoteEn": "A high-leverage “meeting debt” killer."
     },
     {
       "id": "product-ad-video",
@@ -471,7 +504,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-13",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Video Agent + Higgsfield plugin + a saved product-ad skill: shoot the product on iOS, prompt “generate a product ad,” and get a finished cut in minutes. The skill can be invoked with /.",
+      "qualityNoteEn": "A concrete creator-side teach/skill pattern."
     },
     {
       "id": "competitive-intel-swarm",
@@ -499,7 +534,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-15",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Several role Bots (research, verify, strategy, engineering, marketing) share context in a group chat; Composio can connect multiple apps. Example: parallel owners comparing coding-agent evals, or a competitor pricing/feature swarm → exec brief.",
+      "qualityNoteEn": "The best-written multi-agent architecture guide, including token and shared-computer safety notes."
     },
     {
       "id": "one-person-company-stack",
@@ -532,7 +569,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Chief of staff audits the business and names the first Agents (research, sales, platform specialist); one account per project to control context/tokens; routines move newsletter, directory, and Shopify work into the night.",
+      "qualityNoteEn": "An executable founder ops model: audit → hire Agents → weekly report."
     },
     {
       "id": "website-launch-group",
@@ -558,7 +597,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Docs pattern: a Website Launch group with launch coordination, content editing, and analytics review; the coordinator assigns work, and handoffs stay visible in the same thread. Community examples also have an EA handing site-building to an engineering Bot in natural language.",
+      "qualityNoteEn": "A clear “project pod” collaboration IA."
     },
     {
       "id": "slack-repro-escalation",
@@ -587,7 +628,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "A narrow event rule: when #customer-escalations has a ticket link + “needs repro,” the Bot opens the ticket, reproduces on staging, and posts the repro pack in the thread — does not reply in Slack without approval. Avoid listening to “every new message.”",
+      "qualityNoteEn": "Gold standard for event-trigger design: narrow match, approval, failure policy."
     },
     {
       "id": "cursor-automations-eng-factory",
@@ -622,7 +665,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-01",
-      "updatedAt": "2026-08-23T03:45:00Z"
+      "updatedAt": "2026-08-23T03:45:00Z",
+      "summaryEn": "Same-ecosystem Cursor cloud Agents: main-push security review→Slack; PR agentic codeowners; PagerDuty→Datadog investigation→Slack+fix PR; weekly repo digest; morning coverage PR; Slack bug triage→Linear→attempted fix.",
+      "qualityNoteEn": "Not the Grok Bot UI, but the same Cursor-ecosystem “always-on Agent” pattern. Useful when filtering for Coding/DevOps."
     },
     {
       "id": "teach-a-task-skill",
@@ -655,7 +700,10 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-08-24T01:10:00Z"
+      "updatedAt": "2026-08-24T01:10:00Z",
+      "summaryEn": "The executable pattern from the official Skills / Routines docs: open computer view in a 1:1, choose Teach a task, demo a browser flow of about 10 minutes max, and the Bot drafts a Skill. Add decision rules, failure handling, and approval bounds, then Test run, and only then turn it into a routine. No audio recording; do not expose secrets during the demo; hand credentials over securely.",
+      "qualityNoteEn": "The official “one-off task → Skill → Routine” loop. Complements the business-role cases and can be followed from the docs.",
+      "approvalBoundaryEn": "Keep writes and outbound behind approval; do not expose secrets during the demo"
     },
     {
       "id": "kanekoa-video-research",
@@ -690,7 +738,10 @@
       "featured": true,
       "previewImage": "/previews/kanekoa-video-research.webp",
       "publishedAt": "2026-08-24",
-      "updatedAt": "2026-08-25T00:58:00Z"
+      "updatedAt": "2026-08-25T00:58:00Z",
+      "summaryEn": "KanekoaTheGreat asked Grok Bot in natural language to find every Dr. Roger Seheult video on sunlight, red light, infrared, and mitochondria (including MedCram and talks with Huberman, Eric Berg, Steven Bartlett, and others). Minutes later it returned: a Word file of 38 video transcripts, 13 science segments cut into a 19:35 film, and a Markdown brief with source timestamps. No script, no code.",
+      "qualityNoteEn": "A real community workflow: a non-programmer finished “find–transcribe–select–edit–summarize” in one sentence. A good research/content Bot demo; still review before publishing the cut.",
+      "approvalBoundaryEn": "Human review before the cut goes public; cite sources and timestamps, and do not treat transcripts as final quotes."
     },
     {
       "id": "digital-declutterer",
@@ -721,7 +772,10 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-25T01:10:00Z"
+      "updatedAt": "2026-08-25T01:10:00Z",
+      "summaryEn": "Digital declutterer from the official expansion post: around-the-clock audit of email, Drive, and paid subscriptions, producing a cancel list (amount, last used). It discards or unsubscribes only after you nod.",
+      "qualityNoteEn": "A new official “Jobs Bots are doing today” role. The approval bound is very clear: audit and list only; canceling needs a human. A good first life-admin Routine.",
+      "approvalBoundaryEn": "Do not discard files, unsubscribe, or delete accounts; return only the audit list."
     },
     {
       "id": "meeting-stand-in",
@@ -751,7 +805,10 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-25T01:10:00Z"
+      "updatedAt": "2026-08-25T01:10:00Z",
+      "summaryEn": "Official expansion role Meeting stand-in: when you cannot go, the Bot joins, tells the room you are represented, takes detailed notes, and sends a summary so you can still catch up.",
+      "qualityNoteEn": "Different from “meeting notes → tasks”: this is a stand-in when a person is absent. Calendar/meeting permissions are sensitive; sending the summary needs approval.",
+      "approvalBoundaryEn": "Joining and sending the summary need human review; do not make commitments or change the calendar."
     },
     {
       "id": "website-builder-bot",
@@ -781,7 +838,10 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-25T01:10:00Z"
+      "updatedAt": "2026-08-25T01:10:00Z",
+      "summaryEn": "Official expansion role Website builder: build the site, buy a domain, and deploy the final version, help configure plugins, hand over a reachable URL, and add redirect rules. Complements the multi-bot launch group; this is one Bot delivering end to end.",
+      "qualityNoteEn": "Officially named as buying domains and deploying — high-consequence actions. Build in a draft environment first; domain purchase and DNS/redirects must be approved.",
+      "approvalBoundaryEn": "Do not buy a domain, change DNS, or deploy to production; hand over a preview site and a checklist first."
     }
   ]
 }

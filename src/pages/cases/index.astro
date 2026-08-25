@@ -1,27 +1,45 @@
 ---
 import CaseExplorer from "../../components/CaseExplorer.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { cases, getCategoryCollections, meta } from "../../lib/cases";
 import { formatShanghaiDateTime } from "../../lib/format";
+import { ui } from "../../lib/i18n";
 import { categoryLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 
 const types = getCategoryCollections();
+const whenZh = formatShanghaiDateTime(meta.updatedAt);
+const whenEn = formatShanghaiDateTime(meta.updatedAt, "en-US");
 ---
 
-<BaseLayout collection="grok" title="Grok Bot · AI UP LAB" description="按分类、来源、难度与能力筛选 Grok Bot 用法。">
+<BaseLayout
+  collection="grok"
+  title={ui.grok.hubTitle.zh}
+  titleEn={ui.grok.hubTitle.en}
+  description={ui.grok.hubDesc.zh}
+  descriptionEn={ui.grok.hubDesc.en}
+>
   <div class="wrap-wide">
     <section class="hub-intro">
       <p class="kicker">Grok Bot</p>
-      <h1>可对照的 Bot 用法墙</h1>
+      <h1><Loc zh={ui.grok.hubH1.zh} en={ui.grok.hubH1.en} /></h1>
       <p class="lede">
-        例行、多 Agent、审批边界。卡片先看海报与标题，点进去再看上手路径。当前 {meta.count} 条 · 校对 {formatShanghaiDateTime(meta.updatedAt)}。
+        <span class="loc-zh">
+          例行、多 Agent、审批边界。卡片先看海报与标题，点进去再看上手路径。当前 {meta.count} 条 · 校对 {whenZh}。
+        </span>
+        <span class="loc-en">
+          Routines, multi-agent, approval bounds. Scan posters and titles, then open a pin for the start path. {meta.count} items · checked {whenEn}.
+        </span>
       </p>
-      <div class="type-chips" aria-label="类型入口">
+      <div class="type-chips" aria-label={ui.grok.typeEntry.zh} data-aria-zh={ui.grok.typeEntry.zh} data-aria-en={ui.grok.typeEntry.en}>
         {
           types.map((item) => (
             <a class="type-chip" href={withBase(`types/${item.category}/`)}>
-              <strong>{categoryLabel(item.category)}</strong>
+              <strong>
+                <span class="loc-zh">{categoryLabel(item.category)}</span>
+                <span class="loc-en">{categoryLabel(item.category, "en")}</span>
+              </strong>
               <span>{item.count}</span>
             </a>
           ))

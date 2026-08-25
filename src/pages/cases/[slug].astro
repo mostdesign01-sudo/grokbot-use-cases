@@ -1,9 +1,11 @@
 ---
 import Badge from "../../components/Badge.astro";
 import CaseCard from "../../components/CaseCard.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { cases, getRelatedCases } from "../../lib/cases";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
+import { fill, ui } from "../../lib/i18n";
 import {
   categoryLabel,
   connectorLabel,
@@ -25,28 +27,51 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 const related = getRelatedCases(item);
 const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
+const summaryEn = item.summaryEn ?? item.summary;
+const qualityEn = item.qualityNoteEn ?? item.qualityNote;
+const boundZh = item.approvalBoundary;
+const boundEn = item.approvalBoundaryEn ?? item.approvalBoundary;
+const safeWithBound = boundZh
+  ? fill(ui.detail.safeWithBound, { bound: boundZh })
+  : ui.detail.safeDefault;
+const safeWithBoundEn = boundEn
+  ? fill(ui.detail.safeWithBound, { bound: boundEn })
+  : ui.detail.safeDefault;
 ---
 
-<BaseLayout collection="grok" title={`${item.title} · AI UP LAB`} description={item.summary}>
+<BaseLayout
+  collection="grok"
+  title={`${item.title} · AI UP LAB`}
+  titleEn={`${item.titleEn} · AI UP LAB`}
+  description={item.summary}
+  descriptionEn={summaryEn}
+>
   <div class="wrap">
     <article class="detail-hero">
       <p class="crumb">
-        <a href={withBase("/")}>实验室</a> /
+        <a href={withBase("/")}><Loc zh={ui.detail.lab.zh} en={ui.detail.lab.en} /></a> /
         <a href={withBase("cases/")}>Grok Bot</a> /
-        {item.title}
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
       </p>
       <div class="badges">
-        {isOfficial(item.sourceType) && <Badge kind="official" label="官方" />}
-        {isCommunity(item.sourceType) && <Badge kind="community" label="社区" />}
-        {isCursorAdjacent(item.sourceType) && <Badge kind="cursor" label="Cursor相邻" />}
-        {item.requiresApproval && <Badge kind="approval" label="需审批" />}
-        {item.hasRoutine && <Badge kind="routine" label="例行" />}
-        {item.hasMultiAgent && <Badge kind="multi" label="多Agent" />}
-        {item.hasSkill && <Badge label="Skill" />}
+        {isOfficial(item.sourceType) && <Badge kind="official" label={ui.badge.official.zh} labelEn={ui.badge.official.en} />}
+        {isCommunity(item.sourceType) && <Badge kind="community" label={ui.badge.community.zh} labelEn={ui.badge.community.en} />}
+        {isCursorAdjacent(item.sourceType) && <Badge kind="cursor" label={ui.badge.cursor.zh} labelEn={ui.badge.cursor.en} />}
+        {item.requiresApproval && <Badge kind="approval" label={ui.badge.approval.zh} labelEn={ui.badge.approval.en} />}
+        {item.hasRoutine && <Badge kind="routine" label={ui.badge.routine.zh} labelEn={ui.badge.routine.en} />}
+        {item.hasMultiAgent && <Badge kind="multi" label={ui.badge.multi.zh} labelEn={ui.badge.multi.en} />}
+        {item.hasSkill && <Badge label={ui.badge.skill.zh} labelEn={ui.badge.skill.en} />}
       </div>
-      <h1>{item.title}</h1>
-      <p class="title-en">{item.titleEn}</p>
-      <p class="lede">{item.summary}</p>
+      <h1>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </h1>
+      <p class="title-en loc-zh">{item.titleEn}</p>
+      <p class="lede">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{summaryEn}</span>
+      </p>
       {
         item.previewImage && (
           <p class="detail-preview">
@@ -59,53 +84,51 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2>这条用法在做什么</h2>
-          <p>{item.summary}</p>
+          <h2><Loc zh={ui.detail.whatItDoes.zh} en={ui.detail.whatItDoes.en} /></h2>
+          <p>
+            <span class="loc-zh">{item.summary}</span>
+            <span class="loc-en">{summaryEn}</span>
+          </p>
           <p class="quality-note">
-            <strong>收录理由</strong>
-            {item.qualityNote}
+            <strong><Loc zh={ui.quality.zh} en={ui.quality.en} /></strong>
+            <span class="loc-zh">{item.qualityNote}</span>
+            <span class="loc-en">{qualityEn}</span>
           </p>
         </section>
 
         <section class="panel">
-          <h2>上手路径</h2>
+          <h2><Loc zh={ui.detail.startPath.zh} en={ui.detail.startPath.en} /></h2>
           {
             item.approvalBoundary && (
               <div class="approval-callout">
-                <strong>审批边界</strong>
-                <p>{item.approvalBoundary}</p>
+                <strong><Loc zh={ui.detail.approvalBound.zh} en={ui.detail.approvalBound.en} /></strong>
+                <p>
+                  <span class="loc-zh">{item.approvalBoundary}</span>
+                  <span class="loc-en">{boundEn}</span>
+                </p>
               </div>
             )
           }
           <ol class="start-path">
             <li>
-              <strong>先跑一次安全范围</strong>
+              <strong><Loc zh={ui.detail.safeStep.zh} en={ui.detail.safeStep.en} /></strong>
               <p>
-                {
-                  item.approvalBoundary
-                    ? `先在可撤回、不外发的范围内试跑。本条未批准前：${item.approvalBoundary}。`
-                    : "先在可撤回、不外发的范围内试跑一遍，确认输出可用，再考虑扩大权限。"
-                }
+                <span class="loc-zh">{item.approvalBoundary ? safeWithBound.zh : ui.detail.safeDefault.zh}</span>
+                <span class="loc-en">{item.approvalBoundary ? safeWithBoundEn.en : ui.detail.safeDefault.en}</span>
               </p>
             </li>
             <li>
-              <strong>存 Skill</strong>
+              <strong><Loc zh={ui.detail.saveSkill.zh} en={ui.detail.saveSkill.en} /></strong>
               <p>
-                {
-                  item.hasSkill
-                    ? "这条用法已包含可复用 Skill。跑通安全范围后，立刻把步骤固化下来。"
-                    : "把跑通的步骤存成 Skill，下次同类任务直接复用，而不是重新口述。"
-                }
+                <span class="loc-zh">{item.hasSkill ? ui.detail.skillYes.zh : ui.detail.skillNo.zh}</span>
+                <span class="loc-en">{item.hasSkill ? ui.detail.skillYes.en : ui.detail.skillNo.en}</span>
               </p>
             </li>
             <li>
-              <strong>再上 Routine</strong>
+              <strong><Loc zh={ui.detail.thenRoutine.zh} en={ui.detail.thenRoutine.en} /></strong>
               <p>
-                {
-                  item.hasRoutine
-                    ? "输出稳定后再打开例行 / 定时。本条已有例行形态，不要一上来就无人值守外发。"
-                    : "确认输出可靠后，再考虑定时或事件触发；例行默认仍应停在待审。"
-                }
+                <span class="loc-zh">{item.hasRoutine ? ui.detail.routineYes.zh : ui.detail.routineNo.zh}</span>
+                <span class="loc-en">{item.hasRoutine ? ui.detail.routineYes.en : ui.detail.routineNo.en}</span>
               </p>
             </li>
           </ol>
@@ -114,7 +137,7 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
         {
           related.length > 0 && (
             <section class="section">
-              <h2>相关案例</h2>
+              <h2><Loc zh={ui.detail.related.zh} en={ui.detail.related.en} /></h2>
               <div class="masonry masonry-related">
                 {related.map((relatedItem) => (
                   <CaseCard caseItem={relatedItem} />
@@ -127,48 +150,68 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
 
       <aside>
         <section class="panel">
-          <h2>元信息</h2>
+          <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
           <dl class="kv">
             <div>
-              <dt>角色</dt>
+              <dt><Loc zh={ui.meta.role.zh} en={ui.meta.role.en} /></dt>
               <dd>{item.role}</dd>
             </div>
             <div>
-              <dt>来源类型</dt>
-              <dd>{sourceTypeLabel(item.sourceType)}</dd>
+              <dt><Loc zh={ui.meta.sourceType.zh} en={ui.meta.sourceType.en} /></dt>
+              <dd>
+                <span class="loc-zh">{sourceTypeLabel(item.sourceType)}</span>
+                <span class="loc-en">{sourceTypeLabel(item.sourceType, "en")}</span>
+              </dd>
             </div>
             <div>
-              <dt>难度</dt>
-              <dd>{difficultyLabel(item.difficulty)}</dd>
+              <dt><Loc zh={ui.meta.difficulty.zh} en={ui.meta.difficulty.en} /></dt>
+              <dd>
+                <span class="loc-zh">{difficultyLabel(item.difficulty)}</span>
+                <span class="loc-en">{difficultyLabel(item.difficulty, "en")}</span>
+              </dd>
             </div>
             <div>
-              <dt>分类</dt>
+              <dt><Loc zh={ui.meta.categories.zh} en={ui.meta.categories.en} /></dt>
               <dd class="chips">
                 {item.categories.map((cat) => (
-                  <span class="chip">{categoryLabel(cat)}</span>
+                  <span class="chip">
+                    <span class="loc-zh">{categoryLabel(cat)}</span>
+                    <span class="loc-en">{categoryLabel(cat, "en")}</span>
+                  </span>
                 ))}
               </dd>
             </div>
             <div>
-              <dt>连接器 / 工具</dt>
+              <dt><Loc zh={ui.meta.connectors.zh} en={ui.meta.connectors.en} /></dt>
               <dd class="chips">
                 {item.connectors.length
-                  ? item.connectors.map((value) => <span class="chip">{connectorLabel(value)}</span>)
-                  : "未列出"}
+                  ? item.connectors.map((value) => (
+                      <span class="chip">
+                        <span class="loc-zh">{connectorLabel(value)}</span>
+                        <span class="loc-en">{connectorLabel(value, "en")}</span>
+                      </span>
+                    ))
+                  : <Loc zh={ui.meta.noneListed.zh} en={ui.meta.noneListed.en} />}
               </dd>
             </div>
             <div>
-              <dt>发布</dt>
-              <dd>{formatPublishedDate(item.publishedAt)}</dd>
+              <dt><Loc zh={ui.meta.published.zh} en={ui.meta.published.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+                <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+              </dd>
             </div>
             <div>
-              <dt>条目更新</dt>
-              <dd>{formatShanghaiDateTime(item.updatedAt)}</dd>
+              <dt><Loc zh={ui.meta.itemUpdated.zh} en={ui.meta.itemUpdated.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatShanghaiDateTime(item.updatedAt)}</span>
+                <span class="loc-en">{formatShanghaiDateTime(item.updatedAt, "en-US")}</span>
+              </dd>
             </div>
           </dl>
         </section>
         <section class="panel">
-          <h2>公开来源</h2>
+          <h2><Loc zh={ui.meta.publicSources.zh} en={ui.meta.publicSources.en} /></h2>
           <div class="source-list">
             {sources.map((href) => (
               <a href={href} rel="noreferrer">

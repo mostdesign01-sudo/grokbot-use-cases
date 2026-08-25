@@ -1,16 +1,20 @@
 ---
+import Loc from "./Loc.astro";
+import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 
 interface Props {
   library?: "grok" | "html" | "agent-ui" | "all";
   placeholder?: string;
+  placeholderEn?: string;
   value?: string;
   liveFilter?: boolean;
 }
 
 const {
   library = "all",
-  placeholder = "搜索标题、摘要、收录理由…",
+  placeholder = ui.search.placeholder.zh,
+  placeholderEn = ui.search.placeholder.en,
   value = "",
   liveFilter = true,
 } = Astro.props;
@@ -25,17 +29,19 @@ const {
 >
   {library !== "all" && <input type="hidden" name="lib" value={library} />}
   <label class="library-search-field">
-    <span class="sr-only">搜索当前库</span>
+    <span class="sr-only"><Loc zh={ui.search.currentLib.zh} en={ui.search.currentLib.en} /></span>
     <input
       type="search"
       name="q"
       value={value}
       placeholder={placeholder}
+      data-ph-zh={placeholder}
+      data-ph-en={placeholderEn}
       autocomplete="off"
       data-hub-q
     />
   </label>
-  <button class="btn btn-primary" type="submit">搜索</button>
+  <button class="btn btn-primary" type="submit"><Loc zh={ui.search.button.zh} en={ui.search.button.en} /></button>
 </form>
 
 <script>

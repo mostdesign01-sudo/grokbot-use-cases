@@ -1,27 +1,33 @@
 ---
+import Loc from "./Loc.astro";
 import { agentUiMeta } from "../lib/agent-ui";
 import { meta } from "../lib/cases";
 import { htmlMeta } from "../lib/html";
+import { fill, ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
+
+const grokCount = fill(ui.poster.items, { n: meta.count });
+const htmlCount = fill(ui.poster.items, { n: htmlMeta.count });
+const agentCount = fill(ui.poster.items, { n: agentUiMeta.count });
 ---
 
-<section class="posters" aria-label="三套内容库">
+<section class="posters" aria-label={ui.poster.libraries.zh} data-aria-zh={ui.poster.libraries.zh} data-aria-en={ui.poster.libraries.en}>
   <a class="poster poster-grok" href={withBase("cases/")}>
     <div class="poster-art" aria-hidden="true"></div>
     <div class="poster-copy">
       <p class="kicker">01 · Grok Bot</p>
       <h2>Grok Bot</h2>
-      <p class="poster-pitch">精选 Bot 用法：例行、多 Agent、审批边界</p>
-      <p class="poster-cta"><span>{meta.count} 条</span> 进入</p>
+      <p class="poster-pitch"><Loc zh={ui.poster.grokPitch.zh} en={ui.poster.grokPitch.en} /></p>
+      <p class="poster-cta"><span><Loc zh={grokCount.zh} en={grokCount.en} /></span> <Loc zh={ui.poster.enter.zh} en={ui.poster.enter.en} /></p>
     </div>
   </a>
   <a class="poster poster-html" href={withBase("html/")}>
     <div class="poster-art" aria-hidden="true"></div>
     <div class="poster-copy">
-      <p class="kicker">02 · HTML 收集</p>
-      <h2>HTML 收集</h2>
-      <p class="poster-pitch">公开网页里的演示、模板、组件与工具页</p>
-      <p class="poster-cta"><span>{htmlMeta.count} 条</span> 进入</p>
+      <p class="kicker">02 · <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></p>
+      <h2><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></h2>
+      <p class="poster-pitch"><Loc zh={ui.poster.htmlPitch.zh} en={ui.poster.htmlPitch.en} /></p>
+      <p class="poster-cta"><span><Loc zh={htmlCount.zh} en={htmlCount.en} /></span> <Loc zh={ui.poster.enter.zh} en={ui.poster.enter.en} /></p>
     </div>
   </a>
   <a class="poster poster-agent-ui" href={withBase("agent-ui/")}>
@@ -29,8 +35,8 @@ import { withBase } from "../lib/paths";
     <div class="poster-copy">
       <p class="kicker">03 · Agent UI</p>
       <h2>Agent UI</h2>
-      <p class="poster-pitch">ThreeUI 免费件：复制 prompt / Skill.md 换主题</p>
-      <p class="poster-cta"><span>{agentUiMeta.count} 条</span> 进入</p>
+      <p class="poster-pitch"><Loc zh={ui.poster.agentPitch.zh} en={ui.poster.agentPitch.en} /></p>
+      <p class="poster-cta"><span><Loc zh={agentCount.zh} en={agentCount.en} /></span> <Loc zh={ui.poster.enter.zh} en={ui.poster.enter.en} /></p>
     </div>
   </a>
 </section>

@@ -1,7 +1,9 @@
 ---
+import Loc from "./Loc.astro";
 import { officialDocs } from "../lib/docs";
+import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
-import { siteName, siteTagline } from "../lib/site";
+import { siteName, siteTagline, siteTaglineEn } from "../lib/site";
 
 const product = officialDocs.filter((item) => item.group === "product");
 ---
@@ -10,51 +12,64 @@ const product = officialDocs.filter((item) => item.group === "product");
   <div class="wrap footer-inner">
     <div>
       <strong>{siteName}</strong>
-      <p>{siteTagline}。眼下三套库：<strong>Grok Bot</strong> 来自 <code>data/cases.json</code>；<strong>HTML 收集</strong> 来自 <code>data/html-items.json</code>；<strong>Agent UI</strong> 来自 <code>data/agent-ui.json</code>。数据分开，之后还会加更多。</p>
-      <p class="disclaimer">本站为非官方整理站点，与 xAI / SpaceXAI / Cursor / ThreeUI 及所列原文站点无隶属关系。</p>
+      <p>
+        <Loc zh={siteTagline} en={siteTaglineEn} />
+        <Loc zh={ui.footer.blurb.zh} en={ui.footer.blurb.en} />
+        <strong>Grok Bot</strong><Loc zh={ui.footer.blurbMid.zh} en={ui.footer.blurbMid.en} /><code>data/cases.json</code>；
+        <strong><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></strong><Loc zh={ui.footer.blurbMid.zh} en={ui.footer.blurbMid.en} /><code>data/html-items.json</code>；
+        <strong>Agent UI</strong><Loc zh={ui.footer.blurbMid.zh} en={ui.footer.blurbMid.en} /><code>data/agent-ui.json</code>
+        <Loc zh={ui.footer.blurbEnd.zh} en={ui.footer.blurbEnd.en} />
+      </p>
+      <p class="disclaimer"><Loc zh={ui.footer.disclaimer.zh} en={ui.footer.disclaimer.en} /></p>
     </div>
     <div>
       <strong>Grok Bot</strong>
       <div class="footer-links">
-        <a href={withBase("/")}>实验室首页</a>
-        <a href={withBase("cases/")}>Grok Bot 总览</a>
-        <a href={withBase("featured/")}>精选案例</a>
-        <a href={withBase("latest/")}>最新案例</a>
-        <a href={withBase("types/")}>按类型</a>
-        <a href={withBase("search/")}>全库搜索</a>
-        <a href={withBase("docs/")}>官方文档</a>
-        <a href={withBase("changelog/")}>更新日志</a>
+        <a href={withBase("/")}><Loc zh={ui.footer.labHome.zh} en={ui.footer.labHome.en} /></a>
+        <a href={withBase("cases/")}><Loc zh={ui.footer.grokOverview.zh} en={ui.footer.grokOverview.en} /></a>
+        <a href={withBase("featured/")}><Loc zh={ui.footer.featuredCases.zh} en={ui.footer.featuredCases.en} /></a>
+        <a href={withBase("latest/")}><Loc zh={ui.footer.latestCases.zh} en={ui.footer.latestCases.en} /></a>
+        <a href={withBase("types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
+        <a href={withBase("search/")}><Loc zh={ui.footer.allSearch.zh} en={ui.footer.allSearch.en} /></a>
+        <a href={withBase("docs/")}><Loc zh={ui.footer.officialDocs.zh} en={ui.footer.officialDocs.en} /></a>
+        <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
       </div>
     </div>
     <div>
-      <strong>HTML 收集</strong>
+      <strong><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></strong>
       <div class="footer-links">
-        <a href={withBase("html/")}>HTML 总览</a>
-        <a href={withBase("html/featured/")}>精选 HTML</a>
-        <a href={withBase("html/latest/")}>最新 HTML</a>
-        <a href={withBase("html/types/")}>HTML 类型</a>
-        <a href={withBase("search/?lib=html")}>搜索 HTML</a>
+        <a href={withBase("html/")}><Loc zh={ui.footer.htmlOverview.zh} en={ui.footer.htmlOverview.en} /></a>
+        <a href={withBase("html/featured/")}><Loc zh={ui.footer.featuredHtml.zh} en={ui.footer.featuredHtml.en} /></a>
+        <a href={withBase("html/latest/")}><Loc zh={ui.footer.latestHtml.zh} en={ui.footer.latestHtml.en} /></a>
+        <a href={withBase("html/types/")}><Loc zh={ui.footer.htmlTypes.zh} en={ui.footer.htmlTypes.en} /></a>
+        <a href={withBase("search/?lib=html")}><Loc zh={ui.footer.searchHtml.zh} en={ui.footer.searchHtml.en} /></a>
         <a href={withBase("html-items.json")}>HTML JSON</a>
       </div>
     </div>
     <div>
       <strong>Agent UI</strong>
       <div class="footer-links">
-        <a href={withBase("agent-ui/")}>Agent UI 总览</a>
-        <a href={withBase("agent-ui/featured/")}>精选</a>
-        <a href={withBase("agent-ui/latest/")}>最新</a>
-        <a href={withBase("agent-ui/types/")}>类型</a>
-        <a href={withBase("search/?lib=agent-ui")}>搜索 Agent UI</a>
+        <a href={withBase("agent-ui/")}><Loc zh={ui.footer.agentOverview.zh} en={ui.footer.agentOverview.en} /></a>
+        <a href={withBase("agent-ui/featured/")}><Loc zh={ui.nav.featured.zh} en={ui.nav.featured.en} /></a>
+        <a href={withBase("agent-ui/latest/")}><Loc zh={ui.nav.latest.zh} en={ui.nav.latest.en} /></a>
+        <a href={withBase("agent-ui/types/")}><Loc zh={ui.nav.types.zh} en={ui.nav.types.en} /></a>
+        <a href={withBase("search/?lib=agent-ui")}><Loc zh={ui.footer.searchAgent.zh} en={ui.footer.searchAgent.en} /></a>
         <a href={withBase("agent-ui.json")}>Agent UI JSON</a>
-        <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases">GitHub 仓库</a>
+        <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases"><Loc zh={ui.footer.github.zh} en={ui.footer.github.en} /></a>
       </div>
     </div>
   </div>
   <div class="wrap footer-sources">
-    <strong>公开来源</strong>
+    <strong><Loc zh={ui.footer.sources.zh} en={ui.footer.sources.en} /></strong>
     <div class="footer-links">
-      {product.map((item) => <a href={item.href} rel="noreferrer">{item.title}</a>)}
-      <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">官方用例</a>
+      {product.map((item) => (
+        <a href={item.href} rel="noreferrer">
+          <Loc zh={item.title} en={item.titleEn} />
+        </a>
+      ))}
+      <a href="https://docs.x.ai/grok-bot/use-cases" rel="noreferrer">
+        <Loc zh={ui.footer.officialUseCases.zh} en={ui.footer.officialUseCases.en} />
+      </a>
       <a href="https://threeui.com/browse" rel="noreferrer">ThreeUI Community</a>
       <a href="https://github.com/MengTo/threeui" rel="noreferrer">MengTo/threeui</a>
     </div>

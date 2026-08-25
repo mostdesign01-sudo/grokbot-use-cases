@@ -34,7 +34,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Structure Flow 做产品首屏背景。保持免费 Community 变体，换成我们的主色，放慢速度，点更疏一点。",
-      "previewImage": "/previews/structure-flow.webp"
+      "previewImage": "/previews/structure-flow.webp",
+      "titleEn": "Structure Flow",
+      "summaryEn": "A ThreeUI Community 3D field study: free variants for structure flow, orbit orbs, lattices, nebulae, and fluid fields. No login; preview on the browse page.",
+      "qualityNoteEn": "A good first 3D hero for an Agent: copy the page prompt / Skill.md and only change hue, point size, and speed — no hand-editing of procedural JS.",
+      "promptHintEn": "Use Structure Flow as a product first-screen background. Keep the free Community variant, switch to our primary color, slow it down, and thin out the points."
     },
     {
       "id": "predictive-arc",
@@ -64,7 +68,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "把 Predictive Arc 嵌进控制台顶栏。用免费变体，改成品牌琥珀色，速度放慢，保持可读。",
-      "previewImage": "/previews/predictive-arc.webp"
+      "previewImage": "/previews/predictive-arc.webp",
+      "titleEn": "Predictive Arc",
+      "summaryEn": "Canvas / WebGL signal arcs: predictive arc, pixel arc, particles, grid, and halftone flow. Free variants live in the Community directory.",
+      "qualityNoteEn": "Works well for a dashboard or “thinking” state. Hand the prompt to an Agent, tune hue / speed, and make it your data arc — stay off Pro variants.",
+      "promptHintEn": "Drop Predictive Arc into a console top bar. Use a free variant, switch to brand amber, slow it down, and keep it readable."
     },
     {
       "id": "brand-orbs",
@@ -93,7 +101,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Brand Orbs 做「已接入工具」一排。只保留免费变体，尺寸统一，悬停轻轻转。",
-      "previewImage": "/previews/brand-orbs.webp"
+      "previewImage": "/previews/brand-orbs.webp",
+      "titleEn": "Brand Orbs",
+      "summaryEn": "A set of Canvas brand orbs: free Claude, Cursor, GitHub, Figma, and other variants. Fits a tools wall or integrations list.",
+      "qualityNoteEn": "A ready start for an integrations icon wall. On the Skill side, swap logos and size; the theme can change as a group.",
+      "promptHintEn": "Use Brand Orbs as a “tools we connect” row. Keep free variants only, unify the size, and let hover spin gently."
     },
     {
       "id": "rectangle-buttons",
@@ -122,7 +134,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "从 Rectangle Buttons 挑一个免费 CTA。文案改成「开始试用」，主色换成站点强调色。",
-      "previewImage": "/previews/rectangle-buttons.webp"
+      "previewImage": "/previews/rectangle-buttons.webp",
+      "titleEn": "Rectangle Buttons",
+      "summaryEn": "Community rectangle button family: dark glass, Launch, dotted borders, sliding type, gradient beams, and other free CTAs. Pure CSS/DOM.",
+      "qualityNoteEn": "The fastest swap for a landing primary button. Copy the prompt, change color and copy; the Agent does not need to rewrite motion.",
+      "promptHintEn": "Pick a free CTA from Rectangle Buttons. Change the copy to “Start trial” and the color to the site accent."
     },
     {
       "id": "shader-buttons",
@@ -152,7 +168,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Shader Buttons 的免费 Thinking 变体做「生成中」按钮。换成靛紫色，亮度略降。",
-      "previewImage": "/previews/shader-buttons.webp"
+      "previewImage": "/previews/shader-buttons.webp",
+      "titleEn": "Shader Buttons",
+      "summaryEn": "Shader buttons: free WebGL variants such as Star Portal, Ignition, Plasma, and Thinking. Fits a high-energy CTA.",
+      "qualityNoteEn": "Use this set when you want an Agent to make a button that “breathes.” Changing hue in Skill.md is enough — do not hand-write GLSL.",
+      "promptHintEn": "Use the free Thinking variant from Shader Buttons as a “generating” button. Switch to indigo and drop the brightness a little."
     },
     {
       "id": "constellation-field",
@@ -181,7 +201,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Constellation Field 做「协作网络」背景。粒子疏一点，线细一点，颜色跟纸色底和解。",
-      "previewImage": "/previews/constellation-field.webp"
+      "previewImage": "/previews/constellation-field.webp",
+      "titleEn": "Constellation Field",
+      "summaryEn": "Particle constellation fields: free Canvas variants for drift, networks, gate flow, links, and contours. Fits a connected-feeling background.",
+      "qualityNoteEn": "A background for multi-agent / network stories. Hand the prompt to an Agent, tune density and stroke; once the theme changes, ship it.",
+      "promptHintEn": "Use Constellation Field as a “collaboration network” background. Fewer particles, thinner lines, colors that sit with the paper base."
     },
     {
       "id": "landscape",
@@ -211,7 +235,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Landscape 的日落变体做封面。保持 Community 免费集，不要换成 Pro 地貌。",
-      "previewImage": "/previews/landscape.webp"
+      "previewImage": "/previews/landscape.webp",
+      "titleEn": "Landscape",
+      "summaryEn": "A 3D landscape that can switch time of day and weather: free sunrise, noon, sunset, night, rain, and snow variants.",
+      "qualityNoteEn": "A ready scene for an atmosphere page or weather product. The Agent only needs to change the time of day per the Skill — no need to rebuild terrain.",
+      "promptHintEn": "Use the Landscape sunset variant as a cover. Stay on the free Community set; do not switch to Pro terrain."
     },
     {
       "id": "sketchbook",
@@ -240,7 +268,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "以 Sketchbook 落地页为骨架，改成我们的作品集首页。保留翻页节奏，只换文案与主色。",
-      "previewImage": "/previews/sketchbook.webp"
+      "previewImage": "/previews/sketchbook.webp",
+      "titleEn": "Sketchbook",
+      "summaryEn": "MengTo Sketchbook landing: like a flip-through sketchbook. The full Community page opens with no login.",
+      "qualityNoteEn": "A full-page template for portfolio narrative. Hand the prompt to an Agent, swap cover type and paper color, and leave the structure alone at first.",
+      "promptHintEn": "Use the Sketchbook landing as the skeleton of our portfolio home. Keep the page-turn rhythm; only change copy and primary color."
     },
     {
       "id": "kage",
@@ -269,7 +301,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Kage 做品牌介绍页。标题换成我们的中文名，主色用靛蓝，保持大留白。",
-      "previewImage": "/previews/kage.webp"
+      "previewImage": "/previews/kage.webp",
+      "titleEn": "Kage",
+      "summaryEn": "Kage landing: a full-page template of shadow and leftover space. Community-free; title type and primary color can be tuned.",
+      "qualityNoteEn": "A good start for a quiet brand site. The Skill controls type and primary color; an Agent rethemes faster than rewriting layout.",
+      "promptHintEn": "Use Kage as a brand intro page. Change the title to our Chinese name, use indigo as the primary, and keep the large leftover space."
     },
     {
       "id": "complete-shelf",
@@ -298,7 +334,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Complete Shelf 做课程目录。每本书脊写一门课名，主色跟随站点纸色。",
-      "previewImage": "/previews/complete-shelf.webp"
+      "previewImage": "/previews/complete-shelf.webp",
+      "titleEn": "Complete Shelf",
+      "summaryEn": "A full-wall bookshelf landing: fits a bookstore, course catalog, or “all work” index. Free Community full page.",
+      "qualityNoteEn": "Catalog sites can reuse this as-is. Let the Agent change spine colors and titles per the Skill — do not rebuild the shelf geometry.",
+      "promptHintEn": "Use Complete Shelf as a course catalog. Each spine is a course name; primary color follows the site paper tone."
     },
     {
       "id": "sylva-living-green",
@@ -328,7 +368,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "只用 Sylva 的 Living Green。改标题和主色，不要切换到标了 PRO 的季节变体。",
-      "previewImage": "/previews/sylva-living-green.webp"
+      "previewImage": "/previews/sylva-living-green.webp",
+      "titleEn": "Sylva · Living Green",
+      "summaryEn": "The free Living Green variant of the Sylva landing: a full-page forest mood. Sakura / Maple / Sequoia in the same series are Pro and are not listed here.",
+      "qualityNoteEn": "A free full page for nature-leaning products. Link Living Green only; do not open or prompt sakura / maple and other Pro variants.",
+      "promptHintEn": "Use only Sylva’s Living Green. Change the title and primary color. Do not switch to seasonal variants marked PRO."
     },
     {
       "id": "text-path-studies",
@@ -357,7 +401,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Text Path Studies 做章节大标题。文字改成中文产品名，色相跟纸色底协调。",
-      "previewImage": "/previews/text-path-studies.webp"
+      "previewImage": "/previews/text-path-studies.webp",
+      "titleEn": "Text Path Studies",
+      "summaryEn": "Path-type studies: free Canvas variants for globe type, outline flow, glyph clouds, cloth, ripples, and spheres.",
+      "qualityNoteEn": "Use when a chapter title should “walk a path.” The Agent only changes the words and hue; geometry stays with the existing Skill.",
+      "promptHintEn": "Use Text Path Studies for a chapter title. Change the words to the Chinese product name; hue should sit with the paper base."
     },
     {
       "id": "gallery-heading",
@@ -386,7 +434,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Gallery Heading 做作品集分节。标题换成「精选」，字体粗一点，色相偏靛。",
-      "previewImage": "/previews/gallery-heading.webp"
+      "previewImage": "/previews/gallery-heading.webp",
+      "titleEn": "Gallery Heading",
+      "summaryEn": "Gallery wordmarks: free rising-diagonal, falling, sweep, and loop variants. Fits portfolio section breaks.",
+      "qualityNoteEn": "Ready motion for section titles. Copy the prompt to change type and hue; the Agent does not need to rebuild the sweep.",
+      "promptHintEn": "Use Gallery Heading for portfolio sections. Change the title to “Featured,” make the type a bit heavier, hue toward indigo."
     },
     {
       "id": "article-headings",
@@ -416,7 +468,11 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Article Headings 做更新日志顶栏。文字改成「今日收录」，粒子少一点，方便阅读。",
-      "previewImage": "/previews/article-headings.webp"
+      "previewImage": "/previews/article-headings.webp",
+      "titleEn": "Article Headings",
+      "summaryEn": "Article-open wordmarks: free intro type, particle wordmarks, and audio wordmarks. Fits a long-form or changelog header.",
+      "qualityNoteEn": "Reusable for blog/log titles. Hand the Skill to an Agent to change copy and rhythm; keep particle density low.",
+      "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read."
     }
   ]
 }

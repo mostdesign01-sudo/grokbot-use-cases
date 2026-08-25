@@ -3,34 +3,47 @@ import AgentUiCard from "../components/AgentUiCard.astro";
 import CaseCard from "../components/CaseCard.astro";
 import HtmlCard from "../components/HtmlCard.astro";
 import LibrarySearch from "../components/LibrarySearch.astro";
+import Loc from "../components/Loc.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { agentUiItems, agentUiSearchText } from "../lib/agent-ui";
 import { agentUiTypeLabel } from "../lib/agent-ui-labels";
 import { caseSearchText, cases } from "../lib/cases";
 import { htmlItems, htmlSearchText } from "../lib/html";
 import { htmlTypeLabel } from "../lib/html-labels";
+import { ui } from "../lib/i18n";
 import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels";
 ---
 
-<BaseLayout collection="lab" title="搜索 · AI UP LAB" description="在 AI UP LAB 的 Grok Bot、HTML 收集与 Agent UI 三套库里检索标题、摘要、标签与收录理由。">
+<BaseLayout
+  collection="lab"
+  title={ui.pages.searchTitle.zh}
+  titleEn={ui.pages.searchTitle.en}
+  description={ui.pages.searchDesc.zh}
+  descriptionEn={ui.pages.searchDesc.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Search</p>
-      <h1>搜索三套收集库</h1>
+      <h1><Loc zh={ui.pages.searchH1.zh} en={ui.pages.searchH1.en} /></h1>
       <p class="lede">
-        在当前页面筛选 <code>cases.json</code>、<code>html-items.json</code> 与 <code>agent-ui.json</code>。不会混写成一套新闻流，只检索已收录的可复用条目。
+        <span class="loc-zh">
+          在当前页面筛选 <code>cases.json</code>、<code>html-items.json</code> 与 <code>agent-ui.json</code>。不会混写成一套新闻流，只检索已收录的可复用条目。
+        </span>
+        <span class="loc-en">
+          Filter <code>cases.json</code>, <code>html-items.json</code>, and <code>agent-ui.json</code> on this page. Not a mixed news feed — only listed reusable items.
+        </span>
       </p>
       <LibrarySearch library="all" liveFilter={false} />
     </section>
 
     <div class="search-page" data-search-page>
-      <div class="search-tabs" role="tablist" aria-label="搜索范围">
-        <button type="button" class="search-tab" data-lib="all" aria-selected="true">全部</button>
+      <div class="search-tabs" role="tablist" aria-label={ui.search.scope.zh} data-aria-zh={ui.search.scope.zh} data-aria-en={ui.search.scope.en}>
+        <button type="button" class="search-tab" data-lib="all" aria-selected="true"><Loc zh={ui.lib.all.zh} en={ui.lib.all.en} /></button>
         <button type="button" class="search-tab" data-lib="grok" aria-selected="false">Grok Bot</button>
-        <button type="button" class="search-tab" data-lib="html" aria-selected="false">HTML 收集</button>
+        <button type="button" class="search-tab" data-lib="html" aria-selected="false"><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></button>
         <button type="button" class="search-tab" data-lib="agent-ui" aria-selected="false">Agent UI</button>
       </div>
-      <p class="count-row" data-count></p>
+      <p class="count-row" data-count data-count-all-zh={ui.search.countAll.zh} data-count-all-en={ui.search.countAll.en} data-count-one-zh={ui.search.countOne.zh} data-count-one-en={ui.search.countOne.en}></p>
       <div class="masonry" data-results>
         {
           cases.map((item) => (
@@ -38,7 +51,7 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
               class="item"
               data-item
               data-lib="grok"
-              data-text={`${caseSearchText(item)} ${item.categories.map(categoryLabel).join(" ")} ${sourceBadgeLabel(item.sourceType)} ${difficultyLabel(item.difficulty)}`}
+              data-text={`${caseSearchText(item)} ${item.categories.map((cat) => categoryLabel(cat)).join(" ")} ${item.categories.map((cat) => categoryLabel(cat, "en")).join(" ")} ${sourceBadgeLabel(item.sourceType)} ${sourceBadgeLabel(item.sourceType, "en")} ${difficultyLabel(item.difficulty)} ${difficultyLabel(item.difficulty, "en")}`}
             >
               <CaseCard caseItem={item} />
             </div>
@@ -46,20 +59,20 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
         }
         {
           htmlItems.map((item) => (
-            <div class="item" data-item data-lib="html" data-text={`${htmlSearchText(item)} ${item.types.map(htmlTypeLabel).join(" ")}`}>
+            <div class="item" data-item data-lib="html" data-text={`${htmlSearchText(item)} ${item.types.map((type) => htmlTypeLabel(type)).join(" ")} ${item.types.map((type) => htmlTypeLabel(type, "en")).join(" ")}`}>
               <HtmlCard item={item} />
             </div>
           ))
         }
         {
           agentUiItems.map((item) => (
-            <div class="item" data-item data-lib="agent-ui" data-text={`${agentUiSearchText(item)} ${item.types.map(agentUiTypeLabel).join(" ")}`}>
+            <div class="item" data-item data-lib="agent-ui" data-text={`${agentUiSearchText(item)} ${item.types.map((type) => agentUiTypeLabel(type)).join(" ")} ${item.types.map((type) => agentUiTypeLabel(type, "en")).join(" ")}`}>
               <AgentUiCard item={item} />
             </div>
           ))
         }
       </div>
-      <p class="empty" hidden data-empty>没有符合条件的条目。试试更短的关键词，或切换到另一库。</p>
+      <p class="empty" hidden data-empty><Loc zh={ui.search.empty.zh} en={ui.search.empty.en} /></p>
     </div>
   </div>
 </BaseLayout>
@@ -114,10 +127,16 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
       }
 
       if (count) {
-        count.textContent =
+        const locale = document.documentElement.dataset.locale === "en" ? "en" : "zh";
+        const tpl =
           lib === "all"
-            ? `显示 ${visible} 条（Grok Bot ${grokVisible} · HTML ${htmlVisible} · Agent UI ${agentVisible}）`
-            : `显示 ${visible} 条`;
+            ? count.getAttribute(locale === "en" ? "data-count-all-en" : "data-count-all-zh") ?? ""
+            : count.getAttribute(locale === "en" ? "data-count-one-en" : "data-count-one-zh") ?? "";
+        count.textContent = tpl
+          .replace("{n}", String(visible))
+          .replace("{grok}", String(grokVisible))
+          .replace("{html}", String(htmlVisible))
+          .replace("{agent}", String(agentVisible));
       }
       if (empty) empty.toggleAttribute("hidden", visible !== 0);
       syncUrl();
@@ -135,6 +154,7 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
       apply();
     });
     input.addEventListener("input", apply);
+    document.addEventListener("localechange", apply);
     apply();
   }
 </script>

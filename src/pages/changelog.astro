@@ -1,55 +1,86 @@
 ---
+import Loc from "../components/Loc.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { changelogNotes, meta } from "../lib/cases";
 import { formatShanghaiDate, formatShanghaiDateTime, groupByShanghaiDay } from "../lib/format";
+import { ui } from "../lib/i18n";
 
 const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
 ---
 
-<BaseLayout collection="lab" title="更新日志 · AI UP LAB" description="AI UP LAB 数据更新时间与近期说明。">
+<BaseLayout
+  collection="lab"
+  title={ui.pages.changelogTitle.zh}
+  titleEn={ui.pages.changelogTitle.en}
+  description={ui.pages.changelogDesc.zh}
+  descriptionEn={ui.pages.changelogDesc.en}
+>
   <div class="wrap">
     <p class="kicker">Changelog</p>
-    <h1>更新日志</h1>
-    <p class="lede">AI UP LAB 的数据更新时间以 <code>data/cases.json</code> 的 <code>meta.updatedAt</code> 为准，并按 Asia/Shanghai 显示。</p>
+    <h1><Loc zh={ui.pages.changelogH1.zh} en={ui.pages.changelogH1.en} /></h1>
+    <p class="lede">
+      <span class="loc-zh">
+        AI UP LAB 的数据更新时间以 <code>data/cases.json</code> 的 <code>meta.updatedAt</code> 为准，并按 Asia/Shanghai 显示。
+      </span>
+      <span class="loc-en">
+        AI UP LAB data freshness follows <code>meta.updatedAt</code> in <code>data/cases.json</code>, shown in Asia/Shanghai.
+      </span>
+    </p>
 
-    <section class="stats" aria-label="数据版本">
+    <section class="stats" aria-label={ui.pages.dataVersion.zh} data-aria-zh={ui.pages.dataVersion.zh} data-aria-en={ui.pages.dataVersion.en}>
       <div class="stat">
         <b>{meta.version}</b>
-        <span>数据集版本</span>
+        <span><Loc zh={ui.pages.datasetVersion.zh} en={ui.pages.datasetVersion.en} /></span>
       </div>
       <div class="stat">
         <b>{meta.count}</b>
-        <span>当前案例数</span>
+        <span><Loc zh={ui.pages.caseCount.zh} en={ui.pages.caseCount.en} /></span>
       </div>
       <div class="stat">
-        <b>{formatShanghaiDate(meta.updatedAt)}</b>
-        <span>最近更新日期</span>
+        <b>
+          <span class="loc-zh">{formatShanghaiDate(meta.updatedAt)}</span>
+          <span class="loc-en">{formatShanghaiDate(meta.updatedAt, "en-US")}</span>
+        </b>
+        <span><Loc zh={ui.pages.lastUpdateDate.zh} en={ui.pages.lastUpdateDate.en} /></span>
       </div>
       <div class="stat">
         <b>{meta.timezone}</b>
-        <span>展示时区</span>
+        <span><Loc zh={ui.pages.displayTz.zh} en={ui.pages.displayTz.en} /></span>
       </div>
     </section>
 
     <section class="section">
       <h2>meta.updatedAt</h2>
-      <p>ISO：<code>{meta.updatedAt}</code></p>
-      <p>上海时间：{formatShanghaiDateTime(meta.updatedAt)}</p>
+      <p><Loc zh={ui.pages.iso.zh} en={ui.pages.iso.en} />：<code>{meta.updatedAt}</code></p>
+      <p>
+        <Loc zh={ui.pages.shanghaiTime.zh} en={ui.pages.shanghaiTime.en} />：
+        <span class="loc-zh">{formatShanghaiDateTime(meta.updatedAt)}</span>
+        <span class="loc-en">{formatShanghaiDateTime(meta.updatedAt, "en-US")}</span>
+      </p>
     </section>
 
     <section class="section">
-      <h2>近期说明</h2>
+      <h2><Loc zh={ui.pages.recentNotes.zh} en={ui.pages.recentNotes.en} /></h2>
       <div class="feed changelog-feed">
         {
           groups.map((group) => (
             <section class="feed-day">
-              <h3 class="feed-day-title">{group.title}</h3>
+              <h3 class="feed-day-title">
+                <span class="loc-zh">{group.title}</span>
+                <span class="loc-en">{group.titleEn}</span>
+              </h3>
               <div class="timeline">
                 {group.items.map((note) => (
                   <article class="note">
                     <time datetime={note.date}>{note.date}</time>
-                    <h3>{note.title}</h3>
-                    <p>{note.body}</p>
+                    <h3>
+                      <span class="loc-zh">{note.title}</span>
+                      <span class="loc-en">{note.titleEn ?? note.title}</span>
+                    </h3>
+                    <p>
+                      <span class="loc-zh">{note.body}</span>
+                      <span class="loc-en">{note.bodyEn ?? note.body}</span>
+                    </p>
                   </article>
                 ))}
               </div>
@@ -60,7 +91,7 @@ const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
     </section>
 
     <section class="section">
-      <h2>本次爬取 / 对照来源</h2>
+      <h2><Loc zh={ui.pages.crawledSources.zh} en={ui.pages.crawledSources.en} /></h2>
       <div class="source-list">
         {meta.sourcesCrawled.map((href) => (
           <a href={href} rel="noreferrer">

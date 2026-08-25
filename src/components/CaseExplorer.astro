@@ -1,8 +1,10 @@
 ---
 import type { CaseItem, Difficulty, SourceType } from "../lib/cases";
 import { uniqueCategories, uniqueDifficulties, uniqueSourceTypes } from "../lib/cases";
+import { ui } from "../lib/i18n";
 import { categoryLabel, difficultyLabel, sourceTypeLabel } from "../lib/labels";
 import CaseCard from "./CaseCard.astro";
+import Loc from "./Loc.astro";
 
 interface Props {
   cases: CaseItem[];
@@ -18,50 +20,75 @@ const difficulties = uniqueDifficulties();
   <form class="filters" data-filters>
     <div class="filter-row">
       <label class="field">
-        搜索
-        <input type="search" name="q" placeholder="标题、摘要、收录理由、角色、标签…" autocomplete="off" />
+        <Loc zh={ui.explorer.search.zh} en={ui.explorer.search.en} />
+        <input
+          type="search"
+          name="q"
+          placeholder={ui.search.explorer.zh}
+          data-ph-zh={ui.search.explorer.zh}
+          data-ph-en={ui.search.explorer.en}
+          autocomplete="off"
+        />
       </label>
       <label class="field">
-        分类
+        <Loc zh={ui.explorer.category.zh} en={ui.explorer.category.en} />
         <select name="category">
-          <option value="">全部分类</option>
-          {categories.map((value) => <option value={value}>{categoryLabel(value)}</option>)}
+          <option value="" data-label-zh={ui.explorer.allCategories.zh} data-label-en={ui.explorer.allCategories.en}>
+            {ui.explorer.allCategories.zh}
+          </option>
+          {categories.map((value) => (
+            <option value={value} data-label-zh={categoryLabel(value)} data-label-en={categoryLabel(value, "en")}>
+              {categoryLabel(value)}
+            </option>
+          ))}
         </select>
       </label>
       <label class="field">
-        来源
+        <Loc zh={ui.explorer.source.zh} en={ui.explorer.source.en} />
         <select name="sourceType">
-          <option value="">全部来源</option>
-          {sourceTypes.map((value: SourceType) => <option value={value}>{sourceTypeLabel(value)}</option>)}
+          <option value="" data-label-zh={ui.explorer.allSources.zh} data-label-en={ui.explorer.allSources.en}>
+            {ui.explorer.allSources.zh}
+          </option>
+          {sourceTypes.map((value: SourceType) => (
+            <option value={value} data-label-zh={sourceTypeLabel(value)} data-label-en={sourceTypeLabel(value, "en")}>
+              {sourceTypeLabel(value)}
+            </option>
+          ))}
         </select>
       </label>
       <label class="field">
-        难度
+        <Loc zh={ui.explorer.difficulty.zh} en={ui.explorer.difficulty.en} />
         <select name="difficulty">
-          <option value="">全部难度</option>
-          {difficulties.map((value: Difficulty) => <option value={value}>{difficultyLabel(value)}</option>)}
+          <option value="" data-label-zh={ui.explorer.allDifficulties.zh} data-label-en={ui.explorer.allDifficulties.en}>
+            {ui.explorer.allDifficulties.zh}
+          </option>
+          {difficulties.map((value: Difficulty) => (
+            <option value={value} data-label-zh={difficultyLabel(value)} data-label-en={difficultyLabel(value, "en")}>
+              {difficultyLabel(value)}
+            </option>
+          ))}
         </select>
       </label>
     </div>
     <div class="filter-toggles">
       <label class="toggle">
         <input type="checkbox" name="hasRoutine" />
-        例行
+        <Loc zh={ui.badge.routine.zh} en={ui.badge.routine.en} />
       </label>
       <label class="toggle">
         <input type="checkbox" name="hasMultiAgent" />
-        多Agent
+        <Loc zh={ui.badge.multi.zh} en={ui.badge.multi.en} />
       </label>
       <label class="toggle">
         <input type="checkbox" name="requiresApproval" />
-        需审批
+        <Loc zh={ui.badge.approval.zh} en={ui.badge.approval.en} />
       </label>
-      <button class="reset" type="reset">清除筛选</button>
+      <button class="reset" type="reset"><Loc zh={ui.explorer.reset.zh} en={ui.explorer.reset.en} /></button>
     </div>
   </form>
 
   <div class="count-row">
-    <p data-count></p>
+    <p data-count data-count-zh={ui.explorer.count.zh} data-count-en={ui.explorer.count.en}></p>
   </div>
 
   <div class="masonry" data-grid>
@@ -76,14 +103,14 @@ const difficulties = uniqueDifficulties();
           data-routine={String(item.hasRoutine)}
           data-multi={String(item.hasMultiAgent)}
           data-approval={String(item.requiresApproval)}
-          data-text={`${item.title} ${item.titleEn} ${item.summary} ${item.qualityNote} ${item.role} ${item.connectors.join(" ")} ${item.categories.join(" ")} ${item.id}`}
+          data-text={`${item.title} ${item.titleEn} ${item.summary} ${item.summaryEn ?? ""} ${item.qualityNote} ${item.qualityNoteEn ?? ""} ${item.role} ${item.connectors.join(" ")} ${item.categories.join(" ")} ${item.id}`}
         >
           <CaseCard caseItem={item} />
         </div>
       ))
     }
   </div>
-  <p class="empty" hidden data-empty>没有符合条件的案例。试试减少筛选条件。</p>
+  <p class="empty" hidden data-empty><Loc zh={ui.explorer.empty.zh} en={ui.explorer.empty.en} /></p>
 </div>
 
 <script>
@@ -121,7 +148,11 @@ const difficulties = uniqueDifficulties();
         if (match) visible += 1;
       }
 
-      if (count) count.textContent = `显示 ${visible} / ${total} 条案例`;
+      if (count) {
+        const locale = document.documentElement.dataset.locale === "en" ? "en" : "zh";
+        const tpl = count.getAttribute(locale === "en" ? "data-count-en" : "data-count-zh") ?? "";
+        count.textContent = tpl.replace("{n}", String(visible)).replace("{total}", String(total));
+      }
       if (empty) empty.toggleAttribute("hidden", visible !== 0);
     };
 
@@ -157,6 +188,7 @@ const difficulties = uniqueDifficulties();
         syncUrl();
       });
     });
+    document.addEventListener("localechange", apply);
     apply();
   }
 </script>

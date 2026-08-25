@@ -8,8 +8,8 @@ function toDate(input: string | Date): Date {
   return new Date(input);
 }
 
-function shanghaiParts(input: string | Date) {
-  const parts = new Intl.DateTimeFormat("zh-CN", {
+function shanghaiParts(input: string | Date, locale: "zh-CN" | "en-US" = "zh-CN") {
+  const parts = new Intl.DateTimeFormat(locale, {
     timeZone: TIMEZONE,
     year: "numeric",
     month: "numeric",
@@ -48,8 +48,8 @@ function shiftCivilDateKey(key: string, days: number): string {
   ].join("-");
 }
 
-export function formatShanghaiDateTime(iso: string): string {
-  return new Intl.DateTimeFormat("zh-CN", {
+export function formatShanghaiDateTime(iso: string, locale: "zh-CN" | "en-US" = "zh-CN"): string {
+  return new Intl.DateTimeFormat(locale, {
     timeZone: TIMEZONE,
     year: "numeric",
     month: "long",
@@ -60,8 +60,8 @@ export function formatShanghaiDateTime(iso: string): string {
   }).format(new Date(iso));
 }
 
-export function formatShanghaiDate(iso: string): string {
-  return new Intl.DateTimeFormat("zh-CN", {
+export function formatShanghaiDate(iso: string, locale: "zh-CN" | "en-US" = "zh-CN"): string {
+  return new Intl.DateTimeFormat(locale, {
     timeZone: TIMEZONE,
     year: "numeric",
     month: "long",
@@ -69,8 +69,8 @@ export function formatShanghaiDate(iso: string): string {
   }).format(new Date(iso));
 }
 
-export function formatPublishedDate(isoDate: string): string {
-  return new Intl.DateTimeFormat("zh-CN", {
+export function formatPublishedDate(isoDate: string, locale: "zh-CN" | "en-US" = "zh-CN"): string {
+  return new Intl.DateTimeFormat(locale, {
     timeZone: TIMEZONE,
     year: "numeric",
     month: "short",
@@ -88,10 +88,26 @@ export function formatShanghaiTime(iso: string): string {
 }
 
 export function formatShanghaiDayTitle(input: string | Date, count: number, now = new Date()): string {
-  const parts = shanghaiParts(input);
+  return formatShanghaiDayTitleLocale(input, count, now, "zh");
+}
+
+export function formatShanghaiDayTitleLocale(
+  input: string | Date,
+  count: number,
+  now = new Date(),
+  locale: "zh" | "en" = "zh",
+): string {
+  const parts = shanghaiParts(input, locale === "en" ? "en-US" : "zh-CN");
   const todayKey = shanghaiDateKey(now);
   const yesterdayKey = shiftCivilDateKey(todayKey, -1);
-  const countLabel = `${count} 条`;
+  const countLabel = locale === "en" ? `${count} items` : `${count} 条`;
+
+  if (locale === "en") {
+    const monthDay = `${parts.month}/${parts.day}`;
+    if (parts.key === todayKey) return `Listed today · ${countLabel}`;
+    if (parts.key === yesterdayKey) return `Yesterday · ${monthDay} · ${countLabel}`;
+    return `${monthDay} · ${parts.weekday} · ${countLabel}`;
+  }
 
   if (parts.key === todayKey) return `今日收录 · ${countLabel}`;
   if (parts.key === yesterdayKey) return `昨日 · ${parts.month}月${parts.day}日 · ${countLabel}`;
@@ -107,7 +123,7 @@ export function groupByShanghaiDay<T>(
   items: T[],
   getIso: (item: T) => string,
   now = new Date(),
-): { key: string; title: string; items: T[] }[] {
+): { key: string; title: string; titleEn: string; items: T[] }[] {
   const groups = new Map<string, T[]>();
 
   for (const item of items) {
@@ -122,6 +138,7 @@ export function groupByShanghaiDay<T>(
     .map(([key, grouped]) => ({
       key,
       title: formatShanghaiDayTitle(key, grouped.length, now),
+      titleEn: formatShanghaiDayTitleLocale(key, grouped.length, now, "en"),
       items: grouped,
     }));
 }

@@ -1,21 +1,36 @@
 ---
 import AgentUiCard from "../../components/AgentUiCard.astro";
+import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getLatestAgentUi } from "../../lib/agent-ui";
+import { ui } from "../../lib/i18n";
 import { withBase } from "../../lib/paths";
 
 const latest = getLatestAgentUi();
 ---
 
-<BaseLayout collection="agent-ui" title="最新 Agent UI · AI UP LAB" description="按公开日期排序的 Agent UI 收集。">
+<BaseLayout
+  collection="agent-ui"
+  title={ui.agent.latestTitle.zh}
+  titleEn={ui.agent.latestTitle.en}
+  description={ui.agent.latestDesc.zh}
+  descriptionEn={ui.agent.latestDesc.en}
+>
   <div class="wrap-wide">
     <section class="collection-hero">
       <p class="kicker">Latest Agent UI</p>
-      <h1>最新 Agent UI</h1>
-      <p class="lede">按 <code>publishedAt</code> 再按 <code>updatedAt</code> 从新到旧。当前 {latest.length} 条。</p>
+      <h1><Loc zh={ui.agent.latestH1.zh} en={ui.agent.latestH1.en} /></h1>
+      <p class="lede">
+        <span class="loc-zh">
+          按 <code>publishedAt</code> 再按 <code>updatedAt</code> 从新到旧。当前 {latest.length} 条。
+        </span>
+        <span class="loc-en">
+          Sorted by <code>publishedAt</code>, then <code>updatedAt</code>, newest first. {latest.length} now.
+        </span>
+      </p>
       <div class="hero-actions">
-        <a class="btn btn-ghost" href={withBase("agent-ui/featured/")}>精选</a>
-        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}>按类型</a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/featured/")}><Loc zh={ui.nav.featured.zh} en={ui.nav.featured.en} /></a>
+        <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </section>
     <section class="section">

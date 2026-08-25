@@ -12,9 +12,13 @@ interface Props {
     | "plain"
     | string;
   label: string;
+  labelEn?: string;
 }
 
-const { kind = "plain", label } = Astro.props;
+const { kind = "plain", label, labelEn = label } = Astro.props;
 ---
 
-<span class:list={["badge", kind]}>{label}</span>
+<span class:list={["badge", kind]}>
+  <span class="loc-zh">{label}</span>
+  <span class="loc-en">{labelEn}</span>
+</span>

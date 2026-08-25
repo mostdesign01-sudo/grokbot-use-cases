@@ -1,5 +1,6 @@
 ---
 import type { CaseItem } from "../lib/cases";
+import { ui } from "../lib/i18n";
 import { categoryLabel, difficultyLabel, sourceBadgeKind, sourceBadgeLabel } from "../lib/labels";
 import { withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
@@ -14,20 +15,36 @@ const { caseItem, showLibBadge = false } = Astro.props;
 ---
 
 <a class="pin-card case-card pin-grok" href={withBase(`cases/${caseItem.slug}/`)}>
-  <PinVisual lib="grok" title={caseItem.title} seed={caseItem.slug} image={caseItem.previewImage} />
+  <PinVisual lib="grok" title={caseItem.title} titleEn={caseItem.titleEn} seed={caseItem.slug} image={caseItem.previewImage} />
   <div class="pin-body">
     <div class="badges">
       {showLibBadge && <Badge kind="approval" label="Grok Bot" />}
-      <Badge kind={sourceBadgeKind(caseItem.sourceType)} label={sourceBadgeLabel(caseItem.sourceType)} />
-      {caseItem.featured && <Badge kind="featured" label="+ 精选" />}
-      {caseItem.requiresApproval && <Badge kind="approval" label="需审批" />}
+      <Badge
+        kind={sourceBadgeKind(caseItem.sourceType)}
+        label={sourceBadgeLabel(caseItem.sourceType)}
+        labelEn={sourceBadgeLabel(caseItem.sourceType, "en")}
+      />
+      {caseItem.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+      {caseItem.requiresApproval && <Badge kind="approval" label={ui.badge.approval.zh} labelEn={ui.badge.approval.en} />}
     </div>
-    <h3>{caseItem.title}</h3>
-    <p class="title-en">{caseItem.titleEn}</p>
-    <p class="pin-reveal summary">{caseItem.summary}</p>
+    <h3>
+      <span class="loc-zh">{caseItem.title}</span>
+      <span class="loc-en">{caseItem.titleEn}</span>
+    </h3>
+    <p class="title-en loc-zh">{caseItem.titleEn}</p>
+    <p class="pin-reveal summary">
+      <span class="loc-zh">{caseItem.summary}</span>
+      <span class="loc-en">{caseItem.summaryEn ?? caseItem.summary}</span>
+    </p>
     <div class="card-meta">
-      <span>{difficultyLabel(caseItem.difficulty)}</span>
-      <span>{caseItem.categories.map(categoryLabel).slice(0, 2).join(" · ")}</span>
+      <span>
+        <span class="loc-zh">{difficultyLabel(caseItem.difficulty)}</span>
+        <span class="loc-en">{difficultyLabel(caseItem.difficulty, "en")}</span>
+      </span>
+      <span>
+        <span class="loc-zh">{caseItem.categories.map((cat) => categoryLabel(cat)).slice(0, 2).join(" · ")}</span>
+        <span class="loc-en">{caseItem.categories.map((cat) => categoryLabel(cat, "en")).slice(0, 2).join(" · ")}</span>
+      </span>
     </div>
   </div>
 </a>

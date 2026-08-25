@@ -1,6 +1,7 @@
 ---
 import type { HtmlItem } from "../lib/html";
 import { htmlTypeLabel } from "../lib/html-labels";
+import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
 import PinVisual from "./PinVisual.astro";
@@ -11,18 +12,27 @@ interface Props {
 }
 
 const { item, showLibBadge = false } = Astro.props;
+const titleEn = item.titleEn ?? item.title;
 ---
 
 <a class="pin-card html-card pin-html" href={withBase(`html/${item.slug}/`)}>
-  <PinVisual lib="html" title={item.title} seed={item.slug} image={item.previewImage} />
+  <PinVisual lib="html" title={item.title} titleEn={titleEn} seed={item.slug} image={item.previewImage} />
   <div class="pin-body">
     <div class="badges">
-      {showLibBadge && <Badge kind="official" label="HTML 收集" />}
-      {item.featured && <Badge kind="featured" label="+ 精选" />}
-      {item.types.slice(0, 2).map((type) => <Badge label={htmlTypeLabel(type)} />)}
+      {showLibBadge && <Badge kind="official" label={ui.lib.html.zh} labelEn={ui.lib.html.en} />}
+      {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+      {item.types.slice(0, 2).map((type) => (
+        <Badge label={htmlTypeLabel(type)} labelEn={htmlTypeLabel(type, "en")} />
+      ))}
     </div>
-    <h3>{item.title}</h3>
-    <p class="pin-reveal summary">{item.summary}</p>
+    <h3>
+      <span class="loc-zh">{item.title}</span>
+      <span class="loc-en">{titleEn}</span>
+    </h3>
+    <p class="pin-reveal summary">
+      <span class="loc-zh">{item.summary}</span>
+      <span class="loc-en">{item.summaryEn ?? item.summary}</span>
+    </p>
     <div class="card-meta">
       <span>{item.tags.slice(0, 2).join(" · ")}</span>
     </div>
