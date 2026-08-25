@@ -32,6 +32,7 @@ export interface CaseItem {
   connectors: string[];
   language: string;
   featured: boolean;
+  previewImage?: string;
   publishedAt: string;
   updatedAt: string;
 }
