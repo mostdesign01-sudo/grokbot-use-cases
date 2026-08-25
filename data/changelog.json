@@ -2,6 +2,11 @@
   "notes": [
     {
       "date": "2026-08-25",
+      "title": "Grok Bot：收录官方扩容帖 3 个新角色",
+      "body": "来源 https://x.ai/news/grok-bot-more-plans ：数字断舍离、会议替身、建站 Bot。HTML 收集与 Agent UI 今日无新增（避免无预览的色块条目）。"
+    },
+    {
+      "date": "2026-08-25",
       "title": "Grok Bot 收录 Kanekoa 视频研究剪辑案例",
       "body": "社区案例：@KanekoaTheGreat 用 Grok Bot 将 38 条 Seheult 相关视频转写、精选 13 段剪成 19:35，并生成带时间戳的 Markdown。卡片使用推文截图作为预览。"
     },
