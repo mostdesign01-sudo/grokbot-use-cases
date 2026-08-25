@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-25T00:58:00Z",
+    "updatedAt": "2026-08-25T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.2.0",
-    "count": 22,
+    "version": "1.2.1",
+    "count": 25,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -12,7 +12,8 @@
       "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "https://composio.dev/content/guide-to-frok-bot",
       "https://docs.x.ai/grok-bot/faq",
-      "https://x.com/KanekoaTheGreat/status/2092020672914755841"
+      "https://x.com/KanekoaTheGreat/status/2092020672914755841",
+      "https://x.ai/news/grok-bot-more-plans"
     ]
   },
   "cases": [
@@ -690,6 +691,97 @@
       "previewImage": "/previews/kanekoa-video-research.webp",
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-25T00:58:00Z"
+    },
+    {
+      "id": "digital-declutterer",
+      "slug": "digital-declutterer-subscriptions-audit",
+      "title": "数字断舍离：邮箱、网盘与订阅审计",
+      "titleEn": "Digital Declutterer",
+      "summary": "官方扩容帖里的 Digital declutterer：全天候审计邮箱、Drive 和付费订阅，整理出可取消清单（金额、最近使用）。只有你点头才丢弃或退订。",
+      "categories": [
+        "automation",
+        "ops",
+        "finance"
+      ],
+      "role": "Digital Declutterer",
+      "sourceUrl": "https://x.ai/news/grok-bot-more-plans",
+      "sourceType": "official-launch",
+      "qualityNote": "官方「Jobs Bots are doing today」新角色，审批边界非常清晰：只审计、列清单，退订必须人审。适合作为第一个生活向 Routine。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不丢弃文件、不退订、不删除账号；只返回审计清单。",
+      "connectors": [
+        "email",
+        "gmail",
+        "expense"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-21",
+      "updatedAt": "2026-08-25T01:10:00Z"
+    },
+    {
+      "id": "meeting-stand-in",
+      "slug": "meeting-stand-in-notes-and-summary",
+      "title": "会议替身：缺席时入会并带回摘要",
+      "titleEn": "Meeting Stand-in",
+      "summary": "官方扩容角色 Meeting stand-in：你去不了时由 Bot 入会、向房间说明你在场、做详细笔记并发送摘要，让你事后仍跟得上。",
+      "categories": [
+        "automation",
+        "daily-digest",
+        "content"
+      ],
+      "role": "Meeting Stand-in",
+      "sourceUrl": "https://x.ai/news/grok-bot-more-plans",
+      "sourceType": "official-launch",
+      "qualityNote": "和「会议笔记 → 任务」不同：这是真人缺席时的入会替身。日历/会议权限敏感，摘要外发需审批。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "入会与对外发摘要前需人审；不代为做承诺或改日程。",
+      "connectors": [
+        "calendar",
+        "email"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-21",
+      "updatedAt": "2026-08-25T01:10:00Z"
+    },
+    {
+      "id": "website-builder-bot",
+      "slug": "website-builder-domain-and-deploy",
+      "title": "建站 Bot：做站、买域名、部署上线",
+      "titleEn": "Website Builder",
+      "summary": "官方扩容角色 Website builder：搭建站点、购买域名并部署最终版本，协助配置插件、交出可访问 URL，并加上跳转规则。与「多 Bot 上线小组」互补，这是单 Bot 端到端交付。",
+      "categories": [
+        "coding",
+        "content",
+        "automation"
+      ],
+      "role": "Website Builder",
+      "sourceUrl": "https://x.ai/news/grok-bot-more-plans",
+      "sourceType": "official-launch",
+      "qualityNote": "官方点名会买域名和部署，属于高后果动作。适合先在草稿环境做站，域名购买与 DNS/跳转必须审批。",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不购买域名、不改 DNS、不部署到生产；先交出预览站与清单。",
+      "connectors": [
+        "github",
+        "staging"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-21",
+      "updatedAt": "2026-08-25T01:10:00Z"
     }
   ]
 }
