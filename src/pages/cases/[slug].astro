@@ -13,7 +13,7 @@ import {
   isOfficial,
   sourceTypeLabel,
 } from "../../lib/labels";
-import { withBase } from "../../lib/paths";
+import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
   return cases.map((item) => ({
@@ -47,6 +47,13 @@ const sources = [item.sourceUrl, ...(item.secondaryUrls ?? [])];
       <h1>{item.title}</h1>
       <p class="title-en">{item.titleEn}</p>
       <p class="lede">{item.summary}</p>
+      {
+        item.previewImage && (
+          <p class="detail-preview">
+            <img src={assetUrl(item.previewImage)} alt="" />
+          </p>
+        )
+      }
     </article>
 
     <div class="detail-grid">
