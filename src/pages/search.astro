@@ -44,33 +44,37 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
         <button type="button" class="search-tab" data-lib="agent-ui" aria-selected="false">Agent UI</button>
       </div>
       <p class="count-row" data-count data-count-all-zh={ui.search.countAll.zh} data-count-all-en={ui.search.countAll.en} data-count-one-zh={ui.search.countOne.zh} data-count-one-en={ui.search.countOne.en}></p>
-      <div class="masonry" data-results>
-        {
-          cases.map((item) => (
-            <div
-              class="item"
-              data-item
-              data-lib="grok"
-              data-text={`${caseSearchText(item)} ${item.categories.map((cat) => categoryLabel(cat)).join(" ")} ${item.categories.map((cat) => categoryLabel(cat, "en")).join(" ")} ${sourceBadgeLabel(item.sourceType)} ${sourceBadgeLabel(item.sourceType, "en")} ${difficultyLabel(item.difficulty)} ${difficultyLabel(item.difficulty, "en")}`}
-            >
-              <CaseCard caseItem={item} />
-            </div>
-          ))
-        }
-        {
-          htmlItems.map((item) => (
-            <div class="item" data-item data-lib="html" data-text={`${htmlSearchText(item)} ${item.types.map((type) => htmlTypeLabel(type)).join(" ")} ${item.types.map((type) => htmlTypeLabel(type, "en")).join(" ")}`}>
-              <HtmlCard item={item} />
-            </div>
-          ))
-        }
-        {
-          agentUiItems.map((item) => (
-            <div class="item" data-item data-lib="agent-ui" data-text={`${agentUiSearchText(item)} ${item.types.map((type) => agentUiTypeLabel(type)).join(" ")} ${item.types.map((type) => agentUiTypeLabel(type, "en")).join(" ")}`}>
-              <AgentUiCard item={item} />
-            </div>
-          ))
-        }
+      <div class="search-results" data-results>
+        <div class="tweet-feed" data-grok-results>
+          {
+            cases.map((item) => (
+              <div
+                class="item"
+                data-item
+                data-lib="grok"
+                data-text={`${caseSearchText(item)} ${item.categories.map((cat) => categoryLabel(cat)).join(" ")} ${item.categories.map((cat) => categoryLabel(cat, "en")).join(" ")} ${sourceBadgeLabel(item.sourceType)} ${sourceBadgeLabel(item.sourceType, "en")} ${difficultyLabel(item.difficulty)} ${difficultyLabel(item.difficulty, "en")}`}
+              >
+                <CaseCard caseItem={item} />
+              </div>
+            ))
+          }
+        </div>
+        <div class="masonry" data-visual-results>
+          {
+            htmlItems.map((item) => (
+              <div class="item" data-item data-lib="html" data-text={`${htmlSearchText(item)} ${item.types.map((type) => htmlTypeLabel(type)).join(" ")} ${item.types.map((type) => htmlTypeLabel(type, "en")).join(" ")}`}>
+                <HtmlCard item={item} />
+              </div>
+            ))
+          }
+          {
+            agentUiItems.map((item) => (
+              <div class="item" data-item data-lib="agent-ui" data-text={`${agentUiSearchText(item)} ${item.types.map((type) => agentUiTypeLabel(type)).join(" ")} ${item.types.map((type) => agentUiTypeLabel(type, "en")).join(" ")}`}>
+                <AgentUiCard item={item} />
+              </div>
+            ))
+          }
+        </div>
       </div>
       <p class="empty" hidden data-empty><Loc zh={ui.search.empty.zh} en={ui.search.empty.en} /></p>
     </div>
@@ -139,6 +143,10 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
           .replace("{agent}", String(agentVisible));
       }
       if (empty) empty.toggleAttribute("hidden", visible !== 0);
+      const grokBox = root.querySelector<HTMLElement>("[data-grok-results]");
+      const visualBox = root.querySelector<HTMLElement>("[data-visual-results]");
+      if (grokBox) grokBox.hidden = grokVisible === 0;
+      if (visualBox) visualBox.hidden = htmlVisible + agentVisible === 0;
       syncUrl();
     };
 

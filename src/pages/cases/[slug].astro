@@ -74,9 +74,9 @@ const safeWithBoundEn = boundEn
       </p>
       {
         item.previewImage && (
-          <p class="detail-preview">
+          <figure class="detail-preview">
             <img src={assetUrl(item.previewImage)} alt="" />
-          </p>
+          </figure>
         )
       }
     </article>
@@ -138,7 +138,7 @@ const safeWithBoundEn = boundEn
           related.length > 0 && (
             <section class="section">
               <h2><Loc zh={ui.detail.related.zh} en={ui.detail.related.en} /></h2>
-              <div class="masonry masonry-related">
+              <div class="tweet-feed tweet-feed-related">
                 {related.map((relatedItem) => (
                   <CaseCard caseItem={relatedItem} />
                 ))}

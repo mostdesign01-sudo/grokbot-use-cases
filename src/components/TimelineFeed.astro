@@ -1,22 +1,45 @@
 ---
+import type { CaseItem } from "../lib/cases";
 import { formatShanghaiTime, groupByShanghaiDay } from "../lib/format";
 import { ui } from "../lib/i18n";
 import type { TimelineEntry } from "../lib/timeline";
 import Badge from "./Badge.astro";
+import CaseCard from "./CaseCard.astro";
 import QualityNote from "./QualityNote.astro";
 
 interface Props {
-  items: TimelineEntry[];
+  cases?: CaseItem[];
+  items?: TimelineEntry[];
+  showLibBadge?: boolean;
   emptyLabel?: string;
   emptyLabelEn?: string;
 }
 
-const { items, emptyLabel = "最近还没有校对过的条目。", emptyLabelEn = "No recently checked items." } = Astro.props;
-const groups = groupByShanghaiDay(items, (item) => item.updatedAt);
+const {
+  cases,
+  items = [],
+  showLibBadge = false,
+  emptyLabel = "最近还没有校对过的条目。",
+  emptyLabelEn = "No recently checked items.",
+} = Astro.props;
+const groups = cases ? [] : groupByShanghaiDay(items, (item) => item.updatedAt);
 ---
 
 {
-  groups.length === 0 ? (
+  cases ? (
+    cases.length === 0 ? (
+      <p class="empty">
+        <span class="loc-zh">{emptyLabel}</span>
+        <span class="loc-en">{emptyLabelEn}</span>
+      </p>
+    ) : (
+      <div class="tweet-feed">
+        {cases.map((item) => (
+          <CaseCard caseItem={item} showLibBadge={showLibBadge} />
+        ))}
+      </div>
+    )
+  ) : groups.length === 0 ? (
     <p class="empty">
       <span class="loc-zh">{emptyLabel}</span>
       <span class="loc-en">{emptyLabelEn}</span>
@@ -29,26 +52,39 @@ const groups = groupByShanghaiDay(items, (item) => item.updatedAt);
             <span class="loc-zh">{group.title}</span>
             <span class="loc-en">{group.titleEn}</span>
           </h3>
-          <div class="feed-list">
+          <div class="tweet-feed">
             {group.items.map((item) => (
               <article
                 class="feed-item"
                 data-filter-card
-                data-filter-text={`${item.title} ${item.summary} ${item.qualityNote}`}
+                data-filter-text={`${item.title} ${item.titleEn ?? ""} ${item.summary} ${item.summaryEn ?? ""} ${item.qualityNote}`}
               >
                 <time class="feed-time" datetime={item.updatedAt}>
                   {formatShanghaiTime(item.updatedAt)}
                 </time>
-                <a class="feed-card" href={item.href}>
+                <a class="tweet-card feed-card" href={item.href}>
                   <div class="badges">
                     {item.badges.map((badge) => (
-                      <Badge kind={badge.kind} label={badge.label} />
+                      <Badge kind={badge.kind} label={badge.label} labelEn={badge.labelEn ?? badge.label} />
                     ))}
                     {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
                   </div>
-                  <h4>{item.title}</h4>
-                  <p class="summary">{item.summary}</p>
-                  <QualityNote note={item.qualityNote} />
+                  <h4>
+                    <span class="loc-zh">{item.title}</span>
+                    <span class="loc-en">{item.titleEn ?? item.title}</span>
+                  </h4>
+                  <p class="summary">
+                    <span class="loc-zh">{item.summary}</span>
+                    <span class="loc-en">{item.summaryEn ?? item.summary}</span>
+                  </p>
+                  {
+                    item.image && (
+                      <div class="tweet-media">
+                        <img src={item.image} alt="" loading="lazy" decoding="async" />
+                      </div>
+                    )
+                  }
+                  <QualityNote note={item.qualityNote} noteEn={item.qualityNoteEn} />
                 </a>
               </article>
             ))}

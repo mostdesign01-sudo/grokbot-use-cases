@@ -1,10 +1,10 @@
 ---
 import type { CaseItem } from "../lib/cases";
+import { formatShanghaiStamp } from "../lib/format";
 import { ui } from "../lib/i18n";
 import { categoryLabel, difficultyLabel, sourceBadgeKind, sourceBadgeLabel } from "../lib/labels";
-import { withBase } from "../lib/paths";
+import { assetUrl, withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
-import PinVisual from "./PinVisual.astro";
 
 interface Props {
   caseItem: CaseItem;
@@ -12,11 +12,17 @@ interface Props {
 }
 
 const { caseItem, showLibBadge = false } = Astro.props;
+const preview = assetUrl(caseItem.previewImage);
+const stampZh = formatShanghaiStamp(caseItem.updatedAt);
+const stampEn = formatShanghaiStamp(caseItem.updatedAt, "en-US");
 ---
 
-<a class="pin-card case-card pin-grok" href={withBase(`cases/${caseItem.slug}/`)}>
-  <PinVisual lib="grok" title={caseItem.title} titleEn={caseItem.titleEn} seed={caseItem.slug} image={caseItem.previewImage} />
-  <div class="pin-body">
+<a class="tweet-card case-card" href={withBase(`cases/${caseItem.slug}/`)}>
+  <div class="tweet-top">
+    <time class="tweet-time" datetime={caseItem.updatedAt}>
+      <span class="loc-zh">{stampZh}</span>
+      <span class="loc-en">{stampEn}</span>
+    </time>
     <div class="badges">
       {showLibBadge && <Badge kind="approval" label="Grok Bot" />}
       <Badge
@@ -26,25 +32,34 @@ const { caseItem, showLibBadge = false } = Astro.props;
       />
       {caseItem.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
       {caseItem.requiresApproval && <Badge kind="approval" label={ui.badge.approval.zh} labelEn={ui.badge.approval.en} />}
+      {caseItem.hasRoutine && <Badge kind="routine" label={ui.badge.routine.zh} labelEn={ui.badge.routine.en} />}
+      {caseItem.hasMultiAgent && <Badge kind="multi" label={ui.badge.multi.zh} labelEn={ui.badge.multi.en} />}
     </div>
-    <h3>
-      <span class="loc-zh">{caseItem.title}</span>
-      <span class="loc-en">{caseItem.titleEn}</span>
-    </h3>
-    <p class="title-en loc-zh">{caseItem.titleEn}</p>
-    <p class="pin-reveal summary">
-      <span class="loc-zh">{caseItem.summary}</span>
-      <span class="loc-en">{caseItem.summaryEn ?? caseItem.summary}</span>
-    </p>
-    <div class="card-meta">
-      <span>
-        <span class="loc-zh">{difficultyLabel(caseItem.difficulty)}</span>
-        <span class="loc-en">{difficultyLabel(caseItem.difficulty, "en")}</span>
-      </span>
-      <span>
-        <span class="loc-zh">{caseItem.categories.map((cat) => categoryLabel(cat)).slice(0, 2).join(" · ")}</span>
-        <span class="loc-en">{caseItem.categories.map((cat) => categoryLabel(cat, "en")).slice(0, 2).join(" · ")}</span>
-      </span>
-    </div>
+  </div>
+  <h3>
+    <span class="loc-zh">{caseItem.title}</span>
+    <span class="loc-en">{caseItem.titleEn}</span>
+  </h3>
+  <p class="title-en loc-zh">{caseItem.titleEn}</p>
+  <p class="summary">
+    <span class="loc-zh">{caseItem.summary}</span>
+    <span class="loc-en">{caseItem.summaryEn ?? caseItem.summary}</span>
+  </p>
+  {
+    preview && (
+      <div class="tweet-media">
+        <img src={preview} alt="" loading="lazy" decoding="async" />
+      </div>
+    )
+  }
+  <div class="card-meta">
+    <span>
+      <span class="loc-zh">{difficultyLabel(caseItem.difficulty)}</span>
+      <span class="loc-en">{difficultyLabel(caseItem.difficulty, "en")}</span>
+    </span>
+    <span>
+      <span class="loc-zh">{caseItem.categories.map((cat) => categoryLabel(cat)).slice(0, 2).join(" · ")}</span>
+      <span class="loc-en">{caseItem.categories.map((cat) => categoryLabel(cat, "en")).slice(0, 2).join(" · ")}</span>
+    </span>
   </div>
 </a>

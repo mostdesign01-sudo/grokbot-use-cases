@@ -1,6 +1,6 @@
 ---
-import CaseCard from "../components/CaseCard.astro";
 import Loc from "../components/Loc.astro";
+import TimelineFeed from "../components/TimelineFeed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getLatestCases } from "../lib/cases";
 import { ui } from "../lib/i18n";
@@ -36,9 +36,7 @@ const latest = getLatestCases();
     </section>
 
     <section class="section" aria-label={ui.grok.latestList.zh} data-aria-zh={ui.grok.latestList.zh} data-aria-en={ui.grok.latestList.en}>
-      <div class="masonry">
-        {latest.map((item) => <CaseCard caseItem={item} />)}
-      </div>
+      <TimelineFeed cases={latest} />
     </section>
   </div>
 </BaseLayout>

@@ -1006,7 +1006,20 @@ select:focus {
   height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: top center;
+}
+
+.detail-preview {
+  margin: 12px 0 0;
+  max-width: 22rem;
+}
+
+.detail-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
 }
 
 .kv {
@@ -1461,7 +1474,7 @@ select:focus {
 
 .feed-card .summary {
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 13.5px;
@@ -1781,9 +1794,7 @@ a.pin-card.agent-ui-card:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.02);
-  transition: transform 0.5s ease;
+  object-position: top center;
 }
 
 .pin-visual.has-image::after {
@@ -1795,10 +1806,7 @@ a.pin-card.agent-ui-card:hover {
   background: linear-gradient(180deg, transparent 58%, rgba(8, 8, 10, 0.32) 100%);
 }
 
-.pin-card:hover .pin-visual.has-image img {
-  transform: scale(1.07);
-}
-
+.pin-ratio-shot { aspect-ratio: 3 / 2; }
 .pin-ratio-0 { aspect-ratio: 4 / 5; }
 .pin-ratio-1 { aspect-ratio: 1 / 1; }
 .pin-ratio-2 { aspect-ratio: 3 / 4; }
@@ -1955,6 +1963,75 @@ html[data-theme="light"] .pin-agent-ui .pin-pattern-4 {
 
 .masonry .library-search {
   max-width: none;
+}
+
+.search-results {
+  display: grid;
+  gap: 22px;
+}
+
+.tweet-feed {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+}
+
+.tweet-feed-related,
+.search-results .tweet-feed {
+  max-width: none;
+}
+
+.tweet-feed > .item,
+.tweet-feed > [data-filter-card] {
+  display: block;
+  min-width: 0;
+}
+
+.tweet-card,
+a.tweet-card.case-card {
+  display: grid;
+  gap: 6px;
+  min-height: 0;
+  padding: 12px 14px 13px;
+}
+
+.tweet-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.tweet-time {
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.tweet-card h3,
+.tweet-card h4 {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.35;
+}
+
+.tweet-media {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  max-height: 280px;
+}
+
+.tweet-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: top center;
 }
 
 @media (max-width: 900px) {
