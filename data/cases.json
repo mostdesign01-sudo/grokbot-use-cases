@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-24T01:10:00Z",
+    "updatedAt": "2026-08-25T00:58:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.0",
-    "count": 21,
+    "version": "1.2.0",
+    "count": 22,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -11,7 +11,8 @@
       "https://cursor.com/blog/automations",
       "https://moderncreator.app/2026-08-13-brock-mesarich-ai-for-non-techies-5-practical-ways-to-use-grok-bot-s-multi-agent-system",
       "https://composio.dev/content/guide-to-frok-bot",
-      "https://docs.x.ai/grok-bot/faq"
+      "https://docs.x.ai/grok-bot/faq",
+      "https://x.com/KanekoaTheGreat/status/2092020672914755841"
     ]
   },
   "cases": [
@@ -654,6 +655,41 @@
       "featured": true,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-24T01:10:00Z"
+    },
+    {
+      "id": "kanekoa-video-research",
+      "slug": "kanekoa-seheult-video-research-cutdown",
+      "title": "把几十条访谈视频收成一条可看的成片",
+      "titleEn": "Research, transcribe, and cut a science video brief",
+      "summary": "KanekoaTheGreat 用自然语言让 Grok Bot 找出 Dr. Roger Seheult 谈阳光、红光、红外与线粒体的全部相关视频（含 MedCram，以及与 Huberman、Eric Berg、Steven Bartlett 等的访谈）。几分钟后交出：38 条视频转写合成一份 Word、精选 13 段科学讲解并剪成 19:35 成片、以及带原片时间戳的 Markdown 摘要。无脚本、无代码。",
+      "categories": [
+        "research",
+        "content",
+        "automation"
+      ],
+      "role": "Video Research Editor",
+      "sourceUrl": "https://x.com/KanekoaTheGreat/status/2092020672914755841",
+      "secondaryUrls": [
+        "https://x.com/KanekoaTheGreat"
+      ],
+      "sourceType": "community",
+      "qualityNote": "社区真人工作流：非程序员用一句话把「搜片—转写—精选—剪辑—摘要」一次做完。适合作为研究/内容 Bot 的示范，外发成片前仍建议人审。",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "成片与对外发布前需人审；注明素材来源与时间戳，不把转写当最终引用。",
+      "connectors": [
+        "browser",
+        "youtube",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/kanekoa-video-research.webp",
+      "publishedAt": "2026-08-24",
+      "updatedAt": "2026-08-25T00:58:00Z"
     }
   ]
 }
