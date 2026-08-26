@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-26T01:20:00Z",
+    "updatedAt": "2026-08-26T03:14:01Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.0",
-    "count": 18
+    "version": "1.4.0",
+    "count": 20
   },
   "items": [
     {
@@ -474,6 +474,64 @@
         "codepen",
         "mit",
         "devtools"
+      ]
+    },
+    {
+      "id": "dont-wordle",
+      "slug": "dont-wordle",
+      "title": "Don't Wordle",
+      "titleEn": "Don't Wordle",
+      "summary": "免费每日单词游戏：规则像 Wordle，但目标是避开隐藏词。绿格必须留在原位、黄格必须换位、灰格禁用；有效词池会越猜越少，猜中即败。可撤销。",
+      "summaryEn": "A free daily word game: Wordle rules, but you lose if you guess the hidden word. Greens stay put, yellows must move, grays are banned; the valid-word pool shrinks until you get cornered. Undos allowed.",
+      "types": [
+        "interactive"
+      ],
+      "sourceUrl": "https://dontwordle.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49432319"
+      ],
+      "previewImage": "/previews/dont-wordle.webp",
+      "featured": true,
+      "publishedAt": "2022-05-31",
+      "updatedAt": "2026-08-26T03:14:01Z",
+      "qualityNote": "公开可玩的每日 HTML 字谜。今日 HN 首页约 320 分（item 49432319，https://news.ycombinator.com/item?id=49432319）。由 Hacker News（news.ycombinator.com / @hackernews）发现。适合「游戏/互动」类收集。",
+      "qualityNoteEn": "A public daily HTML word game. On today’s HN front page at ~320 points (item 49432319, https://news.ycombinator.com/item?id=49432319). Found via Hacker News (news.ycombinator.com / @hackernews). Fits the game/interactive collection.",
+      "tags": [
+        "wordle",
+        "game",
+        "daily",
+        "html",
+        "hacker-news"
+      ]
+    },
+    {
+      "id": "rack-02",
+      "slug": "rack-02",
+      "title": "RACK-02：单文件 techno 机",
+      "titleEn": "RACK-02: a techno machine in one HTML file",
+      "summary": "整台模块化 techno 机写在一个 HTML 文件里：鼓组、贝斯、效果、场景与 CV 接线，浏览器即开即玩，无需安装。GitHub Pages 上的可玩页。",
+      "summaryEn": "A modular techno machine in a single HTML file: drums, bass, FX, scenes, and a CV patchbay. Open it in the browser — no install. Live on GitHub Pages.",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "sourceUrl": "https://ssx360.github.io/rack-02/",
+      "secondaryUrls": [
+        "https://ssx360.github.io/rack-02/rack.html",
+        "https://news.ycombinator.com/item?id=49419351"
+      ],
+      "previewImage": "/previews/rack-02.webp",
+      "featured": true,
+      "publishedAt": "2026-08-24",
+      "updatedAt": "2026-08-26T03:14:01Z",
+      "qualityNote": "Show HN 单文件 HTML 合成器，约 228 分（item 49419351，https://news.ycombinator.com/item?id=49419351）。根域名 404，真实可玩页在 /rack-02/。由 Hacker News（news.ycombinator.com / @hackernews）发现。",
+      "qualityNoteEn": "Show HN single-file HTML synth, ~228 points (item 49419351, https://news.ycombinator.com/item?id=49419351). The domain root 404s; the live page is /rack-02/. Found via Hacker News (news.ycombinator.com / @hackernews).",
+      "tags": [
+        "audio",
+        "web-audio",
+        "single-file",
+        "html",
+        "hacker-news"
       ]
     }
   ]

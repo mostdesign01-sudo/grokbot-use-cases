@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-26",
+      "title": "HTML 收集：从 Hacker News 增收 Don't Wordle 与 RACK-02",
+      "body": "来源 Hacker News（news.ycombinator.com / @hackernews）：Don't Wordle（item 49432319，每日 HTML 字谜）与 RACK-02（item 49419351，单文件 techno 机）。均带 3:2 自托管预览。Grok Bot 与 Agent UI 今日无新增。",
+      "titleEn": "HTML Collection: Don't Wordle and RACK-02 from Hacker News",
+      "bodyEn": "From Hacker News (news.ycombinator.com / @hackernews): Don't Wordle (item 49432319, daily HTML word game) and RACK-02 (item 49419351, techno machine in one HTML file). Both have self-hosted 3:2 previews. No Grok Bot or Agent UI adds today."
+    },
+    {
+      "date": "2026-08-26",
       "title": "三库更新：Grok Bot +4，HTML +1，Agent UI +4",
       "body": "Grok Bot：官方扩容帖补游戏美术、办公室经理、客服政策内退款，另收 Debbie O'Brien 手机语音买菜教程。HTML 收集：slideVars（3:2 自托管预览）。Agent UI：ThreeUI Community 新增 Koi Studies、Bestsellers Book Showcase、Country Towers、Character Carousel（均免费、免登录，带预览）。",
       "titleEn": "All three libraries: Grok Bot +4, HTML +1, Agent UI +4",
