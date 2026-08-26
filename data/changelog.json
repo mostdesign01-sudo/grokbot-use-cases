@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-08-26",
+      "title": "三库更新：Grok Bot +4，HTML +1，Agent UI +4",
+      "body": "Grok Bot：官方扩容帖补游戏美术、办公室经理、客服政策内退款，另收 Debbie O'Brien 手机语音买菜教程。HTML 收集：slideVars（3:2 自托管预览）。Agent UI：ThreeUI Community 新增 Koi Studies、Bestsellers Book Showcase、Country Towers、Character Carousel（均免费、免登录，带预览）。",
+      "titleEn": "All three libraries: Grok Bot +4, HTML +1, Agent UI +4",
+      "bodyEn": "Grok Bot: remaining official expansion roles Game Artist, Office Manager, Customer Support in-policy refunds, plus Debbie O'Brien’s mobile voice grocery tutorial. HTML Collection: slideVars (self-hosted 3:2 preview). Agent UI: ThreeUI Community adds Koi Studies, Bestsellers Book Showcase, Country Towers, Character Carousel (free, no login, with previews)."
+    },
+    {
       "date": "2026-08-25",
       "title": "Grok Bot：收录官方扩容帖 3 个新角色",
       "body": "来源 https://x.ai/news/grok-bot-more-plans ：数字断舍离、会议替身、建站 Bot。HTML 收集与 Agent UI 今日无新增（避免无预览的色块条目）。",

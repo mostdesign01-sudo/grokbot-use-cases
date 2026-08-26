@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-24T09:10:00Z",
+    "updatedAt": "2026-08-26T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.0",
-    "count": 14
+    "version": "1.2.0",
+    "count": 18
   },
   "items": [
     {
@@ -473,6 +473,142 @@
       "summaryEn": "Article-open wordmarks: free intro type, particle wordmarks, and audio wordmarks. Fits a long-form or changelog header.",
       "qualityNoteEn": "Reusable for blog/log titles. Hand the Skill to an Agent to change copy and rhythm; keep particle density low.",
       "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read."
+    },
+    {
+      "id": "koi-studies",
+      "slug": "koi-studies",
+      "title": "Koi Studies",
+      "titleEn": "Koi Studies",
+      "summary": "ThreeUI Community 的锦鲤卡片叠：CSS 3D 深度、指针倾斜、拖拽/键盘翻页，三张日本画风研究（Kōhaku / Shūsui / Utsuri）。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community koi card stack: CSS 3D depth, pointer tilt, drag and keyboard paging, three Japanese studies (Kōhaku / Shūsui / Utsuri). No login; copy the prompt.",
+      "types": [
+        "ui",
+        "motion",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/css/koi-studies",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/koi-studies.webp",
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "qualityNote": "Community 免费组件，出现在 ThreeUI 公开「最新」列表。复制 Skill.md 只改纸色、印章红和翻页速度即可，不必手写 CSS 3D。",
+      "qualityNoteEn": "A free Community component on ThreeUI’s public Newest list. Copy Skill.md and only change paper color, seal red, and flip speed — no hand-written CSS 3D.",
+      "tags": [
+        "threeui",
+        "community",
+        "css",
+        "cards",
+        "koi"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Koi Studies 做作品集封面。保持 Community 免费变体，换成我们的纸色和主红，翻页慢一点，打开减弱动效时用静态叠。",
+      "promptHintEn": "Use Koi Studies as a portfolio cover. Keep the free Community variant, switch to our paper color and primary red, slow the flip, and use a static stack when reduced motion is on."
+    },
+    {
+      "id": "bestsellers-book-showcase",
+      "slug": "bestsellers-book-showcase",
+      "title": "Bestsellers Book Showcase",
+      "titleEn": "Bestsellers Book Showcase",
+      "summary": "ThreeUI Community 的完整 Field Manuals 书封陈列落地页：编辑式排版、作者动效、嵌入媒体，可改标题字体与主色。免登录。",
+      "summaryEn": "ThreeUI Community’s complete Field Manuals book-cover showcase landing page: editorial layout, authored motion, embedded media, with heading font and primary color controls. No login.",
+      "types": [
+        "landing",
+        "hero",
+        "section"
+      ],
+      "sourceUrl": "https://threeui.com/hero/bestsellers-book-showcase",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/bestsellers-book-showcase.webp",
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "qualityNote": "Community 免费完整 HTML 落地页，不是 Pro。适合让 Agent 当「书/系列产品首屏」模板，只改字体和主色。",
+      "qualityNoteEn": "A free Community full-HTML landing page, not Pro. A good Agent template for a book/series first screen: change font and primary color only.",
+      "tags": [
+        "threeui",
+        "community",
+        "landing",
+        "hero",
+        "books"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Bestsellers Book Showcase 做系列手册首屏。保持 Community 免费版，换成我们的书名、主色和衬线字体，不要加 Pro 变体。",
+      "promptHintEn": "Use Bestsellers Book Showcase as a series-manual first screen. Keep the free Community edition, swap in our titles, primary color, and serif; do not add Pro variants."
+    },
+    {
+      "id": "japanese-tower",
+      "slug": "country-towers",
+      "title": "Country Towers",
+      "titleEn": "Country Towers",
+      "summary": "ThreeUI Community 的六国塔楼场景：日式天守、中式、越南、泰国、高棉、奥斯曼，程序化地形上自动搭建，可轨道旋转。免登录。",
+      "summaryEn": "ThreeUI Community six-country tower scene: Japanese tenshu, Chinese, Vietnamese, Thai, Khmer, and Ottoman, assembling on a procedural landscape with orbit controls. No login.",
+      "types": [
+        "threejs",
+        "hero",
+        "background"
+      ],
+      "sourceUrl": "https://threeui.com/three-js/japanese-tower/japan",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/japanese-tower.webp",
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "qualityNote": "Community 免费 Three.js 场景，六个国家变体都在免费目录里。适合当地理/建筑向 Hero，不要写成 Pro。",
+      "qualityNoteEn": "A free Community Three.js scene; all six country variants are in the free catalog. A good geography/architecture hero. Do not describe it as Pro.",
+      "tags": [
+        "threeui",
+        "community",
+        "threejs",
+        "architecture",
+        "landscape"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Country Towers 的 Japan 变体做文化产品首屏。保持 Community 免费版，相机再远一点，搭建动画放慢，地形再绿一些。",
+      "promptHintEn": "Use the Japan variant of Country Towers as a cultural-product first screen. Keep the free Community edition, pull the camera back, slow the build animation, and make the terrain a bit greener."
+    },
+    {
+      "id": "character-carousel",
+      "slug": "character-carousel",
+      "title": "Character Carousel",
+      "titleEn": "Character Carousel",
+      "summary": "ThreeUI Community 的角色卡片走马灯：浅色胶片带与深色波浪两种免费变体，指针/滚轮/键盘切换人像卡片。适合 Agent 团队墙。免登录。",
+      "summaryEn": "ThreeUI Community character-card carousel: a light filmstrip and a dark wave as free variants, with pointer, wheel, and keyboard switching. A good Agent team wall. No login.",
+      "types": [
+        "ui",
+        "motion",
+        "section"
+      ],
+      "sourceUrl": "https://threeui.com/ui-elements/character-carousel/character-filmstrip",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/character-carousel.webp",
+      "featured": false,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "qualityNote": "Community 免费 UI 件，和已有 Brand Orbs 不同：这是人像卡片而不是 logo 球。复制 prompt 换名字、职位和配色即可。",
+      "qualityNoteEn": "A free Community UI piece, distinct from Brand Orbs: portrait cards, not logo orbs. Copy the prompt and swap names, titles, and palette.",
+      "tags": [
+        "threeui",
+        "community",
+        "carousel",
+        "cards",
+        "ui"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Character Carousel 的 filmstrip 变体做 Agent 团队墙。保持 Community 免费版，换成我们的人名与职责，主色跟品牌走。",
+      "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color."
     }
   ]
 }

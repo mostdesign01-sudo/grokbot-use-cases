@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-24T09:10:00Z",
+    "updatedAt": "2026-08-26T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.2.0",
-    "count": 17
+    "version": "1.3.0",
+    "count": 18
   },
   "items": [
     {
@@ -444,6 +444,37 @@
       "titleEn": "css-doodle",
       "summaryEn": "Web Components CSS pattern generator: draw grids, shapes, and motion with an extended CSS syntax. The docs site is a clickable live demo.",
       "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive."
+    },
+    {
+      "id": "slidevars",
+      "slug": "slidevars",
+      "title": "slideVars",
+      "titleEn": "slideVars",
+      "summary": "CodePen 开源的 CSS 变量控制面板：自动读取 :root 自定义属性，生成滑杆和取色器，改值立刻反映到页面。MIT，演示页公开可访问。",
+      "summaryEn": "CodePen’s open-source CSS-variable control panel: it auto-detects :root custom properties, builds sliders and color pickers, and reflects changes live. MIT, and the demo page is public.",
+      "types": [
+        "tool",
+        "interactive",
+        "component"
+      ],
+      "sourceUrl": "https://codepen.github.io/slideVars/",
+      "secondaryUrls": [
+        "https://github.com/codepen/slideVars",
+        "https://css-tricks.com/playing-with-codepen-slidevars/"
+      ],
+      "previewImage": "/previews/slidevars.webp",
+      "featured": false,
+      "publishedAt": "2026-01-02",
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "qualityNote": "适合当「给 Agent 调 CSS 变量」的对照页：复制两行 init 就能出面板。不是付费模板站。",
+      "qualityNoteEn": "A good reference page for “let an Agent tune CSS variables”: two lines of init produce the panel. Not a paid template shop.",
+      "tags": [
+        "css",
+        "custom-properties",
+        "codepen",
+        "mit",
+        "devtools"
+      ]
     }
   ]
 }
