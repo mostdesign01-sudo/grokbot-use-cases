@@ -1,11 +1,75 @@
 {
   "meta": {
-    "updatedAt": "2026-08-26T01:20:00Z",
+    "updatedAt": "2026-08-27T15:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.2.0",
-    "count": 18
+    "version": "1.3.0",
+    "count": 20
   },
   "items": [
+    {
+      "id": "buttermax",
+      "slug": "buttermax",
+      "title": "Buttermax",
+      "titleEn": "Buttermax",
+      "summary": "Buttermax 数字制作作品集站：鼠标跟随、3D、液态动效和页面转场都做得很顺，适合拆个人作品集的交互。",
+      "summaryEn": "Buttermax’s digital-production site: mouse-follow, 3D, liquid motion, and page transitions done smoothly — worth taking apart if you’re building a personal portfolio.",
+      "types": [
+        "landing",
+        "motion",
+        "hero"
+      ],
+      "sourceUrl": "https://buttermax.net/",
+      "secondaryUrls": [
+        "https://x.com/sts81998850/status/2092631071120920605"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T15:30:00Z",
+      "qualityNote": "风间推荐的交互参考站，标语是 The gold standard in buttery smooth digital production。免登录可逛。",
+      "qualityNoteEn": "An interaction reference recommended for portfolio work. Tagline: the gold standard in buttery smooth digital production. No login to browse.",
+      "tags": [
+        "landing",
+        "motion",
+        "3d",
+        "portfolio",
+        "hero"
+      ],
+      "promptHint": "参考 Buttermax 的首屏：大字标 + 中间一件 3D 物 + 少按钮。转场和鼠标跟随要慢、要润，不要堆特效。",
+      "promptHintEn": "Take Buttermax’s first screen: big wordmark, one 3D object in the middle, few buttons. Keep transitions and mouse-follow slow and smooth — don’t pile on effects.",
+      "previewImage": "/previews/buttermax.webp"
+    },
+    {
+      "id": "metalforge-progress",
+      "slug": "metalforge-progress",
+      "title": "MetalForge Progress",
+      "titleEn": "MetalForge Progress",
+      "summary": "MetalForge 的 Progress 进度条着色器：浏览器里免费调参、WebGPU 实时预览，可导出 SwiftUI Metal 或 React Native Skia（导出要 Pro）。",
+      "summaryEn": "MetalForge’s Progress bar shaders: free in-browser tweaking with a live WebGPU preview; export SwiftUI Metal or React Native Skia (export is Pro).",
+      "types": [
+        "ui",
+        "motion"
+      ],
+      "sourceUrl": "https://metalforge.xyz/",
+      "secondaryUrls": [
+        "https://x.com/sucodeee/status/2092222674478993525"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-27T15:30:00Z",
+      "qualityNote": "来自 @sucodeee 的进度条动画。现有库以 ThreeUI 为主，这条是同类 GPU UI 动效，编辑器免费可玩，导出文件要 Pro。",
+      "qualityNoteEn": "From @sucodeee’s progress-bar demo. The library is mostly ThreeUI; this is the same GPU-UI family. The editor is free to play; shipping files is Pro.",
+      "tags": [
+        "shader",
+        "progress",
+        "webgpu",
+        "swiftui",
+        "motion",
+        "ui"
+      ],
+      "promptHint": "用 MetalForge Progress 做同步/加载进度条。先在编辑器里选 Spring 或 Slosh，换成我们的主色，导出前先截预览给设计看。",
+      "promptHintEn": "Use MetalForge Progress for a sync/loading bar. Pick Spring or Slosh in the editor, switch to our primary color, and screenshot the preview for design before exporting.",
+      "previewImage": "/previews/metalforge-progress.webp"
+    },
     {
       "id": "structure-flow",
       "slug": "structure-flow",
