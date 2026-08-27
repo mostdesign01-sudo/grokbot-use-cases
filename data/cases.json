@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T01:15:00Z",
+    "updatedAt": "2026-08-27T17:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.1",
-    "count": 71,
+    "version": "1.4.2",
+    "count": 72,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -17,10 +17,51 @@
       "https://dev.to/debs_obrien/grok-bot-does-my-shopping-while-walking-the-twins-40l2",
       "https://x.com/GergelyOrosz/status/2090085668768694562",
       "https://docs.x.ai/grok-bot/bots",
-      "https://x.ai/bot/use-cases"
+      "https://x.ai/bot/use-cases",
+      "https://x.com/mattyp/status/2092286281266962681"
     ]
   },
   "cases": [
+    {
+      "id": "grokbot-getting-started",
+      "slug": "mattyp-getting-started-with-grok-bot",
+      "title": "Grok Bot 入门：从解剖到四条工作流",
+      "titleEn": "Getting Started with Grok Bot",
+      "summary": "SpaceXAI 的 Matt Palmer 做的 30 分钟入门片：Bot 是什么、解剖结构、三种运行方式、多 Bot 串联，以及四条可跟做的工作流——X 粉丝进 Notion、个人软件、用 Cursor 写代码、搜索。时间轴写在推文里。",
+      "summaryEn": "A 30-minute getting-started from SpaceXAI’s Matt Palmer: what a Bot is, its anatomy, three ways to run, multi-bot chains, and four follow-along workflows — X followers into Notion, personal software, coding with Cursor, and search. Chapters are in the post.",
+      "categories": [
+        "automation",
+        "multi-agent",
+        "coding",
+        "research"
+      ],
+      "role": "Getting Started Guide",
+      "sourceUrl": "https://x.com/mattyp/status/2092286281266962681",
+      "secondaryUrls": [
+        "https://x.com/mattyp"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "官方团队出的入门视频，四条工作流可直接跟做。适合当 Grok Bot 库的第一课，外发到 Notion 前仍要人审。",
+      "qualityNoteEn": "A getting-started video from the product team with four follow-along workflows. A good first lesson for the Grok Bot library; still review before writing to Notion.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "写入 Notion 或对外发帖前需人审；不要在演示里暴露密钥。",
+      "approvalBoundaryEn": "Review before writing to Notion or posting; do not expose secrets in the demo.",
+      "connectors": [
+        "x",
+        "notion",
+        "cursor",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/grokbot-getting-started.webp",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-27T17:05:00Z"
+    },
     {
       "id": "daily-briefing-writer",
       "slug": "daily-briefing-writer-stories",
