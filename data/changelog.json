@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-27",
+      "title": "Agent UI：增收 MetalForge Progress 与 Buttermax",
+      "body": "来源 X：@sucodeee 的 MetalForge 进度条 shader（https://metalforge.xyz/），以及风间推荐的 Buttermax 交互作品集（https://buttermax.net/）。Agent UI 18→20。",
+      "titleEn": "Agent UI: add MetalForge Progress and Buttermax",
+      "bodyEn": "From X: @sucodeee’s MetalForge progress-bar shaders (https://metalforge.xyz/), and Buttermax, the interaction portfolio site recommended by 风间 (https://buttermax.net/). Agent UI 18→20."
+    },
+    {
+      "date": "2026-08-27",
       "title": "Grok Bot：补录今早漏掉的 6 个官方目录角色",
       "body": "来源 https://x.ai/bot/use-cases ：Daily Briefing Writer、Executive Assistant、Newsletter Writer、Prospecting Plan Builder、Status Report Writer、CRM Operations Manager。今早 36 角色入库（29→65）时被当成近重复跳过，现补齐 65→71。",
       "titleEn": "Grok Bot: +6 official catalog roles missed in the morning ingest",
