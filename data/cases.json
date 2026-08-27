@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T00:15:26Z",
+    "updatedAt": "2026-08-27T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.0",
-    "count": 65,
+    "version": "1.4.1",
+    "count": 71,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -21,6 +21,221 @@
     ]
   },
   "cases": [
+    {
+      "id": "daily-briefing-writer",
+      "slug": "daily-briefing-writer-stories",
+      "title": "每日简报写手：只收真正重要的故事",
+      "titleEn": "Daily Briefing Writer",
+      "summary": "官方 Daily Briefing Writer：用高质量输入开场，而不是噪音；只交付对你真正重要的故事，一份收紧的每日简报。不发送、不改日程。",
+      "categories": [
+        "research",
+        "daily-digest"
+      ],
+      "role": "Daily Briefing Writer",
+      "sourceUrl": "https://x.ai/bot/use-cases#daily-briefing-writer",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成 chief-of-staff-digest 近重复漏掉。幕僚长对照优先级扫 Slack/邮件/日历；这里是新闻/故事简报。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不对外发送简报、不改日历；只返回待审的故事短名单。",
+      "connectors": [
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official Daily Briefing Writer: start the day with high-quality inputs instead of noise. Delivers a tight daily brief of only the stories that matter to you. Does not send or change the calendar.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest in the morning 65-case ingest. Chief of Staff maps Slack/email/calendar to priorities; this is a news/story brief.",
+      "approvalBoundaryEn": "Do not send the brief or change the calendar; return a review-only shortlist of stories."
+    },
+    {
+      "id": "executive-assistant",
+      "slug": "executive-assistant-catchup",
+      "title": "行政助理：晨间简报与入室补上下文",
+      "titleEn": "Executive Assistant",
+      "summary": "官方 Executive Assistant：不必泡在频道里也能保持定向。交付晨间简报，并在你加入新房间时自动补一份上下文摘要，避免刚进线程就迷路。不代发消息、不改会议。",
+      "categories": [
+        "daily-digest",
+        "ops"
+      ],
+      "role": "Executive Assistant",
+      "sourceUrl": "https://x.ai/bot/use-cases#executive-assistant",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成幕僚长/会议替身近重复漏掉。幕僚长是优先级对照摘要；会议替身是缺席入会；这里是晨报 + 入室补上下文。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送消息、不改会议、不代为承诺；只返回晨间简报与入室补上下文。",
+      "connectors": [
+        "slack",
+        "email",
+        "calendar"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official Executive Assistant: stay oriented without living in channels. Delivers a morning briefing, plus an automatic catch-up summary whenever you join a new room, so you are never lost in a thread you just entered. Does not send messages or change meetings.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-stand-in in the morning 65-case ingest. Chief of Staff is a priority map; Meeting Stand-in joins when you are absent; this is a morning brief plus in-room catch-up.",
+      "approvalBoundaryEn": "Do not send messages, change meetings, or make commitments; return the morning briefing and in-room catch-up only."
+    },
+    {
+      "id": "newsletter-writer",
+      "slug": "newsletter-writer-monthly",
+      "title": "Newsletter 写手：按时出月度更新",
+      "titleEn": "Newsletter Writer",
+      "summary": "官方 Newsletter Writer：按时发出月度营销与产品更新。从发布、赢单和日历拉取新内容，按你的声音写好当期，停在待审，让营销改一次就能发。",
+      "categories": [
+        "marketing",
+        "content"
+      ],
+      "role": "Newsletter Writer",
+      "sourceUrl": "https://x.ai/bot/use-cases#newsletter-writer",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成 one-person-company-stack 近重复漏掉。一人公司栈是多 Agent 运营模型里顺带写 newsletter；这里是独立的月度 Newsletter 写手。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不对外发送 Newsletter、不改已发布档期；只返回待审当期草稿。",
+      "connectors": [
+        "calendar",
+        "files",
+        "email"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official Newsletter Writer: ship monthly marketing and product updates on time. Pulls what's new from launches, wins, and your calendar, writes the issue in your voice, and parks it for review so marketing can edit once and send.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of one-person-company-stack in the morning 65-case ingest. The one-person stack is a multi-agent ops model that happens to include a newsletter; this is a standalone monthly Newsletter Writer.",
+      "approvalBoundaryEn": "Do not send the newsletter or change published dates; return the parked issue draft only."
+    },
+    {
+      "id": "prospecting-plan-builder",
+      "slug": "prospecting-plan-builder-tracker",
+      "title": "拓客计划搭建手：播种+补全+追踪表",
+      "titleEn": "Prospecting Plan Builder",
+      "summary": "官方 Prospecting Plan Builder：搭好本周工作簿。播种联系人、补全邮箱/手机，并写出可直接上手的追踪表，让外呼从名单开始。不发送、不改 CRM。",
+      "categories": [
+        "sales",
+        "ops"
+      ],
+      "role": "Prospecting Plan Builder",
+      "sourceUrl": "https://x.ai/bot/use-cases#prospecting-plan-builder",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成 sales-outbound-overnight / account-research-specialist 近重复漏掉。外呼是隔夜打分+草稿；研究专员是上手前研究包；这里是本周拓客名单与追踪表。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送外呼、不改 CRM、不入组；只返回播种名单、补全字段与待审追踪表。",
+      "connectors": [
+        "crm",
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official Prospecting Plan Builder: build the week's book of work. Seeds contacts, enriches email/mobile, and writes a ready-to-work tracker so outbound starts from a list. No send, no CRM writes.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of sales-outbound-overnight / account-research-specialist in the morning 65-case ingest. Outbound is overnight scoring plus drafts; Account Research is a pre-touch pack; this is the week's prospecting list and tracker.",
+      "approvalBoundaryEn": "Do not send outreach, edit the CRM, or add to sequences; return the seeded list, enrichments, and review-only tracker."
+    },
+    {
+      "id": "status-report-writer",
+      "slug": "status-report-writer-actions",
+      "title": "状态报告写手：活清单+晨间摘要",
+      "titleEn": "Status Report Writer",
+      "summary": "官方 Status Report Writer：把待办握在手里，避免漏项。从文档、会议和 Slack 拉取未完成事项，合成一份活清单和晨间摘要。不发送、不关项。",
+      "categories": [
+        "daily-digest",
+        "ops"
+      ],
+      "role": "Status Report Writer",
+      "sourceUrl": "https://x.ai/bot/use-cases#status-report-writer",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成幕僚长/会议笔记近重复漏掉。幕僚长对照优先级扫频道；会议笔记落任务；这里是跨文档/会议/Slack 的活待办清单 + 晨间摘要。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送摘要、不改他人任务、不关闭事项；只返回活清单与待审晨间摘要。",
+      "connectors": [
+        "files",
+        "slack",
+        "calendar"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official Status Report Writer: own the to-do so nothing slips. Pulls open action items from docs, meetings, and Slack into one living list and a morning digest. Does not send or close items.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-notes-tasks in the morning 65-case ingest. Chief of Staff maps channels to priorities; meeting notes drop tasks; this is a living action list plus morning digest.",
+      "approvalBoundaryEn": "Do not send the digest, change others' tasks, or close items; return the living list and review-only morning digest."
+    },
+    {
+      "id": "crm-operations-manager",
+      "slug": "crm-operations-manager-hygiene",
+      "title": "CRM 运营经理：会前会后清洁记录",
+      "titleEn": "CRM Operations Manager",
+      "summary": "官方 CRM Operations Manager：保持管道干净。在会议前后处理 CRM 与组织架构卫生，让记录保持最新，不必再人工过一遍。写入默认停在审批。",
+      "categories": [
+        "sales",
+        "ops"
+      ],
+      "role": "CRM Operations Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#crm-operations-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录角色，今早 65 条入库时被当成 crm-monday-scoreboard（Pipeline Analyst）近重复漏掉。周一记分板是停滞/承诺风险看板；这里是会前会后的 CRM 与组织架构卫生。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不擅自改 CRM 或组织架构、不对外发更新；会前会后卫生写入停在审批。",
+      "connectors": [
+        "crm",
+        "calendar",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T01:15:00Z",
+      "summaryEn": "Official CRM Operations Manager: keep the pipeline clean. Handles CRM and org-chart hygiene before and after meetings so records stay current without a manual pass. Writes stop for approval by default.",
+      "qualityNoteEn": "Official catalog role missed as a near-dupe of crm-monday-scoreboard (Pipeline Analyst) in the morning 65-case ingest. The Monday scoreboard is a stall/commit-risk board; this is pre- and post-meeting CRM and org-chart hygiene.",
+      "approvalBoundaryEn": "Do not write to the CRM or org chart, and do not send updates; park hygiene edits for approval."
+    },
     {
       "id": "apartment-scout",
       "slug": "apartment-scout-listing-tours",
