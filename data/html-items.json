@@ -1,11 +1,40 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T15:35:00Z",
+    "updatedAt": "2026-08-27T15:36:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.0",
-    "count": 22
+    "version": "1.3.1",
+    "count": 23
   },
   "items": [
+    {
+      "id": "designlang",
+      "slug": "designlang",
+      "title": "DesignLang",
+      "titleEn": "DesignLang",
+      "summary": "开源 CLI：对任意网址跑一遍 headless Chromium，抽出完整设计系统。DTCG token、Tailwind、CSS 变量、Figma、SwiftUI / Compose / Flutter，以及给 Cursor 的 MCP。",
+      "summaryEn": "Open-source CLI: point headless Chromium at any URL and pull the full design system — DTCG tokens, Tailwind, CSS variables, Figma, SwiftUI / Compose / Flutter, plus an MCP for Cursor.",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "sourceUrl": "https://designlang.app",
+      "secondaryUrls": [
+        "https://github.com/Manavarya09/design-extract",
+        "https://x.com/ricouii/status/2092803349636927589"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-27T15:36:00Z",
+      "qualityNote": "RicoUI 推荐。MIT，npx designlang stripe.com 即可，不用注册。站点演示有限额，CLI 不限。",
+      "qualityNoteEn": "Recommended by RicoUI. MIT; `npx designlang stripe.com` — no signup. The hosted demo is rate-limited; the CLI is not.",
+      "tags": [
+        "css",
+        "design",
+        "design-tokens",
+        "tool"
+      ],
+      "previewImage": "/previews/designlang.webp"
+    },
     {
       "id": "poster-comp-vol1",
       "slug": "poster-comp-vol1",
