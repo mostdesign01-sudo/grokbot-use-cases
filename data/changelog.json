@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-27",
+      "title": "Grok Bot：补录今早漏掉的 6 个官方目录角色",
+      "body": "来源 https://x.ai/bot/use-cases ：Daily Briefing Writer、Executive Assistant、Newsletter Writer、Prospecting Plan Builder、Status Report Writer、CRM Operations Manager。今早 36 角色入库（29→65）时被当成近重复跳过，现补齐 65→71。",
+      "titleEn": "Grok Bot: +6 official catalog roles missed in the morning ingest",
+      "bodyEn": "From https://x.ai/bot/use-cases: Daily Briefing Writer, Executive Assistant, Newsletter Writer, Prospecting Plan Builder, Status Report Writer, CRM Operations Manager. These were skipped as near-dupes during the morning 36-role ingest (29→65); catalog is now 65→71."
+    },
+    {
+      "date": "2026-08-27",
       "title": "Grok Bot：官方用法目录增收 36 个角色",
       "body": "来源 https://x.ai/bot/use-cases （及扩容帖退款追回经理）：公寓侦察、差旅协调、日历协调、招聘筛选、入职经理、客户研究、会前准备、销售通话教练、交易台、续约台、幻灯片现场更新、Beta 采用、通话 FAQ、文档审计、需求溯源、产品反馈、玩法测试、原型构建、云端 Agent 编排、安全问卷、供应商门户、合同台、退款追回、SEO/AEO、社媒、付费素材策略、LinkedIn 投放、营销日历、周边履约、社区运营、关键事件监测、活动嘉宾筛选、赋能交付、工单分拣、演示文稿设计、对内传播。已有 29 条对应角色未重复收录。@bot 时间线本次未能读取。",
       "titleEn": "Grok Bot: +36 roles from the official use-cases catalog",
