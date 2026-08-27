@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-26T01:20:00Z",
+    "updatedAt": "2026-08-27T00:15:26Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.0",
-    "count": 29,
+    "version": "1.4.0",
+    "count": 65,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -16,10 +16,1313 @@
       "https://x.ai/news/grok-bot-more-plans",
       "https://dev.to/debs_obrien/grok-bot-does-my-shopping-while-walking-the-twins-40l2",
       "https://x.com/GergelyOrosz/status/2090085668768694562",
-      "https://docs.x.ai/grok-bot/bots"
+      "https://docs.x.ai/grok-bot/bots",
+      "https://x.ai/bot/use-cases"
     ]
   },
   "cases": [
+    {
+      "id": "apartment-scout",
+      "slug": "apartment-scout-listing-tours",
+      "title": "公寓侦察：上架即筛、约看、再申请",
+      "titleEn": "Apartment Scout",
+      "summary": "官方 Life & Leverage 角色 Apartment Scout：房源一上架就按条件筛出短名单，邮件预约看房时间，只对你点头的房源提交申请。对外发信、预约与申请默认停在审批。",
+      "categories": [
+        "automation",
+        "ops"
+      ],
+      "role": "Apartment Scout",
+      "sourceUrl": "https://x.ai/bot/use-cases#apartment-scout",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 use-cases 目录新角色，生活向、可复现：筛房→约看→等人选再申请。与已有买菜/建站不同。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不擅自预约看房、不提交申请、不对外发邮件；只返回符合条件的短名单与待发预约草稿。",
+      "connectors": [
+        "browser",
+        "email",
+        "calendar"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Life & Leverage role Apartment Scout: as soon as listings hit the market it filters a shortlist, emails to book tour times, and applies only for the ones you pick. Outbound mail, bookings, and applications stop for approval by default.",
+      "qualityNoteEn": "New official catalog role. Reproducible life-admin flow: filter → book tours → apply only after you pick. Distinct from grocery shopping and website builder.",
+      "approvalBoundaryEn": "Do not book tours, submit applications, or send email; return only an eligible shortlist and draft booking messages."
+    },
+    {
+      "id": "travel-coordinator",
+      "slug": "travel-coordinator-hold-before-book",
+      "title": "差旅协调：比价占位，等人批再出票",
+      "titleEn": "Travel Coordinator",
+      "summary": "官方 Travel Coordinator：按你的规则比较航班与酒店，先占住快过期的优选项，确认后才预订，并把行程写进日历。出票、付款与改签必须人审。",
+      "categories": [
+        "automation",
+        "ops"
+      ],
+      "role": "Travel Coordinator",
+      "sourceUrl": "https://x.ai/bot/use-cases#travel-coordinator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录明确「先占位、确认后再订」。与会议替身、办公室排班不同：对象是机票酒店。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不付款、不出票、不改签；只返回比价结果、建议选项与待确认占位。",
+      "connectors": [
+        "browser",
+        "calendar",
+        "email"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Travel Coordinator: compares flights and hotels against your rules, holds the best option before it expires, books only after you confirm, and drops the itinerary onto the calendar. Ticketing, payment, and changes need a human.",
+      "qualityNoteEn": "Official catalog is explicit: hold first, book after confirm. Distinct from meeting stand-in and office-manager scheduling.",
+      "approvalBoundaryEn": "Do not pay, ticket, or change bookings; return only the comparison, a recommended hold, and a confirm request."
+    },
+    {
+      "id": "calendar-coordinator",
+      "slug": "calendar-coordinator-chase-holds",
+      "title": "日历协调：跨日历约齐人并追 hold",
+      "titleEn": "Calendar Coordinator",
+      "summary": "官方 Recruiting & People 角色 Calendar Coordinator：跨多本日历把人约到同一房间，并追那些没人有空去追的 hold。对外发邀请与改期默认停在审批。",
+      "categories": [
+        "ops",
+        "recruiting",
+        "automation"
+      ],
+      "role": "Calendar Coordinator",
+      "sourceUrl": "https://x.ai/bot/use-cases#calendar-coordinator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方目录新角色。已有会议笔记→任务、会议替身都不覆盖「跨日历追 convene / hold」。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送会议邀请、不改他人日历；只返回可行时段、冲突说明与待发邀请草稿。",
+      "connectors": [
+        "calendar",
+        "email"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Recruiting & People role Calendar Coordinator: gets people in the same room across calendars and chases the holds nobody else has time to chase. External invites and reschedules stop for approval by default.",
+      "qualityNoteEn": "New official role. Existing meeting-notes and meeting-stand-in do not cover cross-calendar convening and hold-chasing.",
+      "approvalBoundaryEn": "Do not send invites or change others’ calendars; return feasible slots, conflicts, and draft invites only."
+    },
+    {
+      "id": "hiring-screener",
+      "slug": "hiring-screener-ats-ready-review",
+      "title": "招聘筛选：只把过线的人交给面试",
+      "titleEn": "Hiring Screener",
+      "summary": "官方 Hiring Screener：按既定标准给申请或作品打分，交出 ATS 可直接审的评审包。和 Talent Scout 的「对外寻源」不同——这里吃的是已投递材料。不联系候选人。",
+      "categories": [
+        "recruiting",
+        "automation"
+      ],
+      "role": "Hiring Screener",
+      "sourceUrl": "https://x.ai/bot/use-cases#hiring-screener",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方把寻源（Talent Scout）和筛选分成两个角色。现有 29 条只有寻源。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不联系候选人、不改 ATS 状态、不拒绝或推进；只返回带证据的打分与待审名单。",
+      "connectors": [
+        "ats",
+        "email",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Hiring Screener: scores applications or work samples against a defined bar and hands off an ATS-ready review. Distinct from Talent Scout (outbound sourcing)—this role consumes inbound materials. Do not contact candidates.",
+      "qualityNoteEn": "Official catalog splits sourcing (Talent Scout) from screening. The existing 29 only cover sourcing.",
+      "approvalBoundaryEn": "Do not contact candidates, change ATS status, reject, or advance anyone; return a scored, evidence-backed review list only."
+    },
+    {
+      "id": "onboarding-manager",
+      "slug": "onboarding-manager-day-one-path",
+      "title": "入职经理：给新人一条路径而不是一堆链接",
+      "titleEn": "Onboarding Manager",
+      "summary": "官方 Onboarding Manager：为新员工建清单、抽齐文档、回答 Day-1 问题，并把卡住的事项路由给能解堵的人。不擅自开通账号或对外发欢迎信。",
+      "categories": [
+        "recruiting",
+        "ops",
+        "automation"
+      ],
+      "role": "Onboarding Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#onboarding-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 People 向新角色。现有 Talent Scout / 办公室经理都不覆盖新员工入职路径。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不开通账号、不改权限、不对外发欢迎信；只返回入职清单、文档包与待路由问题。",
+      "connectors": [
+        "email",
+        "files",
+        "slack",
+        "calendar"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Onboarding Manager: builds the checklist, pulls the right docs, answers day-one questions, and routes each ask to whoever can unblock it. Does not provision accounts or send welcome mail on its own.",
+      "qualityNoteEn": "New official People role. Talent Scout and Office Manager do not cover a new-hire path.",
+      "approvalBoundaryEn": "Do not provision accounts, change permissions, or send welcome mail; return the checklist, doc pack, and routed questions only."
+    },
+    {
+      "id": "account-research-specialist",
+      "slug": "account-research-pack-before-touch",
+      "title": "客户研究专员：先分层再上手",
+      "titleEn": "Account Research Specialist",
+      "summary": "官方 Sales 角色 Account Research Specialist：在你碰客户之前，从 Salesforce 加实时信号分层，给拟合度与热度打分，并产出可分享的研究包。不写外呼、不改 CRM。",
+      "categories": [
+        "sales",
+        "research"
+      ],
+      "role": "Account Research Specialist",
+      "sourceUrl": "https://x.ai/bot/use-cases#account-research-specialist",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方把「隔夜外呼」和「上手前研究包」拆开。现有 sales-outbound 覆盖外呼草稿，不覆盖独立研究包。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不联系客户、不改 CRM、不入组；只返回分层、打分与带出处的研究包。",
+      "connectors": [
+        "crm",
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Sales role Account Research Specialist: before you touch accounts, pulls Salesforce plus live signals, scores fit and warmth, and builds a shareable research pack per account. No outreach, no CRM edits.",
+      "qualityNoteEn": "Official catalog splits overnight outbound from pre-touch research packs. Existing sales-outbound covers drafts, not a standalone research pack.",
+      "approvalBoundaryEn": "Do not contact accounts, edit the CRM, or add to sequences; return tiers, scores, and sourced research packs only."
+    },
+    {
+      "id": "meeting-prep-buddy",
+      "slug": "meeting-prep-buddy-from-gong-crm",
+      "title": "会前准备搭档：带着房间里的人与未结事项进会",
+      "titleEn": "Meeting Prep Buddy",
+      "summary": "官方 Meeting Prep Buddy：从日历、笔记、CRM、Gong、Slack 拼出会前包——谁在房间、上次接触、未结线程、建议议程。与会议笔记落任务、会议替身不同：这是会前，不是会中/会后。",
+      "categories": [
+        "sales",
+        "daily-digest"
+      ],
+      "role": "Meeting Prep Buddy",
+      "sourceUrl": "https://x.ai/bot/use-cases#meeting-prep-buddy",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Sales 新角色。现有会议类案例都是会中替身或会后任务，没有会前包。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改会议、不发会前信、不更新 CRM；只返回会前包。",
+      "connectors": [
+        "calendar",
+        "crm",
+        "slack",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Meeting Prep Buddy: builds prep packs from calendar, notes, CRM, Gong, and Slack—who is in the room, last touch, open threads, and a suggested agenda. Distinct from meeting-notes tasks and meeting stand-in: this is before the call.",
+      "qualityNoteEn": "New official Sales role. Existing meeting cases are in-meeting stand-in or post-meeting tasks, not a prep pack.",
+      "approvalBoundaryEn": "Do not change meetings, send pre-reads, or update the CRM; return the prep pack only."
+    },
+    {
+      "id": "sales-call-coach",
+      "slug": "sales-call-coach-gong-homework",
+      "title": "销售通话教练：每通 Gong 都留下作业",
+      "titleEn": "Sales Call Coach",
+      "summary": "官方 Sales Call Coach：复盘 Gong 通话，按时间戳点评发现、异议与高管场控，并给通话打分，让每通都留下作业。不改 CRM、不给客户发跟进。",
+      "categories": [
+        "sales",
+        "research"
+      ],
+      "role": "Sales Call Coach",
+      "sourceUrl": "https://x.ai/bot/use-cases#sales-call-coach",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方新角色，对象是通话教练而非外呼或客户跟进。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不把点评发给销售本人以外的人、不改 CRM、不联系客户；只返回带时间戳的教练笔记与分数。",
+      "connectors": [
+        "files",
+        "crm"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Sales Call Coach: reviews Gong calls and leaves timestamped coaching on discovery, objections, and executive presence, plus a call score—homework after every call. No CRM edits, no customer follow-up.",
+      "qualityNoteEn": "New official role. Owns call coaching, not outbound or account follow-up.",
+      "approvalBoundaryEn": "Do not share coaching outside the seller, edit the CRM, or contact the customer; return timestamped notes and a score only."
+    },
+    {
+      "id": "deal-desk-coordinator",
+      "slug": "deal-desk-notes-then-salesforce",
+      "title": "交易台协调：先拟内部 deal note，批准后再写入 Salesforce",
+      "titleEn": "Deal Desk Coordinator",
+      "summary": "官方 Deal Desk Coordinator：从历史邮件、Salesforce 和通话起草带上下文的内部交易说明，你批准后再提交进 Salesforce。改价、条款与对外承诺必须人审。",
+      "categories": [
+        "sales",
+        "finance"
+      ],
+      "role": "Deal Desk Coordinator",
+      "sourceUrl": "https://x.ai/bot/use-cases#deal-desk-coordinator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方明确「先拟、批准后再写入 Salesforce」。现有管道记分板不覆盖交易台纸面。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不提交 Salesforce、不改价格或条款、不对外承诺；只返回内部 deal note 草稿。",
+      "connectors": [
+        "crm",
+        "email",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Deal Desk Coordinator: drafts contextual internal deal notes from past emails, Salesforce, and calls, then submits in Salesforce once you approve. Pricing, terms, and external commitments stay behind approval.",
+      "qualityNoteEn": "Official copy is explicit: draft first, write to Salesforce after approval. The Monday scoreboard does not cover deal-desk paper.",
+      "approvalBoundaryEn": "Do not submit to Salesforce, change price or terms, or commit externally; return the internal deal-note draft only."
+    },
+    {
+      "id": "renewal-desk-operator",
+      "slug": "renewal-desk-90-day-pack",
+      "title": "续约台：带着 90 天包走进每场续约",
+      "titleEn": "Renewal Desk Operator",
+      "summary": "官方 Renewal Desk Operator：按客户从用量、工单、Gong、CRM 拼 90 天续约包，起草商务说明，只有条款卡住才去催法务。不联系客户、不改合同。",
+      "categories": [
+        "sales",
+        "finance"
+      ],
+      "role": "Renewal Desk Operator",
+      "sourceUrl": "https://x.ai/bot/use-cases#renewal-desk-operator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方把续约台从客户健康观察名单里拆出来：产出是 90 天商务包，不是风险榜。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不联系客户、不改合同或报价、不催法务以外的人；只返回续约包与待审商务说明。",
+      "connectors": [
+        "crm",
+        "ticket",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Renewal Desk Operator: builds a 90-day pack per account from usage, tickets, Gong, and CRM, drafts the commercial note, and nudges legal only when terms are stuck. No customer contact, no contract edits.",
+      "qualityNoteEn": "Official catalog splits renewal desk from account-health watch: the output is a 90-day commercial pack, not a risk list.",
+      "approvalBoundaryEn": "Do not contact the customer, change contracts or quotes, or ping anyone but legal when stuck; return the pack and draft commercial note only."
+    },
+    {
+      "id": "deck-updater",
+      "slug": "deck-updater-mid-call-slides",
+      "title": "幻灯片现场更新：发现纪要从会中写进下一页",
+      "titleEn": "Deck Updater",
+      "summary": "官方 Deck Updater：根据发现纪要在会中或会后立刻改 Deck，并把下一步写进幻灯片，让你离开房间时页面已经在动。不对外发 Deck、不改主模板品牌。",
+      "categories": [
+        "sales",
+        "content"
+      ],
+      "role": "Deck Updater",
+      "sourceUrl": "https://x.ai/bot/use-cases#deck-updater",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Sales 新角色。现有内容案例是广告视频/建站，没有会中改 Deck。",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不把 Deck 发给客户、不改主模板；只更新本次会议用的副本并标出改动。",
+      "connectors": [
+        "files",
+        "crm"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Deck Updater: updates your deck from discovery notes mid-call or right after, with next steps baked in, so you leave the room with the slide already moving. Does not send the deck or change the master brand system.",
+      "qualityNoteEn": "New official Sales role. Existing content cases are ad video / site build, not mid-call deck updates.",
+      "approvalBoundaryEn": "Do not send the deck to the customer or change the master template; update this meeting’s copy and mark the diffs."
+    },
+    {
+      "id": "beta-adoption-watcher",
+      "slug": "beta-adoption-watcher-who-is-in",
+      "title": "Beta 采用观察：看谁真的在用新功能",
+      "titleEn": "Beta Adoption Watcher",
+      "summary": "官方 Product 角色 Beta Adoption Watcher：盯用量，标出哪些客户已经进来试用新功能，方便团队跟进。不联系客户、不改功能开关。",
+      "categories": [
+        "engineering",
+        "research",
+        "automation"
+      ],
+      "role": "Beta Adoption Watcher",
+      "sourceUrl": "https://x.ai/bot/use-cases#beta-adoption-watcher",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Product 新角色。客户健康是流失/扩张，这里是「新功能谁在用」。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不联系客户、不改功能开关或实验分组；只返回采用名单与证据链接。",
+      "connectors": [
+        "product-analytics",
+        "crm",
+        "slack"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Product role Beta Adoption Watcher: monitors usage and surfaces which customers are actually in on the new feature so the team can follow up. No customer contact, no flag flips.",
+      "qualityNoteEn": "New official Product role. Account Health is churn/expansion; this is “who is actually using the new feature.”",
+      "approvalBoundaryEn": "Do not contact customers or change flags/experiments; return the adoption list and evidence links only."
+    },
+    {
+      "id": "call-faq-miner",
+      "slug": "call-faq-miner-timestamped-answers",
+      "title": "通话 FAQ 挖掘：用真实通话养活赋能文档",
+      "titleEn": "Call FAQ Miner",
+      "summary": "官方 Call FAQ Miner：从真实通话里追踪问题、给回答打时间戳，并链回源录音，让赋能材料跟着通话更新。不改对外帮助中心、不把摘录当最终话术发布。",
+      "categories": [
+        "research",
+        "content"
+      ],
+      "role": "Call FAQ Miner",
+      "sourceUrl": "https://x.ai/bot/use-cases#call-faq-miner",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Product 新角色。现有会议笔记落任务不覆盖「从通话挖 FAQ + 时间戳回链」。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发布到帮助中心或对外话术库；只返回带时间戳与源录音链接的 FAQ 草案。",
+      "connectors": [
+        "files",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Call FAQ Miner: keeps enablement current from real calls—tracks questions, timestamps answers, and links back to the source recording. Does not publish to the help center or treat excerpts as final scripts.",
+      "qualityNoteEn": "New official Product role. Meeting-notes→tasks does not cover mining FAQs with timestamped source recordings.",
+      "approvalBoundaryEn": "Do not publish to the help center or external scripts; return a FAQ draft with timestamps and source links only."
+    },
+    {
+      "id": "docs-auditor",
+      "slug": "docs-auditor-stale-vs-shipped",
+      "title": "文档审计：对照上周发版抓过期页",
+      "titleEn": "Docs Auditor",
+      "summary": "官方 Docs Auditor：把帮助中心和内部说明对照上周已发版功能做 diff，标出过期页并起草改写。不直接改线上文档。",
+      "categories": [
+        "content",
+        "engineering"
+      ],
+      "role": "Docs Auditor",
+      "sourceUrl": "https://x.ai/bot/use-cases#docs-auditor",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Product 新角色。现有产品性能调查不覆盖文档过期审计。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不直接改线上帮助中心或对外文档；只返回过期页清单与改写草稿。",
+      "connectors": [
+        "browser",
+        "files",
+        "github"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Docs Auditor: diffs the help center and internal notes against what shipped last week, flags stale pages, and drafts the rewrite. Does not edit live docs.",
+      "qualityNoteEn": "New official Product role. Product-performance investigation does not cover stale-docs audit.",
+      "approvalBoundaryEn": "Do not edit the live help center or public docs; return the stale-page list and rewrite drafts only."
+    },
+    {
+      "id": "feature-request-tracker",
+      "slug": "feature-request-who-asked",
+      "title": "需求溯源：永远不丢「谁提的这功能」",
+      "titleEn": "Feature Request Tracker",
+      "summary": "官方 Feature Request Tracker：从 Slack 和通话里挖需求，做成绑到具体客户的活清单，让规格书有真实需求轨迹。不建票、不承诺排期。",
+      "categories": [
+        "engineering",
+        "research"
+      ],
+      "role": "Feature Request Tracker",
+      "sourceUrl": "https://x.ai/bot/use-cases#feature-request-tracker",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Product 新角色。现有客服退款/工单分拣不覆盖「需求溯源到客户」。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不新建工单、不承诺排期、不回复客户；只返回绑到客户的需求清单与出处。",
+      "connectors": [
+        "slack",
+        "ticket",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Feature Request Tracker: mines Slack and calls into a living list tied to customers, so the spec has a real demand trail. Does not file tickets or promise a schedule.",
+      "qualityNoteEn": "New official Product role. Support refunds / ticket triage do not cover a customer-tied demand trail.",
+      "approvalBoundaryEn": "Do not file tickets, promise a schedule, or reply to customers; return a customer-tied request list with sources only."
+    },
+    {
+      "id": "product-feedback-analyst",
+      "slug": "product-feedback-cluster-and-route",
+      "title": "产品反馈分析：把散落信号收成优先视图",
+      "titleEn": "Product Feedback Analyst",
+      "summary": "官方 Product Feedback Analyst：从已连接来源收集并聚类反馈，权衡证据与紧急度，起草路由建议等人批准。不改路线图、不回用户。",
+      "categories": [
+        "engineering",
+        "research"
+      ],
+      "role": "Product Feedback Analyst",
+      "sourceUrl": "https://x.ai/bot/use-cases#product-feedback-analyst",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方把反馈聚类/路由从需求溯源、性能调查里拆出来。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改路线图、不回复用户、不建工单；只返回聚类、证据与待批路由建议。",
+      "connectors": [
+        "slack",
+        "product-analytics",
+        "ticket",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Product Feedback Analyst: collects and clusters feedback from connected sources, weighs evidence and urgency, and drafts routing recommendations for approval. No roadmap edits, no user replies.",
+      "qualityNoteEn": "Official catalog splits clustered feedback routing from request tracking and performance investigation.",
+      "approvalBoundaryEn": "Do not change the roadmap, reply to users, or file tickets; return clusters, evidence, and routing drafts only."
+    },
+    {
+      "id": "playtest-operator",
+      "slug": "playtest-operator-ui-findings-pack",
+      "title": "玩法测试操作员：API 不够时硬开 UI",
+      "titleEn": "Playtest Operator",
+      "summary": "官方 Playtest Operator：当 API 不够用时，在电脑上硬走产品路径、捕获失败，并交回一份紧凑发现包。与 Bug 复现不同——这是主动压路径，不是跟一张报修走。",
+      "categories": [
+        "engineering",
+        "coding"
+      ],
+      "role": "Playtest Operator",
+      "sourceUrl": "https://x.ai/bot/use-cases#playtest-operator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Engineering 新角色。现有 bug-repro / Slack 复现是跟报修走；这里是主动玩法压测。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改生产、不碰真实客户数据、不提 PR；只返回步骤、截图与发现包。",
+      "connectors": [
+        "computer",
+        "product-ui",
+        "staging",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Playtest Operator: brute-force tests the product path on a computer when APIs are not enough, captures failures, and returns a tight findings pack. Distinct from bug reproduction: this is proactive path-pressing, not following one ticket.",
+      "qualityNoteEn": "New official Engineering role. Existing bug-repro follows a report; this proactively playtests a path.",
+      "approvalBoundaryEn": "Do not change production, touch real customer data, or open a PR; return steps, screenshots, and a findings pack only."
+    },
+    {
+      "id": "prototype-builder",
+      "slug": "prototype-builder-clickable-url",
+      "title": "原型构建：从一句话到可点的 URL",
+      "titleEn": "Prototype Builder",
+      "summary": "官方 Prototype Builder：在自己的电脑上写，尽快从需求变成可点的东西，回来时带截图和线上 URL。不买域名、不接生产流量。",
+      "categories": [
+        "coding",
+        "engineering"
+      ],
+      "role": "Prototype Builder",
+      "sourceUrl": "https://x.ai/bot/use-cases#prototype-builder",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Engineering 新角色。现有建站 Bot 是买域名部署上线；这里停在可点原型。",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不买域名、不绑生产、不公开推广；只返回原型 URL、截图与已知限制。",
+      "connectors": [
+        "computer",
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Prototype Builder: writes on its computer and goes from ask to something clickable fast, coming back with a screenshot plus a live URL. Does not buy a domain or attach production traffic.",
+      "qualityNoteEn": "New official Engineering role. Website Builder buys a domain and ships live; this stops at a clickable prototype.",
+      "approvalBoundaryEn": "Do not buy a domain, attach production, or promote publicly; return the prototype URL, screenshots, and known limits."
+    },
+    {
+      "id": "cloud-agent-orchestrator",
+      "slug": "cloud-agent-orchestrator-chase-stuck-runs",
+      "title": "云端 Agent 编排：盯一堆 run，卡住再催",
+      "titleEn": "Cloud Agent Orchestrator",
+      "summary": "官方 Cloud Agent Orchestrator：同时拉起多个 cloud agent run，监控进度、追卡住的任务，并汇总报告，避免你逐个盯。不改生产、不扩大权限。",
+      "categories": [
+        "engineering",
+        "multi-agent",
+        "automation"
+      ],
+      "role": "Cloud Agent Orchestrator",
+      "sourceUrl": "https://x.ai/bot/use-cases#cloud-agent-orchestrator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases",
+        "https://docs.x.ai/grok-bot/chat-and-collaboration"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Engineering 新角色。现有 Cursor Automations 是相邻产品；这里是 Grok Bot 自己编排 cloud agent run。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "不改生产配置、不扩大权限、不合并无人审的结果；只拉起 run、追卡住的、交汇总。",
+      "connectors": [
+        "computer",
+        "github",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Cloud Agent Orchestrator: kicks off many cloud-agent runs, monitors them, chases what is stuck, and summarizes the report so you are not babysitting each one. No production changes, no permission expansion.",
+      "qualityNoteEn": "New official Engineering role. Cursor Automations is adjacent; this is Grok Bot owning a fleet of cloud-agent runs.",
+      "approvalBoundaryEn": "Do not change production, expand permissions, or merge unreviewed results; start runs, chase stuck ones, and return the summary."
+    },
+    {
+      "id": "security-questionnaire-filler",
+      "slug": "security-questionnaire-draft-dont-submit",
+      "title": "安全问卷填写：门户里先填满，提交留给你",
+      "titleEn": "Security Questionnaire Filler",
+      "summary": "官方 Security Questionnaire Filler：登录供应商安全问卷站，从你们的 trust center 和历史 RFP 抽答案，填好每个字段，提交按钮留给你。不臆造合规结论。",
+      "categories": [
+        "ops",
+        "finance",
+        "automation"
+      ],
+      "role": "Security Questionnaire Filler",
+      "sourceUrl": "https://x.ai/bot/use-cases#security-questionnaire-filler",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Ops 新角色，计算机使用典型场景：没干净 API 的门户代填。现有 29 条没有安全问卷。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不点击提交、不签署、不发明没有出处的答案；缺证据就标「待补」。",
+      "connectors": [
+        "browser",
+        "files",
+        "computer"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Security Questionnaire Filler: logs into the vendor questionnaire site, pulls answers from your trust center and past RFPs, drafts every field, and parks submit for you. Does not invent compliance answers.",
+      "qualityNoteEn": "New official Ops role and a canonical computer-use job: portals with no clean API. None of the existing 29 cover security questionnaires.",
+      "approvalBoundaryEn": "Do not submit or sign, and do not invent unsourced answers; mark gaps as needs-input."
+    },
+    {
+      "id": "vendor-portal-operator",
+      "slug": "vendor-portal-weekly-exceptions",
+      "title": "供应商门户代劳：每周走同一条无 API 路径",
+      "titleEn": "Vendor Portal Operator",
+      "summary": "官方 Vendor Portal Operator：在没有干净 API 的门户上跑续约、席位和采购，每周点同一条路径，只把例外带回来。下单、改席位、付款必须人审。",
+      "categories": [
+        "ops",
+        "finance",
+        "automation"
+      ],
+      "role": "Vendor Portal Operator",
+      "sourceUrl": "https://x.ai/bot/use-cases#vendor-portal-operator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Ops 新角色。办公室经理是工单/排班门户；这里是供应商续约与采购门户。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不下单、不改席位、不付款；只返回本周例外与待批操作清单。",
+      "connectors": [
+        "browser",
+        "computer",
+        "email"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Vendor Portal Operator: runs renewals, seats, and procurement on portals with no clean API, clicks the same path every week, and comes back with exceptions only. Orders, seat changes, and payments need a human.",
+      "qualityNoteEn": "New official Ops role. Office Manager is work-order portals; this is vendor renewal and procurement portals.",
+      "approvalBoundaryEn": "Do not place orders, change seats, or pay; return this week’s exceptions and a pending-action list."
+    },
+    {
+      "id": "contract-desk",
+      "slug": "contract-desk-week-of-paper",
+      "title": "合同台：一周纸面按阶段和负责人一览",
+      "titleEn": "Contract Desk",
+      "summary": "官方 Contract Desk：按阶段和负责人汇总本周合同，抽出关键条款，标出卡住的评审。不改条款、不代表签字。",
+      "categories": [
+        "finance",
+        "ops"
+      ],
+      "role": "Contract Desk",
+      "sourceUrl": "https://x.ai/bot/use-cases#contract-desk",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Finance 新角色。现有发票管道/费用管家不覆盖合同阶段与条款抽取。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改条款、不签字、不对外发合同；只返回阶段表、关键条款与阻塞清单。",
+      "connectors": [
+        "files",
+        "email",
+        "crm"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Contract Desk: summarizes the week of paper by stage and owner, pulls key terms, and flags blocked reviews. No term edits, no signing.",
+      "qualityNoteEn": "New official Finance role. Invoice pipeline and expense manager do not cover contract stages or term extraction.",
+      "approvalBoundaryEn": "Do not edit terms, sign, or send contracts; return the stage table, key terms, and blockers only."
+    },
+    {
+      "id": "refunds-manager-claims",
+      "slug": "refunds-manager-file-and-follow-claims",
+      "title": "退款追回经理：找到索赔、提交并跟到底",
+      "titleEn": "Refunds Manager",
+      "summary": "官方扩容帖「Refunds manager」：找到索赔、提交并跟进，带着追回的退款或折扣回来。这是你作为消费者/采购方去追钱，不是客服给用户办政策内退款。",
+      "categories": [
+        "finance",
+        "automation",
+        "ops"
+      ],
+      "role": "Refunds Manager",
+      "sourceUrl": "https://x.ai/news/grok-bot-more-plans",
+      "secondaryUrls": [
+        "https://x.ai/news/grok-bot-more-plans"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "官方「Jobs Bots are doing today」新角色。已有 support-in-policy-refunds 是客服给用户退款；这里方向相反：替你追索赔。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不提交索赔、不接受和解、不改支付方式；只返回可追索清单、草稿材料与跟进状态。",
+      "connectors": [
+        "email",
+        "browser",
+        "expense"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official expansion-post Refunds manager: finds the claim, files it, and follows it through, coming back with the refund or discount it recovered. This is you claiming money back—not in-policy customer refunds.",
+      "qualityNoteEn": "New official “Jobs Bots are doing today” role. Existing support-in-policy-refunds issues refunds to customers; this files claims on your behalf.",
+      "approvalBoundaryEn": "Do not file a claim, accept a settlement, or change payment methods; return the recoverable list, draft packets, and follow-up status."
+    },
+    {
+      "id": "seo-aeo-auditor",
+      "slug": "seo-aeo-auditor-keyword-and-ai-prompt",
+      "title": "SEO / AEO 审计：关键词、技术和 AI 提示一起盯",
+      "titleEn": "SEO / AEO Auditor",
+      "summary": "官方 SEO / AEO Auditor：把关键词、技术、AI 提示和对手动向收在一处，告诉你在涨还是在丢，标出该修的站点问题，并给出可执行优化计划。不直接改线上页面。",
+      "categories": [
+        "marketing",
+        "research"
+      ],
+      "role": "SEO / AEO Auditor",
+      "sourceUrl": "https://x.ai/bot/use-cases#seo-aeo-auditor",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有竞争情报蜂群是模拟公司，不是站点 SEO/AEO 审计。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改线上页面、不发内容、不买外链；只返回审计与优化计划。",
+      "connectors": [
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official SEO / AEO Auditor: tracks keyword, technical, AI-prompt, and competitor movement in one place, surfaces whether you are gaining or losing ground, flags site issues, and returns an optimization plan. Does not edit live pages.",
+      "qualityNoteEn": "New official Marketing role. Competitive-intel swarm is a company simulation, not a site SEO/AEO audit.",
+      "approvalBoundaryEn": "Do not edit live pages, publish, or buy links; return the audit and the plan only."
+    },
+    {
+      "id": "social-media-manager",
+      "slug": "social-media-manager-park-dont-publish",
+      "title": "社媒经理：按你的声音起草，排队等人点发布",
+      "titleEn": "Social Media Manager",
+      "summary": "官方 Social Media Manager：研究你的真实历史发文，有值得说的上线就起草，把帖子停在待发布队列并保持队列流动。不自行发布、不互动。",
+      "categories": [
+        "marketing",
+        "content"
+      ],
+      "role": "Social Media Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#social-media-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有一人公司/newsletter 栈不是独立的社媒排队 Bot。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发布、不点赞、不回复；只返回草稿与建议发布时间。",
+      "connectors": [
+        "browser",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Social Media Manager: studies your real history, drafts when something noteworthy ships, parks posts for you to publish, and keeps the queue moving. Does not publish or engage on its own.",
+      "qualityNoteEn": "New official Marketing role. The one-person newsletter stack is not a dedicated social queue Bot.",
+      "approvalBoundaryEn": "Do not publish, like, or reply; return drafts and a suggested post window only."
+    },
+    {
+      "id": "paid-media-creative-strategist",
+      "slug": "paid-media-creative-why-it-works",
+      "title": "付费素材策略：在赢家变明显之前写下假设",
+      "titleEn": "Paid Media Creative Strategist",
+      "summary": "官方 Paid Media Creative Strategist：尽早抓住创意赢家，写清「为什么有效」的假设，并提出下一轮测试。官方强调不编造指标。与付费预算监控不同。",
+      "categories": [
+        "marketing",
+        "content"
+      ],
+      "role": "Paid Media Creative Strategist",
+      "sourceUrl": "https://x.ai/bot/use-cases#paid-media-creative-strategist",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方把素材策略从付费预算监控里拆出来。现有 paid-media-monitor 只做花费/CAC 再分配。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改广告、不改预算、不发明指标；只返回假设、证据与下一测建议。",
+      "connectors": [
+        "ads",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Paid Media Creative Strategist: spots early creative winners, writes a sharp why-it-works hypothesis, and proposes the next test. Official rule: no invented metrics. Distinct from paid-media budget monitoring.",
+      "qualityNoteEn": "Official catalog splits creative strategy from budget monitoring. Existing paid-media-monitor only reallocates spend/CAC.",
+      "approvalBoundaryEn": "Do not change ads or budgets, and do not invent metrics; return the hypothesis, evidence, and next-test plan."
+    },
+    {
+      "id": "linkedin-campaign-manager",
+      "slug": "linkedin-campaign-funnel-consistency",
+      "title": "LinkedIn 投放经理：广告、表单、跟进和 UTM 对齐",
+      "titleEn": "LinkedIn Campaign Manager",
+      "summary": "官方 LinkedIn Campaign Manager：把获客漏斗在广告、表单、跟进和 UTM 上对齐，先起草活动等人批准，并保持每个 offer 与交接干净。不自行开投。",
+      "categories": [
+        "marketing",
+        "sales"
+      ],
+      "role": "LinkedIn Campaign Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#linkedin-campaign-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有 Paid Media 是跨渠道预算；这里专管 LinkedIn 漏斗一致性。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不启用广告、不改预算、不对外发跟进；只返回活动草稿、UTM 与交接清单。",
+      "connectors": [
+        "ads",
+        "linkedin",
+        "crm"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official LinkedIn Campaign Manager: owns lead-gen funnel consistency across ads, forms, follow-up, and UTMs. Drafts campaigns for approval and keeps every offer and handoff clean. Does not launch spend on its own.",
+      "qualityNoteEn": "New official Marketing role. Paid Media is cross-channel budget; this owns LinkedIn funnel consistency.",
+      "approvalBoundaryEn": "Do not enable ads, change budgets, or send follow-up; return campaign drafts, UTMs, and the handoff list."
+    },
+    {
+      "id": "marketing-calendar-owner",
+      "slug": "marketing-calendar-notion-sync",
+      "title": "营销日历负责人：区域/全球内容与活动对齐",
+      "titleEn": "Marketing Calendar Owner",
+      "summary": "官方 Marketing Calendar Owner：让区域和全球的内容、上线与活动日历保持同步，从 Notion 拉取，并让 webinar 与战役不用每周人工追。不对外发公告。",
+      "categories": [
+        "marketing",
+        "ops"
+      ],
+      "role": "Marketing Calendar Owner",
+      "sourceUrl": "https://x.ai/bot/use-cases#marketing-calendar-owner",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有一人公司栈有 newsletter，没有区域/全球营销日历主人。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发对外公告、不改已发布档期；只返回冲突、缺口与待批日历更新。",
+      "connectors": [
+        "calendar",
+        "files",
+        "slack"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Marketing Calendar Owner: keeps regional and global content, launch, and events calendars in sync, pulls from Notion, and keeps webinars and campaigns current without a weekly chase. Does not send public announcements.",
+      "qualityNoteEn": "New official Marketing role. The one-person stack has a newsletter, not a regional/global marketing-calendar owner.",
+      "approvalBoundaryEn": "Do not send public announcements or change published dates; return conflicts, gaps, and pending calendar updates."
+    },
+    {
+      "id": "merch-fulfillment-operator",
+      "slug": "merch-fulfillment-approve-then-dispatch",
+      "title": "周边履约：兑换表审批后才给供应商下日单",
+      "titleEn": "Merch Fulfillment Operator",
+      "summary": "官方 Merch Fulfillment Operator：对合适的潜客做周边触达，盯兑换表，在聊天里让你批准/拒绝提交，再给供应商发每日订单，告诉他们何时何地发货。发货与对外消息必须人审。",
+      "categories": [
+        "marketing",
+        "ops",
+        "automation"
+      ],
+      "role": "Merch Fulfillment Operator",
+      "sourceUrl": "https://x.ai/bot/use-cases#merch-fulfillment-operator",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色，审批点写进文案（chat 里批准/拒绝）。现有 29 条没有周边履约。",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不批准兑换、不向供应商下单、不对外发周边；只返回待批提交与每日订单草稿。",
+      "connectors": [
+        "email",
+        "browser",
+        "slack"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Merch Fulfillment Operator: runs outreach, watches the redemption form, pings you in chat to approve/reject submissions, and sends the swag vendor a daily order form so they know when and where to dispatch. Shipping and outbound messages need a human.",
+      "qualityNoteEn": "New official Marketing role with the approval gate written in (approve/reject in chat). None of the 29 cover merch fulfillment.",
+      "approvalBoundaryEn": "Do not approve redemptions, place vendor orders, or ship merch; return pending submissions and a daily order-form draft."
+    },
+    {
+      "id": "community-operations-manager",
+      "slug": "community-ops-ambassador-loop",
+      "title": "社区运营经理：大使申请、私信分拣与节奏培育",
+      "titleEn": "Community Operations Manager",
+      "summary": "官方 Community Operations Manager：筛大使申请、跨渠道分拣私信，并按节奏起草培育内容，让社区不再是全职追人。不自行通过申请、不私发官方承诺。",
+      "categories": [
+        "marketing",
+        "ops"
+      ],
+      "role": "Community Operations Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#community-operations-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有客服退款/收件箱分拣不覆盖大使循环。",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不通过/拒绝申请、不对外发私信；只返回筛选结果、分拣队列与培育草稿。",
+      "connectors": [
+        "browser",
+        "email",
+        "slack"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Community Operations Manager: screens apps, triages DMs across channels, and drafts nurture on a cadence so community is not a full-time chase. Does not approve applicants or send official promises on its own.",
+      "qualityNoteEn": "New official Marketing role. Support refunds and inbox triage do not cover an ambassador loop.",
+      "approvalBoundaryEn": "Do not accept or reject applicants, and do not send DMs; return the screen, triage queue, and nurture drafts."
+    },
+    {
+      "id": "compelling-events-monitor",
+      "slug": "compelling-events-leadership-digest",
+      "title": "关键事件监测：有真实由头才建议互动",
+      "titleEn": "Compelling Events Monitor",
+      "summary": "官方 Compelling Events Monitor：盯管理层动态里的获奖、发布与招聘信号，交出一份可互动帖子短摘要，并按你的声音起草评论或引用转发。不自行发帖。",
+      "categories": [
+        "marketing",
+        "sales",
+        "daily-digest"
+      ],
+      "role": "Compelling Events Monitor",
+      "sourceUrl": "https://x.ai/bot/use-cases#compelling-events-monitor",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。现有付费监控/竞争情报不覆盖「领导层由头→待互动摘要」。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发帖、不评论、不引用转发；只返回由头摘要与待审互动草稿。",
+      "connectors": [
+        "browser",
+        "linkedin",
+        "slack"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Compelling Events Monitor: watches leadership posts for awards, launches, and hiring signals, then sends a short digest of posts to engage with, plus comments or quote-reposts in your voice. Does not post on its own.",
+      "qualityNoteEn": "New official Marketing role. Paid-media monitor and competitive intel do not cover a leadership-trigger engagement digest.",
+      "approvalBoundaryEn": "Do not post, comment, or quote-repost; return the trigger digest and draft engagements only."
+    },
+    {
+      "id": "event-guest-screener",
+      "slug": "event-guest-screener-icp-batch-approve",
+      "title": "活动嘉宾筛选：按 ICP 打分，批量待批入邀请工具",
+      "titleEn": "Event Guest Screener",
+      "summary": "官方 Event Guest Screener：按 ICP 给活动申请打分，并把强匹配批量放进邀请工具等人批。不擅自发邀请。",
+      "categories": [
+        "marketing",
+        "recruiting"
+      ],
+      "role": "Event Guest Screener",
+      "sourceUrl": "https://x.ai/bot/use-cases#event-guest-screener",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色。招聘筛选吃的是职位申请；这里吃的是活动报名。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送邀请、不批量通过；只返回 ICP 打分与待批名单。",
+      "connectors": [
+        "browser",
+        "email",
+        "crm"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Event Guest Screener: scores event applicants against your ICP and batch-approves strong fits in the invite tool. Does not send invites on its own.",
+      "qualityNoteEn": "New official Marketing role. Hiring Screener scores job applications; this scores event applicants.",
+      "approvalBoundaryEn": "Do not send invites or batch-approve; return ICP scores and a pending list only."
+    },
+    {
+      "id": "enablement-fulfillment-specialist",
+      "slug": "enablement-fulfillment-zoom-to-drive",
+      "title": "赋能交付：把「把录音发我」变成链接回复",
+      "titleEn": "Enablement Fulfillment Specialist",
+      "summary": "官方 Enablement Fulfillment Specialist：找到 Zoom 资产、做一页纸、上传到 Drive，并起草带链接的回复，避免有人再说「把录音发我」时去翻箱。不自行外发。",
+      "categories": [
+        "sales",
+        "ops",
+        "content"
+      ],
+      "role": "Enablement Fulfillment Specialist",
+      "sourceUrl": "https://x.ai/bot/use-cases#enablement-fulfillment-specialist",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 CS 新角色。现有会议笔记落任务不覆盖「找 Zoom→一页纸→Drive→待发回复」。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不对外发邮件、不把录音发到未经批准的对象；只返回资产链接与待发回复。",
+      "connectors": [
+        "files",
+        "email",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Enablement Fulfillment Specialist: finds Zoom assets, builds one-pagers, uploads to Drive, and drafts the reply with links so “send me the recordings” does not mean digging. Does not send the reply on its own.",
+      "qualityNoteEn": "New official CS role. Meeting-notes→tasks does not cover Zoom→one-pager→Drive→draft reply.",
+      "approvalBoundaryEn": "Do not send email or share recordings with unapproved recipients; return asset links and a draft reply."
+    },
+    {
+      "id": "ticket-triage-specialist",
+      "slug": "ticket-triage-draft-replies-only",
+      "title": "工单分拣专员：盯队列，只起草回复",
+      "titleEn": "Ticket Triage Specialist",
+      "summary": "官方 Ticket Triage Specialist：按节奏看支持队列，只起草回复，队列干净时保持安静。与政策内退款 Bot 不同：这里不碰退款，也不关单。",
+      "categories": [
+        "ops",
+        "automation"
+      ],
+      "role": "Ticket Triage Specialist",
+      "sourceUrl": "https://x.ai/bot/use-cases#ticket-triage-specialist",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 CS 新角色。已有 support-in-policy-refunds 处理退款；这里是队列分拣+仅草稿。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送回复、不关单、不退款；只返回分拣与草稿。",
+      "connectors": [
+        "ticket",
+        "support",
+        "email"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Ticket Triage Specialist: watches support on a cadence, drafts replies only, and stays quiet when it is clean. Distinct from in-policy refunds: no refunds, no closing tickets.",
+      "qualityNoteEn": "New official CS role. Existing support-in-policy-refunds handles refunds; this is queue triage with draft-only replies.",
+      "approvalBoundaryEn": "Do not send replies, close tickets, or issue refunds; return triage and drafts only."
+    },
+    {
+      "id": "presentation-designer",
+      "slug": "presentation-designer-from-master-template",
+      "title": "演示文稿设计师：从主模板做出可编辑链接",
+      "titleEn": "Presentation Designer",
+      "summary": "官方 Presentation Designer：用你的主模板和品牌体系做 Deck，不从空白页开始，并交出可继续改的编辑链接。不对外发送、不改品牌主文件。",
+      "categories": [
+        "content",
+        "sales"
+      ],
+      "role": "Presentation Designer",
+      "sourceUrl": "https://x.ai/bot/use-cases#presentation-designer",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 General 新角色。Deck Updater 是会中改已有页；这里是按主模板新建。",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不对外发 Deck、不改品牌主文件；只返回可编辑链接。",
+      "connectors": [
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Presentation Designer: builds on-brand decks from your master template and brand system—not a blank slide—and delivers an editable link ready to refine and present. Does not send externally or change the brand master.",
+      "qualityNoteEn": "New official General role. Deck Updater edits an existing deck mid-call; this builds a new one from the master.",
+      "approvalBoundaryEn": "Do not send the deck externally or change the brand master; return an editable link only."
+    },
+    {
+      "id": "internal-communications-manager",
+      "slug": "internal-comms-on-voice-review-only",
+      "title": "对内传播经理：按对象和渠道起草，只审不发",
+      "titleEn": "Internal Communications Manager",
+      "summary": "官方 Internal Communications Manager：从真实上下文起草清晰、合你声音的对内文案，并匹配对象与渠道。官方写明 review-only，绝不自行发送。",
+      "categories": [
+        "content",
+        "ops"
+      ],
+      "role": "Internal Communications Manager",
+      "sourceUrl": "https://x.ai/bot/use-cases#internal-communications-manager",
+      "secondaryUrls": [
+        "https://x.ai/bot/use-cases"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Marketing 新角色，审批边界写进角色名（review-only）。现有幕僚长是摘要，不是对内文案起草。",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发送任何对内或对外消息；只返回分受众、分渠道的草稿。",
+      "connectors": [
+        "slack",
+        "email",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-08-26",
+      "updatedAt": "2026-08-27T00:25:00Z",
+      "summaryEn": "Official Internal Communications Manager: drafts clear, on-voice copy from your real context, matched to each audience and channel. Officially review-only—it never sends on its own.",
+      "qualityNoteEn": "New official Marketing role with review-only in the copy. Chief of Staff is a digest, not internal comms drafting.",
+      "approvalBoundaryEn": "Do not send any internal or external message; return audience- and channel-matched drafts only."
+    },
     {
       "id": "sales-outbound-overnight",
       "slug": "overnight-sales-outbound-pipeline",
