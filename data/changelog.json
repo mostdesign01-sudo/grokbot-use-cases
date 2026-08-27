@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-27",
+      "title": "Grok Bot：增收 Matt Palmer 入门视频",
+      "body": "来源 https://x.com/mattyp/status/2092286281266962681 ：Getting Started with Grok Bot，含 X→Notion、个人软件、Cursor 编码、搜索四条工作流。Grok Bot 71→72。",
+      "titleEn": "Grok Bot: add Matt Palmer’s Getting Started video",
+      "bodyEn": "From https://x.com/mattyp/status/2092286281266962681: Getting Started with Grok Bot, including X→Notion, personal software, Cursor coding, and search. Grok Bot 71→72."
+    },
+    {
+      "date": "2026-08-27",
       "title": "HTML 收集：增收 DesignLang",
       "body": "来源 @ricouii：开源设计系统提取器 https://designlang.app （仓库 https://github.com/Manavarya09/design-extract）。HTML 收集 22→23。",
       "titleEn": "HTML 收集: add DesignLang",
