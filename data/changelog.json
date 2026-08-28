@@ -2,6 +2,20 @@
   "notes": [
     {
       "date": "2026-08-28",
+      "title": "Grok Bot：增收 2 条社区案例",
+      "body": "增收 六席 Bot 跑手游工作室：Rank'em、非官方 Linux 版 Grok Bot：从 Windows 安装包移植。来源分别为 Ryan Perry 案例研究（兼 HN item 49447324）与 jakob-bu 非官方 Linux 移植（HN item 49467702）。Grok Bot 72→74。",
+      "titleEn": "Grok Bot: +2 community cases",
+      "bodyEn": "Added Six-bot mobile game studio: Rank'em; Unofficial Linux Grok Bot (Windows installer port). Sources: Ryan Perry’s case study (also HN item 49447324) and jakob-bu’s unofficial Linux port (HN item 49467702). Grok Bot 72→74."
+    },
+    {
+      "date": "2026-08-28",
+      "title": "HTML 收集：增收 GlassBox 与 Voronoi Go",
+      "body": "从 Hacker News 增收 GlassBox：浏览器指纹台、Voronoi Go：没有网格的围棋（item 49421948、item 49468816）。均带 3:2 自托管预览。HTML 收集 23→25。",
+      "titleEn": "HTML Collection: add GlassBox and Voronoi Go",
+      "bodyEn": "From Hacker News: GlassBox: browser fingerprint bench; Voronoi Go: Go without the grid (item 49421948、item 49468816). Both have self-hosted 3:2 previews. HTML 收集 23→25."
+    },
+    {
+      "date": "2026-08-28",
       "title": "Agent UI：增收 Beautiful UI、beUI、Rare UI、Transitions.dev、shadcn/ui",
       "body": "来源 https://x.com/grgerwcwetwet/status/2092937412490260513 ：五个给 Agent 抄作业的 UI 站。Agent UI 20→25。Transitions.dev 只收免费区。",
       "titleEn": "Agent UI: add Beautiful UI, beUI, Rare UI, Transitions.dev, shadcn/ui",

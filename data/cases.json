@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T17:05:00Z",
+    "updatedAt": "2026-08-28T01:10:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.2",
-    "count": 72,
+    "count": 74,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -18,10 +18,84 @@
       "https://x.com/GergelyOrosz/status/2090085668768694562",
       "https://docs.x.ai/grok-bot/bots",
       "https://x.ai/bot/use-cases",
-      "https://x.com/mattyp/status/2092286281266962681"
+      "https://x.com/mattyp/status/2092286281266962681",
+      "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
+      "https://github.com/jakob-bu/grok-bot-linux-unofficial"
     ]
   },
   "cases": [
+    {
+      "id": "grokbot-linux-unofficial",
+      "slug": "jakob-bu-grok-bot-linux-unofficial",
+      "title": "非官方 Linux 版 Grok Bot：从 Windows 安装包移植",
+      "titleEn": "Unofficial Linux Grok Bot (Windows installer port)",
+      "summary": "社区把官方 Windows Electron 安装包搬到 Linux：make build 产出 .deb / AppImage / 解压目录，用同一 Cursor / SuperGrok 账号登录。云端电脑不变，本机构建只是遥控器。README 写清依赖、无沙箱参数与 NVIDIA 黑屏 workaround。非 xAI/Cursor 产品。",
+      "summaryEn": "Community port of the official Windows Electron installer to Linux: `make build` yields .deb, AppImage, or a tarball; sign in with the same Cursor / SuperGrok account. Bots still live on the cloud computer — this build is the remote control. README covers deps, --no-sandbox, and an NVIDIA black-window workaround. Not an xAI/Cursor product.",
+      "categories": [
+        "engineering",
+        "automation"
+      ],
+      "role": "Linux Desktop Port",
+      "sourceUrl": "https://github.com/jakob-bu/grok-bot-linux-unofficial",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49467702"
+      ],
+      "sourceType": "community",
+      "qualityNote": "Show HN / HN item 49467702。可跟做的 Linux 构建步骤；官方仍不支持 Linux，自行承担风险，不要用它绕过账号条款。",
+      "qualityNoteEn": "Show HN / HN item 49467702. Follow-along Linux build steps; Linux remains unsupported officially — use at your own risk and do not treat it as a ToS bypass.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "desktop"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T01:10:00Z"
+    },
+    {
+      "id": "mobile-game-studio-rankem",
+      "slug": "ryan-perry-mobile-game-studio-rankem",
+      "title": "六席 Bot 跑手游工作室：Rank'em",
+      "titleEn": "Six-bot mobile game studio: Rank'em",
+      "summary": "Ryan Perry 用六个 Grok Bot 分工跑手游 Rank'em 生命周期：Mobile Orchestrator、Rankem Engineer、Creatives、GCS、Analytics、Bug fix。每个 Bot 有独立电脑、例行任务与技能，互相交接而不经过人。编码工具覆盖构建与基建，Grok Bot 接住发行、QA、买量和素材。文章写清角色、交接与真实踩坑。",
+      "summaryEn": "Ryan Perry staffed Rank'em with six Grok Bots — Mobile Orchestrator, Rankem Engineer, Creatives, GCS, Analytics, Bug fix — each with its own computer, routines, and skills, handing off without routing through him. Coding tools cover build/infra; Grok Bot covers release, QA, UA, and creative. The post spells out roles, handoffs, and what they caught.",
+      "categories": [
+        "multi-agent",
+        "automation",
+        "ops",
+        "marketing"
+      ],
+      "role": "Mobile Game Studio Pod",
+      "sourceUrl": "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
+      "secondaryUrls": [
+        "https://rankem.io/",
+        "https://news.ycombinator.com/item?id=49447324"
+      ],
+      "sourceType": "case-study",
+      "qualityNote": "社区完整案例研究（HN item 49447324）：六个窄角色 + 真实手游下载过千。可复现的多 Bot 工作室搭法，付款/投放变更仍需人审。",
+      "qualityNoteEn": "Full community case study (HN item 49447324): six narrow seats on a live game past 1k downloads. A reproducible multi-bot studio pattern; still review spend and store changes.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "不直接改广告预算、不提交商店上架、不推生产；只起草与交接，花钱与发布留给人。",
+      "approvalBoundaryEn": "Do not change ad spend, submit store listings, or ship production; draft and hand off — humans own money and release.",
+      "connectors": [
+        "browser",
+        "ads",
+        "analytics",
+        "github"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-28T01:10:00Z"
+    },
     {
       "id": "grokbot-getting-started",
       "slug": "mattyp-getting-started-with-grok-bot",

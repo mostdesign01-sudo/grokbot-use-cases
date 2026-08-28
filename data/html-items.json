@@ -1,11 +1,71 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T15:36:00Z",
+    "updatedAt": "2026-08-28T01:10:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.1",
-    "count": 23
+    "count": 25
   },
   "items": [
+    {
+      "id": "voronoi-go",
+      "slug": "voronoi-go",
+      "title": "Voronoi Go：没有网格的围棋",
+      "titleEn": "Voronoi Go: Go without the grid",
+      "summary": "把围棋落在 Voronoi 剖分上的网页对弈：可人机、可旁观、可通信对局。浏览器即开即玩的交互棋盘，规则与传统围棋同源但棋盘几何不同。",
+      "summaryEn": "Play Go on a Voronoi tessellation in the browser — human vs bot, watch mode, and correspondence games. Same lineage as classic Go, different board geometry.",
+      "types": [
+        "interactive"
+      ],
+      "sourceUrl": "https://voronoigo.com/",
+      "secondaryUrls": [
+        "https://voronoigo.com/play",
+        "https://news.ycombinator.com/item?id=49468816"
+      ],
+      "previewImage": "/previews/voronoi-go.webp",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T01:10:00Z",
+      "qualityNote": "Show HN（item 49468816，约 79 分）。可公开访问的交互棋盘；今日 HN Show 前列。由 Hacker News 发现。",
+      "qualityNoteEn": "Show HN (item 49468816, ~79 points). Public interactive board; near the top of today’s Show HN. Found via Hacker News.",
+      "tags": [
+        "html",
+        "game",
+        "interactive",
+        "hacker-news"
+      ]
+    },
+    {
+      "id": "glassbox",
+      "slug": "glassbox",
+      "title": "GlassBox：浏览器指纹台",
+      "titleEn": "GlassBox: browser fingerprint bench",
+      "summary": "单页静态 HTML：在浏览器里跑约 31 项探针（canvas、WebGL/WebGPU、音频、字体、WASM、WebRTC IP 等），展示原始值与可识别度估计。默认本地运行，仅 IP 地理可选外联；MIT 源码。",
+      "summaryEn": "One static HTML page: ~31 in-browser probes (canvas, WebGL/WebGPU, audio, fonts, WASM, WebRTC IP, …) with raw values and an identifiability estimate. Mostly local; IP geo is the optional phone-home. MIT source.",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "sourceUrl": "https://glassbox.codecanary.org",
+      "secondaryUrls": [
+        "https://github.com/HotStartLabs/glassbox",
+        "https://news.ycombinator.com/item?id=49421948"
+      ],
+      "previewImage": "/previews/glassbox.webp",
+      "featured": true,
+      "publishedAt": "2026-08-24",
+      "updatedAt": "2026-08-28T01:10:00Z",
+      "qualityNote": "Show HN（item 49421948，约 131 分）。单文件、无构建、MIT；适合当「浏览器能暴露什么」的可玩演示。由 Hacker News 发现。",
+      "qualityNoteEn": "Show HN (item 49421948, ~131 points). Single file, no build, MIT — a playable demo of what a browser exposes. Found via Hacker News.",
+      "tags": [
+        "html",
+        "single-file",
+        "privacy",
+        "fingerprint",
+        "webgl",
+        "hacker-news",
+        "mit"
+      ]
+    },
     {
       "id": "designlang",
       "slug": "designlang",
