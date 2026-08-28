@@ -1,11 +1,152 @@
 {
   "meta": {
-    "updatedAt": "2026-08-27T15:30:00Z",
+    "updatedAt": "2026-08-28T00:56:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.0",
-    "count": 20
+    "version": "1.4.0",
+    "count": 25
   },
   "items": [
+    {
+      "id": "shadcn-ui",
+      "slug": "shadcn-ui",
+      "title": "shadcn/ui",
+      "titleEn": "shadcn/ui",
+      "summary": "开源、开代码的设计系统地基。组件可复制进项目再改，是 Agent 拼界面时最稳的默认库。",
+      "summaryEn": "Open-source, open-code design-system foundation. Copy components into the project and make them yours — the safest default kit for an Agent assembling UI.",
+      "types": [
+        "ui"
+      ],
+      "sourceUrl": "https://ui.shadcn.com",
+      "secondaryUrls": [
+        "https://x.com/grgerwcwetwet/status/2092937412490260513"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T00:56:00Z",
+      "qualityNote": "五站里最通用的底座。和 beUI 的 shadcn add 流程能接上。",
+      "qualityNoteEn": "The most general base of the five. Connects to beUI’s shadcn add flow.",
+      "tags": [
+        "ui",
+        "css"
+      ],
+      "promptHint": "先用 shadcn/ui 搭按钮、表单和对话框，再往上叠 Beautiful UI 的 Agent 原语。",
+      "promptHintEn": "Build buttons, forms, and dialogs with shadcn/ui first, then stack Beautiful UI’s agent primitives on top.",
+      "previewImage": "/previews/shadcn-ui.webp"
+    },
+    {
+      "id": "transitions-dev",
+      "slug": "transitions-dev",
+      "title": "Transitions.dev",
+      "titleEn": "Transitions.dev",
+      "summary": "给 AI Agent 用的 UI 过渡合集：卡片缩放、数字翻动、流式文字、思考态。首页免费可逛，部分效果标了 Pro。",
+      "summaryEn": "UI transitions for AI agents: card resize, number pop, streaming text, thinking states. The gallery is free to browse; some effects are Pro.",
+      "types": [
+        "motion",
+        "ui"
+      ],
+      "sourceUrl": "https://transitions.dev",
+      "secondaryUrls": [
+        "https://x.com/grgerwcwetwet/status/2092937412490260513"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T00:56:00Z",
+      "qualityNote": "免费区够 Agent 抄过渡。不收 Pro 单独条目。",
+      "qualityNoteEn": "The free gallery is enough for an Agent to copy transitions. No separate Pro entries.",
+      "tags": [
+        "motion",
+        "ui",
+        "css"
+      ],
+      "promptHint": "从 Transitions.dev 免费区抄一个流式文字或思考态过渡，接到现有 Chat 组件上。",
+      "promptHintEn": "Copy one free streaming-text or thinking-state transition from Transitions.dev onto the existing Chat component.",
+      "previewImage": "/previews/transitions-dev.webp"
+    },
+    {
+      "id": "rare-ui",
+      "slug": "rare-ui",
+      "title": "Rare UI",
+      "titleEn": "Rare UI",
+      "summary": "少见的动效 React 组件合集，偏展示和交互实验，适合给 Agent 当高完成度参考。",
+      "summaryEn": "A collection of uncommon animated React components — more showcase and interaction experiments. A high-finish reference for an Agent.",
+      "types": [
+        "ui",
+        "motion"
+      ],
+      "sourceUrl": "https://rareui.com",
+      "secondaryUrls": [
+        "https://x.com/grgerwcwetwet/status/2092937412490260513"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T00:56:00Z",
+      "qualityNote": "周览资源五站之一。站点偏作品集，抄之前先看授权和依赖。",
+      "qualityNoteEn": "One of the five sites in the post. More of a showcase; check license and deps before copying.",
+      "tags": [
+        "ui",
+        "motion"
+      ],
+      "promptHint": "参考 Rare UI 的动效密度，只抄一个交互进现有页面，不要整站换皮。",
+      "promptHintEn": "Take Rare UI’s motion density; copy one interaction into the existing page, don’t reskin the whole site.",
+      "previewImage": "/previews/rare-ui.webp"
+    },
+    {
+      "id": "beui",
+      "slug": "beui",
+      "title": "beUI",
+      "titleEn": "beUI",
+      "summary": "React / Next.js 动效组件，带 Agent 指南和 registry。npx shadcn add 就能装，还有 MCP 和 OpenUI 用法。",
+      "summaryEn": "Animated React / Next.js components with an agent guide and registry. Install via npx shadcn add; MCP and OpenUI docs included.",
+      "types": [
+        "ui",
+        "motion"
+      ],
+      "sourceUrl": "https://beui.dev",
+      "secondaryUrls": [
+        "https://beui.dev/r",
+        "https://x.com/grgerwcwetwet/status/2092937412490260513"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T00:56:00Z",
+      "qualityNote": "开源，组件 JSON 可给 Agent 直接读。适合当乐高块。",
+      "qualityNoteEn": "Open source; component JSON is agent-readable. Fits the Lego-block workflow.",
+      "tags": [
+        "ui",
+        "motion",
+        "css"
+      ],
+      "promptHint": "从 beUI registry 装一个 Prompt Input 和 Approval Card，动效跟项目主色走。",
+      "promptHintEn": "Install a Prompt Input and Approval Card from the beUI registry. Match motion to the project’s primary color.",
+      "previewImage": "/previews/beui.webp"
+    },
+    {
+      "id": "beautiful-ui",
+      "slug": "beautiful-ui",
+      "title": "Beautiful UI",
+      "titleEn": "Beautiful UI",
+      "summary": "给 AI 原生界面用的组件原语：加载、思考轨迹、流式文本、审批卡、工具芯片、Prompt Bar。可直接丢给 Agent 抄进项目。",
+      "summaryEn": "Primitives for AI-native interfaces: loading, thinking traces, streaming text, approval cards, tool chips, prompt bar. Hand the page to an Agent and let it pick.",
+      "types": [
+        "ui"
+      ],
+      "sourceUrl": "https://beautifului.dev",
+      "secondaryUrls": [
+        "https://x.com/grgerwcwetwet/status/2092937412490260513"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-28T00:56:00Z",
+      "qualityNote": "周览资源那条里的第一站。专门给 Agent 界面，不是通用按钮库。",
+      "qualityNoteEn": "First of the five sites in 周览资源’s post. Built for agent UIs, not a generic button kit.",
+      "tags": [
+        "ui",
+        "css"
+      ],
+      "promptHint": "用 Beautiful UI 的 Approval Card 和 Thinking 做 Agent 对话页。保持深色，审批默认停住。",
+      "promptHintEn": "Use Beautiful UI’s Approval Card and Thinking for an agent chat. Keep it dark; approvals stay blocked by default.",
+      "previewImage": "/previews/beautiful-ui.webp"
+    },
     {
       "id": "buttermax",
       "slug": "buttermax",
