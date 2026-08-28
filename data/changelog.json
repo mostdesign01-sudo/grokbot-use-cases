@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-28",
+      "title": "HTML 收集：增收 Taste Skill",
+      "body": "增收 Taste Skill：给编程助手用的 Anti-Slop 前端品味技能包。来源 @shao__meng。HTML 收集 26→27。",
+      "titleEn": "HTML 收集: + Taste Skill",
+      "bodyEn": "Added Taste Skill, anti-slop frontend taste skills for coding agents. Source: @shao__meng. HTML 收集 26→27."
+    },
+    {
+      "date": "2026-08-28",
       "title": "HTML 收集：增收 OpenDesign",
       "body": "增收 OpenDesign：开源 Claude Design 替代，本机优先桌面应用，导出 HTML / PDF。来源 @sunmer575399。HTML 收集 25→26。",
       "titleEn": "HTML 收集: + OpenDesign",
