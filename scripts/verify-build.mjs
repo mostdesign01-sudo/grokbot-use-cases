@@ -4,6 +4,8 @@ import { readFile } from "node:fs/promises";
 const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.meta.url), "utf8"));
 const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
 const agentUiDataset = JSON.parse(await readFile(new URL("../data/agent-ui.json", import.meta.url), "utf8"));
+const changelog = JSON.parse(await readFile(new URL("../data/changelog.json", import.meta.url), "utf8"));
+
 const requiredPages = [
   "index.html",
   "cases/index.html",
@@ -129,6 +131,20 @@ for (const item of previewItems) {
   if (!existsSync(new URL(`../dist/${file}`, import.meta.url))) {
     missing.push(`dist/${file}`);
   }
+}
+
+const noteDates = [...new Set(changelog.notes.map((note) => note.date))];
+for (const date of noteDates) {
+  const path = `d/${date}/index.html`;
+  if (!existsSync(new URL(`../dist/${path}`, import.meta.url))) {
+    missing.push(path);
+  }
+}
+
+const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
+if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.includes("home-pill")) {
+  console.error("Homepage is missing the plaza digest shell (今日看点 / home-plaza / home-pill).");
+  process.exit(1);
 }
 
 if (missing.length) {

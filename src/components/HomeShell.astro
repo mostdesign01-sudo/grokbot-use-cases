@@ -1,0 +1,163 @@
+---
+import DigestCard from "./DigestCard.astro";
+import Loc from "./Loc.astro";
+import PlazaCard from "./PlazaCard.astro";
+import {
+  dateHref,
+  getDigestArchive,
+  getHomeDigest,
+  packPlazaColumns,
+  resolveDigestDate,
+} from "../lib/digest";
+import { ui } from "../lib/i18n";
+import { withBase } from "../lib/paths";
+import { siteName } from "../lib/site";
+
+interface Props {
+  dateKey?: string;
+}
+
+const { dateKey } = Astro.props;
+const latest = resolveDigestDate();
+const day = getHomeDigest(dateKey);
+const archive = getDigestArchive();
+const [col1, col2, col3] = packPlazaColumns(day.items);
+---
+
+<div class="home-shell" data-home-shell>
+  <aside class="home-rail">
+    <div class="home-rail-top">
+      <a class="home-wordmark" href={withBase("/")}>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letters">AI</span>
+          <span class="brand-mark-dots"><i></i><i></i><i></i></span>
+        </span>
+        <span class="home-wordmark-text">
+          <strong>{siteName}</strong>
+          <span class="home-lede"><Loc zh={ui.home.lede.zh} en={ui.home.lede.en} /></span>
+        </span>
+      </a>
+
+      <div class="home-rail-tools">
+        <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
+          <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-locale-set="en" aria-pressed="false">EN</button>
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label={ui.header.theme.zh}
+          data-aria-zh={ui.header.theme.zh}
+          data-aria-en={ui.header.theme.en}
+        >
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="home-dates" aria-label={ui.home.dates.zh} data-aria-zh={ui.home.dates.zh} data-aria-en={ui.home.dates.en}>
+      {
+        archive.map((entry) => (
+          <a
+            href={dateHref(entry.dateKey, latest)}
+            aria-current={entry.dateKey === day.dateKey ? "page" : undefined}
+          >
+            <span>
+              <Loc zh={entry.dateLabel.zh} en={entry.dateLabel.en} />
+            </span>
+            <span class="home-date-count">{entry.count}</span>
+          </a>
+        ))
+      }
+    </nav>
+
+    <nav class="home-libs" aria-label={ui.home.libraries.zh} data-aria-zh={ui.home.libraries.zh} data-aria-en={ui.home.libraries.en}>
+      <p class="home-rail-label"><Loc zh={ui.home.libraries.zh} en={ui.home.libraries.en} /></p>
+      <a class="lib-grok" href={withBase("cases/")}>Grok Bot</a>
+      <a class="lib-html" href={withBase("html/")}><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></a>
+      <a class="lib-agent" href={withBase("agent-ui/")}>Agent UI</a>
+    </nav>
+
+    <nav class="home-rail-meta" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      <a href={withBase("search/")}><Loc zh={ui.nav.search.zh} en={ui.nav.search.en} /></a>
+      <a href={withBase("docs/")}><Loc zh={ui.nav.docs.zh} en={ui.nav.docs.en} /></a>
+      <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+    </nav>
+  </aside>
+
+  <main class="home-plaza">
+    <div class="home-plaza-scroll" data-plaza-scroll>
+      <div class="home-plaza-cols" data-plaza-grid>
+        <div class="home-col" data-plaza-col>
+          {col1.map((item) => <PlazaCard item={item} />)}
+        </div>
+        <div class="home-col" data-plaza-col>
+          {col2.map((item) => <PlazaCard item={item} />)}
+        </div>
+        <div class="home-col" data-plaza-col>
+          <DigestCard day={day} />
+          {col3.map((item) => <PlazaCard item={item} />)}
+        </div>
+      </div>
+      <p class="home-empty" hidden data-plaza-empty>
+        <Loc zh={ui.home.empty.zh} en={ui.home.empty.en} />
+      </p>
+    </div>
+
+    <div class="home-plaza-fade" aria-hidden="true"></div>
+
+    <div class="home-pill" role="toolbar" aria-label={ui.home.filter.zh} data-aria-zh={ui.home.filter.zh} data-aria-en={ui.home.filter.en}>
+      <button type="button" data-plaza-lib="all" aria-pressed="true">
+        <Loc zh={ui.lib.all.zh} en={ui.lib.all.en} />
+      </button>
+      <button type="button" data-plaza-lib="grok" aria-pressed="false">Grok Bot</button>
+      <button type="button" data-plaza-lib="html" aria-pressed="false">
+        <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} />
+      </button>
+      <button type="button" data-plaza-lib="agent-ui" aria-pressed="false">Agent UI</button>
+    </div>
+  </main>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const next = button.dataset.localeSet === "en" ? "en" : "zh";
+      const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
+      apply?.(next, true);
+    });
+  });
+
+  document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+
+  const shell = document.querySelector("[data-home-shell]");
+  const buttons = shell?.querySelectorAll<HTMLButtonElement>("[data-plaza-lib]");
+  const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-card]");
+  const empty = shell?.querySelector<HTMLElement>("[data-plaza-empty]");
+  if (shell && buttons && cards) {
+    const apply = (lib: string) => {
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = lib === "all" || card.dataset.lib === lib;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", button.dataset.plazaLib === lib ? "true" : "false");
+      });
+      if (empty) empty.hidden = visible > 0;
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => apply(button.dataset.plazaLib ?? "all"));
+    });
+  }
+</script>

@@ -1,0 +1,30 @@
+---
+import HomeShell from "../../components/HomeShell.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDigestArchive, getHomeDigest } from "../../lib/digest";
+import { fill, ui } from "../../lib/i18n";
+
+export function getStaticPaths() {
+  return getDigestArchive().map((entry) => ({
+    params: { date: entry.dateKey },
+  }));
+}
+
+const date = Astro.params.date!;
+const day = getHomeDigest(date);
+const title = fill(ui.home.dateTitle, { date: day.dateLabel.zh });
+const titleEn = fill(ui.home.dateTitle, { date: day.dateLabel.en });
+const description = fill(ui.home.dateDesc, { date: day.dateLabel.zh });
+const descriptionEn = fill(ui.home.dateDesc, { date: day.dateLabel.en });
+---
+
+<BaseLayout
+  collection="lab"
+  shell="plaza"
+  title={title.zh}
+  titleEn={titleEn.en}
+  description={description.zh}
+  descriptionEn={descriptionEn.en}
+>
+  <HomeShell dateKey={date} />
+</BaseLayout>

@@ -11,6 +11,7 @@ interface Props {
   description?: string;
   descriptionEn?: string;
   collection?: "lab" | "grok" | "html" | "agent-ui";
+  shell?: "site" | "plaza";
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   description = siteDescription,
   descriptionEn = siteDescriptionEn,
   collection = "lab",
+  shell = "site",
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -26,7 +28,7 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href;
 ---
 
 <!doctype html>
-<html lang="zh-CN" data-collection={collection} data-locale="zh">
+<html lang="zh-CN" data-collection={collection} data-locale="zh" data-shell={shell}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -140,10 +142,18 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href;
     </script>
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    {
+      shell === "plaza" ? (
+        <slot />
+      ) : (
+        <>
+          <Header />
+          <main>
+            <slot />
+          </main>
+          <Footer />
+        </>
+      )
+    }
   </body>
 </html>

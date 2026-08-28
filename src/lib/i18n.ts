@@ -211,6 +211,19 @@ export const ui = {
       en: "After output is reliable, consider a schedule or event trigger. Routines should still stop at review by default.",
     },
   },
+  home: {
+    lede: { zh: "可复用的 AI 精选实验室", en: "A reusable AI collection lab" },
+    dates: { zh: "日期", en: "Dates" },
+    libraries: { zh: "内容库", en: "Libraries" },
+    digest: { zh: "今日看点", en: "Today" },
+    filter: { zh: "按库筛选", en: "Filter by library" },
+    empty: { zh: "这一天没有可显示的条目。", en: "No items to show for this day." },
+    dateTitle: { zh: "{date} · AI UP LAB", en: "{date} · AI UP LAB" },
+    dateDesc: {
+      zh: "AI UP LAB {date} 的增收与条目。",
+      en: "AI UP LAB entries from {date}.",
+    },
+  },
   pages: {
     landingH1: { zh: "可复用的 AI 精选实验室", en: "A reusable AI collection lab" },
     landingLede: {
