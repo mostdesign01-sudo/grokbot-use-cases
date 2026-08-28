@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-28",
+      "title": "HTML 收集：增收 OpenDesign",
+      "body": "增收 OpenDesign：开源 Claude Design 替代，本机优先桌面应用，导出 HTML / PDF。来源 @sunmer575399。HTML 收集 25→26。",
+      "titleEn": "HTML 收集: + OpenDesign",
+      "bodyEn": "Added OpenDesign, the open-source Claude Design alternative — local-first desktop app, HTML/PDF export. Source: @sunmer575399. HTML 收集 25→26."
+    },
+    {
+      "date": "2026-08-28",
       "title": "Grok Bot：增收 2 条社区案例",
       "body": "增收 六席 Bot 跑手游工作室：Rank'em、非官方 Linux 版 Grok Bot：从 Windows 安装包移植。来源分别为 Ryan Perry 案例研究（兼 HN item 49447324）与 jakob-bu 非官方 Linux 移植（HN item 49467702）。Grok Bot 72→74。",
       "titleEn": "Grok Bot: +2 community cases",
