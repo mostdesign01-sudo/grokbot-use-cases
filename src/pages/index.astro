@@ -1,72 +1,15 @@
 ---
-import AgentUiCard from "../components/AgentUiCard.astro";
-import CaseCard from "../components/CaseCard.astro";
-import HtmlCard from "../components/HtmlCard.astro";
-import LibrarySearch from "../components/LibrarySearch.astro";
-import Loc from "../components/Loc.astro";
-import PosterBanners from "../components/PosterBanners.astro";
+import HomeShell from "../components/HomeShell.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { caseSearchText } from "../lib/cases";
-import { ui } from "../lib/i18n";
-import { getLandingGrokCases, getLandingVisualPins, landingPinSearchText } from "../lib/pins";
-import { withBase } from "../lib/paths";
 import { siteDescription, siteDescriptionEn, siteName } from "../lib/site";
-
-const visualPins = getLandingVisualPins(24);
-const grokCases = getLandingGrokCases(12);
 ---
 
-<BaseLayout collection="lab" title={siteName} description={siteDescription} descriptionEn={siteDescriptionEn}>
-  <div class="wrap-wide">
-    <section class="landing-intro">
-      <p class="kicker">{siteName}</p>
-      <h1><Loc zh={ui.pages.landingH1.zh} en={ui.pages.landingH1.en} /></h1>
-      <p class="lede"><Loc zh={ui.pages.landingLede.zh} en={ui.pages.landingLede.en} /></p>
-    </section>
-
-    <PosterBanners />
-
-    <LibrarySearch library="all" placeholder={ui.search.wall.zh} placeholderEn={ui.search.wall.en} />
-
-    <section class="section" aria-labelledby="landing-wall" data-hub>
-      <div class="section-head">
-        <div>
-          <h2 id="landing-wall"><Loc zh={ui.pages.landingWall.zh} en={ui.pages.landingWall.en} /></h2>
-          <p><Loc zh={ui.pages.landingWallLede.zh} en={ui.pages.landingWallLede.en} /></p>
-        </div>
-      </div>
-      <div class="masonry">
-        {
-          visualPins.map((pin) => (
-            <div data-filter-card data-filter-text={landingPinSearchText(pin)}>
-              {pin.lib === "html" ? (
-                <HtmlCard item={pin.item} showLibBadge />
-              ) : (
-                <AgentUiCard item={pin.item} showLibBadge />
-              )}
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="landing-grok">
-      <div class="section-head">
-        <div>
-          <h2 id="landing-grok"><Loc zh={ui.pages.landingGrok.zh} en={ui.pages.landingGrok.en} /></h2>
-          <p><Loc zh={ui.pages.landingGrokLede.zh} en={ui.pages.landingGrokLede.en} /></p>
-        </div>
-        <a href={withBase("cases/")}><Loc zh={ui.pages.landingGrokAll.zh} en={ui.pages.landingGrokAll.en} /></a>
-      </div>
-      <div class="tweet-feed">
-        {
-          grokCases.map((item) => (
-            <div data-filter-card data-filter-text={caseSearchText(item)}>
-              <CaseCard caseItem={item} showLibBadge />
-            </div>
-          ))
-        }
-      </div>
-    </section>
-  </div>
+<BaseLayout
+  collection="lab"
+  shell="plaza"
+  title={siteName}
+  description={siteDescription}
+  descriptionEn={siteDescriptionEn}
+>
+  <HomeShell />
 </BaseLayout>

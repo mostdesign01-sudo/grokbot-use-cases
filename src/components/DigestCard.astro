@@ -1,0 +1,38 @@
+---
+import Loc from "./Loc.astro";
+import type { DigestDay } from "../lib/digest";
+import { ui } from "../lib/i18n";
+
+interface Props {
+  day: DigestDay;
+}
+
+const { day } = Astro.props;
+---
+
+<article class="plaza-card plaza-digest" data-plaza-digest>
+  <header class="plaza-digest-head">
+    <h1><Loc zh={ui.home.digest.zh} en={ui.home.digest.en} /></h1>
+    <p class="plaza-digest-date">
+      <Loc zh={day.dateLabel.zh} en={day.dateLabel.en} />
+    </p>
+  </header>
+  {
+    day.lead.zh && (
+      <p class="plaza-digest-lead">
+        <Loc zh={day.lead.zh} en={day.lead.en} />
+      </p>
+    )
+  }
+  {
+    day.bullets.length > 0 && (
+      <ul class="plaza-digest-bullets">
+        {day.bullets.map((bullet) => (
+          <li>
+            <Loc zh={bullet.zh} en={bullet.en} />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</article>
