@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-28T01:10:00Z",
+    "updatedAt": "2026-08-30T02:08:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.2",
-    "count": 74,
+    "version": "1.4.3",
+    "count": 75,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -20,10 +20,55 @@
       "https://x.ai/bot/use-cases",
       "https://x.com/mattyp/status/2092286281266962681",
       "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
-      "https://github.com/jakob-bu/grok-bot-linux-unofficial"
+      "https://github.com/jakob-bu/grok-bot-linux-unofficial",
+      "https://x.ai/bot/guides"
     ]
   },
   "cases": [
+    {
+      "id": "grokbot-guides",
+      "slug": "xai-grok-bot-guides",
+      "title": "官方 Grok Bot Guides：把 Agent 当同事的实操手册",
+      "titleEn": "Official Grok Bot Guides: playbooks for AI teammates",
+      "summary": "xAI 官方 playbook 库，不是角色目录。五篇可跟做：多团队频道排班、手游工作室、用 Bot 做设计、企业 GTM、产品经理带一桌 Bot。Elon 转发「How to use Grok Bot」。",
+      "summaryEn": "xAI’s official playbook library — not the role catalog. Five follow-along guides: multi-team channels, a mobile game studio, designing with bots, enterprise GTM, and PMs running a bot roster. Elon quote-tweeted “How to use Grok Bot.”",
+      "categories": [
+        "multi-agent",
+        "automation",
+        "ops",
+        "engineering"
+      ],
+      "role": "Official Guides Library",
+      "sourceUrl": "https://x.ai/bot/guides",
+      "secondaryUrls": [
+        "https://x.com/elonmusk/status/2093471590767882716",
+        "https://x.com/XFreeze/status/2093337680452968873",
+        "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
+        "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
+        "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
+        "https://x.ai/bot/guides/grok-bot-for-gtm",
+        "https://x.ai/bot/guides/grok-bot-for-pms"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "Elon 转发。官方五篇实操手册，和 x.ai/bot/use-cases 角色目录不是同一页。手游篇和库里已有的 Rank'em 案例同源，手册页是官方入口。",
+      "qualityNoteEn": "Quote-tweeted by Elon. Five official playbooks; not the same page as the x.ai/bot/use-cases role catalog. The mobile guide is the official door to the Rank'em case already in the library.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "组桌和交接可以跟做；对外发帖、付款、改日历仍要人审。",
+      "approvalBoundaryEn": "Follow the roster and handoff pattern; still review before posting, paying, or changing calendars.",
+      "connectors": [
+        "browser",
+        "notion"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/grokbot-guides.webp",
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-08-30T02:08:00Z"
+    },
     {
       "id": "grokbot-linux-unofficial",
       "slug": "jakob-bu-grok-bot-linux-unofficial",
