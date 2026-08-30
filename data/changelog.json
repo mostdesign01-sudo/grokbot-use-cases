@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-30",
+      "title": "Grok Bot：增收官方 Guides 手册库",
+      "body": "增收官方 Grok Bot Guides：五篇把 Agent 当同事的实操手册。来源 Elon 转发 @XFreeze。Grok Bot 74→75。",
+      "titleEn": "Grok Bot: + official Guides library",
+      "bodyEn": "Added the official Grok Bot Guides, five playbooks for AI teammates. Source: Elon quoting @XFreeze. Grok Bot 74→75."
+    },
+    {
+      "date": "2026-08-30",
       "title": "HTML 收集：增收 MotionSites",
       "body": "增收 MotionSites：给 Lovable / Cursor / Claude 用的落地页提示库。来源 @alextalksai 转发 @viktoroddy 的 GPT-5.6 Sol 教程。HTML 收集 29→30。",
       "titleEn": "HTML 收集: + MotionSites",
