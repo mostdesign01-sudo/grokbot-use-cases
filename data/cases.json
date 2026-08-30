@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-30T02:08:00Z",
+    "updatedAt": "2026-08-30T16:44:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.3",
-    "count": 75,
+    "version": "1.4.4",
+    "count": 76,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -25,6 +25,42 @@
     ]
   },
   "cases": [
+    {
+      "id": "grokbot-explorers-21",
+      "slug": "maiyang-21-grok-bot-explorers",
+      "title": "X 上最值得关注的 21 个 Grok Bot 探索者",
+      "titleEn": "21 Grok Bot explorers worth following on X",
+      "summary": "Mai Yang 在深圳 Meetup 当天整理的名单：先看官方三人（Matt Palmer 入门片、Lauren 省额度、Eric 多团队），再看产品组和把 Bot 当同事用的人。部分条目作者自己标了未核到原文。",
+      "summaryEn": "Mai Yang’s list from Grok Bot Meetup Shenzhen: start with three official accounts (Matt Palmer’s intro, Lauren on spend, Eric on multi-team), then the product crew and people who run bots as teammates. Some later entries the author marked unverified.",
+      "categories": [
+        "multi-agent",
+        "research",
+        "community"
+      ],
+      "role": "Community Roundup",
+      "sourceUrl": "https://x.com/i/article/2093907568053870592",
+      "secondaryUrls": [
+        "https://x.com/MaiYangAI/status/2093912172917121444",
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "community",
+      "qualityNote": "社区盘点，不是官方目录。1–3 和 Guides 库、Matt 入门片已在本库。13 是 Elon 转过的 XFreeze。14 的曝光数字是原文，作者说没复现。19–21 作者标了待补。",
+      "qualityNoteEn": "A community roundup, not the official catalog. Items 1–3 and the Guides library / Matt intro are already in this library. 13 is the XFreeze post Elon quoted. 14’s reach numbers are the author’s; Mai Yang says he did not reproduce them. 19–21 are marked incomplete.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": false,
+      "connectors": [
+        "x",
+        "notion"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/grokbot-explorers-21.webp",
+      "publishedAt": "2026-08-30",
+      "updatedAt": "2026-08-30T16:44:00Z"
+    },
     {
       "id": "grokbot-guides",
       "slug": "xai-grok-bot-guides",
