@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-08-30",
+      "title": "HTML 收集：增收 MotionSites",
+      "body": "增收 MotionSites：给 Lovable / Cursor / Claude 用的落地页提示库。来源 @alextalksai 转发 @viktoroddy 的 GPT-5.6 Sol 教程。HTML 收集 29→30。",
+      "titleEn": "HTML 收集: + MotionSites",
+      "bodyEn": "Added MotionSites, landing-page prompts for Lovable / Cursor / Claude. Source: @alextalksai sharing @viktoroddy’s GPT-5.6 Sol tutorial. HTML 收集 29→30."
+    },
+    {
       "date": "2026-08-29",
       "title": "HTML 收集：增收 MeiGen",
       "body": "增收 MeiGen：免费 GPT Image 2 / Nano Banana / Seedance 2.5 提示画廊。来源 @alextalksai。HTML 收集 28→29。",
