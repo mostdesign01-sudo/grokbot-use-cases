@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-30T16:44:00Z",
+    "updatedAt": "2026-08-31T01:28:18Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.4",
-    "count": 76,
+    "version": "1.4.5",
+    "count": 77,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -21,10 +21,49 @@
       "https://x.com/mattyp/status/2092286281266962681",
       "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
       "https://github.com/jakob-bu/grok-bot-linux-unofficial",
-      "https://x.ai/bot/guides"
+      "https://x.ai/bot/guides",
+      "https://flaviocopes.com/grok-bot/"
     ]
   },
   "cases": [
+    {
+      "id": "flavio-grok-bot-deep-dive",
+      "slug": "flavio-copes-grok-bot-deep-dive",
+      "title": "Flavio Copes：Grok Bot 完整深潜",
+      "titleEn": "Flavio Copes: A deep dive into Grok Bot",
+      "summary": "Flavio Copes 的长文实操：共享云电脑架构、插件优先连法、Blog Pulse 日审角色、先跑通再存 Skill/Routine、模板分享与审批边界。附完整角色提示词与可复制检查清单。",
+      "summaryEn": "Flavio Copes’ long practical guide: shared cloud-computer architecture, plugin-first connectors, a Blog Pulse daily-review role, run-once-then-skill/routine, templates, and approval boundaries. Includes a full role prompt and checklists.",
+      "categories": [
+        "automation",
+        "daily-digest",
+        "ops"
+      ],
+      "role": "Blog Pulse / Ops Bot",
+      "sourceUrl": "https://flaviocopes.com/grok-bot/",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "社区最扎实的系统化教程之一（更新至 2026-08-30）；可复现，不是空泛夸赞。",
+      "qualityNoteEn": "One of the most systematic community walkthroughs (updated 2026-08-30); reproducible, not vague praise.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "不发布、不推仓、不发信、不改生产；先出报告与草稿。",
+      "approvalBoundaryEn": "No publishing, pushing, emailing, or production changes; deliver reports and drafts first.",
+      "connectors": [
+        "browser",
+        "github",
+        "notion"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-22",
+      "updatedAt": "2026-08-31T01:28:18Z"
+    },
     {
       "id": "grokbot-explorers-21",
       "slug": "maiyang-21-grok-bot-explorers",

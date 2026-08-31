@@ -1,11 +1,44 @@
 {
   "meta": {
-    "updatedAt": "2026-08-28T00:56:00Z",
+    "updatedAt": "2026-08-31T01:28:18Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.0",
-    "count": 25
+    "version": "1.4.1",
+    "count": 26
   },
   "items": [
+    {
+      "id": "three-ws",
+      "slug": "three-ws",
+      "title": "three.ws",
+      "titleEn": "three.ws",
+      "summary": "开源 3D AI Agent 平台（Apache-2.0）：两行 HTML 嵌入 agent-3d，文字/自拍造形象，语音与记忆可选。免登录可玩 Forge 与嵌入预览。",
+      "summaryEn": "Open-source 3D AI agent platform (Apache-2.0): embed agent-3d in two lines of HTML, build avatars from text or selfies, optional voice and memory. Forge and embed previews work without login.",
+      "types": [
+        "threejs",
+        "ui",
+        "landing"
+      ],
+      "sourceUrl": "https://three.ws",
+      "secondaryUrls": [
+        "https://github.com/nirholas/three.ws",
+        "https://www.npmjs.com/package/@three-ws/sdk"
+      ],
+      "featured": true,
+      "publishedAt": "2026-04-29",
+      "updatedAt": "2026-08-31T01:28:18Z",
+      "qualityNote": "免费开源可公开访问；给 Agent 用的可复制嵌入层，不是 Pro 付费墙。",
+      "qualityNoteEn": "Free, open-source, publicly reachable — a copyable embed layer for Agents, not a Pro paywall.",
+      "tags": [
+        "three.js",
+        "web-component",
+        "agent",
+        "open-source"
+      ],
+      "npmPackage": "@three-ws/sdk",
+      "promptHint": "用 three.ws 的 agent-3d 嵌入做站点里的 3D 助手壳；保持开源嵌入，换我们的形象与人设。",
+      "promptHintEn": "Embed three.ws agent-3d as the site’s 3D assistant shell; keep the open-source embed and swap in our avatar and persona.",
+      "previewImage": "/previews/three-ws.webp"
+    },
     {
       "id": "shadcn-ui",
       "slug": "shadcn-ui",

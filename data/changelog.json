@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-08-31",
+      "title": "日更：Flavio 深潜 + Millenium Bug + Single-File SaaS + three.ws",
+      "body": "Grok Bot 增收 Flavio Copes《Grok Bot 完整深潜》。HTML 增收 Millenium Bug、Single-File SaaS。Agent UI 增收 three.ws。Grok Bot 76→77，HTML 30→32，Agent UI 25→26。",
+      "titleEn": "Daily: Flavio deep dive + Millenium Bug + Single-File SaaS + three.ws",
+      "bodyEn": "Grok Bot: added Flavio Copes’ Grok Bot deep dive. HTML: Millenium Bug, Single-File SaaS. Agent UI: three.ws. Grok Bot 76→77, HTML 30→32, Agent UI 25→26."
+    },
+    {
+      "date": "2026-08-31",
       "title": "Grok Bot：增收 21 个探索者盘点",
       "body": "增收 Mai Yang《X 上最值得关注的 21 个 Grok Bot 探索者》。深圳 Meetup 当天的社区名单。Grok Bot 75→76。",
       "titleEn": "Grok Bot: + 21 explorers roundup",

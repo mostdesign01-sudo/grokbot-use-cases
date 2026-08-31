@@ -1,11 +1,67 @@
 {
   "meta": {
-    "updatedAt": "2026-08-30T01:42:00Z",
+    "updatedAt": "2026-08-31T01:28:18Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.6",
-    "count": 30
+    "version": "1.3.7",
+    "count": 32
   },
   "items": [
+    {
+      "id": "millenium-bug",
+      "slug": "millenium-bug",
+      "title": "Millenium Bug：90 年代银行风 CSS",
+      "titleEn": "Millenium Bug: retro-banking CSS",
+      "summary": "无依赖 classless-first CSS，把语义 HTML 收成 90 年代末银行后台：嵌套灰字段、钴蓝页签、荧光黄高亮。一文件、零构建。",
+      "summaryEn": "A dependency-free, classless-first CSS kit that restyles semantic HTML as late-90s bank back-office UI: nested gray fieldsets, cobalt tabs, fluorescent yellow highlights. One file, zero build.",
+      "types": [
+        "component"
+      ],
+      "sourceUrl": "https://mtct.github.io/millenium-bug/demo/index.html",
+      "secondaryUrls": [
+        "https://github.com/mtct/millenium-bug",
+        "https://news.ycombinator.com/item?id=49037395"
+      ],
+      "previewImage": "/previews/millenium-bug.webp",
+      "featured": false,
+      "publishedAt": "2026-07-24",
+      "updatedAt": "2026-08-31T01:28:18Z",
+      "qualityNote": "Show HN 复古 CSS 样式库（item 49037395）。演示页即组件画廊。来自 Hacker News。",
+      "qualityNoteEn": "Show HN retro CSS stylesheet (item 49037395). The demo page is the component gallery. From Hacker News.",
+      "tags": [
+        "css",
+        "retro",
+        "classless",
+        "hacker-news"
+      ]
+    },
+    {
+      "id": "single-file-saas",
+      "slug": "single-file-saas",
+      "title": "Single-File SaaS：单文件 BYOK 模板",
+      "titleEn": "Single-File SaaS: BYOK in one HTML file",
+      "summary": "一整套 BYOK SaaS 脚手架塞进一个 HTML：免费日限额、License 解锁 Pro、密钥只留在当前标签页内存。可直接打开演示页。",
+      "summaryEn": "A full BYOK SaaS scaffold in one HTML file: free daily quota, license unlock for Pro, keys kept in tab memory only. Open the demo page directly.",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "sourceUrl": "https://0xelitesystem.github.io/single-file-saas-template/",
+      "secondaryUrls": [
+        "https://github.com/0xelitesystem/single-file-saas-template"
+      ],
+      "previewImage": "/previews/single-file-saas.webp",
+      "featured": false,
+      "publishedAt": "2026-08-28",
+      "updatedAt": "2026-08-31T01:28:18Z",
+      "qualityNote": "可公开访问的单文件 SaaS 骨架，适合 Agent 当落地页/工具壳参考。",
+      "qualityNoteEn": "A publicly reachable single-file SaaS skeleton — useful Agent reference for landing pages and tool shells.",
+      "tags": [
+        "single-file",
+        "saas",
+        "byok",
+        "html"
+      ]
+    },
     {
       "id": "motionsites",
       "slug": "motionsites",

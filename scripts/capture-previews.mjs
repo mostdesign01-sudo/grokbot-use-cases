@@ -33,7 +33,10 @@ function targets() {
     ...html.items.map((item) => ({ lib: "html", id: item.id, title: item.title, url: item.sourceUrl })),
     ...agent.items.map((item) => ({ lib: "agent-ui", id: item.id, title: item.title, url: item.sourceUrl })),
   ];
-  return only ? all.filter((item) => item.lib === only) : all;
+  if (!only) return all;
+  if (only === "html" || only === "agent-ui") return all.filter((item) => item.lib === only);
+  const ids = new Set(only.split(",").map((s) => s.trim()).filter(Boolean));
+  return all.filter((item) => ids.has(item.id));
 }
 
 const html = await loadJson("data/html-items.json");
