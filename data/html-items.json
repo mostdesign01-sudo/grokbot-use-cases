@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-31T01:28:18Z",
+    "updatedAt": "2026-09-01T00:10:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.7",
-    "count": 32
+    "count": 33
   },
   "items": [
     {
@@ -878,6 +878,36 @@
         "single-file",
         "html",
         "hacker-news"
+      ]
+    },
+    {
+      "id": "b2tf",
+      "slug": "b2tf",
+      "title": "B2TF：复古 iOS 应用目录",
+      "titleEn": "B2TF: vintage iOS app directory",
+      "summary": "公开可提交的复古 iOS 应用设计目录。格子里是带视频预览的手机界面：磁带、像素、拟物相机。免费浏览，欢迎投稿。",
+      "summaryEn": "A public, submission-open directory of retro-style iOS apps. A grid of phone UIs with video previews: cassettes, pixels, skeuomorphic cameras. Free to browse; submissions welcome.",
+      "types": [
+        "landing",
+        "portfolio"
+      ],
+      "sourceUrl": "https://www.b2tf.app",
+      "secondaryUrls": [
+        "https://x.com/jackcring/status/2092054517911007405",
+        "https://x.com/jackcring/status/2091699400582295946"
+      ],
+      "previewImage": "/previews/b2tf.webp",
+      "featured": false,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-09-01T00:10:00Z",
+      "qualityNote": "Jc（@jackcring）上线的复古 iOS 目录。公开浏览，不是 Grok Bot 案例。可当反塑料蓝白模板的对照。",
+      "qualityNoteEn": "Jc (@jackcring) launched this retro iOS directory. Public browse, not a Grok Bot case. A useful counterexample to generic Bootstrap-blue templates.",
+      "tags": [
+        "ios",
+        "retro",
+        "directory",
+        "skeuomorphic",
+        "mobile"
       ]
     }
   ]
