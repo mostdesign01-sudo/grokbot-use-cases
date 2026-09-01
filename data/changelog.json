@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-01",
+      "title": "Grok Bot：增收 grokbots.best",
+      "body": "增收 Hieu Dinh 的社区发现站 grokbots.best。第三方公开模板目录，不是官方名录。Grok Bot 82→83。",
+      "titleEn": "Grok Bot: + grokbots.best",
+      "bodyEn": "Added Hieu Dinh’s community directory grokbots.best. Third-party public templates, not the official catalog. Grok Bot 82→83."
+    },
+    {
+      "date": "2026-09-01",
       "title": "HTML：Refero Styles 补 Abraham 那条来源",
       "body": "Abraham John（@Abmankendrick）8/31 又推了 Refero Styles（2000+ DESIGN.md）。条目已在库，只补第二来源，不另开卡。",
       "titleEn": "HTML: Refero Styles + Abraham John source",
