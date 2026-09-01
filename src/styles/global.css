@@ -213,46 +213,15 @@ code {
 .brand-mark {
   width: 30px;
   height: 30px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
+  display: block;
   flex: 0 0 auto;
-  background: color-mix(in srgb, var(--accent) 16%, var(--bg-elev));
   color: var(--ink);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
 }
 
-.brand-mark-letters {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: -0.06em;
-  line-height: 1;
-}
-
-.brand-mark-dots {
-  display: flex;
-  gap: 2px;
-}
-
-.brand-mark-dots i {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-}
-
-.brand-mark-dots i:nth-child(1) {
-  background: #d4a054;
-}
-
-.brand-mark-dots i:nth-child(2) {
-  background: #5ec8c5;
-}
-
-.brand-mark-dots i:nth-child(3) {
-  background: #c9a0ff;
+.brand-mark-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .brand-text {

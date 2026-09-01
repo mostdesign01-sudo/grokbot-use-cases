@@ -1,4 +1,5 @@
 ---
+import BrandMark from "./BrandMark.astro";
 import DigestCard from "./DigestCard.astro";
 import Loc from "./Loc.astro";
 import PlazaCard from "./PlazaCard.astro";
@@ -29,8 +30,7 @@ const [col1, col2, col3] = packPlazaColumns(day.items);
     <div class="home-rail-top">
       <a class="home-wordmark" href={withBase("/")}>
         <span class="brand-mark" aria-hidden="true">
-          <span class="brand-mark-letters">AI</span>
-          <span class="brand-mark-dots"><i></i><i></i><i></i></span>
+          <BrandMark />
         </span>
         <span class="home-wordmark-text">
           <strong>{siteName}</strong>

@@ -1,4 +1,5 @@
 ---
+import BrandMark from "./BrandMark.astro";
 import Loc from "./Loc.astro";
 import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
 import { ui } from "../lib/i18n";
@@ -69,8 +70,7 @@ const brandLine =
     <div class="header-start">
       <a class="brand" href={withBase("/")}>
         <span class="brand-mark" aria-hidden="true">
-          <span class="brand-mark-letters">AI</span>
-          <span class="brand-mark-dots"><i></i><i></i><i></i></span>
+          <BrandMark />
         </span>
         <span class="brand-text">
           <strong>{siteName}</strong>
