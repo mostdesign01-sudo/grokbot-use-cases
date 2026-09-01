@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-31T01:28:18Z",
+    "updatedAt": "2026-09-01T00:10:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.5",
-    "count": 77,
+    "count": 78,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -22,7 +22,9 @@
       "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
       "https://github.com/jakob-bu/grok-bot-linux-unofficial",
       "https://x.ai/bot/guides",
-      "https://flaviocopes.com/grok-bot/"
+      "https://flaviocopes.com/grok-bot/",
+      "https://x.com/robrtcode/status/2094388848230793346",
+      "https://www.b2tf.app"
     ]
   },
   "cases": [
@@ -2732,6 +2734,46 @@
       "featured": true,
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-26T01:20:00Z"
+    },
+    {
+      "id": "grokbot-boring-directory",
+      "slug": "grokbot-boring-directory",
+      "title": "无聊目录：每晚长一页",
+      "titleEn": "A boring directory that grows a page a night",
+      "summary": "robert.（@robrtcode）把 Grok Bot 写成「买无聊互联网地」：找没人写的日常搜索缺口，在自己电脑上做小目录，每晚发一页，例行跑，日报进 Telegram。联盟邮件和佣金是作者说法，未核实。",
+      "summaryEn": "robert. (@robrtcode) frames Grok Bot as buying boring internet land: find a daily-search niche nobody covers, build a small directory on its own computer, publish a page each night, run it on a routine, reports to Telegram. Affiliate emails and commissions are the author’s claim, unverified.",
+      "categories": [
+        "content",
+        "automation",
+        "daily-digest",
+        "marketing"
+      ],
+      "role": "Directory Bot",
+      "sourceUrl": "https://x.com/robrtcode/status/2094388848230793346",
+      "secondaryUrls": [
+        "https://x.com/dravenip/status/2091688351942508876",
+        "https://x.com/i/article/2091685745140678656"
+      ],
+      "sourceType": "community",
+      "qualityNote": "西语社区帖，引用 @dravenip《GROK BOT GOD-MODE》。可复用的是例行目录，不是联盟发信。佣金与「零成本」未核实。发信、注册收款必须人审。",
+      "qualityNoteEn": "A Spanish community post quoting @dravenip’s GROK BOT GOD-MODE article. The reusable bit is a routine directory, not affiliate mail. Commissions and “costs 0” are unverified. Sending mail or opening payouts needs a human.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不以用户名义发邮件、不注册联盟、不动收款；只交目录草稿和日报。",
+      "approvalBoundaryEn": "Do not send email as the user, sign up for affiliates, or touch payouts; deliver directory drafts and a daily report only.",
+      "connectors": [
+        "browser",
+        "x",
+        "telegram"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/grokbot-boring-directory.webp",
+      "publishedAt": "2026-08-31",
+      "updatedAt": "2026-09-01T00:10:00Z"
     }
   ]
 }
