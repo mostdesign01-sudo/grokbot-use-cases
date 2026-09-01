@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-01",
+      "title": "日更：Grok Bot +2、HTML +1、Agent UI +3",
+      "body": "Grok Bot 79→81：官方接通 X；Jessica Temporal 六席周末交付 Yarn Stash（HN item 49509728）。HTML 33→34：PolyCSS（Show HN item 48294241）。Agent UI 26→29：Warp Field、Diagnostics Panel、Liquid Form（ThreeUI Community 免费组件，带 3:2 预览）。",
+      "titleEn": "Daily: Grok Bot +2, HTML +1, Agent UI +3",
+      "bodyEn": "Grok Bot 79→81: official X connector; Jessica Temporal’s six-bot Saturday shipping Yarn Stash (HN item 49509728). HTML 33→34: PolyCSS (Show HN item 48294241). Agent UI 26→29: Warp Field, Diagnostics Panel, Liquid Form (free ThreeUI Community components, with 3:2 previews)."
+    },
+    {
+      "date": "2026-09-01",
       "title": "Grok Bot：增收 Tailscale SSH 旁路",
       "body": "增收 Lonely 转发的非官方教程：用 Tailscale 把 Grok Bot 电脑和自己电脑拉进同一张网再 SSH。标了不要暴露 22 端口。Grok Bot 78→79。",
       "titleEn": "Grok Bot: + unofficial Tailscale SSH path",

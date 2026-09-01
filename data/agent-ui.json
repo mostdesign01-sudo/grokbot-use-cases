@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-08-31T01:28:18Z",
+    "updatedAt": "2026-09-01T01:41:20Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.1",
-    "count": 26
+    "version": "1.4.2",
+    "count": 29
   },
   "items": [
     {
@@ -847,6 +847,103 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Character Carousel 的 filmstrip 变体做 Agent 团队墙。保持 Community 免费版，换成我们的人名与职责，主色跟品牌走。",
       "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color."
+    },
+    {
+      "id": "warp-field",
+      "slug": "warp-field",
+      "title": "Warp Field",
+      "titleEn": "Warp Field",
+      "summary": "ThreeUI Community 的跃迁拖影场：streaks 等免费变体，适合 Agent 落地页首屏。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community warp-streak field: free variants such as streaks. Fits an Agent landing hero. No login; copy the prompt.",
+      "types": [
+        "threejs",
+        "hero",
+        "background"
+      ],
+      "sourceUrl": "https://threeui.com/three-js/warp-field/streaks",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "qualityNote": "Community 免费三维 Hero。复制 prompt 只改色相和拖影密度，不要手写粒子系统。",
+      "qualityNoteEn": "A free Community 3D hero. Copy the prompt and only change hue and streak density — do not hand-write a particle system.",
+      "tags": [
+        "threeui",
+        "community",
+        "threejs",
+        "hero"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Warp Field 的 streaks 做产品首屏背景。保持免费 Community 变体，换成靛紫，拖影疏一点。",
+      "promptHintEn": "Use Warp Field streaks as the product first-screen background. Keep the free Community variant, switch to indigo, and thin the streaks.",
+      "previewImage": "/previews/warp-field.webp"
+    },
+    {
+      "id": "diagnostics-panel",
+      "slug": "diagnostics-panel",
+      "title": "Diagnostics Panel",
+      "titleEn": "Diagnostics Panel",
+      "summary": "ThreeUI Community 的等距诊断台：layers / nodes / flow 免费变体，适合 Agent 运维或系统可视化。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community isometric diagnostics board: free variants layers / nodes / flow. Fits Agent ops or systems visuals. No login; copy the prompt.",
+      "types": [
+        "ui",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/ui-elements/diagnostics-panel/layers",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "qualityNote": "Community 免费界面件。复制 Skill.md 换成我们的层色和节点标签即可。",
+      "qualityNoteEn": "A free Community UI piece. Copy Skill.md and swap in our layer colors and node labels.",
+      "tags": [
+        "threeui",
+        "community",
+        "ui",
+        "dashboard"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Diagnostics Panel 的 layers 变体做状态页。保持免费 Community 变体，层色换成我们的主色。",
+      "promptHintEn": "Use the layers variant of Diagnostics Panel as a status page. Keep the free Community variant and switch layer colors to ours.",
+      "previewImage": "/previews/diagnostics-panel.webp"
+    },
+    {
+      "id": "liquid-form",
+      "slug": "liquid-form",
+      "title": "Liquid Form",
+      "titleEn": "Liquid Form",
+      "summary": "ThreeUI Community 的液态金属 WebGL 背景：光线步进，体积小，适合 Hero 底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community liquid-metal WebGL background: ray-marched, compact, fits a hero base. No login; copy the prompt.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/backgrounds/liquid-form",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "qualityNote": "Community 免费背景场。复制 prompt 只改金属色和流动速度。",
+      "qualityNoteEn": "A free Community background. Copy the prompt and only change metal color and flow speed.",
+      "tags": [
+        "threeui",
+        "community",
+        "background",
+        "webgl"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Liquid Form 做首屏背景。保持免费 Community 变体，金属色换成我们的主色，流动放慢。",
+      "promptHintEn": "Use Liquid Form as the first-screen background. Keep the free Community variant, switch the metal to our primary color, and slow the flow.",
+      "previewImage": "/previews/liquid-form.webp"
     }
   ]
 }

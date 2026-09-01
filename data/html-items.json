@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T00:10:00Z",
+    "updatedAt": "2026-09-01T01:41:20Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.7",
-    "count": 33
+    "version": "1.3.8",
+    "count": 34
   },
   "items": [
     {
@@ -908,6 +908,37 @@
         "directory",
         "skeuomorphic",
         "mobile"
+      ]
+    },
+    {
+      "id": "polycss",
+      "slug": "polycss",
+      "title": "PolyCSS：不用 WebGL 的 CSS 3D 引擎",
+      "titleEn": "PolyCSS: a CSS 3D engine without WebGL",
+      "summary": "Layoutit 的 DOM 原生 CSS 3D：OBJ/glTF/VOX 的每个多边形都是可点选的 DOM 节点，用 matrix3d 摆位置。有公开画廊、builder，以及 vanilla / React / Vue 入口。",
+      "summaryEn": "Layoutit’s DOM-native CSS 3D: every polygon from OBJ/glTF/VOX is a clickable DOM node placed with matrix3d. Public gallery and builder, plus vanilla / React / Vue entry points.",
+      "types": [
+        "component",
+        "interactive",
+        "docs"
+      ],
+      "sourceUrl": "https://polycss.com/",
+      "secondaryUrls": [
+        "https://github.com/LayoutitStudio/polycss",
+        "https://polycss.com/gallery/",
+        "https://news.ycombinator.com/item?id=48294241"
+      ],
+      "previewImage": "/previews/polycss.webp",
+      "featured": true,
+      "publishedAt": "2026-05-27",
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "qualityNote": "Show HN（item 48294241）：CSS 3D 网格引擎，演示页和画廊都可公开打开。另有 Pipes 展示页 css.graphics/pipes。",
+      "qualityNoteEn": "Show HN (item 48294241): a CSS 3D mesh engine whose demo and gallery are publicly open. Companion showcase: css.graphics/pipes.",
+      "tags": [
+        "css",
+        "3d",
+        "web-components",
+        "hacker-news"
       ]
     }
   ]

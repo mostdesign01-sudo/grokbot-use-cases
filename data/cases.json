@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T00:13:00Z",
+    "updatedAt": "2026-09-01T01:41:20Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.5",
-    "count": 79,
+    "version": "1.4.6",
+    "count": 81,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -26,7 +26,13 @@
       "https://x.com/robrtcode/status/2094388848230793346",
       "https://www.b2tf.app",
       "https://x.com/Lonely__MH/status/2094084188186272169",
-      "https://x.com/i/article/2093179299704733696"
+      "https://x.com/i/article/2093179299704733696",
+      "https://x.ai/news/grok-bot-and-x",
+      "https://jtemporal.com/i-built-my-ai-squad-in-grok-bot/",
+      "https://news.ycombinator.com/item?id=49509728",
+      "https://polycss.com/",
+      "https://glass3d.dev/",
+      "https://threeui.com/browse"
     ]
   },
   "cases": [
@@ -2815,6 +2821,81 @@
       "previewImage": "/previews/grokbot-ssh-tailscale.webp",
       "publishedAt": "2026-08-28",
       "updatedAt": "2026-09-01T00:13:00Z"
+    },
+    {
+      "id": "grok-bot-and-x",
+      "slug": "grok-bot-and-x",
+      "title": "Grok Bot 正式接通 X",
+      "titleEn": "Grok Bot now works with X",
+      "summary": "官方 2026-08-29：在 Grok Bot 里用 X 连接器登录，没有开发者账号也会代开。付费用户获赠 X API 额度。可让 Bot 搜帖、读时间线/提及、拉趋势、管理书签。官方标明这是第一版。",
+      "summaryEn": "Official, 2026-08-29: sign in with the X connector inside Grok Bot; a developer account is created if you lack one. Paid users get starter X API credits. Bots can search posts, read the timeline and mentions, pull trends, and manage bookmarks. Marked as a first version.",
+      "categories": [
+        "content",
+        "automation",
+        "daily-digest"
+      ],
+      "role": "X connector",
+      "sourceUrl": "https://x.ai/news/grok-bot-and-x",
+      "secondaryUrls": [
+        "https://x.ai/news"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "官方连接器说明，步骤可复现：打开 Bot → 用 X 连接器登录 → 让它搜帖或读时间线。不是空泛产品新闻。",
+      "qualityNoteEn": "Official connector write-up with a reproducible path: open Grok Bot, sign in with the X connector, then search posts or read the timeline. Not vague product news.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不发帖、不删帖、不改账号设置；只读搜索、时间线、提及和书签，连接账号需用户自己点。",
+      "approvalBoundaryEn": "Do not post, delete, or change account settings; read-only search, timeline, mentions, and bookmarks. The user must click connect.",
+      "connectors": [
+        "x"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/grok-bot-and-x.webp",
+      "publishedAt": "2026-08-29",
+      "updatedAt": "2026-09-01T01:41:20Z"
+    },
+    {
+      "id": "jtemporal-ai-squad",
+      "slug": "jtemporal-ai-squad",
+      "title": "Jessica Temporal：一个周六用六席 Bot 把 Yarn Stash 推上线",
+      "titleEn": "Jessica Temporal: a Saturday six-bot squad that shipped Yarn Stash",
+      "summary": "Auth0 DevRel Jessica Temporal 周五装上 Grok Bot，周六用 CoS Dorothea（30 分钟例行）、CMO Francis、QA Queenie、开发 Dottie、基建 Iggy、工程经理 Em，给 My Yarn Stash 做了 Ravelry 批量导入、Heroku→FastAPI Cloud、自定义 Auth 域名等。她做最终检查和预发。六席人设公开在 gist。",
+      "summaryEn": "Auth0 DevRel Jessica Temporal installed Grok Bot Friday night and spent Saturday with CoS Dorothea (30-min routine), CMO Francis, QA Queenie, developer Dottie, infra Iggy, and EM Em. They shipped Ravelry bulk import, Heroku→FastAPI Cloud, and a custom Auth domain for My Yarn Stash. She kept final checks and staging. Bot descriptions are a public gist.",
+      "categories": [
+        "multi-agent",
+        "engineering",
+        "coding"
+      ],
+      "role": "Yarn Stash squad",
+      "sourceUrl": "https://jtemporal.com/i-built-my-ai-squad-in-grok-bot/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49509728",
+        "https://gist.github.com/jtemporal/2a532f60eafede070c7da20862f2cc43",
+        "https://x.com/atmoio/status/2092286808440676733"
+      ],
+      "sourceType": "case-study",
+      "qualityNote": "来自 Hacker News item 49509728。作者说不是教程，但编制、例行、配额控制和公开 gist 人设都能复现，还有真实周末交付清单。",
+      "qualityNoteEn": "From Hacker News item 49509728. She says it is not a tutorial, but the roster, routines, quota control, public gist prompts, and weekend ship list are all reproducible.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "不迁生产、不改域名、不碰计费；人做最终检查和预发。",
+      "approvalBoundaryEn": "Do not migrate production, change domains, or touch billing; a human does final checks and staging.",
+      "connectors": [
+        "github",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/jtemporal-ai-squad.webp",
+      "publishedAt": "2026-08-30",
+      "updatedAt": "2026-09-01T01:41:20Z"
     }
   ]
 }
