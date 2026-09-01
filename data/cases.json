@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T00:10:00Z",
+    "updatedAt": "2026-09-01T00:13:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.5",
-    "count": 78,
+    "count": 79,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -24,7 +24,9 @@
       "https://x.ai/bot/guides",
       "https://flaviocopes.com/grok-bot/",
       "https://x.com/robrtcode/status/2094388848230793346",
-      "https://www.b2tf.app"
+      "https://www.b2tf.app",
+      "https://x.com/Lonely__MH/status/2094084188186272169",
+      "https://x.com/i/article/2093179299704733696"
     ]
   },
   "cases": [
@@ -2774,6 +2776,45 @@
       "previewImage": "/previews/grokbot-boring-directory.webp",
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-01T00:10:00Z"
+    },
+    {
+      "id": "grokbot-ssh-tailscale",
+      "slug": "grokbot-ssh-tailscale",
+      "title": "用 Tailscale SSH 连上 Grok Bot 电脑",
+      "titleEn": "SSH into Grok Bot’s computer over Tailscale",
+      "summary": "Lonely 转发蓝哥AI 的非官方教程：Grok Bot 背后是一台 Linux。用 Tailscale 把这台机器和自己电脑拉进同一张私有网，再 ssh box@100.x.x.x。官方没把 SSH 做成一等功能。",
+      "summaryEn": "Lonely sharing 蓝哥AI’s unofficial tutorial: Grok Bot’s backend is a Linux machine. Join it and your laptop on the same Tailscale network, then ssh box@100.x.x.x. SSH is not a first-class official feature.",
+      "categories": [
+        "engineering",
+        "automation"
+      ],
+      "role": "Computer",
+      "sourceUrl": "https://x.com/Lonely__MH/status/2094084188186272169",
+      "secondaryUrls": [
+        "https://x.com/0xlangeai/status/2093192039051489662",
+        "https://x.com/i/article/2093179299704733696",
+        "https://docs.x.ai/grok-bot/computer-and-apps",
+        "https://tailscale.com/download"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "非官方旁路，作者也写「自己折腾玩玩可以」。用户名固定 box。不要把 22 端口暴露到公网，不要把内网地址和 token 写进对话。日常看桌面、拷文件走官方通道即可。",
+      "qualityNoteEn": "Unofficial workaround; the author says it’s for tinkering. Username is always box. Do not expose port 22 to the public internet, and do not paste the private address or tokens into chat. For daily desktop and file copy, use the official path.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不装 Tailscale、不改 SSH、不暴露 22 端口，除非用户明确要求。",
+      "approvalBoundaryEn": "Do not install Tailscale, change SSH, or expose port 22 unless the user explicitly asks.",
+      "connectors": [
+        "tailscale",
+        "ssh"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/grokbot-ssh-tailscale.webp",
+      "publishedAt": "2026-08-28",
+      "updatedAt": "2026-09-01T00:13:00Z"
     }
   ]
 }
