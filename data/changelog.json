@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-01",
+      "title": "Grok Bot：增收 Tailscale SSH 旁路",
+      "body": "增收 Lonely 转发的非官方教程：用 Tailscale 把 Grok Bot 电脑和自己电脑拉进同一张网再 SSH。标了不要暴露 22 端口。Grok Bot 78→79。",
+      "titleEn": "Grok Bot: + unofficial Tailscale SSH path",
+      "bodyEn": "Added Lonely’s share of an unofficial tutorial: join Grok Bot’s computer and your laptop on Tailscale, then SSH. Notes not to expose port 22. Grok Bot 78→79."
+    },
+    {
+      "date": "2026-09-01",
       "title": "增收 B2TF 与无聊目录玩法",
       "body": "HTML 收集增收 B2TF 复古 iOS 应用目录（@jackcring）。Grok Bot 增收 robert. 的「无聊目录每晚长一页」社区玩法（联盟佣金未核实）。HTML 32→33，Grok Bot 77→78。",
       "titleEn": "Added B2TF and a boring-directory playbook",
