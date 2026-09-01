@@ -2933,6 +2933,37 @@
       "previewImage": "/previews/figma-bro.webp",
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-01T02:00:00Z"
+    },
+    {
+      "id": "grokbots-best",
+      "slug": "grokbots-best",
+      "title": "grokbots.best：社区 Grok Bot 发现站",
+      "titleEn": "grokbots.best: a community Grok Bot directory",
+      "summary": "Hieu Dinh（@hieudinh_）做的公开模板目录，按安装量和集成筛。第三方站，不是 x.ai 官方名录。作者说还会继续加 Bot。",
+      "summaryEn": "Hieu Dinh’s (@hieudinh_) public-template directory, filterable by installs and integrations. Third-party, not the official x.ai catalog. Author says more bots are coming.",
+      "categories": [
+        "community",
+        "research"
+      ],
+      "role": "Directory",
+      "sourceUrl": "https://grokbots.best",
+      "secondaryUrls": [
+        "https://x.com/hieudinh_/status/2093973012299264363"
+      ],
+      "sourceType": "community",
+      "qualityNote": "8/30 上线。和本库「21 个探索者」名单不是同一件事：这是可点开添加的站点。收录不代表核实每个 Bot 的安装量或安全性。",
+      "qualityNoteEn": "Went live 30 Aug. Not the same as this library’s “21 explorers” list: this is a click-to-add site. Listing it does not verify each bot’s install counts or safety.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [],
+      "language": "en",
+      "featured": true,
+      "previewImage": "/previews/grokbots-best.webp",
+      "publishedAt": "2026-08-30",
+      "updatedAt": "2026-09-01T11:40:00Z"
     }
   ]
 }
