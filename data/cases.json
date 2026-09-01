@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T01:41:20Z",
+    "updatedAt": "2026-09-01T02:00:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.6",
-    "count": 81,
+    "count": 82,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -32,7 +32,9 @@
       "https://news.ycombinator.com/item?id=49509728",
       "https://polycss.com/",
       "https://glass3d.dev/",
-      "https://threeui.com/browse"
+      "https://threeui.com/browse",
+      "https://x.ai/bot/VHMdjIGjGpgDSJR7dW6Gz",
+      "https://x.com/johnbai/status/2094456490115408172"
     ]
   },
   "cases": [
@@ -2896,6 +2898,41 @@
       "previewImage": "/previews/jtemporal-ai-squad.webp",
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-01T01:41:20Z"
+    },
+    {
+      "id": "figma-bro",
+      "slug": "figma-bro",
+      "title": "figma bro：Figma 设计系统搭档",
+      "titleEn": "figma bro: a Figma design-system partner",
+      "summary": "John Bai（Designing SpaceXAI）公开的可添加 Grok Bot 模板。Auto Layout 优先、少图层、走真实组件库，改文件走 Figma 连接器而不是截图。第三方 Bot，会代你动手。",
+      "summaryEn": "A shareable Grok Bot template from John Bai (Designing SpaceXAI). Autolayout-first, fewest layers, real component library; it edits through the Figma connector, not screenshots. Third-party bot; it can act on your files.",
+      "categories": [
+        "engineering",
+        "content"
+      ],
+      "role": "figma bro",
+      "sourceUrl": "https://x.ai/bot/VHMdjIGjGpgDSJR7dW6Gz",
+      "secondaryUrls": [
+        "https://x.com/johnbai/status/2094456490115408172"
+      ],
+      "sourceType": "community",
+      "qualityNote": "库里原先没有。可一键添加的公开模板，不是官网角色卡。要用 Figma 连接器。页面写明第三方、可能代你操作，改正式文件需人审。",
+      "qualityNoteEn": "Was not in the library. A public one-click template, not an official role card. Needs the Figma connector. The page says third-party and it may act for you; production file edits need a human.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "不改正式 Figma 文件、不发布组件，除非用户点头。",
+      "approvalBoundaryEn": "Do not edit production Figma files or publish components unless the user says so.",
+      "connectors": [
+        "figma"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/figma-bro.webp",
+      "publishedAt": "2026-08-31",
+      "updatedAt": "2026-09-01T02:00:00Z"
     }
   ]
 }
