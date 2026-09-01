@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-01",
+      "title": "Grok Bot：增收 figma bro",
+      "body": "增收 John Bai 公开的 Figma 设计系统搭档模板。走 Figma 连接器改文件。Grok Bot 81→82。",
+      "titleEn": "Grok Bot: + figma bro",
+      "bodyEn": "Added John Bai’s public Figma design-system partner template. Edits through the Figma connector. Grok Bot 81→82."
+    },
+    {
+      "date": "2026-09-01",
       "title": "日更：Grok Bot +2、HTML +1、Agent UI +3",
       "body": "Grok Bot 79→81：官方接通 X；Jessica Temporal 六席周末交付 Yarn Stash（HN item 49509728）。HTML 33→34：PolyCSS（Show HN item 48294241）。Agent UI 26→29：Warp Field、Diagnostics Panel、Liquid Form（ThreeUI Community 免费组件，带 3:2 预览）。",
       "titleEn": "Daily: Grok Bot +2, HTML +1, Agent UI +3",
