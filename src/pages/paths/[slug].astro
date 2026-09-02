@@ -121,11 +121,13 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
             <pre class="path-run-brief loc-en">{briefEn}</pre>
             <div class="path-run-copy-row">
               <button type="button" class="btn btn-ghost" data-path-copy>
-                <Loc zh={ui.path.copyBrief.zh} en={ui.path.copyBrief.en} />
+                <span data-path-copy-label>
+                  <Loc zh={ui.path.copyBrief.zh} en={ui.path.copyBrief.en} />
+                </span>
+                <span class="path-run-copied" hidden data-path-copied aria-live="polite">
+                  <Loc zh={ui.path.copied.zh} en={ui.path.copied.en} />
+                </span>
               </button>
-              <span class="path-run-copied" hidden data-path-copied>
-                <Loc zh={ui.path.copied.zh} en={ui.path.copied.en} />
-              </span>
             </div>
           </section>
         )
@@ -273,6 +275,7 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
       const toggle = document.querySelector<HTMLButtonElement>("[data-path-run-toggle]");
       const panel = document.querySelector<HTMLElement>("[data-path-run-panel]");
       const copyButton = document.querySelector<HTMLButtonElement>("[data-path-copy]");
+      const copyLabel = document.querySelector<HTMLElement>("[data-path-copy-label]");
       const copied = document.querySelector<HTMLElement>("[data-path-copied]");
       const brief = document.querySelector<HTMLElement>("[data-path-brief]");
 
@@ -288,31 +291,42 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
         }
       });
 
-      async function copyText(text: string): Promise<boolean> {
+      function copyTextSync(text: string): boolean {
+        const area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        let ok = false;
         try {
-          await navigator.clipboard.writeText(text);
-          return true;
+          ok = document.execCommand("copy");
         } catch {
-          const area = document.createElement("textarea");
-          area.value = text;
-          area.setAttribute("readonly", "");
-          area.style.position = "fixed";
-          area.style.left = "-9999px";
-          document.body.appendChild(area);
-          area.select();
-          const ok = document.execCommand("copy");
-          area.remove();
-          return ok;
+          ok = false;
         }
+        area.remove();
+        return ok;
       }
 
-      copyButton?.addEventListener("click", async () => {
+      function showCopied() {
+        if (!copied || !copyLabel) return;
+        copyLabel.hidden = true;
+        copied.removeAttribute("hidden");
+        window.setTimeout(() => {
+          copied.setAttribute("hidden", "");
+          copyLabel.hidden = false;
+        }, 2000);
+      }
+
+      copyButton?.addEventListener("click", () => {
         const text = brief?.textContent?.trim() ?? "";
         if (!text) return;
-        const ok = await copyText(text);
-        if (!ok || !copied) return;
-        copied.removeAttribute("hidden");
-        window.setTimeout(() => copied.setAttribute("hidden", ""), 2000);
+        if (copyTextSync(text)) {
+          showCopied();
+          return;
+        }
+        void navigator.clipboard?.writeText(text).then(showCopied);
       });
     </script>
   )

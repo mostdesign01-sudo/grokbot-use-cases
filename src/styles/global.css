@@ -2420,6 +2420,10 @@ html[data-theme="light"] .home-plaza {
   font-weight: 550;
 }
 
+button.btn[data-path-copy] .path-run-copied:not([hidden]) {
+  display: inline;
+}
+
 .home-plaza-scroll {
   height: 100%;
   overflow: auto;
