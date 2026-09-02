@@ -6,6 +6,7 @@ const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json",
 const agentUiDataset = JSON.parse(await readFile(new URL("../data/agent-ui.json", import.meta.url), "utf8"));
 const changelog = JSON.parse(await readFile(new URL("../data/changelog.json", import.meta.url), "utf8"));
 const pathsDataset = JSON.parse(await readFile(new URL("../data/paths.json", import.meta.url), "utf8"));
+const combosDataset = JSON.parse(await readFile(new URL("../data/combos.json", import.meta.url), "utf8"));
 
 const requiredPages = [
   "index.html",
@@ -29,6 +30,7 @@ const requiredPages = [
   "agent-ui/types/index.html",
   "404.html",
   "paths/index.html",
+  "combos/index.html",
 ];
 
 const missing = [];
@@ -127,6 +129,16 @@ if (pathsDataset.paths.length !== 5) {
   process.exit(1);
 }
 
+if (combosDataset.combos.length !== combosDataset.meta.count) {
+  console.error(`combos.json meta.count ${combosDataset.meta.count} does not match items ${combosDataset.combos.length}`);
+  process.exit(1);
+}
+
+if (combosDataset.combos.length < 3 || combosDataset.combos.length > 5) {
+  console.error(`Expected 3–5 combos, found ${combosDataset.combos.length}`);
+  process.exit(1);
+}
+
 const caseIds = new Set(dataset.cases.map((item) => item.id));
 const htmlIds = new Set(htmlDataset.items.map((item) => item.id));
 const agentUiIds = new Set(agentUiDataset.items.map((item) => item.id));
@@ -145,6 +157,16 @@ for (const path of pathsDataset.paths) {
   for (const id of path.relatedAgentUiIds ?? []) {
     if (!agentUiIds.has(id)) missing.push(`paths.json relatedAgentUiId not found: ${path.id} → ${id}`);
   }
+}
+
+for (const combo of combosDataset.combos) {
+  const page = `combos/${combo.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${page}`, import.meta.url))) {
+    missing.push(page);
+  }
+  if (!htmlIds.has(combo.htmlId)) missing.push(`combos.json htmlId not found: ${combo.id} → ${combo.htmlId}`);
+  if (!agentUiIds.has(combo.agentUiId)) missing.push(`combos.json agentUiId not found: ${combo.id} → ${combo.agentUiId}`);
+  if (!caseIds.has(combo.caseId)) missing.push(`combos.json caseId not found: ${combo.id} → ${combo.caseId}`);
 }
 
 const previewItems = [
@@ -209,11 +231,16 @@ if (!home.includes("本周可抄") || !home.includes("paths/daily-to-draft")) {
   process.exit(1);
 }
 
+if (!home.includes("combos/") || !home.includes("三库组合")) {
+  console.error("Homepage is missing the Combos rail link (combos/ / 三库组合).");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
 }
 
 console.log(
-  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, and core routes present.`,
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, and core routes present.`,
 );

@@ -1,0 +1,37 @@
+---
+import ComboCard from "../../components/ComboCard.astro";
+import Loc from "../../components/Loc.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { listCombos } from "../../lib/combos";
+import { ui } from "../../lib/i18n";
+import { withBase } from "../../lib/paths";
+
+const listed = listCombos();
+---
+
+<BaseLayout
+  collection="lab"
+  title={ui.combo.indexTitle.zh}
+  titleEn={ui.combo.indexTitle.en}
+  description={ui.combo.indexDesc.zh}
+  descriptionEn={ui.combo.indexDesc.en}
+>
+  <div class="wrap">
+    <section class="hub-intro">
+      <p class="kicker"><Loc zh={ui.combo.kicker.zh} en={ui.combo.kicker.en} /></p>
+      <h1><Loc zh={ui.combo.indexH1.zh} en={ui.combo.indexH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.combo.indexLede.zh} en={ui.combo.indexLede.en} /></p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("/")}><Loc zh={ui.footer.labHome.zh} en={ui.footer.labHome.en} /></a>
+        <a class="btn btn-ghost" href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a>
+        <a class="btn btn-ghost" href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+      </div>
+    </section>
+
+    <section class="section" aria-label={ui.combo.list.zh} data-aria-zh={ui.combo.list.zh} data-aria-en={ui.combo.list.en}>
+      <div class="combo-grid">
+        {listed.map((combo) => <ComboCard combo={combo} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

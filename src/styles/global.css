@@ -2095,6 +2095,18 @@ a.tweet-card.case-card {
   }
 }
 
+@media (min-width: 720px) {
+  .combo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 860px) {
+  .combo-trio {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Homepage plaza shell — distribution of a daily, site chrome stays AI UP LAB. */
 html[data-shell="plaza"],
 html[data-shell="plaza"] body {
@@ -2324,6 +2336,57 @@ html[data-theme="light"] .home-plaza {
 .path-grid {
   display: grid;
   gap: 12px;
+}
+
+.combo-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.combo-card .combo-card-trio {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.combo-card-trio strong {
+  margin-right: 6px;
+  color: var(--amber);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.combo-trio {
+  display: grid;
+  gap: 12px;
+}
+
+.combo-piece-lib {
+  margin: 0 0 6px;
+  color: var(--amber);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.combo-piece-html .combo-piece-lib {
+  color: var(--teal);
+}
+
+.combo-piece-agent-ui .combo-piece-lib {
+  color: var(--violet);
+}
+
+.combo-tease {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.combo-tease a {
+  color: inherit;
+  text-underline-offset: 3px;
 }
 
 .path-card .path-card-gate {

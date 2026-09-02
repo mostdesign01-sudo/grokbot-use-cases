@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-02T15:40:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.0.0",
+    "count": 4
+  },
+  "combos": [
+    {
+      "id": "ambient-cube-slides",
+      "slug": "ambient-cube-slides",
+      "title": "光影壳 + 线框立方体 + 演示稿",
+      "titleEn": "Ambient shell + wireframe cube + deck",
+      "summary": "Ambient CSS 的物理光照页当壳，Wireframe Forms · Cube 当面板装饰，对照官方演示文稿设计师从主模板出稿。全员课先看这三件怎么配，不编指标。",
+      "summaryEn": "Ambient CSS as the lighting shell, Wireframe Forms · Cube as panel ornament, and the official Presentation Designer working from a master template. An all-hands kit — how the three pieces sit together, no invented metrics.",
+      "htmlId": "ambient-css",
+      "agentUiId": "wireframe-forms-cube",
+      "caseId": "presentation-designer",
+      "useFor": "全员课场景",
+      "useForEn": "All-hands workshop",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "opendesign-form-launch",
+      "slug": "opendesign-form-launch",
+      "title": "OpenDesign + 表单地基 + 上线小组",
+      "titleEn": "OpenDesign + form kit + launch pod",
+      "summary": "OpenDesign 本机出页，shadcn/ui 当 Agent 拼界面的默认组件/表单库，对照官方 Website Launch 多 Bot 小组。Design 工作室用；发布仍停在人这边。",
+      "summaryEn": "OpenDesign for a local-first page, shadcn/ui as the Agent’s default form/component kit, and the official Website Launch multi-bot group. A Design-studio pick; publish still stops with a human.",
+      "htmlId": "open-design",
+      "agentUiId": "shadcn-ui",
+      "caseId": "website-launch-group",
+      "useFor": "Design 工作室",
+      "useForEn": "Design studio",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "refero-sketch-figma",
+      "slug": "refero-sketch-figma",
+      "title": "Refero 方向 + Sketchbook + figma bro",
+      "titleEn": "Refero direction + Sketchbook + figma bro",
+      "summary": "贴一份 Refero DESIGN.md 当方向，Sketchbook 当落地页骨架，figma bro 走真实组件库改稿。口味判断必须人做。",
+      "summaryEn": "Paste one Refero DESIGN.md as direction, use Sketchbook as the landing skeleton, and let figma bro edit through a real component library. Taste judgment stays human.",
+      "htmlId": "refero-styles",
+      "agentUiId": "sketchbook",
+      "caseId": "figma-bro",
+      "useFor": "Design 工作室",
+      "useForEn": "Design studio",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "motionsites-flow-rollout",
+      "slug": "motionsites-flow-rollout",
+      "title": "MotionSites + 结构流 + 无代码小队",
+      "titleEn": "MotionSites + Structure Flow + no-code team",
+      "summary": "MotionSites 的落地页提示当壳，Structure Flow 当三维场，对照 How Do I Use AI 的四周小队 rollout。全员课只配这三件；先一任务，再谈 skill。",
+      "summaryEn": "MotionSites landing prompts as the shell, Structure Flow as the 3D field, and How Do I Use AI’s four-week team rollout. An all-hands kit of three pieces — one task first, then a skill.",
+      "htmlId": "motionsites",
+      "agentUiId": "structure-flow",
+      "caseId": "howdoiuseai-agent-teams",
+      "useFor": "全员课场景",
+      "useForEn": "All-hands workshop",
+      "featured": false,
+      "publishedAt": "2026-09-02"
+    }
+  ]
+}

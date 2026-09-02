@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-02",
+      "title": "站点：上线三库交叉组合 / Combos",
+      "body": "新增 /combos/：四条精选配方，各取一条 HTML 壳、一件 Agent UI、一个 Grok Bot 案例。给全员课和 Design 工作室拣货，不是第四面墙。路径仍管玩法。",
+      "titleEn": "Site: Combos across the three libraries",
+      "bodyEn": "Added /combos/: four curated recipes, each picking one HTML shell, one Agent UI piece, and one Grok Bot case. Kits for all-hands class and Design studio — not a fourth card wall. Paths stay the playbooks."
+    },
+    {
+      "date": "2026-09-02",
       "title": "站点：广场本周可抄接到路径",
       "body": "广场 digest 顶栏改成本周可抄：默认推「日更 → 一条可发草稿」，链到 /paths/daily-to-draft/。今日看点里对得上的增收会带相关路径。不改海报，也不做第四面墙。",
       "titleEn": "Site: plaza “this week’s steal” points at Paths",

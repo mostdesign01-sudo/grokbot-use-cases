@@ -1,0 +1,34 @@
+---
+import { ui } from "../lib/i18n";
+import { withBase } from "../lib/paths";
+import Loc from "./Loc.astro";
+
+interface Props {
+  lib: "html" | "agent-ui" | "grok";
+  href: string;
+  title: string;
+  titleEn: string;
+  summary: string;
+  summaryEn: string;
+}
+
+const { lib, href, title, titleEn, summary, summaryEn } = Astro.props;
+
+const libCopy =
+  lib === "html" ? ui.combo.html : lib === "agent-ui" ? ui.combo.agentUi : ui.combo.bot;
+---
+
+<a class={`card combo-piece combo-piece-${lib}`} href={withBase(href)}>
+  <p class="combo-piece-lib">
+    <Loc zh={libCopy.zh} en={libCopy.en} />
+  </p>
+  <h3>
+    <span class="loc-zh">{title}</span>
+    <span class="loc-en">{titleEn}</span>
+  </h3>
+  <p class="title-en loc-zh">{titleEn}</p>
+  <p class="summary">
+    <span class="loc-zh">{summary}</span>
+    <span class="loc-en">{summaryEn}</span>
+  </p>
+</a>
