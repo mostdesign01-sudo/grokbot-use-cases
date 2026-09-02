@@ -11,6 +11,7 @@ import {
   packPlazaColumns,
   resolveDigestDate,
 } from "../lib/digest";
+import { getCaseBySlug } from "../lib/cases";
 import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 import { getStealAlso, getWeeklySteal } from "../lib/playbooks";
@@ -30,6 +31,8 @@ const also = getStealAlso(steal, 3);
 const stealLine = steal
   ? { zh: firstSentence(steal.summary), en: firstSentence(steal.summaryEn) }
   : ui.home.pathsStrip;
+const sibling = getCaseBySlug("grokbots-best");
+const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grokbots.best";
 ---
 
 <div class="home-shell" data-home-shell>
@@ -98,6 +101,24 @@ const stealLine = steal
 
   <main class="home-plaza">
     <div class="home-plaza-scroll" data-plaza-scroll>
+      <aside class="plaza-position" data-position-band>
+        <p class="plaza-kicker"><Loc zh={ui.home.positionKicker.zh} en={ui.home.positionKicker.en} /></p>
+        <p class="plaza-position-lead">
+          <Loc zh={ui.home.positionLead.zh} en={ui.home.positionLead.en} />
+        </p>
+        <p class="plaza-position-also">
+          <a
+            class="plaza-also-chip"
+            href={siblingHref}
+            rel={sibling ? undefined : "noreferrer"}
+          >
+            <Loc zh={ui.home.siblingChip.zh} en={ui.home.siblingChip.en} />
+          </a>
+          <span class="plaza-position-note">
+            <Loc zh={ui.home.siblingNote.zh} en={ui.home.siblingNote.en} />
+          </span>
+        </p>
+      </aside>
       <aside class="plaza-paths-strip">
         <div class="plaza-paths-copy">
           <p class="plaza-kicker"><Loc zh={ui.home.steal.zh} en={ui.home.steal.en} /></p>

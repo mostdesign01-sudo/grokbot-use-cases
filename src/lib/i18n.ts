@@ -56,7 +56,7 @@ export const ui = {
     all: { zh: "全部", en: "All" },
   },
   brand: {
-    lab: { zh: "可复用的精选实验室", en: "A reusable collection lab" },
+    lab: { zh: "核验精选实验室", en: "Curated verified use-cases" },
     grok: { zh: "Grok Bot · 每日更新", en: "Grok Bot · daily updates" },
     html: { zh: "HTML 收集 · 每日更新", en: "HTML Collection · daily updates" },
     agentUi: { zh: "Agent UI · 每日更新", en: "Agent UI · daily updates" },
@@ -216,7 +216,17 @@ export const ui = {
     },
   },
   home: {
-    lede: { zh: "可复用的 AI 精选实验室", en: "A reusable AI collection lab" },
+    lede: { zh: "核验精选实验室", en: "Curated, human-checked use-cases" },
+    positionKicker: { zh: "核验精选", en: "Curated & checked" },
+    positionLead: {
+      zh: "人核过的用法、路径、三库拣货（Cases / HTML / Agent UI + Paths + Combos）。",
+      en: "Human-checked use-cases, paths, and three-library picks (Cases / HTML / Agent UI + Paths + Combos).",
+    },
+    siblingChip: { zh: "也看 grokbots.best", en: "Also see grokbots.best" },
+    siblingNote: {
+      zh: "第三方 bot、skill、MCP 安装目录",
+      en: "third-party directory of bots, skills, and MCP",
+    },
     dates: { zh: "日期", en: "Dates" },
     libraries: { zh: "内容库", en: "Libraries" },
     paths: { zh: "可跑路径", en: "Playbooks" },

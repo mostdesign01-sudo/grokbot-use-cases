@@ -1,9 +1,9 @@
 # AI UP LAB
 
-可复用的 AI 精选实验室。案例 / 页面 / Agent UI 每日更新。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
+核验精选：人核过的用法、路径、三库拣货。不是 bot 安装目录；要浏览/安装 bot 与 skill，见库内的 [grokbots.best](https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/grokbots-best/)。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
 
 - 站点名：AI UP LAB
-- 标语：可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI
+- 标语：核验精选 · 人核过的用法、路径、三库拣货
 - 当前内容库：Grok Bot 案例、HTML 收集、Agent UI（ThreeUI Community 免费件）
 - 仓库：https://github.com/mostdesign01-sudo/grokbot-use-cases
 - 预期公开地址：https://mostdesign01-sudo.github.io/grokbot-use-cases/

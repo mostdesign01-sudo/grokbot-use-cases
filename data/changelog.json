@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-02",
+      "title": "站点：首页说清核验精选定位",
+      "body": "首页加短定位带：人核过的用法、路径、三库拣货。也看 grokbots.best（第三方安装目录，链到库内案例）。OG/meta 同步，不改海报和 logo。",
+      "titleEn": "Site: homepage states curated-verified positioning",
+      "bodyEn": "Homepage gained a short positioning band: human-checked use-cases, paths, three-library picks. Also see grokbots.best (third-party install directory, linked to the library case). OG/meta updated. No poster or logo rewrite."
+    },
+    {
+      "date": "2026-09-02",
       "title": "站点：上线三库交叉组合 / Combos",
       "body": "新增 /combos/：四条精选配方，各取一条 HTML 壳、一件 Agent UI、一个 Grok Bot 案例。给全员课和 Design 工作室拣货，不是第四面墙。路径仍管玩法。",
       "titleEn": "Site: Combos across the three libraries",

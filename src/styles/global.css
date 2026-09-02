@@ -2277,6 +2277,61 @@ html[data-theme="light"] .home-plaza {
   background: #fffdf9;
 }
 
+.plaza-position {
+  display: grid;
+  gap: 6px;
+  margin: 0 2px 14px;
+  padding: 0 2px 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.plaza-position .plaza-kicker {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plaza-position-lead {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+
+.plaza-position-also {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  margin: 2px 0 0;
+}
+
+.plaza-also-chip {
+  display: inline-flex;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.plaza-also-chip:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink) 35%, var(--line));
+}
+
+.plaza-position-note {
+  color: var(--faint);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .plaza-paths-strip {
   display: flex;
   align-items: flex-end;
