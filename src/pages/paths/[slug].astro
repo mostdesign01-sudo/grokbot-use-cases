@@ -117,8 +117,6 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
             <p class="path-run-note">
               <Loc zh={ui.path.runHint.zh} en={ui.path.runHint.en} />
             </p>
-            <pre class="path-run-brief loc-zh" data-path-brief>{briefZh}</pre>
-            <pre class="path-run-brief loc-en">{briefEn}</pre>
             <div class="path-run-copy-row">
               <button type="button" class="btn btn-ghost" data-path-copy>
                 <span data-path-copy-label>
@@ -129,6 +127,8 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
                 </span>
               </button>
             </div>
+            <pre class="path-run-brief loc-zh" data-path-brief>{briefZh}</pre>
+            <pre class="path-run-brief loc-en">{briefEn}</pre>
           </section>
         )
       }
@@ -267,66 +267,61 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
       </aside>
     </div>
   </div>
+
+  {
+    run && (
+      <script is:inline>
+        document.addEventListener("click", function (event) {
+          var node = event.target;
+          if (node && node.nodeType === 3) node = node.parentNode;
+          if (!node || !node.closest) return;
+
+          var toggle = node.closest("[data-path-run-toggle]");
+          if (toggle) {
+            var panel = document.querySelector("[data-path-run-panel]");
+            if (!panel) return;
+            var open = !panel.hasAttribute("hidden");
+            if (open) {
+              panel.setAttribute("hidden", "");
+              toggle.setAttribute("aria-expanded", "false");
+            } else {
+              panel.removeAttribute("hidden");
+              toggle.setAttribute("aria-expanded", "true");
+            }
+            return;
+          }
+
+          if (!node.closest("[data-path-copy]")) return;
+          var brief = document.querySelector("[data-path-brief]");
+          var copyLabel = document.querySelector("[data-path-copy-label]");
+          var copied = document.querySelector("[data-path-copied]");
+          var text = brief && brief.textContent ? brief.textContent.trim() : "";
+          if (!text) return;
+
+          var area = document.createElement("textarea");
+          area.value = text;
+          area.setAttribute("readonly", "");
+          area.style.position = "fixed";
+          area.style.left = "-9999px";
+          document.body.appendChild(area);
+          area.select();
+          try {
+            document.execCommand("copy");
+          } catch (err) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(text);
+            }
+          }
+          area.remove();
+
+          if (copyLabel) copyLabel.setAttribute("hidden", "");
+          if (copied) copied.removeAttribute("hidden");
+          window.setTimeout(function () {
+            if (copied) copied.setAttribute("hidden", "");
+            if (copyLabel) copyLabel.removeAttribute("hidden");
+          }, 2000);
+        });
+      </script>
+    )
+  }
 </BaseLayout>
-
-{
-  run && (
-    <script>
-      const toggle = document.querySelector<HTMLButtonElement>("[data-path-run-toggle]");
-      const panel = document.querySelector<HTMLElement>("[data-path-run-panel]");
-      const copyButton = document.querySelector<HTMLButtonElement>("[data-path-copy]");
-      const copyLabel = document.querySelector<HTMLElement>("[data-path-copy-label]");
-      const copied = document.querySelector<HTMLElement>("[data-path-copied]");
-      const brief = document.querySelector<HTMLElement>("[data-path-brief]");
-
-      toggle?.addEventListener("click", () => {
-        if (!panel) return;
-        const open = !panel.hasAttribute("hidden");
-        if (open) {
-          panel.setAttribute("hidden", "");
-          toggle.setAttribute("aria-expanded", "false");
-        } else {
-          panel.removeAttribute("hidden");
-          toggle.setAttribute("aria-expanded", "true");
-        }
-      });
-
-      function copyTextSync(text: string): boolean {
-        const area = document.createElement("textarea");
-        area.value = text;
-        area.setAttribute("readonly", "");
-        area.style.position = "fixed";
-        area.style.left = "-9999px";
-        document.body.appendChild(area);
-        area.select();
-        let ok = false;
-        try {
-          ok = document.execCommand("copy");
-        } catch {
-          ok = false;
-        }
-        area.remove();
-        return ok;
-      }
-
-      function showCopied() {
-        if (!copied || !copyLabel) return;
-        copyLabel.hidden = true;
-        copied.removeAttribute("hidden");
-        window.setTimeout(() => {
-          copied.setAttribute("hidden", "");
-          copyLabel.hidden = false;
-        }, 2000);
-      }
-
-      copyButton?.addEventListener("click", () => {
-        const text = brief?.textContent?.trim() ?? "";
-        if (!text) return;
-        if (!copyTextSync(text)) {
-          void navigator.clipboard?.writeText(text);
-        }
-        showCopied();
-      });
-    </script>
-  )
-}
