@@ -273,7 +273,7 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
       <script is:inline>
         document.addEventListener("click", function (event) {
           var node = event.target;
-          if (node && node.nodeType === 3) node = node.parentNode;
+          while (node && node.nodeType !== 1 && node.parentNode) node = node.parentNode;
           if (!node || !node.closest) return;
 
           var toggle = node.closest("[data-path-run-toggle]");
