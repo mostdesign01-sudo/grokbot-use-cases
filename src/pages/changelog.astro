@@ -4,6 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { changelogNotes, meta } from "../lib/cases";
 import { formatShanghaiDate, formatShanghaiDateTime, groupByShanghaiDay } from "../lib/format";
 import { ui } from "../lib/i18n";
+import { withBase } from "../lib/paths";
+import { relatedPlaybookForNote } from "../lib/playbooks";
 
 const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
 ---
@@ -70,19 +72,33 @@ const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
                 <span class="loc-en">{group.titleEn}</span>
               </h3>
               <div class="timeline">
-                {group.items.map((note) => (
-                  <article class="note">
-                    <time datetime={note.date}>{note.date}</time>
-                    <h3>
-                      <span class="loc-zh">{note.title}</span>
-                      <span class="loc-en">{note.titleEn ?? note.title}</span>
-                    </h3>
-                    <p>
-                      <span class="loc-zh">{note.body}</span>
-                      <span class="loc-en">{note.bodyEn ?? note.body}</span>
-                    </p>
-                  </article>
-                ))}
+                {group.items.map((note) => {
+                  const related = relatedPlaybookForNote(note);
+                  return (
+                    <article class="note">
+                      <time datetime={note.date}>{note.date}</time>
+                      <h3>
+                        <span class="loc-zh">{note.title}</span>
+                        <span class="loc-en">{note.titleEn ?? note.title}</span>
+                      </h3>
+                      <p>
+                        <span class="loc-zh">{note.body}</span>
+                        <span class="loc-en">{note.bodyEn ?? note.body}</span>
+                      </p>
+                      {related && (
+                        <p class="note-related">
+                          <span class="note-related-label">
+                            <Loc zh={ui.home.relatedPath.zh} en={ui.home.relatedPath.en} />
+                          </span>
+                          <a href={withBase(`paths/${related.slug}/`)}>
+                            <span class="loc-zh">{related.title}</span>
+                            <span class="loc-en">{related.titleEn}</span>
+                          </a>
+                        </p>
+                      )}
+                    </article>
+                  );
+                })}
               </div>
             </section>
           ))

@@ -219,6 +219,9 @@ export const ui = {
     libraries: { zh: "内容库", en: "Libraries" },
     paths: { zh: "可跑路径", en: "Playbooks" },
     digest: { zh: "今日看点", en: "Today" },
+    steal: { zh: "本周可抄", en: "This week's steal" },
+    allPaths: { zh: "全部路径", en: "All playbooks" },
+    relatedPath: { zh: "相关路径", en: "Related path" },
     pathsStrip: {
       zh: "把库里的条目编成 brief → 席位 → 验收闸门。不是又一套卡片。",
       en: "Turn library items into brief → seats → acceptance gates. Not another card wall.",
