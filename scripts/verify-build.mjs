@@ -236,6 +236,21 @@ if (!home.includes("combos/") || !home.includes("三库组合")) {
   process.exit(1);
 }
 
+if (!home.includes("核验精选") || !home.includes("plaza-position")) {
+  console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
+  process.exit(1);
+}
+
+if (!home.includes("grokbots.best") || !home.includes("cases/grokbots-best")) {
+  console.error("Homepage is missing the grokbots.best sibling link (library case).");
+  process.exit(1);
+}
+
+if (!home.includes("核验精选的可复用用法")) {
+  console.error("Homepage meta/OG is missing curated-use-case positioning.");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);

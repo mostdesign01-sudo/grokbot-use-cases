@@ -1,13 +1,13 @@
 /** Public umbrella brand. Library names stay separate. */
 export const siteName = "AI UP LAB";
 
-export const siteTagline = "可复用的 AI 精选实验室 · 案例 / 页面 / Agent UI";
-export const siteTaglineEn = "A reusable AI collection lab · cases / pages / Agent UI";
+export const siteTagline = "核验精选 · 人核过的用法、路径、三库拣货";
+export const siteTaglineEn = "Curated & checked · use-cases, paths, three-library picks";
 
 export const siteDescription =
-  "AI UP LAB：可复用的 AI 精选实验室。当前有 Grok Bot 案例、HTML 收集与 Agent UI 三套库，案例与页面每日更新。";
+  "AI UP LAB：核验精选的可复用用法。人核过的 Cases / HTML / Agent UI，加上 Paths 与 Combos。不是 bot 安装目录。";
 export const siteDescriptionEn =
-  "AI UP LAB: a reusable AI collection lab. Three libraries today — Grok Bot cases, HTML Collection, and Agent UI — updated daily.";
+  "AI UP LAB: curated, human-checked use-cases — Cases / HTML / Agent UI plus Paths and Combos. Not a bot install directory.";
 
 export function pageTitle(page?: string) {
   return page ? `${page} · ${siteName}` : siteName;
