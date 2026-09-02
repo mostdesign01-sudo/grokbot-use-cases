@@ -1,6 +1,27 @@
 {
   "notes": [
     {
+      "date": "2026-09-02",
+      "title": "Grok Bot：+2 awesome-grok-bot、How Do I Use AI 小队指南",
+      "body": "增收 ZeroPointRepo 的 awesome-grok-bot（已核验 Skill/Plugin/MCP 目录，区别于 grokbots.best）与 How Do I Use AI 的无代码 agent-team 四周 rollout 指南。修正 meta.count 与真实条数对齐。Grok Bot 83→85。",
+      "titleEn": "Grok Bot: +2 awesome-grok-bot and How Do I Use AI agent-team guide",
+      "bodyEn": "Added ZeroPointRepo’s awesome-grok-bot (verified skills/plugins/MCP directory, distinct from grokbots.best) and How Do I Use AI’s no-code agent-team four-week rollout guide. Fixed meta.count to match real length. Grok Bot 83→85."
+    },
+    {
+      "date": "2026-09-02",
+      "title": "HTML：+ Ambient CSS v3（HN 49523387）",
+      "body": "增收 Ambient CSS v3 物理光照 CSS（Show HN item 49523387，约 191 分）。自托管 3:2 预览。HTML 34→35。",
+      "titleEn": "HTML: + Ambient CSS v3 (HN 49523387)",
+      "bodyEn": "Added Ambient CSS v3 physically based CSS (Show HN item 49523387, ~191 pts). Self-hosted 3:2 preview. HTML 34→35."
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Agent UI：+ Wireframe Forms · Cube",
+      "body": "增收 ThreeUI Community 免费线框立方体（ui-elements/wireframe-forms/cube）。Structure Flow 已在库，未重复。Agent UI 29→30。",
+      "titleEn": "Agent UI: + Wireframe Forms · Cube",
+      "bodyEn": "Added ThreeUI Community free wireframe cube (ui-elements/wireframe-forms/cube). Structure Flow already in library; not duplicated. Agent UI 29→30."
+    },
+    {
       "date": "2026-09-01",
       "title": "Grok Bot：增收 grokbots.best",
       "body": "增收 Hieu Dinh 的社区发现站 grokbots.best。第三方公开模板目录，不是官方名录。Grok Bot 82→83。",

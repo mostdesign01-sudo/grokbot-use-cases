@@ -1,11 +1,43 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T01:41:20Z",
+    "updatedAt": "2026-09-02T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.2",
-    "count": 29
+    "version": "1.4.3",
+    "count": 30
   },
   "items": [
+    {
+      "id": "wireframe-forms-cube",
+      "slug": "wireframe-forms-cube",
+      "title": "Wireframe Forms · Cube",
+      "titleEn": "Wireframe Forms · Cube",
+      "summary": "ThreeUI Community 的棱镜线框立方体：cube / cylinders / sphere 免费变体，Canvas 2D，适合 Agent 界面装饰。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community prismatic wireframe cube: free variants cube / cylinders / sphere on Canvas 2D. Fits Agent UI ornament. No login; copy the prompt.",
+      "types": [
+        "ui",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/ui-elements/wireframe-forms/cube",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-02",
+      "updatedAt": "2026-09-02T01:10:00Z",
+      "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt 只改 speed / opacity / hue，不要手写粒子。",
+      "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and only tweak speed / opacity / hue — do not hand-write particles.",
+      "tags": [
+        "threeui",
+        "community",
+        "wireframe",
+        "ui"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Wireframe Forms 的 cube 做 Agent 面板装饰。保持免费 Community 变体，线框疏一点、色相偏冷。",
+      "promptHintEn": "Use Wireframe Forms cube as Agent panel ornament. Keep the free Community variant, thin the wireframe, cool the hue.",
+      "previewImage": "/previews/wireframe-forms-cube.webp"
+    },
     {
       "id": "three-ws",
       "slug": "three-ws",

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-01T02:00:00Z",
+    "updatedAt": "2026-09-02T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.6",
-    "count": 82,
+    "version": "1.4.7",
+    "count": 85,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -34,10 +34,83 @@
       "https://glass3d.dev/",
       "https://threeui.com/browse",
       "https://x.ai/bot/VHMdjIGjGpgDSJR7dW6Gz",
-      "https://x.com/johnbai/status/2094456490115408172"
+      "https://x.com/johnbai/status/2094456490115408172",
+      "https://github.com/ZeroPointRepo/awesome-grok-bot",
+      "https://www.howdoiuseai.com/blog/2026-08-23-how-to-run-a-real-business-on-grok-bot-agent-teams"
     ]
   },
   "cases": [
+    {
+      "id": "howdoiuseai-agent-teams",
+      "slug": "howdoiuseai-run-business-on-grok-bot-agent-teams",
+      "title": "How Do I Use AI：无代码用 Grok Bot 小队跑一门小生意",
+      "titleEn": "How Do I Use AI: run a real business on Grok Bot agent teams (no code)",
+      "summary": "面向非技术运营者的可复现指南：Chief of Staff 路由、skills 先于 routines、审批边界，以及四周 rollout（一任务→skill→routine→日报）。不是空泛夸赞，步骤可跟着做。",
+      "summaryEn": "A reproducible non-technical guide: chief-of-staff routing, skills before routines, approval guardrails, and a four-week rollout (one task → skill → routine → daily debrief). Not vague praise — you can follow the steps.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Ops / CoS rollout",
+      "sourceUrl": "https://www.howdoiuseai.com/blog/2026-08-23-how-to-run-a-real-business-on-grok-bot-agent-teams",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "2026-08-23 长文。强调先草稿后发送、客户触达需审批；四周节奏可复现。非官方，但引用了官方 docs 与 get-started。",
+      "qualityNoteEn": "Long post dated 2026-08-23. Emphasizes draft-before-send and approval for customer contact; the four-week cadence is reproducible. Unofficial, but cites official docs and get-started.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "不发信、不采购、不删数据、不改生产；先出草稿与日报。",
+      "approvalBoundaryEn": "No sending, purchasing, deleting, or production changes; deliver drafts and daily debriefs first.",
+      "connectors": [
+        "browser",
+        "notion"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-08-23",
+      "updatedAt": "2026-09-02T01:10:00Z"
+    },
+    {
+      "id": "awesome-grok-bot",
+      "slug": "zeropointrepo-awesome-grok-bot",
+      "title": "awesome-grok-bot：已核验的 Skill / Plugin / MCP 目录",
+      "titleEn": "awesome-grok-bot: a verified skills / plugins / MCP directory",
+      "summary": "ZeroPointRepo 维护的非官方精选目录：60+ 条 Grok Bot skills、plugins、MCP 与自托管替代，每条对照一手源。有 CATALOG.md / catalog.csv / plugins.json / llms.txt。和 grokbots.best（Bot 模板发现站）不是同一件事。",
+      "summaryEn": "ZeroPointRepo’s unofficial curated directory: 60+ verified Grok Bot skills, plugins, MCP servers, and self-hosted alternatives, each checked against a primary source. Ships CATALOG.md / catalog.csv / plugins.json / llms.txt. Distinct from grokbots.best (bot-template discovery).",
+      "categories": [
+        "community",
+        "research",
+        "automation"
+      ],
+      "role": "Directory",
+      "sourceUrl": "https://github.com/ZeroPointRepo/awesome-grok-bot",
+      "secondaryUrls": [
+        "https://github.com/ZeroPointRepo/awesome-grok-bot/blob/main/CATALOG.md",
+        "https://docs.x.ai/grok-bot/overview"
+      ],
+      "sourceType": "community",
+      "qualityNote": "非官方社区目录，不是 xAI 名录。条目带 production/beta/experimental 标签；作者写明不是安全审计。收录不等于背书每个插件。",
+      "qualityNoteEn": "Unofficial community directory, not an xAI catalog. Entries carry production/beta/experimental tags; the maintainer says it is not a security audit. Listing does not endorse every plugin.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": false,
+      "connectors": [
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-11",
+      "updatedAt": "2026-09-02T01:10:00Z"
+    },
     {
       "id": "flavio-grok-bot-deep-dive",
       "slug": "flavio-copes-grok-bot-deep-dive",
