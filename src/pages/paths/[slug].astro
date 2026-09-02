@@ -118,11 +118,11 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
               <Loc zh={ui.path.runHint.zh} en={ui.path.runHint.en} />
             </p>
             <div class="path-run-copy-row">
-              <button type="button" class="btn btn-ghost" data-path-copy>
+              <button type="button" class="btn btn-ghost" data-path-copy data-copied="false">
                 <span data-path-copy-label>
                   <Loc zh={ui.path.copyBrief.zh} en={ui.path.copyBrief.en} />
                 </span>
-                <span class="path-run-copied" hidden data-path-copied aria-live="polite">
+                <span class="path-run-copied" data-path-copied aria-live="polite">
                   <Loc zh={ui.path.copied.zh} en={ui.path.copied.en} />
                 </span>
               </button>
@@ -293,8 +293,6 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
 
           if (!node.closest("[data-path-copy]")) return;
           var brief = document.querySelector("[data-path-brief]");
-          var copyLabel = document.querySelector("[data-path-copy-label]");
-          var copied = document.querySelector("[data-path-copied]");
           var text = brief && brief.textContent ? brief.textContent.trim() : "";
           if (!text) return;
 
@@ -314,12 +312,11 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
           }
           area.remove();
 
-          if (copyLabel) copyLabel.setAttribute("hidden", "");
-          if (copied) copied.removeAttribute("hidden");
+          var copyBtn = node.closest("[data-path-copy]");
+          if (copyBtn) copyBtn.setAttribute("data-copied", "true");
           window.setTimeout(function () {
-            if (copied) copied.setAttribute("hidden", "");
-            if (copyLabel) copyLabel.removeAttribute("hidden");
-          }, 2000);
+            if (copyBtn) copyBtn.setAttribute("data-copied", "false");
+          }, 4000);
         });
       </script>
     )

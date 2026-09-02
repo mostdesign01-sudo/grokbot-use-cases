@@ -2420,8 +2420,17 @@ html[data-theme="light"] .home-plaza {
   font-weight: 550;
 }
 
-button.btn[data-path-copy] .path-run-copied:not([hidden]) {
-  display: inline;
+button.btn[data-path-copy]:not([data-copied="true"]) [data-path-copied] {
+  display: none !important;
+}
+
+button.btn[data-path-copy][data-copied="true"] [data-path-copy-label] {
+  display: none !important;
+}
+
+button.btn[data-path-copy][data-copied="true"] [data-path-copied] {
+  display: inline !important;
+  color: var(--green);
 }
 
 .home-plaza-scroll {
