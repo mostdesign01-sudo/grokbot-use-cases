@@ -37,5 +37,19 @@
 | `difficulty` | string | `starter` `intermediate` `advanced` |
 | `featured` | boolean | 是否在路径总览靠前 |
 | `publishedAt` | string | 写入日期 `YYYY-MM-DD` |
+| `run` | object | 可选。详情页「开跑」用的桌 brief（见下） |
 
-相关 id 构建时必须能解析。不要为路径发明库里没有的案例，也不要写 Publisher / Blotato。
+### `run`（可选）
+
+静态站把路径编成可粘贴 brief，**不**对接 Grok Bot / Slack / 代发。没有 `run` 就不显示开跑。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `desk` | string | 桌名，如 `营销桌` `内容桌` `工程工头` `设计味` |
+| `deskEn` | string | 英文桌名 |
+| `targetHint` | string | 粘贴处，如「丢给 AIUP营销Lead / 营销桌频道」 |
+| `targetHintEn` | string | 英文粘贴处 |
+| `briefTemplate` | string | 中文 brief。可用 `{{today}}` `{{title}}` `{{summary}}` `{{desk}}` `{{targetHint}}` `{{steps}}` `{{gates}}`。`{{today}}` 构建时填 Asia/Shanghai 的 `YYYY-MM-DD` |
+| `briefTemplateEn` | string | 可选英文 brief，占位符相同（按英文字段填充） |
+
+相关 id 构建时必须能解析。不要为路径发明库里没有的案例，也不要写 Publisher / Blotato。开跑 brief 只交草稿，站点不代发。

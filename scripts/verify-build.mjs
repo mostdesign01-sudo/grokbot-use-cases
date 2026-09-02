@@ -173,6 +173,26 @@ for (const date of noteDates) {
   }
 }
 
+for (const path of pathsDataset.paths) {
+  if (!path.run?.desk || !path.run?.targetHint || !path.run?.briefTemplate) {
+    console.error(`paths.json ${path.id} is missing run.desk / run.targetHint / run.briefTemplate.`);
+    process.exit(1);
+  }
+}
+
+const runSampleSlugs = ["daily-to-draft", "marketing-desk-draft-only"];
+for (const slug of runSampleSlugs) {
+  const page = await readFile(new URL(`../dist/paths/${slug}/index.html`, import.meta.url), "utf8");
+  if (!page.includes("开跑") || !page.includes("data-path-brief") || !page.includes("data-path-copy")) {
+    console.error(`paths/${slug}/ is missing the 开跑 control (开跑 / data-path-brief / data-path-copy).`);
+    process.exit(1);
+  }
+  if (!page.includes("【开跑 brief") || !page.includes("丢给 AIUP营销Lead")) {
+    console.error(`paths/${slug}/ is missing a filled marketing-desk brief.`);
+    process.exit(1);
+  }
+}
+
 const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
 if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.includes("home-pill")) {
   console.error("Homepage is missing the plaza digest shell (今日看点 / home-plaza / home-pill).");

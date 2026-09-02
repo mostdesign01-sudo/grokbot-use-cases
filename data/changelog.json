@@ -9,6 +9,13 @@
     },
     {
       "date": "2026-09-02",
+      "title": "路径详情加「开跑」",
+      "body": "路径详情加「开跑」：一键复制丢进对应桌的 brief。营销桌 / 内容桌 / 工程工头 / 设计味。只交草稿，站点不代发。",
+      "titleEn": "Path detail: Run this path",
+      "bodyEn": "Path pages gained 开跑 / Run this path: copy a paste-ready brief into the matching desk. Marketing / content / engineering / taste. Drafts only; the site does not send."
+    },
+    {
+      "date": "2026-09-02",
       "title": "站点：上线可跑路径 / Playbooks",
       "body": "新增 /paths/：五条可点开玩法（内容桌、营销桌草稿停笔、工程工头、日更出草稿、设计味）。广场和导航可进。不堆第四面墙卡。",
       "titleEn": "Site: runnable Paths / Playbooks",
