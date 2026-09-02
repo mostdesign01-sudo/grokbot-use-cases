@@ -322,11 +322,10 @@ const briefEn = run ? filledPathBrief(item, "en") : "";
       copyButton?.addEventListener("click", () => {
         const text = brief?.textContent?.trim() ?? "";
         if (!text) return;
-        if (copyTextSync(text)) {
-          showCopied();
-          return;
+        if (!copyTextSync(text)) {
+          void navigator.clipboard?.writeText(text);
         }
-        void navigator.clipboard?.writeText(text).then(showCopied);
+        showCopied();
       });
     </script>
   )
