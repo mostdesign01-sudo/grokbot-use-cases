@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-02",
+      "title": "站点：上线可跑路径 / Playbooks",
+      "body": "新增 /paths/：五条可点开玩法（内容桌、营销桌草稿停笔、工程工头、日更出草稿、设计味）。广场和导航可进。不堆第四面墙卡。",
+      "titleEn": "Site: runnable Paths / Playbooks",
+      "bodyEn": "Added /paths/: five clickable playbooks (content desk, marketing draft-only, engineering foreman, daily→draft, design taste). Reachable from plaza and nav. Not a fourth card wall."
+    },
+    {
+      "date": "2026-09-02",
       "title": "Grok Bot：增收 Lingxi 工程组织",
       "body": "增收 Lingxi Li 的 Grok Bot 工程组织长文（AYi 中文提纯为第二来源）。专科工头 + 状态机 + 人守闸门。规模数字未核实。Grok Bot 85→86。",
       "titleEn": "Grok Bot: + Lingxi engineering org",
