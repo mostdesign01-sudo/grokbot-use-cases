@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-02",
+      "title": "Grok Bot：增收 Lingxi 工程组织",
+      "body": "增收 Lingxi Li 的 Grok Bot 工程组织长文（AYi 中文提纯为第二来源）。专科工头 + 状态机 + 人守闸门。规模数字未核实。Grok Bot 85→86。",
+      "titleEn": "Grok Bot: + Lingxi engineering org",
+      "bodyEn": "Added Lingxi Li’s Grok Bot engineering-org article (AYi’s Chinese digest as second source). Specialist bosses + state machine + human gates. Scale numbers unverified. Grok Bot 85→86."
+    },
+    {
+      "date": "2026-09-02",
       "title": "Grok Bot：+2 awesome-grok-bot、How Do I Use AI 小队指南",
       "body": "增收 ZeroPointRepo 的 awesome-grok-bot（已核验 Skill/Plugin/MCP 目录，区别于 grokbots.best）与 How Do I Use AI 的无代码 agent-team 四周 rollout 指南。修正 meta.count 与真实条数对齐。Grok Bot 83→85。",
       "titleEn": "Grok Bot: +2 awesome-grok-bot and How Do I Use AI agent-team guide",
