@@ -1,0 +1,47 @@
+---
+import type { ComboItem } from "../lib/combos";
+import { resolveComboPieces } from "../lib/combos";
+import { ui } from "../lib/i18n";
+import { withBase } from "../lib/paths";
+import Badge from "./Badge.astro";
+import Loc from "./Loc.astro";
+
+interface Props {
+  combo: ComboItem;
+}
+
+const { combo } = Astro.props;
+const pieces = resolveComboPieces(combo);
+---
+
+<a class="card combo-card" href={withBase(`combos/${combo.slug}/`)}>
+  <div class="badges">
+    {
+      combo.featured && (
+        <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />
+      )
+    }
+    {
+      combo.useFor && (
+        <Badge
+          label={combo.useFor}
+          labelEn={combo.useForEn ?? combo.useFor}
+        />
+      )
+    }
+  </div>
+  <h3>
+    <span class="loc-zh">{combo.title}</span>
+    <span class="loc-en">{combo.titleEn}</span>
+  </h3>
+  <p class="title-en loc-zh">{combo.titleEn}</p>
+  <p class="summary">
+    <span class="loc-zh">{combo.summary}</span>
+    <span class="loc-en">{combo.summaryEn}</span>
+  </p>
+  <p class="combo-card-trio">
+    <strong><Loc zh={ui.combo.kit.zh} en={ui.combo.kit.en} /></strong>
+    <span class="loc-zh">{pieces.html.title} · {pieces.agentUi.title} · {pieces.caseItem.title}</span>
+    <span class="loc-en">{pieces.html.titleEn ?? pieces.html.title} · {pieces.agentUi.titleEn ?? pieces.agentUi.title} · {pieces.caseItem.titleEn}</span>
+  </p>
+</a>

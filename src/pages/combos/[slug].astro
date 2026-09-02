@@ -1,0 +1,139 @@
+---
+import Badge from "../../components/Badge.astro";
+import ComboPiece from "../../components/ComboPiece.astro";
+import Loc from "../../components/Loc.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { combos, resolveComboPieces } from "../../lib/combos";
+import { formatPublishedDate } from "../../lib/format";
+import { ui } from "../../lib/i18n";
+import { withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return combos.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const pieces = resolveComboPieces(item);
+---
+
+<BaseLayout
+  collection="lab"
+  title={`${item.title} · AI UP LAB`}
+  titleEn={`${item.titleEn} · AI UP LAB`}
+  description={item.summary}
+  descriptionEn={item.summaryEn}
+>
+  <div class="wrap">
+    <article class="detail-hero">
+      <p class="crumb">
+        <a href={withBase("/")}><Loc zh={ui.detail.lab.zh} en={ui.detail.lab.en} /></a> /
+        <a href={withBase("combos/")}><Loc zh={ui.nav.combos.zh} en={ui.nav.combos.en} /></a> /
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </p>
+      <div class="badges">
+        {
+          item.featured && (
+            <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />
+          )
+        }
+        {
+          item.useFor && (
+            <Badge label={item.useFor} labelEn={item.useForEn ?? item.useFor} />
+          )
+        }
+      </div>
+      <h1>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </h1>
+      <p class="title-en loc-zh">{item.titleEn}</p>
+      <p class="lede">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{item.summaryEn}</span>
+      </p>
+    </article>
+
+    <div class="detail-grid">
+      <div>
+        <section class="section">
+          <h2><Loc zh={ui.combo.kit.zh} en={ui.combo.kit.en} /></h2>
+          <div class="combo-trio">
+            <ComboPiece
+              lib="html"
+              href={`html/${pieces.html.slug}/`}
+              title={pieces.html.title}
+              titleEn={pieces.html.titleEn ?? pieces.html.title}
+              summary={pieces.html.summary}
+              summaryEn={pieces.html.summaryEn ?? pieces.html.summary}
+            />
+            <ComboPiece
+              lib="agent-ui"
+              href={`agent-ui/${pieces.agentUi.slug}/`}
+              title={pieces.agentUi.title}
+              titleEn={pieces.agentUi.titleEn ?? pieces.agentUi.title}
+              summary={pieces.agentUi.summary}
+              summaryEn={pieces.agentUi.summaryEn ?? pieces.agentUi.summary}
+            />
+            <ComboPiece
+              lib="grok"
+              href={`cases/${pieces.caseItem.slug}/`}
+              title={pieces.caseItem.title}
+              titleEn={pieces.caseItem.titleEn}
+              summary={pieces.caseItem.summary}
+              summaryEn={pieces.caseItem.summaryEn ?? pieces.caseItem.summary}
+            />
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="panel">
+          <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
+          <dl class="kv">
+            {
+              item.useFor && (
+                <div>
+                  <dt><Loc zh={ui.combo.useFor.zh} en={ui.combo.useFor.en} /></dt>
+                  <dd>
+                    <span class="loc-zh">{item.useFor}</span>
+                    <span class="loc-en">{item.useForEn ?? item.useFor}</span>
+                  </dd>
+                </div>
+              )
+            }
+            {
+              item.publishedAt && (
+                <div>
+                  <dt><Loc zh={ui.meta.published.zh} en={ui.meta.published.en} /></dt>
+                  <dd>
+                    <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+                    <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+        </section>
+        <section class="panel">
+          <h2><Loc zh={ui.combo.otherCombos.zh} en={ui.combo.otherCombos.en} /></h2>
+          <div class="source-list">
+            {
+              combos
+                .filter((other) => other.id !== item.id)
+                .map((other) => (
+                  <a href={withBase(`combos/${other.slug}/`)}>
+                    <span class="loc-zh">{other.title}</span>
+                    <span class="loc-en">{other.titleEn}</span>
+                  </a>
+                ))
+            }
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

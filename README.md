@@ -44,9 +44,13 @@ npm run preview  # 预览生产构建
    - 只写 brief → 席位 → 验收闸门；相关 id 必须已在三套库里
    - 可选 `run`：详情页「开跑」复制丢进对应桌的 brief（静态粘贴，不代发）
    - 字段见 [`data/paths-schema.md`](data/paths-schema.md)
-5. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
-6. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
-7. 提交并推送到 `main`
+5. **三库组合**：编辑 [`data/combos.json`](data/combos.json)
+   - 每条各取一条 HTML 壳、一件 Agent UI、一个 Grok Bot 案例；id 必须已在三套库里
+   - v1 只收 3–5 条精选，不是第四套卡片墙
+   - 字段见 [`data/combos-schema.md`](data/combos-schema.md)
+6. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
+7. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
+8. 提交并推送到 `main`
 
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
 
@@ -92,6 +96,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 | `/search/` | 三库检索：标题、摘要、标签、收录理由 |
 | `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
 | `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门；详情页「开跑」复制桌 brief（不是第四套卡片库） |
+| `/combos/` `/combos/[slug]/` | 三库交叉组合：一壳 + 一件 + 一案（精选拣货，不是第四面墙） |
 | `/html/` | HTML 收集总览（masonry 浏览墙） |
 | `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
 | `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |
