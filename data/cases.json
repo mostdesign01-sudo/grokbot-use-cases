@@ -3037,6 +3037,45 @@
       "previewImage": "/previews/grokbots-best.webp",
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-01T11:40:00Z"
+    },
+    {
+      "id": "lingxi-engineering-org",
+      "slug": "lingxi-engineering-org",
+      "title": "Lingxi：把 coding agent 编成工程组织",
+      "titleEn": "Lingxi: run coding agents as an engineering org",
+      "summary": "SpaceXAI / Cursor 工程师 Lingxi Li 的工程长文：专科工头 Bot 拉起 Cloud Agent，Notion 当状态机巡检，人只守高后果闸门。AYi 做了中文提纯。",
+      "summaryEn": "SpaceXAI / Cursor engineer Lingxi Li’s write-up: specialist boss bots spawn Cloud Agents, Notion as a shared state machine, humans only at high-consequence gates. AYi published a Chinese digest.",
+      "categories": [
+        "engineering",
+        "multi-agent",
+        "automation"
+      ],
+      "role": "Engineering Org",
+      "sourceUrl": "https://x.com/i/article/2094493172516966781",
+      "secondaryUrls": [
+        "https://x.com/lingxi/status/2094493172516966781",
+        "https://x.com/AYi_AInotes/status/2094714127801262395",
+        "https://x.com/AYi_AInotes/status/2094714151423672725"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 Lingxi 原文；AYi 是二手提纯。「200+ agent / 月合 2000+ PR」是作者场景说法，本库未核实。可复用的是窄席、共享状态、证据验收、人守合入/发帖；不是照抄规模。",
+      "qualityNoteEn": "Primary source is Lingxi’s article; AYi is a second-hand digest. “200+ agents / 2000+ PRs a month” is the author’s scene, unverified here. Reuse narrow seats, shared state, evidence-based acceptance, and human gates on merge/publish — not the headcount.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "低风险可过夜巡检；合入、发帖、改线上、花钱必须人审。",
+      "approvalBoundaryEn": "Low-risk overnight patrols are fine; merges, posts, live edits, and spending need a human.",
+      "connectors": [
+        "notion",
+        "github"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/lingxi-engineering-org.webp",
+      "publishedAt": "2026-08-31",
+      "updatedAt": "2026-09-02T05:35:00Z"
     }
   ]
 }
