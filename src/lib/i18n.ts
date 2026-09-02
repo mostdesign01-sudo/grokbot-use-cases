@@ -320,6 +320,14 @@ export const ui = {
     otherPaths: { zh: "其他路径", en: "Other paths" },
     stepCount: { zh: "步骤数", en: "Steps" },
     gateCount: { zh: "闸门数", en: "Gates" },
+    run: { zh: "开跑", en: "Run this path" },
+    copyBrief: { zh: "复制 brief", en: "Copy brief" },
+    copied: { zh: "已复制", en: "Copied" },
+    dropDesk: { zh: "丢到这桌", en: "Drop into this desk" },
+    runHint: {
+      zh: "复制后丢进对应桌。本站不代发。",
+      en: "Copy, then drop into the desk. This site does not send.",
+    },
   },
   grok: {
     featuredH1: { zh: "精选案例", en: "Featured cases" },

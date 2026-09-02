@@ -417,6 +417,7 @@ h3 {
   text-decoration: none;
   border: 1px solid var(--line);
   background: transparent;
+  cursor: pointer;
   font-size: 13.5px;
   font-weight: 550;
   letter-spacing: -0.012em;
@@ -2344,6 +2345,92 @@ html[data-theme="light"] .home-plaza {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 14px;
+}
+
+.path-run-actions {
+  margin-bottom: 0;
+}
+
+.path-run-panel {
+  margin-top: 2px;
+  padding: 14px 16px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  display: grid;
+  gap: 10px;
+}
+
+.path-run-panel[hidden] {
+  display: none;
+}
+
+.path-run-desk {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.path-run-desk strong {
+  color: var(--amber);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.path-run-hint {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.path-run-note {
+  margin: 0;
+  color: var(--faint);
+  font-size: 12.5px;
+}
+
+.path-run-brief {
+  margin: 0;
+  padding: 12px 14px;
+  max-height: 28rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.path-run-copy-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.path-run-copied {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+button.btn[data-path-copy]:not([data-copied="true"]) [data-path-copied] {
+  display: none !important;
+}
+
+button.btn[data-path-copy][data-copied="true"] [data-path-copy-label] {
+  display: none !important;
+}
+
+button.btn[data-path-copy][data-copied="true"] [data-path-copied] {
+  display: inline !important;
+  color: var(--green);
 }
 
 .home-plaza-scroll {

@@ -42,6 +42,7 @@ npm run preview  # 预览生产构建
    - 字段见 [`data/agent-ui-schema.md`](data/agent-ui-schema.md)
 4. **可跑路径**：编辑 [`data/paths.json`](data/paths.json)
    - 只写 brief → 席位 → 验收闸门；相关 id 必须已在三套库里
+   - 可选 `run`：详情页「开跑」复制丢进对应桌的 brief（静态粘贴，不代发）
    - 字段见 [`data/paths-schema.md`](data/paths-schema.md)
 5. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
 6. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
@@ -90,7 +91,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 | `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页（masonry） |
 | `/search/` | 三库检索：标题、摘要、标签、收录理由 |
 | `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
-| `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门（不是第四套卡片库） |
+| `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门；详情页「开跑」复制桌 brief（不是第四套卡片库） |
 | `/html/` | HTML 收集总览（masonry 浏览墙） |
 | `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
 | `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |

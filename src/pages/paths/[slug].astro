@@ -9,6 +9,7 @@ import { ui } from "../../lib/i18n";
 import { difficultyLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 import {
+  filledPathBrief,
   getRelatedAgentUiForPath,
   getRelatedCasesForPath,
   getRelatedHtmlForPath,
@@ -28,6 +29,9 @@ const relatedCases = getRelatedCasesForPath(item);
 const relatedHtml = getRelatedHtmlForPath(item);
 const relatedAgentUi = getRelatedAgentUiForPath(item);
 const hasRelated = relatedCases.length + relatedHtml.length + relatedAgentUi.length + item.relatedPages.length > 0;
+const run = item.run;
+const briefZh = run ? filledPathBrief(item, "zh") : "";
+const briefEn = run ? filledPathBrief(item, "en") : "";
 ---
 
 <BaseLayout
@@ -66,6 +70,68 @@ const hasRelated = relatedCases.length + relatedHtml.length + relatedAgentUi.len
         <span class="loc-zh">{item.summary}</span>
         <span class="loc-en">{item.summaryEn}</span>
       </p>
+      {
+        run && (
+          <div class="hero-actions path-run-actions">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-path-run-toggle
+              aria-expanded="false"
+              aria-controls="path-run-panel"
+            >
+              <Loc zh={ui.path.run.zh} en={ui.path.run.en} />
+            </button>
+            {hasRelated && (
+              <a class="btn btn-ghost" href="#path-related">
+                <Loc zh={ui.path.related.zh} en={ui.path.related.en} />
+              </a>
+            )}
+          </div>
+        )
+      }
+      {
+        run && (
+          <section
+            id="path-run-panel"
+            class="path-run-panel"
+            hidden
+            data-path-run-panel
+            aria-label={ui.path.run.zh}
+            data-aria-zh={ui.path.run.zh}
+            data-aria-en={ui.path.run.en}
+          >
+            <p class="path-run-desk">
+              <strong>
+                <Loc zh={ui.path.dropDesk.zh} en={ui.path.dropDesk.en} />
+              </strong>
+              <span class="loc-zh">
+                {run.desk}
+                <span class="path-run-hint">{run.targetHint}</span>
+              </span>
+              <span class="loc-en">
+                {run.deskEn}
+                <span class="path-run-hint">{run.targetHintEn}</span>
+              </span>
+            </p>
+            <p class="path-run-note">
+              <Loc zh={ui.path.runHint.zh} en={ui.path.runHint.en} />
+            </p>
+            <div class="path-run-copy-row">
+              <button type="button" class="btn btn-ghost" data-path-copy data-copied="false">
+                <span data-path-copy-label>
+                  <Loc zh={ui.path.copyBrief.zh} en={ui.path.copyBrief.en} />
+                </span>
+                <span class="path-run-copied" data-path-copied aria-live="polite">
+                  <Loc zh={ui.path.copied.zh} en={ui.path.copied.en} />
+                </span>
+              </button>
+            </div>
+            <pre class="path-run-brief loc-zh" data-path-brief>{briefZh}</pre>
+            <pre class="path-run-brief loc-en">{briefEn}</pre>
+          </section>
+        )
+      }
     </article>
 
     <div class="detail-grid">
@@ -112,7 +178,7 @@ const hasRelated = relatedCases.length + relatedHtml.length + relatedAgentUi.len
 
         {
           hasRelated && (
-            <section class="section">
+            <section class="section" id="path-related">
               <h2><Loc zh={ui.path.related.zh} en={ui.path.related.en} /></h2>
               {
                 item.relatedPages.length > 0 && (
@@ -201,4 +267,58 @@ const hasRelated = relatedCases.length + relatedHtml.length + relatedAgentUi.len
       </aside>
     </div>
   </div>
+
+  {
+    run && (
+      <script is:inline>
+        document.addEventListener("click", function (event) {
+          var node = event.target;
+          while (node && node.nodeType !== 1 && node.parentNode) node = node.parentNode;
+          if (!node || !node.closest) return;
+
+          var toggle = node.closest("[data-path-run-toggle]");
+          if (toggle) {
+            var panel = document.querySelector("[data-path-run-panel]");
+            if (!panel) return;
+            var open = !panel.hasAttribute("hidden");
+            if (open) {
+              panel.setAttribute("hidden", "");
+              toggle.setAttribute("aria-expanded", "false");
+            } else {
+              panel.removeAttribute("hidden");
+              toggle.setAttribute("aria-expanded", "true");
+            }
+            return;
+          }
+
+          if (!node.closest("[data-path-copy]")) return;
+          var brief = document.querySelector("[data-path-brief]");
+          var text = brief && brief.textContent ? brief.textContent.trim() : "";
+          if (!text) return;
+
+          var area = document.createElement("textarea");
+          area.value = text;
+          area.setAttribute("readonly", "");
+          area.style.position = "fixed";
+          area.style.left = "-9999px";
+          document.body.appendChild(area);
+          area.select();
+          try {
+            document.execCommand("copy");
+          } catch (err) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(text);
+            }
+          }
+          area.remove();
+
+          var copyBtn = node.closest("[data-path-copy]");
+          if (copyBtn) copyBtn.setAttribute("data-copied", "true");
+          window.setTimeout(function () {
+            if (copyBtn) copyBtn.setAttribute("data-copied", "false");
+          }, 4000);
+        });
+      </script>
+    )
+  }
 </BaseLayout>

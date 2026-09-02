@@ -1,6 +1,7 @@
 import dataset from "../../data/paths.json";
 import { agentUiItems, type AgentUiItem } from "./agent-ui";
 import { cases, type CaseItem, type Difficulty } from "./cases";
+import { shanghaiDateKey } from "./format";
 import { htmlItems, type HtmlItem } from "./html";
 
 export interface PathStep {
@@ -23,6 +24,16 @@ export interface PathPageLink {
   titleEn: string;
 }
 
+/** Optional paste-ready desk brief. Static site only — never a live send. */
+export interface PathRun {
+  desk: string;
+  deskEn: string;
+  targetHint: string;
+  targetHintEn: string;
+  briefTemplate: string;
+  briefTemplateEn?: string;
+}
+
 export interface PlaybookPath {
   id: string;
   slug: string;
@@ -39,6 +50,7 @@ export interface PlaybookPath {
   difficulty: Difficulty;
   featured: boolean;
   publishedAt: string;
+  run?: PathRun;
 }
 
 export interface PlaybooksMeta {
@@ -139,4 +151,87 @@ export function getRelatedAgentUiForPath(path: PlaybookPath): AgentUiItem[] {
   return path.relatedAgentUiIds
     .map((id) => agentUiItems.find((item) => item.id === id))
     .filter((item): item is AgentUiItem => Boolean(item));
+}
+
+const BRIEF_PLACEHOLDER = /\{\{(\w+)\}\}/g;
+
+const DEFAULT_BRIEF_TEMPLATE_ZH = `【开跑 brief · {{today}}】
+路径：{{title}}
+丢到：{{desk}}
+粘贴处：{{targetHint}}
+
+任务：
+{{summary}}
+
+步骤：
+{{steps}}
+
+硬闸门：
+{{gates}}
+
+本 brief 只交草稿。站点不代发、不代合入。`;
+
+const DEFAULT_BRIEF_TEMPLATE_EN = `【Run brief · {{today}}】
+Path: {{title}}
+Desk: {{desk}}
+Paste to: {{targetHint}}
+
+Task:
+{{summary}}
+
+Steps:
+{{steps}}
+
+Hard gates:
+{{gates}}
+
+This brief hands off a draft. The site does not send or merge.`;
+
+export function pathBriefVars(
+  path: PlaybookPath,
+  locale: "zh" | "en" = "zh",
+  today = shanghaiDateKey(new Date()),
+): Record<string, string> {
+  const en = locale === "en";
+  const run = path.run;
+  const steps = path.steps
+    .map((step, index) => {
+      const title = en ? step.titleEn : step.title;
+      const body = en ? step.bodyEn : step.body;
+      return `${index + 1}. ${title} — ${body}`;
+    })
+    .join("\n");
+  const gates = path.gates
+    .map((gate) => {
+      const title = en ? gate.titleEn : gate.title;
+      const body = en ? (gate.bodyEn ?? gate.body) : (gate.body ?? gate.bodyEn);
+      return body ? `- ${title}：${body}` : `- ${title}`;
+    })
+    .join("\n");
+
+  return {
+    today,
+    title: en ? path.titleEn : path.title,
+    summary: en ? path.summaryEn : path.summary,
+    desk: en ? (run?.deskEn ?? run?.desk ?? "") : (run?.desk ?? ""),
+    targetHint: en ? (run?.targetHintEn ?? run?.targetHint ?? "") : (run?.targetHint ?? ""),
+    steps,
+    gates,
+  };
+}
+
+export function fillBriefTemplate(template: string, vars: Record<string, string>): string {
+  return template.replace(BRIEF_PLACEHOLDER, (_, key: string) => vars[key] ?? `{{${key}}}`);
+}
+
+/** Fill a path’s desk brief at build time ({{today}} = Asia/Shanghai civil date). */
+export function filledPathBrief(path: PlaybookPath, locale: "zh" | "en" = "zh"): string {
+  const run = path.run;
+  if (!run) return "";
+  const vars = pathBriefVars(path, locale);
+  const template =
+    locale === "en"
+      ? (run.briefTemplateEn?.trim() || DEFAULT_BRIEF_TEMPLATE_EN)
+      : (run.briefTemplate?.trim() || DEFAULT_BRIEF_TEMPLATE_ZH);
+  return fillBriefTemplate(template, vars).trim();
 }

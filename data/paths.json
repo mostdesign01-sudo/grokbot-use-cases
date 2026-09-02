@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-09-02T05:40:00Z",
+    "updatedAt": "2026-09-02T13:50:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.0.0",
     "count": 5
@@ -64,7 +64,15 @@
       ],
       "difficulty": "intermediate",
       "featured": true,
-      "publishedAt": "2026-09-02"
+      "publishedAt": "2026-09-02",
+      "run": {
+        "desk": "内容桌",
+        "deskEn": "Content desk",
+        "targetHint": "丢给内容桌协调员 / 内容桌频道",
+        "targetHintEn": "Paste to the content-desk coordinator / content-desk channel",
+        "briefTemplate": "【开跑 brief · {{today}}】\n路径：{{title}}\n丢到：{{desk}}\n粘贴处：{{targetHint}}\n\n任务：\n{{summary}}\n\n步骤：\n{{steps}}\n\n硬闸门：\n{{gates}}\n\n完成定义：\n- 本周只做一栏，不要同时开销售、工程、营销三桌\n- 没有 brief 不开工\n- 草稿进同一条线程，不外发、不改已上线页\n- 栏目主人点头前不发布\n- 本 brief 只交草稿，站点不代发",
+        "briefTemplateEn": "【Run brief · {{today}}】\nPath: {{title}}\nDesk: {{desk}}\nPaste to: {{targetHint}}\n\nTask:\n{{summary}}\n\nSteps:\n{{steps}}\n\nHard gates:\n{{gates}}\n\nDefinition of done:\n- One column this week. Do not open sales, engineering, and marketing desks at once\n- No brief, no work\n- Drafts stay in the same thread. No outbound, no live-page edits\n- No publish before the column owner nods\n- This brief hands off a draft. The site does not send"
+      }
     },
     {
       "id": "marketing-desk-draft-only",
@@ -130,7 +138,15 @@
       ],
       "difficulty": "starter",
       "featured": true,
-      "publishedAt": "2026-09-02"
+      "publishedAt": "2026-09-02",
+      "run": {
+        "desk": "营销桌",
+        "deskEn": "Marketing desk",
+        "targetHint": "丢给 AIUP营销Lead / 营销桌频道",
+        "targetHintEn": "Paste to AIUP Marketing Lead / marketing-desk channel",
+        "briefTemplate": "【开跑 brief · {{today}}】\n路径：{{title}}\n丢到：{{desk}}\n粘贴处：{{targetHint}}\n\n任务：\n{{summary}}\n\n编制：Lead → Writer → Reviewer。只出草稿。\n\n步骤：\n{{steps}}\n\n硬闸门：\n{{gates}}\n\n完成定义：\n- 只为 X/@mostdes7gn 或站内笔记出草稿\n- 不编造指标或用户数\n- 过审只表示「可以交给 Hao」，不是「可以发出」\n- 不设 Publisher，不接 Blotato；X 连接器只读\n- 本 brief 只交草稿，站点不代发",
+        "briefTemplateEn": "【Run brief · {{today}}】\nPath: {{title}}\nDesk: {{desk}}\nPaste to: {{targetHint}}\n\nTask:\n{{summary}}\n\nRoster: Lead → Writer → Reviewer. Drafts only.\n\nSteps:\n{{steps}}\n\nHard gates:\n{{gates}}\n\nDefinition of done:\n- Drafts only for X/@mostdes7gn or site notes\n- No invented metrics or user counts\n- Pass means “ready for Hao,” not “ready to post”\n- No Publisher seat, no Blotato; X connector stays read-only\n- This brief hands off a draft. The site does not send"
+      }
     },
     {
       "id": "engineering-foreman",
@@ -195,7 +211,15 @@
       ],
       "difficulty": "advanced",
       "featured": true,
-      "publishedAt": "2026-09-02"
+      "publishedAt": "2026-09-02",
+      "run": {
+        "desk": "工程工头",
+        "deskEn": "Engineering foreman",
+        "targetHint": "丢给工程工头 Bot / 工程频道（人守合入）",
+        "targetHintEn": "Paste to the engineering-foreman bot / engineering channel (human holds merge)",
+        "briefTemplate": "【开跑 brief · {{today}}】\n路径：{{title}}\n丢到：{{desk}}\n粘贴处：{{targetHint}}\n\n任务：\n{{summary}}\n\n步骤：\n{{steps}}\n\n硬闸门：\n{{gates}}\n\n完成定义：\n- 只覆盖一类活：复现、草稿 PR、或过夜巡检\n- 工头分派，不自己改生产\n- 截图、CI、或可复现步骤才算完成\n- 合入必须人审；不追未核实的「200 / 2000」\n- 本 brief 只交任务，站点不代合入",
+        "briefTemplateEn": "【Run brief · {{today}}】\nPath: {{title}}\nDesk: {{desk}}\nPaste to: {{targetHint}}\n\nTask:\n{{summary}}\n\nSteps:\n{{steps}}\n\nHard gates:\n{{gates}}\n\nDefinition of done:\n- Cover one kind of work: repros, draft PRs, or overnight patrols\n- The foreman assigns; it does not change production\n- Screenshot, CI, or a reproducible step — or it is not done\n- A human holds merge. Do not chase unverified “200 / 2000”\n- This brief hands off a task. The site does not merge"
+      }
     },
     {
       "id": "daily-to-draft",
@@ -272,7 +296,15 @@
       ],
       "difficulty": "starter",
       "featured": true,
-      "publishedAt": "2026-09-02"
+      "publishedAt": "2026-09-02",
+      "run": {
+        "desk": "营销桌",
+        "deskEn": "Marketing desk",
+        "targetHint": "丢给 AIUP营销Lead / 营销桌频道",
+        "targetHintEn": "Paste to AIUP Marketing Lead / marketing-desk channel",
+        "briefTemplate": "【开跑 brief · {{today}}】\n路径：{{title}}\n丢到：{{desk}}\n粘贴处：{{targetHint}}\n\n任务：\n{{summary}}\n\n编制：营销 Lead 写 brief → Writer 起草 → Reviewer ≥8 → Hao。\n\n步骤：\n{{steps}}\n\n硬闸门：\n{{gates}}\n\n完成定义：\n- digest / changelog 是原料，不是成稿\n- 来源必须能点回库内条目或 changelog 原文\n- Reviewer 不到 8 分退回 Writer\n- Hao 点头前不发布\n- 本 brief 只交草稿，站点不代发",
+        "briefTemplateEn": "【Run brief · {{today}}】\nPath: {{title}}\nDesk: {{desk}}\nPaste to: {{targetHint}}\n\nTask:\n{{summary}}\n\nRoster: Marketing Lead writes the brief → Writer drafts → Reviewer scores ≥8 → Hao.\n\nSteps:\n{{steps}}\n\nHard gates:\n{{gates}}\n\nDefinition of done:\n- The digest / changelog are inputs, not finished copy\n- The source must link back to a library item or the changelog note\n- Below 8 goes back to Writer\n- No publish before Hao nods\n- This brief hands off a draft. The site does not send"
+      }
     },
     {
       "id": "design-taste",
@@ -335,7 +367,15 @@
       ],
       "difficulty": "intermediate",
       "featured": true,
-      "publishedAt": "2026-09-02"
+      "publishedAt": "2026-09-02",
+      "run": {
+        "desk": "设计味",
+        "deskEn": "Taste desk",
+        "targetHint": "丢给设计味席 / 设计频道（口味判断留人）",
+        "targetHintEn": "Paste to the taste seat / design channel (taste stays human)",
+        "briefTemplate": "【开跑 brief · {{today}}】\n路径：{{title}}\n丢到：{{desk}}\n粘贴处：{{targetHint}}\n\n任务：\n{{summary}}\n\n步骤：\n{{steps}}\n\n硬闸门：\n{{gates}}\n\n完成定义：\n- 一次只贴一套方向，不要混五份参考\n- Agent 给方向稿，人决定过不过\n- 参考页只作方向，不是可商用授权\n- Agent 不能自称「有品味」\n- 本 brief 只交方向，站点不代发布",
+        "briefTemplateEn": "【Run brief · {{today}}】\nPath: {{title}}\nDesk: {{desk}}\nPaste to: {{targetHint}}\n\nTask:\n{{summary}}\n\nSteps:\n{{steps}}\n\nHard gates:\n{{gates}}\n\nDefinition of done:\n- Paste one direction. Do not mix five references\n- The Agent drafts; a human decides if it passes\n- Reference pages are direction, not a commercial license\n- The Agent does not get to claim taste\n- This brief hands off direction. The site does not publish"
+      }
     }
   ]
 }
