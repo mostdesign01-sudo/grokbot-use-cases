@@ -1474,6 +1474,10 @@ select:focus {
   margin: 0;
 }
 
+.approval-callout + .approval-callout {
+  margin-top: 10px;
+}
+
 .start-path {
   margin: 0;
   padding-left: 18px;
@@ -2260,6 +2264,69 @@ html[data-theme="light"] .home-plaza {
   background: #fffdf9;
 }
 
+.plaza-paths-strip {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 14px 16px 15px;
+  border-radius: 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.plaza-paths-copy {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.plaza-path-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 4px 0 0;
+}
+
+.plaza-path-chips a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line-strong);
+  font-size: 13px;
+}
+
+.plaza-path-chips a:hover {
+  color: var(--ink);
+}
+
+.path-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.path-card .path-card-gate {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.path-card-gate strong {
+  margin-right: 6px;
+  color: var(--amber);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.path-page-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
 .home-plaza-scroll {
   height: 100%;
   overflow: auto;
@@ -2511,6 +2578,15 @@ html[data-theme="light"] .home-pill {
     min-height: 70dvh;
     margin: 0 10px 10px;
     border-radius: 22px;
+  }
+
+  .plaza-paths-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .path-page-links {
+    grid-template-columns: 1fr;
   }
 
   .home-plaza-cols {

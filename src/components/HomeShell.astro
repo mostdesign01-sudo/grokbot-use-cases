@@ -12,6 +12,7 @@ import {
 } from "../lib/digest";
 import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
+import { playbooks } from "../lib/playbooks";
 import { siteName } from "../lib/site";
 
 interface Props {
@@ -81,6 +82,7 @@ const [col1, col2, col3] = packPlazaColumns(day.items);
     </nav>
 
     <nav class="home-rail-meta" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      <a href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a>
       <a href={withBase("search/")}><Loc zh={ui.nav.search.zh} en={ui.nav.search.en} /></a>
       <a href={withBase("docs/")}><Loc zh={ui.nav.docs.zh} en={ui.nav.docs.en} /></a>
       <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
@@ -89,6 +91,25 @@ const [col1, col2, col3] = packPlazaColumns(day.items);
 
   <main class="home-plaza">
     <div class="home-plaza-scroll" data-plaza-scroll>
+      <aside class="plaza-paths-strip">
+        <div class="plaza-paths-copy">
+          <p class="plaza-kicker"><Loc zh={ui.home.paths.zh} en={ui.home.paths.en} /></p>
+          <p class="plaza-line"><Loc zh={ui.home.pathsStrip.zh} en={ui.home.pathsStrip.en} /></p>
+          <p class="plaza-path-chips">
+            {
+              playbooks.map((path) => (
+                <a href={withBase(`paths/${path.slug}/`)}>
+                  <span class="loc-zh">{path.title}</span>
+                  <span class="loc-en">{path.titleEn}</span>
+                </a>
+              ))
+            }
+          </p>
+        </div>
+        <a class="btn btn-ghost" href={withBase("paths/")}>
+          <Loc zh={ui.home.pathsOpen.zh} en={ui.home.pathsOpen.en} />
+        </a>
+      </aside>
       <div class="home-plaza-cols" data-plaza-grid>
         <div class="home-col" data-plaza-col>
           {col1.map((item) => <PlazaCard item={item} />)}

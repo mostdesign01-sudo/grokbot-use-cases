@@ -1,0 +1,204 @@
+---
+import AgentUiCard from "../../components/AgentUiCard.astro";
+import CaseCard from "../../components/CaseCard.astro";
+import HtmlCard from "../../components/HtmlCard.astro";
+import Loc from "../../components/Loc.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatPublishedDate } from "../../lib/format";
+import { ui } from "../../lib/i18n";
+import { difficultyLabel } from "../../lib/labels";
+import { withBase } from "../../lib/paths";
+import {
+  getRelatedAgentUiForPath,
+  getRelatedCasesForPath,
+  getRelatedHtmlForPath,
+  playbooks,
+} from "../../lib/playbooks";
+import Badge from "../../components/Badge.astro";
+
+export function getStaticPaths() {
+  return playbooks.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const relatedCases = getRelatedCasesForPath(item);
+const relatedHtml = getRelatedHtmlForPath(item);
+const relatedAgentUi = getRelatedAgentUiForPath(item);
+const hasRelated = relatedCases.length + relatedHtml.length + relatedAgentUi.length + item.relatedPages.length > 0;
+---
+
+<BaseLayout
+  collection="lab"
+  title={`${item.title} · AI UP LAB`}
+  titleEn={`${item.titleEn} · AI UP LAB`}
+  description={item.summary}
+  descriptionEn={item.summaryEn}
+>
+  <div class="wrap">
+    <article class="detail-hero">
+      <p class="crumb">
+        <a href={withBase("/")}><Loc zh={ui.detail.lab.zh} en={ui.detail.lab.en} /></a> /
+        <a href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a> /
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </p>
+      <div class="badges">
+        <Badge
+          kind="approval"
+          label={difficultyLabel(item.difficulty)}
+          labelEn={difficultyLabel(item.difficulty, "en")}
+        />
+        {
+          item.featured && (
+            <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />
+          )
+        }
+      </div>
+      <h1>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </h1>
+      <p class="title-en loc-zh">{item.titleEn}</p>
+      <p class="lede">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{item.summaryEn}</span>
+      </p>
+    </article>
+
+    <div class="detail-grid">
+      <div>
+        <section class="panel">
+          <h2><Loc zh={ui.path.steps.zh} en={ui.path.steps.en} /></h2>
+          <ol class="start-path">
+            {
+              item.steps.map((step) => (
+                <li>
+                  <strong>
+                    <span class="loc-zh">{step.title}</span>
+                    <span class="loc-en">{step.titleEn}</span>
+                  </strong>
+                  <p>
+                    <span class="loc-zh">{step.body}</span>
+                    <span class="loc-en">{step.bodyEn}</span>
+                  </p>
+                </li>
+              ))
+            }
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h2><Loc zh={ui.path.gates.zh} en={ui.path.gates.en} /></h2>
+          {
+            item.gates.map((gate) => (
+              <div class="approval-callout">
+                <strong>
+                  <span class="loc-zh">{gate.title}</span>
+                  <span class="loc-en">{gate.titleEn}</span>
+                </strong>
+                {(gate.body || gate.bodyEn) && (
+                  <p>
+                    <span class="loc-zh">{gate.body ?? gate.bodyEn}</span>
+                    <span class="loc-en">{gate.bodyEn ?? gate.body}</span>
+                  </p>
+                )}
+              </div>
+            ))
+          }
+        </section>
+
+        {
+          hasRelated && (
+            <section class="section">
+              <h2><Loc zh={ui.path.related.zh} en={ui.path.related.en} /></h2>
+              {
+                item.relatedPages.length > 0 && (
+                  <div class="path-page-links">
+                    {item.relatedPages.map((page) => (
+                      <a class="card" href={withBase(page.href)}>
+                        <h3>
+                          <span class="loc-zh">{page.title}</span>
+                          <span class="loc-en">{page.titleEn}</span>
+                        </h3>
+                        <p class="title-en loc-zh">{page.titleEn}</p>
+                      </a>
+                    ))}
+                  </div>
+                )
+              }
+              {
+                relatedCases.length > 0 && (
+                  <div class="tweet-feed tweet-feed-related">
+                    {relatedCases.map((relatedItem) => (
+                      <CaseCard caseItem={relatedItem} />
+                    ))}
+                  </div>
+                )
+              }
+              {
+                (relatedHtml.length > 0 || relatedAgentUi.length > 0) && (
+                  <div class="masonry masonry-related">
+                    {relatedHtml.map((htmlItem) => (
+                      <HtmlCard item={htmlItem} />
+                    ))}
+                    {relatedAgentUi.map((agentItem) => (
+                      <AgentUiCard item={agentItem} />
+                    ))}
+                  </div>
+                )
+              }
+            </section>
+          )
+        }
+      </div>
+
+      <aside>
+        <section class="panel">
+          <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
+          <dl class="kv">
+            <div>
+              <dt><Loc zh={ui.meta.difficulty.zh} en={ui.meta.difficulty.en} /></dt>
+              <dd>
+                <span class="loc-zh">{difficultyLabel(item.difficulty)}</span>
+                <span class="loc-en">{difficultyLabel(item.difficulty, "en")}</span>
+              </dd>
+            </div>
+            <div>
+              <dt><Loc zh={ui.path.stepCount.zh} en={ui.path.stepCount.en} /></dt>
+              <dd>{item.steps.length}</dd>
+            </div>
+            <div>
+              <dt><Loc zh={ui.path.gateCount.zh} en={ui.path.gateCount.en} /></dt>
+              <dd>{item.gates.length}</dd>
+            </div>
+            <div>
+              <dt><Loc zh={ui.meta.published.zh} en={ui.meta.published.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+                <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <section class="panel">
+          <h2><Loc zh={ui.path.otherPaths.zh} en={ui.path.otherPaths.en} /></h2>
+          <div class="source-list">
+            {
+              playbooks
+                .filter((other) => other.id !== item.id)
+                .map((other) => (
+                  <a href={withBase(`paths/${other.slug}/`)}>
+                    <span class="loc-zh">{other.title}</span>
+                    <span class="loc-en">{other.titleEn}</span>
+                  </a>
+                ))
+            }
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import type { PlaybookPath } from "../lib/playbooks";
+import { ui } from "../lib/i18n";
+import { difficultyLabel } from "../lib/labels";
+import { withBase } from "../lib/paths";
+import Badge from "./Badge.astro";
+import Loc from "./Loc.astro";
+
+interface Props {
+  path: PlaybookPath;
+}
+
+const { path } = Astro.props;
+const stepCount = path.steps.length;
+const gate = path.gates[0];
+---
+
+<a class="card path-card" href={withBase(`paths/${path.slug}/`)}>
+  <div class="badges">
+    <Badge
+      kind="approval"
+      label={difficultyLabel(path.difficulty)}
+      labelEn={difficultyLabel(path.difficulty, "en")}
+    />
+    {
+      path.featured && (
+        <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />
+      )
+    }
+    <Badge
+      label={`${stepCount} 步`}
+      labelEn={`${stepCount} steps`}
+    />
+  </div>
+  <h3>
+    <span class="loc-zh">{path.title}</span>
+    <span class="loc-en">{path.titleEn}</span>
+  </h3>
+  <p class="title-en loc-zh">{path.titleEn}</p>
+  <p class="summary">
+    <span class="loc-zh">{path.summary}</span>
+    <span class="loc-en">{path.summaryEn}</span>
+  </p>
+  {
+    gate && (
+      <p class="path-card-gate">
+        <strong><Loc zh={ui.path.gate.zh} en={ui.path.gate.en} /></strong>
+        <span class="loc-zh">{gate.title}</span>
+        <span class="loc-en">{gate.titleEn}</span>
+      </p>
+    )
+  }
+</a>

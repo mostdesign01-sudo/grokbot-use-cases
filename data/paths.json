@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-02T05:40:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.0.0",
+    "count": 5
+  },
+  "paths": [
+    {
+      "id": "content-desk",
+      "slug": "content-desk",
+      "title": "内容桌（窄席 + 人审发布）",
+      "titleEn": "Content desk (narrow seats + human publish)",
+      "summary": "选一栏内容，只开一名协调员加窄席。先写 brief，再产出，发布前必须人点头。对照 Jessica Temporal 的编制和 How Do I Use AI 的小队 rollout——席位要少，闸门要硬。",
+      "summaryEn": "Pick one column. One coordinator plus a narrow roster. Write the brief, produce, then a human nods before anything publishes. Use Jessica Temporal’s roster and How Do I Use AI’s team rollout as references — few seats, hard gates.",
+      "steps": [
+        {
+          "title": "只选一栏",
+          "titleEn": "Pick one column",
+          "body": "本周只做一个栏目：周记、产品笔记、或一条站内说明。不要同时开销售、工程、营销三桌。",
+          "bodyEn": "Run one column this week: a lab note, a product note, or one site page. Do not open sales, engineering, and marketing desks at once."
+        },
+        {
+          "title": "一名协调员 + 窄席",
+          "titleEn": "One coordinator + narrow seats",
+          "body": "协调员分派；写手、校对各一席就够。Jessica 的六席周末交付可以对照编制，本实验室先压到能盯住的人数。",
+          "bodyEn": "The coordinator assigns; writer and reviewer are enough. Jessica’s six-seat Saturday is a roster reference — this lab starts at a count one person can watch."
+        },
+        {
+          "title": "先写 brief",
+          "titleEn": "Write the brief first",
+          "body": "受众、口吻、禁止项、完成定义。没有 brief 不开工。How Do I Use AI 的节奏是一任务 → skill → routine，这里先停在「一任务」。",
+          "bodyEn": "Audience, voice, forbidden moves, definition of done. No brief, no work. How Do I Use AI goes task → skill → routine; this path stops at one task."
+        },
+        {
+          "title": "产出停在待审",
+          "titleEn": "Park the draft",
+          "body": "草稿进同一条线程，不外发、不改已上线页。协调员只收齐，不代发。",
+          "bodyEn": "Drafts stay in the same thread. No outbound, no live-page edits. The coordinator collects; they do not publish."
+        },
+        {
+          "title": "人点头再发布",
+          "titleEn": "A human nods before publish",
+          "body": "栏目主人看过再发。没有人审就没有发布。这是整条路径的闸门，不是可选项。",
+          "bodyEn": "The column owner reads it, then publishes. No human nod, no publish. That gate is the path, not an option."
+        }
+      ],
+      "relatedCaseIds": [
+        "jtemporal-ai-squad",
+        "howdoiuseai-agent-teams",
+        "grokbot-guides",
+        "website-launch-group"
+      ],
+      "relatedHtmlIds": [],
+      "relatedAgentUiIds": [],
+      "relatedPages": [],
+      "gates": [
+        {
+          "title": "无人点头不发布",
+          "titleEn": "No publish without a human nod",
+          "body": "不发帖、不改已上线页、不代发 Newsletter 或社媒。Bot 只交草稿。",
+          "bodyEn": "No posts, no live-page edits, no sending a newsletter or social queue. Bots return drafts only."
+        }
+      ],
+      "difficulty": "intermediate",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "marketing-desk-draft-only",
+      "slug": "marketing-desk-draft-only",
+      "title": "AI UP LAB 营销桌（草稿停笔）",
+      "titleEn": "AI UP LAB marketing desk (drafts stop here)",
+      "summary": "Lead → Writer → Reviewer，只为 X/@mostdes7gn 或站内笔记出草稿。编制灵感来自公开的四席营销队，但本实验室不设 Publisher，也不接 Blotato。Hao 自己发；X 连接器只读。",
+      "summaryEn": "Lead → Writer → Reviewer, drafts only for X/@mostdes7gn or site notes. The roster is inspired by a public four-bot marketing team, but this lab has no Publisher and no Blotato. Hao posts himself; the X connector stays read-only.",
+      "steps": [
+        {
+          "title": "Lead 收 brief",
+          "titleEn": "Lead takes the brief",
+          "body": "今天要说什么：一条 changelog、一条库增收、或一条可复用方法。不编造指标，不发明用户数。",
+          "bodyEn": "What to say today: one changelog note, one library add, or one reusable method. No invented metrics or user counts."
+        },
+        {
+          "title": "Writer 起草",
+          "titleEn": "Writer drafts",
+          "body": "一条 X 草稿，或一段站内说明。口吻跟实验室，不跟风，不写「重磅」「首发全网」。",
+          "bodyEn": "One X draft or a short site note. Lab voice. No hype, no “breaking” or “first anywhere.”"
+        },
+        {
+          "title": "Reviewer 过闸",
+          "titleEn": "Reviewer holds the gate",
+          "body": "核对事实、链接、是否越权。能点回库内条目才算过。过了也只是「可以交给 Hao」，不是「可以发出」。",
+          "bodyEn": "Check facts, links, and overreach. A draft passes only if it links back to a library item. Pass means “ready for Hao,” not “ready to post.”"
+        },
+        {
+          "title": "停笔交给 Hao",
+          "titleEn": "Stop the pen; hand to Hao",
+          "body": "队列停在待发布。X 连接器只搜帖、读时间线/提及、拉趋势；不发帖、不删帖、不改账号。",
+          "bodyEn": "The queue stays parked. The X connector may search posts, read the timeline and mentions, and pull trends — not post, delete, or change the account."
+        },
+        {
+          "title": "Hao 自己点发布",
+          "titleEn": "Hao posts himself",
+          "body": "没有 Publisher 席，不接 Blotato，也不把「排队代发」写进例行。人按下去才算发出。",
+          "bodyEn": "No Publisher seat, no Blotato, and no unattended-post routine. It is posted only when a human presses send."
+        }
+      ],
+      "relatedCaseIds": [
+        "social-media-manager",
+        "grok-bot-and-x",
+        "newsletter-writer",
+        "marketing-calendar-owner"
+      ],
+      "relatedHtmlIds": [],
+      "relatedAgentUiIds": [],
+      "relatedPages": [],
+      "gates": [
+        {
+          "title": "Hao 自己发",
+          "titleEn": "Hao posts himself",
+          "body": "不设 Publisher Bot，不接 Blotato。草稿停笔。",
+          "bodyEn": "No Publisher bot, no Blotato. Drafts stop here."
+        },
+        {
+          "title": "X 连接器只读",
+          "titleEn": "X connector is read-only",
+          "body": "不发帖、不删帖、不互动。只搜、读时间线/提及、拉趋势。",
+          "bodyEn": "Do not post, delete, or engage. Search, read the timeline and mentions, pull trends."
+        }
+      ],
+      "difficulty": "starter",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "engineering-foreman",
+      "slug": "engineering-foreman",
+      "title": "工程工头（专科 Bot + Cloud Agent）",
+      "titleEn": "Engineering foreman (specialist bots + Cloud Agents)",
+      "summary": "复用 Lingxi 的方法：专科工头 Bot 拉起 Cloud Agent，共享状态，用截图或 CI 当证据。人守合入。不要追「200 agents / 2000 PRs」——那是作者场景，本实验室未核实。",
+      "summaryEn": "Reuse Lingxi’s method: specialist boss bots spawn Cloud Agents, share state, and accept screenshot or CI evidence. A human holds merge. Do not chase “200 agents / 2000 PRs” — that is the author’s scene, unverified for this lab.",
+      "steps": [
+        {
+          "title": "先定一个专科工头",
+          "titleEn": "Name one specialist foreman",
+          "body": "只覆盖一类活：复现、草稿 PR、或过夜巡检。不要一上来编成「工程组织」。",
+          "bodyEn": "Cover one kind of work: repros, draft PRs, or overnight patrols. Do not stand up an “engineering org” on day one."
+        },
+        {
+          "title": "工头拉 Cloud Agent",
+          "titleEn": "The foreman spawns Cloud Agents",
+          "body": "对照官方 Cloud Agent Orchestrator：拉起 run、追卡住的、交汇总。工头分派，不自己改生产。",
+          "bodyEn": "Follow the official Cloud Agent Orchestrator: start runs, chase stuck ones, return the summary. The foreman assigns; it does not change production."
+        },
+        {
+          "title": "共享状态",
+          "titleEn": "Share one state",
+          "body": "用 Notion 或本仓库的 issue/PR 当状态机。谁在跑、卡在哪、证据在哪，写在同一处。",
+          "bodyEn": "Use Notion or this repo’s issues/PRs as the state machine. Who is running, what is stuck, and where the evidence lives — one place."
+        },
+        {
+          "title": "证据验收",
+          "titleEn": "Accept with evidence",
+          "body": "截图、CI、或可复现步骤。没有证据不算完成。不要用未核实的规模数字当成功标准。",
+          "bodyEn": "A screenshot, CI, or a reproducible step. No evidence, not done. Unverified headcount is not a success metric."
+        },
+        {
+          "title": "人守合入",
+          "titleEn": "A human holds merge",
+          "body": "低风险可过夜巡检；合入、改线上、花钱必须人审。复用方法，不追「200 / 2000」。",
+          "bodyEn": "Low-risk overnight patrols are fine. Merges, live edits, and spending need a human. Reuse the method; do not chase “200 / 2000.”"
+        }
+      ],
+      "relatedCaseIds": [
+        "lingxi-engineering-org",
+        "cloud-agent-orchestrator",
+        "cursor-automations-eng-factory"
+      ],
+      "relatedHtmlIds": [],
+      "relatedAgentUiIds": [],
+      "relatedPages": [],
+      "gates": [
+        {
+          "title": "无人审不合入",
+          "titleEn": "No unreviewed merge",
+          "body": "不合并无人审的结果，不改生产，不扩大权限。",
+          "bodyEn": "Do not merge unreviewed results, change production, or expand permissions."
+        },
+        {
+          "title": "不追未核实规模",
+          "titleEn": "Do not chase unverified scale",
+          "body": "「200+ agent / 月合 2000+ PR」是 Lingxi 原文场景，本实验室未核实。只复用窄席、共享状态、证据验收。",
+          "bodyEn": "“200+ agents / 2000+ PRs a month” is Lingxi’s scene, unverified here. Reuse narrow seats, shared state, and evidence — not the numbers."
+        }
+      ],
+      "difficulty": "advanced",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "daily-to-draft",
+      "slug": "daily-to-draft",
+      "title": "日更 → 一条可发草稿",
+      "titleEn": "Daily digest → one postable draft",
+      "summary": "工作日早上读广场 digest 与 changelog，营销 Lead 据此写 brief，Writer 出一条草稿，Reviewer 打到 ≥8 再交给 Hao。不是把日更自动发出去。",
+      "summaryEn": "On weekday mornings, read the plaza digest and changelog. Marketing Lead writes a brief from today’s note, Writer drafts, Reviewer scores ≥8, then Hao. The digest is not a post.",
+      "steps": [
+        {
+          "title": "读今日看点",
+          "titleEn": "Read today’s digest",
+          "body": "打开广场首页或更新日志，只取今天增收/校对里能对外说的一条。digest 本身不是稿件。",
+          "bodyEn": "Open the plaza home or the changelog. Take one add or check from today that is safe to say in public. The digest is not copy."
+        },
+        {
+          "title": "Lead 写 brief",
+          "titleEn": "Lead writes the brief",
+          "body": "这一条为什么值得说、给谁看、禁止夸大。来源必须能点回库内条目或 changelog 原文。",
+          "bodyEn": "Why this one is worth saying, who it is for, and what not to inflate. The source must link back to a library item or the changelog note."
+        },
+        {
+          "title": "Writer 起草",
+          "titleEn": "Writer drafts",
+          "body": "一条 X 或一段站内笔记。只写库里已有的事实，不编造条数之外的指标。",
+          "bodyEn": "One X draft or a short site note. Only facts already in the library. Do not invent metrics beyond the listed counts."
+        },
+        {
+          "title": "Reviewer ≥8",
+          "titleEn": "Reviewer scores ≥8",
+          "body": "事实、链接、口吻、是否越权。十分制，不到 8 分退回 Writer，不进 Hao 的队列。",
+          "bodyEn": "Facts, links, voice, overreach. Score out of ten. Below 8 goes back to Writer — it does not enter Hao’s queue."
+        },
+        {
+          "title": "交给 Hao",
+          "titleEn": "Hand to Hao",
+          "body": "人发。日更摘要、广场卡片、changelog 条目都不能直接当帖子发出。",
+          "bodyEn": "A human posts. The digest, plaza cards, and changelog rows are not posts."
+        }
+      ],
+      "relatedCaseIds": [
+        "daily-briefing-writer",
+        "chief-of-staff-digest",
+        "social-media-manager",
+        "flavio-grok-bot-deep-dive"
+      ],
+      "relatedHtmlIds": [],
+      "relatedAgentUiIds": [],
+      "relatedPages": [
+        {
+          "href": "/",
+          "title": "广场 · 今日看点",
+          "titleEn": "Plaza · today’s digest"
+        },
+        {
+          "href": "changelog/",
+          "title": "更新日志",
+          "titleEn": "Changelog"
+        }
+      ],
+      "gates": [
+        {
+          "title": "日更不能直接发",
+          "titleEn": "The digest is not a post",
+          "body": "广场 digest 与 changelog 是原料，不是成稿。",
+          "bodyEn": "The plaza digest and changelog are inputs, not finished copy."
+        },
+        {
+          "title": "Reviewer 不到 8 分不交 Hao",
+          "titleEn": "Below 8 does not reach Hao",
+          "body": "退回 Writer。Hao 点头前不发布。",
+          "bodyEn": "Send it back to Writer. No publish before Hao nods."
+        }
+      ],
+      "difficulty": "starter",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "design-taste",
+      "slug": "design-taste",
+      "title": "设计味路径（HTML + tokens）",
+      "titleEn": "Taste path (HTML + tokens)",
+      "summary": "把 Refero Styles / Taste Skill（以及同类 HTML 条目）贴进 Agent，当作落地页或工作室导出的设计方向。口味判断留在人这边。",
+      "summaryEn": "Paste Refero Styles / Taste Skill (and similar HTML items) into an Agent as design direction for a landing page or studio export. Taste judgment stays human.",
+      "steps": [
+        {
+          "title": "选一份方向",
+          "titleEn": "Pick one direction",
+          "body": "Refero 的一份 DESIGN.md，或 Taste Skill 的一套风格包。一次只贴一套，不要混五份参考。",
+          "bodyEn": "One Refero DESIGN.md, or one Taste Skill pack. Paste one set. Do not mix five references."
+        },
+        {
+          "title": "抽出 tokens",
+          "titleEn": "Extract tokens",
+          "body": "颜色、字体、间距写进 brief。需要从真站抽系统时对照 DesignLang，仍只当方向，不当授权。",
+          "bodyEn": "Put color, type, and spacing in the brief. Use DesignLang if you need to pull a live site’s system — still direction, not a license."
+        },
+        {
+          "title": "交给 Agent",
+          "titleEn": "Hand it to the Agent",
+          "body": "写明这是设计方向，不要它发明新风格。可选用一个 Agent UI 组件（例如 Sketchbook）当骨架。",
+          "bodyEn": "Say this is direction, not a request to invent a new style. Optionally use one Agent UI piece (Sketchbook) as the skeleton."
+        },
+        {
+          "title": "出一页或一份导出",
+          "titleEn": "Ship one page or one export",
+          "body": "落地页 HTML，或工作室导出。先小范围，不要一次做整站换肤。",
+          "bodyEn": "A landing HTML page, or one studio export. Keep the first pass small — not a whole-site restyle."
+        },
+        {
+          "title": "人看味道",
+          "titleEn": "A human judges taste",
+          "body": "过不过是人的判断。Agent 不能自称「有品味」。参考站不是可商用授权。",
+          "bodyEn": "Pass/fail is a human call. The Agent does not get to claim taste. Reference sites are not a commercial license."
+        }
+      ],
+      "relatedCaseIds": [
+        "figma-bro"
+      ],
+      "relatedHtmlIds": [
+        "refero-styles",
+        "taste-skill",
+        "designlang"
+      ],
+      "relatedAgentUiIds": [
+        "sketchbook"
+      ],
+      "relatedPages": [],
+      "gates": [
+        {
+          "title": "口味判断必须人做",
+          "titleEn": "Taste stays human",
+          "body": "Agent 给方向稿，人决定过不过。参考页只作方向，不是授权。",
+          "bodyEn": "The Agent drafts in a direction; a human decides if it passes. Reference pages are direction, not a license."
+        }
+      ],
+      "difficulty": "intermediate",
+      "featured": true,
+      "publishedAt": "2026-09-02"
+    }
+  ]
+}
