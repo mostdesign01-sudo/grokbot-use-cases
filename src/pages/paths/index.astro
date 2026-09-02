@@ -1,0 +1,37 @@
+---
+import Loc from "../../components/Loc.astro";
+import PathCard from "../../components/PathCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ui } from "../../lib/i18n";
+import { playbooks } from "../../lib/playbooks";
+import { withBase } from "../../lib/paths";
+
+const listed = [...playbooks].sort((a, b) => Number(b.featured) - Number(a.featured) || a.publishedAt.localeCompare(b.publishedAt) || a.id.localeCompare(b.id));
+---
+
+<BaseLayout
+  collection="lab"
+  title={ui.path.indexTitle.zh}
+  titleEn={ui.path.indexTitle.en}
+  description={ui.path.indexDesc.zh}
+  descriptionEn={ui.path.indexDesc.en}
+>
+  <div class="wrap">
+    <section class="hub-intro">
+      <p class="kicker"><Loc zh={ui.path.kicker.zh} en={ui.path.kicker.en} /></p>
+      <h1><Loc zh={ui.path.indexH1.zh} en={ui.path.indexH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.path.indexLede.zh} en={ui.path.indexLede.en} /></p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("/")}><Loc zh={ui.footer.labHome.zh} en={ui.footer.labHome.en} /></a>
+        <a class="btn btn-ghost" href={withBase("cases/")}><Loc zh={ui.footer.grokOverview.zh} en={ui.footer.grokOverview.en} /></a>
+        <a class="btn btn-ghost" href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+      </div>
+    </section>
+
+    <section class="section" aria-label={ui.path.list.zh} data-aria-zh={ui.path.list.zh} data-aria-en={ui.path.list.en}>
+      <div class="path-grid">
+        {listed.map((path) => <PathCard path={path} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

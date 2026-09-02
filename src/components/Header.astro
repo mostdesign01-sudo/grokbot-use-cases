@@ -23,6 +23,7 @@ const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : isGrok ? "grok" : 
 
 const labLinks = [
   { href: withBase("/"), label: ui.nav.home },
+  { href: withBase("paths/"), label: ui.nav.paths, section: true },
   { href: withBase("search/"), label: ui.nav.search },
   { href: withBase("docs/"), label: ui.nav.docs },
   { href: withBase("changelog/"), label: ui.nav.changelog },

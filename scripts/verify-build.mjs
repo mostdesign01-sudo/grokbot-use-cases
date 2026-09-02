@@ -5,6 +5,7 @@ const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.m
 const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
 const agentUiDataset = JSON.parse(await readFile(new URL("../data/agent-ui.json", import.meta.url), "utf8"));
 const changelog = JSON.parse(await readFile(new URL("../data/changelog.json", import.meta.url), "utf8"));
+const pathsDataset = JSON.parse(await readFile(new URL("../data/paths.json", import.meta.url), "utf8"));
 
 const requiredPages = [
   "index.html",
@@ -27,6 +28,7 @@ const requiredPages = [
   "agent-ui/latest/index.html",
   "agent-ui/types/index.html",
   "404.html",
+  "paths/index.html",
 ];
 
 const missing = [];
@@ -115,6 +117,36 @@ if (agentUiDataset.items.length < 10) {
   process.exit(1);
 }
 
+if (pathsDataset.paths.length !== pathsDataset.meta.count) {
+  console.error(`paths.json meta.count ${pathsDataset.meta.count} does not match items ${pathsDataset.paths.length}`);
+  process.exit(1);
+}
+
+if (pathsDataset.paths.length !== 5) {
+  console.error(`Expected exactly 5 playbooks, found ${pathsDataset.paths.length}`);
+  process.exit(1);
+}
+
+const caseIds = new Set(dataset.cases.map((item) => item.id));
+const htmlIds = new Set(htmlDataset.items.map((item) => item.id));
+const agentUiIds = new Set(agentUiDataset.items.map((item) => item.id));
+
+for (const path of pathsDataset.paths) {
+  const page = `paths/${path.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${page}`, import.meta.url))) {
+    missing.push(page);
+  }
+  for (const id of path.relatedCaseIds ?? []) {
+    if (!caseIds.has(id)) missing.push(`paths.json relatedCaseId not found: ${path.id} → ${id}`);
+  }
+  for (const id of path.relatedHtmlIds ?? []) {
+    if (!htmlIds.has(id)) missing.push(`paths.json relatedHtmlId not found: ${path.id} → ${id}`);
+  }
+  for (const id of path.relatedAgentUiIds ?? []) {
+    if (!agentUiIds.has(id)) missing.push(`paths.json relatedAgentUiId not found: ${path.id} → ${id}`);
+  }
+}
+
 const previewItems = [
   ...dataset.cases.map((item) => ({ lib: "grok", ...item })),
   ...htmlDataset.items.map((item) => ({ lib: "html", ...item })),
@@ -147,11 +179,16 @@ if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.incl
   process.exit(1);
 }
 
+if (!home.includes("可跑路径") || !home.includes("plaza-paths-strip")) {
+  console.error("Homepage is missing the playbooks strip (可跑路径 / plaza-paths-strip).");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
 }
 
 console.log(
-  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, and core routes present.`,
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, and core routes present.`,
 );
