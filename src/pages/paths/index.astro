@@ -6,7 +6,7 @@ import { ui } from "../../lib/i18n";
 import { playbooks } from "../../lib/playbooks";
 import { withBase } from "../../lib/paths";
 
-const listed = [...playbooks].sort((a, b) => Number(b.featured) - Number(a.featured) || a.publishedAt.localeCompare(b.publishedAt) || a.id.localeCompare(b.id));
+const listed = playbooks;
 ---
 
 <BaseLayout
