@@ -2,6 +2,7 @@
 import Loc from "./Loc.astro";
 import type { DigestDay } from "../lib/digest";
 import { ui } from "../lib/i18n";
+import { withBase } from "../lib/paths";
 
 interface Props {
   day: DigestDay;
@@ -33,6 +34,24 @@ const { day } = Astro.props;
           </li>
         ))}
       </ul>
+    )
+  }
+  {
+    day.relatedPaths.length > 0 && (
+      <p class="plaza-digest-related">
+        <span class="plaza-digest-related-label">
+          <Loc zh={ui.home.relatedPath.zh} en={ui.home.relatedPath.en} />
+        </span>
+        {day.relatedPaths.map((path, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true"> · </span>}
+            <a href={withBase(`paths/${path.slug}/`)}>
+              <span class="loc-zh">{path.title}</span>
+              <span class="loc-en">{path.titleEn}</span>
+            </a>
+          </>
+        ))}
+      </p>
     )
   }
 </article>

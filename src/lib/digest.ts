@@ -4,6 +4,7 @@ import { shanghaiDateKey } from "./format";
 import { htmlItems, htmlMeta, htmlSearchText } from "./html";
 import { ui, type Copy } from "./i18n";
 import { assetUrl, withBase } from "./paths";
+import { relatedPlaybooksForNotes } from "./playbooks";
 
 export type DigestLib = "grok" | "html" | "agent-ui";
 
@@ -27,6 +28,12 @@ export interface PlazaItem {
   searchText: string;
 }
 
+export interface DigestRelatedPath {
+  slug: string;
+  title: string;
+  titleEn: string;
+}
+
 export interface DigestDay {
   dateKey: string;
   dateLabel: Copy;
@@ -34,6 +41,7 @@ export interface DigestDay {
   lead: Copy;
   bullets: DigestBullet[];
   items: PlazaItem[];
+  relatedPaths: DigestRelatedPath[];
 }
 
 export interface DigestArchiveEntry {
@@ -436,6 +444,13 @@ export function getDigestDay(dateKey?: string, all = catalog()): DigestDay | und
     lead: composeLead(notes, digestItems.length ? digestItems : added),
     bullets: composeBullets(notes, added),
     items: added.map(toPlazaItem),
+    relatedPaths: relatedPlaybooksForNotes(notes)
+      .slice(0, 2)
+      .map((path) => ({
+        slug: path.slug,
+        title: path.title,
+        titleEn: path.titleEn,
+      })),
   };
 }
 

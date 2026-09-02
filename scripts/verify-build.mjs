@@ -184,6 +184,11 @@ if (!home.includes("可跑路径") || !home.includes("plaza-paths-strip")) {
   process.exit(1);
 }
 
+if (!home.includes("本周可抄") || !home.includes("paths/daily-to-draft")) {
+  console.error("Homepage is missing this week’s steal (本周可抄 → /paths/daily-to-draft/).");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);

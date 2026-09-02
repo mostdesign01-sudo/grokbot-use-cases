@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-02",
+      "title": "站点：广场本周可抄接到路径",
+      "body": "广场 digest 顶栏改成本周可抄：默认推「日更 → 一条可发草稿」，链到 /paths/daily-to-draft/。今日看点里对得上的增收会带相关路径。不改海报，也不做第四面墙。",
+      "titleEn": "Site: plaza “this week’s steal” points at Paths",
+      "bodyEn": "The plaza digest strip now features this week’s steal: default daily digest → one draft, linking to /paths/daily-to-draft/. Matching digest notes get a related-path hint. No poster rewrite, no fourth card wall."
+    },
+    {
+      "date": "2026-09-02",
       "title": "站点：上线可跑路径 / Playbooks",
       "body": "新增 /paths/：五条可点开玩法（内容桌、营销桌草稿停笔、工程工头、日更出草稿、设计味）。广场和导航可进。不堆第四面墙卡。",
       "titleEn": "Site: runnable Paths / Playbooks",
