@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-03",
+      "title": "资讯：收录 Claude Fable 5.1",
+      "body": "收入 Anthropic Fable 5.1 / Mythos 5.1 官方公告为 AI 资讯（非 Grok Bot 用法）。主链公告，附官方 X 视频帖。官方数字未独立核实。",
+      "titleEn": "News: listed Claude Fable 5.1",
+      "bodyEn": "Catalogued Anthropic’s Fable 5.1 / Mythos 5.1 announcement as AI news (not a Grok Bot playbook). Primary link is the post; official X video attached. Official figures unverified here."
+    },
+    {
       "date": "2026-09-02",
       "title": "站点：首页说清核验精选定位",
       "body": "首页加短定位带：人核过的用法、路径、三库拣货。也看 grokbots.best（第三方安装目录，链到库内案例）。OG/meta 同步，不改海报和 logo。",

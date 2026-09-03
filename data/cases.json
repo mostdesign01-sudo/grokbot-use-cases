@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-02T01:10:00Z",
+    "updatedAt": "2026-09-03T00:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.7",
-    "count": 86,
+    "version": "1.4.8",
+    "count": 87,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -36,7 +36,9 @@
       "https://x.ai/bot/VHMdjIGjGpgDSJR7dW6Gz",
       "https://x.com/johnbai/status/2094456490115408172",
       "https://github.com/ZeroPointRepo/awesome-grok-bot",
-      "https://www.howdoiuseai.com/blog/2026-08-23-how-to-run-a-real-business-on-grok-bot-agent-teams"
+      "https://www.howdoiuseai.com/blog/2026-08-23-how-to-run-a-real-business-on-grok-bot-agent-teams",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "https://x.com/claudeai/status/2094848579558953258"
     ]
   },
   "cases": [
@@ -3076,6 +3078,39 @@
       "previewImage": "/previews/lingxi-engineering-org.webp",
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-02T05:35:00Z"
+    },
+    {
+      "id": "claude-fable-5-1",
+      "slug": "claude-fable-5-1",
+      "title": "资讯：Claude Fable 5.1 / Mythos 5.1",
+      "titleEn": "News: Claude Fable 5.1 / Mythos 5.1",
+      "summary": "官方 2026-09：Anthropic 发布 Claude Fable 5.1（通用）与 Mythos 5.1（受信访问）。同一底层模型、不同防护等级。定位编码、知识工作与长任务/Agent，并展示科研侧早期例子（蛋白结合、金星高程图、基因组模型加速）。官方称下调 cache read 价。本条是相邻 AI 资讯，不是 Grok Bot 用法。",
+      "summaryEn": "Official, Sept 2026: Anthropic launched Claude Fable 5.1 (generally available) and Mythos 5.1 (trusted access)—same underlying model, different safeguard levels. Pitch is coding, knowledge work, and long-running / agentic tasks, plus early research demos (protein binders, Venus DEM, genomics speedups). Anthropic says cache-read prices are cut. Adjacent AI news — not a Grok Bot playbook.",
+      "categories": [
+        "research",
+        "daily-digest"
+      ],
+      "role": "AI news",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "secondaryUrls": [
+        "https://x.com/claudeai/status/2094848579558953258"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 Anthropic 公告；X 视频是官方同帖。基准分、蛋白命中率、金星图精度、省钱比例均为官方自述，本库未独立核实。收录为广场可对照的 AI 资讯，不是可开跑的 Grok Bot 路径。",
+      "qualityNoteEn": "Primary source is Anthropic’s post; the X video is the same official clip. Benchmarks, binder hit rates, Venus map accuracy, and savings figures are Anthropic’s claims — unverified here. Catalogued as AI news for the plaza, not a runnable Grok Bot path.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "anthropic"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/claude-fable-5-1.webp",
+      "publishedAt": "2026-09-01",
+      "updatedAt": "2026-09-03T00:10:00Z"
     }
   ]
 }
