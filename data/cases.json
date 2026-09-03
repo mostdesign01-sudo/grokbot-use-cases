@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-03T00:10:00Z",
+    "updatedAt": "2026-09-03T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.8",
-    "count": 87,
+    "version": "1.4.9",
+    "count": 90,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -42,6 +42,113 @@
     ]
   },
   "cases": [
+    {
+      "id": "aibuilderclub-practical-guide",
+      "slug": "aibuilderclub-how-to-use-grok-bot-practical-guide",
+      "title": "AI Builder Club：Grok Bot 实操指南（带来源账本）",
+      "titleEn": "AI Builder Club: How to Use Grok Bot — Practical Guide",
+      "summary": "两周教程与长文的合成：首席幕僚模式、按桶统计的可点用来源账本、task→skill→routine、限额节流，并纠正「每 Bot 一台电脑」误读（文档是一人一机、多屏）。未自称实测，标成 documented usage。",
+      "summaryEn": "A synthesis of two weeks of tutorials and long posts: chief-of-staff pattern, a clickable source ledger by use-case bucket, task→skill→routine, usage-limit tactics, and a correction of the “one computer per Bot” myth (docs: one computer per user, shared screens). Labeled documented usage, not firsthand.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation",
+        "research"
+      ],
+      "role": "Practical synthesis",
+      "sourceUrl": "https://www.aibuilderclub.com/blog/grok-bot-guide",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/use-cases",
+        "https://x.ai/news/introducing-grok-bot"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "2026-08-25 初版，08-30 更新。带可核对 ledger；排除无收据的加密交易桌宣传。限额耗尽等用户报告未独立复现。",
+      "qualityNoteEn": "First published 2026-08-25, updated 08-30. Includes a checkable ledger; filters crypto-desk hype without receipts. Usage-limit anecdotes are attributed, not independently reproduced here.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "外发、采购、删除、改生产默认等人批；先草稿与日报。",
+      "approvalBoundaryEn": "Outbound, purchases, deletes, and production changes wait for approval; drafts and digests first.",
+      "connectors": [
+        "browser",
+        "gmail",
+        "slack"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-09-03T01:10:00Z"
+    },
+    {
+      "id": "gauraw-grok-bot-control-guide",
+      "slug": "gauraw-grok-bot-complete-guide-without-losing-control",
+      "title": "Kumar Gauraw：在不失控的前提下搭 Grok Bot 小队",
+      "titleEn": "Kumar Gauraw: Grok Bot complete guide without losing control",
+      "summary": "安全向完整指南：共享云电脑架构、最小席位、角色合同六问、约 30 分钟安全首跑、task→skill→routine 阶梯，并逐条拆穿「每 Bot 独立 VM / 屏幕即隔离」等神话。引用官方 docs，不抄创作者 ROI 数字。",
+      "summaryEn": "A security-first complete guide: shared cloud-computer architecture, smallest useful roster, six-question role contracts, a ~30-minute safe first run, and the task→skill→routine ladder. Debunks myths like “one VM per Bot” and “screens isolate credentials.” Cites official docs; skips unverified ROI claims.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Security / adoption",
+      "sourceUrl": "https://www.gauraw.com/grok-bot-complete-guide-ai-agent-team/",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/overview",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "署期约 2026-08-30 / 09-01。研究截止写明约 08-22；计划/价格会变，以账号页为准。非官方。",
+      "qualityNoteEn": "Dated ~2026-08-30 / 09-01. Research cutoff ~08-22; plans and pricing move — verify on your account screen. Unofficial.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "外发、发布、采购、删除、改权限、改生产一律审批；本地执行默认 Never。",
+      "approvalBoundaryEn": "Outbound, publish, purchase, delete, permission, and production changes require approval; local execution defaults to Never.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-30",
+      "updatedAt": "2026-09-03T01:10:00Z"
+    },
+    {
+      "id": "gawkbot-opensource",
+      "slug": "gawkbot-open-source-grok-bot",
+      "title": "gawkbot：开源、本机跑的 Grok Bot 替代",
+      "titleEn": "gawkbot: open-source, on-machine Grok Bot alternative",
+      "summary": "本机多 Bot（各自目录与工具白名单）、外发/提交/采购/删除逐次审批、可接 Claude Code / Codex / 本地模型，并给结果做 microapp 看板。对比表写明相对 xAI Grok Bot 的免费与本地差异。非 xAI 产品。",
+      "summaryEn": "Local multi-bots (per-bot directories and tool allowlists), per-action approval for send/commit/purchase/delete, Claude Code / Codex / local models, plus microapp dashboards for outcomes. Comparison table vs xAI Grok Bot (free, on-machine). Not an xAI product.",
+      "categories": [
+        "community",
+        "engineering",
+        "automation"
+      ],
+      "role": "Open-source adjacent",
+      "sourceUrl": "https://gawk.bot",
+      "secondaryUrls": [
+        "https://github.com/najmuzzaman-mohammad/gawkbot",
+        "https://news.ycombinator.com/item?id=49531991"
+      ],
+      "sourceType": "community",
+      "qualityNote": "Show HN item 49531991（分低）。GitHub ~1253★（检索日）。本机凭据风险自负；收录不等于安全审计。",
+      "qualityNoteEn": "Show HN item 49531991 (low points). GitHub ~1253★ on lookup day. Local credentials are your risk; listing is not a security audit.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "connectors": [],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-01",
+      "updatedAt": "2026-09-03T01:10:00Z"
+    },
     {
       "id": "howdoiuseai-agent-teams",
       "slug": "howdoiuseai-run-business-on-grok-bot-agent-teams",
