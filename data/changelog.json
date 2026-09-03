@@ -2,6 +2,14 @@
   "notes": [
     {
       "date": "2026-09-03",
+      "title": "日更：Grok Bot +3、HTML + Laser Graffiti",
+      "body": "Grok Bot 增收 AI Builder Club 实操指南、Gauraw 安全向完整指南、gawkbot 开源替代。HTML 增收 Laser Graffiti（HN 49489376）。Agent UI 无新增免费父组件。X @bot API 403，改走网页检索。",
+      "titleEn": "Daily: Grok Bot +3, HTML + Laser Graffiti",
+      "bodyEn": "Grok Bot: AI Builder Club practical guide, Gauraw control guide, gawkbot OSS alternative. HTML: Laser Graffiti (HN 49489376). Agent UI: no new free parent components. X @bot API 403; used web search instead.",
+      "relatedPath": null
+    },
+    {
+      "date": "2026-09-03",
       "title": "资讯：收录 Claude Fable 5.1",
       "body": "收入 Anthropic Fable 5.1 / Mythos 5.1 官方公告为 AI 资讯（非 Grok Bot 用法）。主链公告，附官方 X 视频帖。官方数字未独立核实。",
       "titleEn": "News: listed Claude Fable 5.1",
