@@ -3096,8 +3096,8 @@
         "https://x.com/claudeai/status/2094848579558953258"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是 Anthropic 公告；X 视频是官方同帖。基准分、蛋白命中率、金星图精度、省钱比例均为官方自述，本库未独立核实。收录为广场可对照的 AI 资讯，不是可开跑的 Grok Bot 路径。",
-      "qualityNoteEn": "Primary source is Anthropic’s post; the X video is the same official clip. Benchmarks, binder hit rates, Venus map accuracy, and savings figures are Anthropic’s claims — unverified here. Catalogued as AI news for the plaza, not a runnable Grok Bot path.",
+      "qualityNote": "主源是 Anthropic 公告；X 视频是官方同帖的发布预告片，不是实验室结果界面。基准分、蛋白命中率、金星图精度、省钱比例均为官方自述，本库未独立核实。收录为广场可对照的 AI 资讯，不是可开跑的 Grok Bot 路径。",
+      "qualityNoteEn": "Primary source is Anthropic’s post; the X video is the official launch trailer on the same post — not a lab-result UI. Benchmarks, binder hit rates, Venus map accuracy, and savings figures are Anthropic’s claims — unverified here. Catalogued as AI news for the plaza, not a runnable Grok Bot path.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
