@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-03T01:10:00Z",
+    "updatedAt": "2026-09-04T02:00:14Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.9",
-    "count": 90,
+    "version": "1.4.10",
+    "count": 92,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -38,7 +38,9 @@
       "https://github.com/ZeroPointRepo/awesome-grok-bot",
       "https://www.howdoiuseai.com/blog/2026-08-23-how-to-run-a-real-business-on-grok-bot-agent-teams",
       "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-      "https://x.com/claudeai/status/2094848579558953258"
+      "https://x.com/claudeai/status/2094848579558953258",
+      "https://x.ai/news/designing-grok-bot",
+      "https://www.mindstudio.ai/blog/grok-bot-tips-and-hacks"
     ]
   },
   "cases": [
@@ -3218,6 +3220,75 @@
       "previewImage": "/previews/claude-fable-5-1.webp",
       "publishedAt": "2026-09-01",
       "updatedAt": "2026-09-03T00:10:00Z"
+    },
+    {
+      "id": "designing-grok-bot",
+      "slug": "designing-grok-bot",
+      "title": "官方设计文：为持久 Agent 设计 Grok Bot",
+      "titleEn": "Designing Grok Bot for a world of persistent agents",
+      "summary": "xAI 官方设计长文（2026-09-03）：从聊天会话改成 Bot 名册、在场状态、Bot 自己的电脑，以及无需提示就能开工的 Routine。五件基本对象：Bot / Chat / Prompt·Skill·Routine / Tools / Artifacts。多 Agent 用幕僚长路由，记忆按角色边界。",
+      "summaryEn": "Official xAI design essay (2026-09-03): from chat sessions to a Bot roster, presence, each Bot’s own computer, and Routines that start work without a prompt. Five primitives: Bots, Chats, Prompts/Skills/Routines, Tools, Artifacts. Multi-agent coordination via a Chief of Staff; memory stays role-scoped.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Product design",
+      "sourceUrl": "https://x.ai/news/designing-grok-bot",
+      "secondaryUrls": [],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 x.ai/news 官方设计文（Sep 3, 2026）。讲界面原语与持久 Agent，不是可直接开跑的角色配方；和 Guides / use-cases 目录互补。",
+      "qualityNoteEn": "Primary source is the official x.ai/news design essay (Sep 3, 2026). Covers interface primitives for persistent agents — complementary to Guides / use-cases, not a runnable role recipe.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "文内谈委托与审批边界；对外发帖、付款、改生产仍要人审。",
+      "approvalBoundaryEn": "Essay discusses delegation and approval boundaries; still review before posting, paying, or changing production.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/designing-grok-bot.webp",
+      "publishedAt": "2026-09-03",
+      "updatedAt": "2026-09-04T02:00:14Z"
+    },
+    {
+      "id": "mindstudio-grok-bot-tips",
+      "slug": "mindstudio-grok-bot-tips-and-hacks",
+      "title": "MindStudio：Chief of Staff + grill-me 技能上手",
+      "titleEn": "MindStudio: Grok Bot tips — Chief of Staff + grill-me skill",
+      "summary": "MindStudio 教程：用幕僚长路由专精子 Agent、grill-me 技能深挖业务上下文、共享知识 vs 单 Bot 记忆、Composio 扩集成、Routine 云端定时，以及用电脑视图演示学技能。",
+      "summaryEn": "MindStudio tutorial: chief-of-staff routing to specialist sub-agents, a grill-me skill that interviews you for context, shared vs per-bot memory, Composio for extra integrations, cloud Routines, and teach-by-demo on the agent computer.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Ops / CoS tips",
+      "sourceUrl": "https://www.mindstudio.ai/blog/grok-bot-tips-and-hacks",
+      "secondaryUrls": [],
+      "sourceType": "tutorial",
+      "qualityNote": "2026-08-19 MindStudio 长文。非官方，但模式与官方 Skills/Routines 文档一致；grill-me 是可复用的访谈式 skill。",
+      "qualityNoteEn": "MindStudio long post dated 2026-08-19. Unofficial, but the patterns match official Skills/Routines docs; grill-me is a reusable interview-style skill.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "先草稿与日报；对外发帖、付款、改生产需人审。",
+      "approvalBoundaryEn": "Drafts and digests first; review before posting, paying, or changing production.",
+      "connectors": [
+        "browser",
+        "composio"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/mindstudio-grok-bot-tips.webp",
+      "publishedAt": "2026-08-19",
+      "updatedAt": "2026-09-04T02:00:14Z"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-02T01:10:00Z",
+    "updatedAt": "2026-09-04T02:00:14Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.3",
-    "count": 30
+    "version": "1.4.4",
+    "count": 32
   },
   "items": [
     {
@@ -976,6 +976,70 @@
       "promptHint": "用 Liquid Form 做首屏背景。保持免费 Community 变体，金属色换成我们的主色，流动放慢。",
       "promptHintEn": "Use Liquid Form as the first-screen background. Keep the free Community variant, switch the metal to our primary color, and slow the flow.",
       "previewImage": "/previews/liquid-form.webp"
+    },
+    {
+      "id": "crt",
+      "slug": "crt",
+      "title": "CRT",
+      "titleEn": "CRT",
+      "summary": "ThreeUI Community 的 CRT 曲面玻璃背景：Terminal / Cinematic / Blue Screen / Nintendo 四变体，适合复古 Agent 首屏。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community curved-glass CRT background: Terminal / Cinematic / Blue Screen / Nintendo variants. Fits a retro Agent hero. No login; copy the prompt.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/backgrounds/crt",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-04",
+      "updatedAt": "2026-09-04T02:00:14Z",
+      "qualityNote": "Community 免费背景场。复制 prompt 只改色相与速度，保持免费变体。",
+      "qualityNoteEn": "A free Community background. Copy the prompt and only change hue and speed — keep the free variant.",
+      "tags": [
+        "threeui",
+        "community",
+        "background",
+        "webgl"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 CRT 做首屏背景。保持免费 Community 变体，色相换成我们的主色，速度放慢。",
+      "promptHintEn": "Use CRT as the first-screen background. Keep the free Community variant, switch hue to our primary, and slow the speed.",
+      "previewImage": "/previews/crt.webp"
+    },
+    {
+      "id": "skeuomorphic-toggle",
+      "slug": "skeuomorphic-toggle",
+      "title": "Skeuomorphic Toggle",
+      "titleEn": "Skeuomorphic Toggle",
+      "summary": "ThreeUI Community 的拟物开关：Skeuomorphic / Modern / Glass / Shader 四变体，自动适配亮暗。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community skeuomorphic toggle: Skeuomorphic / Modern / Glass / Shader variants, auto light/dark. No login; copy the prompt.",
+      "types": [
+        "ui",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/ui-elements/skeuomorphic-toggle",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-04",
+      "updatedAt": "2026-09-04T02:00:14Z",
+      "qualityNote": "Community 免费界面件。复制 prompt 只改尺寸和色相，保持免费变体。",
+      "qualityNoteEn": "A free Community UI piece. Copy the prompt and only change size and hue — keep the free variant.",
+      "tags": [
+        "threeui",
+        "community",
+        "ui",
+        "skeuomorphic"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Skeuomorphic Toggle 做设置页开关。保持免费 Community 变体，色相换成我们的主色。",
+      "promptHintEn": "Use Skeuomorphic Toggle for settings switches. Keep the free Community variant; switch hue to our primary.",
+      "previewImage": "/previews/skeuomorphic-toggle.webp"
     }
   ]
 }

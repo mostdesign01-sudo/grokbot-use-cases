@@ -1,6 +1,14 @@
 {
   "notes": [
     {
+      "date": "2026-09-04",
+      "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
+      "body": "Grok Bot 增收官方设计文 Designing Grok Bot、MindStudio Chief of Staff + grill-me 教程。HTML 增收 Sirenfall（HN 49556678）、Yan Texture Studio（HN 49550531）。Agent UI 增收 ThreeUI Community：CRT、Skeuomorphic Toggle。",
+      "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
+      "bodyEn": "Grok Bot: official Designing Grok Bot essay + MindStudio Chief of Staff / grill-me tips. HTML: Sirenfall (HN 49556678), Yan Texture Studio (HN 49550531). Agent UI: ThreeUI Community CRT + Skeuomorphic Toggle.",
+      "relatedPath": "/paths/daily-to-draft/"
+    },
+    {
       "date": "2026-09-03",
       "title": "日更：Grok Bot +3、HTML + Laser Graffiti",
       "body": "Grok Bot 增收 AI Builder Club 实操指南、Gauraw 安全向完整指南、gawkbot 开源替代。HTML 增收 Laser Graffiti（HN 49489376）。Agent UI 无新增免费父组件。X @bot API 403，改走网页检索。",
