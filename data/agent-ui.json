@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-04T02:00:14Z",
+    "updatedAt": "2026-09-07T01:23:22Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.4",
-    "count": 32
+    "version": "1.4.5",
+    "count": 34
   },
   "items": [
     {
@@ -1040,6 +1040,70 @@
       "promptHint": "用 Skeuomorphic Toggle 做设置页开关。保持免费 Community 变体，色相换成我们的主色。",
       "promptHintEn": "Use Skeuomorphic Toggle for settings switches. Keep the free Community variant; switch hue to our primary.",
       "previewImage": "/previews/skeuomorphic-toggle.webp"
+    },
+    {
+      "id": "portal-field",
+      "slug": "portal-field",
+      "title": "Portal Field",
+      "titleEn": "Portal Field",
+      "summary": "ThreeUI Community 背景场：Portal / Cloud / Flow / Bell / Stream Convergence 等免费变体，免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community background field: free Portal / Cloud / Flow / Bell / Stream Convergence variants. No login; copy the prompt.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "sourceUrl": "https://threeui.com/backgrounds/portal-field/portal-field",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-07",
+      "updatedAt": "2026-09-07T01:23:22Z",
+      "qualityNote": "Community 同步报告含 portal-field 父组件。只收免费变体，避开标 PRO 的衍生页。",
+      "qualityNoteEn": "Community sync report includes the portal-field parent. Catalogue free variants only; skip PRO-marked derivatives.",
+      "tags": [
+        "threeui",
+        "community",
+        "background",
+        "field"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Portal Field 做落地页背景。保持免费 Community 变体，只调速度和色相。",
+      "promptHintEn": "Use Portal Field as a landing background. Keep the free Community variant; only tweak speed and hue.",
+      "previewImage": "/previews/portal-field.webp"
+    },
+    {
+      "id": "canvas-ui",
+      "slug": "canvas-ui",
+      "title": "Canvas UI",
+      "titleEn": "Canvas UI",
+      "summary": "开源「HTML-in-canvas」着色器组件库：Liquid/Glass 等效果叠在可交互 DOM 上，shadcn 式复制进仓库，并带 MCP 安装路径。",
+      "summaryEn": "Open-source html-in-canvas shader components: Liquid/Glass and more over live interactive DOM, shadcn-style copy-into-repo, with an MCP install path.",
+      "types": [
+        "ui",
+        "shader",
+        "library"
+      ],
+      "sourceUrl": "https://canvasui.dev/",
+      "secondaryUrls": [
+        "https://github.com/DavidHDev/canvas-ui"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-07",
+      "updatedAt": "2026-09-07T01:23:22Z",
+      "qualityNote": "面向 Agent 的可复制组件目录（非 ThreeUI）。免费开源；安装用官方 npx/registry，不收付费墙条目。",
+      "qualityNoteEn": "Agent-oriented copyable component catalog (not ThreeUI). Free/open source; use the official npx/registry — no paywalled items.",
+      "tags": [
+        "canvas",
+        "shader",
+        "shadcn-registry",
+        "mcp"
+      ],
+      "npmPackage": "@canvas-ui/core",
+      "promptHint": "从 Canvas UI 复制 Liquid 组件进项目，保持 DOM 可选中可点击，并做无 html-in-canvas 时的降级。",
+      "promptHintEn": "Copy Canvas UI's Liquid into the project; keep DOM selectable/clickable and keep the non-html-in-canvas fallback.",
+      "previewImage": "/previews/canvas-ui.webp"
     }
   ]
 }

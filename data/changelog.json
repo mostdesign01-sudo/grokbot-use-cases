@@ -1,6 +1,14 @@
 {
   "notes": [
     {
+      "date": "2026-09-07",
+      "title": "日更：Grok Bot +2、HTML +1、Agent UI +2",
+      "body": "Grok Bot 增收 Granda BotOps 舰队运营（HN 49583570）与 Greenlit 幕僚长五合同方法。HTML 增收 Cocoon（MIT Tailwind 4 单页模板）。Agent UI 增收 ThreeUI Community Portal Field，以及开源 Canvas UI（html-in-canvas / MCP）。",
+      "titleEn": "Daily: Grok Bot +2, HTML +1, Agent UI +2",
+      "bodyEn": "Grok Bot: Granda BotOps fleet ops (HN 49583570) + Greenlit chief-of-staff five-contract method. HTML: Cocoon (MIT Tailwind 4 one-pager). Agent UI: ThreeUI Community Portal Field + open-source Canvas UI (html-in-canvas / MCP).",
+      "relatedPath": "/paths/daily-to-draft/"
+    },
+    {
       "date": "2026-09-04",
       "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
       "body": "Grok Bot 增收官方设计文 Designing Grok Bot、MindStudio Chief of Staff + grill-me 教程。HTML 增收 Sirenfall（HN 49556678）、Yan Texture Studio（HN 49550531）。Agent UI 增收 ThreeUI Community：CRT、Skeuomorphic Toggle。",
