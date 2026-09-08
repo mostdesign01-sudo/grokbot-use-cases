@@ -4,7 +4,9 @@ import { agentUiTypeLabel } from "../lib/agent-ui-labels";
 import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
+import FavButton from "./FavButton.astro";
 import PinVisual from "./PinVisual.astro";
+import Stars from "./Stars.astro";
 
 interface Props {
   item: AgentUiItem;
@@ -15,27 +17,31 @@ const { item, showLibBadge = false } = Astro.props;
 const titleEn = item.titleEn ?? item.title;
 ---
 
-<a class="pin-card agent-ui-card pin-agent-ui" href={withBase(`agent-ui/${item.slug}/`)}>
-  <PinVisual lib="agent-ui" title={item.title} titleEn={titleEn} seed={item.slug} image={item.previewImage} />
-  <div class="pin-body">
-    <div class="badges">
-      {showLibBadge && <Badge kind="cursor" label="Agent UI" />}
-      {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
-      <Badge kind="community" label="ThreeUI" />
-      {item.types.slice(0, 1).map((type) => (
-        <Badge label={agentUiTypeLabel(type)} labelEn={agentUiTypeLabel(type, "en")} />
-      ))}
+<div class="card-shell card-shell-pin">
+  <a class="pin-card agent-ui-card pin-agent-ui" href={withBase(`agent-ui/${item.slug}/`)}>
+    <PinVisual lib="agent-ui" title={item.title} titleEn={titleEn} seed={item.slug} image={item.previewImage} />
+    <div class="pin-body">
+      <div class="badges">
+        {showLibBadge && <Badge kind="cursor" label="Agent UI" />}
+        {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+        <Stars value={item.stars} />
+        <Badge kind="community" label="ThreeUI" />
+        {item.types.slice(0, 1).map((type) => (
+          <Badge label={agentUiTypeLabel(type)} labelEn={agentUiTypeLabel(type, "en")} />
+        ))}
+      </div>
+      <h3>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{titleEn}</span>
+      </h3>
+      <p class="pin-reveal summary">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{item.summaryEn ?? item.summary}</span>
+      </p>
+      <div class="card-meta">
+        <span>{item.tags.slice(0, 2).join(" · ")}</span>
+      </div>
     </div>
-    <h3>
-      <span class="loc-zh">{item.title}</span>
-      <span class="loc-en">{titleEn}</span>
-    </h3>
-    <p class="pin-reveal summary">
-      <span class="loc-zh">{item.summary}</span>
-      <span class="loc-en">{item.summaryEn ?? item.summary}</span>
-    </p>
-    <div class="card-meta">
-      <span>{item.tags.slice(0, 2).join(" · ")}</span>
-    </div>
-  </div>
-</a>
+  </a>
+  <FavButton lib="agent-ui" id={item.id} />
+</div>

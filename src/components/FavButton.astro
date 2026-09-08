@@ -1,0 +1,48 @@
+---
+import { ui } from "../lib/i18n";
+import { favKey, type FavLib } from "../lib/stars";
+import Loc from "./Loc.astro";
+
+/**
+ * Visitor favorite toggle. Static markup only; state is painted by the
+ * favorites script in BaseLayout from localStorage (`aria-pressed`).
+ * Rendered as a sibling of the card link (never nested inside an <a>).
+ */
+interface Props {
+  lib: FavLib;
+  id: string;
+  variant?: "icon" | "button";
+}
+
+const { lib, id, variant = "icon" } = Astro.props;
+const key = favKey(lib, id);
+---
+
+{
+  variant === "button" ? (
+    <button type="button" class="fav fav-btn btn btn-ghost" data-fav data-fav-key={key} aria-pressed="false">
+      <span class="fav-glyph" aria-hidden="true">
+        <span class="fav-glyph-off">☆</span>
+        <span class="fav-glyph-on">★</span>
+      </span>
+      <span class="fav-label fav-label-off"><Loc zh={ui.fav.save.zh} en={ui.fav.save.en} /></span>
+      <span class="fav-label fav-label-on"><Loc zh={ui.fav.saved.zh} en={ui.fav.saved.en} /></span>
+    </button>
+  ) : (
+    <button
+      type="button"
+      class="fav fav-icon"
+      data-fav
+      data-fav-key={key}
+      aria-pressed="false"
+      aria-label={ui.fav.toggle.zh}
+      data-aria-zh={ui.fav.toggle.zh}
+      data-aria-en={ui.fav.toggle.en}
+    >
+      <span class="fav-glyph" aria-hidden="true">
+        <span class="fav-glyph-off">☆</span>
+        <span class="fav-glyph-on">★</span>
+      </span>
+    </button>
+  )
+}

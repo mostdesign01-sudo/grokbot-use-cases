@@ -95,6 +95,10 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
       <a href={withBase("combos/")}><Loc zh={ui.nav.combos.zh} en={ui.nav.combos.en} /></a>
       <a href={withBase("models/")}><Loc zh={ui.nav.models.zh} en={ui.nav.models.en} /></a>
       <a href={withBase("search/")}><Loc zh={ui.nav.search.zh} en={ui.nav.search.en} /></a>
+      <a href={withBase("favorites/")}>
+        <Loc zh={ui.home.favorites.zh} en={ui.home.favorites.en} />
+        <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>
+      </a>
       <a href={withBase("docs/")}><Loc zh={ui.nav.docs.zh} en={ui.nav.docs.en} /></a>
       <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
     </nav>

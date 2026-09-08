@@ -6,6 +6,7 @@ import type { TimelineEntry } from "../lib/timeline";
 import Badge from "./Badge.astro";
 import CaseCard from "./CaseCard.astro";
 import QualityNote from "./QualityNote.astro";
+import Stars from "./Stars.astro";
 
 interface Props {
   cases?: CaseItem[];
@@ -68,6 +69,7 @@ const groups = cases ? [] : groupByShanghaiDay(items, (item) => item.updatedAt);
                       <Badge kind={badge.kind} label={badge.label} labelEn={badge.labelEn ?? badge.label} />
                     ))}
                     {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+                    <Stars value={item.stars} />
                   </div>
                   <h4>
                     <span class="loc-zh">{item.title}</span>

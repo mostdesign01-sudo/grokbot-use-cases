@@ -1,5 +1,7 @@
 ---
+import FavButton from "./FavButton.astro";
 import Loc from "./Loc.astro";
+import Stars from "./Stars.astro";
 import type { PlazaItem } from "../lib/digest";
 import { ui } from "../lib/i18n";
 
@@ -9,37 +11,42 @@ interface Props {
 
 const { item } = Astro.props;
 const lib = item.lib === "agent-ui" ? ui.lib.agentUi : ui.lib[item.lib];
+const itemId = item.id.slice(item.lib.length + 1);
 ---
 
-<a
-  class:list={["plaza-card", `plaza-card-${item.lib}`]}
-  href={item.href}
+<div
+  class="card-shell card-shell-plaza"
   data-plaza-card
   data-lib={item.lib}
   data-filter-text={item.searchText}
 >
-  {
-    item.thumb && (
-      <div class="plaza-thumb">
-        <img src={item.thumb} alt="" loading="lazy" decoding="async" />
-      </div>
-    )
-  }
-  <div class="plaza-card-body">
-    <p class="plaza-kicker">
-      <Loc zh={lib.zh} en={lib.en} />
-      {item.sourceHost && <span aria-hidden="true"> · </span>}
-      {item.sourceHost && <span class="plaza-host">{item.sourceHost}</span>}
-    </p>
-    <h3>
-      <Loc zh={item.title} en={item.titleEn} />
-    </h3>
+  <a class:list={["plaza-card", `plaza-card-${item.lib}`]} href={item.href}>
     {
-      (item.line || item.lineEn) && (
-        <p class="plaza-line">
-          <Loc zh={item.line} en={item.lineEn || item.line} />
-        </p>
+      item.thumb && (
+        <div class="plaza-thumb">
+          <img src={item.thumb} alt="" loading="lazy" decoding="async" />
+        </div>
       )
     }
-  </div>
-</a>
+    <div class="plaza-card-body">
+      <p class="plaza-kicker">
+        <Loc zh={lib.zh} en={lib.en} />
+        {item.sourceHost && <span aria-hidden="true"> · </span>}
+        {item.sourceHost && <span class="plaza-host">{item.sourceHost}</span>}
+        {item.stars && <span aria-hidden="true"> · </span>}
+        <Stars value={item.stars} />
+      </p>
+      <h3>
+        <Loc zh={item.title} en={item.titleEn} />
+      </h3>
+      {
+        (item.line || item.lineEn) && (
+          <p class="plaza-line">
+            <Loc zh={item.line} en={item.lineEn || item.line} />
+          </p>
+        )
+      }
+    </div>
+  </a>
+  <FavButton lib={item.lib} id={itemId} />
+</div>

@@ -1,7 +1,9 @@
 ---
 import AgentUiCard from "../../components/AgentUiCard.astro";
 import Badge from "../../components/Badge.astro";
+import FavButton from "../../components/FavButton.astro";
 import Loc from "../../components/Loc.astro";
+import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { agentUiItems, RESERVED_AGENT_UI_SLUGS } from "../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../lib/agent-ui-labels";
@@ -49,6 +51,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
         {item.featured && <Badge kind="official" label={ui.badge.featuredPlain.zh} labelEn={ui.badge.featuredPlain.en} />}
         <Badge kind="community" label="ThreeUI Community" />
         {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} labelEn={agentUiTypeLabel(type, "en")} />)}
+        <Stars value={item.stars} />
       </div>
       <h1>
         <span class="loc-zh">{item.title}</span>
@@ -62,6 +65,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
         <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
           <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
         </a>
+        <FavButton lib="agent-ui" id={item.id} variant="button" />
         <a class="btn btn-ghost" href={withBase("agent-ui/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </article>
@@ -140,6 +144,17 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
               <dt><Loc zh={ui.meta.tags.zh} en={ui.meta.tags.en} /></dt>
               <dd>{item.tags.join(" · ")}</dd>
             </div>
+            {
+              item.stars && (
+                <div>
+                  <dt><Loc zh={ui.stars.label.zh} en={ui.stars.label.en} /></dt>
+                  <dd class="kv-stars">
+                    <Stars value={item.stars} />
+                    <span class="kv-hint"><Loc zh={ui.stars.hint.zh} en={ui.stars.hint.en} /></span>
+                  </dd>
+                </div>
+              )
+            }
             {
               item.npmPackage && (
                 <div>
