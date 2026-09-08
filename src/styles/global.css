@@ -91,6 +91,11 @@ html[data-collection="lab"] {
   box-sizing: border-box;
 }
 
+/* Author `display` rules (e.g. `.masonry > *`, `.tweet-feed`) would otherwise beat the UA `[hidden]` rule. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
@@ -960,31 +965,9 @@ a.card:hover::before {
   vertical-align: 1px;
 }
 
-.fav-count[hidden] {
-  display: none;
-}
-
-.fav-page-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.fav-page-bar .count-row {
-  margin: 0;
-}
-
 .fav-groups {
   display: grid;
   gap: 28px;
-}
-
-.fav-group[hidden],
-[data-fav-item][hidden] {
-  display: none;
 }
 
 .fav-group h2 {
@@ -2851,7 +2834,7 @@ a.plaza-card:hover {
 
 .plaza-card[hidden],
 [data-plaza-card][hidden] {
-  display: none !important;
+  display: none;
 }
 
 .plaza-thumb {
