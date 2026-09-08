@@ -35,6 +35,7 @@
 | `secondaryUrls` | string[] | 可选，GitHub / browse |
 | `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base` 加上 `/grokbot-use-cases` 前缀。缺省或加载失败时卡片回退 CSS 海报。 |
 | `featured` | boolean | 是否出现在精选 |
+| `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。编辑质量判断，不是 GitHub star 数；不填则不显示 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |
 | `qualityNote` | string | 为何收录；页面展示为「收录理由」 |

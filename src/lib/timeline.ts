@@ -6,6 +6,7 @@ import { htmlTypeLabel } from "./html-labels";
 import { ui } from "./i18n";
 import { difficultyLabel, sourceBadgeKind, sourceBadgeLabel } from "./labels";
 import { assetUrl, withBase } from "./paths";
+import { starsOf } from "./stars";
 
 export interface TimelineBadge {
   kind?: string;
@@ -23,6 +24,7 @@ export interface TimelineEntry {
   qualityNoteEn?: string;
   updatedAt: string;
   featured?: boolean;
+  stars?: number;
   image?: string;
   badges: TimelineBadge[];
 }
@@ -60,6 +62,7 @@ export function caseToTimeline(item: CaseItem): TimelineEntry {
     qualityNoteEn: item.qualityNoteEn,
     updatedAt: item.updatedAt,
     featured: item.featured,
+    stars: starsOf(item),
     image: assetUrl(item.previewImage),
     badges,
   };
@@ -76,6 +79,7 @@ export function htmlToTimeline(item: HtmlItem): TimelineEntry {
     qualityNoteEn: item.qualityNoteEn,
     updatedAt: item.updatedAt,
     featured: item.featured,
+    stars: starsOf(item),
     image: assetUrl(item.previewImage),
     badges: item.types.map((type) => ({
       label: htmlTypeLabel(type),
@@ -95,6 +99,7 @@ export function agentUiToTimeline(item: AgentUiItem): TimelineEntry {
     qualityNoteEn: item.qualityNoteEn,
     updatedAt: item.updatedAt,
     featured: item.featured,
+    stars: starsOf(item),
     image: assetUrl(item.previewImage),
     badges: [
       { kind: "community", label: "ThreeUI" },

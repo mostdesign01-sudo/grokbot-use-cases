@@ -35,6 +35,8 @@ export interface CaseItem {
   connectors: string[];
   language: string;
   featured: boolean;
+  /** Curator quality stars 1–5 (editorial; unrelated to GitHub stars). Unset = no rating shown. */
+  stars?: number;
   previewImage?: string;
   publishedAt: string;
   updatedAt: string;

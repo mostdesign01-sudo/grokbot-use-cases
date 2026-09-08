@@ -5,6 +5,7 @@ import { htmlItems, htmlMeta, htmlSearchText } from "./html";
 import { ui, type Copy } from "./i18n";
 import { assetUrl, withBase } from "./paths";
 import { relatedPlaybooksForNotes } from "./playbooks";
+import { starsOf } from "./stars";
 
 export type DigestLib = "grok" | "html" | "agent-ui";
 
@@ -14,9 +15,11 @@ export interface DigestBullet {
 }
 
 export interface PlazaItem {
+  /** `${lib}:${id}` — doubles as the favorites key. */
   id: string;
   lib: DigestLib;
   href: string;
+  stars?: number;
   title: string;
   titleEn: string;
   sourceHost: string;
@@ -73,6 +76,7 @@ interface CatalogItem {
   publishedAt: string;
   updatedAt: string;
   searchText: string;
+  stars?: number;
 }
 
 function catalog(): CatalogItem[] {
@@ -91,6 +95,7 @@ function catalog(): CatalogItem[] {
     publishedAt: item.publishedAt,
     updatedAt: item.updatedAt,
     searchText: caseSearchText(item),
+    stars: starsOf(item),
   }));
   const html = htmlItems.map((item) => ({
     lib: "html" as const,
@@ -107,6 +112,7 @@ function catalog(): CatalogItem[] {
     publishedAt: item.publishedAt,
     updatedAt: item.updatedAt,
     searchText: htmlSearchText(item),
+    stars: starsOf(item),
   }));
   const agent = agentUiItems.map((item) => ({
     lib: "agent-ui" as const,
@@ -123,6 +129,7 @@ function catalog(): CatalogItem[] {
     publishedAt: item.publishedAt,
     updatedAt: item.updatedAt,
     searchText: agentUiSearchText(item),
+    stars: starsOf(item),
   }));
   return [...grok, ...html, ...agent];
 }
@@ -393,6 +400,7 @@ function toPlazaItem(item: CatalogItem): PlazaItem {
     id: `${item.lib}:${item.id}`,
     lib: item.lib,
     href: itemHref(item),
+    stars: item.stars,
     title: item.title,
     titleEn: item.titleEn,
     sourceHost: host,

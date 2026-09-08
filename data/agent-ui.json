@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T01:27:40Z",
+    "updatedAt": "2026-09-08T16:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "count": 36
   },
   "items": [
@@ -23,6 +23,7 @@
         "https://threeui.com/browse"
       ],
       "featured": true,
+      "stars": 4,
       "publishedAt": "2026-09-02",
       "updatedAt": "2026-09-02T01:10:00Z",
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt 只改 speed / opacity / hue，不要手写粒子。",
@@ -56,6 +57,7 @@
         "https://www.npmjs.com/package/@three-ws/sdk"
       ],
       "featured": true,
+      "stars": 4,
       "publishedAt": "2026-04-29",
       "updatedAt": "2026-08-31T01:28:18Z",
       "qualityNote": "免费开源可公开访问；给 Agent 用的可复制嵌入层，不是 Pro 付费墙。",
@@ -86,6 +88,7 @@
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
       "featured": true,
+      "stars": 5,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "五站里最通用的底座。和 beUI 的 shadcn add 流程能接上。",
