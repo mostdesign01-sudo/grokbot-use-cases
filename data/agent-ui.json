@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-07T01:23:22Z",
+    "updatedAt": "2026-09-08T01:27:40Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.5",
-    "count": 34
+    "version": "1.4.6",
+    "count": 36
   },
   "items": [
     {
@@ -1104,6 +1104,70 @@
       "promptHint": "从 Canvas UI 复制 Liquid 组件进项目，保持 DOM 可选中可点击，并做无 html-in-canvas 时的降级。",
       "promptHintEn": "Copy Canvas UI's Liquid into the project; keep DOM selectable/clickable and keep the non-html-in-canvas fallback.",
       "previewImage": "/previews/canvas-ui.webp"
+    },
+    {
+      "id": "temple-night",
+      "slug": "temple-night",
+      "title": "Temple Night",
+      "titleEn": "Temple Night",
+      "summary": "ThreeUI Community 的京都夜寺场景：默认 Temple Night 免费，雨雾叶与指针光点；其余日落变体标 PRO 不收。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community Kyoto night-temple scene: free default Temple Night with rain, mist, leaves, and pointer wisps. Sunset variants marked PRO are skipped. No login; copy the prompt.",
+      "types": [
+        "threejs",
+        "hero"
+      ],
+      "sourceUrl": "https://threeui.com/three-js/temple-night/temple-night",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "qualityNote": "只收免费默认变体 Temple Night；Yosemite/Presidio/Lake Louise 为 PRO。",
+      "qualityNoteEn": "Catalogue only the free default Temple Night; Yosemite / Presidio / Lake Louise are PRO.",
+      "tags": [
+        "threeui",
+        "community",
+        "temple",
+        "bloom"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Temple Night 做暗色落地首屏。保持免费 Community 变体，不要切到 PRO 日落。",
+      "promptHintEn": "Use Temple Night for a dark landing hero. Keep the free Community variant; do not switch to PRO sunsets.",
+      "previewImage": "/previews/temple-night.webp"
+    },
+    {
+      "id": "animated-top-dock",
+      "slug": "animated-top-dock",
+      "title": "Animated Top Dock",
+      "titleEn": "Animated Top Dock",
+      "summary": "ThreeUI Community 顶部停靠栏：Sable / Command Bar / Pixel Terminal / Liquid Glass 四免费变体，适合 Agent 控制台顶栏。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community top dock: free Sable / Command Bar / Pixel Terminal / Liquid Glass variants. Fits an agent console header. No login; copy the prompt.",
+      "types": [
+        "ui",
+        "section"
+      ],
+      "sourceUrl": "https://threeui.com/css/animated-top-dock/sable",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "featured": false,
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "qualityNote": "Community CSS UI 父组件，四变体均免费。",
+      "qualityNoteEn": "Community CSS UI parent; all four variants are free.",
+      "tags": [
+        "threeui",
+        "community",
+        "dock",
+        "css"
+      ],
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Animated Top Dock 做控制台顶栏。选 Sable 或 Liquid Glass，保持免费变体。",
+      "promptHintEn": "Use Animated Top Dock as a console top bar. Pick Sable or Liquid Glass; keep the free variants.",
+      "previewImage": "/previews/animated-top-dock.webp"
     }
   ]
 }

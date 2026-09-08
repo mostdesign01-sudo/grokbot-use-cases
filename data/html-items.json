@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-07T01:23:22Z",
+    "updatedAt": "2026-09-08T01:27:40Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.12",
-    "count": 39
+    "version": "1.3.13",
+    "count": 41
   },
   "items": [
     {
@@ -1086,6 +1086,65 @@
         "template",
         "landing",
         "mit"
+      ]
+    },
+    {
+      "id": "html-presentation-editor",
+      "slug": "html-presentation-editor",
+      "title": "HTML Presentation Editor：单文件自编辑演示稿",
+      "titleEn": "HTML Presentation Editor: self-editing single-file slides",
+      "summary": "MIT 单文件（~42KB）演示稿编辑器：浏览器内 contenteditable，Cmd+S 写回同文件；文档/幻灯双模式、主题与强调色、图片嵌 base64，无构建无服务器。",
+      "summaryEn": "MIT single-file (~42KB) presentation editor: in-browser contenteditable, Cmd+S writes the same file; document/slides modes, themes + accents, base64 images — no build, no server.",
+      "types": [
+        "tool",
+        "demo",
+        "template"
+      ],
+      "sourceUrl": "https://itchernetski.github.io/html-presentation-editor/editor.html",
+      "secondaryUrls": [
+        "https://github.com/itchernetski/html-presentation-editor"
+      ],
+      "previewImage": "/previews/html-presentation-editor.webp",
+      "featured": true,
+      "publishedAt": "2026-05-11",
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "qualityNote": "免费 MIT，演示页即成品。适合 Agent 整文件改写场景。",
+      "qualityNoteEn": "Free MIT; the live page is the product. Fits agent whole-file rewrite workflows.",
+      "tags": [
+        "single-file",
+        "slides",
+        "editor",
+        "mit",
+        "vanilla-js"
+      ]
+    },
+    {
+      "id": "ptree",
+      "slug": "ptree-interactive-tree-of-life",
+      "title": "Ptree：可交互生命树",
+      "titleEn": "Ptree: interactive tree of life",
+      "summary": "浏览器里的系统发育生命树：按性状滑块过滤类群，比较祖先与照片/分布。Show HN 公开演示。",
+      "summaryEn": "An interactive phylogeny tree of life in the browser: trait sliders filter taxa; compare ancestors with photos/ranges. Public Show HN demo.",
+      "types": [
+        "demo",
+        "interactive",
+        "tool"
+      ],
+      "sourceUrl": "https://ptree.org/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49559069"
+      ],
+      "previewImage": "/previews/ptree.webp",
+      "featured": true,
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "qualityNote": "公开可访问（HN 49559069）。科学可视化演示，非落地模板。",
+      "qualityNoteEn": "Publicly accessible (HN 49559069). Science viz demo, not a landing template.",
+      "tags": [
+        "phylogeny",
+        "interactive",
+        "show-hn",
+        "viz"
       ]
     }
   ]

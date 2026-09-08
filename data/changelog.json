@@ -1,6 +1,14 @@
 {
   "notes": [
     {
+      "date": "2026-09-08",
+      "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
+      "body": "Grok Bot 增收 LaoZhang 安全第一天文档审阅教程、AI Maker 七人小队手机工作流。HTML 增收 HTML Presentation Editor（MIT 单文件）、Ptree 可交互生命树（HN 49559069）。Agent UI 增收 ThreeUI Community：Temple Night、Animated Top Dock。X @bot 网页检索无新的可复现帖。",
+      "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
+      "bodyEn": "Grok Bot: LaoZhang safe first-day document review + AI Maker seven-Bot phone team. HTML: HTML Presentation Editor (MIT single-file) + Ptree interactive tree of life (HN 49559069). Agent UI: ThreeUI Community Temple Night + Animated Top Dock. No new reproducible @bot posts via web search.",
+      "relatedPath": "/paths/daily-to-draft/"
+    },
+    {
       "date": "2026-09-07",
       "title": "日更：Grok Bot +2、HTML +1、Agent UI +2",
       "body": "Grok Bot 增收 Granda BotOps 舰队运营（HN 49583570）与 Greenlit 幕僚长五合同方法。HTML 增收 Cocoon（MIT Tailwind 4 单页模板）。Agent UI 增收 ThreeUI Community Portal Field，以及开源 Canvas UI（html-in-canvas / MCP）。",

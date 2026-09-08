@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-07T01:23:22Z",
+    "updatedAt": "2026-09-08T01:27:40Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.11",
-    "count": 94,
+    "version": "1.4.12",
+    "count": 96,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -49,7 +49,16 @@
       "https://github.com/holger1411/cocoon-template",
       "https://threeui.com/backgrounds/portal-field/portal-field",
       "https://canvasui.dev/",
-      "https://github.com/DavidHDev/canvas-ui"
+      "https://github.com/DavidHDev/canvas-ui",
+      "https://blog.laozhang.ai/en/posts/grok-bot-getting-started",
+      "https://aimaker.substack.com/p/grok-bot-ai-agent-team",
+      "https://itchernetski.github.io/html-presentation-editor/editor.html",
+      "https://github.com/itchernetski/html-presentation-editor",
+      "https://ptree.org/",
+      "https://news.ycombinator.com/item?id=49559069",
+      "https://threeui.com/three-js/temple-night/temple-night",
+      "https://github.com/MengTo/threeui",
+      "https://threeui.com/css/animated-top-dock/sable"
     ]
   },
   "cases": [
@@ -3367,6 +3376,74 @@
       "previewImage": "/previews/greenlit-chief-of-staff.webp",
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-09-07T01:23:22Z"
+    },
+    {
+      "id": "laozhang-getting-started",
+      "slug": "laozhang-grok-bot-getting-started",
+      "title": "LaoZhang：安全的 Grok Bot 第一天文档审阅",
+      "titleEn": "LaoZhang: a safe first-day Grok Bot document review",
+      "summary": "可复现入门：核验计划与账号链接、装对架构桌面端，建 Document Checker，附公开 PDF 跑固定 Markdown 报告提示词，再校正后存为 Skill/考虑 Routine。2026-09-08 对照官方文档核过。",
+      "summaryEn": "Reproducible first day: verify plan/account linking, install the right desktop build, create a Document Checker, run a fixed Markdown-report prompt on a public PDF, correct it, then save a Skill / consider a Routine. Checked against first-party docs on 2026-09-08.",
+      "categories": [
+        "ops",
+        "automation"
+      ],
+      "role": "Document review assistant",
+      "sourceUrl": "https://blog.laozhang.ai/en/posts/grok-bot-getting-started",
+      "secondaryUrls": [],
+      "sourceType": "tutorial",
+      "qualityNote": "第三方教程，但步骤与可复制提示词齐全；计划列表以 Cursor/xAI 当日文档为准，文内已提醒会变。不收录其站内其他工具文。",
+      "qualityNoteEn": "Third-party, but steps and copy-paste prompts are complete; treat plan eligibility as of Cursor/xAI docs that day (the post itself flags churn). Other tool posts on the site are not catalogued.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "对外结果外发、连接邮箱等服务、安排无人值守 Routine 前先人审。",
+      "approvalBoundaryEn": "Human review before sharing the report externally, connecting inbox/services, or scheduling an unattended Routine.",
+      "connectors": [],
+      "language": "en",
+      "featured": false,
+      "previewImage": "/previews/laozhang-getting-started.webp",
+      "publishedAt": "2026-09-03",
+      "updatedAt": "2026-09-08T01:27:40Z"
+    },
+    {
+      "id": "aimaker-seven-bot-team",
+      "slug": "aimaker-seven-bot-phone-team",
+      "title": "AI Maker：七人 Grok Bot 小队从手机跑",
+      "titleEn": "AI Maker: a seven-Bot Grok Bot team run from the phone",
+      "summary": "实操小队：Social Writer（Typefully）、CoS 晨间清单（Gmail/Calendar/Todoist）、Invoice Hunter、Content Researcher（Tavily/YouTube/X→Notion）、SEO 周报、Creative Director、Business Coach；强调先手工跑稳再 Skill+Routine。",
+      "summaryEn": "Hands-on roster: Social Writer (Typefully), CoS morning list (Gmail/Calendar/Todoist), Invoice Hunter, Content Researcher (Tavily/YouTube/X → Notion), SEO weekly report, Creative Director, Business Coach — with “run manually first, then Skill + Routine.”",
+      "categories": [
+        "multi-agent",
+        "content",
+        "ops"
+      ],
+      "role": "Chief of Staff + specialists",
+      "sourceUrl": "https://aimaker.substack.com/p/grok-bot-ai-agent-team",
+      "secondaryUrls": [],
+      "sourceType": "case-study",
+      "qualityNote": "2026-09-06 One Shot Show 实录整理。含具体连接器与审批边界；定价/套餐以官方当日为准。视频为主，但文字步骤可跟做。",
+      "qualityNoteEn": "Write-up of the 2026-09-06 One Shot Show. Concrete connectors and approval boundaries; treat pricing as of official docs that day. Video-led, but the written steps are followable.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "社媒排程发送、邮件外发、改生产分析配置一律人审。",
+      "approvalBoundaryEn": "Human approval for social scheduling/publish, outbound email, and production analytics changes.",
+      "connectors": [
+        "gmail",
+        "calendar",
+        "notion",
+        "x"
+      ],
+      "language": "en",
+      "featured": true,
+      "previewImage": "/previews/aimaker-seven-bot-team.webp",
+      "publishedAt": "2026-09-06",
+      "updatedAt": "2026-09-08T01:27:40Z"
     }
   ]
 }
