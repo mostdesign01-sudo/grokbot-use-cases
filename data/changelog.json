@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-08",
+      "title": "HTML：收录 SceneAI（AETHER Claude 3Portals 演示同源）",
+      "body": "按 Hao 要求收录 @aether_uiux 的 Claude 网页设计演示片（3Portals：轻色 SaaS 首屏、玻璃拟态面板、紫色变形 3D 团块）。核对后帖子正文与自回复都没有可粘贴提示词，自回复链到 SceneAI（sceneai.art，Orixadesign 的付费 UI 提示库，140+ 提示 / 70+ 动态背景），故以 SceneAI 为主条目、原帖作次链接与证据。归 HTML 收集，与 MotionSites / MeiGen / Taste Skill 同属设计提示参考。3Portals 疑为虚构演示品牌，不写产品站。预览图取自视频封面。HTML 41→42。",
+      "titleEn": "HTML: SceneAI (source of AETHER’s Claude 3Portals demo)",
+      "bodyEn": "At Hao’s request, catalogued @aether_uiux’s Claude web-design clip (3Portals: light SaaS hero, glass panel, morphing purple 3D blob). On checking, neither the post nor the self-reply carries a pasteable prompt; the self-reply links to SceneAI (sceneai.art, Orixadesign’s paid UI prompt library, 140+ prompts / 70+ animated backgrounds), so SceneAI is the primary item with the post as secondary link and evidence. Filed in the HTML Collection alongside MotionSites / MeiGen / Taste Skill as a design-prompt reference. 3Portals appears to be a fictional demo brand, so no product URL. Preview taken from the video poster. HTML 41→42."
+    },
+    {
+      "date": "2026-09-08",
       "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
       "body": "Grok Bot 增收 LaoZhang 安全第一天文档审阅教程、AI Maker 七人小队手机工作流。HTML 增收 HTML Presentation Editor（MIT 单文件）、Ptree 可交互生命树（HN 49559069）。Agent UI 增收 ThreeUI Community：Temple Night、Animated Top Dock。X @bot 网页检索无新的可复现帖。",
       "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
