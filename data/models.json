@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-08T15:10:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.0.0",
+    "count": 2
+  },
+  "models": [
+    {
+      "id": "gpt-6-astra",
+      "slug": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "title": "GPT-6 Astra（OpenAI）",
+      "titleEn": "GPT-6 Astra (OpenAI)",
+      "summary": "OpenAI 2026-09-03 发布的前沿模型。官方定位：电脑操作、浏览、软件工程、网络安全、科研与专业办公；ChatGPT 内可用 Sites 从一条提示直接生成并托管网站、Web 应用与游戏；API 名 gpt-6-astra。社区侧：YouWare 9 月 8 日发帖称已整理 720+ 条 Astra 社区作品（游戏原型、3D 世界、产品 UI、动效、模拟），附提示词可在 YouWare 复跑。",
+      "summaryEn": "OpenAI’s frontier model, announced 2026-09-03. Official pitch: computer use, browsing, software engineering, cybersecurity, science, and professional work; in ChatGPT, Sites builds and hosts websites, web apps, and games from one prompt; API name gpt-6-astra. Community side: on 8 Sept YouWare posted that it sorted 720+ community Astra builds (game prototypes, 3D worlds, product UIs, motion, sims), prompts included to replay on YouWare.",
+      "announcedAt": "2026-09-03",
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T15:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "OpenAI 公告：GPT-6 Astra",
+          "labelEn": "OpenAI announcement: GPT-6 Astra",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "by": "OpenAI",
+          "date": "2026-09-03"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 安全综述：GPT-6 Astra",
+          "labelEn": "OpenAI safety overview: GPT-6 Astra",
+          "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+          "by": "OpenAI",
+          "date": "2026-09-03"
+        },
+        {
+          "kind": "community",
+          "label": "YouWare：720+ 条 Astra 社区作品（X 视频帖）",
+          "labelEn": "YouWare: 720+ community Astra builds (X video post)",
+          "url": "https://x.com/YouWareAI/status/2097266839520985476",
+          "by": "@YouWareAI",
+          "date": "2026-09-08"
+        },
+        {
+          "kind": "product",
+          "label": "YouWare 产品主页",
+          "labelEn": "YouWare product home",
+          "url": "https://www.youware.com/",
+          "by": "YouWare"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：电脑操作、浏览、软件工程、网络安全、科研与专业办公达到 SOTA；FrontierMath Tier 4 98%、ARC-AGI-3 99.9%（官方自述）。",
+          "textEn": "Vendor claim: state of the art on computer use, browsing, software engineering, cybersecurity, science, and professional work; FrontierMath Tier 4 98%, ARC-AGI-3 99.9% (OpenAI’s figures)."
+        },
+        {
+          "text": "官方称：发布日先向少数组织开放，随后数日扩到 ChatGPT Plus / Pro / Business / Enterprise，以及 OpenAI API、Azure、AWS Bedrock；企业工作区默认关闭，需管理员开启。",
+          "textEn": "Vendor claim: rolling out first to a limited set of organizations, then over the coming days to ChatGPT Plus / Pro / Business / Enterprise, plus the OpenAI API, Azure, and AWS Bedrock; off by default for Enterprise workspaces until an admin enables it."
+        },
+        {
+          "text": "官方称：API 标准价 $10 / 百万输入 token、$50 / 百万输出 token；Fast mode 双倍速双倍价。",
+          "textEn": "Vendor claim: API standard pricing $10 per million input tokens and $50 per million output tokens; Fast mode is 2x speed at 2x price."
+        },
+        {
+          "text": "官方称：Preparedness Framework 下首个到达网络安全「Critical」级别的模型，公开版会拒绝高阶攻击性任务。",
+          "textEn": "Vendor claim: first model to reach the Critical cybersecurity level under the Preparedness Framework; the public version refuses advanced offensive tasks."
+        },
+        {
+          "text": "社区 showcase：YouWare 称整理了 720+ 条 Astra 作品并附提示词；视频里的「Astra Replay」页面显示 721 projects / 29 playable / 24 full prompts。",
+          "textEn": "Community showcase: YouWare says it sorted 720+ Astra builds with prompts; the “Astra Replay” page in the video shows 721 projects / 29 playable / 24 full prompts."
+        }
+      ],
+      "qualityNote": "两类来源分开看。官方模型页是 OpenAI 公告与安全综述：基准分、推出节奏、价格均为厂商自述，本库未独立核实。社区 showcase 是 YouWare 的 X 视频帖：「720+ 条作品」是 YouWare 自己的说法，帖内 t.co 只指向该视频，没有独立画廊链接；视频里的 Astra Replay 页面未能确认公开 URL，故不写深链，只列 YouWare 产品主页。预览图取自该 X 视频封面（YouWare 页面，非 OpenAI 官方图）。本条是最新模型看板的第一张卡，不是 Grok Bot 用法。",
+      "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/gpt-6-astra.webp",
+      "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
+      "previewCreditEn": "Preview: YouWare X video poster (Astra Replay page)",
+      "featured": true
+    },
+    {
+      "id": "claude-fable-5-1",
+      "slug": "claude-fable-5-1",
+      "name": "Claude Fable 5.1 / Mythos 5.1",
+      "vendor": "Anthropic",
+      "title": "Claude Fable 5.1 / Mythos 5.1（Anthropic）",
+      "titleEn": "Claude Fable 5.1 / Mythos 5.1 (Anthropic)",
+      "summary": "Anthropic 2026-09 发布 Claude Fable 5.1（通用）与 Mythos 5.1（受信访问）：同一底层模型、不同防护等级。定位编码、知识工作与长任务 / Agent，并展示科研侧早期例子。已在 Grok Bot 库以「AI 资讯」收录，这里只作为模型看板的一张卡，正文见库内条目。",
+      "summaryEn": "Anthropic’s Sept 2026 launch of Claude Fable 5.1 (generally available) and Mythos 5.1 (trusted access) — same underlying model, different safeguard levels. Pitch is coding, knowledge work, and long-running / agentic tasks, plus early research demos. Already catalogued as AI news in the Grok Bot library; this is the board card, full copy lives on that entry.",
+      "announcedAt": "2026-09-01",
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T15:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Anthropic 公告：Claude Fable 5.1 / Mythos 5.1",
+          "labelEn": "Anthropic announcement: Claude Fable 5.1 / Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "by": "Anthropic",
+          "date": "2026-09-01"
+        },
+        {
+          "kind": "official",
+          "label": "官方 X 视频帖",
+          "labelEn": "Official X video post",
+          "url": "https://x.com/claudeai/status/2094848579558953258",
+          "by": "@claudeai",
+          "date": "2026-09-01"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Fable 5.1 通用可用，Mythos 5.1 受信访问；定位编码、知识工作与长任务 / Agent。",
+          "textEn": "Vendor claim: Fable 5.1 generally available, Mythos 5.1 trusted access; pitched at coding, knowledge work, and long-running / agentic tasks."
+        },
+        {
+          "text": "官方称：下调 cache read 价格。数字未独立核实。",
+          "textEn": "Vendor claim: cache-read prices cut. Figures unverified here."
+        }
+      ],
+      "qualityNote": "主源是 Anthropic 公告，X 视频是官方同帖预告片。基准分、蛋白命中率、金星图精度、省钱比例均为官方自述，本库未独立核实。完整收录理由与元信息见 Grok Bot 库内的同名 AI 资讯条目；本卡不重复正文。",
+      "qualityNoteEn": "Primary source is Anthropic’s post; the X video is the official trailer on the same post. Benchmarks, binder hit rates, Venus map accuracy, and savings figures are Anthropic’s claims — unverified here. Full listing note and metadata live on the same-named AI-news entry in the Grok Bot library; this card does not repeat the copy.",
+      "relatedCaseIds": [
+        "claude-fable-5-1"
+      ],
+      "previewImage": "/previews/claude-fable-5-1.webp",
+      "previewCredit": "预览：Anthropic 官方 X 视频封面",
+      "previewCreditEn": "Preview: Anthropic official X video poster",
+      "featured": false
+    }
+  ]
+}

@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-08",
+      "title": "站点：上线最新模型 / Models，首条 GPT-6 Astra",
+      "body": "按 Hao 要求新增 /models/：追踪最新前沿模型与值得看的社区 showcase 的看板，与路径、组合同属实验室栏目，不是第四套内容库。首条 GPT-6 Astra：官方页链 OpenAI 公告与安全综述（2026-09-03，基准分 / 推出节奏 / 价格均为官方自述，未独立核实）；社区 showcase 链 @YouWareAI 9 月 8 日视频帖（「720+ 条作品」为 YouWare 自述；帖内 t.co 只指向视频，Astra Replay 页面未确认公开 URL，不写深链）。预览图取该视频封面。已在库的 Claude Fable 5.1 一并列为第二张卡，指回原 AI 资讯条目、不重复正文。数据在 data/models.json，导航 / 首页侧栏 / 页脚可进。",
+      "titleEn": "Site: latest-models board /models/, starting with GPT-6 Astra",
+      "bodyEn": "At Hao’s request, added /models/: a board tracking latest frontier models and notable community showcases. Sits with Paths and Combos as a lab section — not a fourth library. First card is GPT-6 Astra: official links go to OpenAI’s announcement and safety overview (2026-09-03; benchmarks / rollout / pricing are vendor claims, unverified here); the community showcase links @YouWareAI’s 8 Sept video post (“720+ builds” is YouWare’s count; the post’s t.co resolves to the video and the Astra Replay page has no confirmed public URL, so no deep link). Preview is that video poster. The existing Claude Fable 5.1 entry is listed as a second card pointing back to the AI-news item without repeating copy. Data in data/models.json; reachable from nav, home rail, and footer."
+    },
+    {
+      "date": "2026-09-08",
       "title": "HTML：收录 SceneAI（AETHER Claude 3Portals 演示同源）",
       "body": "按 Hao 要求收录 @aether_uiux 的 Claude 网页设计演示片（3Portals：轻色 SaaS 首屏、玻璃拟态面板、紫色变形 3D 团块）。核对后帖子正文与自回复都没有可粘贴提示词，自回复链到 SceneAI（sceneai.art，Orixadesign 的付费 UI 提示库，140+ 提示 / 70+ 动态背景），故以 SceneAI 为主条目、原帖作次链接与证据。归 HTML 收集，与 MotionSites / MeiGen / Taste Skill 同属设计提示参考。3Portals 疑为虚构演示品牌，不写产品站。预览图取自视频封面。HTML 41→42。",
       "titleEn": "HTML: SceneAI (source of AETHER’s Claude 3Portals demo)",

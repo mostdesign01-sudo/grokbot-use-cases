@@ -7,6 +7,7 @@ const agentUiDataset = JSON.parse(await readFile(new URL("../data/agent-ui.json"
 const changelog = JSON.parse(await readFile(new URL("../data/changelog.json", import.meta.url), "utf8"));
 const pathsDataset = JSON.parse(await readFile(new URL("../data/paths.json", import.meta.url), "utf8"));
 const combosDataset = JSON.parse(await readFile(new URL("../data/combos.json", import.meta.url), "utf8"));
+const modelsDataset = JSON.parse(await readFile(new URL("../data/models.json", import.meta.url), "utf8"));
 
 const requiredPages = [
   "index.html",
@@ -31,6 +32,8 @@ const requiredPages = [
   "404.html",
   "paths/index.html",
   "combos/index.html",
+  "models/index.html",
+  "models.json",
 ];
 
 const missing = [];
@@ -139,6 +142,16 @@ if (combosDataset.combos.length < 3 || combosDataset.combos.length > 5) {
   process.exit(1);
 }
 
+if (modelsDataset.models.length !== modelsDataset.meta.count) {
+  console.error(`models.json meta.count ${modelsDataset.meta.count} does not match items ${modelsDataset.models.length}`);
+  process.exit(1);
+}
+
+if (modelsDataset.models.length < 1) {
+  console.error("Expected at least 1 model in models.json.");
+  process.exit(1);
+}
+
 const caseIds = new Set(dataset.cases.map((item) => item.id));
 const htmlIds = new Set(htmlDataset.items.map((item) => item.id));
 const agentUiIds = new Set(agentUiDataset.items.map((item) => item.id));
@@ -169,10 +182,24 @@ for (const combo of combosDataset.combos) {
   if (!caseIds.has(combo.caseId)) missing.push(`combos.json caseId not found: ${combo.id} → ${combo.caseId}`);
 }
 
+for (const model of modelsDataset.models) {
+  const page = `models/${model.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${page}`, import.meta.url))) {
+    missing.push(page);
+  }
+  if (!(model.sources ?? []).some((source) => source.kind === "official")) {
+    missing.push(`models.json ${model.id} needs at least one official source`);
+  }
+  for (const id of model.relatedCaseIds ?? []) {
+    if (!caseIds.has(id)) missing.push(`models.json relatedCaseId not found: ${model.id} → ${id}`);
+  }
+}
+
 const previewItems = [
   ...dataset.cases.map((item) => ({ lib: "grok", ...item })),
   ...htmlDataset.items.map((item) => ({ lib: "html", ...item })),
   ...agentUiDataset.items.map((item) => ({ lib: "agent-ui", ...item })),
+  ...modelsDataset.models.map((item) => ({ lib: "models", ...item })),
 ];
 
 for (const item of previewItems) {
@@ -236,6 +263,17 @@ if (!home.includes("combos/") || !home.includes("三库组合")) {
   process.exit(1);
 }
 
+if (!home.includes("models/") || !home.includes("最新模型")) {
+  console.error("Homepage is missing the Models rail link (models/ / 最新模型).");
+  process.exit(1);
+}
+
+const modelsIndex = await readFile(new URL("../dist/models/index.html", import.meta.url), "utf8");
+if (!modelsIndex.includes("models/gpt-6-astra/") || !modelsIndex.includes("GPT-6 Astra")) {
+  console.error("models/ is missing the GPT-6 Astra card.");
+  process.exit(1);
+}
+
 if (!home.includes("核验精选") || !home.includes("plaza-position")) {
   console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
   process.exit(1);
@@ -257,5 +295,5 @@ if (missing.length) {
 }
 
 console.log(
-  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, and core routes present.`,
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, ${modelsDataset.models.length} model pages, and core routes present.`,
 );

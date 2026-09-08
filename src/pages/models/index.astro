@@ -1,0 +1,42 @@
+---
+import Loc from "../../components/Loc.astro";
+import ModelCard from "../../components/ModelCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ui } from "../../lib/i18n";
+import { listModels } from "../../lib/models";
+import { withBase } from "../../lib/paths";
+
+const listed = listModels();
+---
+
+<BaseLayout
+  collection="lab"
+  title={ui.model.indexTitle.zh}
+  titleEn={ui.model.indexTitle.en}
+  description={ui.model.indexDesc.zh}
+  descriptionEn={ui.model.indexDesc.en}
+>
+  <div class="wrap">
+    <section class="hub-intro">
+      <p class="kicker"><Loc zh={ui.model.kicker.zh} en={ui.model.kicker.en} /></p>
+      <h1><Loc zh={ui.model.indexH1.zh} en={ui.model.indexH1.en} /></h1>
+      <p class="lede"><Loc zh={ui.model.indexLede.zh} en={ui.model.indexLede.en} /></p>
+      <p class="combo-tease">
+        <Loc zh={ui.model.pathsTease.zh} en={ui.model.pathsTease.en} />
+        {" "}
+        <a href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href={withBase("/")}><Loc zh={ui.footer.labHome.zh} en={ui.footer.labHome.en} /></a>
+        <a class="btn btn-ghost" href={withBase("cases/")}><Loc zh={ui.footer.grokOverview.zh} en={ui.footer.grokOverview.en} /></a>
+        <a class="btn btn-ghost" href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+      </div>
+    </section>
+
+    <section class="section" aria-label={ui.model.list.zh} data-aria-zh={ui.model.list.zh} data-aria-en={ui.model.list.en}>
+      <div class="model-grid">
+        {listed.map((model) => <ModelCard model={model} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
