@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T01:27:40Z",
+    "updatedAt": "2026-09-08T16:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.12",
-    "count": 96,
+    "version": "1.4.13",
+    "count": 97,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -58,7 +58,9 @@
       "https://news.ycombinator.com/item?id=49559069",
       "https://threeui.com/three-js/temple-night/temple-night",
       "https://github.com/MengTo/threeui",
-      "https://threeui.com/css/animated-top-dock/sable"
+      "https://threeui.com/css/animated-top-dock/sable",
+      "https://github.com/mobile-next/mobile-mcp",
+      "https://x.com/Ryrenz/status/2097159242411077994"
     ]
   },
   "cases": [
@@ -3444,6 +3446,50 @@
       "previewImage": "/previews/aimaker-seven-bot-team.webp",
       "publishedAt": "2026-09-06",
       "updatedAt": "2026-09-08T01:27:40Z"
+    },
+    {
+      "id": "mobile-mcp",
+      "slug": "mobile-next-mobile-mcp",
+      "title": "Mobile MCP：让 AI 直接点 iOS / Android App",
+      "titleEn": "Mobile MCP: let the agent tap iOS / Android apps over MCP",
+      "summary": "Mobile Next 开源的 MCP 服务器（Apache-2.0），把 iOS / Android 模拟器、仿真器与 USB 真机接给任何支持 MCP 的客户端：Claude Code、Codex、Gemini CLI、GitHub Copilot、Cursor 等。优先读无障碍树拿结构化元素，读不到再退回截图点坐标。工具覆盖列设备、装卸 / 启停 App、点滑输入、按键、深链、录屏、抓 logcat 与崩溃报告。标准配置 `npx -y @mobilenext/mobile-mcp@latest`，默认 stdio，`--listen` 可起 SSE 并用 MOBILEMCP_AUTH 加 Bearer。",
+      "summaryEn": "Mobile Next’s open-source MCP server (Apache-2.0) that exposes iOS / Android simulators, emulators, and USB-connected real devices to any MCP client — Claude Code, Codex, Gemini CLI, GitHub Copilot, Cursor, and more. Reads the accessibility tree first for structured elements, falls back to screenshot + coordinates. Tools cover device listing, app install/launch/terminate, tap/swipe/type, hardware buttons, deep links, screen recording, logcat and crash reports. Standard config is `npx -y @mobilenext/mobile-mcp@latest`; stdio by default, `--listen` for SSE with a MOBILEMCP_AUTH Bearer token.",
+      "categories": [
+        "engineering",
+        "coding",
+        "automation"
+      ],
+      "role": "Mobile device driver (MCP server)",
+      "sourceUrl": "https://github.com/mobile-next/mobile-mcp",
+      "secondaryUrls": [
+        "https://x.com/Ryrenz/status/2097159242411077994",
+        "https://mobilenext.ai",
+        "https://github.com/mobile-next/mobile-mcp/wiki",
+        "https://github.com/mobile-next/mobilewright",
+        "https://github.com/mobile-next/mobilecli"
+      ],
+      "sourceType": "community",
+      "qualityNote": "由 @Ryrenz 2026-09-08 中文帖带来，主源是 GitHub README。当日核对：6468 star / 562 fork，最新版 1.0.3（帖内写 6353 star，已按实数）。需本机 Xcode 命令行工具或 Android Platform Tools，Node 20+。README 明写默认向 PostHog 发匿名遥测，MOBILEMCP_DISABLE_TELEMETRY=1 可关。mobilewright（Playwright 式移动测试）与 mobilecli（底层设备 CLI）在 README 核到，作次链接；Mobile Next Cloud 云真机是付费服务，本库未试。README 示例提示词里的注册、评分、发消息都会在真设备上真做。非 xAI / Grok Bot 官方件，能否接进 Grok Bot 以当日官方 MCP 文档为准。",
+      "qualityNoteEn": "Surfaced by @Ryrenz’s Chinese post on 2026-09-08; the primary source is the GitHub README. Checked that day: 6,468 stars / 562 forks, latest release 1.0.3 (the post said 6,353; we use the live count). Needs local Xcode CLT or Android Platform Tools and Node 20+. The README states anonymous PostHog telemetry is on by default; MOBILEMCP_DISABLE_TELEMETRY=1 turns it off. mobilewright (Playwright-style mobile tests) and mobilecli (the device CLI underneath) are verified in the README and linked as secondary; Mobile Next Cloud is a paid device service we did not try. The README’s sample prompts really register, rate, and message on the device. Not an xAI / Grok Bot first-party piece — whether it plugs into Grok Bot depends on the official MCP docs that day.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "只在自己的模拟器 / 测试机与测试账号上跑；装卸 App、注册、发消息、评分评论、开非常规 URL scheme（MOBILEMCP_ALLOW_UNSAFE_URLS，默认禁）前人审。",
+      "approvalBoundaryEn": "Run only on your own simulators / test devices with test accounts; human sign-off before installing or removing apps, registering, messaging, rating or commenting, or enabling non-standard URL schemes (MOBILEMCP_ALLOW_UNSAFE_URLS, blocked by default).",
+      "connectors": [
+        "mcp",
+        "ios",
+        "android",
+        "xcode",
+        "adb"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/mobile-mcp.webp",
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-08T16:20:00Z"
     }
   ]
 }
