@@ -98,6 +98,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 | `/cases/` `/cases/[slug]/` | Grok Bot 总览（筛选 + masonry）与详情（含上手路径） |
 | `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页（masonry） |
 | `/search/` | 三库检索：标题、摘要、标签、收录理由 |
+| `/favorites/` | 我的收藏：卡片 / 详情页 ☆ 存进浏览器 `localStorage`（键 `aiuplab:favorites`），只读本机，无后端 |
 | `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
 | `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门；详情页「开跑」复制桌 brief（不是第四套卡片库） |
 | `/combos/` `/combos/[slug]/` | 三库交叉组合：一壳 + 一件 + 一案（精选拣货，不是第四面墙） |
@@ -110,6 +111,8 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 | `/agent-ui/[slug]/` | 单条 Agent UI 详情（打开原文、给 Agent 的换主题提示） |
 
 徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。详情页用 `qualityNote` 展示「收录理由」。HTML / Agent UI 条目另有类型徽章与原文链接。
+
+星级：四套库的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
 
 ## 界面
 

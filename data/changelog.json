@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-08",
+      "title": "站点：加打星 — 编辑星级 + 我的收藏",
+      "body": "按 Hao 要求「给网站加个打星」，分两层。一是编辑星级：cases / html-items / agent-ui / models 四套 JSON 新增可选 stars（1–5 整数），卡片与详情以 ★ 显示；是编辑对质量的判断，不是 GitHub star 数，不填就不显示。先给 12 条已精选条目打了 4–5 星（官方 Guides、隔夜销售外呼、CSS Zen Garden、scroll-driven animations、shadcn/ui 等），模型卡暂不打，厂商数字未核实。二是访客收藏：卡片右上角与详情页的 ☆ 点一下存进浏览器 localStorage，再点取消；新页 /favorites/「我的收藏」只读本机，导航 / 首页侧栏 / 页脚可进，可一键清空。静态站，无账号无后端，换设备不同步。",
+      "titleEn": "Site: stars — curator ratings + My favorites",
+      "bodyEn": "At Hao’s request (“add stars to the site”), two layers. Curator stars: cases / html-items / agent-ui / models JSON gain an optional integer stars (1–5), shown as ★ on cards and detail pages. It is an editorial quality call, not GitHub stargazers, and unset means nothing is shown. Twelve already-featured items start at 4–5 (official Guides, overnight sales outbound, CSS Zen Garden, scroll-driven animations, shadcn/ui, …); model cards stay unrated since vendor figures are unverified. Visitor favorites: the ☆ on every card corner and detail page saves to the browser’s localStorage; tap again to remove. New /favorites/ (My favorites) reads local storage only, reachable from nav, home rail, and footer, with a clear-all button. Static site: no account, no backend, no cross-device sync."
+    },
+    {
+      "date": "2026-09-08",
       "title": "站点：上线最新模型 / Models，首条 GPT-6 Astra",
       "body": "按 Hao 要求新增 /models/：追踪最新前沿模型与值得看的社区 showcase 的看板，与路径、组合同属实验室栏目，不是第四套内容库。首条 GPT-6 Astra：官方页链 OpenAI 公告与安全综述（2026-09-03，基准分 / 推出节奏 / 价格均为官方自述，未独立核实）；社区 showcase 链 @YouWareAI 9 月 8 日视频帖（「720+ 条作品」为 YouWare 自述；帖内 t.co 只指向视频，Astra Replay 页面未确认公开 URL，不写深链）。预览图取该视频封面。已在库的 Claude Fable 5.1 一并列为第二张卡，指回原 AI 资讯条目、不重复正文。数据在 data/models.json，导航 / 首页侧栏 / 页脚可进。",
       "titleEn": "Site: latest-models board /models/, starting with GPT-6 Astra",
