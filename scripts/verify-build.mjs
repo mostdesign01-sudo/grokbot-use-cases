@@ -18,6 +18,7 @@ const requiredPages = [
   "docs/index.html",
   "changelog/index.html",
   "search/index.html",
+  "favorites/index.html",
   "data.json",
   "html-items.json",
   "agent-ui.json",
@@ -202,6 +203,20 @@ const previewItems = [
   ...modelsDataset.models.map((item) => ({ lib: "models", ...item })),
 ];
 
+// Curator `stars` is optional; when present it must be an integer 1–5.
+for (const item of previewItems) {
+  if (item.stars === undefined) continue;
+  if (!Number.isInteger(item.stars) || item.stars < 1 || item.stars > 5) {
+    missing.push(`stars for ${item.lib}:${item.id} must be an integer 1–5, got ${JSON.stringify(item.stars)}`);
+  }
+}
+
+const starred = previewItems.filter((item) => Number.isInteger(item.stars));
+if (starred.length === 0) {
+  console.error("Expected at least one item with curator stars.");
+  process.exit(1);
+}
+
 for (const item of previewItems) {
   if (!item.previewImage) continue;
   if (!item.previewImage.startsWith("/previews/")) {
@@ -240,6 +255,22 @@ for (const slug of runSampleSlugs) {
     console.error(`paths/${slug}/ is missing a filled marketing-desk brief.`);
     process.exit(1);
   }
+}
+
+{
+  const sample = starred[0];
+  const dir = sample.lib === "grok" ? "cases" : sample.lib;
+  const page = await readFile(new URL(`../dist/${dir}/${sample.slug}/index.html`, import.meta.url), "utf8");
+  if (!page.includes(`data-stars="${sample.stars}"`) || !page.includes(`data-fav-key="${sample.lib}:${sample.id}"`)) {
+    console.error(`${dir}/${sample.slug}/ is missing the curator stars badge or the ☆ favorite toggle.`);
+    process.exit(1);
+  }
+}
+
+const favorites = await readFile(new URL("../dist/favorites/index.html", import.meta.url), "utf8");
+if (!favorites.includes("我的收藏") || !favorites.includes("data-fav-item=") || !favorites.includes("data-fav-clear")) {
+  console.error("favorites/ is missing the 我的收藏 shell (data-fav-item / data-fav-clear).");
+  process.exit(1);
 }
 
 const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");

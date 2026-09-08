@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T16:20:00Z",
+    "updatedAt": "2026-09-08T16:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.13",
+    "version": "1.4.14",
     "count": 97,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
@@ -239,6 +239,7 @@
       ],
       "language": "en",
       "featured": true,
+      "stars": 4,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-09-02T01:10:00Z"
     },
@@ -356,6 +357,7 @@
       ],
       "language": "zh",
       "featured": true,
+      "stars": 5,
       "previewImage": "/previews/grokbot-guides.webp",
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-30T02:08:00Z"
@@ -2020,6 +2022,7 @@
       ],
       "language": "zh",
       "featured": true,
+      "stars": 5,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Sales Outbound Bot researches CRM accounts overnight, scores them by ICP/intent, finds contacts, and drafts email and LinkedIn copy in the seller’s voice — leaving only a review inbox. Official rule: do not send or add to sequences until approved.",
@@ -2671,6 +2674,7 @@
       ],
       "language": "zh",
       "featured": true,
+      "stars": 4,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-24T01:10:00Z",
       "summaryEn": "The executable pattern from the official Skills / Routines docs: open computer view in a 1:1, choose Teach a task, demo a browser flow of about 10 minutes max, and the Bot drafts a Skill. Add decision rules, failure handling, and approval bounds, then Test run, and only then turn it into a routine. No audio recording; do not expose secrets during the demo; hand credentials over securely.",
@@ -3271,6 +3275,7 @@
       ],
       "language": "zh",
       "featured": true,
+      "stars": 4,
       "previewImage": "/previews/designing-grok-bot.webp",
       "publishedAt": "2026-09-03",
       "updatedAt": "2026-09-04T02:00:14Z"

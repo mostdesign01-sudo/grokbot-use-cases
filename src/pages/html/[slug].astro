@@ -1,7 +1,9 @@
 ---
 import Badge from "../../components/Badge.astro";
+import FavButton from "../../components/FavButton.astro";
 import HtmlCard from "../../components/HtmlCard.astro";
 import Loc from "../../components/Loc.astro";
+import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
@@ -47,6 +49,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
       <div class="badges">
         {item.featured && <Badge kind="official" label={ui.badge.featuredPlain.zh} labelEn={ui.badge.featuredPlain.en} />}
         {item.types.map((type) => <Badge label={htmlTypeLabel(type)} labelEn={htmlTypeLabel(type, "en")} />)}
+        <Stars value={item.stars} />
       </div>
       <h1>
         <span class="loc-zh">{item.title}</span>
@@ -60,6 +63,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
         <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
           <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
         </a>
+        <FavButton lib="html" id={item.id} variant="button" />
         <a class="btn btn-ghost" href={withBase("html/types/")}><Loc zh={ui.footer.byType.zh} en={ui.footer.byType.en} /></a>
       </div>
     </article>
@@ -134,6 +138,17 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
               <dt><Loc zh={ui.meta.tags.zh} en={ui.meta.tags.en} /></dt>
               <dd>{item.tags.join(" · ")}</dd>
             </div>
+            {
+              item.stars && (
+                <div>
+                  <dt><Loc zh={ui.stars.label.zh} en={ui.stars.label.en} /></dt>
+                  <dd class="kv-stars">
+                    <Stars value={item.stars} />
+                    <span class="kv-hint"><Loc zh={ui.stars.hint.zh} en={ui.stars.hint.en} /></span>
+                  </dd>
+                </div>
+              )
+            }
             <div>
               <dt><Loc zh={ui.meta.publishedAbout.zh} en={ui.meta.publishedAbout.en} /></dt>
               <dd>

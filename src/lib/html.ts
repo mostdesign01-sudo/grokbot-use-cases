@@ -22,6 +22,8 @@ export interface HtmlItem {
   secondaryUrls?: string[];
   previewImage?: string;
   featured: boolean;
+  /** Curator quality stars 1–5 (editorial; unrelated to GitHub stars). Unset = no rating shown. */
+  stars?: number;
   publishedAt: string;
   updatedAt: string;
   qualityNote: string;

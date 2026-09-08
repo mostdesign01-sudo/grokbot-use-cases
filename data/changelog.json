@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-08",
+      "title": "站点：加打星 — 编辑星级 + 我的收藏",
+      "body": "按 Hao 要求「给网站加个打星」，分两层。一是编辑星级：cases / html-items / agent-ui / models 四套 JSON 新增可选 stars（1–5 整数），卡片与详情以 ★ 显示；是编辑对质量的判断，不是 GitHub star 数，不填就不显示。先给 12 条已精选条目打了 4–5 星（官方 Guides、隔夜销售外呼、CSS Zen Garden、scroll-driven animations、shadcn/ui 等），模型卡暂不打，厂商数字未核实。二是访客收藏：卡片右上角与详情页的 ☆ 点一下存进浏览器 localStorage，再点取消；新页 /favorites/「我的收藏」只读本机，导航 / 首页侧栏 / 页脚可进，可一键清空。静态站，无账号无后端，换设备不同步。",
+      "titleEn": "Site: stars — curator ratings + My favorites",
+      "bodyEn": "At Hao’s request (“add stars to the site”), two layers. Curator stars: cases / html-items / agent-ui / models JSON gain an optional integer stars (1–5), shown as ★ on cards and detail pages. It is an editorial quality call, not GitHub stargazers, and unset means nothing is shown. Twelve already-featured items start at 4–5 (official Guides, overnight sales outbound, CSS Zen Garden, scroll-driven animations, shadcn/ui, …); model cards stay unrated since vendor figures are unverified. Visitor favorites: the ☆ on every card corner and detail page saves to the browser’s localStorage; tap again to remove. New /favorites/ (My favorites) reads local storage only, reachable from nav, home rail, and footer, with a clear-all button. Static site: no account, no backend, no cross-device sync."
+    },
+    {
+      "date": "2026-09-08",
       "title": "Grok Bot：收录 Mobile MCP（AI 直接点 iOS / Android App）",
       "body": "按 Hao 要求收录 @Ryrenz 9 月 8 日中文帖介绍的 Mobile MCP（mobile-next/mobile-mcp，Apache-2.0）。主条目指 GitHub README：MCP 服务器把 iOS / Android 模拟器、仿真器、真机接给 Claude Code / Codex / Gemini CLI / Copilot / Cursor 等 MCP 客户端，优先无障碍快照、退回截图坐标，工具覆盖装卸 App、点滑输入、录屏、logcat 与崩溃报告；默认 stdio，可 SSE + Bearer。当日核对 6468 star / 562 fork（帖内写 6353，已按实数）、最新 1.0.3。README 明写默认向 PostHog 发匿名遥测，MOBILEMCP_DISABLE_TELEMETRY=1 可关。配套 mobilewright / mobilecli 已在 README 核到，作次链接；Mobile Next Cloud 为付费云真机，本库未试。预览图取 GitHub 社交卡。归工程 / 编程 / 自动化，默认需审批。Grok Bot 96→97。",
       "titleEn": "Grok Bot: Mobile MCP (agents tapping iOS / Android apps)",

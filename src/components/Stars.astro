@@ -1,0 +1,32 @@
+---
+import { fill, ui } from "../lib/i18n";
+import { isValidStars, STARS_MAX } from "../lib/stars";
+
+/**
+ * Curator stars badge (editorial 1–5). Renders nothing when `value` is unset,
+ * so cards without a rating keep their layout untouched.
+ */
+interface Props {
+  value?: number;
+}
+
+const { value } = Astro.props;
+const stars = isValidStars(value) ? value : 0;
+const label = fill(ui.stars.of, { n: stars });
+---
+
+{
+  stars > 0 && (
+    <span
+      class="badge stars"
+      role="img"
+      aria-label={label.zh}
+      data-aria-zh={label.zh}
+      data-aria-en={label.en}
+      data-stars={stars}
+    >
+      <span class="stars-on" aria-hidden="true">{"★".repeat(stars)}</span>
+      {stars < STARS_MAX && <span class="stars-off" aria-hidden="true">{"★".repeat(STARS_MAX - stars)}</span>}
+    </span>
+  )
+}

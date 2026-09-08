@@ -21,41 +21,50 @@ const isGrok =
 
 const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : isGrok ? "grok" : "lab";
 
-const labLinks = [
+type NavLink = { href: string; label: { zh: string; en: string }; section?: boolean; favorites?: boolean };
+
+/** Visitor favorites live in localStorage; the badge count is painted client-side. */
+const favoritesLink: NavLink = { href: withBase("favorites/"), label: ui.nav.favorites, favorites: true };
+
+const labLinks: NavLink[] = [
   { href: withBase("/"), label: ui.nav.home },
   { href: withBase("paths/"), label: ui.nav.paths, section: true },
   { href: withBase("combos/"), label: ui.nav.combos, section: true },
   { href: withBase("models/"), label: ui.nav.models, section: true },
   { href: withBase("search/"), label: ui.nav.search },
+  favoritesLink,
   { href: withBase("docs/"), label: ui.nav.docs },
   { href: withBase("changelog/"), label: ui.nav.changelog },
 ];
 
-const grokLinks = [
+const grokLinks: NavLink[] = [
   { href: withBase("cases/"), label: ui.nav.overview },
   { href: withBase("featured/"), label: ui.nav.featured },
   { href: withBase("latest/"), label: ui.nav.latest },
   { href: withBase("types/"), label: ui.nav.types, section: true },
   { href: withBase("search/?lib=grok"), label: ui.nav.search },
+  favoritesLink,
 ];
 
-const htmlLinks = [
+const htmlLinks: NavLink[] = [
   { href: withBase("html/"), label: ui.nav.overview },
   { href: withBase("html/featured/"), label: ui.nav.featured },
   { href: withBase("html/latest/"), label: ui.nav.latest },
   { href: withBase("html/types/"), label: ui.nav.types, section: true },
   { href: withBase("search/?lib=html"), label: ui.nav.search },
+  favoritesLink,
 ];
 
-const agentUiLinks = [
+const agentUiLinks: NavLink[] = [
   { href: withBase("agent-ui/"), label: ui.nav.overview },
   { href: withBase("agent-ui/featured/"), label: ui.nav.featured },
   { href: withBase("agent-ui/latest/"), label: ui.nav.latest },
   { href: withBase("agent-ui/types/"), label: ui.nav.types, section: true },
   { href: withBase("search/?lib=agent-ui"), label: ui.nav.search },
+  favoritesLink,
 ];
 
-const links =
+const links: NavLink[] =
   currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : currentLib === "grok" ? grokLinks : labLinks;
 
 const brandLine =
@@ -116,6 +125,7 @@ const brandLine =
               : undefined}
           >
             <Loc zh={link.label.zh} en={link.label.en} />
+            {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
           </a>
         ))
       }

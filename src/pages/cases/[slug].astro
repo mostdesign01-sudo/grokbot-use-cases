@@ -1,7 +1,9 @@
 ---
 import Badge from "../../components/Badge.astro";
 import CaseCard from "../../components/CaseCard.astro";
+import FavButton from "../../components/FavButton.astro";
 import Loc from "../../components/Loc.astro";
+import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { cases, getRelatedCases } from "../../lib/cases";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
@@ -62,6 +64,7 @@ const safeWithBoundEn = boundEn
         {item.hasRoutine && <Badge kind="routine" label={ui.badge.routine.zh} labelEn={ui.badge.routine.en} />}
         {item.hasMultiAgent && <Badge kind="multi" label={ui.badge.multi.zh} labelEn={ui.badge.multi.en} />}
         {item.hasSkill && <Badge label={ui.badge.skill.zh} labelEn={ui.badge.skill.en} />}
+        <Stars value={item.stars} />
       </div>
       <h1>
         <span class="loc-zh">{item.title}</span>
@@ -72,6 +75,9 @@ const safeWithBoundEn = boundEn
         <span class="loc-zh">{item.summary}</span>
         <span class="loc-en">{summaryEn}</span>
       </p>
+      <div class="hero-actions">
+        <FavButton lib="grok" id={item.id} variant="button" />
+      </div>
       {
         item.previewImage && (
           <figure class="detail-preview">
@@ -194,6 +200,17 @@ const safeWithBoundEn = boundEn
                   : <Loc zh={ui.meta.noneListed.zh} en={ui.meta.noneListed.en} />}
               </dd>
             </div>
+            {
+              item.stars && (
+                <div>
+                  <dt><Loc zh={ui.stars.label.zh} en={ui.stars.label.en} /></dt>
+                  <dd class="kv-stars">
+                    <Stars value={item.stars} />
+                    <span class="kv-hint"><Loc zh={ui.stars.hint.zh} en={ui.stars.hint.en} /></span>
+                  </dd>
+                </div>
+              )
+            }
             <div>
               <dt><Loc zh={ui.meta.published.zh} en={ui.meta.published.en} /></dt>
               <dd>

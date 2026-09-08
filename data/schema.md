@@ -48,6 +48,7 @@
 | `connectors` | string[] | 涉及的系统或工具 |
 | `language` | string | 条目文案语言，当前为 `zh` |
 | `featured` | boolean | 是否出现在首页精选 |
+| `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `qualityNote` 里。不填则不显示星行 |
 | `previewImage` | string | 可选，站点根路径如 `/previews/id.webp` |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目最近校对时间 |
@@ -60,3 +61,8 @@
 - **需审批**：`requiresApproval`
 - **例行**：`hasRoutine`
 - **多Agent**：`hasMultiAgent`
+- **★ 星级**：`stars`（可选 1–5）
+
+## 访客收藏（不在 JSON 里）
+
+卡片与详情页的 ☆ 是访客收藏，只写浏览器 `localStorage`（键 `aiuplab:favorites`，值为 `"grok:<id>"` / `"html:<id>"` / `"agent-ui:<id>"` / `"models:<id>"` 数组）。`/favorites/` 页只读本机，不上传。改 `id` 会让访客已存的收藏失效，所以 `id` 要稳定。

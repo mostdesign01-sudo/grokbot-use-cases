@@ -44,6 +44,7 @@
 | `previewCredit` | string | 可选，预览图出处（中文），如「YouWare X 视频封面」 |
 | `previewCreditEn` | string | 可选，预览图出处（英文） |
 | `featured` | boolean | 是否在看板靠前 |
+| `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。只表示这张卡的整理质量，不是基准分，也不为厂商数字背书；厂商说法仍未核实就别打高星。不填则不显示 |
 
 ### `sources[]`
 

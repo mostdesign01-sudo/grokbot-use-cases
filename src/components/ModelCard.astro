@@ -5,7 +5,9 @@ import { formatPublishedDate } from "../lib/format";
 import { ui } from "../lib/i18n";
 import { assetUrl, withBase } from "../lib/paths";
 import Badge from "./Badge.astro";
+import FavButton from "./FavButton.astro";
 import Loc from "./Loc.astro";
+import Stars from "./Stars.astro";
 
 interface Props {
   model: ModelItem;
@@ -17,39 +19,43 @@ const official = getOfficialSources(model);
 const showcase = getShowcaseSources(model).filter((source) => source.kind === "community");
 ---
 
-<a class="card model-card" href={withBase(`models/${model.slug}/`)}>
-  <div class="badges">
-    <Badge kind="approval" label={model.vendor} />
-    {official.length > 0 && <Badge kind="official" label={ui.badge.official.zh} labelEn={ui.badge.official.en} />}
-    {showcase.length > 0 && <Badge kind="community" label={ui.model.showcase.zh} labelEn={ui.model.showcase.en} />}
-    {model.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
-  </div>
-  <h3>
-    <span class="loc-zh">{model.title}</span>
-    <span class="loc-en">{model.titleEn}</span>
-  </h3>
-  <p class="title-en loc-zh">{model.titleEn}</p>
-  {
-    preview && (
-      <div class="tweet-media model-card-media">
-        <img src={preview} alt="" loading="lazy" decoding="async" />
-      </div>
-    )
-  }
-  <p class="summary">
-    <span class="loc-zh">{model.summary}</span>
-    <span class="loc-en">{model.summaryEn}</span>
-  </p>
-  <div class="card-meta">
-    <span>
-      <Loc zh={ui.model.announced.zh} en={ui.model.announced.en} />
-      {" "}
-      <span class="loc-zh">{formatPublishedDate(model.announcedAt)}</span>
-      <span class="loc-en">{formatPublishedDate(model.announcedAt, "en-US")}</span>
-    </span>
-    <span>
-      <span class="loc-zh">{`${official.length} 官方 · ${showcase.length} 社区`}</span>
-      <span class="loc-en">{`${official.length} official · ${showcase.length} community`}</span>
-    </span>
-  </div>
-</a>
+<div class="card-shell card-shell-model">
+  <a class="card model-card" href={withBase(`models/${model.slug}/`)}>
+    <div class="badges">
+      <Badge kind="approval" label={model.vendor} />
+      {official.length > 0 && <Badge kind="official" label={ui.badge.official.zh} labelEn={ui.badge.official.en} />}
+      {showcase.length > 0 && <Badge kind="community" label={ui.model.showcase.zh} labelEn={ui.model.showcase.en} />}
+      {model.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+      <Stars value={model.stars} />
+    </div>
+    <h3>
+      <span class="loc-zh">{model.title}</span>
+      <span class="loc-en">{model.titleEn}</span>
+    </h3>
+    <p class="title-en loc-zh">{model.titleEn}</p>
+    {
+      preview && (
+        <div class="tweet-media model-card-media">
+          <img src={preview} alt="" loading="lazy" decoding="async" />
+        </div>
+      )
+    }
+    <p class="summary">
+      <span class="loc-zh">{model.summary}</span>
+      <span class="loc-en">{model.summaryEn}</span>
+    </p>
+    <div class="card-meta">
+      <span>
+        <Loc zh={ui.model.announced.zh} en={ui.model.announced.en} />
+        {" "}
+        <span class="loc-zh">{formatPublishedDate(model.announcedAt)}</span>
+        <span class="loc-en">{formatPublishedDate(model.announcedAt, "en-US")}</span>
+      </span>
+      <span>
+        <span class="loc-zh">{`${official.length} 官方 · ${showcase.length} 社区`}</span>
+        <span class="loc-en">{`${official.length} official · ${showcase.length} community`}</span>
+      </span>
+    </div>
+  </a>
+  <FavButton lib="models" id={model.id} />
+</div>

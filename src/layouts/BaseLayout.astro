@@ -155,5 +155,79 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=6";
         </>
       )
     }
+    <script>
+      import { FAVORITES_STORAGE_KEY } from "../lib/stars";
+
+      type FavoritesApi = { list: () => string[]; has: (key: string) => boolean; toggle: (key: string) => void; clear: () => void };
+
+      const read = (): string[] => {
+        try {
+          const parsed: unknown = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) ?? "[]");
+          return Array.isArray(parsed) ? parsed.filter((entry): entry is string => typeof entry === "string") : [];
+        } catch {
+          return [];
+        }
+      };
+
+      const write = (list: string[]) => {
+        try {
+          localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(list));
+        } catch {
+          /* private mode / quota: favorites simply stay in-memory for this page */
+        }
+      };
+
+      const paint = () => {
+        const saved = new Set(read());
+        document.querySelectorAll<HTMLElement>("[data-fav][data-fav-key]").forEach((button) => {
+          button.setAttribute("aria-pressed", saved.has(button.dataset.favKey ?? "") ? "true" : "false");
+        });
+        document.querySelectorAll<HTMLElement>("[data-fav-item]").forEach((item) => {
+          item.hidden = !saved.has(item.dataset.favItem ?? "");
+        });
+        document.querySelectorAll<HTMLElement>("[data-fav-count]").forEach((el) => {
+          el.textContent = String(saved.size);
+          el.hidden = saved.size === 0;
+        });
+        document.dispatchEvent(new CustomEvent("favoriteschange", { detail: [...saved] }));
+      };
+
+      const toggle = (key: string) => {
+        const list = read();
+        const index = list.indexOf(key);
+        if (index >= 0) list.splice(index, 1);
+        else list.push(key);
+        write(list);
+        paint();
+      };
+
+      document.addEventListener("click", (event) => {
+        const button = (event.target as HTMLElement | null)?.closest<HTMLElement>("[data-fav][data-fav-key]");
+        if (!button) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const key = button.dataset.favKey;
+        if (!key) return;
+        button.classList.add("is-pop");
+        button.addEventListener("animationend", () => button.classList.remove("is-pop"), { once: true });
+        toggle(key);
+      });
+
+      window.addEventListener("storage", (event) => {
+        if (event.key === FAVORITES_STORAGE_KEY) paint();
+      });
+
+      (window as Window & { __favorites?: FavoritesApi }).__favorites = {
+        list: read,
+        has: (key) => read().includes(key),
+        toggle,
+        clear: () => {
+          write([]);
+          paint();
+        },
+      };
+
+      paint();
+    </script>
   </body>
 </html>

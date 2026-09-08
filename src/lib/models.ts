@@ -1,5 +1,6 @@
 import dataset from "../../data/models.json";
 import { cases, type CaseItem } from "./cases";
+import { isValidStars } from "./stars";
 
 export type ModelSourceKind = "official" | "community" | "product";
 
@@ -38,6 +39,8 @@ export interface ModelItem {
   previewCredit?: string;
   previewCreditEn?: string;
   featured?: boolean;
+  /** Curator quality stars 1–5 (editorial; not a benchmark score). Unset = no rating shown. */
+  stars?: number;
 }
 
 export interface ModelsMeta {
@@ -68,6 +71,9 @@ function assertModelsResolve(list: ModelItem[]): void {
 
     if (!model.sources.some((source) => source.kind === "official")) {
       throw new Error(`models.json ${model.id} needs at least one official source`);
+    }
+    if (model.stars !== undefined && !isValidStars(model.stars)) {
+      throw new Error(`models.json ${model.id} stars must be an integer 1–5, got ${String(model.stars)}`);
     }
     for (const id of model.relatedCaseIds ?? []) {
       if (!cases.some((entry) => entry.id === id)) {
