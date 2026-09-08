@@ -9,6 +9,13 @@
     },
     {
       "date": "2026-09-08",
+      "title": "Grok Bot：收录 Mobile MCP（AI 直接点 iOS / Android App）",
+      "body": "按 Hao 要求收录 @Ryrenz 9 月 8 日中文帖介绍的 Mobile MCP（mobile-next/mobile-mcp，Apache-2.0）。主条目指 GitHub README：MCP 服务器把 iOS / Android 模拟器、仿真器、真机接给 Claude Code / Codex / Gemini CLI / Copilot / Cursor 等 MCP 客户端，优先无障碍快照、退回截图坐标，工具覆盖装卸 App、点滑输入、录屏、logcat 与崩溃报告；默认 stdio，可 SSE + Bearer。当日核对 6468 star / 562 fork（帖内写 6353，已按实数）、最新 1.0.3。README 明写默认向 PostHog 发匿名遥测，MOBILEMCP_DISABLE_TELEMETRY=1 可关。配套 mobilewright / mobilecli 已在 README 核到，作次链接；Mobile Next Cloud 为付费云真机，本库未试。预览图取 GitHub 社交卡。归工程 / 编程 / 自动化，默认需审批。Grok Bot 96→97。",
+      "titleEn": "Grok Bot: Mobile MCP (agents tapping iOS / Android apps)",
+      "bodyEn": "At Hao’s request, catalogued Mobile MCP (mobile-next/mobile-mcp, Apache-2.0) from @Ryrenz’s 8 Sept Chinese post. Primary entry points to the GitHub README: an MCP server exposing iOS / Android simulators, emulators, and real devices to MCP clients such as Claude Code / Codex / Gemini CLI / Copilot / Cursor; accessibility snapshot first, screenshot-coordinate fallback; tools cover app install/remove, tap/swipe/type, screen recording, logcat and crash reports; stdio by default, SSE + Bearer optional. Checked that day: 6,468 stars / 562 forks (the post said 6,353; live count used), latest 1.0.3. README states anonymous PostHog telemetry is on by default; MOBILEMCP_DISABLE_TELEMETRY=1 turns it off. Companions mobilewright / mobilecli verified in the README and linked as secondary; Mobile Next Cloud is a paid device service we did not try. Preview is the GitHub social card. Filed under engineering / coding / automation, approval required by default. Grok Bot 96→97."
+    },
+    {
+      "date": "2026-09-08",
       "title": "站点：上线最新模型 / Models，首条 GPT-6 Astra",
       "body": "按 Hao 要求新增 /models/：追踪最新前沿模型与值得看的社区 showcase 的看板，与路径、组合同属实验室栏目，不是第四套内容库。首条 GPT-6 Astra：官方页链 OpenAI 公告与安全综述（2026-09-03，基准分 / 推出节奏 / 价格均为官方自述，未独立核实）；社区 showcase 链 @YouWareAI 9 月 8 日视频帖（「720+ 条作品」为 YouWare 自述；帖内 t.co 只指向视频，Astra Replay 页面未确认公开 URL，不写深链）。预览图取该视频封面。已在库的 Claude Fable 5.1 一并列为第二张卡，指回原 AI 资讯条目、不重复正文。数据在 data/models.json，导航 / 首页侧栏 / 页脚可进。",
       "titleEn": "Site: latest-models board /models/, starting with GPT-6 Astra",
