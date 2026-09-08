@@ -2096,7 +2096,8 @@ a.tweet-card.case-card {
 }
 
 @media (min-width: 720px) {
-  .combo-grid {
+  .combo-grid,
+  .model-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -2396,6 +2397,71 @@ html[data-theme="light"] .home-plaza {
 .combo-grid {
   display: grid;
   gap: 12px;
+}
+
+.model-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.model-card .model-card-media {
+  margin: 4px 0 2px;
+}
+
+.model-preview {
+  max-width: 30rem;
+}
+
+.model-preview figcaption {
+  margin-top: 6px;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.model-sources {
+  display: grid;
+  gap: 8px;
+}
+
+.model-source {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-soft);
+  color: inherit;
+  text-decoration: none;
+}
+
+.model-source:hover {
+  border-color: var(--line-strong);
+}
+
+.model-source strong {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.model-source-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.model-source-url {
+  overflow-wrap: anywhere;
+}
+
+.model-highlights {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .combo-card .combo-card-trio {
