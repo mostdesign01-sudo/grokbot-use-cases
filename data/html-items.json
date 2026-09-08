@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T01:27:40Z",
+    "updatedAt": "2026-09-08T04:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.13",
-    "count": 41
+    "version": "1.3.14",
+    "count": 42
   },
   "items": [
     {
@@ -1145,6 +1145,38 @@
         "interactive",
         "show-hn",
         "viz"
+      ]
+    },
+    {
+      "id": "sceneai",
+      "slug": "sceneai",
+      "title": "SceneAI：UI 提示库（AETHER Claude 首屏演示同源）",
+      "titleEn": "SceneAI: UI prompt library (source of AETHER’s Claude hero demo)",
+      "summary": "Orixadesign 出品的 UI 提示库：140+ 落地页 / Hero 区块提示、70+ 动态背景与渐变，每周上新，可复制进 Claude / GPT / Gemini 等生成。首页免费浏览样本；「Copy Prompt」与下载需 All Access（$49/月或 $199 终身，标价 $498 六折）。AETHER 的 3Portals Claude 网页设计演示片回复串即链到此站。",
+      "summaryEn": "A UI prompt library by Orixadesign: 140+ landing-page / hero prompts, 70+ animated backgrounds and gradients, weekly drops, meant to be pasted into Claude / GPT / Gemini and friends. Samples browse free on the homepage; Copy Prompt and downloads need All Access ($49/mo or $199 lifetime, listed $498 at 60% off). AETHER’s 3Portals Claude web-design clip links here in its reply thread.",
+      "types": [
+        "tool",
+        "landing"
+      ],
+      "sourceUrl": "https://sceneai.art",
+      "secondaryUrls": [
+        "https://x.com/aether_uiux/status/2096934615554633936",
+        "https://sceneai.art/pricing"
+      ],
+      "previewImage": "/previews/sceneai.webp",
+      "featured": true,
+      "publishedAt": "2026-09-07",
+      "updatedAt": "2026-09-08T04:45:00Z",
+      "qualityNote": "Hao 点名收集。入口是 @aether_uiux 的 9 秒演示片「Claude really crazy for web design」：3Portals 轻色 SaaS 首屏、玻璃拟态旋转面板罩着变形紫色 3D 团块，标题「Strategic AI to Scale Your Business Growth.」。帖子正文与作者自回复都没有可粘贴的提示词，自回复只是 SceneAI 卡片链接，故以 SceneAI 为主条目、原帖作证据；预览图取自视频封面。与 MotionSites / MeiGen / Taste Skill 同属设计提示参考，非 Grok Bot 运营案例。3Portals 疑为演示用虚构品牌，未找到公开产品站，站内首页目录也未见该条目。库本身付费（2026-09-08 核对）。",
+      "qualityNoteEn": "Requested by Hao. Entry point is @aether_uiux’s 9-second clip “Claude really crazy for web design”: a light 3Portals SaaS hero with a glassmorphic rotating panel over a morphing purple 3D blob, headline “Strategic AI to Scale Your Business Growth.” Neither the post nor the author’s self-reply contains a pasteable prompt — the self-reply is only a SceneAI link card — so SceneAI is the primary item and the post is kept as evidence; preview taken from the video poster. Filed alongside MotionSites / MeiGen / Taste Skill as a design-prompt reference, not a Grok Bot ops case. 3Portals looks like a fictional demo brand: no public product site, and not listed in SceneAI’s homepage catalogue. The library itself is paid (checked 2026-09-08).",
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "prompts",
+        "claude",
+        "saas",
+        "glassmorphism"
       ]
     }
   ]
