@@ -430,6 +430,11 @@ export const ui = {
     announced: { zh: "厂商公告", en: "Vendor announcement" },
     listed: { zh: "写入看板", en: "Listed here" },
     sourceCount: { zh: "来源数", en: "Sources" },
+    relatedModels: { zh: "同板相关", en: "Related on this board" },
+    relatedModelsHint: {
+      zh: "同一看板上互相关联的卡：社区 demo 指回它跑的模型，模型指向值得看的 demo。",
+      en: "Cards linked on this board: a community demo points back to the model it ran on; the model points to demos worth a look.",
+    },
     relatedCase: { zh: "库内条目", en: "Library entry" },
     relatedCaseHint: {
       zh: "这条模型已在 Grok Bot 库以 AI 资讯收录，完整收录理由见下方条目。",

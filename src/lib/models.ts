@@ -35,6 +35,8 @@ export interface ModelItem {
   qualityNote: string;
   qualityNoteEn: string;
   relatedCaseIds: string[];
+  /** Other cards on this board (e.g. a community demo → the model it ran on). Must resolve to existing model ids. */
+  relatedModelIds?: string[];
   previewImage?: string;
   previewCredit?: string;
   previewCreditEn?: string;
@@ -80,6 +82,12 @@ function assertModelsResolve(list: ModelItem[]): void {
         throw new Error(`models.json relatedCaseId not found: ${model.id} → ${id}`);
       }
     }
+    for (const id of model.relatedModelIds ?? []) {
+      if (id === model.id) throw new Error(`models.json ${model.id} relatedModelIds points at itself`);
+      if (!list.some((entry) => entry.id === id)) {
+        throw new Error(`models.json relatedModelId not found: ${model.id} → ${id}`);
+      }
+    }
   }
 }
 
@@ -104,6 +112,12 @@ export function getOfficialSources(model: ModelItem): ModelSource[] {
 
 export function getShowcaseSources(model: ModelItem): ModelSource[] {
   return model.sources.filter((source) => source.kind !== "official");
+}
+
+export function getRelatedModels(model: ModelItem, list = models): ModelItem[] {
+  return (model.relatedModelIds ?? [])
+    .map((id) => list.find((item) => item.id === id))
+    .filter((item): item is ModelItem => Boolean(item));
 }
 
 export function getRelatedCasesForModel(model: ModelItem): CaseItem[] {
