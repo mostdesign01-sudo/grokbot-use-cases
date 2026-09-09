@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T16:40:00Z",
+    "updatedAt": "2026-09-09T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.14",
-    "count": 97,
+    "version": "1.4.15",
+    "count": 99,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -60,10 +60,85 @@
       "https://github.com/MengTo/threeui",
       "https://threeui.com/css/animated-top-dock/sable",
       "https://github.com/mobile-next/mobile-mcp",
-      "https://x.com/Ryrenz/status/2097159242411077994"
+      "https://x.com/Ryrenz/status/2097159242411077994",
+      "https://github.com/kydlikebtc/awesome-grokbot",
+      "https://kydlikebtc.github.io/awesome-grokbot/",
+      "https://continuumcode.ai/guides/grok-bot-routines/",
+      "https://docs.x.ai/grok-bot/overview"
     ]
   },
   "cases": [
+    {
+      "id": "awesome-grokbot-shares",
+      "slug": "kydlikebtc-awesome-grokbot-shares",
+      "title": "awesome-grokbot：661 条可点进的 x.ai/bot 分享目录",
+      "titleEn": "awesome-grokbot: 661 live x.ai/bot share catalog",
+      "summary": "kydlikebtc 维护的双语目录：661 条可点进的公开 x.ai/bot 分享（2026-09-08 全量链路核查），带可搜索站点、catalog.json、docs/vetting.md 导入前清单与 docs/routine.md 侦察 routine。与已收录的 ZeroPointRepo/awesome-grok-bot（Skill / Plugin / MCP）不是同一件事——本条是 live bot 分享索引。",
+      "summaryEn": "kydlikebtc’s bilingual catalog of 661 clickable public x.ai/bot shares (all links status-checked 2026-09-08), with a searchable site, catalog.json, docs/vetting.md import checklist, and docs/routine.md scout routine. Distinct from the already-listed ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP) — this indexes live bot shares.",
+      "sourceUrl": "https://github.com/kydlikebtc/awesome-grokbot",
+      "secondaryUrls": [
+        "https://kydlikebtc.github.io/awesome-grokbot/",
+        "https://raw.githubusercontent.com/kydlikebtc/awesome-grokbot/main/docs/vetting.md",
+        "https://raw.githubusercontent.com/kydlikebtc/awesome-grokbot/main/docs/routine.md"
+      ],
+      "sourceType": "community",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "research"
+      ],
+      "connectors": [
+        "github"
+      ],
+      "language": "en",
+      "difficulty": "starter",
+      "role": "Directory",
+      "featured": true,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "stars": 295,
+      "qualityNote": "社区分享目录，条目未逐一背书。README 写明社区 bot 不可信、同账号共享一台电脑。导入前先读 docs/vetting.md。与 ZeroPointRepo/awesome-grok-bot（Skill/Plugin/MCP 目录）不是同一仓库。",
+      "qualityNoteEn": "Community share catalog — individual bots are not endorsed. README warns shares are untrusted and all bots on one account share a single computer; read docs/vetting.md before importing. Distinct from ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP directory).",
+      "publishedAt": "2026-09-09",
+      "updatedAt": "2026-09-09T01:15:00Z"
+    },
+    {
+      "id": "continuum-routines-guide",
+      "slug": "continuum-grok-bot-routines-guide",
+      "title": "Continuum：Grok Bot Routine / Skill 工作指南（含上报上限）",
+      "titleEn": "Continuum: Grok Bot Routine / Skill working guide (reported ceilings flagged)",
+      "summary": "Continuum 长文讲清 routine 与 skill 的行为差异、演示录制怎么拆、日程能做什么、以及与 Grok Automations 的分界；并对照官方 overview / skills-routines 文档。文中提到的 10 分钟演示上限、50 条 routine、20 条运行记录保留等数字均来自第三方 Daily Dose of Data Science，文内反复标明「xAI 未确认」——本库也不当作事实写进卡片。",
+      "summaryEn": "Continuum’s long guide on how routines and skills differ in practice, how to split teach-by-demo recordings, what schedules document, and how Bot routines differ from Grok Automations — cross-checked against official overview and skills-routines docs. Figures such as a 10-minute demo cap, 50 routines, and 20-run retention are attributed to third-party Daily Dose of Data Science and repeatedly marked unconfirmed by xAI; this library does not treat them as facts.",
+      "sourceUrl": "https://continuumcode.ai/guides/grok-bot-routines/",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://docs.x.ai/grok-bot/overview"
+      ],
+      "sourceType": "tutorial",
+      "categories": [
+        "automation",
+        "ops"
+      ],
+      "connectors": [
+        "browser"
+      ],
+      "language": "en",
+      "difficulty": "starter",
+      "role": "Working guide",
+      "featured": false,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "外发、改生产、删数据等人批；先草稿与只读演示。",
+      "approvalBoundaryEn": "Outbound, production changes, and deletes wait for approval; drafts and read-only demos first.",
+      "qualityNote": "教程。文内「10 分钟演示 / 50 routines / 20 条运行保留」等数字来自 Daily Dose of Data Science，作者标明 xAI 未确认——本库不把它们写成事实。官方可核对面是 overview 与 skills-routines 文档。",
+      "qualityNoteEn": "Tutorial. Figures such as a 10-minute demo cap, 50 routines, and 20-run retention come from Daily Dose of Data Science and are marked unconfirmed by xAI — this library does not state them as facts. Checkable official surface is the overview and skills-routines docs.",
+      "publishedAt": "2026-09-09",
+      "updatedAt": "2026-09-09T01:15:00Z"
+    },
     {
       "id": "aibuilderclub-practical-guide",
       "slug": "aibuilderclub-how-to-use-grok-bot-practical-guide",

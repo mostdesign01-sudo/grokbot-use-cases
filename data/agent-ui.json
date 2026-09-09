@@ -1,11 +1,79 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T16:40:00Z",
+    "updatedAt": "2026-09-09T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.7",
-    "count": 36
+    "version": "1.4.8",
+    "count": 38
   },
   "items": [
+    {
+      "id": "performance-gauges",
+      "slug": "performance-gauges",
+      "title": "PerformanceGauges · Tachometer",
+      "titleEn": "PerformanceGauges · Tachometer",
+      "summary": "ThreeUI Community 性能仪表盘：tachometer 等 4 个免费变体，适合 Agent 面板上的实时指标装饰。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community performance gauges: free tachometer and three sibling variants for live-metric Agent panel ornament. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/css/performance-gauges/tachometer",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/performance-gauges.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 PerformanceGauges 的免费 tachometer 做 Agent 面板指标。保持 Community 变体，只改色相与量程文案。",
+      "promptHintEn": "Use the free PerformanceGauges tachometer for Agent panel metrics. Keep the Community variant; only retint hue and gauge labels.",
+      "types": [
+        "ui",
+        "css"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "gauge",
+        "dashboard",
+        "css"
+      ],
+      "featured": true,
+      "stars": 4,
+      "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt 只改色相与文案，不要手写动效。",
+      "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and only retint hue / labels — do not hand-write motion.",
+      "publishedAt": "2026-09-09",
+      "updatedAt": "2026-09-09T01:15:00Z"
+    },
+    {
+      "id": "circle-buttons",
+      "slug": "circle-buttons",
+      "title": "CircleButtons · Play",
+      "titleEn": "CircleButtons · Play",
+      "summary": "ThreeUI Community 圆形按钮族：Play / Plus / Mail 等免费变体，暗玻璃表面与旋转锥光，适合紧凑 CTA。",
+      "summaryEn": "ThreeUI Community circle buttons: free Play / Plus / Mail variants with dark-glass surfaces and a moving conic light. Fits compact CTAs.",
+      "sourceUrl": "https://threeui.com/buttons/circle-buttons/play",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/circle-buttons.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "从 CircleButtons 挑免费 Play 做紧凑播放/开始按钮。主色换成站点强调色，保持圆形遮罩。",
+      "promptHintEn": "Pick the free Play variant from CircleButtons as a compact play/start control. Swap the accent to the site color; keep the circular mask.",
+      "types": [
+        "button",
+        "ui"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "button",
+        "circle",
+        "cta"
+      ],
+      "featured": false,
+      "stars": 4,
+      "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt，改主色即可。",
+      "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and retint the accent.",
+      "publishedAt": "2026-09-09",
+      "updatedAt": "2026-09-09T01:15:00Z"
+    },
     {
       "id": "wireframe-forms-cube",
       "slug": "wireframe-forms-cube",
