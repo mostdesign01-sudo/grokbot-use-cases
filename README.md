@@ -51,6 +51,7 @@ npm run preview  # 预览生产构建
 6. **最新模型**：编辑 [`data/models.json`](data/models.json)
    - 一张卡一个模型：官方模型页与社区 showcase 分开写；厂商数字一律标「官方称」，社区条数一律标社区自述
    - 已在 cases 里收过的模型（如 Claude Fable 5.1）只写短卡，用 `relatedCaseIds` 指回，不重复正文
+   - 值得单独看的社区 demo（如 Astra 复刻迷你 LOL）可开一张 demo 卡，用 `relatedModelIds` 与模型卡互指；只记能力展示，不分发游戏文件
    - 字段见 [`data/models-schema.md`](data/models-schema.md)
 7. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
 8. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
