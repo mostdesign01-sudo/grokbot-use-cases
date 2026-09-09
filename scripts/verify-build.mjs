@@ -320,6 +320,17 @@ if (!home.includes("核验精选的可复用用法")) {
   process.exit(1);
 }
 
+// GitHub star CTA for this repo: home rail card + header pill / footer line on a regular page.
+const repoUrl = "https://github.com/mostdesign01-sudo/grokbot-use-cases";
+if (!home.includes("给本项目点个 Star") || !home.includes("gh-star-rail") || !home.includes(repoUrl)) {
+  console.error("Homepage is missing the GitHub star CTA (给本项目点个 Star / gh-star-rail → repo URL).");
+  process.exit(1);
+}
+if (!favorites.includes("gh-star-pill") || !favorites.includes("gh-star-line") || !favorites.includes(repoUrl)) {
+  console.error("Site chrome is missing the GitHub star pill (header) or line (footer).");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
