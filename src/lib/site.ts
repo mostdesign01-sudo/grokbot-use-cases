@@ -9,6 +9,12 @@ export const siteDescription =
 export const siteDescriptionEn =
   "AI UP LAB: curated, human-checked use-cases — Cases / HTML / Agent UI plus Paths and Combos. Not a bot install directory.";
 
+/** Public source repo for this site. The GitHub-star CTA points here; it is unrelated to curator ★ or visitor ☆. */
+export const repoSlug = "mostdesign01-sudo/grokbot-use-cases";
+export const repoUrl = `https://github.com/${repoSlug}`;
+/** Unauthenticated public endpoint used only to paint the live stargazer count client-side. */
+export const repoApiUrl = `https://api.github.com/repos/${repoSlug}`;
+
 export function pageTitle(page?: string) {
   return page ? `${page} · ${siteName}` : siteName;
 }

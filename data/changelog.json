@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-09",
+      "title": "站点：给本项目点个 GitHub Star",
+      "body": "Hao 澄清「打星」指的是给 GitHub 项目 mostdesign01-sudo/grokbot-use-cases 点 Star，于是加一组站内推荐入口，全部指向公开仓库页。三处：站头导航右侧一枚紧凑的 GitHub「Star」药丸；首页左栏三库入口下方一张「给本项目点个 Star」小卡，写明仓库名与一句说明；页脚第一栏一行「觉得有用？去 GitHub 给本项目点个 Star」。Star 数由浏览器直接读 GitHub 公开 API 后填入，本机缓存一小时，读不到或为 0 就不显示，不编数字。这是给仓库点 Star，与卡片上的 ★ 编辑星级（JSON 里的 stars）和 ☆ 访客收藏（localStorage / /favorites/）是三回事，后两者原样保留。静态站，无密钥，只用公开 URL。",
+      "titleEn": "Site: Star this project on GitHub",
+      "bodyEn": "Hao clarified that “stars” meant starring the GitHub project mostdesign01-sudo/grokbot-use-cases, so the site now carries a set of star prompts, all pointing at the public repo page. Three spots: a compact GitHub “Star” pill on the right of the header nav; a small “Star this project on GitHub” card in the home rail below the three library links, naming the repo with a one-line note; and one footer line, “Find this useful? Star the project on GitHub”. The star count is read in the browser from GitHub’s public API, cached locally for an hour, and simply stays hidden when unavailable or zero — no invented numbers. This stars the repo; it is separate from the ★ curator rating (stars in JSON) and the ☆ visitor favorites (localStorage / /favorites/), both of which stay as they were. Static site, no secrets, public URLs only."
+    },
+    {
       "date": "2026-09-08",
       "title": "站点：加打星 — 编辑星级 + 我的收藏",
       "body": "按 Hao 要求「给网站加个打星」，分两层。一是编辑星级：cases / html-items / agent-ui / models 四套 JSON 新增可选 stars（1–5 整数），卡片与详情以 ★ 显示；是编辑对质量的判断，不是 GitHub star 数，不填就不显示。先给 12 条已精选条目打了 4–5 星（官方 Guides、隔夜销售外呼、CSS Zen Garden、scroll-driven animations、shadcn/ui 等），模型卡暂不打，厂商数字未核实。二是访客收藏：卡片右上角与详情页的 ☆ 点一下存进浏览器 localStorage，再点取消；新页 /favorites/「我的收藏」只读本机，导航 / 首页侧栏 / 页脚可进，可一键清空。静态站，无账号无后端，换设备不同步。",

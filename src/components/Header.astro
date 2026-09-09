@@ -1,5 +1,6 @@
 ---
 import BrandMark from "./BrandMark.astro";
+import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
 import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
 import { ui } from "../lib/i18n";
@@ -129,6 +130,7 @@ const brandLine =
           </a>
         ))
       }
+      <GitHubStar variant="pill" />
       <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
         <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
         <span aria-hidden="true">|</span>
