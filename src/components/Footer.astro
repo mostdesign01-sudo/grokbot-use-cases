@@ -1,9 +1,10 @@
 ---
+import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
 import { officialDocs } from "../lib/docs";
 import { ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
-import { siteName, siteTagline, siteTaglineEn } from "../lib/site";
+import { repoUrl, siteName, siteTagline, siteTaglineEn } from "../lib/site";
 
 const product = officialDocs.filter((item) => item.group === "product");
 ---
@@ -21,6 +22,7 @@ const product = officialDocs.filter((item) => item.group === "product");
         <Loc zh={ui.footer.blurbEnd.zh} en={ui.footer.blurbEnd.en} />
       </p>
       <p class="disclaimer"><Loc zh={ui.footer.disclaimer.zh} en={ui.footer.disclaimer.en} /></p>
+      <GitHubStar variant="line" />
     </div>
     <div>
       <strong>Grok Bot</strong>
@@ -59,7 +61,7 @@ const product = officialDocs.filter((item) => item.group === "product");
         <a href={withBase("agent-ui/types/")}><Loc zh={ui.nav.types.zh} en={ui.nav.types.en} /></a>
         <a href={withBase("search/?lib=agent-ui")}><Loc zh={ui.footer.searchAgent.zh} en={ui.footer.searchAgent.en} /></a>
         <a href={withBase("agent-ui.json")}>Agent UI JSON</a>
-        <a href="https://github.com/mostdesign01-sudo/grokbot-use-cases"><Loc zh={ui.footer.github.zh} en={ui.footer.github.en} /></a>
+        <a href={repoUrl}><Loc zh={ui.footer.github.zh} en={ui.footer.github.en} /></a>
       </div>
     </div>
   </div>

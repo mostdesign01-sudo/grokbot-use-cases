@@ -115,6 +115,8 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 星级：四套库的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
 
+GitHub Star：站头「Star」药丸、首页左栏小卡、页脚一行都指向本仓库 https://github.com/mostdesign01-sudo/grokbot-use-cases（组件 `src/components/GitHubStar.astro`）。Star 数由浏览器读 GitHub 公开 API 填入并缓存一小时（键 `aiuplab:gh-stars`），读不到或为 0 就不显示。与 ★ 编辑星级、☆ 收藏是三回事。
+
 ## 界面
 
 首页是三张海报（琥珀 / 青绿 / 靛紫）加 Pinterest 式精选墙。HTML 收集与 Agent UI 卡片使用 `public/previews/` 里的自托管缩略图（JSON 里写 `/previews/{id}.webp`，构建时走 Astro `base`）。缺图或加载失败时回退 CSS 库海报。Grok Bot 案例默认海报。不是 AI 新闻站。

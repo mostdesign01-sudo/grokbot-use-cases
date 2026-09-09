@@ -1,6 +1,7 @@
 ---
 import BrandMark from "./BrandMark.astro";
 import DigestCard from "./DigestCard.astro";
+import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
 import PlazaCard from "./PlazaCard.astro";
 import {
@@ -65,6 +66,8 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
           <span aria-hidden="true">◐</span>
         </button>
       </div>
+
+      <GitHubStar variant="rail" />
     </div>
 
     <nav class="home-dates" aria-label={ui.home.dates.zh} data-aria-zh={ui.home.dates.zh} data-aria-en={ui.home.dates.en}>
