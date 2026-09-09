@@ -966,6 +966,140 @@ a.card:hover::before {
   vertical-align: 1px;
 }
 
+/* GitHub star CTA for this repo — separate from curator ★ (.stars) and visitor ☆ (.fav). */
+.gh-star {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.gh-mark {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
+.gh-star-glyph {
+  color: var(--brass);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.gh-star-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.nav .gh-star-pill,
+.gh-star-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 4px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--bg-card) 85%, var(--brass) 15%);
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.nav .gh-star-pill:hover,
+.gh-star-pill:hover {
+  border-color: color-mix(in srgb, var(--brass) 55%, var(--line-strong));
+  background: color-mix(in srgb, var(--bg-card) 70%, var(--brass) 30%);
+  color: var(--ink);
+}
+
+.gh-star-pill .gh-star-count {
+  padding-left: 6px;
+  border-left: 1px solid var(--line-strong);
+}
+
+.gh-star-rail {
+  display: grid;
+  gap: 3px;
+  margin-top: 14px;
+  padding: 9px 11px 10px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--brass) 28%, var(--line));
+  background: color-mix(in srgb, var(--bg-elev) 88%, var(--brass) 12%);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.gh-star-rail:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--brass) 55%, var(--line));
+  background: color-mix(in srgb, var(--bg-elev) 78%, var(--brass) 22%);
+}
+
+.gh-star-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+}
+
+.gh-star-head strong {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.gh-star-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--brass) 40%, var(--line));
+  background: color-mix(in srgb, var(--bg-card) 80%, var(--brass) 20%);
+  color: var(--ink);
+}
+
+.gh-star-badge .gh-star-count {
+  color: var(--ink);
+}
+
+.gh-star-repo {
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+}
+
+.gh-star-line {
+  margin: 12px 0 0;
+  font-size: 13px;
+}
+
+.gh-star-line .gh-star {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--brass) 45%, var(--line));
+}
+
+.gh-star-line .gh-star:hover {
+  color: var(--ink);
+  text-decoration-color: var(--brass);
+}
+
 .fav-groups {
   display: grid;
   gap: 28px;
@@ -3044,6 +3178,10 @@ html[data-theme="light"] .home-pill {
     max-height: none;
     padding: 16px 16px 8px;
     gap: 14px;
+  }
+
+  .gh-star-rail {
+    max-width: 380px;
   }
 
   .home-dates {

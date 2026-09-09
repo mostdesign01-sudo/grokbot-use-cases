@@ -116,6 +116,19 @@ export const ui = {
     },
     browse: { zh: "去逛逛", en: "Go browse" },
   },
+  /** GitHub star CTA for this site's own repo — distinct from curator ★ (`stars`) and visitor ☆ (`fav`). */
+  github: {
+    star: { zh: "Star", en: "Star" },
+    cta: { zh: "给本项目点个 Star", en: "Star this project on GitHub" },
+    title: {
+      zh: "在 GitHub 给 mostdesign01-sudo/grokbot-use-cases 点 Star",
+      en: "Star mostdesign01-sudo/grokbot-use-cases on GitHub",
+    },
+    footer: {
+      zh: "觉得有用？去 GitHub 给本项目点个 Star",
+      en: "Find this useful? Star the project on GitHub",
+    },
+  },
   search: {
     button: { zh: "搜索", en: "Search" },
     currentLib: { zh: "搜索当前库", en: "Search this library" },
