@@ -73,8 +73,8 @@
       "slug": "kydlikebtc-awesome-grokbot-shares",
       "title": "awesome-grokbot：661 条可点进的 x.ai/bot 分享目录",
       "titleEn": "awesome-grokbot: 661 live x.ai/bot share catalog",
-      "summary": "kydlikebtc 维护的双语目录：661 条可点进的公开 x.ai/bot 分享（2026-09-08 全量链路核查），带可搜索站点、catalog.json、docs/vetting.md 导入前清单与 docs/routine.md 侦察 routine。与已收录的 ZeroPointRepo/awesome-grok-bot（Skill / Plugin / MCP）不是同一件事——本条是 live bot 分享索引。",
-      "summaryEn": "kydlikebtc’s bilingual catalog of 661 clickable public x.ai/bot shares (all links status-checked 2026-09-08), with a searchable site, catalog.json, docs/vetting.md import checklist, and docs/routine.md scout routine. Distinct from the already-listed ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP) — this indexes live bot shares.",
+      "summary": "kydlikebtc 维护的双语目录：661 条可点进的公开 x.ai/bot 分享（2026-09-08 全量链路核查），带可搜索站点、catalog.json、docs/vetting.md 导入前清单与 docs/routine.md 侦察 routine。与已收录的 ZeroPointRepo/awesome-grok-bot（Skill / Plugin / MCP）不是同一件事——本条是 live bot 分享索引。仓库公开页显示约 295 star（2026-09-09 核对）。",
+      "summaryEn": "kydlikebtc’s bilingual catalog of 661 clickable public x.ai/bot shares (all links status-checked 2026-09-08), with a searchable site, catalog.json, docs/vetting.md import checklist, and docs/routine.md scout routine. Distinct from the already-listed ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP) — this indexes live bot shares. Public repo page shows ~295 GitHub stars (checked 2026-09-09).",
       "sourceUrl": "https://github.com/kydlikebtc/awesome-grokbot",
       "secondaryUrls": [
         "https://kydlikebtc.github.io/awesome-grokbot/",
@@ -98,7 +98,6 @@
       "hasSkill": true,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "stars": 295,
       "qualityNote": "社区分享目录，条目未逐一背书。README 写明社区 bot 不可信、同账号共享一台电脑。导入前先读 docs/vetting.md。与 ZeroPointRepo/awesome-grok-bot（Skill/Plugin/MCP 目录）不是同一仓库。",
       "qualityNoteEn": "Community share catalog — individual bots are not endorsed. README warns shares are untrusted and all bots on one account share a single computer; read docs/vetting.md before importing. Distinct from ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP directory).",
       "publishedAt": "2026-09-09",
