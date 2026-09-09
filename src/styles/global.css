@@ -2715,6 +2715,16 @@ html[data-theme="light"] .home-plaza {
   gap: 12px;
 }
 
+.model-grid-related {
+  max-width: 34rem;
+}
+
+@media (min-width: 720px) {
+  .model-grid-related {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .model-card .model-card-media {
   margin: 4px 0 2px;
 }

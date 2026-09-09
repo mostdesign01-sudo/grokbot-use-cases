@@ -3,6 +3,7 @@ import Badge from "../../components/Badge.astro";
 import CaseCard from "../../components/CaseCard.astro";
 import FavButton from "../../components/FavButton.astro";
 import Loc from "../../components/Loc.astro";
+import ModelCard from "../../components/ModelCard.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
@@ -10,6 +11,7 @@ import { ui } from "../../lib/i18n";
 import {
   getOfficialSources,
   getRelatedCasesForModel,
+  getRelatedModels,
   getShowcaseSources,
   listModels,
   models,
@@ -28,6 +30,7 @@ const official = getOfficialSources(item);
 const showcase = getShowcaseSources(item);
 const hasCommunity = showcase.some((source) => source.kind === "community");
 const relatedCases = getRelatedCasesForModel(item);
+const relatedModels = getRelatedModels(item);
 const highlights = item.highlights ?? [];
 const preview = assetUrl(item.previewImage);
 
@@ -137,6 +140,20 @@ const kindBadge = (kind: string) => (kind === "official" ? "official" : kind ===
                   </li>
                 ))}
               </ul>
+            </section>
+          )
+        }
+
+        {
+          relatedModels.length > 0 && (
+            <section class="section">
+              <h2><Loc zh={ui.model.relatedModels.zh} en={ui.model.relatedModels.en} /></h2>
+              <p class="combo-tease"><Loc zh={ui.model.relatedModelsHint.zh} en={ui.model.relatedModelsHint.en} /></p>
+              <div class="model-grid model-grid-related">
+                {relatedModels.map((relatedItem) => (
+                  <ModelCard model={relatedItem} />
+                ))}
+              </div>
             </section>
           )
         }

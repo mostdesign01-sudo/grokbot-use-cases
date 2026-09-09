@@ -194,6 +194,11 @@ for (const model of modelsDataset.models) {
   for (const id of model.relatedCaseIds ?? []) {
     if (!caseIds.has(id)) missing.push(`models.json relatedCaseId not found: ${model.id} → ${id}`);
   }
+  for (const id of model.relatedModelIds ?? []) {
+    if (id === model.id || !modelsDataset.models.some((other) => other.id === id)) {
+      missing.push(`models.json relatedModelId not found: ${model.id} → ${id}`);
+    }
+  }
 }
 
 const previewItems = [
@@ -303,6 +308,18 @@ const modelsIndex = await readFile(new URL("../dist/models/index.html", import.m
 if (!modelsIndex.includes("models/gpt-6-astra/") || !modelsIndex.includes("GPT-6 Astra")) {
   console.error("models/ is missing the GPT-6 Astra card.");
   process.exit(1);
+}
+
+{
+  const linked = modelsDataset.models.find((model) => (model.relatedModelIds ?? []).length > 0);
+  if (linked) {
+    const page = await readFile(new URL(`../dist/models/${linked.slug}/index.html`, import.meta.url), "utf8");
+    const target = modelsDataset.models.find((model) => model.id === linked.relatedModelIds[0]);
+    if (!page.includes("同板相关") || !page.includes(`models/${target.slug}/`)) {
+      console.error(`models/${linked.slug}/ is missing the 同板相关 section linking to models/${target.slug}/.`);
+      process.exit(1);
+    }
+  }
 }
 
 if (!home.includes("核验精选") || !home.includes("plaza-position")) {

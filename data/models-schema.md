@@ -4,6 +4,8 @@
 
 首条是 GPT-6 Astra；之后的模型按同一结构追加。已在 `data/cases.json` 以「AI 资讯」收录过的模型（如 Claude Fable 5.1）可以只写短卡，用 `relatedCaseIds` 指回库内条目，不重复正文。
 
+值得单独看的社区 demo（如 Astra 复刻迷你 LOL）也可以开一张卡：`official` 源仍指厂商模型页（满足「至少一条 official」），`community` 源指作者原帖与中文转述帖；用 `relatedModelIds` 与模型卡互指。demo 卡只记「模型能力展示」，不是可下载的游戏，也不为第三方 IP 背书。
+
 ## 顶层
 
 | 字段 | 类型 | 说明 |
@@ -40,6 +42,7 @@
 | `qualityNote` | string | 收录理由 / 核实边界：哪些是厂商自述、哪些是社区自述、哪个 URL 没能确认 |
 | `qualityNoteEn` | string | 英文收录理由 |
 | `relatedCaseIds` | string[] | 必须是 `data/cases.json` 里已有的 `id`；用于指回已有 AI 资讯条目 |
+| `relatedModelIds` | string[] | 可选，同板其他卡的 `id`（不能指自己）；社区 demo 卡指回它跑的模型，模型卡指向 demo。详情页以「同板相关」区块渲染整卡 |
 | `previewImage` | string | 可选，`/previews/{id}.webp`；可复用已有预览 |
 | `previewCredit` | string | 可选，预览图出处（中文），如「YouWare X 视频封面」 |
 | `previewCreditEn` | string | 可选，预览图出处（英文） |

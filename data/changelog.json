@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-09",
+      "title": "最新模型：收录 Astra 复刻迷你 LOL（社区 demo 卡）",
+      "body": "按 Hao 要求收录 @LufzzLiz（岚叔）9 月 8 日中文帖。没塞进 GPT-6 Astra 的来源里，而是在模型看板开一张社区 demo 卡 /models/astra-mini-lol/：主源指作者 @konstiwohlwend 的 X 视频帖（约 44 秒，「让 Astra 照抄 LoL，它真做出来了」），次源指岚叔中文转述与两步提示词（先做 5 英雄的完整 LOL；再骂回去「廉价山寨」，要先写计划、按真实尺寸机制实现、UI 原生不许 HTML 贴）；official 源仍是 OpenAI Astra 公告，只作所用模型页。作者说提示词在回复里，本库抓不到，故提示词标为岚叔中文转述。收录边界：作者自述 + 短视频，无可玩构建，玩法深度未核实；英雄联盟 IP 属 Riot，只记模型能力展示，不分发游戏文件；不写任何编造数字，不打星。预览取作者视频封面（选人界面 Ahri，裁掉黑边）。同时 models.json 新增可选 relatedModelIds：demo 卡与 GPT-6 Astra 卡互指，详情页多一个「同板相关」区块渲染整卡。models 2→3，数据版本 1.1.0。",
+      "titleEn": "Models: Astra recreates a mini LoL (community demo card)",
+      "bodyEn": "At Hao’s request, catalogued @LufzzLiz’s 8 Sept Chinese post. Rather than stuffing it into GPT-6 Astra’s sources, it gets its own community-demo card on the models board, /models/astra-mini-lol/: primary source is the author @konstiwohlwend’s X video post (~44s, “asked Astra to copy LoL and it actually did”); secondary is @LufzzLiz’s Chinese write-up with the two-step prompt (first a full LoL-like game with 5 champions; then push back “cheap clone” — plan first, real scale and mechanics, native UI, no HTML overlay); the official source stays the OpenAI Astra announcement, as the page for the model used only. The author says the prompt is in a reply this library could not fetch, so the prompt is labelled as @LufzzLiz’s Chinese rendering. Boundaries: author claim plus a short video, no playable build, depth of play unverified; League of Legends IP belongs to Riot, so this records a model-capability showcase and distributes no game files; no invented numbers, unrated. Preview is the author’s video poster (champion select, Ahri, black band cropped). models.json also gains an optional relatedModelIds: the demo card and the GPT-6 Astra card point at each other, and detail pages get a “Related on this board” block rendering the full card. Models 2→3, dataset version 1.1.0."
+    },
+    {
+      "date": "2026-09-09",
       "title": "站点：给本项目点个 GitHub Star",
       "body": "Hao 澄清「打星」指的是给 GitHub 项目 mostdesign01-sudo/grokbot-use-cases 点 Star，于是加一组站内推荐入口，全部指向公开仓库页。三处：站头导航右侧一枚紧凑的 GitHub「Star」药丸；首页左栏三库入口下方一张「给本项目点个 Star」小卡，写明仓库名与一句说明；页脚第一栏一行「觉得有用？去 GitHub 给本项目点个 Star」。Star 数由浏览器直接读 GitHub 公开 API 后填入，本机缓存一小时，读不到或为 0 就不显示，不编数字。这是给仓库点 Star，与卡片上的 ★ 编辑星级（JSON 里的 stars）和 ☆ 访客收藏（localStorage / /favorites/）是三回事，后两者原样保留。静态站，无密钥，只用公开 URL。",
       "titleEn": "Site: Star this project on GitHub",
