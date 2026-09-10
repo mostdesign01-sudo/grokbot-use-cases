@@ -1,11 +1,71 @@
 {
   "meta": {
-    "updatedAt": "2026-09-09T01:15:00Z",
+    "updatedAt": "2026-09-10T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.16",
-    "count": 44
+    "version": "1.3.17",
+    "count": 46
   },
   "items": [
+    {
+      "id": "shadcss",
+      "slug": "shadcss",
+      "title": "shadcss：无 JS 的 shadcn 风 HTML/CSS 组件",
+      "titleEn": "shadcss: shadcn-look HTML/CSS with zero JS framework",
+      "summary": "russfranky 的 MIT 组件库：把 shadcn/ui 视觉搬到纯 HTML/CSS（`:has()`、Popover API、原生 dialog、设计 token），面向 SSR / HTMX / Astro / AI 生成页。演示站公开可打开，声称数十个组件、gzip 十多 KB、零运行时依赖。",
+      "summaryEn": "russfranky’s MIT kit: shadcn/ui visuals in plain HTML/CSS (`:has()`, Popover API, native dialog, design tokens) for SSR / HTMX / Astro / AI-generated pages. Public demo; dozens of components, ~tens of KB gzipped, zero JS runtime.",
+      "sourceUrl": "https://shadcss.vercel.app/",
+      "secondaryUrls": [
+        "https://github.com/russfranky/shadcss-ui",
+        "https://shadcss.vercel.app/docs/"
+      ],
+      "previewImage": "/previews/shadcss.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "css",
+        "html",
+        "shadcn",
+        "zero-js",
+        "ai-apps"
+      ],
+      "featured": true,
+      "qualityNote": "演示与 GitHub 公开可打开（MIT）。组件数/体积以站点当日自述为准。",
+      "qualityNoteEn": "Demo and GitHub are publicly open (MIT). Component counts/size are the site’s own claims on the day checked.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
+    {
+      "id": "nissy-girl",
+      "slug": "nissy-girl",
+      "title": "NissyGirl：纯 HTML/CSS 的 3D 掌机演示",
+      "titleEn": "NissyGirl: a 3D handheld console rendered in HTML/CSS",
+      "summary": "tanishalfelven 的公开演示：用 HTML/CSS 做可交互 3D 掌机壳体与卡带流程，配自研小游戏引擎（PixiJS 画屏）与触控优先操控。Show HN 可对上；仓库开源可点进。",
+      "summaryEn": "tanishalfelven’s public demo: an interactive 3D handheld shell and cartridge flow in HTML/CSS, plus a small game engine (PixiJS for the screen) and touch-first controls. Tied to a Show HN; source is open on GitHub.",
+      "sourceUrl": "https://nissygirl.com/",
+      "secondaryUrls": [
+        "https://github.com/tanishalfelven/nissy-girl/",
+        "https://news.ycombinator.com/item?id=49611054"
+      ],
+      "previewImage": "/previews/nissy-girl.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "html",
+        "css",
+        "3d",
+        "gameboy",
+        "hacker-news"
+      ],
+      "featured": true,
+      "qualityNote": "HN item 49611054。演示站与 GitHub 公开可打开。来自 Hacker News。",
+      "qualityNoteEn": "HN item 49611054. Demo and GitHub are publicly open. From Hacker News.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
     {
       "id": "maple-css",
       "slug": "maple-css",

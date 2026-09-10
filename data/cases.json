@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-09T01:15:00Z",
+    "updatedAt": "2026-09-10T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.15",
-    "count": 99,
+    "version": "1.4.16",
+    "count": 101,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -64,10 +64,82 @@
       "https://github.com/kydlikebtc/awesome-grokbot",
       "https://kydlikebtc.github.io/awesome-grokbot/",
       "https://continuumcode.ai/guides/grok-bot-routines/",
-      "https://docs.x.ai/grok-bot/overview"
+      "https://docs.x.ai/grok-bot/overview",
+      "https://github.com/jcpsimmons/gbdl",
+      "https://news.ycombinator.com/item?id=49628911",
+      "https://github.com/shrdgn/grokbot-skills"
     ]
   },
   "cases": [
+    {
+      "id": "gbdl-definition-language",
+      "slug": "jcpsimmons-gbdl",
+      "title": "GBDL：一文件保存多智能体 Grok Bot 编排",
+      "titleEn": "GBDL: one Markdown+YAML file to save a multi-agent Grok Bot setup",
+      "summary": "jcpsimmons 的社区提案（MIT，v0.1）：用一份 `.gbdl.md`（Markdown 引言 + 单一 YAML fence）描述调度者、专精 Bot、connectors、onboarding、memory 与 routines，便于进 git / 换机复原。附 minimal / ops-team / media-studio 示例、JSON Schema 与 reinstate 顺序。非官方格式，但可复现；密钥不得写入文件。",
+      "summaryEn": "jcpsimmons’s community proposal (MIT, v0.1): one `.gbdl.md` (Markdown intro + a single YAML fence) captures dispatcher, specialists, connectors, onboarding, memory, and routines so a fleet can be checked into git or rebuilt on a new machine. Ships minimal / ops-team / media-studio examples, a JSON Schema, and a reinstate order. Unofficial — reproducible, but keep secrets out of the file.",
+      "sourceUrl": "https://github.com/jcpsimmons/gbdl",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49628911",
+        "https://raw.githubusercontent.com/jcpsimmons/gbdl/main/SPEC.md",
+        "https://raw.githubusercontent.com/jcpsimmons/gbdl/main/examples/ops-team.gbdl.md"
+      ],
+      "sourceType": "community",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Fleet definition / portability",
+      "language": "en",
+      "difficulty": "intermediate",
+      "featured": true,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "connectors": [
+        "email",
+        "files",
+        "notion"
+      ],
+      "qualityNote": "HN Show 49628911（2026-09-09）。公开仓库约 2 star（2026-09-10 核对）。规格与示例可照抄；加载器需自备或手搓 reinstate。",
+      "qualityNoteEn": "HN Show 49628911 (2026-09-09). Public repo ~2 GitHub stars (checked 2026-09-10). Spec + examples are copyable; you still need a loader or a manual reinstate.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
+    {
+      "id": "shrdgn-grokbot-skills",
+      "slug": "shrdgn-grokbot-skills",
+      "title": "grokbot-skills：74 条可挂 Routine 的技能配方库",
+      "titleEn": "grokbot-skills: 74 ready-to-run Grok Bot skill recipes",
+      "summary": "shrdgn 维护的技能目录：74 条 / 12 类，统一 Inputs·Steps·Decision rules·DoD·Safety·Suggested routine 六段；另有 Founder / Sales / Marketer 等 role packs 与 `catalog.json`。审批优先、安静默认、禁止编造数据写进原则。与 ZeroPointRepo/awesome-grok-bot（Skill/Plugin/MCP 索引）互补——本条是可直接粘贴的 SKILL.md 配方。",
+      "summaryEn": "shrdgn’s skill library: 74 recipes across 12 categories with a fixed six-section body (Inputs, Steps, Decision rules, DoD, Safety, Suggested routine), plus Founder/Sales/Marketer-style role packs and catalog.json. Approval-first, quiet-when-clean, no invented data. Complements ZeroPointRepo/awesome-grok-bot (skill/plugin/MCP index) — this one ships pasteable SKILL.md recipes.",
+      "sourceUrl": "https://github.com/shrdgn/grokbot-skills",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49537739",
+        "https://raw.githubusercontent.com/shrdgn/grokbot-skills/main/catalog.json"
+      ],
+      "sourceType": "community",
+      "categories": [
+        "ops",
+        "automation",
+        "multi-agent"
+      ],
+      "role": "Skill library",
+      "language": "en",
+      "difficulty": "starter",
+      "featured": true,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [],
+      "qualityNote": "HN 49537739。2026-09-10 核对 README 自称 74 skills；公开页约 1 star。仓库未标 SPDX 许可证，收录为社区配方参考，使用前自行确认许可。",
+      "qualityNoteEn": "HN 49537739. README claims 74 skills (checked 2026-09-10); public page ~1 GitHub star. No SPDX license on the repo — treat as community recipes and confirm licensing before reuse.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
     {
       "id": "awesome-grokbot-shares",
       "slug": "kydlikebtc-awesome-grokbot-shares",

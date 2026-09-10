@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-10",
+      "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
+      "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
+      "body": "Grok Bot 增收 GBDL（一文件 Markdown+YAML 保存多智能体编排，HN 49628911）与 grokbot-skills（74 条可挂 Routine 的技能配方，HN 49537739）。HTML 增收 shadcss（零 JS 的 shadcn 风组件）与 NissyGirl 纯 HTML/CSS 掌机演示（HN 49611054）。Agent UI 增收 ThreeUI Community：Energy Orb · Globe、Elements · Generative Tree。X @bot 网页侧未见新的可复现用法帖。",
+      "bodyEn": "Grok Bot: GBDL one-file fleet definition (HN 49628911) + grokbot-skills 74 pasteable recipes (HN 49537739). HTML: shadcss zero-JS shadcn-look kit + NissyGirl HTML/CSS handheld (HN 49611054). Agent UI: ThreeUI Community Energy Orb · Globe and Elements · Generative Tree. No new reproducible @bot usage posts from the public web pass."
+    },
+    {
       "date": "2026-09-09",
       "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
       "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",

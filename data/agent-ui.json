@@ -1,11 +1,78 @@
 {
   "meta": {
-    "updatedAt": "2026-09-09T01:15:00Z",
+    "updatedAt": "2026-09-10T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.8",
-    "count": 38
+    "version": "1.4.9",
+    "count": 40
   },
   "items": [
+    {
+      "id": "energy-orb",
+      "slug": "energy-orb",
+      "title": "Energy Orb · Globe",
+      "titleEn": "Energy Orb · Globe",
+      "summary": "ThreeUI Community 能量球体背景：分层 FBM 球体、边缘辉光与星场，适合 Agent 面板的 WebGL 氛围底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community energy globe background: layered FBM sphere, rim glow, and star field for Agent-panel WebGL atmosphere. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/backgrounds/energy-orb/energy-orb",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/energy-orb.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Energy Orb 的免费 Globe 变体做 Agent 面板氛围底。保持 Community 变体，只改色相与不透明度。",
+      "promptHintEn": "Use the free Energy Orb Globe variant as an Agent-panel atmosphere. Keep the Community variant; only retint hue and opacity.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "webgl",
+        "background",
+        "globe"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费背景（无 PRO 角标）。复制 prompt 只改色相/透明度，不要手写着色器。",
+      "qualityNoteEn": "Free Community background (no PRO badge). Copy the prompt and only retint hue/opacity — do not hand-write the shader.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
+    {
+      "id": "generative-tree",
+      "slug": "generative-tree",
+      "title": "Elements · Generative Tree",
+      "titleEn": "Elements · Generative Tree",
+      "summary": "ThreeUI Community Elements 变体：画笔感树枝从赭石长到金尖，指针风吹并掉落微粒。适合 Agent 等待/氛围页。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community Elements variant: a painterly branching tree grows from warm sienna to golden tips, sways with pointer wind, and sheds motes — good for Agent wait/atmosphere pages. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/backgrounds/elements/generative-tree",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/generative-tree.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Elements 的免费 Generative Tree 做 Agent 氛围页。保持 Community 变体，只改色相与粒子量。",
+      "promptHintEn": "Use the free Elements Generative Tree for an Agent atmosphere page. Keep the Community variant; only retint hue and particle amount.",
+      "types": [
+        "background",
+        "threejs",
+        "motion"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "webgl",
+        "tree",
+        "background"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费 Elements 变体（无 PRO 角标）。复制 prompt 只改色相与粒子，不要手写动效。",
+      "qualityNoteEn": "Free Community Elements variant (no PRO badge). Copy the prompt and only retint hue / particles — do not hand-write motion.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T01:40:00Z"
+    },
     {
       "id": "performance-gauges",
       "slug": "performance-gauges",
