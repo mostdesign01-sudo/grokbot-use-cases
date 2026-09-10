@@ -1,11 +1,91 @@
 {
   "meta": {
-    "updatedAt": "2026-09-09T00:50:00Z",
+    "updatedAt": "2026-09-10T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.0",
-    "count": 3
+    "version": "1.1.1",
+    "count": 4
   },
   "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "slug": "deepseek-v4-1-flash",
+      "name": "DeepSeek-V4.1-Flash",
+      "vendor": "DeepSeek",
+      "title": "DeepSeek-V4.1-Flash（DeepSeek）",
+      "titleEn": "DeepSeek-V4.1-Flash (DeepSeek)",
+      "summary": "DeepSeek 于 2026-09-10 正式发布的新架构家族最小型号，原生多模态视觉理解。官方称 552B MoE、非对称 Causal Encoder–Decoder（输入约 8B / 输出约 16B 活跃参数），API 模型名 `deepseek-flash`；旧名 `deepseek-v4-flash` / `deepseek-v4-flash-vision-exp` 暂时路由到本模型。官方称多项测试上优于 V4-Pro，计划自 2026-09-14 北京时间 12:00 起将 `deepseek-v4-pro` 请求路由到 V4.1-Flash 并按 Flash 计价，直至 V4.1-Pro。基准分与缓存压缩数字一律标「官方称」，本库未复跑。",
+      "summaryEn": "DeepSeek’s new-architecture family’s smallest model, officially released 2026-09-10, with native multimodal visual understanding. Vendor claims: 552B-parameter MoE with an asymmetric Causal Encoder–Decoder (about 8B active parameters for input / 16B for output); API model name `deepseek-flash`; the old names `deepseek-v4-flash` / `deepseek-v4-flash-vision-exp` temporarily route here. DeepSeek says it beats V4-Pro on multiple tests and plans, from 12:00 Beijing time on 2026-09-14, to route `deepseek-v4-pro` requests to V4.1-Flash at Flash pricing until V4.1-Pro ships. Benchmark and cache-compression figures are all labelled vendor claims; not re-run by this library.",
+      "announcedAt": "2026-09-10",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T12:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "DeepSeek 新闻：V4.1-Flash 发布",
+          "labelEn": "DeepSeek news: V4.1-Flash release",
+          "url": "https://api-docs.deepseek.com/news/news260910",
+          "by": "DeepSeek",
+          "date": "2026-09-10"
+        },
+        {
+          "kind": "official",
+          "label": "DeepSeek API Change Log（2026-09-10）",
+          "labelEn": "DeepSeek API Change Log (2026-09-10)",
+          "url": "https://api-docs.deepseek.com/updates",
+          "by": "DeepSeek",
+          "date": "2026-09-10"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型页：deepseek-ai/DeepSeek-V4.1-Flash",
+          "labelEn": "Hugging Face model page: deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "by": "DeepSeek-AI",
+          "date": "2026-09-10"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：DeepSeek v4.1 Flash",
+          "labelEn": "Hacker News discussion: DeepSeek v4.1 Flash",
+          "url": "https://news.ycombinator.com/item?id=49639090",
+          "by": "Hacker News",
+          "date": "2026-09-10"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：API 模型名改为 `deepseek-flash`，原生多模态已上线；V4-Flash 与 V4-Flash-Vision-Exp 退役，旧名 `deepseek-v4-flash` / `deepseek-v4-flash-vision-exp` 暂时路由到 V4.1-Flash。",
+          "textEn": "Vendor claim: set the API model to `deepseek-flash`; native multimodal is live. V4-Flash and V4-Flash-Vision-Exp are retired; `deepseek-v4-flash` / `deepseek-v4-flash-vision-exp` temporarily route to V4.1-Flash."
+        },
+        {
+          "text": "官方称：552B 参数 MoE，新 Causal Encoder–Decoder 架构，输入侧仅 8B、输出侧 16B 活跃参数；新家族最小型号，带原生视觉理解。",
+          "textEn": "Vendor claim: 552B-parameter MoE with a new Causal Encoder–Decoder architecture — 8B active parameters for input, 16B for output; the smallest model in the new family, with native visual understanding."
+        },
+        {
+          "text": "官方称：与上一代相比 KV cache 只需 1/4 HBM、1/8 SSD 存储；缓存命中费用在 Agent 成本里占比大，压缩缓存可显著降本。",
+          "textEn": "Vendor claim: versus the previous generation the KV cache needs 1/4 the HBM and 1/8 the SSD storage; cache-hit charges are a large share of agent costs, so compressing the cache cuts them significantly."
+        },
+        {
+          "text": "官方称：Change Log 列出 GPQA Diamond 90.9、HLE 36.8（纯文本子集 39.1）、Codeforces Rating 3471、Terminal-Bench 2.1 90.6、DeepSWE v1.1 74.2 等；本库未复跑。",
+          "textEn": "Vendor claim: the Change Log lists GPQA Diamond 90.9, HLE 36.8 (39.1 on the pure-text subset), Codeforces rating 3471, Terminal-Bench 2.1 90.6, DeepSWE v1.1 74.2, among others; not re-run here."
+        },
+        {
+          "text": "官方称：V4-Pro 将有序退役 — 2026-09-14 北京时间 12:00（04:00 UTC）起，所有 `deepseek-v4-pro` 请求路由到 V4.1-Flash 并按 V4.1-Flash 价格计费，直至 V4.1-Pro 发布。",
+          "textEn": "Vendor claim: V4-Pro is being phased out — from 12:00 Beijing time (04:00 UTC) on 2026-09-14, all `deepseek-v4-pro` requests route to V4.1-Flash and bill at V4.1-Flash rates until V4.1-Pro launches."
+        },
+        {
+          "text": "官方称：API 价格随发布下调，2026-09-10 04:00 UTC 生效；沿用峰谷计价，谷时为峰时价的 50%。具体数字以 Models & Pricing 当日页为准。",
+          "textEn": "Vendor claim: API prices cut with the release, effective 04:00 UTC on 2026-09-10; peak/off-peak pricing continues, off-peak at 50% of peak. See the Models & Pricing page for the day’s figures."
+        }
+      ],
+      "qualityNote": "来源为 DeepSeek 官方文档（新闻页与 API Change Log）与 Hugging Face 模型页；基准与架构数字均为厂商自述，本库未独立复测；定价以 Models & Pricing 当日页为准。HN 讨论帖只作社区热度参考，其链接指向 DeepSeek 官方 X 帖。预览图取自 DeepSeek 官方文档社交卡，非本模型专图。",
+      "qualityNoteEn": "Sources are DeepSeek’s official docs (news page and API Change Log) plus the Hugging Face model page; benchmark and architecture figures are vendor claims, not independently re-tested here; pricing per the Models & Pricing page on the day. The HN thread is only a community-interest pointer and links to DeepSeek’s official X post. Preview is DeepSeek’s docs social card, not a model-specific image.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/deepseek-v4-1-flash.webp",
+      "previewCredit": "预览：DeepSeek 官方文档社交卡",
+      "previewCreditEn": "Preview: DeepSeek docs social card",
+      "featured": true
+    },
     {
       "id": "gpt-6-astra",
       "slug": "gpt-6-astra",

@@ -1,11 +1,71 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T01:40:00Z",
+    "updatedAt": "2026-09-10T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.17",
-    "count": 46
+    "version": "1.3.18",
+    "count": 48
   },
   "items": [
+    {
+      "id": "relativity-park",
+      "slug": "relativity-park",
+      "title": "Relativity Park：光速降到步行时的狭义相对论",
+      "titleEn": "Relativity Park: special relativity when light walks",
+      "summary": "Dmitry Brant 的公开互动演示：把光速压到 5 km/h（约步行速度），在公园视角里用 WASD 加速，观察洛伦兹收缩、光行差、多普勒变色与相对论光束效应，各效应可单独开关。Show HN 当日上过热榜（item 49637385）；纯前端可打开，无需登录。",
+      "summaryEn": "Dmitry Brant’s public interactive demo: the speed of light is set to 5 km/h (a brisk walk); accelerate with WASD through a park and watch length contraction, aberration, Doppler colour shift, and relativistic beaming, each toggleable. Hit the Show HN front page the same day (item 49637385); pure front-end, no login.",
+      "sourceUrl": "https://rivendell.dmitrybrant.com/relativity/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49637385"
+      ],
+      "previewImage": "/previews/relativity-park.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "physics",
+        "relativity",
+        "canvas",
+        "demo",
+        "show-hn"
+      ],
+      "featured": true,
+      "qualityNote": "HN item 49637385（Show HN: What if the speed of light was 5 km/h?）。演示公开可打开；物理教学用途，非论文复现。预览来自现场截图（无 og:image）。",
+      "qualityNoteEn": "HN item 49637385 (Show HN: What if the speed of light was 5 km/h?). Demo is publicly open; physics-teaching demo, not a paper reproduction. Preview is a live screenshot (site has no og:image).",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T12:00:00Z"
+    },
+    {
+      "id": "roadwright",
+      "slug": "roadwright",
+      "title": "Roadwright：画轮子，看它滚出的路面",
+      "titleEn": "Roadwright: draw a wheel, see the road it rolls on",
+      "summary": "Basel Ashraf 的浏览器几何小品：手绘（或选一个）轮子轮廓并放好轴心，即时算出该轮无滑滚动时对应的路面曲线，可调滚速、双轮轴距、路面倾斜，并导出 PNG / 切割文件 / 录制循环。纯前端互动；Show HN item 49641755，仓库开源。",
+      "summaryEn": "Basel Ashraf’s browser geometry toy: draw (or pick) a wheel outline, place its axle, and instantly get the road profile it rolls on without slipping; adjust roll speed, two-wheel wheelbase and road tilt, and export PNG / cut files / a recorded loop. Pure front-end interactive; Show HN item 49641755, source on GitHub.",
+      "sourceUrl": "https://baselashraf.com/roadwright/",
+      "secondaryUrls": [
+        "https://github.com/BaselAshraf81/roadwright",
+        "https://news.ycombinator.com/item?id=49641755"
+      ],
+      "previewImage": "/previews/roadwright.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "geometry",
+        "canvas",
+        "wheel",
+        "math",
+        "demo",
+        "show-hn"
+      ],
+      "featured": true,
+      "qualityNote": "HN item 49641755（Show HN: Draw a wheel. See the road it rolls on）。公开可打开，GitHub 可点进。预览由站点 og 图（1200×630）加边裁成 3:2。",
+      "qualityNoteEn": "HN item 49641755 (Show HN: Draw a wheel. See the road it rolls on). Publicly open; GitHub repo linked. Preview is the site’s og image (1200×630) letterboxed to 3:2.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T12:00:00Z"
+    },
     {
       "id": "shadcss",
       "slug": "shadcss",

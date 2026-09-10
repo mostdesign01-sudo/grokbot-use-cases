@@ -1,11 +1,79 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T01:40:00Z",
+    "updatedAt": "2026-09-10T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.9",
-    "count": 40
+    "version": "1.4.10",
+    "count": 42
   },
   "items": [
+    {
+      "id": "matrix-field",
+      "slug": "matrix-field",
+      "title": "Matrix Junction · Laser",
+      "titleEn": "Matrix Junction · Laser",
+      "summary": "ThreeUI Community 指针响应激光矩阵背景：Laser 家族 4 个免费变体（Matrix Junction / Atmospheric Blade / Vanishing Array / Halftone Relay），Raw WebGL 单 pass，可调速度、尺寸、长度、密度、色相与不透明度，适合 Agent 面板氛围底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community pointer-reactive laser matrix background: four free Laser-family variants (Matrix Junction / Atmospheric Blade / Vanishing Array / Halftone Relay), single raw-WebGL pass with live speed, size, length, density, hue and opacity controls — fits an Agent-panel atmosphere base. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/backgrounds/matrix-field/matrix-field",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/matrix-field.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Matrix Field 的免费 Matrix Junction 变体做 Agent 面板背景。保持 Community 变体，只改色相与密度。",
+      "promptHintEn": "Use the free Matrix Junction variant of Matrix Field as an Agent-panel background. Keep the Community variant; only retint hue and density.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "webgl",
+        "background",
+        "laser",
+        "matrix"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费背景（无 PRO 角标，在 THREEUI 免费栏目下的 Laser 家族）。复制 prompt，勿手写着色器。预览为 ThreeUI 官方缩略图裁 3:2。",
+      "qualityNoteEn": "Free Community background (no PRO badge; Laser family under the free THREEUI section). Copy the prompt — do not hand-write the shader. Preview is ThreeUI’s official thumbnail cropped to 3:2.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T12:00:00Z"
+    },
+    {
+      "id": "liquid-metal-button",
+      "slug": "liquid-metal-button",
+      "title": "Liquid Metal Button · Pill",
+      "titleEn": "Liquid Metal Button · Pill",
+      "summary": "ThreeUI Community 液态金属 CTA：Sign up Pill / Liquid Orb / Play Circle 三个免费变体，Raw WebGL 2 + DOM/CSS 原生 button，指针跟随金属光谱与 bloom、按压出多面涟漪，支持 Enter/Space 触发与 reduced-motion 冻结。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community liquid-metal CTA: three free variants (Sign up Pill / Liquid Orb / Play Circle) on a native button with raw WebGL 2 + DOM/CSS — pointer-following spectral metal and bloom, faceted press ripples, Enter/Space activation and a reduced-motion freeze. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/buttons/liquid-metal-button/pill",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/liquid-metal-button.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Liquid Metal Button 的免费 Pill 变体做 Agent 主按钮。保持 Community，只改文案与色相。",
+      "promptHintEn": "Use the free Pill variant of Liquid Metal Button as the Agent primary button. Keep the Community variant; only change the label and hue.",
+      "types": [
+        "button",
+        "ui"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "webgl",
+        "button",
+        "cta",
+        "liquid-metal"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。预览为现场演示帧（指针悬停态）裁 3:2。",
+      "qualityNoteEn": "Free Community UI piece (no PRO badge; under Buttons in the free THREEUI section). Copy the prompt and only change label / hue — do not hand-write the shader. Preview is a live demo frame (pointer-hover state) cropped to 3:2.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-10T12:00:00Z"
+    },
     {
       "id": "energy-orb",
       "slug": "energy-orb",
