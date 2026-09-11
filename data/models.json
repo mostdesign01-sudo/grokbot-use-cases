@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T12:05:00Z",
+    "updatedAt": "2026-09-11T05:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.1",
-    "count": 4
+    "version": "1.1.2",
+    "count": 5
   },
   "models": [
     {
@@ -97,7 +97,7 @@
       "summaryEn": "OpenAI’s frontier model, announced 2026-09-03. Official pitch: computer use, browsing, software engineering, cybersecurity, science, and professional work; in ChatGPT, Sites builds and hosts websites, web apps, and games from one prompt; API name gpt-6-astra. Community side: on 8 Sept YouWare posted that it sorted 720+ community Astra builds (game prototypes, 3D worlds, product UIs, motion, sims), prompts included to replay on YouWare.",
       "announcedAt": "2026-09-03",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-09T00:50:00Z",
+      "updatedAt": "2026-09-11T05:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -157,7 +157,8 @@
       "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
       "relatedCaseIds": [],
       "relatedModelIds": [
-        "astra-mini-lol"
+        "astra-mini-lol",
+        "astra-tripo-3d-prompts"
       ],
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
@@ -229,6 +230,72 @@
       "previewImage": "/previews/astra-mini-lol.webp",
       "previewCredit": "预览：@konstiwohlwend X 视频封面（选人界面 · Ahri）",
       "previewCreditEn": "Preview: @konstiwohlwend X video poster (champion select · Ahri)",
+      "featured": false
+    },
+    {
+      "id": "astra-tripo-3d-prompts",
+      "slug": "astra-tripo-3d-prompts",
+      "name": "Tripo3D Astra 3D prompts",
+      "vendor": "OpenAI",
+      "title": "Tripo3D 上的 Astra 3D 提示词库（社区资源）",
+      "titleEn": "Astra 3D prompt gallery on Tripo3D (community resource)",
+      "summary": "社区资源：@cnyzgkc（木马人）9 月 9 日发帖称「分享一个 GPT-6 Astra 3D 提示词网站，拥有 200+ 的提示词，而且完全免费」，附约 28 秒录屏，链接指向 Tripo3D 的 Astra 3D 提示词页（中文路径）。该页汇集社区用 GPT-6 Astra 做出的 Blender 场景、Three.js 网站与浏览器游戏案例，每条列作品预览、作者、来源与提示词，并以「逐字 Prompt / 基于来源整理」标注证据等级，含 GitHub 仓库的案例可筛选。「200+」是发帖人的说法（录屏封面帧显示 201 条；本库 9 月 11 日打开时页面显示 215 条），本库未逐条复数。本卡只记第三方提示词画廊，不是模型卡，也不为 Tripo3D 产品背书。",
+      "summaryEn": "Community resource: on 9 Sept @cnyzgkc (木马人) posted “sharing a GPT-6 Astra 3D prompt site with 200+ prompts, completely free,” with a ~28s screen recording linking to Tripo3D’s Astra 3D prompts page (Chinese path). The page collects community Blender scenes, Three.js sites, and browser games built with GPT-6 Astra; each entry lists a preview, author, source, and prompt, with evidence labelled “verbatim prompt” vs “reconstructed from source,” and entries with GitHub repos can be filtered. “200+” is the poster’s claim (the recording’s poster frame shows 201; the page showed 215 when this library opened it on 11 Sept) — not re-counted item by item here. A third-party prompt-gallery card, not a model card, and no endorsement of Tripo3D’s product.",
+      "announcedAt": "2026-09-09",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T05:20:00Z",
+      "sources": [
+        {
+          "kind": "community",
+          "label": "作者原帖：分享 Astra 3D 提示词网站（X 视频帖）",
+          "labelEn": "Author’s original post: sharing an Astra 3D prompt site (X video post)",
+          "url": "https://x.com/cnyzgkc/status/2097663697149956278",
+          "by": "@cnyzgkc",
+          "date": "2026-09-09"
+        },
+        {
+          "kind": "product",
+          "label": "Tripo3D：GPT-6 Astra 3D 提示词页（中文）",
+          "labelEn": "Tripo3D: GPT-6 Astra 3D prompts page (Chinese)",
+          "url": "https://www.tripo3d.ai/zh/3d-prompts/models/gpt-6-astra",
+          "by": "Tripo3D"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 公告：GPT-6 Astra（所用模型）",
+          "labelEn": "OpenAI announcement: GPT-6 Astra (the model used)",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "by": "OpenAI",
+          "date": "2026-09-03"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "发帖人称：「200+ 提示词，完全免费」。录屏封面帧右上角显示「201 条提示词」，本库 9 月 11 日打开页面时显示「215 个可供改编的创作灵感」；三个数字分别是社区自称、录屏画面与产品页当日显示，本库均未逐条复数。",
+          "textEn": "Poster’s claim: “200+ prompts, completely free.” The poster frame of the recording shows “201 prompts” top right; the page read “215 adaptable ideas” when this library opened it on 11 Sept. The three figures are, respectively, a community claim, the recording frame, and the product page on the day — none re-counted here."
+        },
+        {
+          "text": "页面可核到的：案例分 Blender 场景、Three.js 网站、浏览器游戏 / 可探索世界三类，每条列作品预览、作者、来源与日期；页面 FAQ 自述用「逐字 Prompt」与「基于来源整理」区分证据等级，并称不声称拿到作者未公开的提示词。",
+          "textEn": "Visible on the page: entries grouped as Blender scenes, Three.js sites, and browser games / explorable worlds, each with a preview, author, source, and date; the page’s own FAQ says evidence is labelled “verbatim prompt” vs “reconstructed from source,” and that it does not claim prompts the author never published."
+        },
+        {
+          "text": "与同板 demo 卡有交集：页面里收有「复刻《英雄联盟》的迷你版3D游戏」（岚叔，9 月 8 日）与「复刻《英雄联盟》的网页版游戏」（李岳，9 月 8 日），且页面自己注明该提示词是推荐内容、不能确认为作品实际输入 — 与本库 Astra 复刻迷你 LOL 卡的边界一致。",
+          "textEn": "Overlaps the demo card on this board: the page lists “mini 3D League of Legends clone” (@LufzzLiz, 8 Sept) and “web-based League of Legends clone” (李岳, 8 Sept), and itself notes the prompt is a recommendation, not confirmed as the input actually used — the same boundary as this library’s Astra mini-LoL card."
+        },
+        {
+          "text": "「免费」：发帖人说法；页面自身也写「用上方的免费提示词复现并改造」，但 Tripo3D 主业是 3D 资产生成产品，页面带其产品入口。本库未测试是否有账号或付费门槛。",
+          "textEn": "“Free”: the poster’s wording; the page itself also says “reproduce and adapt with the free prompts above,” but Tripo3D’s core business is a 3D-asset generation product and the page carries its product entry points. Not tested here for sign-up or paywall gates."
+        }
+      ],
+      "qualityNote": "这是社区资源卡，不是模型卡：模型本体见同板的 GPT-6 Astra。主源是 @cnyzgkc（木马人）的 X 视频帖（约 28 秒录屏），「200+ 提示词、完全免费」是发帖人自述；产品源是 Tripo3D 的 Astra 提示词页（中文路径，2026-09-11 本库打开可达），条数以页面当日显示为准，本库未逐条复数，也未核实每条提示词与作品的对应关系。Tripo3D 是第三方 3D 生成产品的提示词画廊，页面带其自家产品入口，本库不为其背书，也未测试账号或付费门槛。OpenAI 公告只是所用模型的官方页，不涉及该画廊。预览图为发帖人 X 录屏封面（Tripo3D Astra 提示词页首屏，右上角可见「201 条提示词」）。不打星。",
+      "qualityNoteEn": "A community-resource card, not a model card: the model itself is the GPT-6 Astra card on this board. Primary source is @cnyzgkc’s (木马人) X video post (~28s screen recording); “200+ prompts, completely free” is the poster’s claim. The product source is Tripo3D’s Astra prompts page (Chinese path, reachable when this library opened it on 2026-09-11); the count is whatever the page shows on the day — not re-counted item by item here, and the mapping of each prompt to its showcased build is unverified. Tripo3D is a third-party prompt gallery run by a 3D-generation product, with its own product entry points on the page; this library does not endorse it and has not tested sign-up or paywall gates. The OpenAI announcement is only the official page for the model used; it does not cover this gallery. Preview is the poster’s X recording poster frame (top of the Tripo3D Astra prompts page, “201 prompts” visible top right). Unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra"
+      ],
+      "previewImage": "/previews/astra-tripo-3d-prompts.webp",
+      "previewCredit": "预览：@cnyzgkc X 录屏封面（Tripo3D Astra 提示词页首屏）",
+      "previewCreditEn": "Preview: @cnyzgkc X recording poster (top of the Tripo3D Astra prompts page)",
       "featured": false
     },
     {

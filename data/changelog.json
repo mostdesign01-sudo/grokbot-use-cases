@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-11",
+      "title": "最新模型：收录 Tripo3D 上的 Astra 3D 提示词库（社区资源卡）",
+      "titleEn": "Models: Astra 3D prompt gallery on Tripo3D (community resource card)",
+      "body": "按 Hao 要求收录 @cnyzgkc（木马人）9 月 9 日中文帖「分享一个 GPT-6 Astra 3D 提示词网站，拥有 200+ 的提示词，而且完全免费」。与 Astra 复刻迷你 LOL 同一做法：不塞进 GPT-6 Astra 的来源，而是在模型看板开一张社区资源卡 /models/astra-tripo-3d-prompts/。community 源指作者 X 视频帖（约 28 秒录屏），product 源指 Tripo3D 的 Astra 3D 提示词页（中文路径，2026-09-11 核到可达），official 源仍是 OpenAI Astra 公告，只作所用模型页。收录边界：「200+」「完全免费」是发帖人自称，录屏封面帧显示 201 条、当日页面显示 215 条，均未逐条复数；Tripo3D 是第三方 3D 生成产品的提示词画廊，页面带其产品入口，本库不背书、未测试账号或付费门槛。页面里也收有岚叔与李岳的「复刻英雄联盟」提示词，并自注为推荐内容、非确认输入，与本库 demo 卡边界一致。预览取发帖人录屏封面（Tripo3D 页首屏）。不打星。GPT-6 Astra 卡的 relatedModelIds 加上本卡，两卡互指。models 4→5，数据版本 1.1.2。",
+      "bodyEn": "At Hao’s request, catalogued @cnyzgkc’s (木马人) 9 Sept Chinese post: “sharing a GPT-6 Astra 3D prompt site with 200+ prompts, completely free.” Same treatment as the Astra mini-LoL demo: instead of stuffing it into GPT-6 Astra’s sources, it gets its own community-resource card on the models board, /models/astra-tripo-3d-prompts/. The community source is the author’s X video post (~28s screen recording); the product source is Tripo3D’s Astra 3D prompts page (Chinese path, confirmed reachable 2026-09-11); the official source stays the OpenAI Astra announcement, as the page for the model used only. Boundaries: “200+” and “completely free” are the poster’s claims; the recording’s poster frame shows 201 and the page showed 215 on the day — none re-counted item by item. Tripo3D is a third-party prompt gallery run by a 3D-generation product, with its own product entry points on the page; not endorsed here, sign-up and paywall gates untested. The page also lists the @LufzzLiz and 李岳 “League of Legends clone” prompts and itself marks them as recommendations, not confirmed inputs — matching this library’s demo-card boundary. Preview is the poster’s recording frame (top of the Tripo3D page). Unrated. GPT-6 Astra’s relatedModelIds gains this card, so the two point at each other. Models 4→5, dataset version 1.1.2."
+    },
+    {
+      "date": "2026-09-11",
       "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
       "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
       "body": "Grok Bot 增收 Young Urban Project《怎么用 Grok Bot》（真用例 vs 炒作，2026-09-09）与 Every Inc Compound Engineering 工程循环插件（README 写明 Grok Bot 共用 Cursor 插件库）。HTML 增收 DAUB（给 AI 的 CSS 组件库，llms.txt / MCP）与 njX UI（CDN 落地页 CSS）。Agent UI 增收 ThreeUI Community：3D Paper · Original、Woven Cloth · Woven Cloth。X @bot 网页侧未见新的可复现用法帖；HN 首页多为泛新闻，未塞进三库。",
