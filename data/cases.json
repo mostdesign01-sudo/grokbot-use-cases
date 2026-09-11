@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T01:40:00Z",
+    "updatedAt": "2026-09-11T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.16",
-    "count": 101,
+    "version": "1.4.17",
+    "count": 103,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -67,10 +67,87 @@
       "https://docs.x.ai/grok-bot/overview",
       "https://github.com/jcpsimmons/gbdl",
       "https://news.ycombinator.com/item?id=49628911",
-      "https://github.com/shrdgn/grokbot-skills"
+      "https://github.com/shrdgn/grokbot-skills",
+      "https://www.youngurbanproject.com/how-to-use-grok-bot/",
+      "https://github.com/everyinc/compound-engineering-plugin"
     ]
   },
   "cases": [
+    {
+      "id": "youngurban-how-to-use-grok-bot",
+      "slug": "youngurban-how-to-use-grok-bot",
+      "title": "Young Urban Project：怎么用 Grok Bot（真用例 vs 炒作）",
+      "titleEn": "Young Urban Project: How to Use Grok Bot (real cases vs hype)",
+      "summary": "Puneet Tandon 2026-09-09 长文：把 Grok Bot 与 Grok 聊天 / Automations 分开，走「幕僚长先窄任务」起步，并按可核验结果列出收件箱分拣、浏览器跑腿、会前会后、持续研究、销售跟进、客服退款、工程杂活等真用例；对照 Hermes / OpenClaw 与 Zapier，点名用量上限与无收据炒作。文内价位与周额度是快照，需回 xAI / Cursor 现页核对。",
+      "summaryEn": "Puneet Tandon’s 2026-09-09 guide: separates Grok Bot from the Grok chatbot and Automations, starts with a narrow chief-of-staff task, and lists verifiable uses (inbox triage, browser errands, meeting prep/follow-up, persistent research, sales follow-up, support refunds, coding busywork). Contrasts Hermes / OpenClaw and Zapier, and flags usage ceilings plus unverifiable hype. Pricing and weekly allowances are snapshots — confirm on live xAI / Cursor pages.",
+      "sourceUrl": "https://www.youngurbanproject.com/how-to-use-grok-bot/",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/get-started",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "tutorial",
+      "categories": [
+        "ops",
+        "automation",
+        "research"
+      ],
+      "role": "Practical guide",
+      "language": "en",
+      "difficulty": "starter",
+      "featured": true,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "email",
+        "calendar",
+        "browser",
+        "stripe"
+      ],
+      "approvalBoundary": "外发、退款、改生产等人批；先窄任务与可核验结果。",
+      "approvalBoundaryEn": "Outbound, refunds, and production changes wait for approval; start narrow with checkable outcomes.",
+      "qualityNote": "第三方教程（标注 Last verified 2026-09-08）。价位与周额度多次变动，文内数字只作快照；本库不把未核验的交易收益类声称当事实。官方可核对面是 get-started 与 skills-routines。",
+      "qualityNoteEn": "Third-party tutorial (Last verified 2026-09-08). Pricing and weekly allowances have moved; treat in-article figures as snapshots. Unverifiable trading claims are not treated as facts here. Checkable official surface: get-started and skills-routines.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
+    {
+      "id": "compound-engineering-plugin",
+      "slug": "everyinc-compound-engineering-plugin",
+      "title": "Compound Engineering：给 Grok Bot 用的工程循环插件",
+      "titleEn": "Compound Engineering: engineering-loop plugin Grok Bot can load",
+      "summary": "Every Inc 的官方 Compound Engineering 插件（Cursor 市场）：把 brainstorm → plan → work → simplify → review → compound 做成可调用 Skill。README 写明 Grok Bot 共用 Cursor 账号与插件库——装一次即可被 Bot 加载，不要在 Grok Bot 聊天里 /add-plugin，也不要往 Bot 电脑上 clone。适合把写码循环挂成可复用技能，再视需要挂 Routine。",
+      "summaryEn": "Every Inc’s official Compound Engineering plugin (Cursor marketplace): brainstorm → plan → work → simplify → review → compound as callable skills. README states Grok Bot shares your Cursor account and plugin library — install once for Bots to load; do not /add-plugin inside Grok Bot chat, and do not clone onto the Bot computer. Fits saving the coding loop as a reusable skill, then optionally a routine.",
+      "sourceUrl": "https://github.com/everyinc/compound-engineering-plugin",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "community",
+      "categories": [
+        "coding",
+        "engineering",
+        "automation"
+      ],
+      "role": "Engineering plugin / skill pack",
+      "language": "en",
+      "difficulty": "intermediate",
+      "featured": true,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "github",
+        "files"
+      ],
+      "approvalBoundary": "合并、推送、改生产等人批；先 plan / review 草稿。",
+      "approvalBoundaryEn": "Merges, pushes, and production changes wait for approval; keep plan/review as drafts first.",
+      "qualityNote": "公开仓库（2026-09-11 核对约 25010 star）。面向 Claude Code / Codex / Cursor 等多端；Grok Bot 用法以 README「Grok Bot」节为准。插件本身不是 Grok Bot 专属，但是可复现的装法。",
+      "qualityNoteEn": "Public repo (~25,010 stars checked 2026-09-11). Multi-host (Claude Code / Codex / Cursor); Grok Bot path is the README’s Grok Bot section. Not Grok-Bot-only, but the install path is reproducible.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
     {
       "id": "gbdl-definition-language",
       "slug": "jcpsimmons-gbdl",

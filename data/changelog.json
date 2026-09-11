@@ -1,6 +1,14 @@
 {
   "notes": [
     {
+      "date": "2026-09-11",
+      "title": "日更：Grok Bot +2、HTML +2、Agent UI +2",
+      "titleEn": "Daily: Grok Bot +2, HTML +2, Agent UI +2",
+      "body": "Grok Bot 增收 Young Urban Project《怎么用 Grok Bot》（真用例 vs 炒作，2026-09-09）与 Every Inc Compound Engineering 工程循环插件（README 写明 Grok Bot 共用 Cursor 插件库）。HTML 增收 DAUB（给 AI 的 CSS 组件库，llms.txt / MCP）与 njX UI（CDN 落地页 CSS）。Agent UI 增收 ThreeUI Community：3D Paper · Original、Woven Cloth · Woven Cloth。X @bot 网页侧未见新的可复现用法帖；HN 首页多为泛新闻，未塞进三库。",
+      "bodyEn": "Grok Bot: Young Urban Project How to Use Grok Bot (real cases vs hype, 2026-09-09) + Every Inc Compound Engineering plugin (README: Grok Bot shares the Cursor plugin library). HTML: DAUB (CSS kit for AI, llms.txt / MCP) + njX UI (CDN landing CSS). Agent UI: ThreeUI Community 3D Paper · Original and Woven Cloth · Woven Cloth. No new reproducible @bot usage posts via the public web pass; HN front page was mostly general news and stayed out of the three libraries.",
+      "relatedPath": "/paths/daily-to-draft/"
+    },
+    {
       "date": "2026-09-10",
       "title": "晚间：Models +1、HTML +2、Agent UI +2",
       "titleEn": "Evening: Models +1, HTML +2, Agent UI +2",

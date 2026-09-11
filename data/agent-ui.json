@@ -1,11 +1,76 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T12:05:00Z",
+    "updatedAt": "2026-09-11T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.10",
-    "count": 42
+    "version": "1.4.11",
+    "count": 44
   },
   "items": [
+    {
+      "id": "3d-paper",
+      "slug": "3d-paper",
+      "title": "3D Paper · Original",
+      "titleEn": "3D Paper · Original",
+      "summary": "ThreeUI Community 立体纸张：Original / Site of the Year / Japanese / Certificate 四免费变体，适合 Agent 作品集封面与证书卡。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community dimensional paper: free Original / Site of the Year / Japanese / Certificate variants. Fits Agent portfolio covers and certificate cards. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/three-js/3d-paper/original",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/3d-paper.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 3D Paper 的免费 Original 或 Certificate 变体做封面卡。保持 Community，勿用 PRO。",
+      "promptHintEn": "Use the free Original or Certificate variant of 3D Paper as a cover card. Keep Community; skip PRO.",
+      "types": [
+        "ui",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "paper",
+        "hero"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费 Three.js 纸张组件（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
+      "qualityNoteEn": "Free Community Three.js paper component (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
+    {
+      "id": "woven-cloth",
+      "slug": "woven-cloth",
+      "title": "Woven Cloth · Woven Cloth",
+      "titleEn": "Woven Cloth · Woven Cloth",
+      "summary": "ThreeUI Community 编织布料 Three.js 背景：Woven Cloth / Iridescent Silk / Atelier Flag / Washi Noren 四免费变体，适合 Agent 落地页材质底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community woven-cloth Three.js background: free Woven Cloth / Iridescent Silk / Atelier Flag / Washi Noren variants. Fits an Agent landing material base. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/three-js/woven-cloth/woven-cloth",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/woven-cloth.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Woven Cloth 免费变体做落地页材质背景。可换 Iridescent Silk 或 Washi Noren，保持 Community。",
+      "promptHintEn": "Use a free Woven Cloth variant as a landing material background. Iridescent Silk or Washi Noren also work; keep Community.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "webgl",
+        "fabric",
+        "background"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费 Three.js 背景（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
+      "qualityNoteEn": "Free Community Three.js background (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
     {
       "id": "matrix-field",
       "slug": "matrix-field",

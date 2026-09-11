@@ -1,11 +1,73 @@
 {
   "meta": {
-    "updatedAt": "2026-09-10T12:05:00Z",
+    "updatedAt": "2026-09-11T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.18",
-    "count": 48
+    "version": "1.3.19",
+    "count": 50
   },
   "items": [
+    {
+      "id": "daub",
+      "slug": "daub",
+      "title": "DAUB：给 AI 用的 CSS 组件库（84 件 / llms.txt / MCP）",
+      "titleEn": "DAUB: CSS component library for AI (84 parts / llms.txt / MCP)",
+      "summary": "sliday 的 DAUB：两文件零构建 CSS/JS 组件库（约 84 组件、21 主题族），带 classless 模式、llms.txt、agent-skills、可复制提示与远程 MCP（generate_ui / catalog / validate / render）。演示站与 playground 公开可开；MIT。",
+      "summaryEn": "sliday’s DAUB: a two-file, zero-build CSS/JS kit (~84 components, 21 theme families) with classless mode, llms.txt, agent-skills, pasteable prompts, and a remote MCP (generate_ui / catalog / validate / render). Demo and playground are public; MIT.",
+      "sourceUrl": "https://daub.dev/",
+      "secondaryUrls": [
+        "https://github.com/sliday/daub",
+        "https://daub.dev/llms.txt",
+        "https://daub.dev/demo.html"
+      ],
+      "previewImage": "/previews/daub.webp",
+      "types": [
+        "component",
+        "docs",
+        "tool"
+      ],
+      "tags": [
+        "css",
+        "ai-docs",
+        "mcp",
+        "zero-build",
+        "llms-txt"
+      ],
+      "featured": true,
+      "qualityNote": "公开演示与 GitHub（2026-09-11 核对约 41 star）。面向 Agent 的 llms.txt / MCP 是亮点；组件数与主题数为站点自述。",
+      "qualityNoteEn": "Public demo + GitHub (~41 stars checked 2026-09-11). Agent-facing llms.txt / MCP are the draw; component and theme counts are site claims.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
+    {
+      "id": "njx-ui",
+      "slug": "njx-ui",
+      "title": "njX UI：CDN 落地页 CSS 库（30+ 组件 / 9 主题）",
+      "titleEn": "njX UI: CDN landing-page CSS kit (30+ components / 9 themes)",
+      "summary": "njX UI：一条 CDN 链即可拼落地页的 CSS 优先库——按钮 / 卡片 / 表单 / 动效 / 渐变 / Hero 块，九套 data-theme，可选 Alpine 预设。本页即完整预览，npm 包 `njx-ui`。无框架、无构建。",
+      "summaryEn": "njX UI: a CSS-first landing kit from one CDN link — buttons / cards / forms / motion / gradients / hero blocks, nine `data-theme` palettes, optional Alpine preset. This page is the full live preview; npm package `njx-ui`. No framework, no build.",
+      "sourceUrl": "https://njxui.dev/",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/njx-ui"
+      ],
+      "previewImage": "/previews/njx-ui.webp",
+      "types": [
+        "component",
+        "docs",
+        "landing"
+      ],
+      "tags": [
+        "css",
+        "cdn",
+        "landing",
+        "themes",
+        "zero-build"
+      ],
+      "featured": true,
+      "qualityNote": "演示站与 npm 公开可开（2026-09-11）。组件数 / 体积为站点自述；未找到独立开源仓库页时以 npm + 演示站为准。",
+      "qualityNoteEn": "Demo and npm are public (2026-09-11). Component counts and bundle size are site claims; when no separate public repo page is found, treat npm + demo as the source.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T01:10:00Z"
+    },
     {
       "id": "relativity-park",
       "slug": "relativity-park",
