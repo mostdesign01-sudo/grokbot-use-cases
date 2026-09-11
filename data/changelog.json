@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-11",
+      "title": "补录：Grok Bot +1（原生字幕拼图 Skill）",
+      "titleEn": "Addendum: Grok Bot +1 (Native Subtitle Quote Image skill)",
+      "body": "Grok Bot 增收程意（@ChengYi3629）的 native-subtitle-quote-image：保留视频内嵌字幕、精确取帧并生成 3:4 社交长图的开放 Agent Skill（MIT，2026-09-11 核对约 616 star，最新 v2.1.1）。来源推文称升级 2.0、抖音「平均每个视频赞藏 1 千」为作者自称，条目里只作引用不作核验数字；README 是 Codex 装法，Grok Bot 侧按官方 skills 目录放置，本站未实测。预览图取自仓库 assets 图标。",
+      "bodyEn": "Grok Bot: ChengYi’s (@ChengYi3629) native-subtitle-quote-image — an open Agent Skill that keeps burned-in subtitles, grabs exact frames, and renders 3:4 social cards (MIT, ~616 stars checked 2026-09-11, latest v2.1.1). The source post’s “upgraded to 2.0” and “~1k likes+saves per Douyin video” are the author’s claims and are quoted, not verified, in the entry; the README documents the Codex install path, and the Grok Bot placement follows the official skills directory, untested here. Preview image is the repo’s assets icon."
+    },
+    {
+      "date": "2026-09-11",
       "title": "最新模型：收录 Tripo3D 上的 Astra 3D 提示词库（社区资源卡）",
       "titleEn": "Models: Astra 3D prompt gallery on Tripo3D (community resource card)",
       "body": "按 Hao 要求收录 @cnyzgkc（木马人）9 月 9 日中文帖「分享一个 GPT-6 Astra 3D 提示词网站，拥有 200+ 的提示词，而且完全免费」。与 Astra 复刻迷你 LOL 同一做法：不塞进 GPT-6 Astra 的来源，而是在模型看板开一张社区资源卡 /models/astra-tripo-3d-prompts/。community 源指作者 X 视频帖（约 28 秒录屏），product 源指 Tripo3D 的 Astra 3D 提示词页（中文路径，2026-09-11 核到可达），official 源仍是 OpenAI Astra 公告，只作所用模型页。收录边界：「200+」「完全免费」是发帖人自称，录屏封面帧显示 201 条、当日页面显示 215 条，均未逐条复数；Tripo3D 是第三方 3D 生成产品的提示词画廊，页面带其产品入口，本库不背书、未测试账号或付费门槛。页面里也收有岚叔与李岳的「复刻英雄联盟」提示词，并自注为推荐内容、非确认输入，与本库 demo 卡边界一致。预览取发帖人录屏封面（Tripo3D 页首屏）。不打星。GPT-6 Astra 卡的 relatedModelIds 加上本卡，两卡互指。models 4→5，数据版本 1.1.2。",

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-11T01:10:00Z",
+    "updatedAt": "2026-09-11T05:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.17",
-    "count": 103,
+    "version": "1.4.18",
+    "count": 104,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -69,10 +69,50 @@
       "https://news.ycombinator.com/item?id=49628911",
       "https://github.com/shrdgn/grokbot-skills",
       "https://www.youngurbanproject.com/how-to-use-grok-bot/",
-      "https://github.com/everyinc/compound-engineering-plugin"
+      "https://github.com/everyinc/compound-engineering-plugin",
+      "https://github.com/chengyi-ai/native-subtitle-quote-image",
+      "https://x.com/ChengYi3629/status/2097611763391119504"
     ]
   },
   "cases": [
+    {
+      "id": "native-subtitle-quote-image",
+      "slug": "native-subtitle-quote-image",
+      "title": "「原生字幕拼图」native-subtitle-quote-image：真实视频帧 → 3:4 字幕长图 Skill（程意）",
+      "titleEn": "Native Subtitle Quote Image: real video frames → 3:4 subtitle quote cards, an open Agent Skill (ChengYi)",
+      "summary": "程意（@ChengYi3629）开源的 Agent Skill：从本地视频或用户有权处理的 YouTube 链接出发，用字幕轨 / Whisper 建时间索引、选题选句、精确取帧，再把真实视频帧拼成 3:4 社交长图并逐张质检。两种模式不混用——原生字幕只保留画面像素、不 OCR 重绘；脚本字幕把已审核台词画到真实帧上并标明后期。仓库含 Codex 插件结构与开放 Skill 目录，可复制到其他兼容 Agent；作者推文称 2.0 后拿它做抖音，成图后发不发仍由人来。",
+      "summaryEn": "ChengYi’s (@ChengYi3629) open Agent Skill: start from a local video or a YouTube link you have rights to, build a timestamped index from subtitle tracks / Whisper, pick topics and lines, grab exact frames, and stitch real frames into 3:4 social cards with per-image QA. Two modes never mix — native mode keeps pixel subtitles as-is (no OCR redraw); script mode draws reviewed lines onto real frames and labels them as post-added. Ships a Codex plugin layout plus an open skill directory that can be copied into other compatible agents; the author’s post says 2.0 is what they now use for Douyin, but publishing stays a human step.",
+      "categories": [
+        "content",
+        "marketing"
+      ],
+      "role": "Subtitle quote-image skill / content production",
+      "sourceUrl": "https://github.com/chengyi-ai/native-subtitle-quote-image",
+      "secondaryUrls": [
+        "https://x.com/ChengYi3629/status/2097611763391119504",
+        "https://github.com/chengyi-ai/native-subtitle-quote-image/releases",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "community",
+      "qualityNote": "公开仓库（2026-09-11 用 gh 核对约 616 star，MIT，最新 release v2.1.1 于 2026-08-24；topics agent-skills / codex / social-media / subtitles / video-processing）。开放 Agent Skills 目录格式，README 给的是 Codex 装法（$skill-installer 或复制到 ~/.codex/skills）；Grok Bot 侧需按官方 skills 文档把 skills/native-subtitle-quote-image 放进对应目录，本站未实测。推文（2026-09-09）称「升级到 2.0」「平均每个视频赞藏 1 千」为作者自称，不是本站核验数据；README Demo 图为脚本字幕模式，不代表原片自带字幕。示例图与第三方内容不在 MIT 授权内。",
+      "qualityNoteEn": "Public repo (~616 stars checked with gh on 2026-09-11, MIT, latest release v2.1.1 on 2026-08-24; topics agent-skills / codex / social-media / subtitles / video-processing). Open Agent Skills directory format; the README documents the Codex path ($skill-installer or copy into ~/.codex/skills). For Grok Bot, drop skills/native-subtitle-quote-image into the directory the official skills docs specify — not tested by this site. The post (2026-09-09) claiming an upgrade to 2.0 and “~1k likes+saves per video” is the author’s own claim, not a metric verified here; README demo images are script-subtitle mode, not proof the source video carried subtitles. Example images and third-party content are outside the MIT grant.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "成图后发抖音 / 小红书 / X 前人审；素材使用权、原生→脚本模式切换、yt-dlp 读取浏览器 Cookie 都要用户明确同意，脚本台词必须已复核。",
+      "approvalBoundaryEn": "Human review before posting cards to Douyin / Xiaohongshu / X; rights to the footage, switching native→script mode, and letting yt-dlp read browser cookies all need explicit user consent, and script lines must be pre-reviewed.",
+      "connectors": [
+        "files",
+        "youtube"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/native-subtitle-quote-image.webp",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-11T05:20:00Z"
+    },
     {
       "id": "youngurban-how-to-use-grok-bot",
       "slug": "youngurban-how-to-use-grok-bot",
