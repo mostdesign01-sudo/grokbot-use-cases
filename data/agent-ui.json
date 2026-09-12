@@ -1,11 +1,77 @@
 {
   "meta": {
-    "updatedAt": "2026-09-11T01:10:00Z",
+    "updatedAt": "2026-09-12T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.11",
-    "count": 44
+    "version": "1.4.12",
+    "count": 46
   },
   "items": [
+    {
+      "id": "uplink-loader",
+      "slug": "uplink-loader",
+      "title": "Uplink Loader",
+      "titleEn": "Uplink Loader",
+      "summary": "ThreeUI Community 赛博上行加载条：阶梯进度、遥测刻度、霓虹读数、角标与扫描线颗粒，CSS/DOM 运行时。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community cinematic uplink loader: stepped progress, telemetry ticks, neon readouts, corner markers, scanlines and grain on a DOM/CSS runtime. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/css/uplink-loader",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/uplink-loader.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Uplink Loader 做 Agent 控制台加载态。保持 Community 免费件，只改文案与霓虹色。",
+      "promptHintEn": "Use Uplink Loader for an Agent-console loading state. Keep the free Community piece; only retint neon and labels.",
+      "types": [
+        "ui",
+        "motion"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "loader",
+        "css",
+        "agent-console"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费 CSS 加载件（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。复制 prompt，勿手写着色器。",
+      "qualityNoteEn": "Free Community CSS loader (Copy Prompt present, no Pro template overlay, checked 2026-09-12). Copy the prompt; don’t hand-write shaders.",
+      "publishedAt": "2026-09-12",
+      "updatedAt": "2026-09-12T12:15:00Z"
+    },
+    {
+      "id": "spark-badge",
+      "slug": "spark-badge",
+      "title": "Spark Badge · Badge",
+      "titleEn": "Spark Badge · Badge",
+      "summary": "ThreeUI Community 光雨徽章背景：Badge / Browser / iPhone / Studio Display 四免费变体，Canvas 2D 光雨与 curl-noise 余烬拼出凭证感徽章，适合 Agent 成就 / 密钥卡氛围底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community luminous-rain badge background: four free variants (Badge / Browser / iPhone / Studio Display). Canvas 2D rain and curl-noise embers assemble a credential-style badge — fits Agent achievement / key-card atmospheres. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/backgrounds/spark-badge/badge",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/spark-badge.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Spark Badge 免费 Badge 变体做成就卡背景。可换 Browser / iPhone，保持 Community。",
+      "promptHintEn": "Use the free Badge variant of Spark Badge as an achievement-card background. Browser / iPhone variants also work; keep Community.",
+      "types": [
+        "background",
+        "ui"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "badge",
+        "background",
+        "canvas"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费背景（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。四变体均按免费收录。",
+      "qualityNoteEn": "Free Community background (Copy Prompt present, no Pro template overlay, checked 2026-09-12). All four variants treated as free.",
+      "publishedAt": "2026-09-12",
+      "updatedAt": "2026-09-12T12:15:00Z"
+    },
     {
       "id": "3d-paper",
       "slug": "3d-paper",

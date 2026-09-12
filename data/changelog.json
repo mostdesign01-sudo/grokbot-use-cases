@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-12",
+      "title": "晚间：HTML +2、Agent UI +2",
+      "titleEn": "Evening: HTML +2, Agent UI +2",
+      "body": "HTML 增收 Bodily Oddities（Show HN 49649789，约 143 条身体小怪癖百科）与 SparkUI（给 Agent 推一次性互动页的开源工具）。Agent UI 增收 ThreeUI Community：Uplink Loader、Spark Badge · Badge（均核到免费 Copy Prompt）。Grok Bot / Models 晚间无新增。",
+      "bodyEn": "HTML: Bodily Oddities (Show HN 49649789, ~143 bodily-quirk encyclopedia) + SparkUI (open-source ephemeral interactive pages for agents). Agent UI: ThreeUI Community Uplink Loader and Spark Badge · Badge (both verified free Copy Prompt). No Grok Bot / Models additions this evening."
+    },
+    {
       "date": "2026-09-11",
       "title": "补录：Grok Bot +1（原生字幕拼图 Skill）",
       "titleEn": "Addendum: Grok Bot +1 (Native Subtitle Quote Image skill)",
