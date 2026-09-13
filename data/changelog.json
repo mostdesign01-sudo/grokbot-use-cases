@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-13",
+      "title": "晚间：HTML +2、Agent UI +2",
+      "titleEn": "Evening: HTML +2, Agent UI +2",
+      "body": "HTML 增收 Session Context（Show HN 49678035，白话讲清一页网页未授权前能测到什么）与 Programming Museum（Show HN 49682008，可漫游的 MIT/Unlicense 源码展厅）。Agent UI 增收 ThreeUI Community：Typography Vortex、Semantic Bloom（均核到免费页、无 Pro template 遮罩）。Grok Bot / Models 晚间无新增。",
+      "bodyEn": "HTML: Session Context (Show HN 49678035, plain-English map of what a page can measure before any permission) + Programming Museum (Show HN 49682008, walkable MIT/Unlicense source-code rooms). Agent UI: ThreeUI Community Typography Vortex and Semantic Bloom (both free Community pages, no Pro template overlay). No Grok Bot / Models additions this evening."
+    },
+    {
+      "date": "2026-09-13",
       "title": "最新模型 +1（Astra 官方 Showcase）、Grok Bot +1（Saily 美号工具笔记）",
       "titleEn": "Models +1 (Astra official Showcase), Grok Bot +1 (Saily US-number tool note)",
       "body": "按 Hao 的两条线索收录。最新模型：新开社区 showcase 卡 /models/astra-openai-showcase/ — 来源是宝玉（@dotey）9 月 12 日帖「GPT-6 Astra 社区作品集合……或者可以去官网看看 Showcase」，官方源 OpenAI Developers Showcase 页（2026-09-13 核到 200，分 Games / Apps / Websites / API，带 GPT-6 Astra 模型筛选），社区源为 dotey 帖与其引用的 OpenAIDevs 合集文帖；文内作品清单只作官方社区文自述，不复述未核条数。GPT-6 Astra 卡同步加上 Showcase 官方源与 dotey 社区源，relatedModelIds 与新卡互指。models 5→6，数据版本 1.1.3。Grok Bot 库：增收酱紫表（@pengchujin）9 月 13 日帖的 Saily 美国 +1 号 eSIM 工具笔记 — 包年套餐、优惠码 JIANGZ7166 立减 5 刀、约 6.99 美元 / 年，以及「Claude 收不到验证码、ChatGPT / Telegram / PayPal 基本可以」均为作者自述，优惠码归属作者，本站不担保可用性、不构成购买推荐；标为旁路工具笔记，不是 Grok Bot 用法。cases 104→105，数据版本 1.4.19。两张预览分别取 OpenAIDevs 文章封面与作者截图拼图。",
