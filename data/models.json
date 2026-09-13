@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-11T05:20:00Z",
+    "updatedAt": "2026-09-13T08:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.2",
-    "count": 5
+    "version": "1.1.3",
+    "count": 6
   },
   "models": [
     {
@@ -97,7 +97,7 @@
       "summaryEn": "OpenAI’s frontier model, announced 2026-09-03. Official pitch: computer use, browsing, software engineering, cybersecurity, science, and professional work; in ChatGPT, Sites builds and hosts websites, web apps, and games from one prompt; API name gpt-6-astra. Community side: on 8 Sept YouWare posted that it sorted 720+ community Astra builds (game prototypes, 3D worlds, product UIs, motion, sims), prompts included to replay on YouWare.",
       "announcedAt": "2026-09-03",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-11T05:20:00Z",
+      "updatedAt": "2026-09-13T08:30:00Z",
       "sources": [
         {
           "kind": "official",
@@ -129,6 +129,22 @@
           "labelEn": "YouWare product home",
           "url": "https://www.youware.com/",
           "by": "YouWare"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI Developers Showcase（官方 demo 展示墙，可按 GPT-6 Astra 筛选）",
+          "labelEn": "OpenAI Developers Showcase (official demo wall, filterable by GPT-6 Astra)",
+          "url": "https://developers.openai.com/showcase",
+          "by": "OpenAI Developers",
+          "date": "2026-09-12"
+        },
+        {
+          "kind": "community",
+          "label": "宝玉整理帖：GPT-6 Astra 社区作品集合 + 官网 Showcase 入口（X 帖）",
+          "labelEn": "@dotey roundup post: GPT-6 Astra community builds + Showcase pointer (X post)",
+          "url": "https://x.com/dotey/status/2098840834942652505",
+          "by": "@dotey",
+          "date": "2026-09-12"
         }
       ],
       "highlights": [
@@ -158,11 +174,83 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "astra-mini-lol",
-        "astra-tripo-3d-prompts"
+        "astra-tripo-3d-prompts",
+        "astra-openai-showcase"
       ],
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
       "previewCreditEn": "Preview: YouWare X video poster (Astra Replay page)",
+      "featured": true
+    },
+    {
+      "id": "astra-openai-showcase",
+      "slug": "astra-openai-showcase",
+      "name": "GPT-6 Astra Showcase",
+      "vendor": "OpenAI",
+      "title": "GPT-6 Astra 官方 Showcase + 社区合集",
+      "titleEn": "GPT-6 Astra official Showcase + community roundup",
+      "summary": "官方展示墙 + 中文入口帖。OpenAI Developers 站的 Showcase 页（developers.openai.com/showcase，2026-09-13 本库打开为 200）是官方 demo 展示墙，分 Games / Apps / Websites / API 四栏，并带按模型筛选（含 GPT-6 Astra）。宝玉（@dotey）9 月 12 日转发 OpenAIDevs 的「GPT-6 Astra by our community」社区合集文，称「GPT-6 Astra 社区作品集合，评论也有不少优秀作品」，并指向该 Showcase 页。OpenAIDevs 文内列举的作品（3D 解剖部件、Unreal Engine 复刻曼哈顿、梵高六幅画变 Three.js 可走小镇、AR 吸尘覆盖图、Blender 火车模型、浏览器赛车等）是官方社区文自述，本库未逐条打开。本卡只记「可逛的官方展示墙 + 中文入口帖」，不编造作品条数。",
+      "summaryEn": "An official demo wall plus a Chinese entry post. The Showcase page on OpenAI Developers (developers.openai.com/showcase, returned 200 when this library opened it on 2026-09-13) is OpenAI’s own demo wall with Games / Apps / Websites / API tabs and a model filter that includes GPT-6 Astra. On 12 Sept 宝玉 (@dotey) quoted OpenAIDevs’ “GPT-6 Astra by our community” roundup article, wrote “a collection of GPT-6 Astra community builds — the replies have good ones too,” and pointed to that Showcase page. The builds listed in the OpenAIDevs article (3D anatomical parts, a Manhattan recreation in Unreal Engine, six Van Gogh paintings as a walkable Three.js town, AR vacuum-coverage mapping, a Blender train model, a browser racing game, and more) are the official community article’s own descriptions; not opened one by one here. This card records a browsable official wall plus a Chinese entry post only — no invented build counts.",
+      "announcedAt": "2026-09-12",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-13T08:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "OpenAI Developers Showcase（官方 demo 展示墙）",
+          "labelEn": "OpenAI Developers Showcase (official demo wall)",
+          "url": "https://developers.openai.com/showcase",
+          "by": "OpenAI Developers",
+          "date": "2026-09-12"
+        },
+        {
+          "kind": "community",
+          "label": "宝玉整理帖：GPT-6 Astra 社区作品集合（X 帖，中文入口）",
+          "labelEn": "@dotey roundup post: GPT-6 Astra community builds (X post, Chinese entry)",
+          "url": "https://x.com/dotey/status/2098840834942652505",
+          "by": "@dotey",
+          "date": "2026-09-12"
+        },
+        {
+          "kind": "community",
+          "label": "OpenAIDevs 社区合集文「GPT-6 Astra by our community」（X 文章帖）",
+          "labelEn": "OpenAIDevs community roundup “GPT-6 Astra by our community” (X article post)",
+          "url": "https://x.com/OpenAIDevs/status/2098827327832822014",
+          "by": "@OpenAIDevs",
+          "date": "2026-09-12"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 公告：GPT-6 Astra（所用模型）",
+          "labelEn": "OpenAI announcement: GPT-6 Astra (the model used)",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "by": "OpenAI",
+          "date": "2026-09-03"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "Showcase 页可核到的：页面自述「Explore demos built with OpenAI」，分 Games（可玩游戏、谜题、互动世界）/ Apps / Websites / API 四栏，并有模型筛选（GPT-6 Astra / GPT-5.6 / GPT-5.5）。页面是官方 demo 墙，不只收 Astra 作品；条数以当日页面为准，本库未复数。",
+          "textEn": "Visible on the Showcase page: it describes itself as “Explore demos built with OpenAI,” with Games (playable games, puzzles, interactive worlds) / Apps / Websites / API tabs and a model filter (GPT-6 Astra / GPT-5.6 / GPT-5.5). It is OpenAI’s general demo wall, not Astra-only; the count is whatever the page shows on the day — not re-counted here."
+        },
+        {
+          "text": "宝玉帖原文：「GPT-6 Astra 社区作品集合，评论也有不少优秀作品。或者可以去官网看看 Showcase」，引用的是 OpenAIDevs 的社区合集文；帖子本身没有列作品，是中文入口。",
+          "textEn": "@dotey’s post verbatim: “a collection of GPT-6 Astra community builds — the replies have good ones too; or browse the Showcase on the official site.” It quotes OpenAIDevs’ community roundup and lists no builds itself — it is the Chinese entry point."
+        },
+        {
+          "text": "OpenAIDevs 合集文自述（未逐条核实）：「We shipped GPT-6 Astra. Builders took it from there」，随后逐条嵌入作品 — 3D 解剖部件、Unreal Engine 复刻曼哈顿、梵高六幅画变 Three.js 可走小镇、AR 吸尘覆盖图、老火车画变 Blender 模型、Astra + Blender 水下浏览器游戏、LEGO 设计原型、Unity 混合现实空管模拟、录屏变可交互界面、Three.js 浏览器赛车、Blender Backrooms 场景、ESP32 工作台原型、C++ 光追移植到 iPhone GPU 的 Swift 版；文末「Want to be featured? Share your build and tag @OpenAIDevs」。",
+          "textEn": "OpenAIDevs’ roundup, in its own words (not verified item by item): “We shipped GPT-6 Astra. Builders took it from there,” followed by embedded builds — 3D anatomical parts, a Manhattan recreation in Unreal Engine, six Van Gogh paintings as a walkable Three.js town, AR vacuum-coverage mapping, an old train drawing turned Blender model, an underwater browser game built with Astra + Blender, a LEGO-design prototype, a mixed-reality air-traffic simulator in Unity, screen recording to interactive interface, a Three.js browser racing game, a Blender Backrooms scene, an ESP32 workbench prototype, and a Swift port of a C++ ray tracer to the iPhone GPU; it closes with “Want to be featured? Share your build and tag @OpenAIDevs.”"
+        }
+      ],
+      "qualityNote": "这是社区 showcase 卡，不是模型卡：模型本体见同板的 GPT-6 Astra。官方源是 OpenAI Developers 的 Showcase 页，2026-09-13 本库打开返回 200，并核到页面分栏与 GPT-6 Astra 模型筛选；它是官方通用 demo 墙，不是 Astra 专属画廊，条数本库未复数。宝玉（@dotey）9 月 12 日帖只作中文入口：帖子本身无作品清单，引用的 OpenAIDevs 文章帖（x.com/OpenAIDevs/status/2098827327832822014）可达，但文章直链 x.com/i/article/2098531824528220160 本库未登录状态下返回 404，故不写。OpenAIDevs 文内每条作品的描述与数字（如「2,234 个解剖部件」「3,295 个可编辑对象」）均为官方社区文自述，本库未逐条打开、不复述未核条数。预览图取自 OpenAIDevs 文章封面（「GPT-6 Astra · Community Builds」星系图，上下补黑边成 3:2），非 Showcase 页截图。不打星。",
+      "qualityNoteEn": "A community-showcase card, not a model card: the model itself is the GPT-6 Astra card on this board. The official source is OpenAI Developers’ Showcase page — returned 200 when this library opened it on 2026-09-13, with the category tabs and the GPT-6 Astra model filter confirmed; it is OpenAI’s general demo wall, not an Astra-only gallery, and the count is not re-tallied here. 宝玉’s (@dotey) 12 Sept post is the Chinese entry point only: it lists no builds itself. The OpenAIDevs article post it quotes (x.com/OpenAIDevs/status/2098827327832822014) is reachable, but the article deep link x.com/i/article/2098531824528220160 returned 404 to this library while logged out, so it is not listed. Every build description and figure in the OpenAIDevs article (e.g. “2,234 anatomical parts,” “3,295 editable objects”) is the official community article’s own claim — not opened one by one here, and unverified counts are not repeated. Preview is the OpenAIDevs article cover (the “GPT-6 Astra · Community Builds” galaxy image, letterboxed to 3:2), not a Showcase-page screenshot. Unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra"
+      ],
+      "previewImage": "/previews/astra-openai-showcase.webp",
+      "previewCredit": "预览：OpenAIDevs 文章封面（GPT-6 Astra · Community Builds）",
+      "previewCreditEn": "Preview: OpenAIDevs article cover (GPT-6 Astra · Community Builds)",
       "featured": true
     },
     {
