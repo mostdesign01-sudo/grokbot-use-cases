@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-13",
+      "title": "最新模型 +1（Astra 官方 Showcase）、Grok Bot +1（Saily 美号工具笔记）",
+      "titleEn": "Models +1 (Astra official Showcase), Grok Bot +1 (Saily US-number tool note)",
+      "body": "按 Hao 的两条线索收录。最新模型：新开社区 showcase 卡 /models/astra-openai-showcase/ — 来源是宝玉（@dotey）9 月 12 日帖「GPT-6 Astra 社区作品集合……或者可以去官网看看 Showcase」，官方源 OpenAI Developers Showcase 页（2026-09-13 核到 200，分 Games / Apps / Websites / API，带 GPT-6 Astra 模型筛选），社区源为 dotey 帖与其引用的 OpenAIDevs 合集文帖；文内作品清单只作官方社区文自述，不复述未核条数。GPT-6 Astra 卡同步加上 Showcase 官方源与 dotey 社区源，relatedModelIds 与新卡互指。models 5→6，数据版本 1.1.3。Grok Bot 库：增收酱紫表（@pengchujin）9 月 13 日帖的 Saily 美国 +1 号 eSIM 工具笔记 — 包年套餐、优惠码 JIANGZ7166 立减 5 刀、约 6.99 美元 / 年，以及「Claude 收不到验证码、ChatGPT / Telegram / PayPal 基本可以」均为作者自述，优惠码归属作者，本站不担保可用性、不构成购买推荐；标为旁路工具笔记，不是 Grok Bot 用法。cases 104→105，数据版本 1.4.19。两张预览分别取 OpenAIDevs 文章封面与作者截图拼图。",
+      "bodyEn": "Two finds from Hao. Models: a new community-showcase card /models/astra-openai-showcase/ — sourced from 宝玉’s (@dotey) 12 Sept post (“a collection of GPT-6 Astra community builds… or browse the Showcase on the official site”); the official source is the OpenAI Developers Showcase page (200 on 2026-09-13; Games / Apps / Websites / API tabs with a GPT-6 Astra model filter), community sources are the dotey post and the OpenAIDevs roundup article post it quotes; the article’s build list is recorded as the official community article’s own claims, with no unverified counts repeated. The GPT-6 Astra card gains the Showcase official source and the dotey community source, and the two cards cross-link via relatedModelIds. models 5→6, dataset 1.1.3. Grok Bot library: added 酱紫表’s (@pengchujin) 13 Sept Saily US +1 eSIM tool note — the annual plan, promo code JIANGZ7166 for $5 off (about $6.99/yr), and “Claude did not receive codes; ChatGPT / Telegram / PayPal mostly did” are all the author’s claims; the code belongs to the author; no availability guarantee and no purchase recommendation; marked as an adjacent tool note, not a Grok Bot playbook. cases 104→105, dataset 1.4.19. Previews: the OpenAIDevs article cover and a composite of the author’s screenshots."
+    },
+    {
       "date": "2026-09-12",
       "title": "晚间：HTML +2、Agent UI +2",
       "titleEn": "Evening: HTML +2, Agent UI +2",

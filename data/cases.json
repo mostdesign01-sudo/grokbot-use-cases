@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-11T05:20:00Z",
+    "updatedAt": "2026-09-13T08:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.18",
-    "count": 104,
+    "version": "1.4.19",
+    "count": 105,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -71,10 +71,51 @@
       "https://www.youngurbanproject.com/how-to-use-grok-bot/",
       "https://github.com/everyinc/compound-engineering-plugin",
       "https://github.com/chengyi-ai/native-subtitle-quote-image",
-      "https://x.com/ChengYi3629/status/2097611763391119504"
+      "https://x.com/ChengYi3629/status/2097611763391119504",
+      "https://x.com/pengchujin/status/2099042804869763252",
+      "https://x.com/pengchujin/status/2066360058498498727",
+      "https://saily.com",
+      "https://x.com/dotey/status/2098840834942652505",
+      "https://developers.openai.com/showcase",
+      "https://x.com/OpenAIDevs/status/2098827327832822014"
     ]
   },
   "cases": [
+    {
+      "id": "saily-us-number-esim",
+      "slug": "saily-us-number-esim",
+      "title": "工具：Saily 美国 +1 号（eSIM）— AI 注册旁路",
+      "titleEn": "Tool tip: Saily US +1 eSIM for AI signups",
+      "summary": "酱紫表（@pengchujin）2026-09-13 更新：Saily（NordVPN 旗下 eSIM 产品）的美国号码新出包年套餐；作者称用优惠码 JIANGZ7166 立减 5 刀、一年约 6.99 美元（作者数字与作者截图，非本站核实）。引用的是作者 6 月的长文教程「1 美元拥有美国手号教程」：用外区 eSIM 手机或 eSIM 实体卡装上 Saily 的 +1 号码，免费收短信，方便部分海外 AI / 账号注册；付款支持国内信用卡与 Apple Pay。作者称需 KYC 实名（支持中国证件）、App 需外区 App Store；实测 Claude 收不到验证码，ChatGPT、Telegram、PayPal 基本可以，号段可能不够干净。本条是旁路工具笔记，不是 Grok Bot 用法，也不构成购买推荐。",
+      "summaryEn": "Update from 酱紫表 (@pengchujin), 2026-09-13: Saily (NordVPN’s eSIM product) now sells its US number on an annual plan; the author says promo code JIANGZ7166 takes $5 off, landing at about $6.99 a year (the author’s figures and screenshots — not verified by this site). It quotes the author’s June long-form tutorial “Own a US phone number for $1”: put Saily’s +1 number on an eSIM-capable overseas phone or a physical eSIM card, receive SMS for free, and use it for some overseas AI / account signups; payment takes Chinese credit cards and Apple Pay. Per the author: KYC is required (Chinese IDs accepted), the app needs a non-China App Store, Claude did not receive codes while ChatGPT, Telegram, and PayPal mostly did, and the number range may not be clean. An adjacent tool note — not a Grok Bot playbook and not a purchase recommendation.",
+      "categories": [
+        "research",
+        "daily-digest"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://x.com/pengchujin/status/2099042804869763252",
+      "secondaryUrls": [
+        "https://x.com/pengchujin/status/2066360058498498727",
+        "https://saily.com"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "主源是作者 9 月 13 日 X 帖（两张 Saily App 截图：包年 US$11.99 / 年、券后 US$6.99），副源是作者 6 月 15 日的 X 长文教程（9 月 13 日有修订）。价格、优惠码、KYC 要求、哪些 App 能收短信，全部是作者自述与作者截图，本站未购买、未测试；优惠码归属作者（作者文内称「选择低佣金」输入，属推广码）。saily.com 本站未登录抓取时返回 403（疑为反爬），只作产品主页指引，未核页面内容。收录理由：AI 工具与将来可能用到的实用工具可入库，但这是旁路工具笔记，不是 Grok Bot 案例；本站不担保可用性、不构成购买推荐。预览图为作者帖两张截图拼成 3:2。不打星。",
+      "qualityNoteEn": "Primary source is the author’s 13 Sept X post (two Saily app screenshots: annual US$11.99/yr, US$6.99 after coupon); secondary is the author’s 15 June X long-form tutorial (revised 13 Sept). Prices, the promo code, the KYC requirement, and which apps receive SMS are all the author’s claims and screenshots — not purchased or tested by this site. The promo code belongs to the author (the tutorial says to enter it under “choose low commission,” i.e. a referral code). saily.com returned 403 to this site’s logged-out fetch (likely bot protection), so it is listed only as the product home; page content not verified. Listing rationale: AI tools and future-useful utilities may be catalogued, but this is an adjacent tool note, not a Grok Bot case; no availability guarantee and no purchase recommendation. Preview is the author’s two screenshots composited to 3:2. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "Saily",
+        "eSIM"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/saily-us-number-esim.webp",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-13T08:30:00Z"
+    },
     {
       "id": "native-subtitle-quote-image",
       "slug": "native-subtitle-quote-image",
