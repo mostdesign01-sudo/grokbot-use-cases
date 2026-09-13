@@ -1,11 +1,69 @@
 {
   "meta": {
-    "updatedAt": "2026-09-12T12:15:00Z",
+    "updatedAt": "2026-09-13T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.20",
-    "count": 52
+    "version": "1.3.21",
+    "count": 54
   },
   "items": [
+    {
+      "id": "session-context",
+      "slug": "session-context",
+      "title": "Session Context：一页网页能「看懂」你什么",
+      "titleEn": "Session Context: what one web page can learn about you",
+      "summary": "公开互动页：把浏览器在未授权前就能测到的指纹 / 头信息 / 存储与设备线索，先写成白话结论，再展开字段表；权限类能力单独列出且默认不索取。Show HN item 49678035（2026-09-12）。",
+      "summaryEn": "A public interactive page that turns what a browser can measure before any permission prompt—fingerprints, headers, storage and device hints—into plain-English findings, then field tables; permission-gated APIs are listed separately and not requested by default. Show HN item 49678035 (2026-09-12).",
+      "sourceUrl": "https://sessioncontext.org",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49678035"
+      ],
+      "previewImage": "/previews/session-context.webp",
+      "types": [
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "privacy",
+        "fingerprint",
+        "browser",
+        "show-hn",
+        "interactive"
+      ],
+      "featured": true,
+      "qualityNote": "Show HN 2026-09-12（item 49678035）。站点自述几乎所有值在浏览器内测、不落盘；两个需服务端暂记的演示会在页面标明。指纹熵数字引自公开研究，本站未复测。预览为现场截图。",
+      "qualityNoteEn": "Show HN 2026-09-12 (item 49678035). The site claims nearly all values are measured in-browser and not written to disk; the two demos that need short server memory say so on-page. Entropy figures cite published studies and were not re-measured here. Preview is a live screenshot.",
+      "publishedAt": "2026-09-12",
+      "updatedAt": "2026-09-13T12:20:00Z"
+    },
+    {
+      "id": "programming-museum",
+      "slug": "programming-museum",
+      "title": "Programming Museum：能走进去的源代码博物馆",
+      "titleEn": "Programming Museum: a walkable museum of source code",
+      "summary": "把可运行的源码当成展品挂进可漫游的房间：旁有策展说明，代码全文可见；收录范围限 MIT / Unlicense 借展，并钉到具体 commit。无登录、无广告。Show HN item 49682008（2026-09-13）。",
+      "summaryEn": "Runnable source hung as framed works in rooms you can walk through, each with a curator note and the full file; loans limited to MIT / Unlicense and pinned to a commit. No login, no ads. Show HN item 49682008 (2026-09-13).",
+      "sourceUrl": "https://www.programmingmuseum.com",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49682008"
+      ],
+      "previewImage": "/previews/programming-museum.webp",
+      "types": [
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "museum",
+        "source-code",
+        "interactive",
+        "show-hn",
+        "mit"
+      ],
+      "featured": true,
+      "qualityNote": "Show HN 2026-09-13（item 49682008）。「可走进展厅」为站点自述的浏览体验；借展仅 MIT/Unlicense、钉 commit 为馆方说明，本站未逐件复核许可证。预览为现场截图。",
+      "qualityNoteEn": "Show HN 2026-09-13 (item 49682008). “Walkable rooms” is the site’s own browsing claim; MIT/Unlicense-only loans pinned to commits are the museum’s stated policy, not re-audited item-by-item here. Preview is a live screenshot.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-13T12:20:00Z"
+    },
     {
       "id": "bodily-oddities",
       "slug": "bodily-oddities",

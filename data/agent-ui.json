@@ -1,11 +1,77 @@
 {
   "meta": {
-    "updatedAt": "2026-09-12T12:15:00Z",
+    "updatedAt": "2026-09-13T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.12",
-    "count": 46
+    "version": "1.4.13",
+    "count": 48
   },
   "items": [
+    {
+      "id": "typography-vortex",
+      "slug": "typography-vortex",
+      "title": "Typography Vortex",
+      "titleEn": "Typography Vortex",
+      "summary": "ThreeUI Community 文字动效：预渲染字环旋转、漂浮字形、指针溶解与点击吸力，Canvas 2D，有深浅色表面。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community text animation: prerendered typography rings, drifting glyphs, pointer dissolution and click suction on Canvas 2D, with dark and light surfaces. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/text-animation/typography-vortex",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/typography-vortex.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Typography Vortex 做 Agent 标题环动效。保持 Community 免费件，只改文案与深浅色。",
+      "promptHintEn": "Use Typography Vortex for an Agent title-ring motion. Keep the free Community piece; only retint and rewrite labels.",
+      "types": [
+        "text-animation",
+        "motion"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "typography",
+        "canvas",
+        "vortex"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写粒子环。",
+      "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the particle rings.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-13T12:20:00Z"
+    },
+    {
+      "id": "semantic-bloom",
+      "slug": "semantic-bloom",
+      "title": "Semantic Bloom",
+      "titleEn": "Semantic Bloom",
+      "summary": "ThreeUI Community 文字动效：可改的 Codex 字标，黏稠粒子网络被字母吸过去并点亮字形，Canvas 2D + DOM/CSS。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community text animation: a customizable Codex wordmark that draws a viscous particle network toward its letters and lights them up — Canvas 2D + DOM/CSS. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/text-animation/semantic-bloom",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/semantic-bloom.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Semantic Bloom 做可改字的语义检索字标。保持 Community，只换词与配色。",
+      "promptHintEn": "Use Semantic Bloom for a rewritable semantic-search wordmark. Keep Community; only swap the word and palette.",
+      "types": [
+        "text-animation",
+        "motion"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "typography",
+        "particles",
+        "wordmark"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写黏稠粒子场。",
+      "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the viscous particle field.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-13T12:20:00Z"
+    },
     {
       "id": "uplink-loader",
       "slug": "uplink-loader",
