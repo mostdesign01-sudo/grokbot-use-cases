@@ -8,6 +8,7 @@ const changelog = JSON.parse(await readFile(new URL("../data/changelog.json", im
 const pathsDataset = JSON.parse(await readFile(new URL("../data/paths.json", import.meta.url), "utf8"));
 const combosDataset = JSON.parse(await readFile(new URL("../data/combos.json", import.meta.url), "utf8"));
 const modelsDataset = JSON.parse(await readFile(new URL("../data/models.json", import.meta.url), "utf8"));
+const imagePromptsDataset = JSON.parse(await readFile(new URL("../data/image-prompts.json", import.meta.url), "utf8"));
 
 const requiredPages = [
   "index.html",
@@ -35,6 +36,8 @@ const requiredPages = [
   "combos/index.html",
   "models/index.html",
   "models.json",
+  "image-prompts/index.html",
+  "image-prompts.json",
 ];
 
 const missing = [];
@@ -153,6 +156,18 @@ if (modelsDataset.models.length < 1) {
   process.exit(1);
 }
 
+if (imagePromptsDataset.items.length !== imagePromptsDataset.meta.count) {
+  console.error(
+    `image-prompts.json meta.count ${imagePromptsDataset.meta.count} does not match items ${imagePromptsDataset.items.length}`,
+  );
+  process.exit(1);
+}
+
+if (imagePromptsDataset.items.length < 1) {
+  console.error("Expected at least 1 item in image-prompts.json.");
+  process.exit(1);
+}
+
 const caseIds = new Set(dataset.cases.map((item) => item.id));
 const htmlIds = new Set(htmlDataset.items.map((item) => item.id));
 const agentUiIds = new Set(agentUiDataset.items.map((item) => item.id));
@@ -201,11 +216,26 @@ for (const model of modelsDataset.models) {
   }
 }
 
+const modelIds = new Set(modelsDataset.models.map((item) => item.id));
+for (const item of imagePromptsDataset.items) {
+  const page = `image-prompts/${item.slug}/index.html`;
+  if (!existsSync(new URL(`../dist/${page}`, import.meta.url))) {
+    missing.push(page);
+  }
+  if (!/^https?:\/\//.test(item.sourceUrl ?? "")) {
+    missing.push(`image-prompts.json ${item.id} sourceUrl must be an absolute public URL`);
+  }
+  for (const id of item.relatedModelIds ?? []) {
+    if (!modelIds.has(id)) missing.push(`image-prompts.json relatedModelId not found: ${item.id} → ${id}`);
+  }
+}
+
 const previewItems = [
   ...dataset.cases.map((item) => ({ lib: "grok", ...item })),
   ...htmlDataset.items.map((item) => ({ lib: "html", ...item })),
   ...agentUiDataset.items.map((item) => ({ lib: "agent-ui", ...item })),
   ...modelsDataset.models.map((item) => ({ lib: "models", ...item })),
+  ...imagePromptsDataset.items.map((item) => ({ lib: "image-prompts", ...item })),
 ];
 
 // Curator `stars` is optional; when present it must be an integer 1–5.
@@ -310,6 +340,32 @@ if (!modelsIndex.includes("models/gpt-6-astra/") || !modelsIndex.includes("GPT-6
   process.exit(1);
 }
 
+if (!home.includes("image-prompts/") || !home.includes("Image 2.5 提示词")) {
+  console.error("Homepage is missing the Image 2.5 prompts rail link (image-prompts/ / Image 2.5 提示词).");
+  process.exit(1);
+}
+
+const imagePromptsIndex = await readFile(new URL("../dist/image-prompts/index.html", import.meta.url), "utf8");
+if (
+  !imagePromptsIndex.includes("image-prompts/dsxzai-image-25-gallery/") ||
+  !imagePromptsIndex.includes("img.dsxzai.com")
+) {
+  console.error("image-prompts/ is missing the dsxzai gallery card.");
+  process.exit(1);
+}
+
+{
+  const page = await readFile(new URL("../dist/image-prompts/dsxzai-image-25-gallery/index.html", import.meta.url), "utf8");
+  if (
+    !page.includes("https://img.dsxzai.com/") ||
+    !page.includes("https://x.com/dashiAIxz/status/2099390242197565492") ||
+    !page.includes('data-fav-key="image-prompts:dsxzai-image-25-gallery"')
+  ) {
+    console.error("image-prompts/dsxzai-image-25-gallery/ is missing the gallery link, the X source post, or the ☆ toggle.");
+    process.exit(1);
+  }
+}
+
 {
   const linked = modelsDataset.models.find((model) => (model.relatedModelIds ?? []).length > 0);
   if (linked) {
@@ -354,5 +410,5 @@ if (missing.length) {
 }
 
 console.log(
-  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, ${modelsDataset.models.length} model pages, and core routes present.`,
+  `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, ${modelsDataset.models.length} model pages, ${imagePromptsDataset.items.length} image prompt pages, and core routes present.`,
 );

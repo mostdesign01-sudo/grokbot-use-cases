@@ -1,13 +1,13 @@
 /**
  * Curator stars (editorial quality, 1–5) and visitor favorites (client-only).
  *
- * `stars` is an optional integer on cases / html-items / agent-ui / models.
+ * `stars` is an optional integer on cases / html-items / agent-ui / models / image-prompts.
  * It is an editorial rating, unrelated to GitHub stargazers or any live count.
  *
  * Favorites never touch a server: the site is static GitHub Pages. They live in
  * `localStorage` under FAVORITES_STORAGE_KEY as a JSON array of `${lib}:${id}`.
  */
-export type FavLib = "grok" | "html" | "agent-ui" | "models";
+export type FavLib = "grok" | "html" | "agent-ui" | "models" | "image-prompts";
 
 export const FAVORITES_STORAGE_KEY = "aiuplab:favorites";
 export const STARS_MAX = 5;
