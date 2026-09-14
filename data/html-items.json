@@ -1,11 +1,71 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T00:30:00Z",
+    "updatedAt": "2026-09-14T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.22",
-    "count": 57
+    "version": "1.3.23",
+    "count": 59
   },
   "items": [
+    {
+      "id": "soundmap",
+      "slug": "soundmap-sound-camera",
+      "title": "Soundmap：摄像头上的「声音相机」",
+      "titleEn": "Soundmap: a sound camera on your webcam",
+      "summary": "浏览器里用摄像头画面叠声音可视化的互动页（标题 Soundmap · Sound camera）。Show HN「See Sounds on Your Webcam」（item 49644603，2026-09-10）。需本机摄像头 / 麦克风权限；预览取欢迎屏，未在本站授权摄像头。",
+      "summaryEn": "An in-browser interactive page that overlays sound visualization on the webcam feed (title: Soundmap · Sound camera). Show HN “See Sounds on Your Webcam” (item 49644603, 2026-09-10). Needs local camera / mic permission; the preview is the welcome screen — camera was not granted here.",
+      "sourceUrl": "https://soundmap.darebuild.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49644603",
+        "https://darebuild.com/"
+      ],
+      "previewImage": "/previews/soundmap.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "webcam",
+        "audio",
+        "canvas",
+        "show-hn",
+        "interactive"
+      ],
+      "featured": true,
+      "qualityNote": "Show HN 2026-09-10（item 49644603）。托管在 DareBuild 子域；欢迎页可无权限打开。相机与麦克风权限由浏览器本地处理，本站未授权、未录制。预览按线上欢迎屏 DOM/文案复刻渲染（Start your camera / Start camera + mic），非授权后实时画面。",
+      "qualityNoteEn": "Show HN 2026-09-10 (item 49644603). Hosted on a DareBuild subdomain; the welcome screen opens without granting permissions. Camera and mic stay browser-local; neither was granted or recorded here. Preview is a faithful welcome-screen recreation from the live DOM/copy (Start your camera / Start camera + mic), not a post-grant live feed.",
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
+    {
+      "id": "hopla-games",
+      "slug": "hopla-games-webcam-kinect",
+      "title": "Hopla Games：浏览器里的儿童体感游戏（无 Kinect）",
+      "titleEn": "Hopla Games: Kinect-style kids games in the browser",
+      "summary": "免费儿童摄像头体感小游戏站（气球、定格舞、躲避等）：无下载、无账号，官网自称画面只在本机浏览器处理、不上传。Show HN「The Kinect is dead…」（item 49682477，2026-09-13）。预览取英文落地页，未授权摄像头。",
+      "summaryEn": "Free webcam movement games for kids (balloons, freeze dance, dodge, and more): no download, no account; the site claims the camera image stays in-browser and is never uploaded. Show HN “The Kinect is dead…” (item 49682477, 2026-09-13). Preview is the English landing page; camera was not granted here.",
+      "sourceUrl": "https://hoplagames.com/en/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49682477",
+        "https://hoplagames.com/en/kinect-games-without-kinect/"
+      ],
+      "previewImage": "/previews/hopla-games.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "webcam",
+        "kids",
+        "games",
+        "show-hn",
+        "interactive"
+      ],
+      "featured": true,
+      "qualityNote": "Show HN 2026-09-13（item 49682477）。「免费」「画面不上传」「适龄 4+」为站点自述，本站未测摄像头管线。需本机摄像头与兼容浏览器。预览取自站点公开 /map.svg 资源 letterbox 为 3:2。",
+      "qualityNoteEn": "Show HN 2026-09-13 (item 49682477). “Free,” “never uploaded,” and “ages 4+” are site claims; the camera pipeline was not re-tested here. Needs a local webcam and a compatible browser. Preview is the site’s public /map.svg letterboxed to 3:2.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
     {
       "id": "react-bits",
       "slug": "react-bits",
