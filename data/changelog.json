@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-14",
+      "title": "HTML +3：React Bits、Animata、Vengeance UI（@binghe 推荐）",
+      "titleEn": "HTML +3: React Bits, Animata, Vengeance UI (via @binghe)",
+      "body": "按冰河（@binghe）9 月 13 日帖「一键高级感」的三站收录，来源帖正文无外链，官网与仓库均于 2026-09-14 核到 200。React Bits（reactbits.dev / DavidHDev/react-bits）：React 动画组件浏览站，「160+」为作者自述，仓库许可证为 MIT + Commons Clause；Animata（animata.design / codse/animata）：MIT、copy-paste 的 React + Tailwind 动画组件，「150+」为作者自述；Vengeance UI（帖内写作 VengenceUI，域名 vengenceui.com，仓库 Ashutoshx7/VengeanceUI，MIT）：偏落地页交互的动画组件，作者的营销描述不转成事实数字。三条均精选、类型 component / motion（Vengeance UI 另加 landing），预览为官网现场截图。均非 Grok Bot 案例。HTML 54→57，数据版本 1.3.22。",
+      "bodyEn": "Three sites from 冰河’s (@binghe) 13 Sept “one-click premium feel” post; the post itself carries no external links, and each official site and repo returned 200 on 2026-09-14. React Bits (reactbits.dev / DavidHDev/react-bits): a browse-and-copy site of animated React components, “160+” is the author’s claim, repo licensed MIT + Commons Clause; Animata (animata.design / codse/animata): MIT, copy-paste React + Tailwind animated components, “150+” is the author’s claim; Vengeance UI (spelled VengenceUI in the post, domain vengenceui.com, repo Ashutoshx7/VengeanceUI, MIT): landing-page-leaning animated components, with the author’s marketing copy not turned into factual figures. All three featured, typed component / motion (Vengeance UI also landing), previews are live screenshots of the official sites. None are Grok Bot cases. HTML 54→57, dataset 1.3.22."
+    },
+    {
       "date": "2026-09-13",
       "title": "晚间：HTML +2、Agent UI +2",
       "titleEn": "Evening: HTML +2, Agent UI +2",
