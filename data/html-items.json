@@ -1,11 +1,105 @@
 {
   "meta": {
-    "updatedAt": "2026-09-13T12:20:00Z",
+    "updatedAt": "2026-09-14T00:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.21",
-    "count": 54
+    "version": "1.3.22",
+    "count": 57
   },
   "items": [
+    {
+      "id": "react-bits",
+      "slug": "react-bits",
+      "title": "React Bits：一键「高级感」动画组件库",
+      "titleEn": "React Bits: animated React components for a premium look",
+      "summary": "冰河（@binghe）推荐的第一站。公开 React 动画组件浏览站（文字动效 / 背景 / 滤镜等分区），作者称 160+，可按需复制单个组件。适合 Agent / 落地页要「高级感」时当素材库。本站是 Astro，不整库接入，只收录入口。",
+      "summaryEn": "First stop in 冰河’s (@binghe) thread. A public browse-and-copy site of animated React components (text effects / backgrounds / filters and more); the author claims 160+, each copied individually. Handy as a material bank when an Agent or landing page needs a premium feel. This site runs on Astro, so only the entry point is catalogued, not the library itself.",
+      "sourceUrl": "https://reactbits.dev",
+      "secondaryUrls": [
+        "https://github.com/DavidHDev/react-bits",
+        "https://x.com/binghe/status/2099123548363321798"
+      ],
+      "previewImage": "/previews/react-bits.webp",
+      "types": [
+        "component",
+        "motion",
+        "docs"
+      ],
+      "tags": [
+        "react",
+        "motion",
+        "component",
+        "animation",
+        "landing"
+      ],
+      "featured": true,
+      "qualityNote": "组件数为作者 / 站点自述：来源帖写「160+」，官网首页 2026-09-14 当日显示「170+ COMPONENTS · FREE FOREVER」，本站均未复计；官网另有付费 Pro 入口，本条只收免费浏览站。来源帖未给外链，官网与仓库均核到 200。仓库许可证为 MIT + Commons Clause（非纯 MIT），商用二次分发前请自查。非 Grok Bot 案例，归 HTML 收集的组件参考。预览为官网现场截图。",
+      "qualityNoteEn": "Component counts are author / site claims: the source post says “160+”, and the homepage showed “170+ COMPONENTS · FREE FOREVER” on 2026-09-14 — neither re-counted here. The site also has a paid Pro tier; only the free browse site is catalogued. The post carries no external link; site and repo both returned 200. The repo is licensed MIT + Commons Clause (not plain MIT) — check before redistributing commercially. Not a Grok Bot case; filed under HTML Collection as a component reference. Preview is a live screenshot of the site.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-14T00:30:00Z"
+    },
+    {
+      "id": "animata",
+      "slug": "animata",
+      "title": "Animata：MIT 可复制粘贴的动画组件",
+      "titleEn": "Animata: MIT copy-paste animated React components",
+      "summary": "冰河推荐第二站。MIT 协议、copy-paste 取用（非 npm 整包安装）的 React + Tailwind 动画组件与交互片段，作者称 150+；官网可按分类预览并直接复制代码。",
+      "summaryEn": "Second stop in 冰河’s thread. MIT-licensed, copy-paste (not an npm package) animated React + Tailwind components and interaction snippets; the author claims 150+. The site previews by category and lets you copy the code directly.",
+      "sourceUrl": "https://animata.design",
+      "secondaryUrls": [
+        "https://github.com/codse/animata",
+        "https://x.com/binghe/status/2099123548363321798"
+      ],
+      "previewImage": "/previews/animata.webp",
+      "types": [
+        "component",
+        "motion",
+        "docs"
+      ],
+      "tags": [
+        "react",
+        "motion",
+        "component",
+        "tailwind",
+        "mit",
+        "copy-paste"
+      ],
+      "featured": true,
+      "qualityNote": "条数与协议以仓库与官网为准：仓库 LICENSE 为 MIT（2026-09-14 核对）；来源帖写「150+」，官网首页当日显示「155+ animated React components」，均为作者 / 站点自述、未逐条复计。来源帖未给外链，官网与仓库均核到 200。官网带 Carbon 广告位。预览为官网现场截图。",
+      "qualityNoteEn": "Count and license follow the repo and site: the repo LICENSE is MIT (checked 2026-09-14); the source post says “150+” and the homepage showed “155+ animated React components” that day — both author / site claims, not re-counted. The post has no external link; site and repo both returned 200. The site carries a Carbon ad slot. Preview is a live screenshot of the site.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-14T00:30:00Z"
+    },
+    {
+      "id": "vengeance-ui",
+      "slug": "vengeance-ui",
+      "title": "Vengeance UI：落地页向动画组件（VengenceUI）",
+      "titleEn": "Vengeance UI: landing-page animated React components",
+      "summary": "冰河帖内写作 VengenceUI。偏落地页交互的 React 动画组件（鼠标水波、SaaS 风区块等，为作者描述），可复制粘贴接入。官网域名拼写为 vengence（vengenceui.com），仓库名为 VengeanceUI，MIT。",
+      "summaryEn": "Spelled “VengenceUI” in 冰河’s post. Landing-page-leaning animated React components (mouse ripple, SaaS-style sections, etc., as described by the author), meant to be copied and pasted. Note the domain is spelled vengence (vengenceui.com) while the repo is VengeanceUI; MIT.",
+      "sourceUrl": "https://www.vengenceui.com/",
+      "secondaryUrls": [
+        "https://github.com/Ashutoshx7/VengeanceUI",
+        "https://x.com/binghe/status/2099123548363321798"
+      ],
+      "previewImage": "/previews/vengeance-ui.webp",
+      "types": [
+        "component",
+        "landing",
+        "motion"
+      ],
+      "tags": [
+        "react",
+        "motion",
+        "landing",
+        "component",
+        "saas"
+      ],
+      "featured": true,
+      "qualityNote": "帖内无链接，以官网为准（2026-09-14 核到 200，仓库同）。作者描述与营销腔（「高级感」「Awesome / Tasteful」）不照搬成事实数字，本条不写组件条数。域名 vengence 与仓库名 Vengeance 拼写不一，已在标题与摘要注明。预览为官网现场截图。",
+      "qualityNoteEn": "No link in the post; the official site is the reference (200 on 2026-09-14, repo likewise). Author descriptions and marketing tone (“premium feel”, “Awesome / Tasteful”) are not turned into factual numbers — no component count is recorded here. The domain (vengence) and repo name (Vengeance) are spelled differently, noted in the title and summary. Preview is a live screenshot of the site.",
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-14T00:30:00Z"
+    },
     {
       "id": "session-context",
       "slug": "session-context",
