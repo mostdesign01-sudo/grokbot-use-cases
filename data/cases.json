@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-13T08:30:00Z",
+    "updatedAt": "2026-09-14T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.19",
-    "count": 105,
+    "version": "1.4.20",
+    "count": 107,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -77,10 +77,88 @@
       "https://saily.com",
       "https://x.com/dotey/status/2098840834942652505",
       "https://developers.openai.com/showcase",
-      "https://x.com/OpenAIDevs/status/2098827327832822014"
+      "https://x.com/OpenAIDevs/status/2098827327832822014",
+      "https://x.ai/bot/guides/grok-bot-for-engineering",
+      "https://moclaw.ai/blog/grok-bot-vs-cursor-cloud-agent"
     ]
   },
   "cases": [
+    {
+      "id": "grok-bot-for-engineering",
+      "slug": "xai-grok-bot-for-engineering",
+      "title": "官方指南：Grok Bot for Engineering（工程舰队）",
+      "titleEn": "Official guide: Grok Bot for Engineering",
+      "summary": "SpaceXAI 工程师 Lingxi Li 2026-09-10 官方 Guides 长文：五席专科工程 Bot（iOS / Desktop / 基建 / Android / harness）拉起 Cursor Cloud Agent，Notion 当状态机巡检，Jenny 做运营岗晨间 1:1 与事后复盘；另写夜间审计与 P0 五分钟催办。作者自述「200+ 并行 Cloud Agent」「Lauren 月合 2000+ PR」等为文内数字，本库不当作核验 KPI。异于已收录的 Lingxi X 长文与 Guides 索引页，本条专指这一篇工程 playbook。",
+      "summaryEn": "Official Sep 10, 2026 Grok Bot Guides piece by SpaceXAI engineer Lingxi Li: five specialist engineer Bots (iOS / Desktop / infra / Android / harness) launch Cursor Cloud Agents, use a shared Notion PR board as a state machine, and Jenny (ops Bot) runs morning 1:1s plus postmortems; plus nightly audits and a P0 five-minute nudge loop. Author figures such as “200+ parallel Cloud Agents” and “Lauren shipped 2,000+ PRs in a month” are in-article claims, not verified KPIs here. Distinct from the already-catalogued Lingxi X article and the Guides index — this card is the engineering playbook itself.",
+      "categories": [
+        "engineering",
+        "multi-agent",
+        "automation",
+        "coding"
+      ],
+      "role": "Engineering Org playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-engineering",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides",
+        "https://x.com/i/article/2094493172516966781"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-10）。产量与并行数是作者自述；与已收录 lingxi-engineering-org（X 长文）同源作者、不同载体，本条以官方页为主源。价位与计划门槛以现页为准。",
+      "qualityNoteEn": "Official Guides (2026-09-10). Throughput and concurrency figures are the author’s claims. Same author as the already-listed lingxi-engineering-org X article, different surface — this card’s primary source is the official page. Confirm plan gates on live pricing.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "低风险巡检与草稿审阅可过夜；合入、改生产、对外发帖、花钱必须人审。",
+      "approvalBoundaryEn": "Low-risk patrols and draft reviews can run overnight; merges, production edits, outbound posts, and spending need a human.",
+      "connectors": [
+        "notion",
+        "github",
+        "slack"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-10",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
+    {
+      "id": "moclaw-cloud-vs-grok",
+      "slug": "moclaw-cursor-cloud-agent-vs-grok-bot",
+      "title": "MoClaw：Cursor Cloud Agent vs Grok Bot（按活选工具）",
+      "titleEn": "MoClaw: Cursor Cloud Agent vs Grok Bot (pick by the job)",
+      "summary": "MoClaw / Zentor 2026-08-20 长文（文内称 2026-09-11 有修订）：把 Cloud Agent（隔离 VM、克隆仓库、开 PR）与 Grok Bot（账号级共享云电脑、签进应用、关盖继续跑）拆开比；强调同账号 Bot 不隔离凭证、Grok Bot 可派发 Cloud Agent、计划门槛不同。文内 Ahrefs 搜索量、硬件传闻与价位是快照，需回官方页核对。",
+      "summaryEn": "MoClaw / Zentor’s Aug 20, 2026 decision guide (article notes a Sep 11, 2026 update): separates Cursor Cloud Agents (isolated VMs that clone repos and open PRs) from Grok Bot (one user-scoped shared cloud computer that signs into apps and keeps running after the laptop closes). Stresses shared credentials across Bots, that Grok Bot can launch Cloud Agents, and different plan gates. In-article Ahrefs volumes, hardware rumors, and prices are snapshots — confirm on live docs.",
+      "categories": [
+        "engineering",
+        "ops",
+        "research"
+      ],
+      "role": "Decision guide",
+      "sourceUrl": "https://moclaw.ai/blog/grok-bot-vs-cursor-cloud-agent",
+      "secondaryUrls": [
+        "https://cursor.com/help/grok-bot/getting-started",
+        "https://x.ai/bot"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "第三方对照文（标注 Updated September 11, 2026）。Ahrefs 数字、论坛硬件传闻与价位只作快照；官方可核对面是 Cursor Cloud Agents / Grok Bot FAQ 与 x.ai/bot。不是官方文档。",
+      "qualityNoteEn": "Third-party comparison (Updated September 11, 2026). Ahrefs figures, forum hardware rumors, and prices are snapshots. Checkable official surface: Cursor Cloud Agents / Grok Bot FAQ and x.ai/bot. Not official docs.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "派发 Cloud Agent、改仓库、签进第三方应用仍要人审边界。",
+      "approvalBoundaryEn": "Still gate Cloud Agent launches, repo writes, and third-party sign-ins behind human approval.",
+      "connectors": [
+        "github",
+        "browser"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-20",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
     {
       "id": "saily-us-number-esim",
       "slug": "saily-us-number-esim",
