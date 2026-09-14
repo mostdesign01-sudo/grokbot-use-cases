@@ -1,0 +1,257 @@
+---
+import Badge from "../../components/Badge.astro";
+import FavButton from "../../components/FavButton.astro";
+import Loc from "../../components/Loc.astro";
+import ModelCard from "../../components/ModelCard.astro";
+import Stars from "../../components/Stars.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
+import { ui } from "../../lib/i18n";
+import {
+  getRelatedModelsForImagePrompt,
+  imageModelTag,
+  imagePrompts,
+  listImagePrompts,
+} from "../../lib/image-prompts";
+import { assetUrl, withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return imagePrompts.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const secondary = item.secondaryUrls ?? [];
+const highlights = item.highlights ?? [];
+const relatedModels = getRelatedModelsForImagePrompt(item);
+const preview = assetUrl(item.previewImage);
+const modelTag = imageModelTag(item);
+const sourceLabel = item.sourceLabel ?? item.sourceUrl;
+const sourceLabelEn = item.sourceLabelEn ?? item.sourceLabel ?? item.sourceUrl;
+const others = listImagePrompts().filter((other) => other.id !== item.id);
+---
+
+<BaseLayout
+  collection="lab"
+  title={`${item.title} · AI UP LAB`}
+  titleEn={`${item.titleEn} · AI UP LAB`}
+  description={item.summary}
+  descriptionEn={item.summaryEn}
+>
+  <div class="wrap">
+    <article class="detail-hero">
+      <p class="crumb">
+        <a href={withBase("/")}><Loc zh={ui.detail.lab.zh} en={ui.detail.lab.en} /></a> /
+        <a href={withBase("image-prompts/")}><Loc zh={ui.nav.imagePrompts.zh} en={ui.nav.imagePrompts.en} /></a> /
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </p>
+      <div class="badges">
+        <Badge kind="approval" label={modelTag} />
+        <Badge kind="community" label={ui.badge.community.zh} labelEn={ui.badge.community.en} />
+        {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+        <Stars value={item.stars} />
+      </div>
+      <h1>
+        <span class="loc-zh">{item.title}</span>
+        <span class="loc-en">{item.titleEn}</span>
+      </h1>
+      <p class="title-en loc-zh">{item.titleEn}</p>
+      <p class="lede">
+        <span class="loc-zh">{item.summary}</span>
+        <span class="loc-en">{item.summaryEn}</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href={item.sourceUrl} rel="noreferrer">
+          <Loc zh={ui.imagePrompt.openSource.zh} en={ui.imagePrompt.openSource.en} />
+        </a>
+        <FavButton lib="image-prompts" id={item.id} variant="button" />
+      </div>
+      {
+        preview && (
+          <figure class="detail-preview model-preview">
+            <img src={preview} alt="" />
+            {(item.previewCredit || item.previewCreditEn) && (
+              <figcaption>
+                <span class="loc-zh">{item.previewCredit ?? item.previewCreditEn}</span>
+                <span class="loc-en">{item.previewCreditEn ?? item.previewCredit}</span>
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
+    </article>
+
+    <div class="detail-grid">
+      <div>
+        <section class="panel">
+          <h2><Loc zh={ui.imagePrompt.sources.zh} en={ui.imagePrompt.sources.en} /></h2>
+          <div class="model-sources">
+            <a class="model-source" href={item.sourceUrl} rel="noreferrer">
+              <span class="model-source-kind">
+                <Badge kind="official" label={ui.imagePrompt.primarySource.zh} labelEn={ui.imagePrompt.primarySource.en} />
+              </span>
+              <strong>
+                <span class="loc-zh">{sourceLabel}</span>
+                <span class="loc-en">{sourceLabelEn}</span>
+              </strong>
+              <span class="model-source-meta">
+                {item.sourceBy && <span>{item.sourceBy}</span>}
+                <span class="model-source-url">{item.sourceUrl}</span>
+              </span>
+            </a>
+            {
+              secondary.map((link) => (
+                <a class="model-source" href={link.url} rel="noreferrer">
+                  <span class="model-source-kind">
+                    <Badge kind="community" label={ui.imagePrompt.otherSources.zh} labelEn={ui.imagePrompt.otherSources.en} />
+                  </span>
+                  <strong>
+                    <span class="loc-zh">{link.label}</span>
+                    <span class="loc-en">{link.labelEn}</span>
+                  </strong>
+                  <span class="model-source-meta">
+                    {link.by && <span>{link.by}</span>}
+                    {link.date && (
+                      <span>
+                        <span class="loc-zh">{formatPublishedDate(link.date)}</span>
+                        <span class="loc-en">{formatPublishedDate(link.date, "en-US")}</span>
+                      </span>
+                    )}
+                    <span class="model-source-url">{link.url}</span>
+                  </span>
+                </a>
+              ))
+            }
+          </div>
+          <p class="quality-note">
+            <strong><Loc zh={ui.quality.zh} en={ui.quality.en} /></strong>
+            <span class="loc-zh">{item.qualityNote}</span>
+            <span class="loc-en">{item.qualityNoteEn}</span>
+          </p>
+        </section>
+
+        {
+          highlights.length > 0 && (
+            <section class="panel">
+              <h2><Loc zh={ui.imagePrompt.highlights.zh} en={ui.imagePrompt.highlights.en} /></h2>
+              <ul class="model-highlights">
+                {highlights.map((point) => (
+                  <li>
+                    <span class="loc-zh">{point.text}</span>
+                    <span class="loc-en">{point.textEn}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        {
+          relatedModels.length > 0 && (
+            <section class="section">
+              <h2><Loc zh={ui.imagePrompt.relatedModels.zh} en={ui.imagePrompt.relatedModels.en} /></h2>
+              <p class="combo-tease"><Loc zh={ui.imagePrompt.relatedModelsHint.zh} en={ui.imagePrompt.relatedModelsHint.en} /></p>
+              <div class="model-grid model-grid-related">
+                {relatedModels.map((model) => (
+                  <ModelCard model={model} />
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+
+      <aside>
+        <section class="panel">
+          <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
+          <dl class="kv">
+            <div>
+              <dt><Loc zh={ui.imagePrompt.model.zh} en={ui.imagePrompt.model.en} /></dt>
+              <dd><code>{modelTag}</code></dd>
+            </div>
+            <div>
+              <dt><Loc zh={ui.imagePrompt.listed.zh} en={ui.imagePrompt.listed.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+                <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+              </dd>
+            </div>
+            <div>
+              <dt><Loc zh={ui.meta.itemUpdated.zh} en={ui.meta.itemUpdated.en} /></dt>
+              <dd>
+                <span class="loc-zh">{formatShanghaiDateTime(item.updatedAt)}</span>
+                <span class="loc-en">{formatShanghaiDateTime(item.updatedAt, "en-US")}</span>
+              </dd>
+            </div>
+            {
+              item.stars && (
+                <div>
+                  <dt><Loc zh={ui.stars.label.zh} en={ui.stars.label.en} /></dt>
+                  <dd class="kv-stars">
+                    <Stars value={item.stars} />
+                    <span class="kv-hint"><Loc zh={ui.stars.hint.zh} en={ui.stars.hint.en} /></span>
+                  </dd>
+                </div>
+              )
+            }
+            <div>
+              <dt><Loc zh={ui.imagePrompt.sourceCount.zh} en={ui.imagePrompt.sourceCount.en} /></dt>
+              <dd>
+                <span class="loc-zh">{`1 主来源 · ${secondary.length} 其他`}</span>
+                <span class="loc-en">{`1 primary · ${secondary.length} other`}</span>
+              </dd>
+            </div>
+            {
+              item.tags.length > 0 && (
+                <div>
+                  <dt><Loc zh={ui.meta.tags.zh} en={ui.meta.tags.en} /></dt>
+                  <dd>{item.tags.join(" · ")}</dd>
+                </div>
+              )
+            }
+            {
+              (item.previewCredit || item.previewCreditEn) && (
+                <div>
+                  <dt><Loc zh={ui.imagePrompt.previewCredit.zh} en={ui.imagePrompt.previewCredit.en} /></dt>
+                  <dd>
+                    <span class="loc-zh">{item.previewCredit ?? item.previewCreditEn}</span>
+                    <span class="loc-en">{item.previewCreditEn ?? item.previewCredit}</span>
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+        </section>
+        <section class="panel">
+          <h2><Loc zh={ui.meta.publicSources.zh} en={ui.meta.publicSources.en} /></h2>
+          <div class="source-list">
+            <a href={item.sourceUrl} rel="noreferrer">{item.sourceUrl}</a>
+            {secondary.map((link) => (
+              <a href={link.url} rel="noreferrer">
+                {link.url}
+              </a>
+            ))}
+          </div>
+        </section>
+        {
+          others.length > 0 && (
+            <section class="panel">
+              <h2><Loc zh={ui.imagePrompt.otherItems.zh} en={ui.imagePrompt.otherItems.en} /></h2>
+              <div class="source-list">
+                {others.map((other) => (
+                  <a href={withBase(`image-prompts/${other.slug}/`)}>
+                    <span class="loc-zh">{other.title}</span>
+                    <span class="loc-en">{other.titleEn}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

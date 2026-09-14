@@ -1,0 +1,61 @@
+---
+import type { ImagePromptItem } from "../lib/image-prompts";
+import { imageModelTag } from "../lib/image-prompts";
+import { formatPublishedDate } from "../lib/format";
+import { ui } from "../lib/i18n";
+import { assetUrl, withBase } from "../lib/paths";
+import Badge from "./Badge.astro";
+import FavButton from "./FavButton.astro";
+import Loc from "./Loc.astro";
+import Stars from "./Stars.astro";
+
+interface Props {
+  item: ImagePromptItem;
+}
+
+const { item } = Astro.props;
+const preview = assetUrl(item.previewImage);
+const secondary = item.secondaryUrls ?? [];
+const sourceHost = new URL(item.sourceUrl).hostname.replace(/^www\./, "");
+---
+
+<div class="card-shell card-shell-model card-shell-prompt">
+  <a class="card model-card prompt-card" href={withBase(`image-prompts/${item.slug}/`)}>
+    <div class="badges">
+      <Badge kind="approval" label={imageModelTag(item)} />
+      <Badge kind="community" label={ui.badge.community.zh} labelEn={ui.badge.community.en} />
+      {item.featured && <Badge kind="featured" label={ui.badge.featured.zh} labelEn={ui.badge.featured.en} />}
+      <Stars value={item.stars} />
+    </div>
+    <h3>
+      <span class="loc-zh">{item.title}</span>
+      <span class="loc-en">{item.titleEn}</span>
+    </h3>
+    <p class="title-en loc-zh">{item.titleEn}</p>
+    {
+      preview && (
+        <div class="tweet-media model-card-media">
+          <img src={preview} alt="" loading="lazy" decoding="async" />
+        </div>
+      )
+    }
+    <p class="summary">
+      <span class="loc-zh">{item.summary}</span>
+      <span class="loc-en">{item.summaryEn}</span>
+    </p>
+    <div class="card-meta">
+      <span>{sourceHost}</span>
+      <span>
+        <Loc zh={ui.imagePrompt.listed.zh} en={ui.imagePrompt.listed.en} />
+        {" "}
+        <span class="loc-zh">{formatPublishedDate(item.publishedAt)}</span>
+        <span class="loc-en">{formatPublishedDate(item.publishedAt, "en-US")}</span>
+      </span>
+      <span>
+        <span class="loc-zh">{`1 主来源 · ${secondary.length} 其他`}</span>
+        <span class="loc-en">{`1 primary · ${secondary.length} other`}</span>
+      </span>
+    </div>
+  </a>
+  <FavButton lib="image-prompts" id={item.id} />
+</div>

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-14T12:00:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.0.0",
+    "count": 1
+  },
+  "items": [
+    {
+      "id": "dsxzai-image-25-gallery",
+      "slug": "dsxzai-image-25-gallery",
+      "title": "img.dsxzai.com：Image 2.5 案例 + 提示词画廊（大师的AI小灶）",
+      "titleEn": "img.dsxzai.com: Image 2.5 case + prompt gallery (by @dashiAIxz)",
+      "summary": "社区提示词画廊。@dashiAIxz（大师的AI小灶）9 月 14 日发帖称「GPT6 太耀眼了，导致 Image 2.5 虽然能力很强没多少人关注到」，于是把网上 Image 2.5 相关的案例和提示词整理成一个网站 img.dsxzai.com（页面标题「生成提示词案例库」）；作者称「每个案例都有提示词和来源，复制就能生成同款」。站内按模型分栏（Image2.5 为其一），按品牌视觉 / 信息图 / 摄影 / 海报 / 字体设计 / 角色IP / 人像 / 界面等标签筛选，每条案例列出图、完整提示词、「复制提示词」按钮与「查看来源」（多为 X 原帖 + 作者）。本卡只记「可逛的第三方提示词画廊」，不复述条数，也不为站点背书。",
+      "summaryEn": "A community prompt gallery. On 14 Sept @dashiAIxz (大师的AI小灶) posted that “GPT-6 is so dazzling that Image 2.5, strong as it is, got little attention,” so he collected Image 2.5 cases and prompts from around the web into one site, img.dsxzai.com (page title 「生成提示词案例库」 — generative prompt case library). The author says every case comes with its prompt and source, “copy it and you get the same result.” The site groups cases by model (Image2.5 is one tab), filters by tags such as brand visual / infographic / photography / poster / typography / character IP / portrait / UI, and each case shows the image, the full prompt, a copy-prompt button, and a view-source link (mostly the original X post plus author). This card records a browsable third-party prompt gallery — no count repeated, no endorsement.",
+      "modelTag": "gpt-image-2.5",
+      "sourceUrl": "https://img.dsxzai.com/",
+      "sourceLabel": "img.dsxzai.com 提示词案例库（画廊本体）",
+      "sourceLabelEn": "img.dsxzai.com prompt case library (the gallery)",
+      "sourceBy": "大师的AI小灶 / @dashiAIxz",
+      "secondaryUrls": [
+        {
+          "label": "作者原帖：整理 Image 2.5 案例与提示词做了个网站（X 帖，附站点截图）",
+          "labelEn": "Author’s original post: built a site for Image 2.5 cases and prompts (X post, with a site screenshot)",
+          "url": "https://x.com/dashiAIxz/status/2099390242197565492",
+          "by": "@dashiAIxz",
+          "date": "2026-09-14"
+        }
+      ],
+      "previewImage": "/previews/dsxzai-image-25-gallery.webp",
+      "previewCredit": "预览：@dashiAIxz X 帖附图（img.dsxzai.com 首屏截图，裁成 3:2）",
+      "previewCreditEn": "Preview: the screenshot attached to @dashiAIxz’s X post (top of img.dsxzai.com, cropped to 3:2)",
+      "tags": ["gallery", "prompt-library", "copy-to-recreate", "chinese", "community"],
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-14T12:00:00Z",
+      "highlights": [
+        {
+          "text": "作者帖原文：「GPT6 太耀眼了，导致 Image 2.5 虽然能力很强没多少人关注到。最近花时间整理了一下网上 Image2.5 相关的案例和提示词，做了个网站来呈现。每个案例都有提示词和来源，复制就能生成同款。」帖子发于 2026-09-14，附一张站点截图。",
+          "textEn": "The author’s post, verbatim (translated): “GPT-6 is so dazzling that Image 2.5, strong as it is, got little attention. I spent some time collecting Image 2.5 cases and prompts from around the web and built a site to present them. Every case has its prompt and source — copy it and you get the same result.” Posted 2026-09-14 with one site screenshot."
+        },
+        {
+          "text": "站点可核到的：页面标题「生成提示词案例库」，顶部按模型分栏（截图里可见 全部 / Image2.5 / Nano banana / Midjourney），标签行含品牌视觉、信息图、摄影、海报、字体设计、清爽、未来感、插画、极简、复古、空间建筑、角色IP、时尚、食物、人像、产品、界面；带搜索框、「提交案例」入口与 中/En 切换。",
+          "textEn": "Visible on the site: page title 「生成提示词案例库」; model tabs across the top (the screenshot shows 全部 / Image2.5 / Nano banana / Midjourney); a tag row with brand visual, infographic, photography, poster, typography, clean, futuristic, illustration, minimal, retro, architecture, character IP, fashion, food, portrait, product, UI; plus a search box, a “submit a case” entry, and a 中/En toggle."
+        },
+        {
+          "text": "每条案例的结构：标题、一句整理说明（如「中文整理提示词，原帖公开一句具体提示词；无需参考图」）、完整提示词、模型名、来源 URL 与来源作者、来源发布时间、标签与图片；站内按钮为「复制提示词」「查看来源」。提示词是否与原帖作品逐字一致，以每条的整理说明为准，本库未逐条核对。",
+          "textEn": "Per-case structure: title, a one-line curation note (e.g. “prompt curated in Chinese; the original post published one concrete prompt; no reference image needed”), the full prompt, model name, source URL and source author, source publish time, tags and images; on-site buttons are “copy prompt” and “view source.” Whether each prompt matches the original post verbatim is whatever that case’s note says — not checked one by one here."
+        },
+        {
+          "text": "站点是 Vite/React 单页应用，公开接口 /api/cases 分页返回案例；「全部」分栏的接口 total 字段在本库 2026-09-14 打开时为 485，但这是全部模型合计、由站点自报，Image 2.5 单独条数本库未复数。",
+          "textEn": "The site is a Vite/React single-page app; a public /api/cases endpoint pages through the cases. Its total field for the “all” tab read 485 when this library opened it on 2026-09-14 — but that is the site’s own figure across all model tabs; the Image 2.5-only count was not re-tallied here."
+        }
+      ],
+      "qualityNote": "Image 2.5 提示词看板的第一张卡：一个可逛的第三方提示词画廊，不是模型卡，也不是 Grok Bot 用法。主源是 img.dsxzai.com（2026-09-14 本库打开返回 200，Cloudflare 前置），社区源是作者 @dashiAIxz 的 X 帖（可达，正文与附图已核）。「复制就能生成同款」「能力很强没多少人关注」均为作者自述；站内每条提示词与原帖作品的对应关系以该条的整理说明为准，本库未逐条打开。站点带「提交案例」与「管理」入口，是作者自建站，本库不为其背书，也未测试提交流程。不写点赞、浏览等互动数字；条数只记接口当日自报值并标明口径。预览图取自作者 X 帖附图（站点首屏截图，裁掉浏览器边框后取中 3:2），非本库现场截图 — 无头浏览器打开时首屏图片仍在渐入动画中，故未用现场截图。不打星。",
+      "qualityNoteEn": "First card on the Image 2.5 prompts board: a browsable third-party prompt gallery — not a model card, not a Grok Bot playbook. Primary source is img.dsxzai.com (returned 200 behind Cloudflare when this library opened it on 2026-09-14); the community source is the author @dashiAIxz’s X post (reachable; text and attached image checked). “Copy it and you get the same result” and “strong but under-noticed” are the author’s claims; the mapping between each on-site prompt and its original post is whatever that case’s curation note says — not opened one by one here. The site carries “submit a case” and “admin” entries and is the author’s own build; no endorsement, and the submission flow was not tested. No likes, views, or other engagement figures are recorded; the only count noted is the API’s self-reported total on the day, with its scope stated. Preview is the screenshot attached to the author’s X post (top of the site, browser chrome trimmed, center-cropped to 3:2), not a live capture by this library — a headless load caught the first-screen images mid fade-in, so no live shot was used. Unrated.",
+      "featured": true
+    }
+  ]
+}

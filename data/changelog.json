@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-14",
+      "title": "新开 Image 2.5 提示词看板：首条 img.dsxzai.com 画廊（@dashiAIxz）",
+      "titleEn": "New Image 2.5 prompts board: first card is the img.dsxzai.com gallery (@dashiAIxz)",
+      "body": "新增 /image-prompts/ 看板（数据 data/image-prompts.json，字段见 image-prompts-schema.md，另有 /image-prompts.json），与最新模型看板平行，专收 GPT-Image-2.5 / ChatGPT Images 2.5 的提示词画廊、案例合集与可抄的提示词；已进顶栏、首页左栏、页脚与我的收藏。首条 /image-prompts/dsxzai-image-25-gallery/：@dashiAIxz（大师的AI小灶）9 月 14 日帖称「GPT6 太耀眼了，导致 Image 2.5 虽然能力很强没多少人关注到」，把网上 Image 2.5 案例与提示词整理成 img.dsxzai.com（页面标题「生成提示词案例库」），作者称每个案例都有提示词和来源、复制就能生成同款。站点 2026-09-14 核到 200，按模型分栏、按标签筛选，每条列图、完整提示词、复制提示词与查看来源。作者说法与本库核到的分开写，不写点赞浏览，条数只记接口当日自报值并标口径。预览取作者 X 帖附图裁 3:2。数据版本 1.0.0 / 1 条。",
+      "bodyEn": "Added the /image-prompts/ board (data in data/image-prompts.json, fields in image-prompts-schema.md, plus /image-prompts.json), parallel to the Models board and dedicated to prompt galleries, case roundups, and copyable prompts for GPT-Image-2.5 / ChatGPT Images 2.5; wired into the header, home rail, footer, and My favorites. First card, /image-prompts/dsxzai-image-25-gallery/: on 14 Sept @dashiAIxz (大师的AI小灶) posted that “GPT-6 is so dazzling that Image 2.5, strong as it is, got little attention,” and collected Image 2.5 cases and prompts into img.dsxzai.com (page title 「生成提示词案例库」); the author says every case has its prompt and source and “copy it and you get the same result.” The site returned 200 on 2026-09-14, with model tabs, tag filters, and per-case image, full prompt, copy-prompt, and view-source. Author claims and what this library checked are kept apart; no likes or views recorded; the only count is the API’s self-reported total on the day, with its scope stated. Preview is the author’s X screenshot cropped to 3:2. Dataset 1.0.0 / 1 item."
+    },
+    {
+      "date": "2026-09-14",
       "title": "工作日晨更：Grok Bot +2、HTML +2、Agent UI +2",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +2, Agent UI +2",
       "body": "Grok Bot：增收官方 Guides《Grok Bot for Engineering》（x.ai/bot/guides/grok-bot-for-engineering，Lingxi Li，2026-09-10；异于已收录 lingxi-engineering-org X 长文）与 MoClaw《Cursor Cloud Agent vs Grok Bot》（moclaw.ai，文内称 2026-09-11 有修订）。HTML：Show HN Soundmap（item 49644603，soundmap.darebuild.com）与 Hopla Games（item 49682477，hoplagames.com/en）。Agent UI：ThreeUI Community Cloud Field（/backgrounds/portal-field/cloud-field）与 Dot Border Button（/buttons/rectangle-buttons/dot-border-button），均核到 Copy Prompt、无 Pro template 遮罩。",

@@ -53,9 +53,14 @@ npm run preview  # 预览生产构建
    - 已在 cases 里收过的模型（如 Claude Fable 5.1）只写短卡，用 `relatedCaseIds` 指回，不重复正文
    - 值得单独看的社区 demo（如 Astra 复刻迷你 LOL）可开一张 demo 卡，用 `relatedModelIds` 与模型卡互指；只记能力展示，不分发游戏文件
    - 字段见 [`data/models-schema.md`](data/models-schema.md)
-7. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
-8. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
-9. 提交并推送到 `main`
+7. **Image 2.5 提示词**：编辑 [`data/image-prompts.json`](data/image-prompts.json)
+   - 一张卡一个可打开的来源：提示词画廊站、案例合集帖或单条可抄的提示词；`sourceUrl` 是原站，作者帖放 `secondaryUrls`
+   - 作者数字一律标「作者称」，站点自报条数写清口径与日期；不写点赞、浏览等互动数字，不搬运整条提示词库
+   - 预览图 3:2，放 `public/previews/{id}.webp`；可选 `relatedModelIds` 指回 `data/models.json`
+   - 字段见 [`data/image-prompts-schema.md`](data/image-prompts-schema.md)
+8. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
+9. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
+10. 提交并推送到 `main`
 
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
 
@@ -104,6 +109,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 | `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门；详情页「开跑」复制桌 brief（不是第四套卡片库） |
 | `/combos/` `/combos/[slug]/` | 三库交叉组合：一壳 + 一件 + 一案（精选拣货，不是第四面墙） |
 | `/models/` `/models/[slug]/` | 最新模型看板：前沿模型的官方页 + 社区 showcase，首条 GPT-6 Astra（数据 `data/models.json`，另有 `/models.json`） |
+| `/image-prompts/` `/image-prompts/[slug]/` | Image 2.5 提示词看板：GPT-Image-2.5 的提示词画廊、案例合集与可抄的提示词，首条 img.dsxzai.com（数据 `data/image-prompts.json`，另有 `/image-prompts.json`） |
 | `/html/` | HTML 收集总览（masonry 浏览墙） |
 | `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
 | `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |
@@ -113,7 +119,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。详情页用 `qualityNote` 展示「收录理由」。HTML / Agent UI 条目另有类型徽章与原文链接。
 
-星级：四套库的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
+星级：各库与看板的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
 
 GitHub Star：站头「Star」药丸、首页左栏小卡、页脚一行都指向本仓库 https://github.com/mostdesign01-sudo/grokbot-use-cases（组件 `src/components/GitHubStar.astro`）。Star 数由浏览器读 GitHub 公开 API 填入并缓存一小时（键 `aiuplab:gh-stars`），读不到或为 0 就不显示。与 ★ 编辑星级、☆ 收藏是三回事。
 
