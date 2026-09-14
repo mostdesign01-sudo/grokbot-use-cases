@@ -1,11 +1,77 @@
 {
   "meta": {
-    "updatedAt": "2026-09-13T12:20:00Z",
+    "updatedAt": "2026-09-14T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.13",
-    "count": 48
+    "version": "1.4.14",
+    "count": 50
   },
   "items": [
+    {
+      "id": "cloud-field",
+      "slug": "cloud-field",
+      "title": "Cloud Field",
+      "titleEn": "Cloud Field",
+      "summary": "ThreeUI Community 背景：Portal Field 变体 Cloud Field — 星空下的云层迁移气流场，可作 Agent 落地页或控制台氛围底。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community background: the Portal Field Cloud Field variant — a starfield cloud-migration airflow field for Agent landing or console atmosphere. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/backgrounds/portal-field/cloud-field",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/cloud-field.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Cloud Field 做 Agent 落地页氛围底。保持 Community 免费件，只改色温与密度。",
+      "promptHintEn": "Use Cloud Field as an Agent-landing atmosphere. Keep the free Community piece; only retint and density.",
+      "types": [
+        "background",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "clouds",
+        "background",
+        "webgl"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费背景（2026-09-14 核到页面可达、Copy Prompt 可见、无 Pro template 遮罩；规范 URL 为 /backgrounds/portal-field/cloud-field）。复制 prompt，勿手写体积云。",
+      "qualityNoteEn": "Free Community background (page reachable with Copy Prompt and no Pro template overlay, checked 2026-09-14; canonical URL /backgrounds/portal-field/cloud-field). Copy the prompt; don’t hand-author volume clouds.",
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
+    {
+      "id": "dot-border-button",
+      "slug": "dot-border-button",
+      "title": "Dot Border Button",
+      "titleEn": "Dot Border Button",
+      "summary": "ThreeUI Community 按钮：四角点阵 + 虚线描边 CTA（Rectangle Buttons 变体），适合 Agent 控制台主操作。免登录，可复制 prompt。",
+      "summaryEn": "ThreeUI Community button: a four-corner dotted CTA with sequentially drawn dashed borders (Rectangle Buttons variant), suited to Agent-console primary actions. No login; copy the prompt.",
+      "sourceUrl": "https://threeui.com/buttons/rectangle-buttons/dot-border-button",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/dot-border-button.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Dot Border Button 做 Agent 主 CTA。保持 Community 免费件，只改文案与点阵色。",
+      "promptHintEn": "Use Dot Border Button as the Agent primary CTA. Keep the free Community piece; only rewrite the label and retint the dots.",
+      "types": [
+        "button",
+        "ui"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "button",
+        "cta",
+        "css"
+      ],
+      "featured": true,
+      "qualityNote": "Community 免费按钮（2026-09-14 核到 Copy Prompt、无 Pro template 遮罩；规范 URL 为 /buttons/rectangle-buttons/dot-border-button）。复制 prompt，勿手写描边动画。",
+      "qualityNoteEn": "Free Community button (Copy Prompt present, no Pro template overlay, checked 2026-09-14; canonical URL /buttons/rectangle-buttons/dot-border-button). Copy the prompt; don’t hand-author the border motion.",
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-14T01:20:00Z"
+    },
     {
       "id": "typography-vortex",
       "slug": "typography-vortex",
