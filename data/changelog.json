@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-16",
+      "title": "工具贴：Photon Studio 本地免费 Photoshop 向修图（Tenzen Studio）",
+      "titleEn": "Tool tip: Photon Studio, a free local Photoshop-style editor (Tenzen Studio)",
+      "body": "Grok Bot 库增收旁路工具笔记 /cases/photon-studio/：Tenzen Studio 2026-09-13 发布的免费桌面修图 / 设计工具，官方产品页 tenzen.studio/photon/ 写「Free · macOS · Windows 11 · Linux · Works offline」——图层 / 分组 / 蒙版、调整图层、智能对象、图层效果、Curves / Levels、修复与仿制、内容识别填充、Liquify、文字与矢量，主体选择与去背景在本机跑，可开可存 PSD，开文件编辑不需账号，下载需留邮箱收链接。由 @Nozelcode 2026-09-14 西语帖带来；「100% 复刻 Photoshop」按推广口径处理，收录为 Photoshop 向的免费本地编辑器，PSD 往返与「不上传」均为厂商主张、本站未装机验证。已辨明与 photon.studio（波特兰制作公司）及 App Store 同名相机伴侣 App 无关。预览取作者视频一帧裁 3:2。cases 1.4.21 → 1.4.22，114 → 115 条。",
+      "bodyEn": "Grok Bot library adds an adjacent tool note, /cases/photon-studio/: a free desktop photo / design editor released 2026-09-13 by Tenzen Studio; the official product page tenzen.studio/photon/ reads “Free · macOS · Windows 11 · Linux · Works offline” — layers / groups / masks, adjustment layers, smart objects, layer effects, Curves / Levels, healing and clone, content-aware fill, Liquify, text and vectors, subject selection and background removal on a local model, PSD open and save, no account to edit, email required to receive the download link. Surfaced by @Nozelcode’s Spanish post on 2026-09-14; “Photoshop recreated 100%” is treated as promo framing and the entry is catalogued as a free local Photoshop-style editor, with PSD round-trips and “no upload” recorded as vendor claims not installed or verified by this site. Disambiguated from photon.studio (a Portland production company) and the same-named App Store camera companion. Preview is one frame of the author’s video cropped to 3:2. cases 1.4.21 → 1.4.22, 114 → 115 items."
+    },
+    {
       "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",
