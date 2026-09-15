@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T01:20:00Z",
+    "updatedAt": "2026-09-15T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.20",
-    "count": 107,
+    "version": "1.4.21",
+    "count": 114,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -79,10 +79,264 @@
       "https://developers.openai.com/showcase",
       "https://x.com/OpenAIDevs/status/2098827327832822014",
       "https://x.ai/bot/guides/grok-bot-for-engineering",
-      "https://moclaw.ai/blog/grok-bot-vs-cursor-cloud-agent"
+      "https://moclaw.ai/blog/grok-bot-vs-cursor-cloud-agent",
+      "https://x.ai/bot/guides/grok-bot-101",
+      "https://x.ai/bot/guides/grok-bot-for-support",
+      "https://x.ai/bot/guides/templates-for-grok-bot",
+      "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
+      "https://github.com/codejunkie99/rosterroom",
+      "https://github.com/kunchenguid/grok-ship",
+      "https://github.com/RongleCat/awesome-grok-bot"
     ]
   },
   "cases": [
+    {
+      "id": "ronglecat-awesome-grok-bot",
+      "slug": "ronglecat-awesome-grok-bot",
+      "title": "RongleCat/awesome-grok-bot：中英日三语 Grok Bot 资源目录",
+      "titleEn": "RongleCat/awesome-grok-bot: bilingual+JP Grok Bot directory",
+      "summary": "社区 Awesome 列表（非官方）：官方文档、教程、现场案例、Skill/Plugin/MCP、开源替代与踩坑；README 中/英/日，徽章自报 entries≈1081（2026-09-15）。异于已收录 ZeroPointRepo/awesome-grok-bot 与 kydlikebtc/awesome-grokbot。",
+      "summaryEn": "Community awesome list (unofficial): official docs, tutorials, field cases, skills/plugins/MCP, OSS alternatives, failure modes; EN/ZH/JA READMEs; badge claims ~1081 entries (2026-09-15). Distinct from already-listed ZeroPointRepo/awesome-grok-bot and kydlikebtc/awesome-grokbot.",
+      "categories": [
+        "directory",
+        "community"
+      ],
+      "role": "Curated link directory",
+      "sourceUrl": "https://github.com/RongleCat/awesome-grok-bot",
+      "secondaryUrls": [
+        "https://usegrokbot.com/"
+      ],
+      "sourceType": "community",
+      "qualityNote": "非官方目录（2026-09-15 核约 298 star）。条目数为徽章自报；链接需点进核验。",
+      "qualityNoteEn": "Unofficial directory (~298 stars checked 2026-09-15). Entry count is a badge claim; verify links by opening them.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "只作导航；按链出去的具体 Bot/插件各自边界执行。",
+      "approvalBoundaryEn": "Navigation only; follow each linked Bot/plugin’s own approval boundary.",
+      "connectors": [],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "grok-ship",
+      "slug": "grok-ship-software-factory",
+      "title": "Grok Ship：把 Grok Bot 变成软件工厂（scout / ship）",
+      "titleEn": "Grok Ship: turn Grok Bot into a software factory (scout / ship)",
+      "summary": "kunchenguid/grok-ship：在共享电脑上装软件工厂——sqlite 待办、scout（只出报告）vs ship（授权改动）、按项目 crewmate 拉 Cursor Cloud Agent、合 PR 前对抗审阅、你本人合并。README 写可 `follow …/GROK_SHIP.md` 安装；并注明已被 Firstmate 模板 https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r 替代，本条仍收可复现的开源配方。",
+      "summaryEn": "kunchenguid/grok-ship: a software factory on the shared computer — sqlite backlog, scout (report-only) vs ship (authorized change), per-project crewmates driving Cursor Cloud Agents, adversarial review before any PR, and human merges. README install path is `follow …/GROK_SHIP.md`; it notes supersession by the Firstmate template https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r — this card keeps the reproducible open-source recipe.",
+      "categories": [
+        "engineering",
+        "multi-agent",
+        "coding",
+        "automation"
+      ],
+      "role": "Software factory distro",
+      "sourceUrl": "https://github.com/kunchenguid/grok-ship",
+      "secondaryUrls": [
+        "https://github.com/kunchenguid/grok-ship/blob/main/GROK_SHIP.md",
+        "https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r"
+      ],
+      "sourceType": "community",
+      "qualityNote": "MIT 开源（2026-09-15 核约 173 star）。仓库自标已被官方模板替代；合入永不自动（除文内写明的窄例外）。",
+      "qualityNoteEn": "MIT (~173 stars checked 2026-09-15). Repo marks itself superseded by an official template; merges stay human except narrow cases the README spells out.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "scout 可自动出报告；ship 开 PR 与 merge 必须人说了算。",
+      "approvalBoundaryEn": "Scout reports can run unattended; opening a ship PR and merging need your word.",
+      "connectors": [
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "rosterroom-prompts",
+      "slug": "rosterroom-82-team-prompts",
+      "title": "Roster Room：82 套可粘贴 Grok Bot 小队配方",
+      "titleEn": "Roster Room: 82 paste-ready Grok Bot team prompts",
+      "summary": "codejunkie99/rosterroom：纯提示词库（无应用），32 套重建运营小队 + 50 套新场景（创始人/营收/安全/金融等）。每份含 Full setup、First job、Manual fallback；默认可读可草稿，发送/花钱/合入须人批。站点 codejunkie99.github.io/rosterroom。非官方。",
+      "summaryEn": "codejunkie99/rosterroom: prompts-only (no app) — 32 rebuilt ops teams plus 50 new scenarios (founders/revenue/security/finance, etc.). Each file has Full setup, First job, and Manual fallback; default is read/draft with human gates for send/spend/merge. Site: codejunkie99.github.io/rosterroom. Unofficial.",
+      "categories": [
+        "multi-agent",
+        "prompts",
+        "templates"
+      ],
+      "role": "Team roster library",
+      "sourceUrl": "https://github.com/codejunkie99/rosterroom",
+      "secondaryUrls": [
+        "https://codejunkie99.github.io/rosterroom/"
+      ],
+      "sourceType": "community",
+      "qualityNote": "GitHub 公开库（2026-09-15 核约 15 star）。金融相关配方额外禁止下单/挪资；套数以 README 自述为准。",
+      "qualityNoteEn": "Public GitHub repo (~15 stars checked 2026-09-15). Finance rosters additionally forbid placing orders or moving funds; roster counts are README claims.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "粘贴后仍只读/草稿；发送、发布、花钱、改生产、合入必须人批。",
+      "approvalBoundaryEn": "After paste, stay read/draft; send, publish, spend, production edits, and merges need a human.",
+      "connectors": [],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-02",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "how-i-run-multiple-teams",
+      "slug": "xai-how-i-run-multiple-teams-of-grok-bots",
+      "title": "官方指南：How I run multiple teams of Grok Bots（一项目一频道）",
+      "titleEn": "Official guide: How I run multiple teams of Grok Bots",
+      "summary": "Eric Zakariasson 2026-08-27 官方 Guides 实验写法：每个项目 = 一个 Grok Bot 频道 + Notion Projects/Tasks；Projects Manager 用 Project Ops Skill 开频道、组班（先复用、频道至多约 6 席、新建 Bot 须人点头）；卡住标 Blocked 并在频道 ping。异于仅作 secondary 链在 grokbot-guides 索引卡上的链接。",
+      "summaryEn": "Official Aug 27, 2026 experimental Guides piece by Eric Zakariasson: one project = one Grok Bot channel + Notion Projects/Tasks; a Projects Manager Bot with a Project Ops skill opens the channel and staffs it (reuse first, ~six seats, new Bots only after human yes); blocked work pings in-channel. Distinct from the bare secondary link on the existing grokbot-guides index card.",
+      "categories": [
+        "multi-agent",
+        "project-management",
+        "automation"
+      ],
+      "role": "Multi-team coordination",
+      "sourceUrl": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-08-27），作者标明仍在试验。频道席位上限为作者自定。",
+      "qualityNoteEn": "Official Guides (2026-08-27); author marks it experimental. Channel seat caps are the author’s own rule.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "开新 Bot / 新项目须人点头；对外动作仍按各专科 Bot 边界。",
+      "approvalBoundaryEn": "New Bots and new projects need a human yes; outbound actions stay behind each specialist Bot’s boundary.",
+      "connectors": [
+        "notion"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "templates-for-grok-bot",
+      "slug": "xai-templates-for-grok-bot",
+      "title": "官方指南：Templates for Grok Bot（分享配方不是克隆）",
+      "titleEn": "Official guide: Templates for Grok Bot",
+      "summary": "Matt Palmer 2026-09-08 官方 Guides：Template 是 Bot 的「菜谱」——打包指令、相关记忆、Skill、插件与 Routine 触发，不含密钥与私有脚本；可 Team 或公开链接安装，装完需自连插件并核对详情。强调安装前看清上下文与集成，勿盲装。",
+      "summaryEn": "Official Sep 8, 2026 Guides piece by Matt Palmer: a Template is a Bot recipe — instructions, relevant memories, skills, plugins, and routine triggers without secrets or private scripts; share Team-only or via public link, then reconnect plugins and review details. Stresses reading context and integrations before installing.",
+      "categories": [
+        "getting-started",
+        "sharing",
+        "skills"
+      ],
+      "role": "Template sharing playbook",
+      "sourceUrl": "https://x.ai/bot/guides/templates-for-grok-bot",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-08）。模板不含密钥；复杂 MCP/脚本需自行补齐。",
+      "qualityNoteEn": "Official Guides (2026-09-08). Templates omit secrets; non-standard MCP/scripts must be reattached by the installer.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "安装他人模板前核对接线与权限；公开发布含内部记忆的配方需人审。",
+      "approvalBoundaryEn": "Review wiring and permissions before installing someone else’s template; human review before publishing recipes that still hold internal memory.",
+      "connectors": [
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-08",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "grok-bot-for-support",
+      "slug": "xai-grok-bot-for-support",
+      "title": "官方指南：Grok Bot for Support（客服五岗 + Routine）",
+      "titleEn": "Official guide: Grok Bot for Support",
+      "summary": "SpaceXAI David Gan 2026-09-09 官方 Guides：用连接器喂上下文，给 Support Bot 五类活——发版跟踪与反馈、缺陷复现录像、流失聚类、按政策审退款（等人批）、定制报表；再把流程落成可过夜的 Routine，手机复查。文内「每天数千工单」等为作者场景描述，本库不当 KPI。",
+      "summaryEn": "Official Sep 9, 2026 Guides piece by SpaceXAI’s David Gan: wire connectors, then five Support jobs — release tracking/feedback, bug reproduction with video, churn clustering, policy-gated refunds awaiting approval, and custom reporting — then promote flows to overnight Routines reviewed on mobile. In-article volume claims are scene-setting, not verified KPIs here.",
+      "categories": [
+        "support",
+        "automation",
+        "customer-success"
+      ],
+      "role": "Support ops playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-support",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-09）。退款与留存优惠必须人审；工单量为文内描述。",
+      "qualityNoteEn": "Official Guides (2026-09-09). Refunds and retention offers stay human-gated; ticket volume is in-article description.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "监控与草稿可自动；退款裁定、对外回复、花钱必须人批。",
+      "approvalBoundaryEn": "Monitoring and drafts can automate; refund decisions, outbound replies, and spending need a human.",
+      "connectors": [
+        "stripe"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-09",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "grok-bot-101",
+      "slug": "xai-grok-bot-101",
+      "title": "官方指南：Grok Bot 101（从解剖到四条工作流）",
+      "titleEn": "Official guide: Grok Bot 101",
+      "summary": "SpaceXAI DevRel Matt Palmer 2026-09-11 官方 Guides：把 Bot 当有持久桌面的同事；用语音/字段写清 Name·Title·Description；Chat / Routine / 多 Bot 链式；四条实操（X→Notion 私人 CRM、健身 Bot Arnold、外环写 Cursor Cloud Agent 提示、跨 Slack·Notion·GitHub 检索）。异于已收录的 mattyp 入门帖与 Guides 索引页。",
+      "summaryEn": "Official Sep 11, 2026 Guides piece by SpaceXAI DevRel Matt Palmer: treat a Bot as a colleague with a persistent desktop; define Name/Title/Description; Chat vs Routines vs multi-bot chains; four workflows (X→Notion personal CRM, fitness Bot Arnold, outer-loop Cursor Cloud Agent prompts, Slack/Notion/GitHub search). Distinct from the already-listed mattyp getting-started post and the Guides index.",
+      "categories": [
+        "getting-started",
+        "multi-agent",
+        "automation",
+        "productivity"
+      ],
+      "role": "DevRel playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-101",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-11）。关注者人数等为作者自述；价位与计划门槛以现页为准。",
+      "qualityNoteEn": "Official Guides (2026-09-11). Follower counts and similar figures are the author’s claims; confirm plan gates on live pricing.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "购物车比价与草稿可先跑；下单、发帖、合入、花钱必须人批。",
+      "approvalBoundaryEn": "Cart compares and drafts can run first; purchases, posts, merges, and spending need a human.",
+      "connectors": [
+        "notion",
+        "gmail",
+        "google-calendar",
+        "slack",
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
     {
       "id": "grok-bot-for-engineering",
       "slug": "xai-grok-bot-for-engineering",
