@@ -1,11 +1,45 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T01:20:00Z",
+    "updatedAt": "2026-09-15T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.14",
-    "count": 50
+    "version": "1.4.15",
+    "count": 51
   },
   "items": [
+    {
+      "id": "zephyr-framework",
+      "slug": "zephyr-framework",
+      "title": "Zephyr：Agent 可操控的零运行时 Web Components",
+      "titleEn": "Zephyr: agent-controllable zero-runtime web components",
+      "summary": "daltlc/zephyr-framework：约 14 个 Web Components（手风琴/模态/标签/表格等），用 CSS `:has()`、View Transitions、容器查询驱动交互；暴露 `Zephyr.agent.act()` 让 Agent 开模态、切标签、推数据。演示 https://daltlc.github.io/zephyr-framework/ ，免登录。",
+      "summaryEn": "daltlc/zephyr-framework: ~14 web components (accordion/modal/tabs/grid, …) with CSS `:has()`, View Transitions, and container queries; exposes `Zephyr.agent.act()` so an agent can open modals, switch tabs, or push data. Demo https://daltlc.github.io/zephyr-framework/ , no login.",
+      "sourceUrl": "https://daltlc.github.io/zephyr-framework/",
+      "secondaryUrls": [
+        "https://github.com/daltlc/zephyr-framework",
+        "https://www.npmjs.com/package/zephyr-framework"
+      ],
+      "previewImage": "/previews/zephyr.webp",
+      "npmPackage": "zephyr-framework",
+      "promptHint": "用 Zephyr 组件搭可被 Agent 调用的界面；优先走 Zephyr.agent.act，不要另写一套选择器脚本。",
+      "promptHintEn": "Build agent-callable UI with Zephyr; prefer Zephyr.agent.act over a parallel selector script.",
+      "types": [
+        "component",
+        "agent-api",
+        "web-components"
+      ],
+      "tags": [
+        "zephyr",
+        "agent-ui",
+        "web-components",
+        "css-has",
+        "zero-js"
+      ],
+      "featured": true,
+      "qualityNote": "公开演示 200（2026-09-15）。组件数为站点自述；预览取文档页 Agent API 段 3:2。非 ThreeUI。",
+      "qualityNoteEn": "Public demo returned 200 (2026-09-15). Component count is a site claim; preview is a 3:2 crop around the Agent API section. Not ThreeUI.",
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
     {
       "id": "cloud-field",
       "slug": "cloud-field",
