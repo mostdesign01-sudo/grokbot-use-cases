@@ -1,11 +1,47 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T12:00:00Z",
+    "updatedAt": "2026-09-15T05:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.0.0",
-    "count": 1
+    "version": "1.0.1",
+    "count": 2
   },
   "items": [
+    {
+      "id": "promptlabcn-selfie-pro-10",
+      "slug": "promptlabcn-selfie-pro-10",
+      "title": "PromptLabCN：自拍→专业摄影 10 条可编辑提示",
+      "titleEn": "PromptLabCN: 10 editable selfie→pro photo prompts",
+      "summary": "单帖提示词合集。@PromptLabCN（安娜 AI｜每日干货铺）9 月 13 日发帖称「ChatGPT 现在能把一张普通自拍变成专业摄影级别的照片。不用影棚。不用摄影师。只要上传一张清晰自拍，再用对提示词」，随后给出「10 条可编辑提示词」，并写「存下这条，下次换头像直接用」。帖子主楼只有这段导语加一张封面图（左 ChatGPT 标志、右一张人像），10 条提示词正文在作者的跟帖里，需点开原帖往下翻。本卡只记「有这么一条可以打开抄的帖」：不搬运 10 条提示词，也未逐条复现效果。",
+      "summaryEn": "A single-post prompt roundup. On 13 Sept @PromptLabCN (安娜 AI｜每日干货铺) posted that “ChatGPT can now turn an ordinary selfie into a professional-photography-grade photo. No studio. No photographer. Just upload one clear selfie and use the right prompt,” then offered “10 editable prompts” and told readers to “save this for your next avatar.” The head post is only that intro plus one cover image (ChatGPT logo on the left, one portrait on the right); the ten prompt texts sit in the author’s follow-up replies under the post, so open the post and scroll. This card records that such a copyable post exists — the ten prompts are not reproduced here, and none were re-run.",
+      "modelTag": "chatgpt-images",
+      "sourceUrl": "https://x.com/PromptLabCN/status/2099034604485443713",
+      "sourceLabel": "作者 X 帖：自拍→专业摄影 10 条可编辑提示词（提示词在跟帖里）",
+      "sourceLabelEn": "Author’s X post: 10 editable selfie→pro photo prompts (prompts are in the replies)",
+      "sourceBy": "安娜 AI｜每日干货铺 / @PromptLabCN",
+      "previewImage": "/previews/promptlabcn-selfie-pro-10.webp",
+      "previewCredit": "预览：@PromptLabCN X 帖附图（ChatGPT 标志 + 一张人像的封面图，上下补白底成 3:2）",
+      "previewCreditEn": "Preview: the image attached to @PromptLabCN’s X post (ChatGPT logo + one portrait cover, padded with white to 3:2)",
+      "tags": ["selfie", "portrait", "prompt", "chatgpt-images"],
+      "publishedAt": "2026-09-13",
+      "updatedAt": "2026-09-15T05:30:00Z",
+      "highlights": [
+        {
+          "text": "作者帖原文：「ChatGPT 现在能把一张普通自拍变成专业摄影级别的照片。不用影棚。不用摄影师。只要上传一张清晰自拍，再用对提示词。下面 10 条可编辑提示词，值得收藏（存下这条，下次换头像直接用）」。帖子发于 2026-09-13，附一张封面图。",
+          "textEn": "The author’s post, verbatim (translated): “ChatGPT can now turn an ordinary selfie into a professional-photography-grade photo. No studio. No photographer. Just upload one clear selfie and use the right prompt. Ten editable prompts below, worth saving (save this — use it next time you change your avatar).” Posted 2026-09-13 with one cover image."
+        },
+        {
+          "text": "用法形态：图生图 — 先上传自己的清晰自拍作参考，再贴一条提示词；作者称 10 条都「可编辑」，即按自己的场景改措辞。「专业摄影级别」「不用影棚」是作者自述，本库未上传自拍复现。",
+          "textEn": "Workflow shape: image-to-image — upload your own clear selfie as the reference, then paste a prompt; the author says all ten are “editable,” i.e. meant to be reworded for your scene. “Professional-photography grade” and “no studio needed” are the author’s claims; this library did not upload a selfie to reproduce them."
+        },
+        {
+          "text": "10 条提示词在哪：主楼只有导语和封面图，提示词在作者的跟帖里；本库不复制提示词原文，请到原帖抄。作者只写「ChatGPT」，未点名 GPT-Image-2.5 / API 模型名，故本卡模型标签写 chatgpt-images，不替作者补模型版本。",
+          "textEn": "Where the ten prompts are: the head post holds only the intro and the cover image; the prompts are in the author’s follow-up replies. This library does not copy the prompt text — take it from the post. The author names only “ChatGPT,” not GPT-Image-2.5 or an API model name, so the model badge here reads chatgpt-images rather than filling in a version the author never stated."
+        }
+      ],
+      "qualityNote": "Image 2.5 提示词看板第二张卡：一条「可打开抄」的单帖提示词合集，不是画廊站，也不是模型卡。来源是 @PromptLabCN 的 X 帖（2026-09-15 本库核到可达，主楼正文与附图已核对；发帖时间 2026-09-13 07:17 UTC，非 note 长帖，附一张 1668×943 图）。「专业摄影级别」「不用影棚不用摄影师」「10 条可编辑」均为作者自述；10 条提示词正文在作者跟帖里，本库这次没能展开整条讨论串，因此既未逐条核对条数，也不复制任何提示词措辞 — 想抄请去原帖。作者只写 ChatGPT，没提 GPT-Image-2.5 或 API 模型名，模型标签按作者原话写 chatgpt-images，不为其补版本；收进本看板是因为它属于 ChatGPT Images 一类的图生图人像玩法。不写点赞、收藏、浏览等互动数字。预览图取自作者帖附图（ChatGPT 标志 + 一张人像的封面图，原图约 16:9，上下补白底成 3:2，未裁内容），不是效果对比图 — 本库没有前后对比样张。不打星。",
+      "qualityNoteEn": "Second card on the Image 2.5 prompts board: a single, openable, copy-from-source prompt roundup — not a gallery site, not a model card. Source is @PromptLabCN’s X post (reachable when this library checked on 2026-09-15; head-post text and attached image verified; posted 2026-09-13 07:17 UTC, not a long-form note post, one 1668×943 image). “Professional-photography grade,” “no studio, no photographer,” and “10 editable prompts” are the author’s claims; the ten prompt texts live in the author’s follow-up replies, and this library could not expand the full thread this time, so neither the count was checked one by one nor any prompt wording copied — take them from the post. The author says only “ChatGPT,” never GPT-Image-2.5 or an API model name, so the model badge follows the author’s words (chatgpt-images) without adding a version; it is on this board because it is the ChatGPT Images image-to-image portrait pattern. No likes, bookmarks, views, or other engagement figures recorded. Preview is the author’s attached image (ChatGPT logo + one portrait cover, roughly 16:9, padded with white to 3:2, nothing cropped) — it is not a before/after; this library has no comparison samples. Unrated.",
+      "featured": true
+    },
     {
       "id": "dsxzai-image-25-gallery",
       "slug": "dsxzai-image-25-gallery",
