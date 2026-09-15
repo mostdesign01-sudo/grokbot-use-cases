@@ -1,11 +1,70 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T01:20:00Z",
+    "updatedAt": "2026-09-15T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.23",
-    "count": 59
+    "version": "1.3.24",
+    "count": 61
   },
   "items": [
+    {
+      "id": "code-preview-element",
+      "slug": "code-preview-element",
+      "title": "code-preview-element：可编辑的自渲染代码块",
+      "titleEn": "code-preview-element: a code block that renders itself",
+      "summary": "stamat/code-preview-element：用 `<code-preview>` 把已有 `<pre><code>` 升成 iframe 实况预览，可按需编辑、边改边渲染，文档与样例不漂移。演示 https://stamat.github.io/code-preview-element/ ，MIT。",
+      "summaryEn": "stamat/code-preview-element: `<code-preview>` upgrades an existing `<pre><code>` into a live iframe preview — optional edit-as-you-type so docs and samples cannot drift. Demo https://stamat.github.io/code-preview-element/ , MIT.",
+      "sourceUrl": "https://stamat.github.io/code-preview-element/",
+      "secondaryUrls": [
+        "https://github.com/stamat/code-preview-element"
+      ],
+      "previewImage": "/previews/code-preview-element.webp",
+      "types": [
+        "component",
+        "docs",
+        "demo"
+      ],
+      "tags": [
+        "web-components",
+        "docs",
+        "iframe",
+        "html",
+        "mit"
+      ],
+      "featured": false,
+      "qualityNote": "公开演示 200（2026-09-15）。GitHub star 很少，但 API 清晰、可复现；预览取文档首页 3:2。",
+      "qualityNoteEn": "Public demo returned 200 (2026-09-15). Few GitHub stars, but the API is clear and reproducible; preview is a 3:2 crop of the docs home.",
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
+    {
+      "id": "neobrutalism",
+      "slug": "neobrutalism-dev",
+      "title": "Neobrutalism.dev：粗野主义 React/Tailwind 组件",
+      "titleEn": "Neobrutalism.dev: neobrutalist React/Tailwind components",
+      "summary": "公开组件站：约 64 个粗野主义组件/图表/星形，基于 shadcn/ui 与 Base UI，面向 React + Tailwind v4。Show HN「Just added Base UI support…」（item 49699159，2026-09-14）。演示与文档免登录。",
+      "summaryEn": "Public component site: ~64 neobrutalist components/charts/stars on shadcn/ui + Base UI for React and Tailwind v4. Show HN “Just added Base UI support…” (item 49699159, 2026-09-14). Docs/demo need no login.",
+      "sourceUrl": "https://www.neobrutalism.dev/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49699159"
+      ],
+      "previewImage": "/previews/neobrutalism.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "neobrutalism",
+        "react",
+        "tailwind",
+        "shadcn",
+        "show-hn"
+      ],
+      "featured": true,
+      "qualityNote": "Show HN 2026-09-14（item 49699159）。组件数为站点自述；需 React/Tailwind 栈，不是单文件 HTML。预览取首页 hero 截屏裁 3:2。",
+      "qualityNoteEn": "Show HN 2026-09-14 (item 49699159). Component count is a site claim; stack is React/Tailwind, not single-file HTML. Preview is a 3:2 crop of the home hero screenshot.",
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-15T01:30:00Z"
+    },
     {
       "id": "soundmap",
       "slug": "soundmap-sound-camera",
