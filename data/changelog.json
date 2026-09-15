@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-15",
+      "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
+      "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",
+      "body": "Grok Bot：增收官方 Guides《Grok Bot 101》《Grok Bot for Support》《Templates for Grok Bot》《How I run multiple teams of Grok Bots》，以及社区 Roster Room（82 套小队提示）、Grok Ship（scout/ship 软件工厂；README 注明已被 Firstmate 模板替代）、RongleCat/awesome-grok-bot（中英日目录）。HTML：Show HN Neobrutalism.dev（item 49699159）与 code-preview-element 自渲染代码块。Agent UI：Zephyr（Agent API / Zephyr.agent.act）。均已配 3:2 自托管预览。",
+      "bodyEn": "Grok Bot: added official Guides “Grok Bot 101”, “Grok Bot for Support”, “Templates for Grok Bot”, “How I run multiple teams of Grok Bots”, plus community Roster Room (82 team prompts), Grok Ship (scout/ship factory; README notes Firstmate template supersession), and RongleCat/awesome-grok-bot (EN/ZH/JA directory). HTML: Show HN Neobrutalism.dev (item 49699159) and code-preview-element. Agent UI: Zephyr (Agent API / Zephyr.agent.act). All HTML/Agent UI cards ship 3:2 self-hosted previews."
+    },
+    {
       "date": "2026-09-14",
       "title": "新开 Image 2.5 提示词看板：首条 img.dsxzai.com 画廊（@dashiAIxz）",
       "titleEn": "New Image 2.5 prompts board: first card is the img.dsxzai.com gallery (@dashiAIxz)",
