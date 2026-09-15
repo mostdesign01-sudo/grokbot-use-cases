@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-15T01:30:00Z",
+    "updatedAt": "2026-09-15T16:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.21",
-    "count": 114,
+    "version": "1.4.22",
+    "count": 115,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -86,10 +86,54 @@
       "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
       "https://github.com/codejunkie99/rosterroom",
       "https://github.com/kunchenguid/grok-ship",
-      "https://github.com/RongleCat/awesome-grok-bot"
+      "https://github.com/RongleCat/awesome-grok-bot",
+      "https://tenzen.studio/photon/",
+      "https://tenzen.studio/blog/introducing-photon-studio/",
+      "https://x.com/Nozelcode/status/2099471075599876239",
+      "https://www.techspot.com/downloads/7907-photon-studio.html"
     ]
   },
   "cases": [
+    {
+      "id": "photon-studio",
+      "slug": "photon-studio",
+      "title": "工具：Photon Studio — 本地免费 Photoshop 向修图",
+      "titleEn": "Tool tip: Photon Studio, a free local Photoshop-style editor",
+      "summary": "Tenzen Studio（做产品演示录屏编辑器的团队）2026-09-13 发布的免费桌面修图 / 设计工具，官方页写「Free · macOS · Windows 11 · Linux · Works offline」。图层、分组、蒙版、调整图层、智能对象、图层效果（阴影 / 发光 / 描边 / 叠加），Curves / Levels 实时预览，修复画笔、仿制图章、内容识别填充、Liquify 液化，文字、矢量形状、钢笔路径、渐变；主体选择与去背景由本机模型跑，官方称文件不上传、无排队、开文件编辑不需要账号；可开可存 PSD，沿用 Photoshop 快捷键并带命令搜索。下载流程：官网选系统 → 留邮箱收下载链接 → 安装。由 @Nozelcode 2026-09-14 的西语帖带来，帖题「100% 免费复刻 Photoshop」是推广口径；本条按「Photoshop 向的免费本地编辑器」收录，是旁路工具笔记，不是 Grok Bot 用法。",
+      "summaryEn": "A free desktop photo / design editor released 2026-09-13 by Tenzen Studio (the team behind a product-demo screen recorder); the product page reads “Free · macOS · Windows 11 · Linux · Works offline.” Layers, groups, masks, adjustment layers, smart objects, layer effects (shadow / glow / stroke / overlay), Curves and Levels with live preview, healing brush, clone stamp, content-aware fill, Liquify, text, vector shapes, Pen paths, and gradients; subject selection and background removal run on a local model — the vendor says no upload, no queue, and no account needed to open a file and edit; opens and saves PSD, keeps Photoshop shortcuts and adds command search. To get it: pick your OS on the site → leave an email for the download link → install. Surfaced by @Nozelcode’s Spanish post on 2026-09-14, whose headline “Photoshop recreated 100% free” is promo framing; catalogued here as a free local Photoshop-style editor — an adjacent tool note, not a Grok Bot playbook.",
+      "categories": [
+        "content",
+        "productivity"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://tenzen.studio/photon/",
+      "secondaryUrls": [
+        "https://x.com/Nozelcode/status/2099471075599876239",
+        "https://tenzen.studio/blog/introducing-photon-studio/",
+        "https://www.techspot.com/downloads/7907-photon-studio.html"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是官方产品页 tenzen.studio/photon/（2026-09-15 核到 200，功能清单与「离线、无账号」口径均出自该页），副源是 Tenzen 官方 2026-09-13 发布文、@Nozelcode（roman）2026-09-14 的 X 帖（西语，附 83 秒演示视频，链接在回复里）与 TechSpot 下载页（当日核到 0.1.7 版、2026-09-14 更新、Freeware、约 302 MB、Win / macOS / macOS Intel / Linux 四个包）。注意：官方发布文只写 macOS 与 Windows 11，产品页与 TechSpot 都列了 Linux；照产品页记。「100% 复刻 Photoshop」是推广说法——官方自己只说「熟悉的 Photoshop 快捷键」，TechSpot FAQ 明写 Photoshop 功能与集成仍宽得多；官方发布文也提醒 PSD 不能保证每个功能都完整往返，文字、效果、蒙版与格式警告要自查，交回 Photoshop 的人再核一遍。版本号 0.1.x，属早期版本。「主体选择 / 去背景在本机跑、文件不上传」是厂商主张，本站未装机、未抓包验证；下载需留邮箱（官网写明「Choose your computer and enter your email to receive the download link」），编辑本身不需账号。勿与 photon.studio（波特兰的创意制作公司，与本工具无关）、photonstudio.ai（另一款 AI 创意套件）、getphoton.com、App Store 里的 Photon Studio（Photon Camera 的相机伴侣 App）或 Photon Enhance 混淆。不记点赞、浏览等互动数字。预览取作者帖视频约 10 秒处一帧（编辑器开着分层 PSD）裁 3:2；视频封面帧是全黑窗口，没有信息量。非 xAI / Grok Bot 官方件；不构成使用推荐。不打星。",
+      "qualityNoteEn": "Primary source is the official product page tenzen.studio/photon/ (200 on 2026-09-15; the feature list and the “offline, no account” wording come from that page). Secondary: Tenzen’s official launch post dated 2026-09-13, @Nozelcode (roman)’s X post on 2026-09-14 (Spanish, with an 83-second demo video; the link sits in a reply), and the TechSpot download page (checked that day: version 0.1.7, updated 2026-09-14, Freeware, about 302 MB, Windows / macOS / macOS Intel / Linux builds). Note: the launch post names only macOS and Windows 11, while the product page and TechSpot both list Linux; we follow the product page. “Photoshop recreated 100%” is promo framing — the vendor itself only claims “familiar Photoshop shortcuts,” and TechSpot’s FAQ states Photoshop still offers a much broader range of features and integrations; the launch post also warns that PSD round-trips are not guaranteed feature-for-feature, so check text, effects, masks, and format warnings, and have whoever continues in Photoshop check the copy too. Version 0.1.x — early software. “Subject selection / background removal run locally, files never leave your computer” is the vendor’s claim; this site did not install it or sniff traffic to verify. The download asks for an email (the site says “Choose your computer and enter your email to receive the download link”); editing itself needs no account. Do not confuse with photon.studio (a Portland creative agency, unrelated), photonstudio.ai (a different AI creative suite), getphoton.com, the App Store “Photon Studio” (a companion app for Photon Camera), or Photon Enhance. No likes or views recorded. Preview is a frame at roughly 10 s of the author’s video (the editor with a layered PSD open) cropped to 3:2; the video’s poster frame is an all-black window with nothing to see. Not an xAI / Grok Bot first-party piece; not a recommendation. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "Photon Studio",
+        "PSD",
+        "offline",
+        "macOS",
+        "Windows 11",
+        "Linux"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/photon-studio.webp",
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-15T16:40:00Z"
+    },
     {
       "id": "ronglecat-awesome-grok-bot",
       "slug": "ronglecat-awesome-grok-bot",
