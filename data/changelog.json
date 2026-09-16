@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-16",
+      "title": "HTML +1：RicoUI 设计收藏夹 11 类 100 站（@ricouii）",
+      "titleEn": "HTML +1: RicoUI 11-category / 100-site design bookmarks (@ricouii)",
+      "body": "HTML 收集增收 /html/ricouii-design-bookmarks-100/：@ricouii（RicoUI）9 月 15 日帖，把个人设计收藏夹按用途整理成 11 类共 100 站。卡片只列帖文正文展开的第 1 类「灵感与界面参考」22 站（Mobbin、Godly、Awwwards、Cosmos、Curated Design、Design Spells、60fps、Supahero、Saaspo、Layers、Minimal Gallery、MNMM、Search System、Rebrand Gallery、Seesaw、Same Energy、Spiral、Game UI Database、Interface in Game、HUDs and GUIs、Pinterest、Loadmo）作为例子，其余 10 类回原帖长文看，不代作者补站单。收录理由写明：社区个人整理、非官方、与本库无关联，「11 类 100 站」按作者自述记，收藏夹链接会失效。本条无自托管预览，卡片走 CSS 海报。数据版本 1.3.25 / 62 条。",
+      "bodyEn": "HTML 收集 adds /html/ricouii-design-bookmarks-100/: a 15 Sept post by @ricouii (RicoUI) sorting a personal design bookmark bar into 11 categories / 100 sites, organized by use. The card lists only category 1, “inspiration & interface reference”, the 22 sites expanded in the post body (Mobbin, Godly, Awwwards, Cosmos, Curated Design, Design Spells, 60fps, Supahero, Saaspo, Layers, Minimal Gallery, MNMM, Search System, Rebrand Gallery, Seesaw, Same Energy, Spiral, Game UI Database, Interface in Game, HUDs and GUIs, Pinterest, Loadmo) as examples; the other 10 categories are left to the author’s full note and no site lists are filled in for them. The quality note states it is a personal community curation, not official, not affiliated with this library, that “11 / 100” is the author’s own count, and that bookmark links rot. No self-hosted preview; the card uses the CSS poster. Dataset 1.3.25 / 62 items."
+    },
+    {
       "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",
