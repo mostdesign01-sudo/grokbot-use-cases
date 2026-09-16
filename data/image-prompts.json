@@ -1,11 +1,47 @@
 {
   "meta": {
-    "updatedAt": "2026-09-14T12:00:00Z",
+    "updatedAt": "2026-09-16T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.0.0",
-    "count": 1
+    "version": "1.0.1",
+    "count": 2
   },
   "items": [
+    {
+      "id": "deepblue-fail-3x3",
+      "slug": "deepblue-fail-3x3",
+      "title": "DeepBlue：竖版 3×3 失败照片×{角色}",
+      "titleEn": "DeepBlue: vertical 3×3 fail-photo grid × {character}",
+      "summary": "一条极短的可复用提示词模板。@DeepBlueX0（DeepBlue深藍）9 月 14 日发帖「有趣好玩～ 🔵 GPT image 2.5 Prompt：竖版3×3失败照片× ｛角色｝」，只公开这一行，把「角色」留作占位符，让读者自行替换成空姐、JK 学生、泳装女孩等任意角色；附 3 张样图，都是竖版九宫格「废片」质感：手指挡镜头、糊脸、过曝、逆光、失焦、头发盖脸、拍到一半的动作。本卡只记这条模板与它的样图形态：模板就是那一句，本库不补写、不扩写，也不复述互动数字。",
+      "summaryEn": "A very short reusable prompt template. On 14 Sept @DeepBlueX0 (DeepBlue深藍) posted “fun to play with ~ 🔵 GPT image 2.5 Prompt: 竖版3×3失败照片× ｛角色｝” — literally “vertical 3×3 fail photos × {character}.” That single line is the whole published prompt; “character” is left as a placeholder for the reader to swap in a flight attendant, a schoolgirl, a swimsuit girl, or anyone else. Three sample images were attached, all portrait nine-frame grids with an outtake feel: a finger over the lens, motion-blurred faces, blown highlights, backlight, missed focus, hair across the face, gestures caught mid-motion. This card records only the template and what its samples look like — the template is that one line, not padded or expanded here, and no engagement figures are repeated.",
+      "modelTag": "gpt-image-2.5",
+      "sourceUrl": "https://x.com/DeepBlueX0/status/2099481521983995971",
+      "sourceLabel": "作者原帖：GPT image 2.5 Prompt「竖版3×3失败照片× ｛角色｝」（X 帖，附 3 张样图）",
+      "sourceLabelEn": "Author’s original post: GPT image 2.5 Prompt “竖版3×3失败照片× ｛角色｝” (X post, 3 sample images)",
+      "sourceBy": "DeepBlue深藍 / @DeepBlueX0",
+      "previewImage": "/previews/deepblue-fail-3x3.webp",
+      "previewCredit": "预览：@DeepBlueX0 X 帖附图之一（空姐角色的竖版 3×3 样图），整图居中放在自身模糊底上补成 3:2",
+      "previewCreditEn": "Preview: one of the images attached to @DeepBlueX0’s X post (the flight-attendant vertical 3×3 sample), shown whole and centered over a blurred copy of itself to fill 3:2",
+      "tags": ["grid", "fail-photo", "portrait", "meme", "gpt-image-2.5"],
+      "publishedAt": "2026-09-14",
+      "updatedAt": "2026-09-16T01:30:00Z",
+      "highlights": [
+        {
+          "text": "帖子全文（原样）：「有趣好玩～ 🔵 GPT image 2.5 Prompt: 竖版3×3失败照片× ｛角色｝」。发于 2026-09-14。可抄的部分就是「竖版3×3失败照片× ｛角色｝」这一句，把｛角色｝换成你要的人物即可。",
+          "textEn": "The post in full, verbatim: “有趣好玩～ 🔵 GPT image 2.5 Prompt: 竖版3×3失败照片× ｛角色｝”. Posted 2026-09-14. The copyable part is the one line 竖版3×3失败照片× ｛角色｝ (vertical 3×3 fail photos × {character}); replace ｛角色｝ with the character you want."
+        },
+        {
+          "text": "3 张样图的共同形态：竖版（约 9:16）、等分九宫格、同一角色在同一场景里的 9 张「拍坏了」的照片 — 手指挡住镜头、脸糊掉、过曝到发白、逆光、失焦、头发盖脸、只拍到背影或半个身位；每张右下角有作者的 DeepBlue 水印。三张分别是机舱里的空姐、教室与楼道里的 JK 学生、泳池边的泳装女孩。",
+          "textEn": "What the three samples share: portrait (roughly 9:16), an evenly divided nine-frame grid, and nine “botched” shots of one character in one setting — a finger over the lens, a smeared face, highlights blown to white, backlight, missed focus, hair across the face, only a back or half a body in frame — each carrying the author’s DeepBlue watermark bottom-right. The three are a flight attendant in a cabin, a schoolgirl in classrooms and stairwells, and a swimsuit girl by a pool."
+        },
+        {
+          "text": "为什么值得记：一句话模板换角色即可复用，也是一个「把缺点当风格」的例子 — 失焦、糊、挡镜头这些通常要在提示词里避开的东西，在这里成了主题。样图是不是仅靠这一行就出来的、有没有配参考图，作者没说，本库不猜。",
+          "textEn": "Why it is worth a card: a one-line template you reuse by swapping the character, and an example of turning flaws into a style — missed focus, blur, and a blocked lens, normally things a prompt tries to avoid, are the subject here. Whether the samples came from that line alone or with reference images the author did not say, and this library does not guess."
+        }
+      ],
+      "qualityNote": "社区提示词条目，不是画廊站。来源是作者 @DeepBlueX0 的 X 帖（2026-09-16 本库核到正文、发帖时间与 3 张附图，与本卡引用一致）。发布的模板只有「竖版3×3失败照片× ｛角色｝」这一行，作者没有给更长版本，本库也不补写更长的「完整提示词」— 模板本身就是极简的。3 张样图是作者演示，是否只靠这一句、是否配了参考图、生成几次挑一张，作者均未说明，本库不替作者下结论。不写点赞、转发、浏览等互动数字。预览图取作者帖附图中的空姐样图整图，居中放在自身模糊底上补成 3:2，未裁掉任何格子。不打星。",
+      "qualityNoteEn": "A community prompt tip, not a gallery site. Source is the author @DeepBlueX0’s X post (text, timestamp, and three attached images checked by this library on 2026-09-16 and match what this card quotes). The published template is the single line 竖版3×3失败照片× ｛角色｝; the author gave no longer version and this library does not write one — the template is minimal by design. The three sample images are the author’s demos; whether they came from that one line alone, used reference images, or were picked from several runs the author did not say, and this library draws no conclusion for them. No likes, reposts, views, or other engagement figures are recorded. The preview is the flight-attendant sample from the post, shown whole and centered over a blurred copy of itself to fill 3:2 — no cells cropped away. Unrated.",
+      "featured": false
+    },
     {
       "id": "dsxzai-image-25-gallery",
       "slug": "dsxzai-image-25-gallery",
