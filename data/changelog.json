@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-16",
+      "title": "Image 2.5 提示词 +1：DeepBlue「竖版 3×3 失败照片×{角色}」",
+      "titleEn": "Image 2.5 prompts +1: DeepBlue’s “vertical 3×3 fail-photo grid × {character}”",
+      "body": "Image 2.5 提示词看板第二张卡 /image-prompts/deepblue-fail-3x3/：@DeepBlueX0（DeepBlue深藍）9 月 14 日发帖「有趣好玩～ 🔵 GPT image 2.5 Prompt：竖版3×3失败照片× ｛角色｝」，公开的模板只有这一行，｛角色｝留作占位符自行替换；附 3 张竖版九宫格「废片」样图（空姐 / JK 学生 / 泳装女孩：手指挡镜头、糊脸、过曝、失焦）。本卡按社区提示词条目收录：模板原样引用不扩写，样图只当作者演示，不写互动数字；预览取空姐样图整图居中放在自身模糊底上补成 3:2。数据版本 1.0.1 / 2 条。",
+      "bodyEn": "Second card on the Image 2.5 prompts board, /image-prompts/deepblue-fail-3x3/: on 14 Sept @DeepBlueX0 (DeepBlue深藍) posted “fun to play with ~ 🔵 GPT image 2.5 Prompt: 竖版3×3失败照片× ｛角色｝” — the published template is that single line, with ｛角色｝ (character) left as a placeholder to swap in. Three portrait nine-frame outtake-style samples were attached (flight attendant / schoolgirl / swimsuit girl: finger over the lens, smeared faces, blown highlights, missed focus). Filed as a community prompt tip: the template is quoted verbatim and not expanded, the samples are treated as the author’s demos only, and no engagement figures are recorded; the preview is the flight-attendant sample shown whole over a blurred copy of itself to fill 3:2. Dataset version 1.0.1 / 2 items."
+    },
+    {
       "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",
