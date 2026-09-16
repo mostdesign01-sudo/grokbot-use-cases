@@ -1,10 +1,14 @@
 {
   "meta": {
-    "updatedAt": "2026-09-15T01:30:00Z",
+    "updatedAt": "2026-09-16T01:10:52Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.21",
-    "count": 114,
+    "version": "1.4.22",
+    "count": 116,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=49676425",
+      "https://poltora.dev/redis",
+      "https://x.ai/bot/guides/grok-bot-for-pms",
+      "https://x.ai/bot/guides/grok-bot-for-gtm",
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
       "https://docs.x.ai/grok-bot/skills-routines-and-automations",
@@ -90,6 +94,81 @@
     ]
   },
   "cases": [
+    {
+      "id": "grok-bot-for-gtm",
+      "slug": "xai-grok-bot-for-gtm",
+      "title": "官方指南：Grok Bot for GTM（企业销售小队）",
+      "titleEn": "Official guide: Grok Bot for GTM",
+      "summary": "Krista Letz 2026-08-16 官方 Guides：Enterprise GTM 实操——Chief of Staff 编排会前准备/收件箱、Prospecting 过夜拓客、一客户一专家（含可复用的 Weekly media rundown Prompt）、Forecast 写回 Salesforce、Figma 幻灯片在通话中据 Granola 更新、Sales Coach 看 Gong。强调先接 Salesforce/Gmail/Slack/Notion/Figma 等，再把示范流程录成 Skill。",
+      "summaryEn": "Official Aug 16, 2026 Guides piece by Krista Letz: Enterprise GTM playbook — Chief of Staff for meeting prep/inbox, overnight Prospecting, one Customer Expert per strategic account (with a reusable Weekly media rundown prompt), Forecast notes back into Salesforce, Figma slides updated live from Granola mid-call, and a Sales Coach on Gong. Wire daily tools first, then record demonstrated flows as Skills.",
+      "categories": [
+        "sales",
+        "multi-agent",
+        "automation"
+      ],
+      "role": "GTM ops playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-gtm",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-08-16）。文内「全公司快速采用」等为作者场景，本库不当 KPI；对外邮件/花钱仍应人审。",
+      "qualityNoteEn": "Official Guides (2026-08-16). In-article adoption claims are scene-setting, not verified KPIs here; outbound mail and spend stay human-gated.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "会前摘要与草稿可自动；对外发送、报价与花钱必须人批。",
+      "approvalBoundaryEn": "Prep digests and drafts can automate; outbound sends, pricing, and spend need a human.",
+      "connectors": [
+        "salesforce",
+        "gmail",
+        "slack",
+        "figma"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-16",
+      "updatedAt": "2026-09-16T01:10:52Z"
+    },
+    {
+      "id": "grok-bot-for-pms",
+      "slug": "xai-grok-bot-for-pms",
+      "title": "官方指南：Grok Bot for PMs（注意力清单 + 产品小队）",
+      "titleEn": "Official guide: Grok Bot for PMs",
+      "summary": "Kevin Niparko 2026-08-15 官方 Guides：PM 用 Grok Bot 组「向你汇报」的小队——用小时级 Attention list（Slack/邮件/Granola/日历涌现优先级）代替僵化周目标；Chief of Staff、不写代码的 Eng mgr、多席 Eng（Cloud Agents）、Data analyst、PM Pete、Recruiter。强调命名分区记忆、少噪声、重要对外动作仍人审。",
+      "summaryEn": "Official Aug 15, 2026 Guides piece by Kevin Niparko: a PM’s reporting team of Bots — replace stale weekly goals with an hourly Attention list emergent from Slack/mail/Granola/calendar; Chief of Staff, a non-coding Eng mgr, multiple Eng seats on Cloud Agents, Data analyst, PM Pete, and Recruiter. Named agents with scoped memory, stay quiet unless needed, and keep important outbound human-gated.",
+      "categories": [
+        "project-management",
+        "multi-agent",
+        "productivity"
+      ],
+      "role": "PM ops playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-pms",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-08-15）。「双位数百分比合并 PR」等为作者自述场景，本库不当 KPI。",
+      "qualityNoteEn": "Official Guides (2026-08-15). Double-digit merged-PR claims are the author’s scene-setting, not verified KPIs here.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "归档与研究可自动；对外邮件、采购与破坏性删除必须人批。",
+      "approvalBoundaryEn": "Archiving and research can automate; outbound mail, purchases, and destructive deletes need a human.",
+      "connectors": [
+        "slack",
+        "gmail",
+        "notion"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-15",
+      "updatedAt": "2026-09-16T01:10:52Z"
+    },
     {
       "id": "ronglecat-awesome-grok-bot",
       "slug": "ronglecat-awesome-grok-bot",

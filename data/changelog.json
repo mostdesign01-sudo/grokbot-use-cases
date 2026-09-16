@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-16",
+      "title": "工作日晨更：Grok Bot +2、HTML +1",
+      "titleEn": "Weekday morning: Grok Bot +2, HTML +1",
+      "body": "Grok Bot：增收官方 Guides《Grok Bot for GTM》《Grok Bot for PMs》。HTML：Show HN Redis City（item 49676425）浏览器内 Redis 内部 3D 互动图，已配 3:2 自托管预览。Agent UI：无新增。",
+      "bodyEn": "Grok Bot: added official Guides “Grok Bot for GTM” and “Grok Bot for PMs”. HTML: Show HN Redis City (item 49676425), browser-only interactive 3D Redis internals map, with a 3:2 self-hosted preview. Agent UI: none."
+    },
+    {
       "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",

@@ -1,11 +1,41 @@
 {
   "meta": {
-    "updatedAt": "2026-09-15T01:30:00Z",
+    "updatedAt": "2026-09-16T01:10:52Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.24",
-    "count": 61
+    "version": "1.3.25",
+    "count": 62
   },
   "items": [
+    {
+      "id": "redis-city",
+      "slug": "redis-city",
+      "title": "Redis City：浏览器里的 Redis 内部 3D 互动图",
+      "titleEn": "Redis City: interactive 3D map of how Redis works",
+      "summary": "poltora.dev/redis：在浏览器里用可交互 3D 场景走一遍 Redis 内部路径（Clients、DB、Allocator、AOF、内核页缓存等），纯前端、免登录。Show HN item 49676425（2026-09-12）。",
+      "summaryEn": "poltora.dev/redis: an interactive browser-only 3D walkthrough of Redis internals (Clients, DB, Allocator, AOF, kernel page cache, …), no login. Show HN item 49676425 (2026-09-12).",
+      "sourceUrl": "https://poltora.dev/redis",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49676425",
+        "https://poltora.dev/"
+      ],
+      "previewImage": "/previews/redis-city.webp",
+      "types": [
+        "demo",
+        "interactive"
+      ],
+      "tags": [
+        "redis",
+        "3d",
+        "interactive",
+        "browser-only",
+        "show-hn"
+      ],
+      "featured": false,
+      "qualityNote": "公开页 200（2026-09-16）。Show HN ≈163 分；预览取项目 OG 图裁成 3:2（无头 Chrome WebGL 截图空白）。",
+      "qualityNoteEn": "Public page returned 200 (2026-09-16). Show HN ~163 points; preview is the project OG image cropped to 3:2 (headless Chrome WebGL shot was blank).",
+      "publishedAt": "2026-09-12",
+      "updatedAt": "2026-09-16T01:10:52Z"
+    },
     {
       "id": "code-preview-element",
       "slug": "code-preview-element",
