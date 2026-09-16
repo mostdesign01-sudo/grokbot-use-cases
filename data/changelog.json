@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-16",
+      "title": "晚间：Models +1（TypeSafe Jev）",
+      "titleEn": "Evening: Models +1 (TypeSafe Jev)",
+      "body": "最新模型：新开 /models/typesafe-jev/ — TypeSafe AI 9 月 15 日发布的首个公开 System One Model「Jev」，面向软件内决策而非聊天：输入非结构化状态，输出类型安全的结构化决策并附校准置信度；官方称新架构 + 并行采样 + RLCD。目前早期访问（官网 Join Waitlist）。官方源为 TypeSafe 博文与官网，社区源为 HN 帖（item 49717558）。约 70–500ms、$0.042 / MTok 输入、193.6× / 444.6× 等数字一律标官方称，本库未复跑、未实测 API。精选、4 星，无预览图。models 6→7，数据版本 1.1.4。Grok Bot / HTML / Agent UI 晚间无新增。",
+      "bodyEn": "Models: new card /models/typesafe-jev/ — “Jev”, TypeSafe AI’s first public System One Model, announced 15 Sept; built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated confidence; vendor claims a new architecture, parallel sampling, and RLCD. Currently early access (Join Waitlist on the site). Official sources are the TypeSafe blog post and homepage; community source is the HN thread (item 49717558). The ~70–500ms, $0.042 / MTok input, and 193.6× / 444.6× figures are all labelled vendor claims — not re-run here, API untested. Featured, 4 stars, no preview image. models 6→7, dataset 1.1.4. No Grok Bot / HTML / Agent UI additions this evening."
+    },
+    {
+      "date": "2026-09-16",
       "title": "工作日晨更：Grok Bot +2、HTML +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1",
       "body": "Grok Bot：增收官方 Guides《Grok Bot for GTM》《Grok Bot for PMs》。HTML：Show HN Redis City（item 49676425）浏览器内 Redis 内部 3D 互动图，已配 3:2 自托管预览。Agent UI：无新增。",
