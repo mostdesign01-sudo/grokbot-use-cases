@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-16",
+      "title": "Grok Bot +1：Seedance Prompts 爆款 AI 视频提示词案例库（@VibeEverything 线索）",
+      "titleEn": "Grok Bot +1: Seedance Prompts viral AI video prompt case library (via @VibeEverything)",
+      "body": "按 Hao 转来的 LOOPY（@VibeEverything）9 月 15 日韩文帖收录工具笔记 /cases/seedance-prompts-library/：帖文说 AI 视频一条爆了、同类演出往往跟着火（举例 GTA 游戏风、BL、丧尸题材），要拆爆款格式就得找「成片 + 提示词」并排的库。对应站点 Seedance Prompts · 精品提示词案例库（seedance-prompts-nu.vercel.app，made by Sac / @Saccc_c），2026-09-16 核到 200：13 个案例（《丧尸清道夫》《头脑风暴》、The Noodle Master、HELL GRIND、韩国社区 DV、Reality Check、Kitchen Hunt 等），每条列模型、时长、作者、原片来源与原始提示词 + 中文译文；另有匿名只读 Remote MCP（/api/mcp，search / get case / get prompt 三个工具）、REST、OpenAPI 与 /llms.txt。口径注意：帖文正文无外链，演示视频封面是英文「AI Video Prompts」界面（自报 5,310 条视频提示词），与 Seedance Prompts 站不是同一个站，帖与站的对应为投稿方所给，本站未从帖内核到链接，条目里已写明；站内「播放破 1 亿」等热度为站方 / 原作者自述，不记点赞浏览，不打星。副源另挂相关开源仓库 xpenlab/ai-shortfilm-prompts（MIT，《丧尸清道夫》方法论），标为相关而非同站。预览取帖内演示视频封面裁 3:2。cases 114→115，数据版本 1.4.22。",
+      "bodyEn": "Tool note /cases/seedance-prompts-library/, from LOOPY’s (@VibeEverything) 15 Sept Korean post forwarded by Hao: when one AI video blows up, look-alike pieces tend to follow (the post names GTA-game style, BL, and zombie formats), so to break down a viral format you need a library showing the finished clip next to its prompt. The catalogued site is Seedance Prompts · 精品提示词案例库 (seedance-prompts-nu.vercel.app, made by Sac / @Saccc_c), 200 on 2026-09-16: 13 cases (Zombie Scavenger, Brainstorm, The Noodle Master, HELL GRIND, Korean community DV, Reality Check, Kitchen Hunt and more), each listing model, duration, author, source of the original film and the original prompt with a Chinese translation; plus an anonymous read-only Remote MCP (/api/mcp, three tools: search / get case / get prompt), REST, OpenAPI and /llms.txt. Scope caveat: the post text has no external link and its demo-video cover shows an English “AI Video Prompts” UI (self-reporting 5,310 video prompts) that is not the Seedance Prompts site; the post-to-site pairing came from the submitter and could not be confirmed from the post itself, which the entry states. Popularity lines such as “100M+ plays” are the site’s / original authors’ claims; no likes or views recorded; unrated. The related open repo xpenlab/ai-shortfilm-prompts (MIT, Zombie Scavenger methodology) is attached as a secondary link, marked related rather than the same site. Preview is the post’s demo-video cover cropped to 3:2. cases 114→115, dataset 1.4.22."
+    },
+    {
       "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",

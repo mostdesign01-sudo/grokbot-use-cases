@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-15T01:30:00Z",
+    "updatedAt": "2026-09-16T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.21",
-    "count": 114,
+    "version": "1.4.22",
+    "count": 115,
     "sourcesCrawled": [
       "https://docs.x.ai/grok-bot/use-cases",
       "https://x.ai/news/introducing-grok-bot",
@@ -86,10 +86,53 @@
       "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
       "https://github.com/codejunkie99/rosterroom",
       "https://github.com/kunchenguid/grok-ship",
-      "https://github.com/RongleCat/awesome-grok-bot"
+      "https://github.com/RongleCat/awesome-grok-bot",
+      "https://seedance-prompts-nu.vercel.app/",
+      "https://seedance-prompts-nu.vercel.app/agent",
+      "https://x.com/VibeEverything/status/2099848829306798514",
+      "https://github.com/xpenlab/ai-shortfilm-prompts"
     ]
   },
   "cases": [
+    {
+      "id": "seedance-prompts-library",
+      "slug": "seedance-prompts-library",
+      "title": "Seedance Prompts：爆款 AI 视频提示词案例库",
+      "titleEn": "Seedance Prompts: viral AI video prompt case library",
+      "summary": "LOOPY（@VibeEverything）2026-09-15 韩文帖的线索：AI 视频一条爆了，同类演出的视频往往跟着起来（作者举例近来常见的 GTA 游戏风、BL、丧尸题材），想知道用的什么提示词，就要找「成片 + 提示词」并排的库，照着拆爆款格式再用到自己的内容里。对应收录 Seedance Prompts · 精品提示词案例库（seedance-prompts-nu.vercel.app，made by Sac / @Saccc_c）：口号「从优秀作品出发，学习如何写好视频提示词。看成片、读原文、拆解镜头与节奏」，2026-09-16 核到 13 个案例，分短视频 / 叙事短片 / 长片——《丧尸清道夫》（Mx-Shell，Seedance 2.0，3 条按时间码切分的成片提示词）、The Noodle Master、HELL GRIND、韩国社区 DV 生活录像、Reality Check、Kitchen Hunt、《头脑风暴》等；每条给模型、时长、作者、原片来源与原始提示词（附中文译文），站内声明「资料按原始来源核验；原片归创作者所有，提示词仅修正明显错别字」。另有 Agent 接入页：匿名只读 Remote MCP（/api/mcp，Streamable HTTP，search / get case / get prompt 三个工具）、REST /api/v1/cases、OpenAPI 与 /llms.txt，Codex CLI / Claude Code 一行即可接入。旁路 AI 工具笔记，不是 Grok Bot 用法。",
+      "summaryEn": "Lead from LOOPY’s (@VibeEverything) Korean post, 2026-09-15: when one AI video blows up, look-alike videos tend to go viral with it (the author names GTA-game style, BL, and zombie pieces as formats seen everywhere lately); to learn which prompts made them you need a library that shows the finished clip and its prompt side by side, so you can break down the viral format and reuse it in your own content. Catalogued here: Seedance Prompts · 精品提示词案例库 (seedance-prompts-nu.vercel.app, made by Sac / @Saccc_c), tagline “start from great work and learn to write video prompts — watch the film, read the original, break down shots and rhythm.” Checked 2026-09-16: 13 cases across short video / narrative short / feature — Zombie Scavenger (Mx-Shell, Seedance 2.0, three timecoded prompts from the final cut), The Noodle Master, HELL GRIND, Korean community DV, Reality Check, Kitchen Hunt, Brainstorm and others; each lists model, duration, author, source of the original film and the original prompt with a Chinese translation, under the site’s notice that material is checked against original sources, films belong to their creators, and prompts are only corrected for obvious typos. An Agent page adds an anonymous read-only Remote MCP (/api/mcp, Streamable HTTP, three tools: search / get case / get prompt), REST /api/v1/cases, OpenAPI and /llms.txt, with one-line Codex CLI / Claude Code setup. An adjacent AI tool note, not a Grok Bot playbook.",
+      "categories": [
+        "content",
+        "research",
+        "prompts"
+      ],
+      "role": "AI tool tip / video prompt library",
+      "sourceUrl": "https://seedance-prompts-nu.vercel.app/",
+      "secondaryUrls": [
+        "https://x.com/VibeEverything/status/2099848829306798514",
+        "https://seedance-prompts-nu.vercel.app/agent",
+        "https://github.com/xpenlab/ai-shortfilm-prompts"
+      ],
+      "sourceType": "community",
+      "qualityNote": "社区线索，来自 Hao 转来的 @VibeEverything 9 月 15 日韩文帖（一段约 59 秒演示视频）；帖文正文无外链，本站不记点赞浏览。注意口径：该帖演示视频封面是一个英文「AI Video Prompts」界面，自报 5,310 条视频 / 33,943 条总提示词，与 seedance-prompts-nu.vercel.app（中文界面、13 个案例）并非同一站——帖与站的对应是投稿方给的，本站未能从帖内核到链接；预览图即取该演示视频封面裁 3:2，数字为演示站自报、未核。Seedance Prompts 站本身 2026-09-16 核到 200：13 个案例、Agent 接入页与 /api/mcp 说明均为页面所见；站内「全网播放破 1 亿」「Bilibili 播放破 122 万」等热度是站方 / 原作者自述，不作核验数字。「所有爆款提示词」一类说法当作营销语——它是精选案例库，不是全集；Vercel 免费域名可能迁移或下线。第三条副源 xpenlab/ai-shortfilm-prompts（MIT，《丧尸清道夫》方法论 + Claude Code Skill）是相关开源仓库，不是同一站点，与该库关系未核。本站与站方、作者、字节 Seedance 均无关联，不打星。",
+      "qualityNoteEn": "Community lead, via Hao, from @VibeEverything’s 15 Sept Korean post (a ~59-second demo video); the post text carries no external link and this site records no likes or views. Scope caveat: the demo video’s cover shows an English “AI Video Prompts” UI self-reporting 5,310 video / 33,943 total prompts, which is not the same site as seedance-prompts-nu.vercel.app (Chinese UI, 13 cases) — the post-to-site pairing came from the submitter and this site could not confirm a link inside the post; the preview is that demo cover cropped to 3:2, and its counts are the demo site’s own, unverified. Seedance Prompts itself returned 200 on 2026-09-16: the 13 cases, the Agent page and the /api/mcp description are as seen on the page; popularity lines such as “over 100M plays” or “1.22M Bilibili plays” are the site’s / original authors’ claims, not verified figures. Treat any “all the viral prompts” framing as marketing — it is a curated case library, not a complete set; the free Vercel domain may move or go offline. The third secondary link, xpenlab/ai-shortfilm-prompts (MIT, Zombie Scavenger methodology + Claude Code Skill), is a related open repo, not the same site, and its relationship to the library is unverified. No affiliation with the site, its authors, or ByteDance Seedance. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "只作学习与参考；复用提示词时保留原作者与原始来源，原片版权归创作者。",
+      "approvalBoundaryEn": "Study and reference only; keep author and original-source attribution when reusing prompts — films remain their creators’ property.",
+      "connectors": [
+        "Seedance",
+        "Remote MCP"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/seedance-prompts-library.webp",
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-16T01:10:00Z"
+    },
     {
       "id": "ronglecat-awesome-grok-bot",
       "slug": "ronglecat-awesome-grok-bot",
