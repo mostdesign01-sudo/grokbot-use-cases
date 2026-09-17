@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-17",
+      "title": "晚间收录：Grok Bot +1、HTML +2",
+      "titleEn": "Evening catalog: Grok Bot +1, HTML +2",
+      "body": "Grok Bot / 工具：收《工具：Cloudflare security-audit-skill（多智能体安全审计 Skill）》（HN item 49736466）。HTML：收《Agent Elements：Agent 聊天 / 工具卡 React 组件（21st.dev）》与《Nexus UI：面向 AI 应用的 shadcn 风组件库》，均配 3:2 自托管预览。X @bot API 仍 403，来源改走 HN / GitHub / 网页。Agent UI 无新增（ThreeUI 晨更已收 Engraved Certificate）。",
+      "bodyEn": "Grok Bot / tools: added “Tool: Cloudflare security-audit-skill (multi-agent security audit Skill)” (HN item 49736466). HTML: added “Agent Elements: React components for agent chat & tool cards (21st.dev)” and “Nexus UI: shadcn-style components for AI apps”, both with 3:2 self-hosted previews. X @bot API still returns 403, so sources were HN / GitHub / web. Agent UI: none (ThreeUI Engraved Certificate already landed in the morning wave)."
+    },
+    {
+      "date": "2026-09-17",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
       "body": "Grok Bot：收 DataCamp《Skills / Routines / Approvals》Scout 周计划教程，以及 Developers Digest Routine 反转自动化解读。HTML：Show HN Capsule（item 49712278）单文件 Web 应用，已配 3:2 自托管预览。Agent UI：ThreeUI Community Engraved Certificate（community-sync 确认免费）。X @bot API 403，改走网页/公开源；Galaxy 为活动页未入库。",

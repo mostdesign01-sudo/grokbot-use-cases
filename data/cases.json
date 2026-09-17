@@ -1,10 +1,17 @@
 {
   "meta": {
-    "updatedAt": "2026-09-17T01:23:00Z",
+    "updatedAt": "2026-09-17T14:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.23",
-    "count": 118,
+    "version": "1.4.24",
+    "count": 119,
     "sourcesCrawled": [
+      "https://github.com/cloudflare/security-audit-skill",
+      "https://news.ycombinator.com/item?id=49736466",
+      "https://blog.cloudflare.com/build-your-own-vulnerability-harness",
+      "https://agent-elements.21st.dev",
+      "https://github.com/21st-dev/agent-elements",
+      "https://nexus-ui.dev",
+      "https://github.com/victorcodess/nexus-ui",
       "https://threeui.com/ui-elements/engraved-certificate",
       "https://news.ycombinator.com/item?id=49712278",
       "https://withcapsule.app/",
@@ -99,6 +106,43 @@
     ]
   },
   "cases": [
+    {
+      "id": "cloudflare-security-audit-skill",
+      "slug": "cloudflare-security-audit-skill",
+      "title": "工具：Cloudflare security-audit-skill（多智能体安全审计 Skill）",
+      "titleEn": "Tool: Cloudflare security-audit-skill (multi-agent security audit Skill)",
+      "summary": "Cloudflare 开源的 coding-agent Skill（MIT）：把安全审计拆成侦察 → 覆盖度驱动狩猎 → 独立验证 → 结构化 findings → 再验证 → 中性报告六阶段；配套 coverage-ledger / findings JSON schema 与本地校验脚本。安装 `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit`。今日 HN 条目 49736466（约 129 分，撰写时）；GitHub ≈9503★（撰写时）。适合挂进 Cursor / Claude Code 等会跑 Skill 的 Agent，不是 Grok Bot 专用 playbook。",
+      "summaryEn": "Cloudflare’s open-source coding-agent Skill (MIT): splits a security audit into six phases — reconnaissance → coverage-driven hunting → independent verification → structured findings → re-verification → neutral report — with a coverage-ledger / findings JSON schema and local validation scripts. Install with `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit`. Today’s HN item 49736466 (~129 points at time of writing); GitHub ≈9,503★ (at time of writing). Fits any Skill-running agent such as Cursor / Claude Code; it is not a Grok-Bot-specific playbook.",
+      "categories": [
+        "engineering",
+        "coding",
+        "automation"
+      ],
+      "role": "Security Auditor / 安全审计 Skill",
+      "sourceUrl": "https://github.com/cloudflare/security-audit-skill",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49736466",
+        "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
+      ],
+      "sourceType": "community",
+      "qualityNote": "公开 README + HN 当日条目（2026-09-17，均 200）。星级为编辑观感，不是 GitHub 数字；GitHub star 写在摘要里并注明「撰写时」。仓库 2026-06 建，publishedAt 取 HN 上榜日。",
+      "qualityNoteEn": "Public README plus the same-day HN item (2026-09-17, both 200). Stars are the editor’s rating, not a GitHub count; the GitHub star figure is in the summary and marked “at time of writing”. Repo created June 2026; publishedAt follows the HN front-page day.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "findings / 报告可能宣称存在漏洞，行动或公开前必须人审复核；本 Skill 只审计代码，不授予任何利用（exploit）或修复上线权限。",
+      "approvalBoundaryEn": "Findings / reports may claim vulnerabilities — a human must review before acting on or publishing them; the Skill audits code and grants no exploit or production-fix authority.",
+      "connectors": [
+        "github"
+      ],
+      "language": "zh",
+      "featured": true,
+      "stars": 5,
+      "publishedAt": "2026-09-17",
+      "updatedAt": "2026-09-17T14:20:00Z"
+    },
     {
       "id": "datacamp-grok-bot-skills-routines",
       "slug": "datacamp-grok-bot-tutorial-skills-routines",
