@@ -1,11 +1,44 @@
 {
   "meta": {
-    "updatedAt": "2026-09-15T01:30:00Z",
+    "updatedAt": "2026-09-17T01:23:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.15",
-    "count": 51
+    "version": "1.4.16",
+    "count": 52
   },
   "items": [
+    {
+      "id": "engraved-certificate",
+      "slug": "engraved-certificate",
+      "title": "Engraved Certificate",
+      "titleEn": "Engraved Certificate",
+      "summary": "ThreeUI Community：雕版证书板面 + 双圆形扭索纹，Canvas 2D 谐波态自动轮换。免登录，MIT Community 包 `@designcodeio/threeui` 可装。",
+      "summaryEn": "ThreeUI Community engraved certificate plate with dual guilloche rosettes and a Canvas 2D harmonic pass that auto-cycles states. No login; MIT Community package `@designcodeio/threeui`.",
+      "sourceUrl": "https://threeui.com/ui-elements/engraved-certificate",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/engraved-certificate.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Engraved Certificate 做成就/结业证书板。保持 Community 免费件，只改标题与主色。",
+      "promptHintEn": "Use Engraved Certificate for achievement/completion plates. Keep the free Community piece; only change title and primary color.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "certificate",
+        "canvas",
+        "guilloche"
+      ],
+      "featured": false,
+      "qualityNote": "community-sync-report 含 engraved-certificate（Community 免费）。公开页 200（2026-09-17）；预览取官方缩略图裁 3:2。",
+      "qualityNoteEn": "Listed in community-sync-report as engraved-certificate (Community/free). Public page 200 (2026-09-17); preview is the official thumbnail cropped to 3:2.",
+      "publishedAt": "2026-09-17",
+      "updatedAt": "2026-09-17T01:23:00Z"
+    },
     {
       "id": "zephyr-framework",
       "slug": "zephyr-framework",

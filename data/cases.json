@@ -1,10 +1,15 @@
 {
   "meta": {
-    "updatedAt": "2026-09-16T01:10:52Z",
+    "updatedAt": "2026-09-17T01:23:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.22",
-    "count": 116,
+    "version": "1.4.23",
+    "count": 118,
     "sourcesCrawled": [
+      "https://threeui.com/ui-elements/engraved-certificate",
+      "https://news.ycombinator.com/item?id=49712278",
+      "https://withcapsule.app/",
+      "https://www.developersdigest.tech/blog/grok-bot-routines-automations-guide",
+      "https://www.datacamp.com/tutorial/grok-bot-tutorial",
       "https://news.ycombinator.com/item?id=49676425",
       "https://poltora.dev/redis",
       "https://x.ai/bot/guides/grok-bot-for-pms",
@@ -94,6 +99,80 @@
     ]
   },
   "cases": [
+    {
+      "id": "datacamp-grok-bot-skills-routines",
+      "slug": "datacamp-grok-bot-tutorial-skills-routines",
+      "title": "DataCamp：用 Scout 学周计划练 Skill / Routine / 审批",
+      "titleEn": "DataCamp: Scout weekly learning plan → Skill / Routine / approvals",
+      "summary": "DataCamp 教程：从零建 Scout（DataCamp Learning Bot），读 learner-profile + 四小时预算，打开课程页核对等级/时长/先修（禁止用搜索摘要估时），审完再存成 Skill，周一 Routine 只出计划不代点报名。强调账号级共享云电脑、缺时长写 not listed、被挡时交还控制权。",
+      "summaryEn": "DataCamp tutorial: create Scout (a DataCamp Learning Bot), read a learner profile plus a four-hour budget, open course pages to verify level/duration/prereqs (no estimating from search snippets), then save the reviewed method as a Skill and a Monday Routine that only plans—never enrolls. Stresses one account-scoped cloud computer, “not listed” for missing durations, and handing back control when a page blocks the Bot.",
+      "categories": [
+        "getting-started",
+        "skills",
+        "automation",
+        "productivity"
+      ],
+      "role": "Learning Scout playbook",
+      "sourceUrl": "https://www.datacamp.com/tutorial/grok-bot-tutorial",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://docs.x.ai/grok-bot/faq"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "第三方可复现教程（公开页 200，2026-09-17）。流程对齐官方 Skills/Routines；计划门槛与产品 UI 以 xAI / Cursor 现网为准。",
+      "qualityNoteEn": "Third-party reproducible tutorial (public page 200, 2026-09-17). Flow matches official Skills/Routines; plan gates and product UI should be checked on live xAI / Cursor pages.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "只产出学习计划与链接；不代替报名、付费或改账号设置。",
+      "approvalBoundaryEn": "Returns a learning plan and links only; does not enroll, pay, or change account settings.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-01",
+      "updatedAt": "2026-09-17T01:23:00Z"
+    },
+    {
+      "id": "developersdigest-grok-bot-routines",
+      "slug": "developersdigest-grok-bot-routines-guide",
+      "title": "Developers Digest：Routine 反转自动化（先做再排期）",
+      "titleEn": "Developers Digest: Routines invert automation (do the job, then schedule)",
+      "summary": "2026-08-23 长文：对照 Zapier/n8n「先搭触发器」与 Grok Bot「先做完再存 Skill / Routine」。写清 Teach a task 草稿边界、六要素排期（Bot/时区/输入/输出/审批/缺数策略）、适合低判断多步骤琐事，以及演示型 Routine 不如节点工作流可审计的诚实代价。",
+      "summaryEn": "Aug 23, 2026 essay: contrasts Zapier/n8n “build triggers first” with Grok Bot’s “finish the job, then save a Skill/Routine.” Covers Teach-a-task drafts, the six scheduling facts (Bot / timezone / inputs / outputs / approval / missing-data policy), fit for low-judgment multi-step chores, and the honest tradeoff that demonstrated routines are less auditable than node graphs.",
+      "categories": [
+        "automation",
+        "skills",
+        "ops",
+        "getting-started"
+      ],
+      "role": "Routines explainer",
+      "sourceUrl": "https://www.developersdigest.tech/blog/grok-bot-routines-automations-guide",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://x.ai/news/introducing-grok-bot"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "第三方解读（公开页 200，2026-09-17）。机制描述对齐官方文档；产品发布日期与措辞以 xAI 原文为准。",
+      "qualityNoteEn": "Third-party explainer (public page 200, 2026-09-17). Mechanics track official docs; launch dates and wording should follow xAI’s own posts.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "外发、购买、删除、发布与改生产系统必须审批；缺源时报告而非用旧数据硬跑。",
+      "approvalBoundaryEn": "Sending, purchasing, deleting, publishing, and production writes stay behind approval; missing sources should be reported, not silently filled with stale data.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-08-23",
+      "updatedAt": "2026-09-17T01:23:00Z"
+    },
     {
       "id": "grok-bot-for-gtm",
       "slug": "xai-grok-bot-for-gtm",

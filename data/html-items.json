@@ -1,11 +1,41 @@
 {
   "meta": {
-    "updatedAt": "2026-09-16T01:10:52Z",
+    "updatedAt": "2026-09-17T01:23:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.25",
-    "count": 62
+    "version": "1.3.26",
+    "count": 63
   },
   "items": [
+    {
+      "id": "capsule-single-file-apps",
+      "slug": "capsule-single-file-apps",
+      "title": "Capsule：单文件 Web 应用（UI + SQLite 打包分享）",
+      "titleEn": "Capsule: single-file web apps (UI + SQLite, share like a doc)",
+      "summary": "withcapsule.app：把 UI、本地 SQLite 数据与资源打进一个可分享的 .capsule 文件，免账号、免云端；提供 Web Preview 与桌面端。Show HN item 49712278（2026-09-15，≈366 分）。",
+      "summaryEn": "withcapsule.app: packages UI, local SQLite data, and assets into one shareable .capsule file—no accounts, no cloud—with a Web Preview and desktop builds. Show HN item 49712278 (2026-09-15, ~366 points).",
+      "sourceUrl": "https://withcapsule.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49712278"
+      ],
+      "previewImage": "/previews/capsule.webp",
+      "types": [
+        "tool",
+        "demo",
+        "template"
+      ],
+      "tags": [
+        "single-file",
+        "sqlite",
+        "offline",
+        "show-hn",
+        "web-preview"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-17）。Show HN ≈366 分；预览取官网 OG 图裁成 3:2 WebP。",
+      "qualityNoteEn": "Public page returned 200 (2026-09-17). Show HN ~366 points; preview is the site OG image cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-17T01:23:00Z"
+    },
     {
       "id": "redis-city",
       "slug": "redis-city",

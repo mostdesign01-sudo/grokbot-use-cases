@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-17",
+      "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
+      "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
+      "body": "Grok Bot：收 DataCamp《Skills / Routines / Approvals》Scout 周计划教程，以及 Developers Digest Routine 反转自动化解读。HTML：Show HN Capsule（item 49712278）单文件 Web 应用，已配 3:2 自托管预览。Agent UI：ThreeUI Community Engraved Certificate（community-sync 确认免费）。X @bot API 403，改走网页/公开源；Galaxy 为活动页未入库。",
+      "bodyEn": "Grok Bot: added DataCamp’s Skills/Routines/Approvals Scout weekly-plan tutorial and Developers Digest’s routines-vs-builders essay. HTML: Show HN Capsule (item 49712278) single-file web apps, with a 3:2 self-hosted preview. Agent UI: ThreeUI Community Engraved Certificate (confirmed free in community-sync). X @bot API returned 403—used web/public sources; Galaxy is an event page and was not catalogued."
+    },
+    {
       "date": "2026-09-16",
       "title": "工作日晨更：Grok Bot +2、HTML +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1",
