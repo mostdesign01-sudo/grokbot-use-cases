@@ -1,10 +1,16 @@
 {
   "meta": {
-    "updatedAt": "2026-09-17T01:23:00Z",
+    "updatedAt": "2026-09-18T00:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.23",
-    "count": 118,
+    "version": "1.4.24",
+    "count": 119,
     "sourcesCrawled": [
+      "https://docs.typesafe.ai/introduction/quickstart",
+      "https://docs.typesafe.ai/",
+      "https://console.typesafe.ai/",
+      "https://docs.typesafe.ai/cookbooks",
+      "https://github.com/typesafe-ai/skills",
+      "https://x.com/harrisonitsme/status/2100626136783081950",
       "https://threeui.com/ui-elements/engraved-certificate",
       "https://news.ycombinator.com/item?id=49712278",
       "https://withcapsule.app/",
@@ -99,6 +105,52 @@
     ]
   },
   "cases": [
+    {
+      "id": "jev-quickstart-zh",
+      "slug": "jev-quickstart-zh",
+      "title": "Jev 接入速查（TypeSafe System One）",
+      "titleEn": "Jev quickstart (TypeSafe System One)",
+      "summary": "中文薄索引，五步走完官方 Quick start：① typesafe.ai 加入 waitlist（早期访问）；② 拿到 console.typesafe.ai 的 API key，写进环境变量 TYPESAFE_API_KEY；③ 三选一接入 — curl `POST https://api.typesafe.ai/v1/systemone`（model 填 `jev-latest`，请求体是 `state` + `questions`），或 Python `pip install typesafe-sdk` / JS `npm install @typesafe-ai/sdk`，或给编码 Agent 装 skill `npx skills add typesafe-ai/skills --skill typesafe-ai`；④ 三种问题类型 — Choice（从给定集合选一，回各选项概率 + confidence）、Score（按有序等级打分）、Noul（是 / 否的概率），一次调用可混合多问；⑤ 进阶看官方 Cookbooks（守栏、重排、意图路由、日期抽取等）。Jev 只出结构化决策，不做聊天、不生成文本。官方文档是唯一权威源，本条只做中文入口，不复制、不改写他们的文档。",
+      "summaryEn": "A thin Chinese index over the official Quick start, five steps: ① join the waitlist at typesafe.ai (early access); ② get an API key from console.typesafe.ai and set TYPESAFE_API_KEY; ③ pick one route — curl `POST https://api.typesafe.ai/v1/systemone` (model `jev-latest`, body = `state` + `questions`), or Python `pip install typesafe-sdk` / JS `npm install @typesafe-ai/sdk`, or give your coding agent the skill via `npx skills add typesafe-ai/skills --skill typesafe-ai`; ④ the three question types — Choice (pick one from a defined set, with per-option probabilities + confidence), Score (rate against ordered levels), Noul (probability of a yes/no), several per call; ⑤ go deeper in the official Cookbooks (guardrails, re-ranking, intent routing, date extraction, and more). Jev returns structured decisions only — no chat, no text generation. The official docs are the single source of truth; this entry is a Chinese entry point, not a copy or rewrite of their docs.",
+      "categories": [
+        "engineering",
+        "coding",
+        "getting-started"
+      ],
+      "role": "接入速查 / Quickstart index",
+      "sourceUrl": "https://docs.typesafe.ai/introduction/quickstart",
+      "secondaryUrls": [
+        "https://docs.typesafe.ai/",
+        "https://console.typesafe.ai/",
+        "https://docs.typesafe.ai/primitives",
+        "https://docs.typesafe.ai/sdk/python",
+        "https://docs.typesafe.ai/sdk/javascript",
+        "https://docs.typesafe.ai/cookbooks",
+        "https://github.com/typesafe-ai/skills",
+        "https://typesafe.ai/",
+        "https://x.com/harrisonitsme/status/2100626136783081950"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "收录理由：Models 看板已有 /models/typesafe-jev/，但那张卡记的是「模型是什么」；这条记「怎么接」，给中文读者一页速查，顺着链接去官方 docs。边界：Jev 是早期访问，本库没有 key，所有命令、端点、模型名、问题类型均逐条抄自官方 Quick start / Primitives / SDK 页（2026-09-18 全部 200），本条未实跑 curl 或 SDK，页面上没有可点的 live demo；不写速度 / 成本 / 评测数字，那些留在模型卡并一律标「官方称」。中文入口帖是森叔（@harrisonitsme）9 月 17 日 X 帖，只作社区参考，帖内倍数与人物背景是发帖人说法，本库不采。这是一页薄索引，不是另一份竞争性教程站：官方文档改了以官方为准。",
+      "qualityNoteEn": "Why: the Models board already has /models/typesafe-jev/, which records what the model is; this entry records how to get in — one page for Chinese readers that hands off to the official docs. Boundary: Jev is early access and this library has no key; every command, endpoint, model name, and question type is transcribed from the official Quick start / Primitives / SDK pages (all 200 on 2026-09-18). No curl or SDK run here and no live demo on this page; no speed / cost / eval figures — those stay on the model card, all labelled vendor claims. The Chinese entry post is 森叔’s (@harrisonitsme) 17 Sept X post, kept as community context only; its multiples and biographical claims are the poster’s and are not adopted. A thin index, not a competing tutorial site: when the official docs change, the official docs win.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "typesafe-api",
+        "python",
+        "node"
+      ],
+      "language": "zh",
+      "featured": false,
+      "relatedModelIds": [
+        "typesafe-jev"
+      ],
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-18T00:50:00Z"
+    },
     {
       "id": "datacamp-grok-bot-skills-routines",
       "slug": "datacamp-grok-bot-tutorial-skills-routines",
