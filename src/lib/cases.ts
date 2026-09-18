@@ -38,6 +38,8 @@ export interface CaseItem {
   /** Curator quality stars 1–5 (editorial; unrelated to GitHub stars). Unset = no rating shown. */
   stars?: number;
   previewImage?: string;
+  /** Cards on the Models board this entry belongs to (e.g. a quickstart index → its model). Must resolve to existing model ids. */
+  relatedModelIds?: string[];
   publishedAt: string;
   updatedAt: string;
 }

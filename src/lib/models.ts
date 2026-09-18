@@ -89,6 +89,14 @@ function assertModelsResolve(list: ModelItem[]): void {
       }
     }
   }
+
+  for (const entry of cases) {
+    for (const id of entry.relatedModelIds ?? []) {
+      if (!list.some((model) => model.id === id)) {
+        throw new Error(`cases.json relatedModelId not found: ${entry.id} → ${id}`);
+      }
+    }
+  }
 }
 
 assertModelsResolve(models);
@@ -124,4 +132,11 @@ export function getRelatedCasesForModel(model: ModelItem): CaseItem[] {
   return (model.relatedCaseIds ?? [])
     .map((id) => cases.find((item) => item.id === id))
     .filter((item): item is CaseItem => Boolean(item));
+}
+
+/** Library entry → Models board cards. Lives here (not in cases.ts) so cases.ts stays import-free of models. */
+export function getRelatedModelsForCase(item: CaseItem, list = models): ModelItem[] {
+  return (item.relatedModelIds ?? [])
+    .map((id) => list.find((model) => model.id === id))
+    .filter((model): model is ModelItem => Boolean(model));
 }
