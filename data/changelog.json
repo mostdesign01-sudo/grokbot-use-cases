@@ -30,6 +30,13 @@
     },
     {
       "date": "2026-09-15",
+      "title": "Image 2.5 提示词 +1：PromptLabCN 自拍→专业摄影 10 条可编辑提示",
+      "titleEn": "Image 2.5 prompts +1: PromptLabCN’s 10 editable selfie→pro photo prompts",
+      "body": "Image 2.5 提示词看板增收第二张卡 /image-prompts/promptlabcn-selfie-pro-10/：@PromptLabCN（安娜 AI｜每日干货铺）9 月 13 日 X 帖称「ChatGPT 现在能把一张普通自拍变成专业摄影级别的照片，不用影棚不用摄影师，上传一张清晰自拍再用对提示词」，并给出 10 条可编辑提示词。主楼只有导语加一张封面图，10 条提示词在作者跟帖里；本库未能展开整条讨论串，故不复制任何提示词措辞，也不逐条核对条数，只记「可打开抄的帖」。作者只写 ChatGPT，模型标签按原话写 chatgpt-images，不补 GPT-Image-2.5 版本。不写点赞收藏浏览。预览取作者帖附图（ChatGPT 标志 + 一张人像封面）上下补白成 3:2。数据版本 1.0.1 / 2 条。",
+      "bodyEn": "Second card on the Image 2.5 prompts board, /image-prompts/promptlabcn-selfie-pro-10/: on 13 Sept @PromptLabCN (安娜 AI｜每日干货铺) posted that “ChatGPT can now turn an ordinary selfie into a professional-photography-grade photo — no studio, no photographer, just upload one clear selfie and use the right prompt,” offering 10 editable prompts. The head post holds only the intro and one cover image; the ten prompts sit in the author’s follow-up replies. This library could not expand the full thread, so no prompt wording is copied and the count is not checked one by one — the card only records an openable, copy-from-source post. The author names only ChatGPT, so the model badge reads chatgpt-images without adding a GPT-Image-2.5 version. No likes, bookmarks, or views recorded. Preview is the author’s attached image (ChatGPT logo + one portrait cover) padded with white to 3:2. Dataset 1.0.1 / 2 items."
+    },
+    {
+      "date": "2026-09-15",
       "title": "工作日晨更：Grok Bot +7、HTML +2、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +7, HTML +2, Agent UI +1",
       "body": "Grok Bot：增收官方 Guides《Grok Bot 101》《Grok Bot for Support》《Templates for Grok Bot》《How I run multiple teams of Grok Bots》，以及社区 Roster Room（82 套小队提示）、Grok Ship（scout/ship 软件工厂；README 注明已被 Firstmate 模板替代）、RongleCat/awesome-grok-bot（中英日目录）。HTML：Show HN Neobrutalism.dev（item 49699159）与 code-preview-element 自渲染代码块。Agent UI：Zephyr（Agent API / Zephyr.agent.act）。均已配 3:2 自托管预览。",
