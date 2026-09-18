@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-13T08:30:00Z",
+    "updatedAt": "2026-09-16T12:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.3",
-    "count": 6
+    "version": "1.1.4",
+    "count": 7
   },
   "models": [
     {
@@ -435,6 +435,65 @@
       "previewCredit": "预览：Anthropic 官方 X 视频封面",
       "previewCreditEn": "Preview: Anthropic official X video poster",
       "featured": false
+    },
+    {
+      "id": "typesafe-jev",
+      "slug": "typesafe-jev",
+      "name": "Jev",
+      "vendor": "TypeSafe AI",
+      "title": "Jev / System One Models（TypeSafe AI）",
+      "titleEn": "Jev / System One Models (TypeSafe AI)",
+      "summary": "TypeSafe AI 于 2026-09-15 发布的首个公开 System One Model。面向软件内决策而非聊天：输入非结构化状态，输出类型安全的结构化决策，并附带校准概率与置信度。官方称新架构 + 并行采样 + Reinforcement Learning for Calibrated Decisions（RLCD）；目前为早期访问；速度、价格与评测倍率均为厂商自述，本库未复跑其工作流评测。",
+      "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library.",
+      "announcedAt": "2026-09-15",
+      "publishedAt": "2026-09-16",
+      "updatedAt": "2026-09-16T12:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "TypeSafe：Introducing System One Models & Jev",
+          "labelEn": "TypeSafe: Introducing System One Models & Jev",
+          "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+          "by": "TypeSafe AI",
+          "date": "2026-09-15"
+        },
+        {
+          "kind": "official",
+          "label": "TypeSafe AI 官网",
+          "labelEn": "TypeSafe AI homepage",
+          "url": "https://typesafe.ai/",
+          "by": "TypeSafe AI",
+          "date": "2026-09-15"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Introducing System One Models and Jev",
+          "labelEn": "Hacker News: Introducing System One Models and Jev",
+          "url": "https://news.ycombinator.com/item?id=49717558",
+          "by": "Hacker News",
+          "date": "2026-09-15"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：面向 automation 的 System One 模型类——结构化输出、类型不出错、每次回答带校准置信度；不做字符串生成。",
+          "textEn": "Vendor claim: a System One model class for automation — structured outputs, no type errors, calibrated confidence on every answer; not string generation."
+        },
+        {
+          "text": "官方称：端到端约 70ms–500ms；输入约 $0.042 / MTok，输出免费计量；工作流评测上相对前沿 LLM 可达约 193.6× 更快、444.6× 更便宜（厂商自述，本库未复跑）。",
+          "textEn": "Vendor claim: ~70–500ms end-to-end; ~$0.042 / MTok input with free output metering; workflow evals claim ~193.6× faster and ~444.6× cheaper vs frontier LLMs (vendor figures, not re-run here)."
+        },
+        {
+          "text": "早期访问：官网 Join Waitlist；适合分类 / 路由 / 打分 / 抽取等可塞进代码的决策，不替代通用聊天或开放式写作。",
+          "textEn": "Early access via the site waitlist; fits classify / route / score / extract decisions inside code — not a general chat or open-ended writing model."
+        }
+      ],
+      "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API。三条来源 URL 于 2026-09-16 核到 200。无预览图。",
+      "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "featured": true,
+      "stars": 4
     }
   ]
 }
