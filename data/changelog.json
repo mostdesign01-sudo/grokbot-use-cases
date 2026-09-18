@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-18",
+      "title": "Jev：模型卡补接入 + 新开「接入速查」",
+      "titleEn": "Jev: how-to added to the model card + new quickstart index",
+      "body": "最新模型：/models/typesafe-jev/ 补三条 official 源（docs.typesafe.ai、官方 Quick start、Console）与一条 community 源（森叔 @harrisonitsme 9 月 17 日中文帖 + waitlist）；要点新增接入事实 — waitlist → console key → TYPESAFE_API_KEY、POST api.typesafe.ai/v1/systemone + jev-latest、pip install typesafe-sdk / npm install @typesafe-ai/sdk、npx skills add typesafe-ai/skills --skill typesafe-ai、Choice / Score / Noul 三种问题类型、只出结构化决策不做聊天。速度 / 成本仍只保留原有「官方称」，森叔帖里的倍数与人物背景不采。models 数据版本 1.1.5。Grok Bot 库：新开 /cases/jev-quickstart-zh/「Jev 接入速查（TypeSafe System One）」— 中文薄索引，五步链去官方 docs 与 Cookbooks，不是另一份教程站；早期访问、本库无 key、页面无 live demo、不写任何数字。cases 118→119，数据版本 1.4.24。站点：cases 条目新增可选 relatedModelIds，详情页出「相关模型卡」区块，与模型卡的 relatedCaseIds 互指。全部来源 URL 于 2026-09-18 核到 200。",
+      "bodyEn": "Models: /models/typesafe-jev/ gains three official sources (docs.typesafe.ai, the official Quick start, Console) and one community source (森叔 @harrisonitsme’s 17 Sept Chinese post + waitlist); highlights now carry the how-to facts — waitlist → console key → TYPESAFE_API_KEY, POST api.typesafe.ai/v1/systemone with jev-latest, pip install typesafe-sdk / npm install @typesafe-ai/sdk, npx skills add typesafe-ai/skills --skill typesafe-ai, the Choice / Score / Noul question types, and structured decisions only (no chat). Speed / cost stay as the existing vendor-claim lines; the multiples and biographical claims in the community post are not adopted. models dataset 1.1.5. Grok Bot library: new /cases/jev-quickstart-zh/ “Jev quickstart (TypeSafe System One)” — a thin Chinese index, five steps linking out to the official docs and Cookbooks, not a competing tutorial site; early access, no key here, no live demo on the page, no figures. cases 118→119, dataset 1.4.24. Site: cases entries accept an optional relatedModelIds and the detail page renders a Related model cards section, pairing with the model card’s relatedCaseIds. All source URLs returned 200 on 2026-09-18."
+    },
+    {
       "date": "2026-09-17",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
