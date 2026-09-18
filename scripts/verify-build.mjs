@@ -217,6 +217,12 @@ for (const model of modelsDataset.models) {
 }
 
 const modelIds = new Set(modelsDataset.models.map((item) => item.id));
+for (const item of dataset.cases) {
+  for (const id of item.relatedModelIds ?? []) {
+    if (!modelIds.has(id)) missing.push(`cases.json relatedModelId not found: ${item.id} → ${id}`);
+  }
+}
+
 for (const item of imagePromptsDataset.items) {
   const page = `image-prompts/${item.slug}/index.html`;
   if (!existsSync(new URL(`../dist/${page}`, import.meta.url))) {
@@ -373,6 +379,18 @@ if (
     const target = modelsDataset.models.find((model) => model.id === linked.relatedModelIds[0]);
     if (!page.includes("同板相关") || !page.includes(`models/${target.slug}/`)) {
       console.error(`models/${linked.slug}/ is missing the 同板相关 section linking to models/${target.slug}/.`);
+      process.exit(1);
+    }
+  }
+}
+
+{
+  const linked = dataset.cases.find((item) => (item.relatedModelIds ?? []).length > 0);
+  if (linked) {
+    const page = await readFile(new URL(`../dist/cases/${linked.slug}/index.html`, import.meta.url), "utf8");
+    const target = modelsDataset.models.find((model) => model.id === linked.relatedModelIds[0]);
+    if (!page.includes("相关模型卡") || !page.includes(`models/${target.slug}/`)) {
+      console.error(`cases/${linked.slug}/ is missing the 相关模型卡 section linking to models/${target.slug}/.`);
       process.exit(1);
     }
   }

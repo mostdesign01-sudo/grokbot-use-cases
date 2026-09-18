@@ -50,6 +50,7 @@
 | `featured` | boolean | 是否出现在首页精选 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `qualityNote` 里。不填则不显示星行 |
 | `previewImage` | string | 可选，站点根路径如 `/previews/id.webp` |
+| `relatedModelIds` | string[] | 可选，指向 `data/models.json` 里已有的 `id`（例如接入速查 → 它所属的模型卡）；构建时必须能解析。详情页以「相关模型卡」区块渲染整卡 |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目最近校对时间 |
 

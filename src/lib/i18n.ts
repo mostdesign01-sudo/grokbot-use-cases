@@ -234,6 +234,11 @@ export const ui = {
     startPath: { zh: "上手路径", en: "How to start" },
     approvalBound: { zh: "审批边界", en: "Approval boundary" },
     related: { zh: "相关案例", en: "Related cases" },
+    relatedModels: { zh: "相关模型卡", en: "Related model cards" },
+    relatedModelsHint: {
+      zh: "最新模型看板上的相关卡：这条速查 / 资讯所属的模型，模型是什么看那边。",
+      en: "Related cards on the Models board: the model this quickstart / news entry belongs to — what the model is lives there.",
+    },
     metadata: { zh: "元信息", en: "Metadata" },
     learnWhat: { zh: "适合学什么", en: "What to learn" },
     howToUse: { zh: "适合怎么用", en: "How to use it" },
@@ -453,8 +458,8 @@ export const ui = {
     },
     relatedCase: { zh: "库内条目", en: "Library entry" },
     relatedCaseHint: {
-      zh: "这条模型已在 Grok Bot 库以 AI 资讯收录，完整收录理由见下方条目。",
-      en: "This model is already catalogued as AI news in the Grok Bot library; the full listing note lives on the entry below.",
+      zh: "这条模型在 Grok Bot 库里有配套条目（AI 资讯或接入速查），完整收录理由见下方条目。",
+      en: "This model has a companion entry in the Grok Bot library (AI news or a quickstart index); the full listing note lives on the entry below.",
     },
     previewCredit: { zh: "预览出处", en: "Preview credit" },
     pathsTease: {

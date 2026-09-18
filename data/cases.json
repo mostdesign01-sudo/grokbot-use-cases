@@ -1,10 +1,17 @@
 {
   "meta": {
-    "updatedAt": "2026-09-17T01:23:00Z",
+    "updatedAt": "2026-09-18T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.23",
-    "count": 118,
+    "version": "1.4.25",
+    "count": 120,
     "sourcesCrawled": [
+      "https://x.com/coolish/status/2100570517954838897",
+      "https://docs.typesafe.ai/introduction/quickstart",
+      "https://docs.typesafe.ai/",
+      "https://console.typesafe.ai/",
+      "https://docs.typesafe.ai/cookbooks",
+      "https://github.com/typesafe-ai/skills",
+      "https://x.com/harrisonitsme/status/2100626136783081950",
       "https://threeui.com/ui-elements/engraved-certificate",
       "https://news.ycombinator.com/item?id=49712278",
       "https://withcapsule.app/",
@@ -99,6 +106,91 @@
     ]
   },
   "cases": [
+    {
+      "id": "coolish-jev-sts2",
+      "slug": "coolish-jev-sts2",
+      "title": "coolish：Jev 实测杀戮尖塔 2（~0.7s 行动）",
+      "titleEn": "coolish: Jev plays Slay the Spire 2 (~0.7s acts)",
+      "summary": "社区实测 demo（Jev 应用案例架第一条）：@coolish（paulwei）9 月 17 日发帖称，前一天出的 TypeSafe Jev「适合高频决策，那岂不又是适合打游戏」；他之前用 GPT-6 Astra 代打《杀戮尖塔 2》，「能力强但速度慢」，这次改用 Jev 实测，「行动思考只需 0.7 秒，画面我都没看清它就操作完了」，附约 33 秒竖屏视频。封面帧可核到的：一个编码 Agent 会话（标题「评估模型高速通关能力」）里嵌着 Slay the Spire 2 窗口，停在「搜刮！」奖励页；会话日志出现「Jev api client」「Sts2 fast interface」「Driver review」等子任务与「回放中，Jev 已纠正 7 个检查点里的 6 个」一句。0.7 秒、「超人类游戏速度」与「纠正 6 / 7」均为作者自述或画面文字，本库未复跑，不记胜率，也不代表 TypeSafe 官方背书。",
+      "summaryEn": "Community timed demo (first item on the Jev application-case shelf): on 17 Sept @coolish (paulwei) posted that TypeSafe’s Jev, released the day before, “suits high-frequency decisions — so wouldn’t it suit playing games too?” He had previously let GPT-6 Astra play Slay the Spire 2 — “strong, but slow” — and this time ran Jev: “each think-and-act takes only 0.7 seconds; it finished the move before I could even read the screen,” with a ~33s portrait video. Visible in the poster frame: a coding-agent session titled “evaluate the model’s high-speed clear ability” with a Slay the Spire 2 window paused on a “Loot!” reward screen; the session log shows sub-tasks named “Jev api client,” “Sts2 fast interface,” and “Driver review,” plus the line “on replay, Jev corrected 6 of the 7 checkpoints.” The 0.7s, “superhuman game speed,” and “6 of 7” are the author’s claims or on-screen text — not re-run here; no win rate recorded, and no TypeSafe endorsement implied.",
+      "categories": [
+        "coding",
+        "engineering",
+        "community"
+      ],
+      "role": "Jev 应用案例 / game-playing demo",
+      "sourceUrl": "https://x.com/coolish/status/2100570517954838897",
+      "secondaryUrls": [
+        "https://typesafe.ai/",
+        "https://docs.typesafe.ai/introduction/quickstart"
+      ],
+      "sourceType": "community",
+      "qualityNote": "收录理由：Jev 页的「攻略」角度是收应用案例，不是重写官方文档；这是第一条 — 把一个「只出结构化决策」的早期访问模型接到实时游戏里，且有同一作者用 GPT-6 Astra 代打的前后对照。边界：主源是作者 X 视频帖（2026-09-18 打开为 200），本库只看了约 33 秒视频与封面帧，没有拿到作者的接入代码、提示或问题定义；「0.7 秒」是作者手感 / 自测时间，不是本库计时，也不是 TypeSafe 官方数字；「Astra 能力强但速度慢」是作者对比，本库不做两模型胜率或强弱判断，也不记任何胜率。封面帧里的 Agent 会话与「纠正 6 / 7 检查点」是画面原样抄录，接入方式（Agent 写的 Jev 客户端 + 游戏接口）是画面所示，作者帖文未展开。Slay the Spire 2 IP 属 Mega Crit：本卡只记模型能力展示，不分发任何游戏文件。Jev 为早期访问，本库无 key、未实测。预览图为作者 X 视频封面帧，裁到游戏窗口一带成 3:2。不打星。",
+      "qualityNoteEn": "Why: the Jev page’s “playbook” angle is to collect application cases, not to rewrite the official docs — this is the first one: an early-access model that returns only structured decisions, wired into a real-time game, with the same author’s earlier GPT-6 Astra run as a before/after. Boundary: primary source is the author’s X video post (200 when opened on 2026-09-18); this library watched the ~33s video and poster frame only and has none of the author’s integration code, prompts, or question definitions. “0.7s” is the author’s felt / self-timed figure — not timed here, not a TypeSafe number; “Astra strong but slow” is the author’s comparison, and this library makes no win-rate or strength judgement between the two models and records no win rate. The agent session and “6 of 7 checkpoints corrected” in the poster frame are transcribed as shown; the integration route (an agent-written Jev client + game interface) is what the frame shows, and the post itself does not elaborate. Slay the Spire 2 IP belongs to Mega Crit: this card records a model-capability showcase and distributes no game files. Jev is early access; no key here, not tested. Preview is the author’s X video poster frame, cropped to the game window at 3:2. Unrated.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "typesafe-api",
+        "slay-the-spire-2"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/coolish-jev-sts2.webp",
+      "relatedModelIds": [
+        "typesafe-jev"
+      ],
+      "publishedAt": "2026-09-17",
+      "updatedAt": "2026-09-18T01:00:00Z"
+    },
+    {
+      "id": "jev-quickstart-zh",
+      "slug": "jev-quickstart-zh",
+      "title": "Jev 接入速查（TypeSafe System One）",
+      "titleEn": "Jev quickstart (TypeSafe System One)",
+      "summary": "中文薄索引，五步走完官方 Quick start：① typesafe.ai 加入 waitlist（早期访问）；② 拿到 console.typesafe.ai 的 API key，写进环境变量 TYPESAFE_API_KEY；③ 三选一接入 — curl `POST https://api.typesafe.ai/v1/systemone`（model 填 `jev-latest`，请求体是 `state` + `questions`），或 Python `pip install typesafe-sdk` / JS `npm install @typesafe-ai/sdk`，或给编码 Agent 装 skill `npx skills add typesafe-ai/skills --skill typesafe-ai`；④ 三种问题类型 — Choice（从给定集合选一，回各选项概率 + confidence）、Score（按有序等级打分）、Noul（是 / 否的概率），一次调用可混合多问；⑤ 进阶看官方 Cookbooks（守栏、重排、意图路由、日期抽取等）。Jev 只出结构化决策，不做聊天、不生成文本。官方文档是唯一权威源，本条只做中文入口，不复制、不改写他们的文档；AI UP LAB 的 Jev 页 = 这页薄索引 + 一个持续追加的应用案例架（第一条：coolish 用 Jev 实测《杀戮尖塔 2》，见库内 /cases/coolish-jev-sts2/）。",
+      "summaryEn": "A thin Chinese index over the official Quick start, five steps: ① join the waitlist at typesafe.ai (early access); ② get an API key from console.typesafe.ai and set TYPESAFE_API_KEY; ③ pick one route — curl `POST https://api.typesafe.ai/v1/systemone` (model `jev-latest`, body = `state` + `questions`), or Python `pip install typesafe-sdk` / JS `npm install @typesafe-ai/sdk`, or give your coding agent the skill via `npx skills add typesafe-ai/skills --skill typesafe-ai`; ④ the three question types — Choice (pick one from a defined set, with per-option probabilities + confidence), Score (rate against ordered levels), Noul (probability of a yes/no), several per call; ⑤ go deeper in the official Cookbooks (guardrails, re-ranking, intent routing, date extraction, and more). Jev returns structured decisions only — no chat, no text generation. The official docs are the single source of truth; this entry is a Chinese entry point, not a copy or rewrite of their docs. AI UP LAB’s Jev page = this thin index + a growing shelf of application cases (first: coolish running Jev on Slay the Spire 2, library entry /cases/coolish-jev-sts2/).",
+      "categories": [
+        "engineering",
+        "coding",
+        "getting-started"
+      ],
+      "role": "接入速查 / Quickstart index",
+      "sourceUrl": "https://docs.typesafe.ai/introduction/quickstart",
+      "secondaryUrls": [
+        "https://docs.typesafe.ai/",
+        "https://console.typesafe.ai/",
+        "https://docs.typesafe.ai/primitives",
+        "https://docs.typesafe.ai/sdk/python",
+        "https://docs.typesafe.ai/sdk/javascript",
+        "https://docs.typesafe.ai/cookbooks",
+        "https://github.com/typesafe-ai/skills",
+        "https://typesafe.ai/",
+        "https://x.com/harrisonitsme/status/2100626136783081950"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "收录理由：Models 看板已有 /models/typesafe-jev/，但那张卡记的是「模型是什么」；这条记「怎么接」，给中文读者一页速查，顺着链接去官方 docs。边界：Jev 是早期访问，本库没有 key，所有命令、端点、模型名、问题类型均逐条抄自官方 Quick start / Primitives / SDK 页（2026-09-18 全部 200），本条未实跑 curl 或 SDK，页面上没有可点的 live demo；不写速度 / 成本 / 评测数字，那些留在模型卡并一律标「官方称」。中文入口帖是森叔（@harrisonitsme）9 月 17 日 X 帖，只作社区参考，帖内倍数与人物背景是发帖人说法，本库不采。这是一页薄索引，不是另一份竞争性教程站：官方文档改了以官方为准。「攻略」角度在本库落成应用案例架 — 收社区实测（游戏、路由、抽取……），每条标清作者称 / 本库核到，不重写官方文档。",
+      "qualityNoteEn": "Why: the Models board already has /models/typesafe-jev/, which records what the model is; this entry records how to get in — one page for Chinese readers that hands off to the official docs. Boundary: Jev is early access and this library has no key; every command, endpoint, model name, and question type is transcribed from the official Quick start / Primitives / SDK pages (all 200 on 2026-09-18). No curl or SDK run here and no live demo on this page; no speed / cost / eval figures — those stay on the model card, all labelled vendor claims. The Chinese entry post is 森叔’s (@harrisonitsme) 17 Sept X post, kept as community context only; its multiples and biographical claims are the poster’s and are not adopted. A thin index, not a competing tutorial site: when the official docs change, the official docs win. The “playbook” angle lives here as an application-case shelf — community field tests (games, routing, extraction, …), each labelled author’s claim vs checked here, never a rewrite of the official docs.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "typesafe-api",
+        "python",
+        "node"
+      ],
+      "language": "zh",
+      "featured": false,
+      "relatedModelIds": [
+        "typesafe-jev"
+      ],
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-18T01:00:00Z"
+    },
     {
       "id": "datacamp-grok-bot-skills-routines",
       "slug": "datacamp-grok-bot-tutorial-skills-routines",
