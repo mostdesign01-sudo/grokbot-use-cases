@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-16T12:40:00Z",
+    "updatedAt": "2026-09-18T00:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "count": 7
   },
   "models": [
@@ -447,7 +447,7 @@
       "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library.",
       "announcedAt": "2026-09-15",
       "publishedAt": "2026-09-16",
-      "updatedAt": "2026-09-16T12:40:00Z",
+      "updatedAt": "2026-09-18T00:50:00Z",
       "sources": [
         {
           "kind": "official",
@@ -466,12 +466,44 @@
           "date": "2026-09-15"
         },
         {
+          "kind": "official",
+          "label": "TypeSafe 官方文档（docs.typesafe.ai）",
+          "labelEn": "TypeSafe official docs (docs.typesafe.ai)",
+          "url": "https://docs.typesafe.ai/",
+          "by": "TypeSafe AI",
+          "date": "2026-09-18"
+        },
+        {
+          "kind": "official",
+          "label": "官方 Quick start：Playground / API / SDK / Agent skill",
+          "labelEn": "Official Quick start: Playground / API / SDK / agent skill",
+          "url": "https://docs.typesafe.ai/introduction/quickstart",
+          "by": "TypeSafe AI",
+          "date": "2026-09-18"
+        },
+        {
+          "kind": "official",
+          "label": "TypeSafe Console（取 API key）",
+          "labelEn": "TypeSafe Console (get an API key)",
+          "url": "https://console.typesafe.ai/",
+          "by": "TypeSafe AI",
+          "date": "2026-09-18"
+        },
+        {
           "kind": "community",
           "label": "Hacker News：Introducing System One Models and Jev",
           "labelEn": "Hacker News: Introducing System One Models and Jev",
           "url": "https://news.ycombinator.com/item?id=49717558",
           "by": "Hacker News",
           "date": "2026-09-15"
+        },
+        {
+          "kind": "community",
+          "label": "森叔 / @harrisonitsme：Jev 中文介绍 + waitlist",
+          "labelEn": "harrisonitsme: CN intro to Jev + waitlist",
+          "url": "https://x.com/harrisonitsme/status/2100626136783081950",
+          "by": "森叔 / @harrisonitsme",
+          "date": "2026-09-17"
         }
       ],
       "highlights": [
@@ -486,11 +518,29 @@
         {
           "text": "早期访问：官网 Join Waitlist；适合分类 / 路由 / 打分 / 抽取等可塞进代码的决策，不替代通用聊天或开放式写作。",
           "textEn": "Early access via the site waitlist; fits classify / route / score / extract decisions inside code — not a general chat or open-ended writing model."
+        },
+        {
+          "text": "接入（官方 Quick start 可核到）：typesafe.ai 加入 waitlist → console.typesafe.ai 取 API key → 环境变量 `TYPESAFE_API_KEY`；REST 为 `POST https://api.typesafe.ai/v1/systemone`，`model` 填 `jev-latest`，请求体是 `state` + `questions`。",
+          "textEn": "Getting in (per the official Quick start): join the waitlist at typesafe.ai → get an API key at console.typesafe.ai → set `TYPESAFE_API_KEY`; REST is `POST https://api.typesafe.ai/v1/systemone` with `model: jev-latest` and a body of `state` + `questions`."
+        },
+        {
+          "text": "SDK 与 skill（官方文档可核到）：Python `pip install typesafe-sdk`（≥3.10，客户端默认读 `TYPESAFE_API_KEY`、默认调 `jev-latest`）；JS `npm install @typesafe-ai/sdk`；编码 Agent 用 `npx skills add typesafe-ai/skills --skill typesafe-ai`（Claude Code 另有 plugin 两条命令）。",
+          "textEn": "SDKs and skill (per the official docs): Python `pip install typesafe-sdk` (≥3.10; the client reads `TYPESAFE_API_KEY` and calls `jev-latest` by default); JS `npm install @typesafe-ai/sdk`; for coding agents, `npx skills add typesafe-ai/skills --skill typesafe-ai` (Claude Code has a two-command plugin route)."
+        },
+        {
+          "text": "三种问题类型（官方文档）：Choice 从给定集合选一个并返回各选项概率 + confidence；Score 按有序等级打分；Noul 回答是 / 否的概率。一次调用可混合多问。不做聊天、不做文本生成——只出结构化决策。",
+          "textEn": "Three question types (official docs): Choice picks one option from a defined set and returns per-option probabilities + confidence; Score rates against ordered levels; Noul returns the probability of a yes/no. Several questions can go in one call. Not chat, not text generation — structured decisions only."
+        },
+        {
+          "text": "社区称（森叔 / @harrisonitsme，9 月 17 日中文帖）：把 Jev 概括为「只输出决策，不产文本」，名字取自 Jevons 悖论，并给出 waitlist 入口；帖内速度 / 成本倍数是发帖人转述，本库只以官方博文的「官方称」为准，不另记。",
+          "textEn": "Community take (森叔 / @harrisonitsme, 17 Sept Chinese post): sums Jev up as “outputs decisions only, no text,” notes the name comes from the Jevons paradox, and points to the waitlist; the speed / cost multiples in the post are the poster’s paraphrase — this library keeps only the vendor claims from the official blog post."
         }
       ],
-      "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API。三条来源 URL 于 2026-09-16 核到 200。无预览图。",
-      "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
-      "relatedCaseIds": [],
+      "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API，也没有拿到 key 跑过 curl / SDK。接入步骤（waitlist → console key → `TYPESAFE_API_KEY` → `POST /v1/systemone` + `jev-latest`、`pip install typesafe-sdk`、`npm install @typesafe-ai/sdk`、`npx skills add typesafe-ai/skills --skill typesafe-ai`、Choice / Score / Noul）逐条取自官方 docs 与 Quick start 页，本库只作转述，官方文档是唯一权威源。9/18 补入官方文档、Quick start、Console 三条 official 源与森叔中文帖一条 community 源；其中森叔帖里「ChatGPT 联合发明人」「20–200× / 40–400×」是发帖人说法，本库不采。全部来源 URL 于 2026-09-18 核到 200。中文接入速查见库内条目 /cases/jev-quickstart-zh/。无预览图。",
+      "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access — this library has not tested the API and has no key, so no curl / SDK run. The how-to steps (waitlist → console key → `TYPESAFE_API_KEY` → `POST /v1/systemone` with `jev-latest`, `pip install typesafe-sdk`, `npm install @typesafe-ai/sdk`, `npx skills add typesafe-ai/skills --skill typesafe-ai`, Choice / Score / Noul) are transcribed item by item from the official docs and Quick start; this card only restates them, and the official docs remain the single source of truth. On 9/18 added three official sources (docs, Quick start, Console) and one community source (森叔’s Chinese post); the post’s “ChatGPT co-inventor” and “20–200× / 40–400×” lines are the poster’s claims and are not adopted here. All source URLs returned 200 on 2026-09-18. Chinese quickstart index: library entry /cases/jev-quickstart-zh/. No preview image.",
+      "relatedCaseIds": [
+        "jev-quickstart-zh"
+      ],
       "relatedModelIds": [],
       "featured": true,
       "stars": 4
