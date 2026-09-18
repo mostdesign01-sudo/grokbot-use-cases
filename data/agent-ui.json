@@ -1,11 +1,45 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T01:12:00Z",
+    "updatedAt": "2026-09-18T12:31:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.17",
-    "count": 53
+    "version": "1.4.18",
+    "count": 54
   },
   "items": [
+    {
+      "id": "sylva-living-world",
+      "slug": "sylva-living-world",
+      "title": "Sylva Living World",
+      "titleEn": "Sylva Living World",
+      "summary": "ThreeUI Community：场景向程序化世界——living green 苔根生长为苔藓树冠的 Three.js 场景（免费 Living Green 变体，`SylvaLivingWorldScene`）；同页 Sakura Sunset / Maple Autumn / Sequoia Mist 三个季节变体标 PRO，本库不收录。免登录，MIT Community 包 `@designcodeio/threeui`。",
+      "summaryEn": "ThreeUI Community scene-only procedural world: living-green moss roots growing into mossy boughs (free Living Green variant, `SylvaLivingWorldScene`). The Sakura Sunset / Maple Autumn / Sequoia Mist seasonal variants on the same page are marked PRO and are not listed here. No login; MIT Community package `@designcodeio/threeui`.",
+      "sourceUrl": "https://threeui.com/three-js/sylva-living-world",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/sylva-living-world.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Sylva Living World 做自然场景背景；只用免费的 Living Green 变体，只调色相/明度，不要切换到标了 PRO 的季节变体。",
+      "promptHintEn": "Use Sylva Living World as a nature scene backdrop; stick to the free Living Green variant, only tweak hue/brightness, and do not switch to seasonal variants marked PRO.",
+      "types": [
+        "threejs",
+        "background",
+        "ui"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "procedural",
+        "nature",
+        "sylva"
+      ],
+      "featured": true,
+      "qualityNote": "community-sync-report（2026-08-31）components 含 sylva-living-world（variant living-green），不在 excludedProParents；仓库 MIT。公开页 200（2026-09-18），默认变体 Living Green 免登录可看，页头 GET PRO 为站级 CTA（Bookshelf 等 Community 页同样存在）。预览为 Playwright 实拍 Living Green 演示画布（约 40s 生长态）裁 3:2。",
+      "qualityNoteEn": "Listed in community-sync-report (2026-08-31) components as sylva-living-world (variant living-green), not in excludedProParents; repo is MIT. Public page 200 (2026-09-18); the default Living Green variant renders without login, and the header GET PRO is a site-wide CTA (also present on Community pages such as Bookshelf). Preview is a Playwright capture of the live Living Green canvas (~40s into growth) cropped to 3:2.",
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-18T12:31:00Z"
+    },
     {
       "id": "bookshelf",
       "slug": "bookshelf",
