@@ -1,11 +1,69 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T01:12:00Z",
+    "updatedAt": "2026-09-18T12:31:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.27",
-    "count": 64
+    "version": "1.3.29",
+    "count": 66
   },
   "items": [
+    {
+      "id": "greenscreen-remover",
+      "slug": "greenscreen-remover",
+      "title": "Green Screen Remover：浏览器里抠绿幕（视频/图片）",
+      "titleEn": "Green Screen Remover: in-browser chroma key for video & image",
+      "summary": "greenscreenremover.net：把绿幕/蓝幕视频或图片拖进标签页即可抠像，运算全在本地浏览器，无上传、无账号、无水印；支持常见浏览器可解码格式。Show HN item 49749795（2026-09-18）。",
+      "summaryEn": "greenscreenremover.net: drop a green/blue-screen video or image into the tab; keying runs fully in-browser with no upload, account, or watermark. Show HN item 49749795 (2026-09-18).",
+      "sourceUrl": "https://greenscreenremover.net/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49749795"
+      ],
+      "previewImage": "/previews/greenscreen-remover.webp",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "tags": [
+        "chroma-key",
+        "green-screen",
+        "browser",
+        "no-upload",
+        "show-hn"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-18）。Show HN 当日条目；免费本地工具，隐私声明清楚（不上传、免账号、无水印），与 Paper Effects 同属浏览器端媒体工具，适合本库 HTML 分区。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-18). Same-day Show HN; a free local tool with a clear privacy claim (no upload, no account, no watermark)—a browser-side media tool in the same vein as Paper Effects, a good fit for the HTML library. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-18T12:31:00Z"
+    },
+    {
+      "id": "visual-html-editor",
+      "slug": "visual-html-editor",
+      "title": "Visual HTML：保源码的 AI HTML 可视化编辑器",
+      "titleEn": "Visual HTML: source-preserving WYSIWYG for AI-generated HTML",
+      "summary": "kong75.github.io/visual-html-editor：在画布上直接改邮件/幻灯/网页内容，开源可视化 HTML 编辑器，强调源码仍由你掌控。Show HN item 49713864（2026-09-15）。",
+      "summaryEn": "kong75.github.io/visual-html-editor: edit emails/slides/web content on a canvas; open-source visual HTML editor that keeps original source under your control. Show HN item 49713864 (2026-09-15).",
+      "sourceUrl": "https://kong75.github.io/visual-html-editor/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49713864"
+      ],
+      "previewImage": "/previews/visual-html-editor.webp",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "tags": [
+        "wysiwyg",
+        "html-editor",
+        "ai-html",
+        "show-hn",
+        "open-source"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-18）。晨扫后补收的 Show HN（2026-09-15）：开源、免注册、直接在浏览器打开编辑器，对 AI 生成 HTML 的可视化修改是本库 HTML 分区的典型用法。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-18). Catch-up for a solid Show HN (2026-09-15) still missing after the morning scan: open source, no sign-up, editor opens in the browser; visually editing AI-generated HTML is a core HTML-library use. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-09-18T12:31:00Z"
+    },
     {
       "id": "papereffects-text-match-cut",
       "slug": "papereffects-text-match-cut",

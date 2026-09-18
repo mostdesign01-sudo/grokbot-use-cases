@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-18",
+      "title": "晚间收录：HTML +2、Agent UI +1",
+      "titleEn": "Evening catalog: HTML +2, Agent UI +1",
+      "body": "HTML：收 Show HN 当日条目 Green Screen Remover（item 49749795）——浏览器本地抠绿幕/蓝幕视频与图片，不上传、免账号、无水印；补收 Show HN Visual HTML（item 49713864，2026-09-15）——保源码的开源 HTML 可视化编辑器，晨扫遗漏今晚补齐。两条均配 Playwright 实拍 3:2 自托管预览。Agent UI：ThreeUI Community Sylva Living World（community-sync 确认免费；同页 Sakura / Maple / Sequoia 季节变体为 PRO，不收录）。X API 仍 403，未走 X；最新模型未新增（kbai-skill 为 BSL 许可，不入库）；今晚无新 Grok Bot 案例。",
+      "bodyEn": "HTML: added same-day Show HN Green Screen Remover (item 49749795)—in-browser chroma key for green/blue-screen video and images with no upload, account, or watermark—and caught up on Show HN Visual HTML (item 49713864, 2026-09-15), a source-preserving open-source visual HTML editor missed in the morning scan. Both ship with Playwright-captured 3:2 self-hosted previews. Agent UI: ThreeUI Community Sylva Living World (confirmed free in community-sync; the Sakura / Maple / Sequoia seasonal variants on the same page are PRO and not listed). X API still 403—X skipped; no Models addition (kbai-skill is BSL-licensed, not catalogued); no new Grok Bot case tonight."
+    },
+    {
+      "date": "2026-09-18",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
       "body": "Grok Bot：收官方 Guides《Designing Grok Bot with Grok Bot》（John Bai：Experiments / Motion God / Figma Bro），以及 bot.store Academy《Teach a task → Skill》。HTML：Show HN Paper Effects（item 49747752）浏览器文字 match cut，已配 3:2 自托管预览。Agent UI：ThreeUI Community Bookshelf（community-sync 确认免费）。X @bot API 403/client-not-enrolled，改走网页/公开源；付费 Substack（Linas）与 Medium member-only 未入库。",
