@@ -1,10 +1,15 @@
 {
   "meta": {
-    "updatedAt": "2026-09-17T01:23:00Z",
+    "updatedAt": "2026-09-18T01:12:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.23",
-    "count": 118,
+    "version": "1.4.24",
+    "count": 120,
     "sourcesCrawled": [
+      "https://threeui.com/three-js/bookshelf",
+      "https://news.ycombinator.com/item?id=49747752",
+      "https://papereffects.site",
+      "https://bot.store/academy/how-to-teach-grok-bot-a-task",
+      "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
       "https://threeui.com/ui-elements/engraved-certificate",
       "https://news.ycombinator.com/item?id=49712278",
       "https://withcapsule.app/",
@@ -99,6 +104,83 @@
     ]
   },
   "cases": [
+    {
+      "id": "designing-grok-bot-with-grok-bot",
+      "slug": "xai-designing-grok-bot-with-grok-bot",
+      "title": "官方指南：用 Grok Bot 设计 Grok Bot（Experiments / Motion God / Figma Bro）",
+      "titleEn": "Official guide: Designing Grok Bot with Grok Bot",
+      "summary": "John Bai 2026-08-24 官方 Guides：设计师用常驻 Bot 小队探索创意——Experiments 做 Notch/桌角/跟光标等 ambient 入口原型；Motion God 在真实产品动画资产上调弹簧与时序；Figma Bro 经 Figma MCP 批量填入门 Bot 肖像与工具 logo。强调更快把想法做成可试用物，判断仍留在人手。",
+      "summaryEn": "Official Aug 24, 2026 Guides piece by John Bai: a designer’s always-on Bot squad — Experiments for ambient Bot-access prototypes (notch, desktop peek, cursor companion); Motion God tuning real production animation assets by feel; Figma Bro filling onboarding Bot cards and tool logos via Figma MCP. Faster exploration; judgment stays human.",
+      "categories": [
+        "content",
+        "multi-agent",
+        "productivity",
+        "templates"
+      ],
+      "role": "Design ops playbook",
+      "sourceUrl": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides",
+        "https://x.ai/bot/VHMdjIGjGpgDSJR7dW6Gz",
+        "https://x.com/johnbai/status/2094456490115408172"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-08-24）。与新闻稿「设计文」不同篇；文内原型未全部上线，本库不当 KPI。",
+      "qualityNoteEn": "Official Guides (2026-08-24). Distinct from the Designing Grok Bot news post; prototypes described are explorations—not shipped KPIs.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "Figma/生产素材改动与对外发布保持人审；不把探索原型当已上线功能。",
+      "approvalBoundaryEn": "Keep Figma/production asset changes and external publishing human-gated; treat explorations as experiments, not shipped features.",
+      "connectors": [
+        "figma",
+        "browser",
+        "computer"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-24",
+      "updatedAt": "2026-09-18T01:12:00Z"
+    },
+    {
+      "id": "bot-store-academy-teach-a-task",
+      "slug": "bot-store-academy-teach-grok-bot-task-skill",
+      "title": "Bot Store Academy：演示教学 → 草稿 Skill → 再 Routine",
+      "titleEn": "Bot Store Academy: Teach a task → draft Skill → then Routine",
+      "summary": "bot.store Academy 免费页（2026-08-31）：对照官方 Skills/Routines，讲清 Teach a task（最多约 10 分钟可见交互、不录音频）如何变成草稿 Skill，再补决策/失败/审批后 Test run，最后才挂 Routine。给出适合/不适合首教的任务清单（收发票字段、改名报告 ✅；发客户信、花钱、删生产 ❌）。",
+      "summaryEn": "Free bot.store Academy page (2026-08-31): maps Teach a task (≤~10 min visible interaction, no mic) to a draft Skill, then decision/failure/approval rules, Test run, and only then a Routine. Includes good vs poor first-teach examples (invoice fields/rename report ✅; customer send/spend/delete prod ❌).",
+      "categories": [
+        "getting-started",
+        "skills",
+        "automation"
+      ],
+      "role": "Workflow Coach tutorial",
+      "sourceUrl": "https://bot.store/academy/how-to-teach-grok-bot-a-task",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://docs.x.ai/grok-bot/faq"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "第三方免费学院页（公开 200，2026-09-18）。作者称已对照官方 Skills/Routines 与 FAQ；控制项是否对本账号开放以现网为准。",
+      "qualityNoteEn": "Third-party free Academy page (public 200, 2026-09-18). Author says it was checked against official Skills/Routines + FAQ; Teach control availability depends on live account entitlements.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "外发、付费、删除与生产变更保持审批；演示中不暴露密钥。",
+      "approvalBoundaryEn": "Keep outbound, payments, deletes, and production changes approval-gated; no secrets in the demonstration.",
+      "connectors": [
+        "browser",
+        "computer"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-08-31",
+      "updatedAt": "2026-09-18T01:12:00Z"
+    },
     {
       "id": "datacamp-grok-bot-skills-routines",
       "slug": "datacamp-grok-bot-tutorial-skills-routines",

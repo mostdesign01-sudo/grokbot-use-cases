@@ -1,11 +1,45 @@
 {
   "meta": {
-    "updatedAt": "2026-09-17T01:23:00Z",
+    "updatedAt": "2026-09-18T01:12:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.16",
-    "count": 52
+    "version": "1.4.17",
+    "count": 53
   },
   "items": [
+    {
+      "id": "bookshelf",
+      "slug": "bookshelf",
+      "title": "Bookshelf",
+      "titleEn": "Bookshelf",
+      "summary": "ThreeUI Community：七册书架场景——房间、旋转书架、封面箔印、翻页与检视。免登录，MIT Community 包 `@designcodeio/threeui` 可装。",
+      "summaryEn": "ThreeUI Community seven-volume bookshelf scene with authored room, carousel shelf, foil covers, inspection, opening, and page-turn. No login; MIT Community package `@designcodeio/threeui`.",
+      "sourceUrl": "https://threeui.com/three-js/bookshelf",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/bookshelf.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Bookshelf 做作品集/阅读清单墙。保持 Community 免费件，只改书名与主色。",
+      "promptHintEn": "Use Bookshelf for portfolio/reading-list walls. Keep the free Community piece; only change titles and primary color.",
+      "types": [
+        "ui",
+        "component",
+        "threejs"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "bookshelf",
+        "threejs",
+        "carousel"
+      ],
+      "featured": false,
+      "qualityNote": "community-sync-report 含 bookshelf（Community 免费）。公开页 200（2026-09-18）；预览取官方缩略图裁 3:2。",
+      "qualityNoteEn": "Listed in community-sync-report as bookshelf (Community/free). Public page 200 (2026-09-18); preview is the official thumbnail cropped to 3:2.",
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-18T01:12:00Z"
+    },
     {
       "id": "engraved-certificate",
       "slug": "engraved-certificate",

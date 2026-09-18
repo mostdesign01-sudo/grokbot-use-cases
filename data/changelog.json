@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-18",
+      "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
+      "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
+      "body": "Grok Bot：收官方 Guides《Designing Grok Bot with Grok Bot》（John Bai：Experiments / Motion God / Figma Bro），以及 bot.store Academy《Teach a task → Skill》。HTML：Show HN Paper Effects（item 49747752）浏览器文字 match cut，已配 3:2 自托管预览。Agent UI：ThreeUI Community Bookshelf（community-sync 确认免费）。X @bot API 403/client-not-enrolled，改走网页/公开源；付费 Substack（Linas）与 Medium member-only 未入库。",
+      "bodyEn": "Grok Bot: added official Guides “Designing Grok Bot with Grok Bot” (John Bai: Experiments / Motion God / Figma Bro) and bot.store Academy “Teach a task → Skill”. HTML: Show HN Paper Effects (item 49747752) in-browser text match cuts, with a 3:2 self-hosted preview. Agent UI: ThreeUI Community Bookshelf (confirmed free in community-sync). X @bot API returned 403/client-not-enrolled—used web/public sources; paid Substack (Linas) and Medium member-only were not catalogued."
+    },
+    {
       "date": "2026-09-17",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
