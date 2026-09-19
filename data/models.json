@@ -1,11 +1,92 @@
 {
   "meta": {
-    "updatedAt": "2026-09-16T12:40:00Z",
+    "updatedAt": "2026-09-19T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.4",
-    "count": 7
+    "version": "1.1.5",
+    "count": 8
   },
   "models": [
+    {
+      "id": "laya-system-one",
+      "slug": "laya-system-one",
+      "name": "Laya",
+      "vendor": "ConvAI Innovations",
+      "title": "Laya：开源 System 1 决策引擎（对照 Jev）",
+      "titleEn": "Laya: open-source System 1 decision engine (Jev-adjacent)",
+      "summary": "作者称 Laya 是非自回归、亚 35ms 的开源 System 1 决策模型族（Apache 2.0 权重），提供 choice / score / noul 三类结构化决策与多语路由；对照站内已收录的 TypeSafe Jev。基准、延迟、与 Jev 对比数字一律标「作者称 / 第三方整理」，本库未复跑。HN 讨论：https://news.ycombinator.com/item?id=49765348（2026-09-19）。",
+      "summaryEn": "Author presents Laya as an open-weight non-autoregressive System 1 decision family (Apache 2.0) with choice/score/noul primitives and multilingual routing; sits next to catalogued TypeSafe Jev. Latency/benchmark/Jev-comparison figures are author or third-party claims — not re-run here. HN: item 49765348 (2026-09-19).",
+      "announcedAt": "2026-09-19",
+      "publishedAt": "2026-09-19",
+      "updatedAt": "2026-09-19T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "HF 模型 hub：convaiinnovations/laya",
+          "labelEn": "HF model hub: convaiinnovations/laya",
+          "url": "https://huggingface.co/convaiinnovations/laya",
+          "by": "ConvAI Innovations",
+          "date": "2026-09-19"
+        },
+        {
+          "kind": "product",
+          "label": "Laya 作者长文页（laya.convaiinnovations.com）",
+          "labelEn": "Laya author long-form page (laya.convaiinnovations.com)",
+          "url": "https://laya.convaiinnovations.com/",
+          "by": "Nandakishor Mukkunnoth / ConvAI Innovations",
+          "date": "2026-09-19"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Laya the open source version of Jev",
+          "labelEn": "Hacker News: Laya the open source version of Jev",
+          "url": "https://news.ycombinator.com/item?id=49765348",
+          "by": "Hacker News",
+          "date": "2026-09-19"
+        },
+        {
+          "kind": "community",
+          "label": "GitHub 仓库：NandhaKishorM/laya",
+          "labelEn": "GitHub repo: NandhaKishorM/laya",
+          "url": "https://github.com/NandhaKishorM/laya",
+          "by": "NandhaKishorM"
+        },
+        {
+          "kind": "product",
+          "label": "HF Space 演示：convaiinnovations/laya-demo",
+          "labelEn": "HF Space demo: convaiinnovations/laya-demo",
+          "url": "https://huggingface.co/spaces/convaiinnovations/laya-demo",
+          "by": "ConvAI Innovations"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者称：非自回归、基于双向编码器的 System 1 决策模型，单次前向对任意状态（文本、邮件、工单、JSON）输出结构化决策与校准概率，不生成文本。",
+          "textEn": "Author claim: a non-autoregressive System 1 decision model built on bidirectional encoders; one forward pass over any state (text, email, ticket, JSON) returns structured decisions with calibrated probabilities — no text generation."
+        },
+        {
+          "text": "作者称：三类原语 — choice（从候选字典选一项，返回选项、分布与置信度）、score（按序数评分表定级）、noul（布尔问题，返回校准的 P(true)）。",
+          "textEn": "Author claim: three primitives — choice (pick one key from a criteria dictionary, with distribution and confidence), score (place the state on an ordinal rubric), and noul (a boolean question returning calibrated P(true))."
+        },
+        {
+          "text": "作者称：单 GPU 约 32.8ms（亚 35ms），多语路由覆盖 100+ 语言，权重 Apache 2.0 开源、可自托管；页面自述「6–8 倍快于 Jev」及多项对比表数字，本库未复跑。",
+          "textEn": "Author claim: about 32.8ms on a single GPU (sub-35ms), multilingual routing across 100+ languages, Apache 2.0 open weights, self-hostable; the page’s “6–8× faster than Jev” and comparison-table figures are author claims not re-run here."
+        },
+        {
+          "text": "作者自述局限：choice 选项超过 20 个时表现下降；开箱基础模型在 typed-decisions 基准上接近随机，公布分数来自在基准训练集上微调后的结果（作者原文如此）。",
+          "textEn": "Author-stated limits: choice degrades beyond ~20 options; out-of-the-box base models score near random on the typed-decisions benchmark, and the published score comes after fine-tuning on that benchmark’s train split (per the author)."
+        }
+      ],
+      "qualityNote": "收录理由：与站内 TypeSafe Jev 同类的 System One / 非自回归结构化决策模型，但权重开源（HF 模型页 2026-09-19 核到 license: apache-2.0），HN 当日有讨论，适合 Models 看板对照阅读。核实边界：作者长文对「谁先提出」与 TypeSafe Jev 存在争议，本库不站队、只记双方公开页可达；延迟、基准、与 Jev 的对比表数字全部为作者自述或作者引用的第三方整理（AbdelStark、nibzard 等），本库未复跑，亦未实测 pip 包或 HF Space。五条来源 URL（HF 模型页、作者长文页、HN、GitHub 仓库、HF Space）于 2026-09-19 均核到 200。预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "typesafe-jev"
+      ],
+      "previewImage": "/previews/laya-system-one.webp",
+      "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
+      "previewCreditEn": "Preview: Playwright capture of laya.convaiinnovations.com above the fold",
+      "featured": true
+    },
     {
       "id": "deepseek-v4-1-flash",
       "slug": "deepseek-v4-1-flash",
@@ -447,7 +528,7 @@
       "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library.",
       "announcedAt": "2026-09-15",
       "publishedAt": "2026-09-16",
-      "updatedAt": "2026-09-16T12:40:00Z",
+      "updatedAt": "2026-09-19T12:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -491,7 +572,9 @@
       "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API。三条来源 URL 于 2026-09-16 核到 200。无预览图。",
       "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
       "relatedCaseIds": [],
-      "relatedModelIds": [],
+      "relatedModelIds": [
+        "laya-system-one"
+      ],
       "featured": true,
       "stars": 4
     }
