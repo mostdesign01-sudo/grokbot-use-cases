@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-19",
+      "title": "晚间收录：HTML +2、Models +1",
+      "titleEn": "Evening catalog: HTML +2, Models +1",
+      "body": "HTML：收 Show HN 当日条目 Mineral Gems（item 49759144）——浏览器程序化生成矿物宝石的纯前端互动页（gems.0x0000007a.com）；补收 Show HN Page Rage（item 49746963，2026-09-18）——免费「砸网页」小游戏（page-rage.com）：预制页面模式无需安装、任意浏览器可玩，砸任意网页需装浏览器扩展（扩展不在收录范围）；条目在 9/18 白天、晨扫与昨晚波次均未入库，今晚补齐。两条均配 Playwright 实拍 3:2 自托管预览，types 按 schema 枚举取 interactive / other。最新模型：新开 /models/laya-system-one/ —— ConvAI Innovations 的 Laya，作者称为非自回归、亚 35ms 的开源 System 1 决策模型族（HF 模型页核到 Apache 2.0），提供 choice / score / noul 三类结构化决策与多语路由，对照站内已收录的 TypeSafe Jev（两卡已互设 relatedModelIds）；延迟、基准与 Jev 对比数字一律标「作者称 / 第三方整理」，本库未复跑，作者与 Jev 的「谁先提出」争议不站队。官方源为 HF hub，产品源为作者长文页与 HF Space，社区源为 HN（item 49765348）与 GitHub 仓库，五条 URL 均核到 200；预览为 Playwright 实拍作者页首屏。html-items 66→68（1.3.30），models 7→8（1.1.5）。Agent UI：今晚无已核实的新免费 ThreeUI，未新增；Grok Bot：今晚无新案例；X API 仍不可用，未走 X。",
+      "bodyEn": "HTML: added same-day Show HN Mineral Gems (item 49759144) — a client-side interactive page that procedurally generates mineral gems in the browser (gems.0x0000007a.com) — and caught up on Show HN Page Rage (item 49746963, 2026-09-18), a free “smash the page” browser game (page-rage.com) whose pre-made-pages mode needs no install and runs in any browser, while smashing arbitrary pages requires a browser extension (out of scope here); it landed daytime 9/18 and was missed by both the morning scan and last night’s wave. Both ship with Playwright-captured 3:2 self-hosted previews; types use the schema enums interactive / other. Models: new card /models/laya-system-one/ — Laya from ConvAI Innovations, which the author presents as an open-weight non-autoregressive sub-35ms System 1 decision family (HF model page shows Apache 2.0) with choice / score / noul primitives and multilingual routing, catalogued alongside TypeSafe Jev (both cards now cross-link via relatedModelIds); all latency, benchmark, and Jev-comparison figures are labelled author or third-party claims — not re-run here — and this library takes no side in the author-vs-Jev “who was first” dispute. Official source is the HF hub; product sources are the author’s long-form page and the HF Space; community sources are HN (item 49765348) and the GitHub repo; all five URLs returned 200. Preview is a Playwright capture of the author page above the fold. html-items 66→68 (1.3.30), models 7→8 (1.1.5). Agent UI: no verified new free ThreeUI tonight, nothing added; Grok Bot: no new case tonight; X API still unavailable — X skipped."
+    },
+    {
       "date": "2026-09-18",
       "title": "晚间收录：HTML +2、Agent UI +1",
       "titleEn": "Evening catalog: HTML +2, Agent UI +1",
