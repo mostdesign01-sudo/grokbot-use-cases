@@ -1,11 +1,68 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T12:31:00Z",
+    "updatedAt": "2026-09-19T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.29",
-    "count": 66
+    "version": "1.3.30",
+    "count": 68
   },
   "items": [
+    {
+      "id": "mineral-gems",
+      "slug": "mineral-gems",
+      "title": "Mineral Gems：程序化矿物宝石",
+      "titleEn": "Mineral Gems: procedurally generated mineral gems",
+      "summary": "Show HN（item 49759144，2026-09-19）浏览器程序化生成矿物宝石演示：https://gems.0x0000007a.com/ — 公开页已核实 200；纯前端互动页。",
+      "summaryEn": "Show HN item 49759144 (2026-09-19) browser demo of procedurally generated mineral gems at https://gems.0x0000007a.com/ — public page verified HTTP 200; client-side interactive demo.",
+      "sourceUrl": "https://gems.0x0000007a.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49759144"
+      ],
+      "previewImage": "/previews/mineral-gems.webp",
+      "types": [
+        "interactive",
+        "other"
+      ],
+      "tags": [
+        "procedural",
+        "gems",
+        "webgl-or-canvas",
+        "show-hn",
+        "browser"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-19）。Show HN 当日条目（HN 标题「Procedurally Generated Mineral Gems」）：浏览器内程序化生成矿物宝石，无需安装、直接打开即玩，是本库 HTML 分区偏好的纯前端生成式互动页。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-19). Same-day Show HN (HN title “Procedurally Generated Mineral Gems”): procedurally generated mineral gems rendered in the browser, no install, open and play — the kind of client-side generative interactive page the HTML library favors. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-19",
+      "updatedAt": "2026-09-19T12:20:00Z"
+    },
+    {
+      "id": "page-rage",
+      "slug": "page-rage",
+      "title": "Page Rage：在浏览器里砸烂任意网页",
+      "titleEn": "Page Rage: smash any web page in the browser",
+      "summary": "Show HN（item 49746963，2026-09-18）page-rage.com — 免费「砸网页」小游戏：页面自述「Break pre-made pages」模式无需安装、任意浏览器可玩（/rageit）；「Break any page」砸任意网页则需装 Chrome / Firefox / Edge 扩展（Safari 标「soon」）。公开页 200。晨扫后晚间补收（条目在 9/18 白天，晚间波次仍未入库）。",
+      "summaryEn": "Show HN item 49746963 (2026-09-18) page-rage.com — free destroy-the-page game: the page’s “Break pre-made pages” mode needs no install and runs in any browser (/rageit); “Break any page” requires the Chrome / Firefox / Edge extension (Safari marked “soon”). Public page HTTP 200. Landed daytime 9/18; evening wave catch-up.",
+      "sourceUrl": "https://page-rage.com/",
+      "secondaryUrls": [
+        "https://page-rage.com/rageit",
+        "https://news.ycombinator.com/item?id=49746963"
+      ],
+      "previewImage": "/previews/page-rage.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "game",
+        "browser",
+        "show-hn",
+        "destructive-fun"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-19，/rageit 亦 200）。Show HN 补收（HN 标题「Free game to destroy any web page」，2026-09-18）：本库只收其浏览器内可直接玩的部分——页面自述「Break pre-made pages：No installation. Any browser.」；「砸任意网页」依赖浏览器扩展，扩展本身不在本库收录范围，本库亦未安装测试。属于 HTML 分区的「游戏/互动」类型。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-19; /rageit also 200). Show HN catch-up (HN title “Free game to destroy any web page”, 2026-09-18): catalogued for the part that runs directly in the browser — the page’s own “Break pre-made pages: No installation. Any browser.” mode. Smashing arbitrary pages depends on a browser extension, which is outside this library’s scope and was not installed or tested here. An “interactive” type for the HTML library. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-18",
+      "updatedAt": "2026-09-19T12:20:00Z"
+    },
     {
       "id": "greenscreen-remover",
       "slug": "greenscreen-remover",
