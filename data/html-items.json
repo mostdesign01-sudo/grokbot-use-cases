@@ -1,11 +1,71 @@
 {
   "meta": {
-    "updatedAt": "2026-09-19T12:20:00Z",
+    "updatedAt": "2026-09-20T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.30",
-    "count": 68
+    "version": "1.3.31",
+    "count": 70
   },
   "items": [
+    {
+      "id": "ai-event-posters",
+      "slug": "ai-event-posters",
+      "title": "AI 活动海报：别让生成图难看",
+      "titleEn": "AI-generated posters don’t have to be horrible",
+      "summary": "John Hartnup 的实操长文（2026-06-07）：从 Facebook 上那批千篇一律的 AI 村集海报出发，用同一份虚构活动信息让 ChatGPT 反复出图——先要求「避开粉彩 / 喷绘 / 人像」，再让它自选完全不同的设计方向，并把 Bauhaus、Swiss Style、Risograph、Matisse 剪纸等风格名整理成可直接抄的提示词菜单；结论是 AI 海报难看在于默认模板重复，而不是模型做不到。HN item 49764791 于 2026-09-20 冲到约 1600+ 分。",
+      "summaryEn": "John Hartnup’s hands-on essay (2026-06-07): starting from the now-infamous batch of identikit AI village-fayre posters on Facebook, he feeds ChatGPT the same invented event details and iterates — first “avoid pastel / airbrush / people,” then asking it to pick a completely different aesthetic — and ends up with a copyable menu of named styles (Bauhaus, Swiss Style, Risograph, Matisse cut-paper, …). Takeaway: AI posters look bad because the default template repeats, not because the model can’t do better. HN item 49764791 hit ~1,600+ points on 2026-09-20.",
+      "sourceUrl": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49764791"
+      ],
+      "previewImage": "/previews/ai-event-posters.webp",
+      "types": [
+        "docs",
+        "other"
+      ],
+      "tags": [
+        "ai-poster",
+        "design",
+        "html",
+        "show-hn-adjacent",
+        "generative"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-20）。HN 当日热帖（标题「AI-generated posters don’t have to be horrible」，item 49764791，非 Show HN，故标 show-hn-adjacent）：一篇静态 HTML 长文，逐轮贴出提示词与生成图，风格清单可直接拿去改自己的活动海报，是本库 HTML 分区里少见的「设计方法 + 可抄提示词」文档页。文章日期 2026-06-07，本库按原文日期记 publishedAt。文内图片为作者用 ChatGPT 生成，本库未复跑提示词；HN 分数为当晚快照。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-20). Same-day HN front-page hit (“AI-generated posters don’t have to be horrible”, item 49764791 — not a Show HN, hence the show-hn-adjacent tag): a static HTML essay that shows each prompt round next to its generated poster, with a style list you can lift straight into your own event poster — a rare “design method + copyable prompts” docs page for the HTML library. Article dated 2026-06-07; publishedAt follows the article date. Images are the author’s ChatGPT outputs; prompts not re-run here; the HN score is tonight’s snapshot. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-06-07",
+      "updatedAt": "2026-09-20T12:20:00Z"
+    },
+    {
+      "id": "sparse-snn-demo",
+      "slug": "sparse-snn-demo",
+      "title": "Sparse-SNN：浏览器里的类脑脉冲网络",
+      "titleEn": "Sparse-SNN: connectome-inspired spiking network in the browser",
+      "summary": "AwareLiquid 的 HF Space 静态演示：在画板上手写数字（MNIST）或选 Fashion 模式，由一个 5% 连接密度、LIF 神经元、掩码取自果蝇连接组统计的稀疏脉冲神经网络在浏览器内识别（ONNX Runtime Web，纯客户端）。页面自述每帧只有约 8% 神经元发放、每次脉冲是加法而非乘加，并给出「约 112× 估算节能」；同页「Honest boundaries」标明是研究产物、与稠密 MLP 有 1.5 / 0.5 分差距、能耗为解析估算非实测。Show HN item 49770006。",
+      "summaryEn": "AwareLiquid’s static HF Space demo: draw a digit (MNIST) or switch to Fashion mode and a sparse spiking neural network — 5% connection density, LIF neurons, masks drawn from Drosophila connectome statistics — classifies it in the browser via ONNX Runtime Web, fully client-side. The page says only ~8% of neurons spike per frame, each spike is an add rather than a multiply-accumulate, and claims a “~112× estimated energy saving”; its own “Honest boundaries” block calls it a research artifact with a 1.5 / 0.5-point gap to a dense MLP and analytic (not measured) energy figures. Show HN item 49770006.",
+      "sourceUrl": "https://awareliquid-sparse-snn-demo.static.hf.space/index.html",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49770006",
+        "https://huggingface.co/AwareLiquid/Sparse-SNN",
+        "https://github.com/AwareLiquid/human-brain-simulation"
+      ],
+      "previewImage": "/previews/sparse-snn-demo.webp",
+      "types": [
+        "interactive",
+        "other"
+      ],
+      "tags": [
+        "snn",
+        "spiking",
+        "browser",
+        "hf-space",
+        "interactive"
+      ],
+      "featured": false,
+      "qualityNote": "公开页 200（2026-09-20）。Show HN 条目（HN 标题「Connectome-inspired spiking network you can try in the browser」，item 49770006，发帖 2026-09-19 UTC 晚、北京时间 9/20 凌晨，当晚分数不高）：无需安装、打开即画即测的纯前端互动页，模型通过 ONNX Runtime Web 在本地跑。「5% 密度」「约 8% 发放」「约 112× 节能」均为页面自述，本库未复跑、亦未核实 HF 模型仓与 GitHub 仓库内容，只列为次要来源。页面自己写明是研究产物而非产品，本库照录。视觉上偏工具面板，不进精选。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-20). Show HN (“Connectome-inspired spiking network you can try in the browser”, item 49770006, posted late 2026-09-19 UTC / early 9/20 Beijing time, low score tonight): a no-install draw-and-classify client-side interactive page with the model running locally via ONNX Runtime Web. The “5% density”, “~8% firing”, and “~112× energy saving” figures are the page’s own claims — not re-run here; the HF model repo and GitHub repo were not inspected and are listed only as secondary sources. The page itself says research artifact, not production; recorded as such. Visually a tool panel rather than a showpiece, so not featured. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-20",
+      "updatedAt": "2026-09-20T12:20:00Z"
+    },
     {
       "id": "mineral-gems",
       "slug": "mineral-gems",
