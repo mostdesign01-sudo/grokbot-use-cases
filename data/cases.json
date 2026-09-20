@@ -1,10 +1,18 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T01:12:00Z",
+    "updatedAt": "2026-09-20T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.24",
-    "count": 120,
+    "version": "1.4.25",
+    "count": 121,
     "sourcesCrawled": [
+      "https://www.pen.dev/",
+      "https://www.pen.dev/downloads",
+      "https://www.pen.dev/pricing",
+      "https://docs.pen.dev/design-and-code/design-to-code",
+      "https://docs.pen.dev/getting-started/ai-integration",
+      "https://docs.pen.dev/core-concepts/import-and-export",
+      "https://x.com/AYi_AInotes/status/2101155021450576341",
+      "https://x.com/tomkrcha/status/2100570466692071493",
       "https://threeui.com/three-js/bookshelf",
       "https://news.ycombinator.com/item?id=49747752",
       "https://papereffects.site",
@@ -4371,6 +4379,49 @@
       "previewImage": "/previews/mobile-mcp.webp",
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T16:20:00Z"
+    },
+    {
+      "id": "pen-dev",
+      "slug": "pen-dev",
+      "title": "pen.dev：Agentic Canvas 智能体画布",
+      "titleEn": "pen.dev: agentic design canvas",
+      "summary": "pen.dev（原 pencil.dev，High Agency Inc.）自述为「面向大胆软件项目的智能体画布」：不从空白开始——用内置浏览器或 Chrome 扩展把任意网页 / 网页应用（含 localhost）导入画布成可编辑图层，也可导入 .fig 文件或从 Figma 直接复制粘贴；在画布上手动微调，或让画布内 agent 直接改设计，可选 Claude / OpenAI / Grok / Gemini 等模型，也能通过 MCP 接 Claude Code、Codex、Cursor 等外部 agent，或用 CLI 无头设计；最后把任意画框一键导出为 HTML + CSS / Tailwind，或按官方文档「Design ↔ Code」流程让 agent 把改动同步回同一工作区里的代码。自定义 WebGL 渲染管线，.pen 是公开 schema 的 JSON 文件；桌面端 macOS / Windows / Linux，另有 Cursor / VS Code / Antigravity / Windsurf 扩展。",
+      "summaryEn": "pen.dev (formerly pencil.dev, by High Agency Inc.) calls itself “an agentic canvas for building bold software.” Never start from scratch: import any web page or web app (including localhost) as editable layers via the built-in browser or Chrome extension, or bring in .fig files / copy-paste from Figma; refine by hand on the canvas or let the on-canvas agent edit the design with Claude, OpenAI, Grok, Gemini and other models, connect external agents such as Claude Code, Codex, or Cursor over MCP, or design headlessly with the CLI; then export any frame to HTML + CSS / Tailwind in one click, or follow the official “Design ↔ Code” flow and ask the agent to apply changes back to the code in the same workspace. Custom WebGL pipeline; .pen is a JSON file with an open schema; desktop app for macOS / Windows / Linux plus Cursor / VS Code / Antigravity / Windsurf extensions.",
+      "categories": [
+        "engineering",
+        "coding"
+      ],
+      "role": "Agentic design canvas (design ↔ code)",
+      "sourceUrl": "https://www.pen.dev/",
+      "secondaryUrls": [
+        "https://x.com/AYi_AInotes/status/2101155021450576341",
+        "https://x.com/tomkrcha/status/2100570466692071493",
+        "https://docs.pen.dev/design-and-code/design-to-code",
+        "https://docs.pen.dev/getting-started/ai-integration",
+        "https://www.pen.dev/downloads"
+      ],
+      "sourceType": "community",
+      "qualityNote": "由 @AYi_AInotes（AYi）2026-09-19 中文帖带来，属社区安利，引用 Tom Krcha 2026-09-17 的发布视频帖；主源为 pen.dev 官网与 docs.pen.dev，2026-09-20 核到 200。官网原话：「Design with agents, refine every detail on canvas, and ship it back to code」，本条按官方措辞写；tip 里的「回写本地代码库」在文档中对应的是「让 agent 把改动应用回代码」的 agent 工作流与 HTML 导出，文档未写 git push，本库不作此表述。「前 Adobe XD 联合缔造者、连卖两家公司」为 tip 作者说法，官网 / 文档无 About 页可核，此处不当事实写。Pricing 页当日写「currently free，未来可能推付费」；网页导入为桌面端功能，导入图层不保留原页 JavaScript 交互（官方文档写明）。桌面端下载、扩展、CLI（npm install -g @pen.dev/cli）与 Agent skill 在 Downloads 页核到，本库未装机试用；不记点赞 / 转发等互动数。与站内 HTML 库 Visual HTML 编辑器相邻，可对照。非 xAI / Grok Bot 官方件。",
+      "qualityNoteEn": "Surfaced by @AYi_AInotes (AYi)’s Chinese post on 2026-09-19 — a community hype tip quoting Tom Krcha’s 2026-09-17 launch video post; primary sources are the pen.dev site and docs.pen.dev, both returned 200 on 2026-09-20. The site’s own line is “Design with agents, refine every detail on canvas, and ship it back to code,” and this card follows that wording; the tip’s “writes back to your local codebase” maps in the docs to an agent workflow (“ask AI to apply changes back to code”) plus HTML export — the docs do not describe a git push, so we don’t claim one. “Former Adobe XD co-creator who sold two companies” is the tip author’s claim; there is no About page on the site or docs to verify it, so it is not stated as fact here. The Pricing page said “currently free, paid plans may come” that day; web-page import is a desktop-app feature and imported layers do not keep the page’s JavaScript (per the docs). Desktop downloads, extensions, the CLI (npm install -g @pen.dev/cli) and the agent skill are listed on the Downloads page; we did not install or test them. No likes / repost counts recorded. Sits next to the Visual HTML editor in our HTML library for comparison. Not an xAI / Grok Bot first-party piece.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "导入登录态页面前先检查隐私内容；让 agent 把设计改动应用回代码库、改动 globals.css 等设计令牌文件前人审并走版本控制。",
+      "approvalBoundaryEn": "Check for private content before importing a signed-in page; human review and version control before letting the agent apply design changes back to the codebase or rewrite token files such as globals.css.",
+      "connectors": [
+        "mcp",
+        "figma",
+        "cursor",
+        "claude-code",
+        "chrome"
+      ],
+      "language": "zh",
+      "featured": true,
+      "previewImage": "/previews/pen-dev.webp",
+      "publishedAt": "2026-09-19",
+      "updatedAt": "2026-09-20T01:30:00Z"
     }
   ]
 }
