@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-20",
+      "title": "Cases +1：pen.dev 智能体画布（设计相邻 tip）",
+      "titleEn": "Cases +1: pen.dev agentic canvas (design-adjacent tip)",
+      "body": "Cases：新开 /cases/pen-dev/ —— 由 @AYi_AInotes（AYi）2026-09-19 中文帖带来的设计相邻工具 tip，帖内引用 Tom Krcha 2026-09-17 的发布视频帖。pen.dev（原 pencil.dev，High Agency Inc.）自述「An agentic canvas for building bold software」：内置浏览器 / Chrome 扩展把任意网页导入画布成可编辑图层、.fig 导入、画布内 agent 多模型、MCP 接 Claude Code / Codex / Cursor、CLI 无头设计、一键 HTML + CSS / Tailwind 导出、.pen 开放 JSON 格式、WebGL 管线。官网与 docs.pen.dev 2026-09-20 核到 200，摘要按官方措辞写；tip 的「回写本地代码库」按文档改写为「让 agent 把改动应用回代码」+ HTML 导出，不写 git push；「前 Adobe XD 联合缔造者」为 tip 作者说法，官网无 About 页可核，不当事实写；桌面端 / 扩展 / CLI 本库未装机试用；不记互动数。预览取发布视频封面帧裁 3:2 自托管。分类按 schema 取 engineering / coding，与 HTML 库 Visual HTML 编辑器相邻。cases 120→121（1.4.25）。HTML / Agent UI / Models：本轮无新增。",
+      "bodyEn": "Cases: new card /cases/pen-dev/ — a design-adjacent tool tip surfaced by @AYi_AInotes (AYi)’s Chinese post on 2026-09-19, which quotes Tom Krcha’s 2026-09-17 launch video post. pen.dev (formerly pencil.dev, High Agency Inc.) describes itself as “An agentic canvas for building bold software”: import any web page as editable layers via the built-in browser / Chrome extension, .fig import, on-canvas multi-model agent, MCP for Claude Code / Codex / Cursor, headless CLI, one-click HTML + CSS / Tailwind export, open .pen JSON format, WebGL pipeline. Site and docs.pen.dev returned 200 on 2026-09-20 and the summary follows official wording; the tip’s “writes back to your local codebase” is rephrased per the docs as “ask the agent to apply changes back to code” plus HTML export, with no git-push claim; “former Adobe XD co-creator” is the tip author’s claim — no About page on the site to verify, so not stated as fact; desktop app / extensions / CLI were not installed or tested here; no engagement counts recorded. Preview is the launch-video poster frame cropped to 3:2 and self-hosted. Categories follow the schema (engineering / coding); sits next to the Visual HTML editor in the HTML library. cases 120→121 (1.4.25). HTML / Agent UI / Models: no additions this round."
+    },
+    {
       "date": "2026-09-19",
       "title": "晚间收录：HTML +2、Models +1",
       "titleEn": "Evening catalog: HTML +2, Models +1",
