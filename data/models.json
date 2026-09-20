@@ -1,11 +1,92 @@
 {
   "meta": {
-    "updatedAt": "2026-09-19T12:20:00Z",
+    "updatedAt": "2026-09-20T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.5",
-    "count": 8
+    "version": "1.1.6",
+    "count": 9
   },
   "models": [
+    {
+      "id": "step-5-preview",
+      "slug": "step-5-preview",
+      "name": "Step 5 Preview",
+      "vendor": "StepFun",
+      "title": "Step 5 Preview（阶跃星辰 StepFun）",
+      "titleEn": "Step 5 Preview (StepFun)",
+      "summary": "阶跃星辰 2026-09-20 发布的新旗舰，官方定位「面向 agentic 工作」：软件工程、Agent 任务、专业知识工作，尤其强调金融。官方称稀疏 MoE、600B 总参数 / 每 token 27B 活跃、1M 上下文、原生图像输入；当日经产品与 API 开放，开源权重定档 2026-10-15。第三方榜：Artificial Analysis Intelligence Index 44（AA 榜单数据，非本库复跑）。注意：Hugging Face 上的 stepfun-ai/Step-5-Preview-BF16 今晚返回 401 / 仅占位，权重尚不可下载。HN 讨论：item 49772532。",
+      "summaryEn": "StepFun’s new flagship, announced 2026-09-20 and pitched by the vendor as a model “for agentic work”: software engineering, agentic tasks, professional knowledge work, with particular emphasis on finance. Vendor claims: sparse MoE with 600B total / 27B active parameters per token, a 1M-token context window, and native image input; available the same day via StepFun’s products and API, with open weights scheduled for 2026-10-15. Third-party board: Artificial Analysis Intelligence Index 44 (AA’s figure, not re-run here). Note: the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 / a placeholder tonight — weights are not downloadable yet. HN: item 49772532.",
+      "announcedAt": "2026-09-20",
+      "publishedAt": "2026-09-20",
+      "updatedAt": "2026-09-20T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "阶跃星辰官方页：Step 5 Preview — Advancing the Pareto Frontier",
+          "labelEn": "StepFun official page: Step 5 Preview — Advancing the Pareto Frontier",
+          "url": "https://www.stepfun.com/step-5-preview",
+          "by": "StepFun",
+          "date": "2026-09-20"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：Step 5 Preview 智能 / 速度 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: Step 5 Preview intelligence / speed / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/step-5",
+          "by": "Artificial Analysis",
+          "date": "2026-09-20"
+        },
+        {
+          "kind": "community",
+          "label": "OrcaRouter 博文：Step 5 Preview 实际交付了什么、权重仓为何还是占位",
+          "labelEn": "OrcaRouter blog: what Step 5 Preview actually ships, and why the weights repo is still a placeholder",
+          "url": "https://www.orcarouter.ai/blog/step-5-preview-open-weights",
+          "by": "OrcaRouter (Gideon Frost)",
+          "date": "2026-09-20"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Step 5 Preview: Advancing the Pareto Frontier",
+          "labelEn": "Hacker News: Step 5 Preview: Advancing the Pareto Frontier",
+          "url": "https://news.ycombinator.com/item?id=49772532",
+          "by": "Hacker News",
+          "date": "2026-09-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：面向 agentic 工作的新旗舰，稀疏 Mixture-of-Experts，600B 总参数、每 token 27B 活跃；支持 1M token 上下文与视觉输入；在软件工程、Agent 任务、专业知识工作与金融上「表现强劲」。",
+          "textEn": "Vendor claim: a new flagship for agentic work built on a sparse Mixture-of-Experts — 600B total parameters with 27B active per token; 1M-token context and vision input; “performs strongly” across software engineering, agentic tasks, professional knowledge work, and finance."
+        },
+        {
+          "text": "官方称：官方页列出对照 GPT-6 Astra / Claude Opus 5 / Claude Fable 5.1 / GLM-5.3 / Kimi K3 的基准表（DeepSWE v1.1 67.7、Terminal-Bench v4 33.3、GPQA Diamond 93.5%、FrontierFinance 66.4 等），多数项目排在 GPT-6 Astra 与 Claude Opus 5 之后；带 † 的 StepCodeBench / FinStepBench 为其内部基准。本库未复跑任何一项。",
+          "textEn": "Vendor claim: the official page tabulates results against GPT-6 Astra / Claude Opus 5 / Claude Fable 5.1 / GLM-5.3 / Kimi K3 (e.g. DeepSWE v1.1 67.7, Terminal-Bench v4 33.3, GPQA Diamond 93.5%, FrontierFinance 66.4), landing behind GPT-6 Astra and Claude Opus 5 on most rows; the †-marked StepCodeBench / FinStepBench are StepFun’s in-house benchmarks. None re-run here."
+        },
+        {
+          "text": "第三方榜（Artificial Analysis，非官方、非本库）：Intelligence Index 44（AA 页面当晚显示排名 #24 / 200），输出约 99.8 tok/s，标价 $1.00 / 百万输入 token、$2.70 / 百万输出 token、缓存折扣 95%；AA 把该模型日期记为 2026-09-18，比官方公告早两天。定价以阶跃星辰 API 平台当日页为准，官方公告页本身未列价。",
+          "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): Intelligence Index 44 (ranked #24 / 200 on the AA page tonight), ~99.8 output tok/s, listed at $1.00 per 1M input tokens / $2.70 per 1M output tokens with a 95% cache discount; AA dates the model 2026-09-18, two days before the vendor announcement. Treat pricing per StepFun’s API platform page on the day — the announcement page itself lists no prices."
+        },
+        {
+          "text": "官方称：「Step 5 Preview 今天起可通过我们的产品与 API 使用，模型将于 10 月 15 日以开源权重发布」。截至今晚，Hugging Face 的 stepfun-ai/Step-5-Preview-BF16 仓库对本库返回 401；OrcaRouter 博文称该仓库只有一个 .gitattributes、无权重 / 许可 / 模型卡。开源日期是厂商排期，不是已发生的事实。",
+          "textEn": "Vendor claim: “Step 5 Preview is available today through our products and API. The model will be released with open weights on October 15.” As of tonight the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 to this library; the OrcaRouter post says it holds a single .gitattributes with no weights, license, or model card. The open-weights date is a vendor schedule, not a shipped artifact."
+        },
+        {
+          "text": "官方页 demo 自述（未核实）：Room Planner 从卧室照片生成可编辑 3D 房间；Blender + Three.js 做 3D 资产与网页游戏；24 小时自动后训练把 Qwen3-30B-A3B 的 AIME24 从 53.3% 提到 60%；无专门优化下玩 Pokémon 超 3,000 回合、6M token。均为厂商展示，本库未复现。",
+          "textEn": "Official-page demos, as described by the vendor (unverified): a Room Planner that turns a bedroom photo into an editable 3D room; Blender + Three.js for 3D assets and browser games; a 24-hour automated post-training run lifting Qwen3-30B-A3B’s AIME24 from 53.3% to 60%; a Pokémon run past 3,000 turns / 6M tokens without game-specific tuning. All vendor showcases, not reproduced here."
+        }
+      ],
+      "qualityNote": "收录理由：9/20 当日发布的中国厂商前沿旗舰，官方页信息完整（架构、上下文、基准表、可用性与开源排期），HN 与第三方榜同日有据可查，是今晚 Models 看板的头条卡。核实边界：参数量、上下文、基准分、开源日期一律为官方自述（取自 stepfun.com/step-5-preview 页面原文），本库未复跑任何基准；Intelligence Index 44、tok/s、$1 / $2.70 定价与 95% 缓存折扣来自 Artificial Analysis 第三方榜（官方公告页未列价，定价以阶跃 API 平台当日页为准）；OrcaRouter 博文是第三方产品博客，只作「权重仓为占位」这一事实的旁证，不为其路由产品背书。四条来源 URL（官方页、AA、OrcaRouter、HN item 49772532）于 2026-09-20 均核到 200；Hugging Face 仓库 stepfun-ai/Step-5-Preview-BF16 返回 401 / 空仓，故不列为来源——权重尚不可下载，10-15 为厂商排期。本库未实测 API 与 Studio。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（信息齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: a Chinese lab’s frontier flagship launched today (9/20) with a complete official page (architecture, context, benchmark table, availability, open-weights schedule), plus same-day HN and third-party-board coverage — tonight’s headline card on the Models board. Boundary: parameter counts, context window, benchmark scores, and the open-weights date are all vendor claims quoted from stepfun.com/step-5-preview; no benchmark was re-run here. Intelligence Index 44, tok/s, the $1 / $2.70 pricing, and the 95% cache discount come from the Artificial Analysis third-party board (the announcement page lists no prices; treat pricing per StepFun’s API platform page on the day). The OrcaRouter post is a third-party product blog, cited only as corroboration that the weights repo is a placeholder — no endorsement of its routing product. All four source URLs (official page, AA, OrcaRouter, HN item 49772532) returned 200 on 2026-09-20; the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 / empty and is therefore not listed as a source — weights are not downloadable yet, and 10-15 is a vendor schedule. API and Studio were not tested here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete info, clear boundaries) — not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra",
+        "claude-fable-5-1"
+      ],
+      "previewImage": "/previews/step-5-preview.webp",
+      "previewCredit": "预览：Playwright 实拍 stepfun.com/step-5-preview 首屏",
+      "previewCreditEn": "Preview: Playwright capture of stepfun.com/step-5-preview above the fold",
+      "featured": true,
+      "stars": 4
+    },
     {
       "id": "laya-system-one",
       "slug": "laya-system-one",
@@ -178,7 +259,7 @@
       "summaryEn": "OpenAI’s frontier model, announced 2026-09-03. Official pitch: computer use, browsing, software engineering, cybersecurity, science, and professional work; in ChatGPT, Sites builds and hosts websites, web apps, and games from one prompt; API name gpt-6-astra. Community side: on 8 Sept YouWare posted that it sorted 720+ community Astra builds (game prototypes, 3D worlds, product UIs, motion, sims), prompts included to replay on YouWare.",
       "announcedAt": "2026-09-03",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-13T08:30:00Z",
+      "updatedAt": "2026-09-20T12:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -256,7 +337,8 @@
       "relatedModelIds": [
         "astra-mini-lol",
         "astra-tripo-3d-prompts",
-        "astra-openai-showcase"
+        "astra-openai-showcase",
+        "step-5-preview"
       ],
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
@@ -478,7 +560,7 @@
       "summaryEn": "Anthropic’s Sept 2026 launch of Claude Fable 5.1 (generally available) and Mythos 5.1 (trusted access) — same underlying model, different safeguard levels. Pitch is coding, knowledge work, and long-running / agentic tasks, plus early research demos. Already catalogued as AI news in the Grok Bot library; this is the board card, full copy lives on that entry.",
       "announcedAt": "2026-09-01",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-08T15:10:00Z",
+      "updatedAt": "2026-09-20T12:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -511,6 +593,9 @@
       "qualityNoteEn": "Primary source is Anthropic’s post; the X video is the official trailer on the same post. Benchmarks, binder hit rates, Venus map accuracy, and savings figures are Anthropic’s claims — unverified here. Full listing note and metadata live on the same-named AI-news entry in the Grok Bot library; this card does not repeat the copy.",
       "relatedCaseIds": [
         "claude-fable-5-1"
+      ],
+      "relatedModelIds": [
+        "step-5-preview"
       ],
       "previewImage": "/previews/claude-fable-5-1.webp",
       "previewCredit": "预览：Anthropic 官方 X 视频封面",
