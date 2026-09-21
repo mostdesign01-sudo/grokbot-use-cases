@@ -1,11 +1,72 @@
 {
   "meta": {
-    "updatedAt": "2026-09-21T01:20:00Z",
+    "updatedAt": "2026-09-21T12:24:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.32",
-    "count": 71
+    "version": "1.3.33",
+    "count": 73
   },
   "items": [
+    {
+      "id": "geojson-viewer",
+      "slug": "geojson-viewer",
+      "title": "GeoJSON Viewer：粘贴校验并画地图",
+      "titleEn": "GeoJSON Viewer: paste, validate, and draw on a map",
+      "summary": "Show HN（item 49784845，2026-09-21）https://9revolution9.com/tools/geo/geojson-viewer — 浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验（闭合环、右手定则、经纬范围、声明 bbox 是否包住数据），错误不画图、警告仍可画；公开页已核实 HTTP 200；解析/校验/渲染均本地，不上传。",
+      "summaryEn": "Show HN item 49784845 (2026-09-21) at https://9revolution9.com/tools/geo/geojson-viewer — paste GeoJSON in-browser and validate against RFC 7946 (closed rings, right-hand rule, lon/lat ranges, declared bbox containment); errors clear the map, warnings still draw; public page verified HTTP 200; parse/validate/render stay local with no upload.",
+      "sourceUrl": "https://9revolution9.com/tools/geo/geojson-viewer",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49784845"
+      ],
+      "previewImage": "/previews/geojson-viewer.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "geojson",
+        "map",
+        "rfc7946",
+        "validator",
+        "show-hn",
+        "browser",
+        "no-upload"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-21）。Show HN 当日条目（item 49784845）：浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验；解析/校验/渲染均本地、不上传，是本库 HTML 分区可用的免费 GIS/开发工具。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-21). Same-day Show HN (item 49784845): paste GeoJSON in-browser and validate against RFC 7946; parse/validate/render stay local with no upload — a useful free GIS/dev tool for the HTML board. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-21",
+      "updatedAt": "2026-09-21T12:24:00Z"
+    },
+    {
+      "id": "gsb-revenue-trivia",
+      "slug": "gsb-revenue-trivia",
+      "title": "GSB：按营收排金银铜的商业 trivia",
+      "titleEn": "GSB: rank four companies by revenue (Gold Silver Bronze)",
+      "summary": "Show HN（item 49785777，2026-09-21）https://playgsb.com/ — 浏览器商业 trivia：读当年标题，把 4 家公司按单年营收从高到低排成金/银/铜，3 次机会；站点自述免费、周一/三/五出新题、可查 archive；公开页已核实 HTTP 200。",
+      "summaryEn": "Show HN item 49785777 (2026-09-21) at https://playgsb.com/ — browser business trivia: read period headlines and rank four companies by single-year revenue Gold→Silver→Bronze with three tries; site says free, new puzzles Mon/Wed/Fri, archive available; public page verified HTTP 200.",
+      "sourceUrl": "https://playgsb.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49785777"
+      ],
+      "previewImage": "/previews/gsb-revenue-trivia.webp",
+      "types": [
+        "interactive",
+        "other"
+      ],
+      "tags": [
+        "trivia",
+        "business",
+        "revenue",
+        "show-hn",
+        "browser",
+        "free"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-21）。Show HN 当日晚间补收（item 49785777）：纯浏览器商业 trivia 小游戏，站点自述免费。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-21). Evening catch of same-day Show HN (item 49785777): a pure browser business trivia game; the site says it is free to play. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-21",
+      "updatedAt": "2026-09-21T12:24:00Z"
+    },
     {
       "id": "ai-event-posters",
       "slug": "ai-event-posters",
