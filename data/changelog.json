@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-21",
+      "title": "补录：Tello 条加东京社区实测旁证（@xiaoming_xxx）",
+      "titleEn": "Addendum: Tello card — Tokyo community confirmation (@xiaoming_xxx)",
+      "body": "不新开条目。已有 /cases/tello-us-esim-roaming/ 补社区旁证：小明同学（@xiaoming_xxx）9/20 帖「听 X 友说能开启 Tello 漫游了，人在东京实测，居然真可行！」，作东京现场 tip-only 成功自述，AI UP LAB 未核实、未复测。帖内引用 eSIMuse（@esimuse）提示：这次欧洲活动用欧洲节点打开漫游；活动结束 2026-09-30，结束后漫游能否继续、会否大规模杀号均不确定；保了好几年的老号不建议试，新号可以试——以上只写入收录理由，标引用 tip，不是本站核验。主源仍是拓跋鼠（@qwerty__cs）长帖；公开来源加上上述两条 X 帖。预览仍用主源三张截图拼 3:2，未换东京手机截图。cases 条数仍 121（1.4.25→1.4.26）。不进 Models / HTML。",
+      "bodyEn": "No new card. Existing /cases/tello-us-esim-roaming/ gains a community corroboration: 小明同学 (@xiaoming_xxx), 9/20 — “heard from X friends that Tello roaming can be enabled; real test in Tokyo — it actually worked,” recorded as Tokyo tip-only success, not verified or re-tested by AI UP LAB. The post quotes eSIMuse (@esimuse): a European promo / EU node unlocked roaming; the promo ends 2026-09-30; whether roaming still works after that, or whether there will be mass number bans, is uncertain; do not risk long-kept old numbers; new numbers are OK to try — written into the quality note as quoted tip only, not verified here. Primary source remains 拓跋鼠 (@qwerty__cs). Public sources add those two X posts. Preview stays the original three-screenshot 3:2 composite; the Tokyo phone screenshot was not swapped in. cases count still 121 (1.4.25→1.4.26). Not filed under Models / HTML."
+    },
+    {
+      "date": "2026-09-21",
       "title": "收录：Grok Bot +1（Tello 美国 eSIM 社区实操）",
       "titleEn": "Catalog: Grok Bot +1 (Tello US eSIM community how-to)",
       "body": "Grok Bot 库新增旁路工具笔记 /cases/tello-us-esim-roaming/ —— 拓跋鼠（@qwerty__cs）9/20 的中文长帖：Tello 美国 eSIM 买 300 分钟 / 5 美元套餐（含税约 10 美元，Apple Pay / Google Pay / PayPal），设 PIN、扫码加 eSIM；挂英国 / 欧洲 VPN 用注册时同一 911 地址开 Wi-Fi Calling，再开 International Roaming + Pay As You Go Data（先充 20 美元让余额 >5），作者称中国移动漫游信号出现且不改手机定位。步骤与价格全部是作者自述与三张截图，本站未购买未测试，标「社区实操」不是背书；VPN + Wi-Fi Calling + 漫游组合可能触及 Tello 条款或当地法规，条目内有风险提示。作者注册链接带 `?_referral=P3JJZ43C` 推荐码，本站只列干净 tello.com（未登录抓取 403，仅作官网指引）。与 Saily 美国号一条互设 relatedCaseIds，为此 cases schema 新增可选 `relatedCaseIds`（构建时校验必须解析、不能指自己），详情页「相关」区块优先展示显式姊妹条。预览为作者三张截图拼 3:2。cases 120→121（1.4.25）。不进 Models / HTML。",

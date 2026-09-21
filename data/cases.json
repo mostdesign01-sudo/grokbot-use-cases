@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-21T00:40:00Z",
+    "updatedAt": "2026-09-21T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.25",
+    "version": "1.4.26",
     "count": 121,
     "sourcesCrawled": [
       "https://threeui.com/three-js/bookshelf",
@@ -102,7 +102,9 @@
       "https://github.com/kunchenguid/grok-ship",
       "https://github.com/RongleCat/awesome-grok-bot",
       "https://x.com/qwerty__cs/status/2101557696290054390",
-      "https://tello.com"
+      "https://tello.com",
+      "https://x.com/xiaoming_xxx/status/2101590794528575947",
+      "https://x.com/esimuse/status/2101557925395284357"
     ]
   },
   "cases": [
@@ -4382,8 +4384,8 @@
       "slug": "tello-us-esim-roaming",
       "title": "工具：Tello 美国 eSIM — 开 Wi-Fi Calling 与国际漫游（社区实操）",
       "titleEn": "Tool tip: Tello US eSIM — Wi-Fi Calling + roaming (community how-to)",
-      "summary": "拓跋鼠（@qwerty__cs）2026-09-20 帖，一条 Tello（美国 MVNO）eSIM 的中文实操。作者步骤：官网注册，买 300 分钟 / 5 美元套餐（含税约 10 美元），选 eSIM，填一个非商业的美国地址（后面 911 要用）；Apple Pay / Google Pay / PayPal 都能付；收邮件后回 My SIM 设 4 位 PIN，扫二维码把 eSIM 加进手机。第二步挂英国 VPN（作者称欧洲 VPN 或流量卡理论上也行）启动这张卡，开 Wi-Fi Calling，填注册时同一个 911 地址，打通一个计费电话十几秒挂断；再到 My settings 开 International Roaming——此时还不能用，要先 Add Pay As You Go Credit 充 20 美元（余额需 >5 美元）再开 Pay As You Go Data；eSIM 飞行模式开关一次，作者称中国移动漫游信号出现，全程不改手机定位。作者截图里 Tello 短信给的中国漫游价：$0.05/分、$0.01/条、$0.01/MB。与库内 Saily 美国号一条是姊妹条。本条是旁路工具笔记，不是 Grok Bot 用法，也不构成购买推荐。",
-      "summaryEn": "Post by 拓跋鼠 (@qwerty__cs), 2026-09-20: a Chinese how-to for Tello (US MVNO) eSIM. The author’s steps: register on the site, buy the 300-min / $5 plan (about $10 with tax), pick eSIM, enter a non-business US address (needed later for 911); Apple Pay / Google Pay / PayPal all work; after the email, go back to My SIM, set a 4-digit PIN, and scan the QR code to add the eSIM. Step two: on a UK VPN (the author says an EU VPN or a data SIM should also work in theory), activate the line, turn on Wi-Fi Calling with the same 911 address used at signup, and place one billed call for ten-odd seconds; then enable International Roaming under My settings — it does not work yet — first Add Pay As You Go Credit ($20 top-up, balance must be > $5), then turn on Pay As You Go Data; toggle airplane mode on the eSIM once and, per the author, a China Mobile roaming signal appears without changing the phone’s location. The Tello SMS in the author’s screenshot lists China roaming at $0.05/min, $0.01/SMS, $0.01/MB. Sibling of the Saily US-number note in this library. An adjacent tool note — not a Grok Bot playbook and not a purchase recommendation.",
+      "summary": "拓跋鼠（@qwerty__cs）2026-09-20 帖，一条 Tello（美国 MVNO）eSIM 的中文实操。作者步骤：官网注册，买 300 分钟 / 5 美元套餐（含税约 10 美元），选 eSIM，填一个非商业的美国地址（后面 911 要用）；Apple Pay / Google Pay / PayPal 都能付；收邮件后回 My SIM 设 4 位 PIN，扫二维码把 eSIM 加进手机。第二步挂英国 VPN（作者称欧洲 VPN 或流量卡理论上也行）启动这张卡，开 Wi-Fi Calling，填注册时同一个 911 地址，打通一个计费电话十几秒挂断；再到 My settings 开 International Roaming——此时还不能用，要先 Add Pay As You Go Credit 充 20 美元（余额需 >5 美元）再开 Pay As You Go Data；eSIM 飞行模式开关一次，作者称中国移动漫游信号出现，全程不改手机定位。作者截图里 Tello 短信给的中国漫游价：$0.05/分、$0.01/条、$0.01/MB。社区旁证：小明同学（@xiaoming_xxx）同日帖称听 X 友说能开 Tello 漫游、人在东京实测可行。与库内 Saily 美国号一条是姊妹条。本条是旁路工具笔记，不是 Grok Bot 用法，也不构成购买推荐。",
+      "summaryEn": "Post by 拓跋鼠 (@qwerty__cs), 2026-09-20: a Chinese how-to for Tello (US MVNO) eSIM. The author’s steps: register on the site, buy the 300-min / $5 plan (about $10 with tax), pick eSIM, enter a non-business US address (needed later for 911); Apple Pay / Google Pay / PayPal all work; after the email, go back to My SIM, set a 4-digit PIN, and scan the QR code to add the eSIM. Step two: on a UK VPN (the author says an EU VPN or a data SIM should also work in theory), activate the line, turn on Wi-Fi Calling with the same 911 address used at signup, and place one billed call for ten-odd seconds; then enable International Roaming under My settings — it does not work yet — first Add Pay As You Go Credit ($20 top-up, balance must be > $5), then turn on Pay As You Go Data; toggle airplane mode on the eSIM once and, per the author, a China Mobile roaming signal appears without changing the phone’s location. The Tello SMS in the author’s screenshot lists China roaming at $0.05/min, $0.01/SMS, $0.01/MB. Community corroboration: 小明同学 (@xiaoming_xxx) posted the same day that they heard on X Tello roaming could be enabled, and a real test in Tokyo worked. Sibling of the Saily US-number note in this library. An adjacent tool note — not a Grok Bot playbook and not a purchase recommendation.",
       "categories": [
         "research",
         "daily-digest"
@@ -4392,11 +4394,13 @@
       "sourceUrl": "https://x.com/qwerty__cs/status/2101557696290054390",
       "secondaryUrls": [
         "https://tello.com",
-        "https://tello.com/account/register"
+        "https://tello.com/account/register",
+        "https://x.com/xiaoming_xxx/status/2101590794528575947",
+        "https://x.com/esimuse/status/2101557925395284357"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "主源是作者 9 月 20 日 X 帖（长文 + 三张手机截图：Tello 800 号短信「Welcome to China」与漫游价、My settings 里 Pay As You Go Data / International Roaming 开关、Add Pay As You Go Credit 充值页）。步骤、价格（5 美元套餐、含税约 10 美元、充 20 美元）、「余额 >5」门槛、中国移动漫游信号，全部是作者自述与作者截图，本站未购买、未测试、不担保可复现。作者帖里的注册链接带推荐参数 `?_referral=P3JJZ43C`，属作者推广码；本站只列干净的 tello.com 与 /account/register。tello.com 本站未登录抓取返回 403（疑为反爬），只作官网指引，未核页面内容。风险提示：挂 VPN 激活 Wi-Fi Calling、用美国地址填 911、再开国际漫游的组合，可能触及 Tello 服务条款或所在地法规，也可能被运营商停号，请自行判断。收录理由：AI 注册与远程工作会用到的 eSIM / 漫游类实用工具可入库，标「社区实操」，不是背书；本条是旁路工具笔记，不是 Grok Bot 案例。与 Saily 美国号一条互设 relatedCaseIds。预览图为作者三张截图拼成 3:2。不打星。",
-      "qualityNoteEn": "Primary source is the author’s 20 Sept X post (long text + three phone screenshots: the Tello “800” SMS with “Welcome to China” and roaming rates, the My settings toggles for Pay As You Go Data / International Roaming, and the Add Pay As You Go Credit page). The steps, prices ($5 plan, ~$10 with tax, $20 top-up), the “balance > $5” threshold, and the China Mobile roaming signal are all the author’s claims and screenshots — not purchased, tested, or guaranteed reproducible by this site. The signup link in the post carries a referral parameter `?_referral=P3JJZ43C` (the author’s referral code); this site lists only the clean tello.com and /account/register URLs. tello.com returned 403 to this site’s logged-out fetch (likely bot protection), so it is listed as the official site only; page content not verified. Risk note: combining a VPN to activate Wi-Fi Calling, a US address for 911, and then international roaming may touch Tello’s terms of service or local rules, and the carrier could suspend the line — judge for yourself. Listing rationale: eSIM / roaming utilities useful for AI signups and remote work may be catalogued, labelled “community how-to”, not an endorsement; this is an adjacent tool note, not a Grok Bot case. Cross-linked with the Saily US-number note via relatedCaseIds. Preview is the author’s three screenshots composited to 3:2. Unrated.",
+      "qualityNote": "主源是作者 9 月 20 日 X 帖（长文 + 三张手机截图：Tello 800 号短信「Welcome to China」与漫游价、My settings 里 Pay As You Go Data / International Roaming 开关、Add Pay As You Go Credit 充值页）。步骤、价格（5 美元套餐、含税约 10 美元、充 20 美元）、「余额 >5」门槛、中国移动漫游信号，全部是作者自述与作者截图，本站未购买、未测试、不担保可复现。作者帖里的注册链接带推荐参数 `?_referral=P3JJZ43C`，属作者推广码；本站只列干净的 tello.com 与 /account/register。tello.com 本站未登录抓取返回 403（疑为反爬），只作官网指引，未核页面内容。风险提示：挂 VPN 激活 Wi-Fi Calling、用美国地址填 911、再开国际漫游的组合，可能触及 Tello 服务条款或所在地法规，也可能被运营商停号，请自行判断。2026-09-21 补录社区旁证：小明同学（@xiaoming_xxx）同日帖「听 X 友说能开启 Tello 漫游了，人在东京实测，居然真可行！」，属东京 tip-only 成功自述，AI UP LAB 未核实、未复测。帖内引用 eSIMuse（@esimuse）提示：这次是欧洲活动、有人用欧洲节点打开漫游；活动结束日期 2026-09-30，结束后漫游还能不能用不确定，会不会大规模杀号也不确定；保了好几年的老号不建议这么操作，新开的号想试可以试。以上均为引用 tip，不是本站核验。收录理由：AI 注册与远程工作会用到的 eSIM / 漫游类实用工具可入库，标「社区实操」，不是背书；本条是旁路工具笔记，不是 Grok Bot 案例。与 Saily 美国号一条互设 relatedCaseIds。预览图仍为作者三张截图拼成 3:2，未换东京手机截图。不打星。",
+      "qualityNoteEn": "Primary source is the author’s 20 Sept X post (long text + three phone screenshots: the Tello “800” SMS with “Welcome to China” and roaming rates, the My settings toggles for Pay As You Go Data / International Roaming, and the Add Pay As You Go Credit page). The steps, prices ($5 plan, ~$10 with tax, $20 top-up), the “balance > $5” threshold, and the China Mobile roaming signal are all the author’s claims and screenshots — not purchased, tested, or guaranteed reproducible by this site. The signup link in the post carries a referral parameter `?_referral=P3JJZ43C` (the author’s referral code); this site lists only the clean tello.com and /account/register URLs. tello.com returned 403 to this site’s logged-out fetch (likely bot protection), so it is listed as the official site only; page content not verified. Risk note: combining a VPN to activate Wi-Fi Calling, a US address for 911, and then international roaming may touch Tello’s terms of service or local rules, and the carrier could suspend the line — judge for yourself. 2026-09-21 addendum — community corroboration: 小明同学 (@xiaoming_xxx) posted the same day, “heard from X friends that Tello roaming can be enabled; real test in Tokyo — it actually worked.” Tokyo tip-only success, not verified or re-tested by AI UP LAB. The post quotes eSIMuse (@esimuse): a European promo was used (EU node) to unlock roaming; the promo ends 2026-09-30; it is uncertain whether roaming still works after that or whether there will be mass number bans; do not risk long-kept old numbers; new numbers are OK to try. All of that is quoted tip-only, not verified here. Listing rationale: eSIM / roaming utilities useful for AI signups and remote work may be catalogued, labelled “community how-to”, not an endorsement; this is an adjacent tool note, not a Grok Bot case. Cross-linked with the Saily US-number note via relatedCaseIds. Preview stays the original three-screenshot 3:2 composite; the Tokyo phone screenshot was not swapped in. Unrated.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -4414,7 +4418,7 @@
         "saily-us-number-esim"
       ],
       "publishedAt": "2026-09-20",
-      "updatedAt": "2026-09-21T00:40:00Z"
+      "updatedAt": "2026-09-21T01:20:00Z"
     }
   ]
 }
