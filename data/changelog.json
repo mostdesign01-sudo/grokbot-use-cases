@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-21",
+      "title": "补录：HTML +1（女菩萨 X 博主画廊，Pages.dev 归档 UI）",
+      "titleEn": "Catch-up: HTML +1 (女菩萨 X creator gallery, a Pages.dev archive UI)",
+      "body": "HTML：薄收 /html/nv-pu-sa-gallery/ —— nv-pu-sa.pages.dev「女菩萨 · X 博主精选画廊」，部署在 Cloudflare Pages 的 X 博主归档画廊：搜索、今日精选 Spotlight、热度 / 蓝标 / 粉丝档位筛选、三种视图、「随机探索」抽卡弹窗、Light / OLED 主题，卡片外跳 X，另有登录墙后的 /admin 同步控制台。入口是 @10086110x（sero）9/20 的帖子，帖内只有链接与两张手机截图，属转发提示，站点作者未核实。题材为娱乐 / 创作者发现，与本库品牌契合度薄，只作 Pages.dev 静态归档 / 策展库界面参考，不进精选、不评星，不是 AI 工具或 Agent UI；归档 493 / 展示 474 位为站内当日自报，本库未复计，技术栈不做推断。首页 9/21 核到 200；预览为 Playwright 实拍 3:2，博主卡片与 Spotlight 已模糊。html-items 70→71（1.3.32）。其余库今晚无变动。",
+      "bodyEn": "HTML: thin-catalogued /html/nv-pu-sa-gallery/ — nv-pu-sa.pages.dev “女菩萨 · X 博主精选画廊”, an X creator archive gallery on Cloudflare Pages: search, a daily Spotlight card, heat / verified / follower-tier filters, three view modes, a “random explore” card-draw modal, light / OLED themes, cards linking out to X, plus a login-gated /admin sync console. Entry point is @10086110x (sero)’s 9/20 post, which carries only the link and two phone screenshots — a tip-only repost; the site author is unverified. Subject matter is entertainment / creator discovery, so brand fit is thin: kept only as a Pages.dev static archive / curation-vault UI reference, not featured, no stars, and not an AI tool or agent UI; the 493 archived / 474 shown figures are the site’s own same-day numbers, not re-counted, and no tech-stack inference is made. Homepage returned 200 on 9/21; preview is a Playwright 3:2 capture with creator cards and the Spotlight blurred. html-items 70→71 (1.3.32). No changes to the other libraries tonight."
+    },
+    {
       "date": "2026-09-20",
       "title": "晚间收录：HTML +2、Models +1（Step 5 Preview）",
       "titleEn": "Evening catalog: HTML +2, Models +1 (Step 5 Preview)",

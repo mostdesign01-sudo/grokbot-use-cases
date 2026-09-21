@@ -1,11 +1,41 @@
 {
   "meta": {
-    "updatedAt": "2026-09-20T12:20:00Z",
+    "updatedAt": "2026-09-21T00:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.31",
-    "count": 70
+    "version": "1.3.32",
+    "count": 71
   },
   "items": [
+    {
+      "id": "nv-pu-sa-gallery",
+      "slug": "nv-pu-sa-gallery",
+      "title": "女菩萨 · X 博主精选画廊：Pages.dev 静态归档画廊",
+      "titleEn": "女菩萨 · X Creator Gallery: a Pages.dev static archive UI",
+      "summary": "部署在 Cloudflare Pages 的 X（Twitter）博主归档画廊：顶栏搜索（/ 聚焦）、今日精选 Spotlight、按热度 / 蓝标 / 粉丝档位筛选、Grid / Compact / List 三种视图、「随机探索」抽卡弹窗、Light / OLED 主题；卡片只放头像、简介与「访问 X」外链。另有登录墙后的 /admin 控制台，页面自述用于同步关注列表。",
+      "summaryEn": "An X (Twitter) creator archive gallery on Cloudflare Pages: header search (/ to focus), a daily Spotlight card, filters by heat / verified / follower tier, grid / compact / list views, a “random explore” card-draw modal, and light / OLED themes; cards carry avatar, bio, and an outbound “visit X” link only. A login-gated /admin console, per the page’s own copy, syncs the follow list.",
+      "types": [
+        "landing",
+        "tool"
+      ],
+      "sourceUrl": "https://nv-pu-sa.pages.dev",
+      "secondaryUrls": [
+        "https://x.com/10086110x/status/2101579200998080945"
+      ],
+      "previewImage": "/previews/nv-pu-sa-gallery.webp",
+      "featured": false,
+      "publishedAt": "2026-09-20",
+      "updatedAt": "2026-09-21T00:40:00Z",
+      "qualityNote": "题材为娱乐 / 创作者发现（「女菩萨」品牌名，所列博主多为娱乐向创作者账号，含成人向），与 AI UP LAB 品牌契合度薄；本条只作 Pages.dev 静态归档 / 策展库（curation vault）界面参考收录，不进精选、不评星。不是 AI 工具、模型或 Agent UI。入口是 @10086110x（sero）2026-09-20 的帖子「这是哪个神人制作的网页」：帖内只有站点链接与两张手机截图，无作者说明，属转发提示，站点作者未核实（站内策展人署名 Wet Dream Boy，链到 x.com/TianZe68356）。所有描述以公开页面所见为准：首页 2026-09-21 核到 200；页面自述「仅为社交网络公开资料的技术性归档与索引系统，不存储、不分发任何第三方多媒体资源」，点击外跳 X；归档 493 / 蓝标 32% / 展示 474 位为当日站内自报数字，本库未复计；/admin 有登录墙，本条不展开，技术栈不做推断。预览为 Playwright 实拍首屏裁 3:2 WebP，博主卡片与 Spotlight 已做模糊处理。",
+      "qualityNoteEn": "Subject matter is entertainment / creator discovery (the “女菩萨” branding; most listed accounts are entertainment creators, some adult-leaning), so brand fit for AI UP LAB is thin — kept only as a Pages.dev static archive / curation-vault UI reference; not featured, no stars. Not an AI tool, model, or agent UI. Entry point is @10086110x (sero)’s 2026-09-20 post (“who made this page”): it carries only the site link and two phone screenshots, no author statement — a tip-only repost, and the site author is unverified (the on-page curator credit reads Wet Dream Boy, linking to x.com/TianZe68356). Everything here follows what the public page shows: homepage returned 200 on 2026-09-21; the page describes itself as “a technical archive and index of public social profiles that stores and distributes no third-party media”, with clicks going out to X; the 493 archived / 32% verified / 474 shown figures are the site’s own same-day numbers, not re-counted; /admin is login-gated and is not covered here, and no tech-stack inference is made. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP, with creator cards and the Spotlight blurred.",
+      "tags": [
+        "html",
+        "pages-dev",
+        "gallery",
+        "curation",
+        "x-twitter",
+        "directory"
+      ]
+    },
     {
       "id": "ai-event-posters",
       "slug": "ai-event-posters",
