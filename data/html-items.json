@@ -1,11 +1,42 @@
 {
   "meta": {
-    "updatedAt": "2026-09-20T12:20:00Z",
+    "updatedAt": "2026-09-21T00:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.31",
-    "count": 70
+    "version": "1.3.32",
+    "count": 71
   },
   "items": [
+    {
+      "id": "keyline-icons",
+      "slug": "keyline-icons",
+      "title": "Keyline Icons：面向 shadcn/ui 的免费图标集",
+      "titleEn": "Keyline Icons: free shadcn/ui icon set",
+      "summary": "keylineicons.com：面向 shadcn/ui 的免费图标浏览站。首页与仓库自述同一 24×24 网格上的 1,000 枚图标，四种样式（stroke / two-tone / duotone / fill），圆角与尖角各一套，共 8,000 个 SVG；可在浏览器复制 SVG/JSX，或安装 @keyline-icons/react。作者 Zafar Ismatullaev（@iszafar92）2026-09-20 帖写「1,000 × 4 variants × 2 shapes = 8,000」「MIT licensed. No attribution.」。条数未逐文件复计；协议以仓库 LICENSE 为准（标准 MIT），帖内「无需署名」未写成事实。",
+      "summaryEn": "keylineicons.com: a free icon browse-and-copy site drawn for shadcn/ui. The homepage and repo describe 1,000 icons on one 24×24 grid, four styles (stroke / two-tone / duotone / fill), each cut rounded and sharp — 8,000 SVGs; copy SVG/JSX in the browser or install @keyline-icons/react. Zafar Ismatullaev’s (@iszafar92) 2026-09-20 post says “1,000 × 4 variants × 2 shapes = 8,000” and “MIT licensed. No attribution.” Counts were not re-counted file-by-file; the grant is the repo LICENSE (standard MIT). The post’s “no attribution” line is not stated as fact here.",
+      "sourceUrl": "https://keylineicons.com/",
+      "secondaryUrls": [
+        "https://github.com/keyline-icons/keyline-icons",
+        "https://x.com/iszafar92/status/2101694745680425431"
+      ],
+      "previewImage": "/previews/keyline-icons.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "icons",
+        "design",
+        "mit",
+        "free",
+        "svg",
+        "shadcn"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-21）；仓库 github.com/keyline-icons/keyline-icons 同日 200，GitHub 标 MIT、约 97 star（当日核）。首页写「1,000 icons… 4 weights… rounded or sharp… 8,000 files」「Free under the MIT License」；FAQ 写 LICENSE 文件才是授权文本。仓库 LICENSE 为标准 MIT（Copyright (c) 2026 Keyline Icons），含须保留版权与许可声明的条款。来源帖写「No attribution」，首页 / FAQ / LICENSE 均无「无需署名」原文，本库不把该句写成事实。图标数量为站点与 README 自述（README 另写：无可填色的字形在 fill/duotone 下落回 stroke 图），未逐文件清点。非 AI 模型、非 Grok Bot 案例，归 HTML 收集的设计/图标组件素材。X API 403，帖文经公开网页核对。预览为 Chrome headless 实拍官网首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-21); github.com/keyline-icons/keyline-icons also 200 the same day, GitHub-labelled MIT, ~97 stars (checked that day). Homepage: “1,000 icons… 4 weights… rounded or sharp… 8,000 files” and “Free under the MIT License”; the FAQ says the LICENSE file is the actual grant. The repo LICENSE is standard MIT (Copyright (c) 2026 Keyline Icons) and includes the copyright-notice condition. The source post says “No attribution”; homepage / FAQ / LICENSE do not use that wording, so this library does not state it as fact. Icon counts are site and README claims (README also notes glyphs with nothing to fill fall back to the stroke drawing in fill/duotone) — not audited file-by-file. Not an AI model and not a Grok Bot case; filed under HTML Collection as a design / icon-component asset. X API 403; the post was checked via the public web. Preview is a Chrome headless capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-20",
+      "updatedAt": "2026-09-21T00:45:00Z"
+    },
     {
       "id": "ai-event-posters",
       "slug": "ai-event-posters",
