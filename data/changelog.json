@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-21",
+      "title": "收录：Grok Bot +1（Tello 美国 eSIM 社区实操）",
+      "titleEn": "Catalog: Grok Bot +1 (Tello US eSIM community how-to)",
+      "body": "Grok Bot 库新增旁路工具笔记 /cases/tello-us-esim-roaming/ —— 拓跋鼠（@qwerty__cs）9/20 的中文长帖：Tello 美国 eSIM 买 300 分钟 / 5 美元套餐（含税约 10 美元，Apple Pay / Google Pay / PayPal），设 PIN、扫码加 eSIM；挂英国 / 欧洲 VPN 用注册时同一 911 地址开 Wi-Fi Calling，再开 International Roaming + Pay As You Go Data（先充 20 美元让余额 >5），作者称中国移动漫游信号出现且不改手机定位。步骤与价格全部是作者自述与三张截图，本站未购买未测试，标「社区实操」不是背书；VPN + Wi-Fi Calling + 漫游组合可能触及 Tello 条款或当地法规，条目内有风险提示。作者注册链接带 `?_referral=P3JJZ43C` 推荐码，本站只列干净 tello.com（未登录抓取 403，仅作官网指引）。与 Saily 美国号一条互设 relatedCaseIds，为此 cases schema 新增可选 `relatedCaseIds`（构建时校验必须解析、不能指自己），详情页「相关」区块优先展示显式姊妹条。预览为作者三张截图拼 3:2。cases 120→121（1.4.25）。不进 Models / HTML。",
+      "bodyEn": "Grok Bot library adds an adjacent tool note /cases/tello-us-esim-roaming/ — a 9/20 Chinese long post by 拓跋鼠 (@qwerty__cs): buy Tello’s US eSIM 300-min / $5 plan (~$10 with tax; Apple Pay / Google Pay / PayPal), set a PIN and scan the QR code to add the eSIM; on a UK / EU VPN enable Wi-Fi Calling with the same 911 address used at signup, then turn on International Roaming + Pay As You Go Data (top up $20 first so the balance is > $5); the author says a China Mobile roaming signal appears without changing the phone’s location. Steps and prices are entirely the author’s claims and three screenshots — not purchased or tested here — labelled “community how-to”, not an endorsement; the VPN + Wi-Fi Calling + roaming combination may touch Tello’s terms or local rules, and the entry carries a risk note. The author’s signup link carries a `?_referral=P3JJZ43C` referral code; this site lists only the clean tello.com (403 on logged-out fetch, listed as the official site only). Cross-linked with the Saily US-number note via relatedCaseIds; to support that, the cases schema gains an optional `relatedCaseIds` (build-time validated: must resolve, no self-reference) and the detail page’s related block shows explicit siblings first. Preview is the author’s three screenshots composited to 3:2. cases 120→121 (1.4.25). Not filed under Models / HTML."
+    },
+    {
       "date": "2026-09-20",
       "title": "晚间收录：HTML +2、Models +1（Step 5 Preview）",
       "titleEn": "Evening catalog: HTML +2, Models +1 (Step 5 Preview)",
