@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-21",
+      "title": "HTML +1：Keyline Icons 免费图标集",
+      "titleEn": "HTML +1: Keyline Icons free icon set",
+      "body": "HTML：收 Keyline Icons（keylineicons.com）——面向 shadcn/ui 的免费图标浏览站，可复制 SVG/JSX 或装 @keyline-icons/react。来源为 Zafar Ismatullaev（@iszafar92）2026-09-20 帖。首页与仓库自述 1,000 枚 × 4 样式（stroke / two-tone / duotone / fill）× 圆角/尖角 = 8,000 SVG，MIT；条数未逐文件复计。帖内「No attribution」未写成事实：首页/FAQ 只写 MIT、FAQ 指 LICENSE 为授权文本，仓库 LICENSE 为标准 MIT（须保留版权声明）。公开页与仓库均核到 200；GitHub 当日约 97 star。非 AI 模型、非 Grok Bot 案例，归 HTML 收集的设计/图标组件素材。types 取 component / docs。预览为 Chrome headless 实拍官网首屏裁 3:2 WebP。X API 仍 403，帖文经公开网页核对。html-items 70→71（1.3.32）。Grok Bot / Agent UI / Models 无新增。",
+      "bodyEn": "HTML: added Keyline Icons (keylineicons.com) — a free browse-and-copy icon set drawn for shadcn/ui (SVG/JSX in the browser, or @keyline-icons/react). Source post is Zafar Ismatullaev (@iszafar92) on 2026-09-20. Homepage and repo describe 1,000 icons × 4 styles (stroke / two-tone / duotone / fill) × rounded/sharp = 8,000 SVGs, MIT; counts not re-counted file-by-file. The post’s “No attribution” is not stated as fact: homepage/FAQ only say MIT, the FAQ points at the LICENSE as the grant, and the repo LICENSE is standard MIT (copyright-notice condition). Site and repo both returned 200; GitHub showed ~97 stars that day. Not an AI model and not a Grok Bot case; filed under HTML Collection as a design / icon-component asset. Types: component / docs. Preview is a Chrome headless capture of the homepage above the fold, cropped to 3:2 WebP. X API still 403 — post checked via the public web. html-items 70→71 (1.3.32). No Grok Bot / Agent UI / Models additions."
+    },
+    {
       "date": "2026-09-20",
       "title": "晚间收录：HTML +2、Models +1（Step 5 Preview）",
       "titleEn": "Evening catalog: HTML +2, Models +1 (Step 5 Preview)",
