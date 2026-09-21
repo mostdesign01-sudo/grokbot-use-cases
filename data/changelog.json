@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-21",
+      "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
+      "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
+      "body": "Grok Bot：收 6yuwei《共享云电脑与六种可测工作流》，以及 Cursor 官方文档《Get started with Grok Bot》。HTML：Show HN Scrolling Text Generator（item 49778087）浏览器跑马灯/字幕导出，已配 3:2 自托管预览。Agent UI：ThreeUI Community Gallery（community-sync 确认免费）。X @bot API 未强打，改走网页/公开源。",
+      "bodyEn": "Grok Bot: added 6yuwei’s shared-cloud-computer and six-workflow guide, plus Cursor’s official Get started with Grok Bot. HTML: Show HN Scrolling Text Generator (item 49778087) with a self-hosted 3:2 preview. Agent UI: ThreeUI Community Gallery (community-sync confirmed free). Skipped hard X @bot API calls; used web/public sources."
+    },
+    {
       "date": "2026-09-20",
       "title": "晚间收录：HTML +2、Models +1（Step 5 Preview）",
       "titleEn": "Evening catalog: HTML +2, Models +1 (Step 5 Preview)",

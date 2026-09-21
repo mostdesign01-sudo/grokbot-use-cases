@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T12:31:00Z",
+    "updatedAt": "2026-09-21T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.18",
-    "count": 54
+    "version": "1.4.19",
+    "count": 55
   },
   "items": [
     {
@@ -1772,6 +1772,41 @@
       "promptHint": "用 Animated Top Dock 做控制台顶栏。选 Sable 或 Liquid Glass，保持免费变体。",
       "promptHintEn": "Use Animated Top Dock as a console top bar. Pick Sable or Liquid Glass; keep the free variants.",
       "previewImage": "/previews/animated-top-dock.webp"
+    },
+    {
+      "id": "threeui-gallery",
+      "slug": "threeui-gallery",
+      "title": "Gallery",
+      "titleEn": "Gallery",
+      "summary": "ThreeUI Community：Vantrix 风格英雄图带——十六块弯曲编辑图板绕竖直圆柱轨道旋转，纸感网格底；免登录，页内可调 speed / scale / opacity，并可 Copy Prompt。MIT Community 包 `@designcodeio/threeui`。",
+      "summaryEn": "ThreeUI Community Vantrix-style hero image ribbon: sixteen curved editorial panels orbit a vertical cylindrical rail on a quiet paper grid. No login; tune speed / scale / opacity on-page and Copy Prompt. MIT Community package `@designcodeio/threeui`.",
+      "sourceUrl": "https://threeui.com/ui-elements/gallery",
+      "secondaryUrls": [
+        "https://github.com/MengTo/threeui",
+        "https://threeui.com/browse"
+      ],
+      "previewImage": "/previews/threeui-gallery.webp",
+      "npmPackage": "@designcodeio/threeui",
+      "promptHint": "用 Gallery 做作品集或品牌故事首屏图带；只调速度、缩放和透明度，保持 Community 免费组件，不要切到标了 PRO 的落地页变体。",
+      "promptHintEn": "Use Gallery as a portfolio or brand-story hero ribbon; only tweak speed, scale, and opacity, keep the free Community component, and do not switch to PRO landing variants.",
+      "types": [
+        "ui",
+        "threejs",
+        "hero",
+        "section"
+      ],
+      "tags": [
+        "threeui",
+        "community",
+        "gallery",
+        "webgl",
+        "hero"
+      ],
+      "qualityNote": "community-sync 确认父组件 `gallery` 在 Community（无 Pro-only 变体）。同站 GET PRO 入口不代表本条收费。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "community-sync lists parent `gallery` in Community (no Pro-only variants). Site-wide GET PRO links do not make this entry paid. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-09-21",
+      "updatedAt": "2026-09-21T01:20:00Z"
     }
   ]
 }

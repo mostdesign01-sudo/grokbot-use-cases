@@ -1,10 +1,12 @@
 {
   "meta": {
-    "updatedAt": "2026-09-18T01:12:00Z",
+    "updatedAt": "2026-09-21T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.24",
-    "count": 120,
+    "version": "1.4.25",
+    "count": 122,
     "sourcesCrawled": [
+      "https://cursor.com/docs/grok-bot/get-started",
+      "https://blog.6yuwei.com/en/2026/08/28/grok-bot-cloud-vm-autonomous-agent-guide/",
       "https://threeui.com/three-js/bookshelf",
       "https://news.ycombinator.com/item?id=49747752",
       "https://papereffects.site",
@@ -4371,6 +4373,84 @@
       "previewImage": "/previews/mobile-mcp.webp",
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T16:20:00Z"
+    },
+    {
+      "id": "6yuwei-grok-bot-six-workflows",
+      "slug": "6yuwei-grok-bot-cloud-vm-six-workflows",
+      "title": "6yuwei：共享云电脑、审批门与六种可测工作流",
+      "titleEn": "6yuwei: shared cloud computer, approval gates, and six testable workflows",
+      "summary": "2026-08-28 长文：把 Grok Bot 与 Grok 聊天 / Grok Build / API 拆开讲，再落到四根架构柱（共享云电脑、Computer Use、演示学任务/Routine、人审门），并给出可谨慎试跑的六种模式——幕僚长多 Agent、意向线索、缺陷复现开 Issue、无 API 遗留系统 RPA、品牌竞品值守、夜间批处理。强调窄角色、先读后写、Bot 不是安全边界。",
+      "summaryEn": "Aug 28, 2026 guide: separates Grok Bot from Grok chat / Grok Build / API, then covers four pillars (shared cloud computer, computer use, teach/routines, approval gates) and six carefully testable patterns—chief-of-staff multi-agent, intent lead prep, bug reproduction tickets, legacy RPA without APIs, brand/competitor watch, and nightly batch jobs. Stresses narrow roles, read-and-prepare first, and that Bots are not security boundaries.",
+      "categories": [
+        "automation",
+        "ops",
+        "multi-agent",
+        "getting-started"
+      ],
+      "role": "Architecture + workflow playbook",
+      "sourceUrl": "https://blog.6yuwei.com/en/2026/08/28/grok-bot-cloud-vm-autonomous-agent-guide/",
+      "secondaryUrls": [
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+        "https://x.ai/news/introducing-grok-bot"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "社区架构解读（2026-08-28）。六种工作流是模式清单，作者写明需自测连接器与审批；文内「早期 beta / 能力因套餐而异」以原文为准，本库不当 KPI。",
+      "qualityNoteEn": "Community architecture write-up (2026-08-28). The six workflows are patterns to test carefully; connector access and approvals vary. Early-beta caveats are the author’s—do not treat as KPIs.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "外发邮件、CRM 写库、生产改动、购买与删改保持人审；先只读草稿再放开写权限。",
+      "approvalBoundaryEn": "Keep outbound email, CRM writes, production changes, purchases, and deletes human-gated; start read-only drafts before granting write access.",
+      "connectors": [
+        "browser",
+        "computer",
+        "crm",
+        "github",
+        "slack"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-08-28",
+      "updatedAt": "2026-09-21T01:20:00Z"
+    },
+    {
+      "id": "cursor-docs-grok-bot-get-started",
+      "slug": "cursor-docs-grok-bot-get-started",
+      "title": "Cursor 文档：安装桌面端到第一次审阅",
+      "titleEn": "Cursor docs: install desktop through first review",
+      "summary": "Cursor 官方 Get started：从仪表盘下载桌面端、用 Cursor 账号登录、创建专注 Bot（示例 Piper：产品性能调查、证据与假设分开、不改生产设置）、给边界清晰的首任务、在 Agent Computer 上手动登录工具、审阅后沉淀为 skill/routine；并说明 iOS 同云电脑可消息/接管/审批，但 Teach a task 与改 Routine 仍在桌面。",
+      "summaryEn": "Official Cursor Get started: download the desktop app from the dashboard, sign in with Cursor, create a focused Bot (example Piper: product-performance investigation, evidence vs hypotheses, never change production), hand a bounded first task, take over Agent Computer for tool logins, then review and save a skill/routine. Notes iOS shares the same cloud computer for messaging/takeover/approvals, while Teach a task and routine editing stay on desktop.",
+      "categories": [
+        "getting-started",
+        "automation",
+        "ops"
+      ],
+      "role": "Official onboarding checklist",
+      "sourceUrl": "https://cursor.com/docs/grok-bot/get-started",
+      "secondaryUrls": [
+        "https://cursor.com/docs/grok-bot",
+        "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "Cursor 官方文档页。套餐/隐私模式切换以文档当日说明为准；与 xAI docs 互补，本库不当访问承诺。",
+      "qualityNoteEn": "Official Cursor docs page. Plan and Privacy Mode notes follow the live docs; complementary to xAI docs—not an access guarantee.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "改生产设置、外发与付费前先读 Approvals / Auto Review；密码与 2FA 只在用户接管时输入。",
+      "approvalBoundaryEn": "Read Approvals / Auto Review before production changes, outbound sends, or purchases; passwords and 2FA are entered only when the user takes over.",
+      "connectors": [
+        "computer",
+        "browser"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-21",
+      "updatedAt": "2026-09-21T01:20:00Z"
     }
   ]
 }
