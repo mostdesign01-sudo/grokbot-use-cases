@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-21",
+      "title": "晚间收录：HTML +2",
+      "titleEn": "Evening: HTML +2",
+      "body": "HTML：收 Show HN 当日条目 GeoJSON Viewer（item 49784845）——浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验（闭合环、右手定则、经纬范围、声明 bbox 是否包住数据），错误不画图、警告仍可画，解析/校验/渲染均本地、不上传；收 Show HN GSB（item 49785777）——浏览器商业 trivia，读当年标题把 4 家公司按单年营收从高到低排成金/银/铜，3 次机会，站点自述免费、周一/三/五出新题、可查 archive。两条均配 Playwright 实拍 3:2 自托管预览。html-items 71→73（1.3.33）。今晚未改 Grok Bot / Agent UI / Models。",
+      "bodyEn": "HTML: added same-day Show HN GeoJSON Viewer (item 49784845) — paste GeoJSON in-browser and validate against RFC 7946 (closed rings, right-hand rule, lon/lat ranges, declared bbox containment); errors clear the map, warnings still draw; parse/validate/render stay local with no upload — and Show HN GSB (item 49785777), a browser business trivia game that ranks four companies by single-year revenue Gold→Silver→Bronze with three tries; the site says it is free, with new puzzles Mon/Wed/Fri and an archive. Both ship with Playwright-captured 3:2 self-hosted previews. html-items 71→73 (1.3.33). No Grok Bot / Agent UI / Models edits tonight."
+    },
+    {
+      "date": "2026-09-21",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
       "body": "Grok Bot：收 6yuwei《共享云电脑与六种可测工作流》，以及 Cursor 官方文档《Get started with Grok Bot》。HTML：Show HN Scrolling Text Generator（item 49778087）浏览器跑马灯/字幕导出，已配 3:2 自托管预览。Agent UI：ThreeUI Community Gallery（community-sync 确认免费）。X @bot API 未强打，改走网页/公开源。",
