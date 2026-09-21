@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-20T12:20:00Z",
+    "updatedAt": "2026-09-21T00:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "count": 9
   },
   "models": [
@@ -94,11 +94,11 @@
       "vendor": "ConvAI Innovations",
       "title": "Laya：开源 System 1 决策引擎（对照 Jev）",
       "titleEn": "Laya: open-source System 1 decision engine (Jev-adjacent)",
-      "summary": "作者称 Laya 是非自回归、亚 35ms 的开源 System 1 决策模型族（Apache 2.0 权重），提供 choice / score / noul 三类结构化决策与多语路由；对照站内已收录的 TypeSafe Jev。基准、延迟、与 Jev 对比数字一律标「作者称 / 第三方整理」，本库未复跑。HN 讨论：https://news.ycombinator.com/item?id=49765348（2026-09-19）。",
-      "summaryEn": "Author presents Laya as an open-weight non-autoregressive System 1 decision family (Apache 2.0) with choice/score/noul primitives and multilingual routing; sits next to catalogued TypeSafe Jev. Latency/benchmark/Jev-comparison figures are author or third-party claims — not re-run here. HN: item 49765348 (2026-09-19).",
+      "summary": "作者称 Laya 是非自回归、亚 35ms 的开源 System 1 决策模型族（Apache 2.0 权重），提供 choice / score / noul 三类结构化决策与多语路由；对照站内已收录的 TypeSafe Jev。基准、延迟、与 Jev 对比数字一律标「作者称 / 第三方整理」，本库未复跑。HN 讨论：https://news.ycombinator.com/item?id=49765348（2026-09-19）。社区侧：七仔（@Yangtze_Seventh）9 月 20 日中文观点帖把两者并排讲（都不生成长文本、直接出选择 / 评分 / 概率；Jev 闭源只给 API，Laya 开权重可本地跑与微调），并引 Laya 作者对比图的 76.6% vs 72.7% —— 社区称，本库未复跑。",
+      "summaryEn": "Author presents Laya as an open-weight non-autoregressive System 1 decision family (Apache 2.0) with choice/score/noul primitives and multilingual routing; sits next to catalogued TypeSafe Jev. Latency/benchmark/Jev-comparison figures are author or third-party claims — not re-run here. HN: item 49765348 (2026-09-19). Community side: 七仔’s (@Yangtze_Seventh) 20 Sept Chinese take reads the two side by side (neither generates long text — both emit choices / scores / probabilities; Jev is closed and API-only, Laya is open-weight and can run and fine-tune locally) and quotes the Laya author’s chart at 76.6% vs 72.7% — community claim, not re-run here.",
       "announcedAt": "2026-09-19",
       "publishedAt": "2026-09-19",
-      "updatedAt": "2026-09-19T12:20:00Z",
+      "updatedAt": "2026-09-21T00:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -137,6 +137,14 @@
           "labelEn": "HF Space demo: convaiinnovations/laya-demo",
           "url": "https://huggingface.co/spaces/convaiinnovations/laya-demo",
           "by": "ConvAI Innovations"
+        },
+        {
+          "kind": "community",
+          "label": "七仔（@Yangtze_Seventh）中文观点帖：Jev 爆火没几天，开源对手 Laya 就出现了（X 帖 + 对比图）",
+          "labelEn": "七仔 (@Yangtze_Seventh) Chinese take: days after Jev blew up, its open-source rival Laya appeared (X post + comparison chart)",
+          "url": "https://x.com/Yangtze_Seventh/status/2101614780176085052",
+          "by": "@Yangtze_Seventh",
+          "date": "2026-09-20"
         }
       ],
       "highlights": [
@@ -155,10 +163,14 @@
         {
           "text": "作者自述局限：choice 选项超过 20 个时表现下降；开箱基础模型在 typed-decisions 基准上接近随机，公布分数来自在基准训练集上微调后的结果（作者原文如此）。",
           "textEn": "Author-stated limits: choice degrades beyond ~20 options; out-of-the-box base models score near random on the typed-decisions benchmark, and the published score comes after fine-tuning on that benchmark’s train split (per the author)."
+        },
+        {
+          "text": "社区称（七仔 @Yangtze_Seventh，2026-09-20 帖）：两者都不生成长文本，直接输出选择、评分和概率，做路由、审核、风险判断等快决策；Jev 闭源、只提供 API，Laya「约 3～4 亿参数」（帖子原文）、代码与权重全开放，可本地运行和微调；帖称专项微调后 Laya 准确率 76.6%、超过 Jev 的 72.7%，本地推理也更快。帖子所附即 Laya 作者自制的「Laya vs TypeSafe Jev」对比图（typed-decisions 面板 0.766 vs 0.727），图内脚注写明 Jev 数字取自第三方公开整理、该项目从未运行 Jev。以上为帖主转述与作者图表数字，本库未复跑。",
+          "textEn": "Community claim (七仔 @Yangtze_Seventh, 2026-09-20 post): neither model generates long text — both emit choices, scores, and probabilities for fast decisions such as routing, moderation, and risk checks; Jev is closed-source and API-only, while Laya is “about 3–4 亿 [300–400M] parameters” (post’s wording) with code and weights fully open, runnable and fine-tunable locally; the post says that after task-specific fine-tuning Laya reaches 76.6% accuracy versus Jev’s 72.7%, with faster local inference. The attached image is the Laya author’s own “Laya vs TypeSafe Jev” chart (typed-decisions panel: 0.766 vs 0.727), whose footnote states the Jev figures are third-party published and Jev was never run in that project. Poster’s retelling plus author-chart numbers — not re-run here."
         }
       ],
-      "qualityNote": "收录理由：与站内 TypeSafe Jev 同类的 System One / 非自回归结构化决策模型，但权重开源（HF 模型页 2026-09-19 核到 license: apache-2.0），HN 当日有讨论，适合 Models 看板对照阅读。核实边界：作者长文对「谁先提出」与 TypeSafe Jev 存在争议，本库不站队、只记双方公开页可达；延迟、基准、与 Jev 的对比表数字全部为作者自述或作者引用的第三方整理（AbdelStark、nibzard 等），本库未复跑，亦未实测 pip 包或 HF Space。五条来源 URL（HF 模型页、作者长文页、HN、GitHub 仓库、HF Space）于 2026-09-19 均核到 200。预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "收录理由：与站内 TypeSafe Jev 同类的 System One / 非自回归结构化决策模型，但权重开源（HF 模型页 2026-09-19 核到 license: apache-2.0），HN 当日有讨论，适合 Models 看板对照阅读。核实边界：作者长文对「谁先提出」与 TypeSafe Jev 存在争议，本库不站队、只记双方公开页可达；延迟、基准、与 Jev 的对比表数字全部为作者自述或作者引用的第三方整理（AbdelStark、nibzard 等），本库未复跑，亦未实测 pip 包或 HF Space。五条来源 URL（HF 模型页、作者长文页、HN、GitHub 仓库、HF Space）于 2026-09-19 均核到 200。预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。2026-09-21 增补：加入七仔（@Yangtze_Seventh）9 月 20 日中文观点帖为社区源（帖子 URL 与附图当日核到可达）；帖内「约 3～4 亿参数」「76.6% vs 72.7%」「本地更快」「Jev 闭源研发约两年、约 4000 万美元种子融资」均为帖主说法或帖主转述的 Laya 作者图表，本库未复跑任何数字，也未把参数量、融资额与 HF 模型卡或其他公开源逐项核对；帖主「真正被打败的是闭源的技术神秘感」属评论观点，不作事实收录。对比图是 Laya 作者自制，不是中立第三方测评。",
+      "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated. Addendum 2026-09-21: added 七仔’s (@Yangtze_Seventh) 20 Sept Chinese take as a community source (post URL and attached image reachable on the day). The post’s “about 3–4 亿 [300–400M] parameters,” “76.6% vs 72.7%,” “faster locally,” and “Jev spent ~two years closed and just raised ~$40M seed” are all the poster’s claims or the poster’s retelling of the Laya author’s chart; no figure was re-run here, and neither the parameter count nor the funding figure was checked against the HF model card or any other public source. The poster’s “what really lost is the mystique of closed source” is opinion and is not recorded as fact. The comparison chart is the Laya author’s own, not a neutral third-party evaluation.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "typesafe-jev"
@@ -609,11 +621,11 @@
       "vendor": "TypeSafe AI",
       "title": "Jev / System One Models（TypeSafe AI）",
       "titleEn": "Jev / System One Models (TypeSafe AI)",
-      "summary": "TypeSafe AI 于 2026-09-15 发布的首个公开 System One Model。面向软件内决策而非聊天：输入非结构化状态，输出类型安全的结构化决策，并附带校准概率与置信度。官方称新架构 + 并行采样 + Reinforcement Learning for Calibrated Decisions（RLCD）；目前为早期访问；速度、价格与评测倍率均为厂商自述，本库未复跑其工作流评测。",
-      "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library.",
+      "summary": "TypeSafe AI 于 2026-09-15 发布的首个公开 System One Model。面向软件内决策而非聊天：输入非结构化状态，输出类型安全的结构化决策，并附带校准概率与置信度。官方称新架构 + 并行采样 + Reinforcement Learning for Calibrated Decisions（RLCD）；目前为早期访问；速度、价格与评测倍率均为厂商自述，本库未复跑其工作流评测。社区侧：七仔（@Yangtze_Seventh）9 月 20 日中文观点帖把 Jev 与开源的 Laya 并排讲，称 Jev 闭源只给 API、Laya 微调后 76.6% 超过 Jev 的 72.7% —— 社区称，本库未复跑；开权重对照卡见同板 Laya。",
+      "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library. Community side: 七仔’s (@Yangtze_Seventh) 20 Sept Chinese take sets Jev next to the open-weight Laya, saying Jev is closed and API-only and that fine-tuned Laya hits 76.6% over Jev’s 72.7% — community claim, not re-run here; see the Laya card on this board for the open-weight counterpart.",
       "announcedAt": "2026-09-15",
       "publishedAt": "2026-09-16",
-      "updatedAt": "2026-09-19T12:20:00Z",
+      "updatedAt": "2026-09-21T00:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -638,6 +650,14 @@
           "url": "https://news.ycombinator.com/item?id=49717558",
           "by": "Hacker News",
           "date": "2026-09-15"
+        },
+        {
+          "kind": "community",
+          "label": "七仔（@Yangtze_Seventh）中文观点帖：Jev 爆火没几天，开源对手 Laya 就出现了（X 帖 + 对比图）",
+          "labelEn": "七仔 (@Yangtze_Seventh) Chinese take: days after Jev blew up, its open-source rival Laya appeared (X post + comparison chart)",
+          "url": "https://x.com/Yangtze_Seventh/status/2101614780176085052",
+          "by": "@Yangtze_Seventh",
+          "date": "2026-09-20"
         }
       ],
       "highlights": [
@@ -652,10 +672,14 @@
         {
           "text": "早期访问：官网 Join Waitlist；适合分类 / 路由 / 打分 / 抽取等可塞进代码的决策，不替代通用聊天或开放式写作。",
           "textEn": "Early access via the site waitlist; fits classify / route / score / extract decisions inside code — not a general chat or open-ended writing model."
+        },
+        {
+          "text": "社区称（七仔 @Yangtze_Seventh，2026-09-20 帖）：Jev 与开源的 Laya 都不生成长文本，直接输出选择、评分和概率；不同在 Jev「闭源研发约两年，只提供 API」，Laya 开代码与权重、可本地跑与微调；帖引 Laya 作者对比图称专项微调后 Laya 76.6% 超过 Jev 的 72.7%；并称 Jev 公司「刚刚拿到 4000 万美元种子融资」。以上仅为帖主说法（融资额亦是帖主一家之言），本库未核实、未复跑；对比图为 Laya 作者自制，图内脚注自述 Jev 数字取自第三方公开整理、未实际运行 Jev。",
+          "textEn": "Community claim (七仔 @Yangtze_Seventh, 2026-09-20 post): Jev and the open-source Laya both skip long-text generation and emit choices, scores, and probabilities directly; the difference, per the post, is that Jev “spent about two years in closed development and offers only an API” while Laya opens code and weights for local inference and fine-tuning. The post cites the Laya author’s chart to say fine-tuned Laya reaches 76.6% over Jev’s 72.7%, and says Jev’s company “just raised a $40M seed round.” All of this is the poster’s claim only (the funding figure included — tip-only attribution); not verified or re-run here. The chart is the Laya author’s own, and its footnote says the Jev figures are third-party published and Jev was never run in that project."
         }
       ],
-      "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API。三条来源 URL 于 2026-09-16 核到 200。无预览图。",
-      "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
+      "qualityNote": "收录理由：9/15 新一类 frontier 决策模型公告，HN 热议，适合 Models 看板。边界：速度 / 成本 / 评测倍率均为厂商自述（取自官方博文与官网），本库未独立核实；早期访问，本库未实测 API。三条来源 URL 于 2026-09-16 核到 200。无预览图。2026-09-21 增补：加入七仔（@Yangtze_Seventh）9 月 20 日中文观点帖为社区源（URL 当日核到可达），与同板 Laya 卡共用同一帖、relatedModelIds 互指不变。帖内「闭源研发约两年」「约 4000 万美元种子融资」「76.6% vs 72.7%」均为帖主说法或帖主转述的 Laya 作者图表，本库未向 TypeSafe 官方页核对融资与研发时长，也未复跑任何基准；对比图出自 Laya 一方，非中立第三方测评。帖主的评论观点不作事实收录。",
+      "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image. Addendum 2026-09-21: added 七仔’s (@Yangtze_Seventh) 20 Sept Chinese take as a community source (URL reachable on the day); the same post is shared with the Laya card on this board, and the existing relatedModelIds cross-link is unchanged. The post’s “about two years of closed development,” “~$40M seed round,” and “76.6% vs 72.7%” are the poster’s claims or the poster’s retelling of the Laya author’s chart; funding and development timeline were not checked against TypeSafe’s official pages, and no benchmark was re-run here. The chart comes from the Laya side, not a neutral third-party evaluation. The poster’s opinions are not recorded as fact.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "laya-system-one"
