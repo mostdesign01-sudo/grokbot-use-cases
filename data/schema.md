@@ -50,6 +50,7 @@
 | `featured` | boolean | 是否出现在首页精选 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `qualityNote` 里。不填则不显示星行 |
 | `previewImage` | string | 可选，站点根路径如 `/previews/id.webp` |
+| `relatedCaseIds` | string[] | 可选，姊妹条目的 `id`（必须已在本文件里，不能指自己）；详情页「相关」区块优先展示这些条目，再按分类重叠补齐。同类工具笔记（如两条 eSIM 旁路）应互相指向 |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目最近校对时间 |
 

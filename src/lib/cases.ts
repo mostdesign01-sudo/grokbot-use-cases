@@ -38,6 +38,8 @@ export interface CaseItem {
   /** Curator quality stars 1–5 (editorial; unrelated to GitHub stars). Unset = no rating shown. */
   stars?: number;
   previewImage?: string;
+  /** Optional explicit sibling cases (must resolve to existing ids); shown first in the related block. */
+  relatedCaseIds?: string[];
   publishedAt: string;
   updatedAt: string;
 }
@@ -61,6 +63,15 @@ export interface ChangelogNote {
 export const meta = dataset.meta as CasesMeta;
 export const cases = dataset.cases as CaseItem[];
 export const changelogNotes = changelog.notes as ChangelogNote[];
+
+for (const item of cases) {
+  for (const id of item.relatedCaseIds ?? []) {
+    if (id === item.id) throw new Error(`cases.json ${item.id} relatedCaseIds points at itself`);
+    if (!cases.some((entry) => entry.id === id)) {
+      throw new Error(`cases.json relatedCaseId not found: ${item.id} → ${id}`);
+    }
+  }
+}
 
 export function getCaseBySlug(slug: string): CaseItem | undefined {
   return cases.find((item) => item.slug === slug);
@@ -104,16 +115,20 @@ export function caseSearchText(item: CaseItem): string {
 }
 
 export function getRelatedCases(current: CaseItem, limit = 3): CaseItem[] {
-  return cases
-    .filter((item) => item.id !== current.id)
+  const explicit = (current.relatedCaseIds ?? [])
+    .map((id) => cases.find((item) => item.id === id))
+    .filter((item): item is CaseItem => Boolean(item));
+  const explicitIds = new Set(explicit.map((item) => item.id));
+  const byCategory = cases
+    .filter((item) => item.id !== current.id && !explicitIds.has(item.id))
     .map((item) => ({
       item,
       overlap: item.categories.filter((cat) => current.categories.includes(cat)).length,
     }))
     .filter((entry) => entry.overlap > 0)
     .sort((a, b) => b.overlap - a.overlap)
-    .slice(0, limit)
     .map((entry) => entry.item);
+  return [...explicit, ...byCategory].slice(0, Math.max(limit, explicit.length));
 }
 
 export function uniqueCategories(): string[] {
