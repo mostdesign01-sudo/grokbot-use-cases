@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-22",
+      "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
+      "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
+      "body": "Grok Bot：收 HN「Grok Bot」帖下 jjcm 可复现的多席面料询价出样流程（item 49263241 / 父帖 49261514）；收 Show HN Open Bot（item 49365575）——MIT 开源「每席一电脑」相邻栈。HTML：HN 首页 Transformer Explainer（item 49792342）浏览器内 GPT-2 可视化，已配 3:2 自托管预览。Agent UI：Facet（MIT copy-paste R3F 组件库 + MCP / llms.txt），已配 3:2 自托管预览。X @bot 网页 403，未走 X API；扫 HN 首页/Show 与 Algolia（Grok Bot / CSS demo / three.js / single-file HTML）。cases 122→124（1.4.26），html-items 73→74（1.3.34），agent-ui 55→56（1.4.20）。",
+      "bodyEn": "Grok Bot: added jjcm’s reproducible multi-Bot fabric-sourcing flow from the HN “Grok Bot” thread (item 49263241 / parent 49261514), plus Show HN Open Bot (item 49365575) — an MIT open-source per-seat-computer adjacent stack. HTML: HN front-page Transformer Explainer (item 49792342), in-browser GPT-2 visualization with a 3:2 self-hosted preview. Agent UI: Facet (MIT copy-paste R3F component library + MCP / llms.txt) with a 3:2 self-hosted preview. X @bot web returned 403 — no X API calls; scanned HN front page / Show and Algolia (Grok Bot / CSS demo / three.js / single-file HTML). cases 122→124 (1.4.26), html-items 73→74 (1.3.34), agent-ui 55→56 (1.4.20)."
+    },
+    {
       "date": "2026-09-21",
       "title": "晚间收录：HTML +2",
       "titleEn": "Evening: HTML +2",

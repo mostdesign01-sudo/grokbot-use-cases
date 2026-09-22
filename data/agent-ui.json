@@ -1,11 +1,41 @@
 {
-  "meta": {
-    "updatedAt": "2026-09-21T01:20:00Z",
-    "timezone": "Asia/Shanghai",
-    "version": "1.4.19",
-    "count": 55
-  },
   "items": [
+    {
+      "id": "facet-3d",
+      "slug": "facet-3d",
+      "title": "Facet：可复制粘贴的 React Three Fiber 3D 组件（含 MCP / llms.txt）",
+      "titleEn": "Facet: copy-paste React Three Fiber 3D components (MCP / llms.txt)",
+      "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。预览为 Playwright 实拍 playground 首屏裁 3:2。",
+      "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "sourceUrl": "https://assetmaker-nine.vercel.app/",
+      "secondaryUrls": [
+        "https://github.com/elberacasa/facet",
+        "https://www.npmjs.com/package/facet3d",
+        "https://assetmaker-nine.vercel.app/llms.txt"
+      ],
+      "previewImage": "/previews/facet-3d.webp",
+      "npmPackage": "facet3d",
+      "promptHint": "用 Facet 的 CLI 或 MCP 安装免费组件源码（如 image-particles）；改 props 前先在 playground 调好，再拷进项目。",
+      "promptHintEn": "Install free Facet component source via CLI or MCP (e.g. image-particles); tune props in the playground first, then copy into the project.",
+      "types": [
+        "threejs",
+        "library",
+        "component"
+      ],
+      "tags": [
+        "facet",
+        "react-three-fiber",
+        "copy-paste",
+        "mcp",
+        "llms-txt",
+        "open-source"
+      ],
+      "featured": true,
+      "qualityNote": "MIT（2026-09-22 gh api）。公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。预览为 Playwright 实拍 playground 首屏裁 3:2。",
+      "qualityNoteEn": "MIT (gh api, 2026-09-22). Public playground and GitHub README both state 30 components, copy-paste, and Agent MCP; not ThreeUI Pro. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-09-22T01:20:00Z"
+    },
     {
       "id": "sylva-living-world",
       "slug": "sylva-living-world",
@@ -1808,5 +1838,11 @@
       "publishedAt": "2026-09-21",
       "updatedAt": "2026-09-21T01:20:00Z"
     }
-  ]
+  ],
+  "meta": {
+    "updatedAt": "2026-09-22T01:20:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.4.20",
+    "count": 56
+  }
 }

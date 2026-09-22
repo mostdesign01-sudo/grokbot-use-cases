@@ -1,11 +1,37 @@
 {
-  "meta": {
-    "updatedAt": "2026-09-21T12:24:00Z",
-    "timezone": "Asia/Shanghai",
-    "version": "1.3.33",
-    "count": 73
-  },
   "items": [
+    {
+      "id": "transformer-explainer",
+      "slug": "transformer-explainer",
+      "title": "Transformer Explainer：浏览器里可视化 GPT-2 Transformer",
+      "titleEn": "Transformer Explainer: GPT-2 Transformer visualized in the browser",
+      "summary": "HN 首页帖（item 49792342，2026-09-21→22）https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club 开源互动页：浏览器内跑 GPT-2 small（ONNX），可改输入、温度、Top-k/Top-p，并展开 Embedding / Multi-Head Attention / MLP / 输出概率。公开页与 GitHub（MIT）已核验；预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN front-page item 49792342 (2026-09-21→22) at https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club’s open interactive page: GPT-2 small runs in-browser via ONNX; tweak input, temperature, Top-k/Top-p, and expand Embedding / Multi-Head Attention / MLP / output probabilities. Public page and GitHub (MIT) verified; preview is a Playwright capture cropped to 3:2 WebP.",
+      "sourceUrl": "https://poloclub.github.io/transformer-explainer/",
+      "secondaryUrls": [
+        "https://github.com/poloclub/transformer-explainer",
+        "https://news.ycombinator.com/item?id=49792342"
+      ],
+      "previewImage": "/previews/transformer-explainer.webp",
+      "types": [
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "transformer",
+        "gpt-2",
+        "onnx",
+        "visualization",
+        "hn",
+        "education",
+        "browser"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-22）。HN 首页条目（item 49792342）：浏览器内 GPT-2 small + 可交互注意力图；仓库 MIT。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-22). HN front-page item 49792342: in-browser GPT-2 small with interactive attention maps; repo MIT. Preview is a Playwright capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-09-22T01:20:00Z"
+    },
     {
       "id": "geojson-viewer",
       "slug": "geojson-viewer",
@@ -2113,5 +2139,11 @@
       "publishedAt": "2026-09-20",
       "updatedAt": "2026-09-21T01:20:00Z"
     }
-  ]
+  ],
+  "meta": {
+    "updatedAt": "2026-09-22T01:20:00Z",
+    "timezone": "Asia/Shanghai",
+    "version": "1.3.34",
+    "count": 74
+  }
 }
