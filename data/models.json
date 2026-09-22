@@ -1,11 +1,104 @@
 {
   "meta": {
-    "updatedAt": "2026-09-20T12:20:00Z",
+    "updatedAt": "2026-09-22T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.6",
-    "count": 9
+    "version": "1.1.7",
+    "count": 10
   },
   "models": [
+    {
+      "id": "mimo-v2-6",
+      "slug": "mimo-v2-6",
+      "name": "MiMo-V2.6-Pro-RL",
+      "vendor": "Xiaomi MiMo",
+      "title": "MiMo V2.6（小米 MiMo）",
+      "titleEn": "MiMo V2.6 (Xiaomi MiMo)",
+      "summary": "小米 MiMo 于 2026-09 发布的 MiMo-V2.6 系列旗舰（官方页 meta：「Introducing the MiMo-V2.6 series: frontier intelligence, all the modalities, built in public.」）。Hugging Face 卡 XiaomiMiMo/MiMo-V2.6-Pro-RL（MIT，HTTP 200）官方称：系列旗舰，主题「Scaling Reinforcement Learning Toward Self-Improvement」；稀疏 MoE，1.02T 总参数 / 42B 激活；原生全模态（文本、图像、视频、音频输入），1M 上下文。同系列 HF 还有 MiMo-V2.6-Flash-RL、MiMo-V2.6-Distill-Qwen-9B。第三方榜：Artificial Analysis 页面列出 MiMo-V2.6-Pro Intelligence Index 46、开源权重、MIT、1M 上下文、多模态输入（AA 榜单数据，非本库复跑）。HN：item 49792730（MiMo v2.6），另有 49796660（AA 分析）。",
+      "summaryEn": "Flagship of Xiaomi MiMo’s MiMo-V2.6 series (released September 2026; official page meta: “Introducing the MiMo-V2.6 series: frontier intelligence, all the modalities, built in public.”). The Hugging Face card XiaomiMiMo/MiMo-V2.6-Pro-RL (MIT, HTTP 200) states vendor claims: series flagship under the theme “Scaling Reinforcement Learning Toward Self-Improvement”; sparse MoE with 1.02T total / 42B activated parameters; native omnimodal inputs (text, image, video, audio) and a 1M-token context. Series siblings on HF include MiMo-V2.6-Flash-RL and MiMo-V2.6-Distill-Qwen-9B. Third-party board: the Artificial Analysis page lists MiMo-V2.6-Pro Intelligence Index 46, open weights, MIT, 1M context, and multimodal inputs (AA’s figures, not re-run here). HN: item 49792730 (MiMo v2.6); optionally 49796660 (AA analysis).",
+      "announcedAt": "2026-09-22",
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-09-22T12:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "小米 MiMo 官方页：MiMo-V2.6",
+          "labelEn": "Xiaomi MiMo official page: MiMo-V2.6",
+          "url": "https://mimo.xiaomi.com/mimo-v2-6",
+          "by": "Xiaomi MiMo",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：XiaomiMiMo/MiMo-V2.6-Pro-RL（MIT）",
+          "labelEn": "Hugging Face: XiaomiMiMo/MiMo-V2.6-Pro-RL (MIT)",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+          "by": "XiaomiMiMo",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "product",
+          "label": "Xiaomi MiMo API Platform",
+          "labelEn": "Xiaomi MiMo API Platform",
+          "url": "https://platform.xiaomimimo.com",
+          "by": "Xiaomi MiMo"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：MiMo-V2.6-Pro 智能 / 速度 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: MiMo-V2.6-Pro intelligence / speed / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+          "by": "Artificial Analysis",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：MiMo v2.6",
+          "labelEn": "Hacker News: MiMo v2.6",
+          "url": "https://news.ycombinator.com/item?id=49792730",
+          "by": "Hacker News",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Artificial Analysis of MiMo-V2.6-Pro（可选）",
+          "labelEn": "Hacker News: Artificial Analysis of MiMo-V2.6-Pro (optional)",
+          "url": "https://news.ycombinator.com/item?id=49796660",
+          "by": "Hacker News",
+          "date": "2026-09-22"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称（HF 模型卡）：MiMo-V2.6-Pro-RL 是 MiMo-V2.6 系列旗舰，主题「Scaling Reinforcement Learning Toward Self-Improvement」——一起放大 RL 算力、环境多样性与 grader 算力，使模型通过探索与反馈扩展能力边界。",
+          "textEn": "Vendor claim (HF model card): MiMo-V2.6-Pro-RL is the flagship checkpoint of the MiMo-V2.6 series, themed “Scaling Reinforcement Learning Toward Self-Improvement” — scaling RL compute, environment diversity, and grader compute together so the model keeps expanding its capability frontier through exploration and feedback."
+        },
+        {
+          "text": "官方称（HF 模型卡）：稀疏 Mixture-of-Experts，1.02T 总参数 / 42B 激活；原生全模态输入（文本、图像、视频、音频）；上下文 1M token。同系列 HF 还有 MiMo-V2.6-Flash-RL 与 MiMo-V2.6-Distill-Qwen-9B（两仓 HTTP 200）。",
+          "textEn": "Vendor claim (HF model card): sparse Mixture-of-Experts with 1.02T total / 42B activated parameters; native omnimodal inputs (text, image, video, audio); 1M-token context. Series siblings on HF include MiMo-V2.6-Flash-RL and MiMo-V2.6-Distill-Qwen-9B (both repos HTTP 200)."
+        },
+        {
+          "text": "官方页 meta description：「Introducing the MiMo-V2.6 series: frontier intelligence, all the modalities, built in public.」官方称权重 MIT 开源；API 平台 platform.xiaomimimo.com 当日可达。",
+          "textEn": "Official-page meta description: “Introducing the MiMo-V2.6 series: frontier intelligence, all the modalities, built in public.” Vendor claims MIT open weights; the API platform at platform.xiaomimimo.com was reachable today."
+        },
+        {
+          "text": "第三方榜（Artificial Analysis，非官方、非本库）：MiMo-V2.6-Pro Intelligence Index 46；页面同时列出开源权重、MIT、1M 上下文、多模态输入（text / image / speech / video），以及约 124.5 tok/s 输出速度与 $0.435 / $0.87 每百万输入/输出 token 等 AA 自有数字——一律为 AA 榜单数据，本库未复跑。",
+          "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): MiMo-V2.6-Pro Intelligence Index 46; the page also lists open weights, MIT, 1M context, multimodal inputs (text / image / speech / video), plus AA’s own ~124.5 output tok/s and $0.435 / $0.87 per 1M input/output tokens — all AA board figures, not re-run here."
+        },
+        {
+          "text": "HF 模型卡另附厂商自测对照表（DeepSWE / AutomationBench / Terminal Bench 等与 Claude Opus 5、GPT-5.6 Sol、Claude Fable 5 等对照）。表内分数一律为厂商自述，本库未复跑任何一项，亦不在此复述具体分值以免与 AA 榜混读。",
+          "textEn": "The HF model card also includes a vendor evaluation table (DeepSWE / AutomationBench / Terminal Bench and peers vs Claude Opus 5, GPT-5.6 Sol, Claude Fable 5, etc.). Those scores are vendor claims only — none re-run here, and individual numbers are not restated on this card to avoid mixing them with the AA board."
+        }
+      ],
+      "qualityNote": "收录理由：2026-09-22 HN 首页出现的小米 MiMo 新系列旗舰，官方页 + HF 开源卡（MIT）+ AA 第三方榜同日可核，适合 Models 看板头条。核实边界：架构参数、模态、1M 上下文、RL 主题与系列定位一律为官方自述（取自 mimo.xiaomi.com/mimo-v2-6 meta 与 HF 卡 XiaomiMiMo/MiMo-V2.6-Pro-RL）；Intelligence Index 46 及 AA 页速度/定价为 Artificial Analysis 第三方榜数据，非本库复跑；HF 卡内厂商对照表分数不在本卡复述。官方页、HF Pro 卡、Flash/Distill 同系列仓、AA、API 平台、HN item 49792730 / 49796660 于 2026-09-22 均核到 200。本库未实测 API / Studio。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: Xiaomi MiMo’s new-series flagship landing on the HN front page on 2026-09-22, with a verifiable official page, MIT HF card, and same-day AA third-party coverage — a strong Models-board headline. Boundary: architecture, modalities, 1M context, RL theme, and series positioning are vendor claims from mimo.xiaomi.com/mimo-v2-6 meta and the HF card XiaomiMiMo/MiMo-V2.6-Pro-RL; Intelligence Index 46 and AA speed/pricing are Artificial Analysis board figures, not re-run here; individual vendor-table scores from the HF card are not restated on this card. Official page, HF Pro card, Flash/Distill sibling repos, AA, API platform, and HN items 49792730 / 49796660 all returned 200 on 2026-09-22. API / Studio not tested here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "featured": true,
+      "stars": 4,
+      "previewImage": "/previews/mimo-v2-6.webp",
+      "previewCredit": "预览：Playwright 实拍 mimo.xiaomi.com/mimo-v2-6 首屏",
+      "previewCreditEn": "Preview: Playwright capture of mimo.xiaomi.com/mimo-v2-6 above the fold"
+    },
     {
       "id": "step-5-preview",
       "slug": "step-5-preview",

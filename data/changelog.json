@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-22",
+      "title": "晚间收录：Models +1、HTML +2",
+      "titleEn": "Evening: Models +1, HTML +2",
+      "body": "最新模型：新开 /models/mimo-v2-6/ —— 小米 MiMo-V2.6 系列旗舰 MiMo-V2.6-Pro-RL（官方页 meta「frontier intelligence, all the modalities, built in public」）；HF 卡（MIT）官方称稀疏 MoE 1.02T / 42B 激活、原生全模态、1M 上下文；同系列 Flash-RL / Distill-Qwen-9B。第三方榜 Artificial Analysis Intelligence Index 46（AA 榜单，非本库复跑）。官方源 mimo.xiaomi.com/mimo-v2-6 + HF，产品源 API 平台，社区源 AA 与 HN（49792730 / 49796660）。HTML：收 Show HN WebGCM（item 49793545）——浏览器 WebGPU 全球气候模型（教育玩具框架，不声称科学精度），已配 3:2 自托管预览；收 System Design Atlas（item 49799241）——带交互架构图的系统设计阅读站（GitHub MIT），已配 3:2 自托管预览。models 9→10（1.1.7），html-items 74→76（1.3.35）。今晚未改 cases / agent-ui。X API 不可用，未走 X；扫 HN 首页与 Show。",
+      "bodyEn": "Models: new card /models/mimo-v2-6/ — Xiaomi MiMo-V2.6 series flagship MiMo-V2.6-Pro-RL (official-page meta “frontier intelligence, all the modalities, built in public”); HF card (MIT) vendor claims sparse MoE 1.02T / 42B activated, native omnimodal, 1M context; series siblings Flash-RL / Distill-Qwen-9B. Third-party board Artificial Analysis Intelligence Index 46 (AA’s figure, not re-run here). Official sources: mimo.xiaomi.com/mimo-v2-6 + HF; product: API platform; community: AA and HN (49792730 / 49796660). HTML: added Show HN WebGCM (item 49793545) — browser WebGPU global climate model (educational-toy framing; no scientific-accuracy claim) with a 3:2 self-hosted preview; and System Design Atlas (item 49799241) — system-design reading with interactive architecture diagrams (GitHub MIT) with a 3:2 self-hosted preview. models 9→10 (1.1.7), html-items 74→76 (1.3.35). No cases / agent-ui edits tonight. X API unavailable — X skipped; scanned HN front page and Show."
+    },
+    {
+      "date": "2026-09-22",
       "title": "工作日晨更：Grok Bot +2、HTML +1、Agent UI +1",
       "titleEn": "Weekday morning: Grok Bot +2, HTML +1, Agent UI +1",
       "body": "Grok Bot：收 HN「Grok Bot」帖下 jjcm 可复现的多席面料询价出样流程（item 49263241 / 父帖 49261514）；收 Show HN Open Bot（item 49365575）——MIT 开源「每席一电脑」相邻栈。HTML：HN 首页 Transformer Explainer（item 49792342）浏览器内 GPT-2 可视化，已配 3:2 自托管预览。Agent UI：Facet（MIT copy-paste R3F 组件库 + MCP / llms.txt），已配 3:2 自托管预览。X @bot 网页 403，未走 X API；扫 HN 首页/Show 与 Algolia（Grok Bot / CSS demo / three.js / single-file HTML）。cases 122→124（1.4.26），html-items 73→74（1.3.34），agent-ui 55→56（1.4.20）。",
