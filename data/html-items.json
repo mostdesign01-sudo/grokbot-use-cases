@@ -1,6 +1,67 @@
 {
   "items": [
     {
+      "id": "webgcm",
+      "slug": "webgcm",
+      "title": "WebGCM：浏览器里跑的全球气候模型（WebGPU）",
+      "titleEn": "WebGCM: a global climate model in the browser (WebGPU)",
+      "summary": "Show HN（item 49793545，2026-09-22）https://gcm.echorelay.net/ — 作者称多年打造的浏览器全球气候模型：静力大气 27 层、测地线 C 网格，含湿对流/云、风驱两层海洋、海冰/雪/土壤；内核走 WebGPU，无 WebGPU 时回退较慢 CPU；起始状态约 50 MB 下载；建议 Chrome / Edge / Safari 26。互动模型页 https://gcm.echorelay.net/climate。公开落地页与气候页均核到 HTTP 200；仓库 jlhawn/geodesic。预览为 Playwright 实拍落地页首屏裁 3:2 WebP（头less 下 WebGPU 画布可能空白时改拍营销页）。",
+      "summaryEn": "Show HN item 49793545 (2026-09-22) at https://gcm.echorelay.net/ — author notes a multi-year build of a browser global climate model: hydrostatic atmosphere with 27 levels on a geodesic C-grid, moist convection/clouds, a wind-driven two-layer ocean, sea ice/snow/soil; kernels on WebGPU with a slower CPU fallback; starting state ~50 MB download; best in Chrome / Edge / Safari 26. Interactive model: https://gcm.echorelay.net/climate. Landing and climate pages both verified HTTP 200; repo jlhawn/geodesic. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP (falls back to marketing/globe imagery if the WebGPU canvas is blank headless).",
+      "sourceUrl": "https://gcm.echorelay.net/",
+      "secondaryUrls": [
+        "https://github.com/jlhawn/geodesic",
+        "https://news.ycombinator.com/item?id=49793545"
+      ],
+      "previewImage": "/previews/webgcm.webp",
+      "types": [
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "webgpu",
+        "climate",
+        "education",
+        "browser",
+        "hn",
+        "visualization"
+      ],
+      "featured": true,
+      "qualityNote": "公开落地页与 /climate 互动页均 200（2026-09-22）。Show HN（item 49793545）：作者自述多年打造的教育向浏览器气候玩具/演示，站点文案列出大气层、网格、海洋与 WebGPU/CPU 回退等实现细节——一律为作者自述；本库不声称科学精度超出作者的教育玩具框架。仓库 jlhawn/geodesic 可达。预览为 Playwright 实拍落地页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Landing and /climate interactive pages both 200 (2026-09-22). Show HN item 49793545: the author describes a multi-year educational browser climate toy/demo; site copy lists atmosphere levels, grid, ocean, and WebGPU/CPU fallback details — all author claims. This library does not claim scientific accuracy beyond the author’s educational-toy framing. Repo jlhawn/geodesic reachable. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-09-22T12:30:00Z"
+    },
+    {
+      "id": "system-design-atlas",
+      "slug": "system-design-atlas",
+      "title": "System Design Atlas：带交互架构图的系统设计阅读站",
+      "titleEn": "System Design Atlas: system-design reading with interactive architecture diagrams",
+      "summary": "HN（item 49799241，2026-09-22）https://atlas-sysdes.vercel.app/ — 系统设计阅读站：概念模块、技术页，以及带交互架构图的完整设计文档；GitHub mertkahyaoglu/atlas（MIT）描述与主页一致。公开页与仓库均核到可达；预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN item 49799241 (2026-09-22) at https://atlas-sysdes.vercel.app/ — a system-design reading site with concept modules, technology pages, and worked designs that include interactive architecture diagrams; GitHub mertkahyaoglu/atlas (MIT) matches the homepage description. Public page and repo verified reachable; preview is a Playwright capture cropped to 3:2 WebP.",
+      "sourceUrl": "https://atlas-sysdes.vercel.app/",
+      "secondaryUrls": [
+        "https://github.com/mertkahyaoglu/atlas",
+        "https://news.ycombinator.com/item?id=49799241"
+      ],
+      "previewImage": "/previews/system-design-atlas.webp",
+      "types": [
+        "docs",
+        "interactive"
+      ],
+      "tags": [
+        "system-design",
+        "architecture",
+        "diagrams",
+        "education",
+        "hn"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 200（2026-09-22）。GitHub 仓库 MIT，README/描述与主页一致：concept modules、technology pages、worked designs with interactive architecture diagrams。HN item 49799241。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Public page 200 (2026-09-22). GitHub repo is MIT; README/description matches the homepage: concept modules, technology pages, and worked designs with interactive architecture diagrams. HN item 49799241. Preview is a Playwright capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-09-22T12:30:00Z"
+    },
+    {
       "id": "transformer-explainer",
       "slug": "transformer-explainer",
       "title": "Transformer Explainer：浏览器里可视化 GPT-2 Transformer",
@@ -2141,9 +2202,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-22T01:20:00Z",
+    "updatedAt": "2026-09-22T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.34",
-    "count": 74
+    "version": "1.3.35",
+    "count": 76
   }
 }
