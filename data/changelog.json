@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-24",
+      "title": "收录：美区 PayPal 绑国内 Visa（工具笔记）",
+      "titleEn": "Catalog: US PayPal with a China-issued Visa (tool note)",
+      "body": "Grok Bot Cases：收何居上（@hejushang8）2026-09-23 短帖及同日长文。短帖是他的美区 PayPal 绑招商银行 Visa（截图尾号 2852），再挂到美区 Apple ID。长文讲个人账户付款（作者称 AI 订阅、VPS、美区 Apple ID），收款和商业功能他写明不涉及。口径与 Saily 美国号码那条相同：工具笔记，详情按 X 落地加厚（它是什么 / 对照 / 怎么试 / 边界）。预览为作者两张截图拼成 3:2。作者自述；本站未开户、未绑卡；价格与优惠码无关；封号风险和「非金融建议」写进审批边界；完整步骤链到作者长文。cases 125→126（1.4.28→1.4.29）。未改 html / agent-ui / models。",
+      "bodyEn": "Grok Bot Cases: added He Jushang (@hejushang8)’s 23 Sept 2026 short post and same-day article. The post shows his US PayPal linked to a China Merchants Bank Visa (screenshot ending 2852) and then to a US Apple ID. The article covers a personal account used to pay (he names AI subscriptions, VPS, and a US Apple ID); receiving and business features are out of scope in his piece. Same framing as the Saily US-number note: a tool tip, with an X-landing thickened to what-it-is / contrast / try-it / boundaries. Preview is his two screenshots composited to 3:2. Author self-report; this site did not open an account or bind a card; prices and promo codes are unrelated; freeze risk and “not financial advice” sit on the approval boundary; full steps link to his article. cases 125→126 (1.4.28→1.4.29). No html / agent-ui / models edits."
+    },
+    {
       "date": "2026-09-23",
       "title": "晚间收录：Agent UI +1、HTML +2",
       "titleEn": "Evening catalog: Agent UI +1, HTML +2",
