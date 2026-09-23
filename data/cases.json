@@ -1,6 +1,206 @@
 {
   "cases": [
     {
+      "id": "bybit-taiwan-card-ai-pay",
+      "slug": "bybit-taiwan-card-ai-pay",
+      "title": "工具：Bybit 台湾卡绑支付宝/微信 — AI 订阅支付旁路",
+      "titleEn": "Tool tip: Bybit Taiwan card on Alipay/WeChat — an AI-subscription payment side path",
+      "summary": "Crypto带土（@daitu0822）2026-09-23 帖：Bybit Card 最近出了台湾卡；作者称可以绑定支付宝、微信和 Apple Pay，并用来开通 ChatGPT 会员。他自称为这张卡的重度用户，写了一篇给新手的开通教程。帖里的准备项是作者列的：任意邮箱、台湾地区 VPN、+86 手机号、本人身份证、台湾住址。注册链接 partner.bybit.com/b/111085 和邀请码 111085 是作者的推广码，不是本站的码；作者称用该码注册大约有 20U 新人奖励，申请卡片时再填同一推广码、消费满 100U 再赠 20U。作者还称卡开通后可用于 ChatGPT、海外服务器 / IP 和国外酒店订房软件，自己用了大约两年。本条与已上线的 Saily 美国号码笔记同一类：AI 支付旁路工具笔记，不是 Grok Bot 玩法。同日何居上（@hejushang8）的美区 PayPal 帖是另一条社区笔记，这里只链他的 X，不依赖尚未合并的站内路径。",
+      "summaryEn": "Crypto带土 (@daitu0822), 23 Sept 2026: Bybit Card has a new Taiwan card; the author says it can be bound to Alipay, WeChat, and Apple Pay and used to open a ChatGPT membership. He calls himself a heavy user of the card and published a beginner setup tutorial. The prep list is his: any email, a Taiwan-region VPN, a +86 phone number, his own ID, and a Taiwan address. The signup link partner.bybit.com/b/111085 and invite code 111085 are the author’s referral, not this site’s; he says the code is worth about 20U for a new signup, and entering it again on the card application pays another 20U after 100U of spend. He also says that once the card is open it works for ChatGPT, overseas servers / IPs, and foreign hotel-booking apps, and that he has used it for about two years. Listed in the same family as the live Saily US-number note: an AI-payment side-path tool note, not a Grok Bot playbook. He Jushang’s (@hejushang8) US PayPal post from the same day is a sibling community tip; this entry links his X post and does not depend on an unmerged path on this site.",
+      "categories": [
+        "research",
+        "daily-digest"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://x.com/daitu0822/status/2102674335559520697",
+      "secondaryUrls": [
+        "https://www.bybit.com/en/help-center/article/Introduction-to-Bybit-Card",
+        "https://www.bybit.com/en/help-center/article/How-to-Apply-for-Bybit-Card",
+        "https://www.bybit.com/en/help-center/article/FAQ-Bybit-Card-General-Inquiries",
+        "https://www.bybit.com/en/help-center/article/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+        "https://www.bybit.com/en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+        "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/saily-us-number-esim/",
+        "https://x.com/hejushang8/status/2102670557859000332"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "作者自述。主源是 2026-09-23 08:20 UTC 的 X 帖（Asia/Shanghai 约 16:20）。X API 返回 client-not-enrolled，2026-09-24（Asia/Shanghai）用 fxtwitter 镜像核对了正文；附图为作者帖内 HS4y3GGbYAAulL1.jpg（1536×864），本站整图垫成 3:2，未另画界面。提交说明称该账号已认证；fxtwitter 的 author.verified 为空，本条不把认证徽章写成已核事实。邀请码 111085 与链接 partner.bybit.com/b/111085 是作者帖里的推广码，不是本站的码；约 20U 新人奖励、消费满 100U 再赠 20U、已邀请一两百人、已用约两年、能绑支付宝 / 微信 / Apple Pay、能付 ChatGPT 与海外 VPS / 酒店，全部是作者自述。本站没有注册 Bybit，没有申请 Bybit Card，没有绑定支付宝、微信或 Apple Pay，也没有购买 ChatGPT。作者帖里另有两处本站不复述、不写入怎么试、也不背书的说法：用地图上任意搜到的地址充当台湾住址；犯罪记录与是否公职人员的问卷，作者要求全部填否。身份地区、住址和问卷答案属于 KYC，由读者自己对照 Bybit 官方条款和当地法律。2026-09-24 未登录抓取时，帮助中心三篇返回了真实标题（Introduction to Bybit Card、How to Get Started with Bybit Card、FAQ — Bybit Card General Inquiries）；亚太持卡人条款帮助页指向法律页 /en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific，该页未登录抓取只有外壳，正文未读完，也没有核到单独的台湾卡条款页。不构成购买、金融或法律建议；官方规则优先。作者简介推广 daitu.cc / daituai.cc（AI 中转与会员代充），本条不收录为产品。预览是作者帖附图。不打星。",
+      "qualityNoteEn": "Author self-report. Primary source is the X post at 08:20 UTC on 23 Sept 2026 (about 16:20 Asia/Shanghai). The X API returned client-not-enrolled; on 24 Sept 2026 (Asia/Shanghai) the fxtwitter mirror was checked for the text. The attached image is the author’s HS4y3GGbYAAulL1.jpg (1536×864), padded here to 3:2 with no UI drawn on top. The task brief calls the account verified; fxtwitter’s author.verified was empty, so this entry does not treat a badge as a checked fact. Invite code 111085 and partner.bybit.com/b/111085 are the referral in the author’s post, not this site’s code. About 20U for a new signup, another 20U after 100U of spend, one or two hundred people invited, about two years of use, binding Alipay / WeChat / Apple Pay, and paying for ChatGPT plus overseas VPS / hotels are all his claims. This site did not register on Bybit, apply for a Bybit Card, bind Alipay, WeChat, or Apple Pay, or buy ChatGPT. Two further lines in the post are recorded only as his claims: this site does not repeat them as steps and does not endorse them — using any address found on a map as a Taiwan residence, and answering crime-record and public-office questionnaire items all in the negative. Identity region, address, and questionnaire answers are KYC; the reader checks Bybit’s own terms and local law. On a logged-out fetch on 24 Sept 2026, three Help Center articles returned real titles (Introduction to Bybit Card, How to Get Started with Bybit Card, FAQ — Bybit Card General Inquiries). The Asia Pacific cardholder-terms article points at the legal page /en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific; that page was only a shell when fetched logged-out, so the terms body was not read through here, and no Taiwan-only card terms page was confirmed. Not purchase, financial, or legal advice; official rules win. The author bio promotes daitu.cc / daituai.cc (AI relay and membership top-up); those are not catalogued as products on this entry. Preview is the author’s attached image. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "开户、KYC、申请卡片、绑定支付方式和扣款由读者自己承担。这是作者帖，不是购买、金融或法律建议；Bybit 官方条款和当地法律优先。没对照官方页面之前，不要按帖里的住址或问卷说法提交资料。",
+      "approvalBoundaryEn": "The reader owns signup, KYC, the card application, wallet binding, and charges. This is the author’s post, not purchase, financial, or legal advice; Bybit’s own terms and local law win. Do not submit address or questionnaire answers from the post before checking the official pages.",
+      "connectors": [
+        "Bybit",
+        "Alipay",
+        "WeChat",
+        "Apple Pay",
+        "ChatGPT"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/bybit-taiwan-card-ai-pay.webp",
+      "landing": {
+        "what": "这是一条 AI 订阅付款旁路的工具笔记，记 Crypto带土公开帖里的说法：Bybit Card 的台湾卡可以绑到支付宝、微信和 Apple Pay，并用来开通 ChatGPT 会员。作者自称为重度用户，帖子是给新手看的开通教程。本站按已经上线的 Saily 美国号码笔记同一类收录：相邻的实用工具，方便以后查海外 AI 怎么付款。它不是 Grok Bot 用法，也不是本站跑通的开卡流程。邀请码 111085 和 partner.bybit.com/b/111085 写在作者帖里，是他的推广码。下面的「怎么试」只做到四步：读原帖、看 Bybit 官方页面、自己承担 KYC 与卡片风险、再看作者声称能付什么。帖里关于住址和问卷怎么填的部分不进入步骤。",
+        "whatEn": "A tool note for paying AI subscriptions, recording what Crypto带土 published: a Taiwan Bybit Card can be bound to Alipay, WeChat, and Apple Pay and used to open a ChatGPT membership. He calls himself a heavy user, and the post is a beginner setup tutorial. This library lists it the same way as the live Saily US-number note: an adjacent utility for looking up how an overseas AI bill might be paid. It is not a Grok Bot playbook, and it is not a card application this site has run. Invite code 111085 and partner.bybit.com/b/111085 appear in his post; they are his referral. The try-steps below stop at four moves: read the post, open Bybit’s own pages, accept the KYC and card risk yourself, then read what he claims the card can pay. The post’s lines on how to fill an address and a questionnaire are not steps here.",
+        "contrast": {
+          "caption": "左列只写原帖里对得上的句子。右列写本站为什么这样记，避免把作者经验写成已经替读者跑通的开卡路径。",
+          "captionEn": "The left column is only what the post actually says. The right column is why this library records it that way, so the author’s experience is not written up as a card application this site has already run.",
+          "leftLabel": "作者帖",
+          "leftLabelEn": "The author’s post",
+          "rightLabel": "本站怎么收",
+          "rightLabelEn": "How this library lists it",
+          "rows": [
+            {
+              "aspect": "用来付什么",
+              "aspectEn": "What it is said to pay",
+              "left": "作者称台湾卡可以绑定支付宝、微信和 Apple Pay，并开通 ChatGPT 会员。他还称海外服务器、海外 IP 和国外酒店订房软件也能用，自己用了大约两年。他自称为重度用户，并称至少邀请了一两百人开通。",
+              "leftEn": "The author says the Taiwan card can be bound to Alipay, WeChat, and Apple Pay and can open a ChatGPT membership. He also says it works for overseas servers, overseas IPs, and foreign hotel-booking apps, and that he has used it for about two years. He calls himself a heavy user and says he has invited at least one or two hundred people to open one.",
+              "right": "收录口径停在 AI 支付旁路，和已上线的 Saily 美国号码笔记同一类。两年、邀请人数、哪些商户收这张卡，都是作者自称。本站没有绑定钱包，也没有购买 ChatGPT。同日的美区 PayPal 笔记只通过何居上的 X 帖互指。",
+              "rightEn": "The listing stops at an AI-payment side path, in the same family as the live Saily US-number note. The two years, the invite count, and which merchants take the card are his claims. This site did not bind a wallet or buy ChatGPT. The same-day US PayPal note is cross-referenced only through He Jushang’s X post."
+            },
+            {
+              "aspect": "推广码",
+              "aspectEn": "Referral code",
+              "left": "作者给出注册链接 partner.bybit.com/b/111085，或在 App 里填邀请码 111085。他称新人大约有 20U；申请卡片时再填 111085，消费满 100U 再赠 20U。",
+              "leftEn": "The author gives the signup link partner.bybit.com/b/111085, or invite code 111085 inside the app. He says a new signup is about 20U, and that entering 111085 again on the card application pays another 20U after 100U of spend.",
+              "right": "链接和邀请码都标成作者的推广码，处理和 Saily 优惠码相同：记在作者名下，不是本站的码。奖励金额没有复核。怎么试里的按钮不指向这条推广链接。",
+              "rightEn": "The link and the invite code are labeled as the author’s referral, the same treatment as Saily promo codes: attributed to the author, not this site’s code. The reward amounts were not re-checked. The try-step buttons do not point at that referral link."
+            },
+            {
+              "aspect": "教程和官方页面",
+              "aspectEn": "Tutorial and official pages",
+              "left": "作者描述的顺序在原帖里：身份认证选台湾并上传身份证，再到金融 → Card，国家选台湾，绑定 +86。他称通过通常是几分钟。",
+              "leftEn": "The order he describes is in the post: identity verification with Taiwan selected and an ID uploaded, then Finance → Card, country Taiwan, and a +86 number bound. He says approval is usually a few minutes.",
+              "right": "本站没有开 Bybit，也没有申请卡。2026-09-24 帮助中心三篇返回了真实标题；亚太持卡人条款帮助页指向法律页，该法律页未登录抓取只有外壳，正文没有在这里读完，也没有核到单独的台湾卡条款页。官方页面和当地法律优先于这篇教程。",
+              "rightEn": "This site did not open Bybit or apply for a card. On 24 Sept 2026 three Help Center articles returned real titles; the Asia Pacific cardholder-terms article points at a legal page that was only a shell when fetched logged-out, so the terms body was not read through here, and no Taiwan-only card terms page was confirmed. Official pages and local law win over this tutorial."
+            },
+            {
+              "aspect": "住址和问卷",
+              "aspectEn": "Address and questionnaire",
+              "left": "原帖里还有住址怎么填、以及犯罪记录 / 公职类问卷怎么答的句子。本列不抄那些句子。",
+              "leftEn": "The post also has lines on how to fill an address and how to answer crime-record / public-office questionnaire items. This column does not copy those lines.",
+              "right": "两处只记为作者帖中的说法。本站不复述成步骤，不背书。居住信息、身份地区和问卷答案是读者自己的 KYC 与合规风险。",
+              "rightEn": "Both stay as claims inside the author’s post. This site does not repeat them as steps and does not endorse them. Residence, identity region, and questionnaire answers are the reader’s KYC and compliance risk."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读作者原帖",
+            "titleEn": "Read the author’s post",
+            "body": "先读 Crypto带土 2026-09-23 的原帖。帖里有他的开通顺序、他自称的使用场景，以及邀请码 111085 和注册链接 partner.bybit.com/b/111085。这两处是作者的推广码，不是本站的码。作者称注册约有 20U 新人奖励，申请卡时再填同一码、消费满 100U 再赠 20U；这些数字没有复核。本页不代替原帖。",
+            "bodyEn": "Start with Crypto带土’s 23 Sept 2026 post. It has his setup order, the uses he claims, invite code 111085, and the signup link partner.bybit.com/b/111085. That code and that link are the author’s referral, not this site’s. He says a new signup is about 20U, and that entering the same code on the card application pays another 20U after 100U of spend; those figures were not re-checked. This page does not replace the post.",
+            "links": [
+              {
+                "href": "https://x.com/daitu0822/status/2102674335559520697",
+                "label": "原帖",
+                "labelEn": "Original post"
+              }
+            ]
+          },
+          {
+            "title": "对照 Bybit 官方条款",
+            "titleEn": "Check Bybit’s own terms",
+            "body": "再打开 Bybit 自己的页面，看资格、地区和证件要求。2026-09-24 未登录打开时，介绍、申请入门和常见问题三篇帮助中心文章带有真实标题。亚太持卡人条款的帮助页把最新文本指到法律页；该法律页未登录抓取只有外壳，条款正文没有在这里读完，也没有核到单独的台湾卡条款页。作者教程不能代替这些页面。",
+            "bodyEn": "Then open Bybit’s own pages for eligibility, region, and ID requirements. On a logged-out open on 24 Sept 2026, the introduction, the getting-started article, and the general FAQ each had a real Help Center title. The Asia Pacific cardholder-terms article points at a legal page for the latest text; that legal page was only a shell when fetched logged-out, so the terms body was not read through here, and no Taiwan-only card terms page was confirmed. The author’s tutorial does not replace those pages.",
+            "links": [
+              {
+                "href": "https://www.bybit.com/en/help-center/article/Introduction-to-Bybit-Card",
+                "label": "Bybit Card 介绍",
+                "labelEn": "Introduction to Bybit Card"
+              },
+              {
+                "href": "https://www.bybit.com/en/help-center/article/How-to-Apply-for-Bybit-Card",
+                "label": "申请入门",
+                "labelEn": "How to get started"
+              },
+              {
+                "href": "https://www.bybit.com/en/help-center/article/FAQ-Bybit-Card-General-Inquiries",
+                "label": "常见问题",
+                "labelEn": "General FAQ"
+              },
+              {
+                "href": "https://www.bybit.com/en/help-center/article/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+                "label": "亚太持卡人条款（帮助页）",
+                "labelEn": "Asia Pacific cardholder terms (Help Center)"
+              },
+              {
+                "href": "https://www.bybit.com/en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+                "label": "条款法律页",
+                "labelEn": "Terms legal page"
+              }
+            ]
+          },
+          {
+            "title": "KYC、合规和卡片风险自己承担",
+            "titleEn": "You own the KYC, compliance, and card risk",
+            "body": "账户、证件、手机号、卡片和扣款都是读者自己的。加密卡可能被拒付、冻结或停发。作者帖里还有住址怎么填、以及犯罪记录 / 公职类问卷怎么答的句子；本站不把那些句子写成步骤，也不背书。没读完官方条款之前，不要按那篇帖子提交身份资料或绑定支付方式。",
+            "bodyEn": "The account, ID, phone number, card, and charges are the reader’s. A crypto card can be declined, frozen, or withdrawn. The author’s post also has lines on how to fill an address and how to answer crime-record / public-office questionnaire items; this site does not turn those lines into steps and does not endorse them. Do not submit identity details or bind a wallet from that post before reading the official terms.",
+            "links": [
+              {
+                "href": "https://www.bybit.com/en/help-center/article/FAQ-Bybit-Card-General-Inquiries",
+                "label": "Bybit Card 常见问题",
+                "labelEn": "Bybit Card FAQ"
+              },
+              {
+                "href": "https://www.bybit.com/en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+                "label": "持卡人条款法律页",
+                "labelEn": "Cardholder terms legal page"
+              }
+            ]
+          },
+          {
+            "title": "再看作者声称的付款用途",
+            "titleEn": "Then the payment uses he claims",
+            "body": "作者称卡开通后可以绑支付宝、微信和 Apple Pay，并用于 ChatGPT、海外服务器 / IP 和国外酒店订房软件。这是他的使用记录。本站没有绑定这些钱包，也没有购买 ChatGPT。同一类已经上线的笔记是 Saily 美国号码；同日何居上的美区 PayPal 帖是另一条社区笔记，这里只链他的 X。",
+            "bodyEn": "The author says that once the card is open it can be bound to Alipay, WeChat, and Apple Pay and used for ChatGPT, overseas servers / IPs, and foreign hotel-booking apps. That is his usage log. This site did not bind those wallets or buy ChatGPT. The live note in the same family is the Saily US number; He Jushang’s US PayPal post from the same day is a sibling community tip, linked here only on X.",
+            "links": [
+              {
+                "href": "https://x.com/daitu0822/status/2102674335559520697",
+                "label": "作者声称的用途（原帖）",
+                "labelEn": "Uses he claims (original post)"
+              },
+              {
+                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/saily-us-number-esim/",
+                "label": "本站 Saily 笔记",
+                "labelEn": "Saily note on this site"
+              },
+              {
+                "href": "https://x.com/hejushang8/status/2102670557859000332",
+                "label": "何居上 PayPal 帖",
+                "labelEn": "He Jushang PayPal post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本站没有注册 Bybit，没有申请 Bybit Card，没有绑定支付宝、微信或 Apple Pay，也没有购买 ChatGPT。预览图是作者帖里的附图。",
+            "textEn": "This site did not register on Bybit, apply for a Bybit Card, bind Alipay, WeChat, or Apple Pay, or buy ChatGPT. The preview is the image attached to the author’s post."
+          },
+          {
+            "text": "邀请码 111085 和 partner.bybit.com/b/111085 是作者的推广码，不是本站的码。约 20U 的奖励是作者自称，没有复核。",
+            "textEn": "Invite code 111085 and partner.bybit.com/b/111085 are the author’s referral, not this site’s code. The roughly 20U rewards are what he claims; they were not re-checked."
+          },
+          {
+            "text": "作者帖里关于住址和问卷的说法，本站不复述成步骤、不背书。KYC、合规、拒付和停卡由读者自己承担。不是购买建议，也不是金融或法律建议。Bybit 官方规则和当地法律优先。",
+            "textEn": "This site does not repeat the post’s address and questionnaire lines as steps and does not endorse them. KYC, compliance, declines, and a card being stopped are the reader’s. Not purchase advice, and not financial or legal advice. Bybit’s own rules and local law win."
+          },
+          {
+            "text": "没有 Skill、Routine，也没有多 Agent。和本实验室的关系只是：有人用这类卡去付海外 AI 订阅。",
+            "textEn": "No Skill, no Routine, and no multi-agent setup. The link to this lab is only that some people use a card like this to pay an overseas AI subscription."
+          }
+        ],
+        "previewCredit": "作者帖附图 HS4y3GGbYAAulL1.jpg（@daitu0822，2026-09-23，1536×864）。本站整图垫成 3:2，未改画面。图中的邀请码是作者的推广码，不是本站的码。本站未登录核对该账户。",
+        "previewCreditEn": "Author image HS4y3GGbYAAulL1.jpg (@daitu0822, 23 Sept 2026, 1536×864). Padded here to 3:2; the picture was not edited. The invite code in the image is the author’s referral, not this site’s code. This site did not sign in to check that account."
+      },
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T23:55:00Z"
+    },
+    {
       "id": "errand-opensource",
       "slug": "errand-opensource",
       "title": "Errand：开源「每席一电脑」Grok Bot / Muse 相邻桌面（Runta）",
@@ -4572,11 +4772,19 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T06:45:00Z",
+    "updatedAt": "2026-09-23T23:55:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.28",
-    "count": 125,
+    "version": "1.4.29",
+    "count": 126,
     "sourcesCrawled": [
+      "https://x.com/daitu0822/status/2102674335559520697",
+      "https://www.bybit.com/en/help-center/article/Introduction-to-Bybit-Card",
+      "https://www.bybit.com/en/help-center/article/How-to-Apply-for-Bybit-Card",
+      "https://www.bybit.com/en/help-center/article/FAQ-Bybit-Card-General-Inquiries",
+      "https://www.bybit.com/en/help-center/article/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+      "https://www.bybit.com/en/legal/bybit-card/Bybit-Cardholder-Terms-Conditions-Asia-Pacific",
+      "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/saily-us-number-esim/",
+      "https://x.com/hejushang8/status/2102670557859000332",
       "https://runerrand.dev/",
       "https://github.com/runta-dev/errand",
       "https://runta.com/blog/building-errand-in-one-week/",

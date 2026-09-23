@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-24",
+      "title": "收录：Bybit 台湾卡 AI 支付旁路",
+      "titleEn": "Catalog: Bybit Taiwan card AI-payment side path",
+      "body": "Grok Bot：新增 bybit-taiwan-card-ai-pay。Crypto带土（@daitu0822）2026-09-23 帖；X API 为 client-not-enrolled，正文用 fxtwitter 镜像核对。作者称台湾 Bybit Card 可绑支付宝 / 微信 / Apple Pay 并开通 ChatGPT。邀请码 111085 与 partner.bybit.com/b/111085 标明为作者推广码，不是本站的码。怎么试只到读原帖、对照 Bybit 官方帮助页与条款入口、读者自担 KYC / 合规 / 卡片风险、以及作者声称的付款用途。帖中用地图地址充当台湾住址、以及问卷犯罪 / 公职题全部填否，只记为作者说法，不写入步骤、不背书。本站未开户、未申请卡、未绑支付、未买 ChatGPT。交叉链接已上线的 Saily 案例；PayPal 旁路只链何居上的 X 帖，不依赖未合并的站内路径。作者简介里的 daitu.cc / daituai.cc 不作为产品收录。预览为作者附图垫成 3:2。cases 125→126，数据版本 1.4.28→1.4.29。未改 html / agent-ui / models。",
+      "bodyEn": "Grok Bot: added bybit-taiwan-card-ai-pay. Source is Crypto带土’s (@daitu0822) 23 Sept 2026 post; the X API returned client-not-enrolled, so the text was checked on the fxtwitter mirror. The author says a Taiwan Bybit Card can be bound to Alipay / WeChat / Apple Pay and used to open ChatGPT. Invite code 111085 and partner.bybit.com/b/111085 are labeled as the author’s referral, not this site’s code. Try-steps stop at reading the post, checking Bybit’s Help Center pages and the terms entry point, the reader owning KYC / compliance / card risk, and the payment uses he claims. Using a map address as a Taiwan residence, and answering crime / public-office questionnaire items all in the negative, are recorded only as claims in his post — not written as steps and not endorsed. This site did not open an account, apply for a card, bind a wallet, or buy ChatGPT. Cross-links the live Saily case; the PayPal side path is linked only via He Jushang’s X post, not an unmerged path on this site. daitu.cc / daituai.cc in the author bio are not catalogued as products. Preview is the author’s image padded to 3:2. cases 125→126, dataset 1.4.28→1.4.29. No html / agent-ui / models edits."
+    },
+    {
       "date": "2026-09-23",
       "title": "晚间收录：Agent UI +1、HTML +2",
       "titleEn": "Evening catalog: Agent UI +1, HTML +2",
