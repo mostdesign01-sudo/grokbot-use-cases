@@ -62,6 +62,22 @@ npm run preview  # 预览生产构建
 9. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
 10. 提交并推送到 `main`
 
+## 可从 X 链出的案例
+
+目录卡可以先薄。某条案例一旦可能从 X 或其它对外帖链到本站详情页，落地页必须先加厚，再放链接。薄目录卡不要配 X CTA。
+
+落地页要有：
+
+- **它是什么**：说清这条是什么，以及它不是什么
+- **有用的对照，或为什么收录**：不要只把帖子草稿再贴一遍
+- **怎么试**：具体步骤，每步有真实外链
+- **边界**：依赖、密钥、对外动作、不要误当成官方替代
+- **真实预览**（有界面的产品）：沿用 `public/previews/{id}.webp`，3:2。截真实界面，不要画假 UI
+
+Grok Bot 详情用 `data/cases.json` 的可选 `landing`（字段见 [`data/schema.md`](data/schema.md)）。填了 `landing.steps` 就替换通用的 Skill / Routine 上手路径。
+
+Cases may stay thin in the directory. If one might be linked from X or another public post, thicken the landing before adding the CTA. A thin card should not get an X link. The landing needs: what it is, a useful contrast or why it is listed, try-steps with real links, boundaries, and a real preview when it is a UI product.
+
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
 
 构建后也可访问 `/grokbot-use-cases/data.json` 下载当前数据集。

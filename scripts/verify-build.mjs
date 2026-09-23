@@ -404,6 +404,29 @@ if (!favorites.includes("gh-star-pill") || !favorites.includes("gh-star-line") |
   process.exit(1);
 }
 
+const errandPage = await readFile(new URL("../dist/cases/errand-opensource/index.html", import.meta.url), "utf8");
+const errandChecks = [
+  "它是什么",
+  "怎么试",
+  "对照",
+  "边界",
+  "https://runerrand.dev/",
+  "https://github.com/runta-dev/errand",
+  "https://news.ycombinator.com/item?id=49803044",
+  "https://runta.com/blog/building-errand-in-one-week/",
+  "/previews/errand-opensource.webp",
+];
+for (const needle of errandChecks) {
+  if (!errandPage.includes(needle)) {
+    console.error(`cases/errand-opensource/ is missing landing content: ${needle}`);
+    process.exit(1);
+  }
+}
+if (errandPage.includes("把跑通的步骤存成 Skill") || errandPage.includes("再上 Routine")) {
+  console.error("cases/errand-opensource/ still renders the generic Skill / Routine start path.");
+  process.exit(1);
+}
+
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);

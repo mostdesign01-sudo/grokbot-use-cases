@@ -5,8 +5,8 @@
       "slug": "errand-opensource",
       "title": "Errand：开源「每席一电脑」Grok Bot / Muse 相邻桌面（Runta）",
       "titleEn": "Errand: open-source Grok Bot / Muse-style desktop (Runta)",
-      "summary": "HN（item 49803044，2026-09-22）与作者长文：Apache-2.0 桌面客户端 Errand（runta-dev/errand，官网 runerrand.dev）——每个队友有独立云电脑（shell/浏览器/文件系统），任务跑在 Runta 上，关本地 App 也不停；可 VNC 偷看/接管桌面。作者拆解一周做出桌面壳的原因：runtime / computer-use / agent loop / 持久化都在 Runta，桌面约 4k 行 TypeScript。对想对照 Grok Bot「专席电脑 + 可离开」的人，是可复现的开源相邻栈（依赖 Runta；非官方替代品）。",
-      "summaryEn": "HN item 49803044 (2026-09-22) plus the author’s write-up: Apache-2.0 desktop client Errand (runta-dev/errand, runerrand.dev) — each teammate gets its own cloud computer (shell/browser/filesystem); runs live on Runta so quitting the local app doesn’t stop work; VNC to watch or take over. The post explains shipping the desktop shell in about a week because runtime, computer-use, agent loop, and persistence already sat in Runta (~4k lines of TypeScript in the app). A reproducible open-source adjacent stack for comparing Grok Bot’s per-seat computer + leave-and-return (depends on Runta; not an official replacement).",
+      "summary": "Apache-2.0 桌面壳 Errand（runerrand.dev）：每个队友一台 Runta 云电脑（shell / 浏览器 / 文件）。用来对照 Grok Bot「每席一电脑」，不是官方替代品。",
+      "summaryEn": "Apache-2.0 desktop shell Errand (runerrand.dev): each teammate gets a Runta cloud computer (shell / browser / files). Listed beside Grok Bot’s per-seat computer — not an official replacement.",
       "categories": [
         "community",
         "engineering",
@@ -20,15 +20,15 @@
         "https://news.ycombinator.com/item?id=49803044"
       ],
       "sourceType": "community",
-      "qualityNote": "Apache-2.0（2026-09-23 gh api）。HN item 49803044；仓库与长文可核验。依赖 Runta 云 runtime；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。",
-      "qualityNoteEn": "Apache-2.0 (gh api, 2026-09-23). HN item 49803044; repo and write-up verified. Depends on Runta cloud runtime; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement.",
+      "qualityNote": "Apache-2.0（GitHub license API，2026-09-23）。已对照 HN item 49803044、仓库 README、官网 FAQ 与作者 2026-09-22 长文。预览裁自长文界面图 conversation-and-computer.webp，3:2 自托管。依赖 Runta；不当官方替代品。",
+      "qualityNoteEn": "Apache-2.0 (GitHub license API, 2026-09-23). Checked against HN item 49803044, the repo README, the site FAQ, and the author’s 2026-09-22 write-up. Preview is the write-up UI image conversation-and-computer.webp, cropped to 3:2 and self-hosted. Depends on Runta; not marketed as an official replacement.",
       "difficulty": "advanced",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": true,
       "requiresApproval": true,
-      "approvalBoundary": "自建/试用时的 Runta 账号、密钥与对外电脑动作自行管控；勿把未审流程直接上生产。",
-      "approvalBoundaryEn": "Self-host/trial Runta accounts, keys, and outbound computer actions are yours to gate; do not put unreviewed flows straight into production.",
+      "approvalBoundary": "Runta 账号、密钥与云电脑上的对外动作由读者自己负责；未审流程不要直接上生产。",
+      "approvalBoundaryEn": "The reader owns the Runta account, keys, and outbound actions on the cloud computer; do not put an unreviewed flow straight into production.",
       "connectors": [
         "browser",
         "computer",
@@ -36,8 +36,117 @@
       ],
       "language": "en",
       "featured": true,
+      "previewImage": "/previews/errand-opensource.webp",
+      "landing": {
+        "what": "Errand 是开源 macOS 桌面客户端，许可证 Apache-2.0（仓库 LICENSE；GitHub license API 于 2026-09-23 仍为 Apache-2.0）。官网写明由 Runta Cloud Agents 驱动：每个队友有自己的对话，以及一台带着文件和工具的云电脑。关掉本地 App 不会删掉队友、对话或文件——App 只是看云端工作区的窗口。作者 Shiqi Mei 的 2026-09-22 长文，以及 HN item 49803044 的标题，把它说成 Grok Bot / Muse 的开源相邻做法。本站按这个口径收录：可复现的相邻栈，不是官方 Grok Bot 或 Muse 的替代品。",
+        "whatEn": "Errand is an open-source macOS desktop client under Apache-2.0 (repo LICENSE; the GitHub license API still reported Apache-2.0 on 2026-09-23). The site says it is powered by Runta Cloud Agents: each teammate has a conversation and a cloud computer with files and tools. Closing the local app does not delete teammates, conversations, or files — the app is a window onto the cloud workspace. Shiqi Mei’s 2026-09-22 write-up, and the title of HN item 49803044, frame it as an open-source take on Grok Bot / Muse. This library lists it on that basis: a reproducible adjacent stack, not an official Grok Bot or Muse replacement.",
+        "contrast": {
+          "caption": "左列是 Errand 在长文、仓库和官网上对得上的事实。右列只说明它为什么被拿来对照 Grok Bot「每席一电脑」，不补写本库没核过的官方操作。",
+          "captionEn": "The left column is what the write-up, repo, and site actually say about Errand. The right column only says why it sits next to Grok Bot’s per-seat computer — it does not fill in official behavior this library has not checked.",
+          "leftLabel": "Errand",
+          "leftLabelEn": "Errand",
+          "rightLabel": "对照 Grok Bot「每席一电脑」",
+          "rightLabelEn": "Beside Grok Bot’s per-seat computer",
+          "rows": [
+            {
+              "aspect": "电脑在哪",
+              "aspectEn": "Where the computer is",
+              "left": "每个队友一台 Runta runtime：独立的 shell、浏览器和文件系统，跨任务还在。作者写明这台电脑在云上，点按发生在 runtime 里，不在你的笔记本上。",
+              "leftEn": "Each teammate gets a Runta runtime: its own shell, browser, and filesystem that stick around between tasks. The write-up says that computer is in the cloud — clicks happen on the runtime, not on your laptop.",
+              "right": "同一类问题：一席一台电脑。这里不比较 Grok Bot 的具体实现。",
+              "rightEn": "Same class of idea: one computer per seat. This row does not compare Grok Bot’s implementation."
+            },
+            {
+              "aspect": "关掉本地 App",
+              "aspectEn": "Quitting the local app",
+              "left": "执行在 Runta，Errand 是客户端。退出 App 不会停掉正在跑的任务；再打开时按对话拉回 runs 和产物。官网 FAQ：关掉 App 不会删除队友、对话或文件。",
+              "leftEn": "Execution lives on Runta; Errand is the client. Quitting the app does not stop a run in progress; reopening fetches runs and artifacts per conversation. The site FAQ says closing the app does not delete teammates, conversations, or files.",
+              "right": "用来对照「交办之后可以离开」。官方 Grok Bot 是否同样离开，以 xAI 文档为准。",
+              "rightEn": "Useful as a comparison for handing work off and leaving. Whether official Grok Bot behaves the same way is a question for the xAI docs."
+            },
+            {
+              "aspect": "看桌面 / 接管",
+              "aspectEn": "Watch or take over",
+              "left": "可以从 Errand 打开队友的屏幕。作者写这是连到 runtime 的 VNC，用 noVNC 画在界面里，可以看，也可以接管。2026-09-23 仓库里 src/ui/components/VncDesktop.tsx 为 72 行，与长文一致。",
+              "leftEn": "You can open a teammate’s screen from Errand. The author describes a VNC session to the runtime, drawn with noVNC, for watching or taking over. On 2026-09-23, src/ui/components/VncDesktop.tsx in the repo is 72 lines, matching the write-up.",
+              "right": "只记录 Errand 怎么看云桌面，不把这套 VNC 说成 Grok Bot 的做法。",
+              "rightEn": "This records how Errand shows the cloud desktop. It does not claim Grok Bot uses this VNC path."
+            },
+            {
+              "aspect": "壳为什么薄",
+              "aspectEn": "Why the shell is thin",
+              "left": "作者称桌面大约 4,000 行 TypeScript，因为 runtime、computer-use、agent loop 和持久化已经在 Runta，所以一个人大约一周做出壳。本库没有重数整个仓库的行数。",
+              "leftEn": "The author says the desktop app is about 4,000 lines of TypeScript, because the runtime, computer-use, agent loop, and persistence already lived in Runta — so one person shipped the shell in about a week. This library did not re-count the repo.",
+              "right": "对照的是「专席电脑 + 可离开」可以落在一层薄客户端上，前提是 runtime 已经存在。不是从零复刻的官方产品。",
+              "rightEn": "The comparison is that a per-seat computer you can leave can sit on a thin client when the runtime already exists. It is not a from-scratch official product."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "打开官网",
+            "titleEn": "Open the site",
+            "body": "先看 runerrand.dev 上的产品说明。页面里的对话是示例，不连接真实 Agent，也不会把消息发出去。系统要求以 FAQ 当日文字为准：Apple Silicon、macOS 13+、Runta 账号，以及为 Agent 配好的模型。",
+            "bodyEn": "Start with the product page on runerrand.dev. The conversations on that page are samples: they do not connect to a real agent or send messages out. System requirements follow the FAQ as written that day: Apple Silicon, macOS 13+, a Runta account, and a model configured for the agents.",
+            "links": [
+              {
+                "href": "https://runerrand.dev/",
+                "label": "runerrand.dev",
+                "labelEn": "runerrand.dev"
+              }
+            ]
+          },
+          {
+            "title": "读仓库再在本机跑",
+            "titleEn": "Read the repo, then run it locally",
+            "body": "仓库是 runta-dev/errand，Apache-2.0。README 的 Quick start 是 clone 之后 npm ci、npm run dev（macOS 13+、Apple Silicon、Node.js 22–26）。本地桌面仍连接 Runta Cloud Agents，需要 Runta 账号和模型权限。",
+            "bodyEn": "The repo is runta-dev/errand, Apache-2.0. The README quick start is clone, then npm ci and npm run dev (macOS 13+, Apple Silicon, Node.js 22–26). The local desktop still connects to Runta Cloud Agents, so you need a Runta account and model access.",
+            "links": [
+              {
+                "href": "https://github.com/runta-dev/errand",
+                "label": "github.com/runta-dev/errand",
+                "labelEn": "github.com/runta-dev/errand"
+              }
+            ]
+          },
+          {
+            "title": "看 HN 和作者长文",
+            "titleEn": "Read HN and the author write-up",
+            "body": "HN item 49803044（2026-09-22）的标题把 Errand 称为一周做出的开源 Grok Bot / Muse alternative。Shiqi Mei 的长文解释壳为什么薄、关 App 为什么不停，并附有真实界面截图。",
+            "bodyEn": "HN item 49803044 (2026-09-22) titles Errand as an open-source Grok Bot / Muse alternative built in a week. Shiqi Mei’s write-up explains why the shell is thin, why quitting the app does not stop the work, and includes real UI screenshots.",
+            "links": [
+              {
+                "href": "https://news.ycombinator.com/item?id=49803044",
+                "label": "HN 49803044",
+                "labelEn": "HN 49803044"
+              },
+              {
+                "href": "https://runta.com/blog/building-errand-in-one-week/",
+                "label": "作者长文",
+                "labelEn": "Author write-up"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "依赖 Runta。官网和 README：云 runtime 与模型用量另计；需要 Runta 账号，并为 Agent 配好模型。作者称目前仅 macOS，模型和控制框架都可以换，并在做把 runtime 放到读者自己账号里的选项。",
+            "textEn": "Depends on Runta. The site and README say cloud runtime and model usage are billed separately; you need a Runta account and a model configured for the agents. The author says it is macOS-only for now, the model and harness are swappable, and a bring-your-own-cloud option is in progress so the runtime can sit in the reader’s account."
+          },
+          {
+            "text": "Runta 账号、密钥，以及云电脑上的对外动作（打开网页、点按、把内容发出去）由读者自己负责。没有审过的流程不要直接当成生产。",
+            "textEn": "The Runta account, keys, and outbound actions on the cloud computer (opening pages, clicking, sending anything out) are the reader’s responsibility. Do not put an unreviewed flow straight into production."
+          },
+          {
+            "text": "不要把它宣传成官方 Grok Bot 或 Muse 的替代品。仓库描述和 HN 标题是作者或提交者的说法；本站只把它当作可复现的相邻栈。",
+            "textEn": "Do not market it as an official substitute for Grok Bot or Muse. The repo description and the HN title are the author or submitter’s framing; this library lists it as a reproducible adjacent stack."
+          }
+        ],
+        "previewCredit": "作者长文界面图：侧栏里的 Mira / Scout，以及 Mira 的云电脑。来源 runta.com/blog 的 conversation-and-computer.webp（2026-09-22），本站裁成 3:2。",
+        "previewCreditEn": "Author write-up UI: Mira / Scout in the sidebar, and Mira’s cloud computer. Source: conversation-and-computer.webp on runta.com/blog (2026-09-22), cropped here to 3:2."
+      },
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T01:25:00Z"
+      "updatedAt": "2026-09-23T06:45:00Z"
     },
     {
       "id": "hn-jjcm-fabric-swag-sourcing",
@@ -4463,11 +4572,16 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T01:25:00Z",
+    "updatedAt": "2026-09-23T06:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.27",
+    "version": "1.4.28",
     "count": 125,
     "sourcesCrawled": [
+      "https://runerrand.dev/",
+      "https://github.com/runta-dev/errand",
+      "https://runta.com/blog/building-errand-in-one-week/",
+      "https://news.ycombinator.com/item?id=49803044",
+      "https://runta.com/blog/images/errand/conversation-and-computer.webp",
       "https://cursor.com/docs/grok-bot/get-started",
       "https://blog.6yuwei.com/en/2026/08/28/grok-bot-cloud-vm-autonomous-agent-guide/",
       "https://threeui.com/three-js/bookshelf",

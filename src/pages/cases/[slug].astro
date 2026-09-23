@@ -39,6 +39,17 @@ const safeWithBound = boundZh
 const safeWithBoundEn = boundEn
   ? fill(ui.detail.safeWithBound, { bound: boundEn })
   : ui.detail.safeDefault;
+const landing = item.landing;
+const whatZh = landing?.what ?? item.summary;
+const whatEn = landing?.whatEn ?? summaryEn;
+const whatHeading = landing ? ui.detail.whatItIs : ui.detail.whatItDoes;
+const trySteps = landing?.steps ?? [];
+const contrast = landing?.contrast;
+const boundaries = landing?.boundaries ?? [];
+const previewAlt = fill(ui.detail.previewAlt, { title: item.title });
+const previewAltEn = fill(ui.detail.previewAlt, { title: item.titleEn });
+const previewCredit = landing?.previewCredit;
+const previewCreditEn = landing?.previewCreditEn;
 ---
 
 <BaseLayout
@@ -80,8 +91,19 @@ const safeWithBoundEn = boundEn
       </div>
       {
         item.previewImage && (
-          <figure class="detail-preview">
-            <img src={assetUrl(item.previewImage)} alt="" />
+          <figure class:list={["detail-preview", { "detail-preview-wide": Boolean(landing) }]}>
+            <img
+              src={assetUrl(item.previewImage)}
+              alt={previewAlt.zh}
+              data-aria-zh={previewAlt.zh}
+              data-aria-en={previewAltEn.en}
+            />
+            {(previewCredit || previewCreditEn) && (
+              <figcaption>
+                <span class="loc-zh">{previewCredit ?? previewCreditEn}</span>
+                <span class="loc-en">{previewCreditEn ?? previewCredit}</span>
+              </figcaption>
+            )}
           </figure>
         )
       }
@@ -90,10 +112,10 @@ const safeWithBoundEn = boundEn
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2><Loc zh={ui.detail.whatItDoes.zh} en={ui.detail.whatItDoes.en} /></h2>
+          <h2><Loc zh={whatHeading.zh} en={whatHeading.en} /></h2>
           <p>
-            <span class="loc-zh">{item.summary}</span>
-            <span class="loc-en">{summaryEn}</span>
+            <span class="loc-zh">{whatZh}</span>
+            <span class="loc-en">{whatEn}</span>
           </p>
           <p class="quality-note">
             <strong><Loc zh={ui.quality.zh} en={ui.quality.en} /></strong>
@@ -102,43 +124,150 @@ const safeWithBoundEn = boundEn
           </p>
         </section>
 
-        <section class="panel">
-          <h2><Loc zh={ui.detail.startPath.zh} en={ui.detail.startPath.en} /></h2>
-          {
-            item.approvalBoundary && (
-              <div class="approval-callout">
-                <strong><Loc zh={ui.detail.approvalBound.zh} en={ui.detail.approvalBound.en} /></strong>
-                <p>
-                  <span class="loc-zh">{item.approvalBoundary}</span>
-                  <span class="loc-en">{boundEn}</span>
+        {
+          contrast && contrast.rows.length > 0 && (
+            <section class="panel">
+              <h2><Loc zh={ui.detail.contrast.zh} en={ui.detail.contrast.en} /></h2>
+              {(contrast.caption || contrast.captionEn) && (
+                <p class="contrast-caption">
+                  <span class="loc-zh">{contrast.caption ?? contrast.captionEn}</span>
+                  <span class="loc-en">{contrast.captionEn ?? contrast.caption}</span>
                 </p>
+              )}
+              <div class="contrast-table">
+                <div class="contrast-head">
+                  <span />
+                  <span>
+                    <span class="loc-zh">{contrast.leftLabel}</span>
+                    <span class="loc-en">{contrast.leftLabelEn}</span>
+                  </span>
+                  <span>
+                    <span class="loc-zh">{contrast.rightLabel}</span>
+                    <span class="loc-en">{contrast.rightLabelEn}</span>
+                  </span>
+                </div>
+                {contrast.rows.map((row) => (
+                  <article class="contrast-row">
+                    <h3>
+                      <span class="loc-zh">{row.aspect}</span>
+                      <span class="loc-en">{row.aspectEn}</span>
+                    </h3>
+                    <div>
+                      <p class="contrast-kicker">
+                        <span class="loc-zh">{contrast.leftLabel}</span>
+                        <span class="loc-en">{contrast.leftLabelEn}</span>
+                      </p>
+                      <p>
+                        <span class="loc-zh">{row.left}</span>
+                        <span class="loc-en">{row.leftEn}</span>
+                      </p>
+                    </div>
+                    <div>
+                      <p class="contrast-kicker">
+                        <span class="loc-zh">{contrast.rightLabel}</span>
+                        <span class="loc-en">{contrast.rightLabelEn}</span>
+                      </p>
+                      <p>
+                        <span class="loc-zh">{row.right}</span>
+                        <span class="loc-en">{row.rightEn}</span>
+                      </p>
+                    </div>
+                  </article>
+                ))}
               </div>
+            </section>
+          )
+        }
+
+        <section class="panel">
+          <h2>
+            <Loc
+              zh={trySteps.length ? ui.detail.tryIt.zh : ui.detail.startPath.zh}
+              en={trySteps.length ? ui.detail.tryIt.en : ui.detail.startPath.en}
+            />
+          </h2>
+          {
+            trySteps.length > 0 ? (
+              <ol class="start-path">
+                {trySteps.map((step) => (
+                  <li>
+                    <strong>
+                      <span class="loc-zh">{step.title}</span>
+                      <span class="loc-en">{step.titleEn}</span>
+                    </strong>
+                    <p>
+                      <span class="loc-zh">{step.body}</span>
+                      <span class="loc-en">{step.bodyEn}</span>
+                    </p>
+                    {step.links.length > 0 && (
+                      <p class="start-links">
+                        {step.links.map((link) => (
+                          <a href={link.href} rel="noreferrer">
+                            <span class="loc-zh">{link.label}</span>
+                            <span class="loc-en">{link.labelEn}</span>
+                          </a>
+                        ))}
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <>
+                {
+                  item.approvalBoundary && (
+                    <div class="approval-callout">
+                      <strong><Loc zh={ui.detail.approvalBound.zh} en={ui.detail.approvalBound.en} /></strong>
+                      <p>
+                        <span class="loc-zh">{item.approvalBoundary}</span>
+                        <span class="loc-en">{boundEn}</span>
+                      </p>
+                    </div>
+                  )
+                }
+                <ol class="start-path">
+                  <li>
+                    <strong><Loc zh={ui.detail.safeStep.zh} en={ui.detail.safeStep.en} /></strong>
+                    <p>
+                      <span class="loc-zh">{item.approvalBoundary ? safeWithBound.zh : ui.detail.safeDefault.zh}</span>
+                      <span class="loc-en">{item.approvalBoundary ? safeWithBoundEn.en : ui.detail.safeDefault.en}</span>
+                    </p>
+                  </li>
+                  <li>
+                    <strong><Loc zh={ui.detail.saveSkill.zh} en={ui.detail.saveSkill.en} /></strong>
+                    <p>
+                      <span class="loc-zh">{item.hasSkill ? ui.detail.skillYes.zh : ui.detail.skillNo.zh}</span>
+                      <span class="loc-en">{item.hasSkill ? ui.detail.skillYes.en : ui.detail.skillNo.en}</span>
+                    </p>
+                  </li>
+                  <li>
+                    <strong><Loc zh={ui.detail.thenRoutine.zh} en={ui.detail.thenRoutine.en} /></strong>
+                    <p>
+                      <span class="loc-zh">{item.hasRoutine ? ui.detail.routineYes.zh : ui.detail.routineNo.zh}</span>
+                      <span class="loc-en">{item.hasRoutine ? ui.detail.routineYes.en : ui.detail.routineNo.en}</span>
+                    </p>
+                  </li>
+                </ol>
+              </>
             )
           }
-          <ol class="start-path">
-            <li>
-              <strong><Loc zh={ui.detail.safeStep.zh} en={ui.detail.safeStep.en} /></strong>
-              <p>
-                <span class="loc-zh">{item.approvalBoundary ? safeWithBound.zh : ui.detail.safeDefault.zh}</span>
-                <span class="loc-en">{item.approvalBoundary ? safeWithBoundEn.en : ui.detail.safeDefault.en}</span>
-              </p>
-            </li>
-            <li>
-              <strong><Loc zh={ui.detail.saveSkill.zh} en={ui.detail.saveSkill.en} /></strong>
-              <p>
-                <span class="loc-zh">{item.hasSkill ? ui.detail.skillYes.zh : ui.detail.skillNo.zh}</span>
-                <span class="loc-en">{item.hasSkill ? ui.detail.skillYes.en : ui.detail.skillNo.en}</span>
-              </p>
-            </li>
-            <li>
-              <strong><Loc zh={ui.detail.thenRoutine.zh} en={ui.detail.thenRoutine.en} /></strong>
-              <p>
-                <span class="loc-zh">{item.hasRoutine ? ui.detail.routineYes.zh : ui.detail.routineNo.zh}</span>
-                <span class="loc-en">{item.hasRoutine ? ui.detail.routineYes.en : ui.detail.routineNo.en}</span>
-              </p>
-            </li>
-          </ol>
         </section>
+
+        {
+          boundaries.length > 0 && (
+            <section class="panel">
+              <h2><Loc zh={ui.detail.boundaries.zh} en={ui.detail.boundaries.en} /></h2>
+              <ul class="model-highlights">
+                {boundaries.map((bound) => (
+                  <li>
+                    <span class="loc-zh">{bound.text}</span>
+                    <span class="loc-en">{bound.textEn}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
 
         {
           related.length > 0 && (
