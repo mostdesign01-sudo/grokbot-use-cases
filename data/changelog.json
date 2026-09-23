@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-23",
+      "title": "午间：Errand 落地页加厚",
+      "titleEn": "Midday: thicker Errand landing",
+      "body": "Grok Bot：加厚 Errand（errand-opensource）详情，避免从 X 点进来只看到目录卡复读。页面改为「它是什么 / 对照 / 怎么试 / 边界」；上手路径改成三条外链（runerrand.dev、runta-dev/errand、HN 49803044 与作者长文），不再用通用 Skill / Routine 模板。预览为作者长文界面图裁成 3:2 自托管。事实对照 HN、仓库 Apache-2.0、官网 FAQ 与 2026-09-22 长文；约 4,000 行 TypeScript 仍标作者称，未新造指标。README 补了「可从 X 链出的案例」最低线。cases 仍为 125，数据版本 1.4.27→1.4.28。未改其他库。",
+      "bodyEn": "Grok Bot: thickened the Errand (errand-opensource) detail page so an X click does not land on a directory card that repeats itself. The page is now what-it-is / contrast / try-it / boundaries; the start path is three outbound links (runerrand.dev, runta-dev/errand, HN 49803044 and the author write-up) instead of the generic Skill / Routine template. Preview is the author write-up UI, cropped to 3:2 and self-hosted. Facts checked against HN, the Apache-2.0 repo, the site FAQ, and the 2026-09-22 write-up; the ~4,000 lines of TypeScript stay labeled as the author’s claim, with no new metrics invented. README now states the minimum bar for cases that may be linked from X. cases stay at 125, dataset 1.4.27→1.4.28. No other libraries edited."
+    },
+    {
+      "date": "2026-09-23",
       "title": "工作日晨更：Grok Bot +1、HTML +2",
       "titleEn": "Weekday morning: Grok Bot +1, HTML +2",
       "body": "Grok Bot：收 Errand（HN item 49803044）——Apache-2.0 开源「每席一电脑」桌面客户端（runta-dev/errand / runerrand.dev），作者长文说明依赖 Runta runtime。HTML：收 gpu-lexer（HN item 49619464）——约 27KB 语言无关 WebGPU 语法高亮演示，已配 3:2 自托管预览；收 runboli.com Halo 3 Guardian 个人站（HN item 49732259），已配 3:2 自托管预览。本次未改 agent-ui。X @bot 未走 API；扫 HN 首页/Show 与 Algolia（Grok Bot / CSS demo / three.js / single-file HTML / WebGPU）。cases 124→125，html-items 76→78。",

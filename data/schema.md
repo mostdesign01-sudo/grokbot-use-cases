@@ -49,9 +49,22 @@
 | `language` | string | 条目文案语言，当前为 `zh` |
 | `featured` | boolean | 是否出现在首页精选 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `qualityNote` 里。不填则不显示星行 |
-| `previewImage` | string | 可选，站点根路径如 `/previews/id.webp` |
+| `previewImage` | string | 可选，站点根路径如 `/previews/id.webp`，界面类优先 3:2 |
+| `landing` | object | 可选。可能从 X 或其它对外帖链到详情页时使用，见下。有 `steps` 时详情页改走「怎么试」，不再渲染通用 Skill / Routine 上手路径 |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目最近校对时间 |
+
+## `landing`（X / 对外帖落地）
+
+目录卡可以先薄。一旦这条可能被链到详情页，先填 `landing`，再放外链。最低线见 README「可从 X 链出的案例」。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `what` / `whatEn` | string | 「它是什么」。不要把 `summary` 再贴一遍 |
+| `contrast` | object | 可选。`leftLabel` / `rightLabel`（及 `En`）加 `rows[]`：`aspect` `left` `right` 及对应 `En`。可选 `caption` / `captionEn`。右列只写对照理由，不编本库没核过的对方细节 |
+| `steps` | object[] | 可选。「怎么试」。每步 `title` `body`（及 `En`）和 `links[]`（`href` `label` `labelEn`），`href` 必须是真实外链 |
+| `boundaries` | object[] | 可选。「边界」。每条 `text` / `textEn`：依赖、密钥、对外动作、不要误当成官方替代 |
+| `previewCredit` / `previewCreditEn` | string | 可选。预览图出处。有界面的产品配真实 `previewImage`，不要画假 UI |
 
 ## 徽章映射
 

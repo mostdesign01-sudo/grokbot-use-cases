@@ -38,8 +38,55 @@ export interface CaseItem {
   /** Curator quality stars 1–5 (editorial; unrelated to GitHub stars). Unset = no rating shown. */
   stars?: number;
   previewImage?: string;
+  /**
+   * Optional thick landing for cases that may be linked from X or other posts.
+   * When `steps` is set, the detail page uses that try-path instead of the
+   * generic Skill / Routine block.
+   */
+  landing?: CaseLanding;
   publishedAt: string;
   updatedAt: string;
+}
+
+export interface CaseLandingLink {
+  href: string;
+  label: string;
+  labelEn: string;
+}
+
+export interface CaseLandingStep {
+  title: string;
+  titleEn: string;
+  body: string;
+  bodyEn: string;
+  links: CaseLandingLink[];
+}
+
+export interface CaseLandingContrastRow {
+  aspect: string;
+  aspectEn: string;
+  left: string;
+  leftEn: string;
+  right: string;
+  rightEn: string;
+}
+
+export interface CaseLanding {
+  what: string;
+  whatEn: string;
+  contrast?: {
+    caption?: string;
+    captionEn?: string;
+    leftLabel: string;
+    leftLabelEn: string;
+    rightLabel: string;
+    rightLabelEn: string;
+    rows: CaseLandingContrastRow[];
+  };
+  steps?: CaseLandingStep[];
+  boundaries?: Array<{ text: string; textEn: string }>;
+  previewCredit?: string;
+  previewCreditEn?: string;
 }
 
 export interface CasesMeta {
@@ -100,6 +147,26 @@ export function caseSearchText(item: CaseItem): string {
     item.categories.join(" "),
     item.approvalBoundary ?? "",
     item.approvalBoundaryEn ?? "",
+    item.landing?.what ?? "",
+    item.landing?.whatEn ?? "",
+    item.landing?.contrast?.caption ?? "",
+    item.landing?.contrast?.captionEn ?? "",
+    ...(item.landing?.contrast?.rows ?? []).flatMap((row) => [
+      row.aspect,
+      row.aspectEn,
+      row.left,
+      row.leftEn,
+      row.right,
+      row.rightEn,
+    ]),
+    ...(item.landing?.steps ?? []).flatMap((step) => [
+      step.title,
+      step.titleEn,
+      step.body,
+      step.bodyEn,
+      ...step.links.flatMap((link) => [link.label, link.labelEn, link.href]),
+    ]),
+    ...(item.landing?.boundaries ?? []).flatMap((bound) => [bound.text, bound.textEn]),
   ].join(" ");
 }
 

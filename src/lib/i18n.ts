@@ -231,6 +231,10 @@ export const ui = {
   detail: {
     lab: { zh: "实验室", en: "Lab" },
     whatItDoes: { zh: "这条用法在做什么", en: "What this use does" },
+    whatItIs: { zh: "它是什么", en: "What it is" },
+    contrast: { zh: "对照", en: "Contrast" },
+    tryIt: { zh: "怎么试", en: "Try it" },
+    boundaries: { zh: "边界", en: "Boundaries" },
     startPath: { zh: "上手路径", en: "How to start" },
     approvalBound: { zh: "审批边界", en: "Approval boundary" },
     related: { zh: "相关案例", en: "Related cases" },
