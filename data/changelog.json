@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-23",
+      "title": "晚间收录：Agent UI +1、HTML +2",
+      "titleEn": "Evening catalog: Agent UI +1, HTML +2",
+      "body": "Agent UI：收 Show HN RondoFlow（item 49812163，Algolia 核对 3pts）——MIT 本地优先，React Flow 画布编排本机 Claude Code CLI agent（Director / Planner / Advisor；可混 Claude Code / OpenAI / Perplexity），gh api 18★，无 npm 包，已配 3:2 自托管预览。HTML：收 lineselect（item 49813195，Algolia 核对 2pts）——MIT Rust CLI，管道里 Space 勾选 stdin 行再 Enter 继续，GH Pages 文档页已配 3:2 预览；收 OnDevice Tools（item 49813705，Algolia 核对 1pt）——站点与 README 自称 64 个纯浏览器工具、gh api 为 AGPL-3.0（仓库描述仍写 63），页面含广告与 gtag，处理按作者称在本地，已配 3:2 预览。今晚未改 cases / models。X API 不可用，未走 X；扫 HN Show 与 Algolia（晨间条目之后）。agent-ui 56→57（1.4.20→1.4.21），html-items 78→80（1.3.36→1.3.37）。",
+      "bodyEn": "Agent UI: added Show HN RondoFlow (item 49812163, 3pts on Algolia at check time) — MIT, local-first React Flow canvas that orchestrates local Claude Code CLI agents (Director / Planner / Advisor; can mix Claude Code / OpenAI / Perplexity), 18★ on the gh api, no npm package, with a 3:2 self-hosted preview. HTML: added lineselect (item 49813195, 2pts on Algolia at check time) — MIT Rust CLI that Space-selects stdin lines in a pipeline and Enter-continues, GH Pages docs with a 3:2 preview; and OnDevice Tools (item 49813705, 1pt on Algolia at check time) — site and README claim 64 browser-only tools, gh api license AGPL-3.0 (repo description still says 63), page includes ads and gtag, processing claimed client-side, with a 3:2 preview. No cases / models edits tonight. X API unavailable — X skipped; scanned HN Show and Algolia (after the morning items). agent-ui 56→57 (1.4.20→1.4.21), html-items 78→80 (1.3.36→1.3.37)."
+    },
+    {
+      "date": "2026-09-23",
       "title": "午间：Errand 落地页加厚",
       "titleEn": "Midday: thicker Errand landing",
       "body": "Grok Bot：加厚 Errand（errand-opensource）详情，避免从 X 点进来只看到目录卡复读。页面改为「它是什么 / 对照 / 怎么试 / 边界」；上手路径改成三条外链（runerrand.dev、runta-dev/errand、HN 49803044 与作者长文），不再用通用 Skill / Routine 模板。预览为作者长文界面图裁成 3:2 自托管。事实对照 HN、仓库 Apache-2.0、官网 FAQ 与 2026-09-22 长文；约 4,000 行 TypeScript 仍标作者称，未新造指标。README 补了「可从 X 链出的案例」最低线。cases 仍为 125，数据版本 1.4.27→1.4.28。未改其他库。",

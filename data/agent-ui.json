@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "id": "rondoflow",
+      "slug": "rondoflow",
+      "title": "RondoFlow：可视化编排本地 Claude Code Agent 团队",
+      "titleEn": "RondoFlow: visually orchestrate local Claude Code agent teams",
+      "summary": "Show HN（item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts）https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。官网与仓库均 HTTP 200；无 npm 包。预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49812163 (2026-09-23 ~05:55Z, 3pts on Algolia at check time) at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; no npm package. Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP.",
+      "sourceUrl": "https://rondoflow.app/",
+      "secondaryUrls": [
+        "https://github.com/rondoflow/rondoflow",
+        "https://news.ycombinator.com/item?id=49812163"
+      ],
+      "previewImage": "/previews/rondoflow.webp",
+      "promptHint": "克隆后跑 `npm run setup && npm run dev`，打开 http://localhost:3000 的 React Flow 画布，拖一个 Claude Code agent、接上 skill 再 Run；先看 Planner / Director / Advisor，先别改安全策略。",
+      "promptHintEn": "After cloning, run npm run setup && npm run dev, open the React Flow canvas at http://localhost:3000, drag one Claude Code agent, attach a skill, and hit Run. Watch Planner / Director / Advisor before changing safety policies.",
+      "types": [
+        "ui"
+      ],
+      "tags": [
+        "canvas",
+        "open-source",
+        "claude-code",
+        "multi-agent",
+        "react-flow",
+        "local-first",
+        "hn"
+      ],
+      "featured": true,
+      "qualityNote": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。README 写明编排的是 Claude Code CLI 子进程，并列出 Director / Planner / Advisor 与 Claude Code / OpenAI / Perplexity；官网营销计数不转成核验指标。registry.npmjs.org/rondoflow 返回 404，不填 npmPackage。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。",
+      "qualityNoteEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The README says the canvas runs Claude Code CLI subprocesses and lists Director / Planner / Advisor plus Claude Code / OpenAI / Perplexity; homepage marketing counts are not recorded as verified metrics. registry.npmjs.org/rondoflow returned 404, so npmPackage is omitted. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T12:28:44Z"
+    },
+    {
       "id": "facet-3d",
       "slug": "facet-3d",
       "title": "Facet：可复制粘贴的 React Three Fiber 3D 组件（含 MCP / llms.txt）",
@@ -1840,9 +1873,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-22T01:20:00Z",
+    "updatedAt": "2026-09-23T12:28:44Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.20",
-    "count": 56
+    "version": "1.4.21",
+    "count": 57
   }
 }

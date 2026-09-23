@@ -1,6 +1,68 @@
 {
   "items": [
     {
+      "id": "lineselect",
+      "slug": "lineselect",
+      "title": "lineselect：管道里交互勾选 stdin 行",
+      "titleEn": "lineselect: interactively pick lines from stdin in a pipeline",
+      "summary": "Show HN（item 49813195，2026-09-23 ~08:33Z，Algolia 核对 2pts）https://urbanogilson.github.io/lineselect/ — MIT Rust CLI，插在管道中间：方向键移动，Space 勾选或取消 stdin 行，Enter 把选中行交给下一条命令（页上示例 `ls | lineselect | xargs rm`）。安装走文档页的 install.sh，可钉版本 0.2.3。GitHub urbanogilson/lineselect 于 2026-09-23 gh api：MIT、74★。crates.io API 核到同名 crate 0.2.3、license MIT；本环境打开 crates.io HTML 返回 404。文档页与仓库均 HTTP 200。预览为 Playwright 实拍 GH Pages 文档页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49813195 (2026-09-23 ~08:33Z, 2pts on Algolia at check time) at https://urbanogilson.github.io/lineselect/ — an MIT Rust CLI that sits in a pipeline: arrow keys move, Space selects or clears stdin lines, Enter passes the chosen lines to the next command (the page’s example is `ls | lineselect | xargs rm`). Install is the docs page’s install.sh, and 0.2.3 can be pinned. GitHub urbanogilson/lineselect on the 2026-09-23 gh api: MIT, 74★. The crates.io API shows crate lineselect 0.2.3 with license MIT; the crates.io HTML page returned 404 from this environment. Docs page and repo both HTTP 200. Preview is a Playwright capture of the GH Pages docs, cropped to 3:2 WebP.",
+      "sourceUrl": "https://urbanogilson.github.io/lineselect/",
+      "secondaryUrls": [
+        "https://github.com/urbanogilson/lineselect",
+        "https://news.ycombinator.com/item?id=49813195",
+        "https://crates.io/crates/lineselect"
+      ],
+      "previewImage": "/previews/lineselect.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "rust",
+        "cli",
+        "pipeline",
+        "hn",
+        "mit"
+      ],
+      "featured": false,
+      "qualityNote": "公开文档页与 GitHub 均 HTTP 200（2026-09-23）。gh api：MIT、74★。Show HN item 49813195，Algolia 核对 2pts。文档页写明 Space 选择、Enter 继续，以及 install.sh。crates.io API 为 lineselect 0.2.3 / MIT；HTML 页在本环境返回 404，仍保留作者给出的 crate 链接。预览为 Playwright 实拍 GH Pages 裁 3:2 WebP。",
+      "qualityNoteEn": "Public docs page and GitHub both HTTP 200 (2026-09-23). gh api: MIT, 74★. Show HN item 49813195, 2pts on Algolia at check time. The docs page states Space to select, Enter to continue, and install.sh. The crates.io API lists lineselect 0.2.3 / MIT; the HTML page returned 404 from this environment, and the author’s crate link is still kept. Preview is a Playwright capture of the GH Pages, cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T12:28:44Z"
+    },
+    {
+      "id": "ondevice-tools",
+      "slug": "ondevice-tools",
+      "title": "OnDevice Tools：64 个纯浏览器工具（不上传）",
+      "titleEn": "OnDevice Tools: 64 browser utilities that never upload your data",
+      "summary": "Show HN（item 49813705，2026-09-23 ~09:57Z，Algolia 核对 1pt）https://ondevice-tools.org/ — 站点标题与 README 自称 64 个浏览器工具（JSON / JWT / PDF / 图片等），处理在本地、不上传。首页分类计数 15+11+9+4+6+2+6+7+4 与 64 一致。GitHub priyabrataeee/ondevice-tools 于 2026-09-23 gh api：AGPL-3.0；仓库一句话描述仍写 63。页面含展示广告与 gtag；README 写明广告资助、会记录浏览并设置广告 cookie，同时称放入工具的内容没有接收服务器。本库未逐工具抓包。官网与仓库均 HTTP 200。预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49813705 (2026-09-23 ~09:57Z, 1pt on Algolia at check time) at https://ondevice-tools.org/ — the site title and README claim 64 browser tools (JSON / JWT / PDF / images, and more) that process locally and do not upload. Homepage category counts 15+11+9+4+6+2+6+7+4 add up to 64. GitHub priyabrataeee/ondevice-tools on the 2026-09-23 gh api: AGPL-3.0; the repo’s one-line description still says 63. The page includes display ads and gtag; the README says the site is ad-funded, measures page views, and sets ad cookies, while claiming tool contents have no server that could receive them. This library did not packet-capture each tool. Site and repo both HTTP 200. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP.",
+      "sourceUrl": "https://ondevice-tools.org/",
+      "secondaryUrls": [
+        "https://github.com/priyabrataeee/ondevice-tools",
+        "https://news.ycombinator.com/item?id=49813705"
+      ],
+      "previewImage": "/previews/ondevice-tools.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "utility",
+        "privacy",
+        "browser",
+        "client-side",
+        "no-upload",
+        "hn",
+        "agpl"
+      ],
+      "featured": false,
+      "qualityNote": "官网与 GitHub 均 HTTP 200（2026-09-23）。gh api license 为 AGPL-3.0。Show HN item 49813705，Algolia 核对 1pt。64 为站点与 README 自称，首页分类数加总一致；gh api 的 description 仍是 63，不混成一个数字。页面有展示广告与 gtag；README 的广告资助说明照录。客户端处理是作者声称，未逐工具复测。预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "qualityNoteEn": "Site and GitHub both HTTP 200 (2026-09-23). gh api license is AGPL-3.0. Show HN item 49813705, 1pt on Algolia at check time. 64 is the site and README claim, and the homepage category counts add up to it; the gh api description still says 63, so the two figures are not collapsed. The page has display ads and gtag; the README’s ad-funding note is recorded as written. Client-side processing is the author’s claim and was not re-tested tool by tool. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T12:28:44Z"
+    },
+    {
       "id": "runboli-halo-guardian",
       "slug": "runboli-halo-guardian",
       "title": "runboli.com：把 Halo 3 Guardian 做成可逛的个人站",
@@ -2262,9 +2324,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T01:25:00Z",
+    "updatedAt": "2026-09-23T12:28:44Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.36",
-    "count": 78
+    "version": "1.3.37",
+    "count": 80
   }
 }
