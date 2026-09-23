@@ -1,6 +1,66 @@
 {
   "items": [
     {
+      "id": "runboli-halo-guardian",
+      "slug": "runboli-halo-guardian",
+      "title": "runboli.com：把 Halo 3 Guardian 做成可逛的个人站",
+      "titleEn": "runboli.com: Halo 3 Guardian as an explorable personal site",
+      "summary": "HN（item 49732259，2026-09-16，28pts）https://runboli.com/ — 作者把 Halo 3 主菜单/大厅/Guardian 地图做成浏览器可逛个人站：WASD+鼠标，无注册；地图里藏照片、故事、任务与小游戏。非商业粉丝项目。公开页 200；预览为 Playwright 实拍主菜单首屏裁 3:2 WebP（头less 下 3D 场景可能略简）。",
+      "summaryEn": "HN item 49732259 (2026-09-16, 28pts) at https://runboli.com/ — the author rebuilt the Halo 3 main menu / lobby / Guardian map as an explorable personal site in the browser (WASD + mouse, no signup) with photos, stories, quests, and mini-games hidden in the map. Unofficial non-commercial fan project. Public page 200; preview is a Playwright main-menu capture cropped to 3:2 WebP (3D may simplify headless).",
+      "sourceUrl": "https://runboli.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49732259"
+      ],
+      "previewImage": "/previews/runboli-halo-guardian.webp",
+      "types": [
+        "interactive",
+        "game"
+      ],
+      "tags": [
+        "threejs",
+        "webgl",
+        "personal-site",
+        "halo",
+        "browser",
+        "hn"
+      ],
+      "featured": false,
+      "qualityNote": "公开页 HTTP 200（2026-09-23）。HN item 49732259。非商业粉丝项目；本库不主张任何商标授权。预览为 Playwright 实拍主菜单裁 3:2 WebP。",
+      "qualityNoteEn": "Public page HTTP 200 (2026-09-23). HN item 49732259. Unofficial non-commercial fan project; catalog makes no trademark claim. Preview is a Playwright main-menu capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T01:25:00Z"
+    },
+    {
+      "id": "gpu-lexer",
+      "slug": "gpu-lexer",
+      "title": "gpu-lexer：约 27KB 的语言无关 WebGPU 语法高亮",
+      "titleEn": "gpu-lexer: ~27KB language-agnostic WebGPU syntax highlighter",
+      "summary": "HN（item 49619464，2026-09-09，121pts）https://gpu-lexer.vercel.app/ — Vercel Labs Shu Ding：先把源码切成词/空白/符号，再用极小 WebGPU 模型结合局部与全文上下文打标签；宣称对未见过的语言也能猜类型，并支持 HTML/Vue/Svelte 内嵌 script/style。站点自述为实验，以与 Shiki 标签一致率衡量（文中约 83%），非语法等价高亮器。公开页 200；预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN item 49619464 (2026-09-09, 121pts) at https://gpu-lexer.vercel.app/ — Vercel Labs (Shu Ding): tokenize into words/whitespace/symbols, then a tiny WebGPU model labels spans from local + whole-file context; claims it can guess types for unseen languages and mixed HTML/Vue/Svelte script/style regions. Site frames it as an experiment scored by Shiki label agreement (~83% in copy), not a grammar-equivalent highlighter. Public page 200; preview is a Playwright above-the-fold capture cropped to 3:2 WebP.",
+      "sourceUrl": "https://gpu-lexer.vercel.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49619464"
+      ],
+      "previewImage": "/previews/gpu-lexer.webp",
+      "types": [
+        "interactive",
+        "library"
+      ],
+      "tags": [
+        "webgpu",
+        "syntax-highlight",
+        "vercel-labs",
+        "browser",
+        "hn",
+        "experiment"
+      ],
+      "featured": true,
+      "qualityNote": "公开演示页 HTTP 200（2026-09-23）。HN item 49619464。站点自述实验向、与 Shiki 一致率非客观正确性；本库不声称可替换生产高亮器。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Demo page HTTP 200 (2026-09-23). HN item 49619464. Site frames an experiment scored by Shiki agreement, not objective correctness; not catalogued as a production highlighter replacement. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T01:25:00Z"
+    },
+    {
       "id": "webgcm",
       "slug": "webgcm",
       "title": "WebGCM：浏览器里跑的全球气候模型（WebGPU）",
@@ -2202,9 +2262,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-22T12:30:00Z",
+    "updatedAt": "2026-09-23T01:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.35",
-    "count": 76
+    "version": "1.3.36",
+    "count": 78
   }
 }

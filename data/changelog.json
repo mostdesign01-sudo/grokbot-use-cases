@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-23",
+      "title": "工作日晨更：Grok Bot +1、HTML +2",
+      "titleEn": "Weekday morning: Grok Bot +1, HTML +2",
+      "body": "Grok Bot：收 Errand（HN item 49803044）——Apache-2.0 开源「每席一电脑」桌面客户端（runta-dev/errand / runerrand.dev），作者长文说明依赖 Runta runtime。HTML：收 gpu-lexer（HN item 49619464）——约 27KB 语言无关 WebGPU 语法高亮演示，已配 3:2 自托管预览；收 runboli.com Halo 3 Guardian 个人站（HN item 49732259），已配 3:2 自托管预览。本次未改 agent-ui。X @bot 未走 API；扫 HN 首页/Show 与 Algolia（Grok Bot / CSS demo / three.js / single-file HTML / WebGPU）。cases 124→125，html-items 76→78。",
+      "bodyEn": "Grok Bot: added Errand (HN item 49803044) — Apache-2.0 open-source per-seat-computer desktop client (runta-dev/errand / runerrand.dev); author write-up explains the Runta runtime dependency. HTML: added gpu-lexer (HN item 49619464) — ~27KB language-agnostic WebGPU syntax-highlighter demo with a 3:2 self-hosted preview; and runboli.com Halo 3 Guardian personal site (HN item 49732259) with a 3:2 self-hosted preview. No agent-ui edits this morning. X @bot API skipped; scanned HN front page / Show and Algolia (Grok Bot / CSS demo / three.js / single-file HTML / WebGPU). cases 124→125, html-items 76→78."
+    },
+    {
       "date": "2026-09-22",
       "title": "晚间收录：Models +1、HTML +2",
       "titleEn": "Evening: Models +1, HTML +2",

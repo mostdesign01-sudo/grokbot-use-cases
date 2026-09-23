@@ -1,6 +1,45 @@
 {
   "cases": [
     {
+      "id": "errand-opensource",
+      "slug": "errand-opensource",
+      "title": "Errand：开源「每席一电脑」Grok Bot / Muse 相邻桌面（Runta）",
+      "titleEn": "Errand: open-source Grok Bot / Muse-style desktop (Runta)",
+      "summary": "HN（item 49803044，2026-09-22）与作者长文：Apache-2.0 桌面客户端 Errand（runta-dev/errand，官网 runerrand.dev）——每个队友有独立云电脑（shell/浏览器/文件系统），任务跑在 Runta 上，关本地 App 也不停；可 VNC 偷看/接管桌面。作者拆解一周做出桌面壳的原因：runtime / computer-use / agent loop / 持久化都在 Runta，桌面约 4k 行 TypeScript。对想对照 Grok Bot「专席电脑 + 可离开」的人，是可复现的开源相邻栈（依赖 Runta；非官方替代品）。",
+      "summaryEn": "HN item 49803044 (2026-09-22) plus the author’s write-up: Apache-2.0 desktop client Errand (runta-dev/errand, runerrand.dev) — each teammate gets its own cloud computer (shell/browser/filesystem); runs live on Runta so quitting the local app doesn’t stop work; VNC to watch or take over. The post explains shipping the desktop shell in about a week because runtime, computer-use, agent loop, and persistence already sat in Runta (~4k lines of TypeScript in the app). A reproducible open-source adjacent stack for comparing Grok Bot’s per-seat computer + leave-and-return (depends on Runta; not an official replacement).",
+      "categories": [
+        "community",
+        "engineering",
+        "multi-agent"
+      ],
+      "role": "Open-source adjacent stack",
+      "sourceUrl": "https://github.com/runta-dev/errand",
+      "secondaryUrls": [
+        "https://runerrand.dev/",
+        "https://runta.com/blog/building-errand-in-one-week/",
+        "https://news.ycombinator.com/item?id=49803044"
+      ],
+      "sourceType": "community",
+      "qualityNote": "Apache-2.0（2026-09-23 gh api）。HN item 49803044；仓库与长文可核验。依赖 Runta 云 runtime；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。",
+      "qualityNoteEn": "Apache-2.0 (gh api, 2026-09-23). HN item 49803044; repo and write-up verified. Depends on Runta cloud runtime; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "自建/试用时的 Runta 账号、密钥与对外电脑动作自行管控；勿把未审流程直接上生产。",
+      "approvalBoundaryEn": "Self-host/trial Runta accounts, keys, and outbound computer actions are yours to gate; do not put unreviewed flows straight into production.",
+      "connectors": [
+        "browser",
+        "computer",
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-23T01:25:00Z"
+    },
+    {
       "id": "hn-jjcm-fabric-swag-sourcing",
       "slug": "hn-jjcm-fabric-swag-sourcing",
       "title": "HN 实操：用多席 Grok Bot 向越南面料厂询价出样",
@@ -4424,10 +4463,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-22T01:20:00Z",
+    "updatedAt": "2026-09-23T01:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.26",
-    "count": 124,
+    "version": "1.4.27",
+    "count": 125,
     "sourcesCrawled": [
       "https://cursor.com/docs/grok-bot/get-started",
       "https://blog.6yuwei.com/en/2026/08/28/grok-bot-cloud-vm-autonomous-agent-guide/",
