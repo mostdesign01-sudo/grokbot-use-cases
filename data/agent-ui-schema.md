@@ -50,6 +50,7 @@
 ## 文案规范 / copy rules
 
 - `hook` 与 `summary`（及 `hookEn` / `summaryEn`）是读者向价值：说明这条是什么、为什么值得打开。
+- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `qualityNote`。
 - 核验痕迹只写在 `qualityNote` / `qualityNoteEn`：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
 - 卡片短句优先用 `hook`。没有 `hook` 时，从 `summary` 取第一句并去掉上述核验碎片。不要把 `qualityNote` 当作卡片文案。详情页仍展示完整 `summary`。
 

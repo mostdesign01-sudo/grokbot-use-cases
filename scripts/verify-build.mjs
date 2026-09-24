@@ -432,6 +432,45 @@ if (missing.length) {
   process.exit(1);
 }
 
+{
+  const hookNoise = /HTTP|gh api|Algolia|pts|★|撰写时|item \d|\d{4}-\d\d-\d\d/;
+  const hookBad = [];
+  const lintHooks = (label, items) => {
+    const absent = [];
+    const bad = [];
+    for (const item of items) {
+      const hasHook = item.hook !== undefined || item.hookEn !== undefined;
+      if (!hasHook) {
+        absent.push(item.id);
+        continue;
+      }
+      const zh = typeof item.hook === "string" ? item.hook : "";
+      const en = typeof item.hookEn === "string" ? item.hookEn : "";
+      const reasons = [];
+      if (!zh || !en) reasons.push("pair");
+      if ([...zh].length > 36) reasons.push(`zh ${[...zh].length}`);
+      if (en.length > 90) reasons.push(`en ${en.length}`);
+      if (!/[。！]$/.test(zh)) reasons.push("zh ending");
+      if (!/[.!]$/.test(en)) reasons.push("en ending");
+      if (hookNoise.test(zh + en)) reasons.push("banned token");
+      if (reasons.length) bad.push(`${item.id} (${reasons.join(", ")})`);
+    }
+    if (absent.length) {
+      console.warn(`hook lint: ${label} ${absent.length} without a hook: ${absent.join(", ")}`);
+    }
+    if (bad.length) {
+      hookBad.push(...bad.map((line) => `${label}/${line}`));
+      console.error(`hook lint: ${label} ${bad.length} format violation(s): ${bad.join("; ")}`);
+    } else {
+      console.log(`hook lint: ${label} ${items.length} items, ${absent.length} missing, 0 format violations.`);
+    }
+  };
+  lintHooks("cases", dataset.cases);
+  lintHooks("html", htmlDataset.items);
+  lintHooks("agent-ui", agentUiDataset.items);
+  if (hookBad.length) process.exit(1);
+}
+
 console.log(
   `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, ${modelsDataset.models.length} model pages, ${imagePromptsDataset.items.length} image prompt pages, and core routes present.`,
 );

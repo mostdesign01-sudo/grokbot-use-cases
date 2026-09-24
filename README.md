@@ -32,13 +32,16 @@ npm run preview  # 预览生产构建
 
 1. **Grok Bot 案例**：编辑 [`data/cases.json`](data/cases.json)
    - 新增或修订 `cases[]` 条目
+   - 每条新条目都写 `hook` / `hookEn`：读者向的一句话，规范见 [`data/schema.md`](data/schema.md) 的文案规范
    - 更新 `meta.updatedAt`（UTC ISO）、`meta.version`、`meta.count`
    - 字段见 [`data/schema.md`](data/schema.md)
 2. **HTML 收集**：编辑 [`data/html-items.json`](data/html-items.json)
    - 只收录真实公开 URL，勿与 cases 混写
+   - 每条新条目都写 `hook` / `hookEn`，规范见 [`data/html-schema.md`](data/html-schema.md) 的文案规范
    - 字段见 [`data/html-schema.md`](data/html-schema.md)
 3. **Agent UI**：编辑 [`data/agent-ui.json`](data/agent-ui.json)
    - 只收录 ThreeUI Community 免费、免登录条目，勿写 Pro / MCP
+   - 每条新条目都写 `hook` / `hookEn`，规范见 [`data/agent-ui-schema.md`](data/agent-ui-schema.md) 的文案规范
    - 字段见 [`data/agent-ui-schema.md`](data/agent-ui-schema.md)
 4. **可跑路径**：编辑 [`data/paths.json`](data/paths.json)
    - 只写 brief → 席位 → 验收闸门；相关 id 必须已在三套库里
