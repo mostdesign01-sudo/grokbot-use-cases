@@ -471,6 +471,12 @@ h3 {
   margin: 0 0 4px;
 }
 
+.detail-hero .lede {
+  color: var(--ink);
+  font-size: calc(var(--text-lede) * 1.08);
+  max-width: 42rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
