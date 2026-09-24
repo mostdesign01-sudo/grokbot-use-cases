@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-24",
+      "title": "晚间收录：Cases +1、HTML +2",
+      "titleEn": "Evening catalog: Cases +1, HTML +2",
+      "body": "Grok Bot Cases：收何居上（@hejushang8）2026-09-23 短帖及同日长文——美区 PayPal 绑国内 Visa（截图尾号 2852）再挂美区 Apple ID；口径同 Saily 工具笔记，详情加厚（它是什么 / 对照 / 怎么试 / 边界），requiresApproval；作者自述，本站未开户未绑卡。HTML：收 Show HN CMS-EP-SFX 气隙自解密 HTML（item 49827375，核对 6pts；ApelegHQ/ts-cms-ep-sfx Apache-2.0，gh api 20★）与 C3 Playground（item 49828605，核对 5pts；c3lang/c3c MIT，gh api 5834★），均配 3:2 自托管预览。跳过：XHTML 卡牌站（玩法偏收集、非直接 HTML 片段）、3d-data-globe（license API 空）、Mercury 2.5（缺厂商官页未进 Models）、Jev CAPTCHA 文（typesafe-jev 已在 Models）。X API 不可用，主源用 fxtwitter 镜像核对 PayPal 帖。cases 125→126（1.4.28→1.4.29）；html-items 83→85（1.3.38→1.3.39）。未改 agent-ui / models。",
+      "bodyEn": "Grok Bot Cases: added He Jushang (@hejushang8)’s 23 Sept 2026 short post and same-day article — US PayPal linked to a China-issued Visa (screenshot ending 2852) then to a US Apple ID; same framing as the Saily tool note, thickened landing (what / contrast / try / boundaries), requiresApproval; author self-report, this site did not open an account or bind a card. HTML: added Show HN CMS-EP-SFX air-gapped self-decrypting HTML (item 49827375, 6pts; ApelegHQ/ts-cms-ep-sfx Apache-2.0, 20★ via gh api) and C3 Playground (item 49828605, 5pts; c3lang/c3c MIT, 5834★ via gh api), both with 3:2 self-hosted previews. Skipped: XHTML card game (collectible loop, not pasteable HTML bits), 3d-data-globe (empty license API), Mercury 2.5 (no vendor page → not Models), Jev CAPTCHA write-up (typesafe-jev already on Models). X API unavailable; PayPal post checked via fxtwitter mirror. cases 125→126 (1.4.28→1.4.29); html-items 83→85 (1.3.38→1.3.39). No agent-ui / models edits."
+    },
+    {
+      "date": "2026-09-24",
       "title": "工作日晨更：HTML +3",
       "titleEn": "Weekday morning: HTML +3",
       "body": "HTML：收 Show HN 3d-retro（item 49824144，核对 3pts）——CC0 单文件可粘贴复古 3D/Canvas 实验博物馆（站点自称 31，含 /llms.txt 与 API），已配 3:2 自托管预览；收 Fractalysis（item 49816840，核对 2pts）——浏览器 Mandelbrot 无限放大查看器，已配 3:2 预览；收 Simten NAND（item 49817114，核对 3pts）——Apache-2.0 TypeScript HDL 浏览器关卡（simtenHQ/simten，gh api 18★），已配 3:2 预览。本次未改 Grok Bot / Agent UI（无已核实的新免费 ThreeUI；uilib.dev 仓库无 license API 结果未收；Cases 无新可复现 Grok Bot 用法教程）。X @bot 未走 API。html-items 80→83（1.3.37→1.3.38）。",
