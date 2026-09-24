@@ -277,6 +277,14 @@ const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("star
           }
         </div>
       </section>
+      <div class="plaza-fallback" data-plaza-fallback hidden>
+        <p class="plaza-fallback-note">
+          <Loc zh={ui.home.fallback.zh} en={ui.home.fallback.en} />
+        </p>
+        <div class="plaza-fallback-grid">
+          {fallbackItems.map((item) => <PlazaCard item={item} />)}
+        </div>
+      </div>
       <div class="home-plaza-cols" data-plaza-grid>
         <div class="home-col" data-plaza-col>
           {col1.map((item) => <PlazaCard item={item} />)}
@@ -287,14 +295,6 @@ const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("star
         <div class="home-col" data-plaza-col>
           <DigestCard day={day} />
           {col3.map((item) => <PlazaCard item={item} />)}
-        </div>
-      </div>
-      <div class="plaza-fallback" data-plaza-fallback hidden>
-        <p class="plaza-fallback-note">
-          <Loc zh={ui.home.fallback.zh} en={ui.home.fallback.en} />
-        </p>
-        <div class="plaza-fallback-grid">
-          {fallbackItems.map((item) => <PlazaCard item={item} />)}
         </div>
       </div>
       <p class="home-empty" hidden data-plaza-empty>
@@ -341,10 +341,11 @@ const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("star
   const shell = document.querySelector("[data-home-shell]");
   const buttons = shell?.querySelectorAll<HTMLButtonElement>("[data-plaza-lib]");
   const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-grid] [data-plaza-card]");
+  const grid = shell?.querySelector<HTMLElement>("[data-plaza-grid]");
   const fallback = shell?.querySelector<HTMLElement>("[data-plaza-fallback]");
   const fallbackCards = shell?.querySelectorAll<HTMLElement>("[data-plaza-fallback] [data-plaza-card]");
   const empty = shell?.querySelector<HTMLElement>("[data-plaza-empty]");
-  if (shell && buttons && cards && fallback && fallbackCards) {
+  if (shell && buttons && cards && grid && fallback && fallbackCards) {
     const apply = (lib: string) => {
       let visible = 0;
       cards.forEach((card) => {
@@ -357,6 +358,7 @@ const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("star
         card.hidden = !(useFallback && card.dataset.lib === lib);
       });
       fallback.hidden = !useFallback;
+      grid.hidden = useFallback;
       buttons.forEach((button) => {
         button.setAttribute("aria-pressed", button.dataset.plazaLib === lib ? "true" : "false");
       });

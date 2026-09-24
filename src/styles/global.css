@@ -3780,6 +3780,18 @@ html[data-theme="light"] .home-pill {
   color: var(--bg);
 }
 
+@media (min-width: 861px) {
+  .home-rail {
+    overflow: hidden;
+  }
+
+  .home-dates {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+  }
+}
+
 @media (max-width: 1080px) {
   .home-rail {
     flex-basis: 228px;
