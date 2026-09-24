@@ -400,8 +400,8 @@ if (!home.includes("grokbots.best") || !home.includes("cases/grokbots-best")) {
   process.exit(1);
 }
 
-if (!home.includes("核验精选的可复用用法")) {
-  console.error("Homepage meta/OG is missing curated-use-case positioning.");
+if (!home.includes("给想提升 AI 能力的人")) {
+  console.error("Homepage meta/OG is missing the reader positioning.");
   process.exit(1);
 }
 

@@ -60,7 +60,7 @@ export const ui = {
     all: { zh: "全部", en: "All" },
   },
   brand: {
-    lab: { zh: "核验精选实验室", en: "Curated verified use-cases" },
+    lab: { zh: "每天更新的 AI 教程与工具", en: "Daily AI tutorials & tools" },
     grok: { zh: "Grok Bot · 每日更新", en: "Grok Bot · daily updates" },
     html: { zh: "HTML 收集 · 每日更新", en: "HTML Collection · daily updates" },
     agentUi: { zh: "Agent UI · 每日更新", en: "Agent UI · daily updates" },
@@ -82,7 +82,7 @@ export const ui = {
     multi: { zh: "多Agent", en: "Multi-agent" },
     skill: { zh: "Skill", en: "Skill" },
   },
-  quality: { zh: "收录理由", en: "Why we listed it" },
+  quality: { zh: "为什么推荐", en: "Why we recommend it" },
   stars: {
     label: { zh: "星级", en: "Stars" },
     of: { zh: "星级 {n} / 5", en: "{n} of 5 stars" },
@@ -134,11 +134,11 @@ export const ui = {
   search: {
     button: { zh: "搜索", en: "Search" },
     currentLib: { zh: "搜索当前库", en: "Search this library" },
-    placeholder: { zh: "搜索标题、摘要、收录理由…", en: "Search titles, summaries, why we listed it…" },
-    wall: { zh: "在预览墙与 Grok 时间线里筛标题、摘要、收录理由…", en: "Filter the preview wall and Grok timeline by title, summary, or note…" },
-    html: { zh: "搜索 HTML 标题、摘要、标签、收录理由…", en: "Search HTML titles, summaries, tags, notes…" },
-    agentUi: { zh: "搜索 Agent UI 标题、摘要、收录理由…", en: "Search Agent UI titles, summaries, notes…" },
-    explorer: { zh: "标题、摘要、收录理由、角色、标签…", en: "Title, summary, note, role, tags…" },
+    placeholder: { zh: "搜索标题、摘要、推荐理由…", en: "Search titles, summaries, why we recommend it…" },
+    wall: { zh: "在预览墙与时间线里筛标题、摘要、推荐理由…", en: "Filter the wall and timeline by title, summary, or recommendation…" },
+    html: { zh: "搜索网页标题、摘要、标签、推荐理由…", en: "Search page titles, summaries, tags, recommendations…" },
+    agentUi: { zh: "搜索组件标题、摘要、推荐理由…", en: "Search component titles, summaries, recommendations…" },
+    explorer: { zh: "标题、摘要、推荐理由、角色、标签…", en: "Title, summary, recommendation, role, tags…" },
     scope: { zh: "搜索范围", en: "Search scope" },
     empty: {
       zh: "没有符合条件的条目。试试更短的关键词，或切换到另一库。",
@@ -163,7 +163,7 @@ export const ui = {
     count: { zh: "显示 {n} / {total} 条案例", en: "Showing {n} / {total} cases" },
   },
   poster: {
-    libraries: { zh: "三套内容库", en: "Three libraries" },
+    libraries: { zh: "三个分类", en: "Three sections" },
     grokPitch: { zh: "精选 Bot 用法：例行、多 Agent、审批边界", en: "Selected Bot uses: routines, multi-agent, approval bounds" },
     htmlPitch: { zh: "公开网页里的演示、模板、组件与工具页", en: "Public pages: demos, templates, components, tools" },
     agentPitch: { zh: "ThreeUI 免费件：复制 prompt / Skill.md 换主题", en: "Free ThreeUI pieces: copy a prompt / Skill.md to retheme" },
@@ -172,16 +172,8 @@ export const ui = {
   },
   footer: {
     blurb: {
-      zh: "。眼下三套库：",
-      en: ". Three libraries for now: ",
-    },
-    blurbMid: {
-      zh: " 来自 ",
-      en: " from ",
-    },
-    blurbEnd: {
-      zh: "。数据分开，之后还会加更多。",
-      en: ". Data stays separate; more libraries later.",
+      zh: "。三个分类：Grok Bot 教程、HTML 网页范例、Agent UI 界面组件。每条都附原文链接。",
+      en: ". Three sections: Grok Bot tutorials, HTML web examples, and Agent UI components. Every entry links to the original.",
     },
     disclaimer: {
       zh: "本站为非官方整理站点，与 xAI / SpaceXAI / Cursor / ThreeUI 及所列原文站点无隶属关系。",
@@ -240,7 +232,7 @@ export const ui = {
     startPath: { zh: "上手路径", en: "How to start" },
     approvalBound: { zh: "审批边界", en: "Approval boundary" },
     related: { zh: "相关案例", en: "Related cases" },
-    metadata: { zh: "元信息", en: "Metadata" },
+    metadata: { zh: "基本信息", en: "At a glance" },
     learnWhat: { zh: "适合学什么", en: "What to learn" },
     howToUse: { zh: "适合怎么用", en: "How to use it" },
     sameType: { zh: "同类型", en: "Same type" },
@@ -296,10 +288,10 @@ export const ui = {
     fallback: { zh: "今天没有新增，先看最近的", en: "Nothing new today — here are the latest" },
     countItems: { zh: "{n} 条", en: "{n} items" },
     weekBadge: { zh: "+{n} 本周", en: "+{n} this week" },
-    positionKicker: { zh: "核验精选", en: "Curated & checked" },
+    positionKicker: { zh: "每天更新", en: "Updated daily" },
     positionLead: {
-      zh: "人核过的用法、路径、三库拣货（Cases / HTML / Agent UI + Paths + Combos）。",
-      en: "Human-checked use-cases, paths, and three-library picks (Cases / HTML / Agent UI + Paths + Combos).",
+      zh: "教程、Skill、组件和网页范例，每条都附原文链接。",
+      en: "Tutorials, skills, components, and web examples, each with a link to the original.",
     },
     siblingChip: { zh: "也看 grokbots.best", en: "Also see grokbots.best" },
     siblingNote: {
@@ -347,15 +339,15 @@ export const ui = {
       en: "Titles and summaries in Asia/Shanghai time. No color-block posters when a case has no preview; the one with an image keeps a compact attachment.",
     },
     landingGrokAll: { zh: "全部 Grok 案例", en: "All Grok cases" },
-    searchH1: { zh: "搜索三套收集库", en: "Search the three libraries" },
+    searchH1: { zh: "搜索教程、网页和组件", en: "Search tutorials, pages, and components" },
     searchLede: {
-      zh: "在当前页面筛选 cases.json、html-items.json 与 agent-ui.json。不会混写成一套新闻流，只检索已收录的可复用条目。",
-      en: "Filter cases.json, html-items.json, and agent-ui.json on this page. Not a mixed news feed — only listed reusable items.",
+      zh: "在教程、网页范例和界面组件里搜标题与摘要。只找已经整理好、可以直接打开原文的条目。",
+      en: "Search titles and summaries across tutorials, web examples, and UI components. Only listed entries you can open at the source.",
     },
     searchTitle: { zh: "搜索 · AI UP LAB", en: "Search · AI UP LAB" },
     searchDesc: {
-      zh: "在 AI UP LAB 的 Grok Bot、HTML 收集与 Agent UI 三套库里检索标题、摘要、标签与收录理由。",
-      en: "Search titles, summaries, tags, and listing notes across AI UP LAB’s Grok Bot, HTML Collection, and Agent UI libraries.",
+      zh: "在 AI UP LAB 的教程、网页范例和界面组件里检索标题、摘要与推荐理由。",
+      en: "Search titles, summaries, and recommendations across AI UP LAB tutorials, web examples, and UI components.",
     },
     docsH1: { zh: "文档枢纽", en: "Docs hub" },
     docsLede: {
@@ -369,8 +361,8 @@ export const ui = {
     },
     changelogH1: { zh: "更新日志", en: "Changelog" },
     changelogLede: {
-      zh: "AI UP LAB 的数据更新时间以 data/cases.json 的 meta.updatedAt 为准，并按 Asia/Shanghai 显示。",
-      en: "AI UP LAB data freshness follows meta.updatedAt in data/cases.json, shown in Asia/Shanghai.",
+      zh: "按上海时间排列的更新说明。日期是这条内容写进站点的日子。",
+      en: "Update notes in Shanghai time. The date is when that entry was added to the site.",
     },
     changelogTitle: { zh: "更新日志 · AI UP LAB", en: "Changelog · AI UP LAB" },
     changelogDesc: {
@@ -478,8 +470,8 @@ export const ui = {
     },
     relatedCase: { zh: "库内条目", en: "Library entry" },
     relatedCaseHint: {
-      zh: "这条模型已在 Grok Bot 库以 AI 资讯收录，完整收录理由见下方条目。",
-      en: "This model is already catalogued as AI news in the Grok Bot library; the full listing note lives on the entry below.",
+      zh: "这条模型在 Grok Bot 教程里也有一篇，推荐理由写在那一条上。",
+      en: "This model also has a Grok Bot tutorial. The recommendation is on that entry.",
     },
     previewCredit: { zh: "预览出处", en: "Preview credit" },
     pathsTease: {
@@ -523,8 +515,8 @@ export const ui = {
   grok: {
     featuredH1: { zh: "精选案例", en: "Featured cases" },
     featuredLede: {
-      zh: "从 data/cases.json 中 featured === true 的条目整理而来，适合对照官方角色、例行与审批边界，作为第一个 Bot 或团队协作模板。当前 {n} 条。",
-      en: "Items with featured === true in data/cases.json. Use them to compare official roles, routines, and approval bounds as a first Bot or team template. {n} now.",
+      zh: "编辑挑出来、适合先看的教程。当前 {n} 条，打开就能对照原文。",
+      en: "Tutorials picked to read first. {n} now — open one and follow the original.",
     },
     featuredTitle: { zh: "精选案例 · AI UP LAB", en: "Featured cases · AI UP LAB" },
     featuredDesc: {
@@ -533,8 +525,8 @@ export const ui = {
     },
     latestH1: { zh: "最新案例", en: "Latest cases" },
     latestLede: {
-      zh: "按 publishedAt 再按 updatedAt 从新到旧排列，便于先看最近公开的用法。当前共 {n} 条。",
-      en: "Sorted by publishedAt, then updatedAt, newest first. {n} now.",
+      zh: "最近公开的教程排在前面。当前共 {n} 条。",
+      en: "The newest tutorials are first. {n} now.",
     },
     latestTitle: { zh: "最新案例 · AI UP LAB", en: "Latest cases · AI UP LAB" },
     latestDesc: {
@@ -562,8 +554,8 @@ export const ui = {
     moreCategories: { zh: "更多分类 +{n}", en: "More categories +{n}" },
     typesH1: { zh: "按类型浏览", en: "Browse by type" },
     typesLede: {
-      zh: "每个类型对应 data/cases.json 里出现过的 categories[] 值，单独生成静态 HTML 收集页。当前 {n} 个类型。",
-      en: "Each type is a categories[] value that appears in data/cases.json, with its own static HTML page. {n} types now.",
+      zh: "按销售、工程、自动化等主题浏览教程。当前 {n} 个类型。",
+      en: "Browse tutorials by topic — sales, engineering, automation, and more. {n} types now.",
     },
     typesTitle: { zh: "按类型浏览 · AI UP LAB", en: "Browse by type · AI UP LAB" },
     typesDesc: {
@@ -603,8 +595,8 @@ export const ui = {
     },
     featuredH1: { zh: "精选 HTML", en: "Featured HTML" },
     featuredLede: {
-      zh: "featured === true 的公开页面，当前 {n} 条。原文均在站外，本站只做索引。",
-      en: "Public pages with featured === true. {n} now. Originals stay off-site; this is an index.",
+      zh: "编辑挑出来、适合直接打开的网页。当前 {n} 条，原文都在站外。",
+      en: "Pages picked to open first. {n} now. The originals stay on their own sites.",
     },
     featuredTitle: { zh: "精选 HTML · AI UP LAB", en: "Featured HTML · AI UP LAB" },
     featuredDesc: {
@@ -613,8 +605,8 @@ export const ui = {
     },
     latestH1: { zh: "最新 HTML", en: "Latest HTML" },
     latestLede: {
-      zh: "按 publishedAt 再按 updatedAt 从新到旧。当前 {n} 条。",
-      en: "Sorted by publishedAt, then updatedAt, newest first. {n} now.",
+      zh: "最近收集的网页排在前面。当前 {n} 条。",
+      en: "The newest pages are first. {n} now.",
     },
     latestTitle: { zh: "最新 HTML · AI UP LAB", en: "Latest HTML · AI UP LAB" },
     latestDesc: {
@@ -625,8 +617,8 @@ export const ui = {
     featuredHtml: { zh: "精选 HTML", en: "Featured HTML" },
     typesH1: { zh: "按类型浏览", en: "Browse by type" },
     typesLede: {
-      zh: "类型来自 data/html-items.json 里实际出现过的 types[]。当前 {n} 类。",
-      en: "Types are types[] values that actually appear in data/html-items.json. {n} now.",
+      zh: "按落地页、动效、组件等主题浏览网页范例。当前 {n} 类。",
+      en: "Browse web examples by topic — landing pages, motion, components, and more. {n} types now.",
     },
     typesTitle: { zh: "HTML 类型 · AI UP LAB", en: "HTML types · AI UP LAB" },
     typesDesc: {
@@ -658,8 +650,8 @@ export const ui = {
     },
     featuredH1: { zh: "精选 Agent UI", en: "Featured Agent UI" },
     featuredLede: {
-      zh: "featured === true 的免费组件，当前 {n} 条。原文在 ThreeUI，本站只做索引。",
-      en: "Free components with featured === true. {n} now. Originals live on ThreeUI; this is an index.",
+      zh: "编辑挑出来、可以直接复制的界面组件。当前 {n} 条，原文在 ThreeUI。",
+      en: "Components picked to copy first. {n} now. The originals live on ThreeUI.",
     },
     featuredTitle: { zh: "精选 Agent UI · AI UP LAB", en: "Featured Agent UI · AI UP LAB" },
     featuredDesc: {
@@ -668,8 +660,8 @@ export const ui = {
     },
     latestH1: { zh: "最新 Agent UI", en: "Latest Agent UI" },
     latestLede: {
-      zh: "按 publishedAt 再按 updatedAt 从新到旧。当前 {n} 条。",
-      en: "Sorted by publishedAt, then updatedAt, newest first. {n} now.",
+      zh: "最近收集的界面组件排在前面。当前 {n} 条。",
+      en: "The newest components are first. {n} now.",
     },
     latestTitle: { zh: "最新 Agent UI · AI UP LAB", en: "Latest Agent UI · AI UP LAB" },
     latestDesc: {
@@ -678,8 +670,8 @@ export const ui = {
     },
     typesH1: { zh: "按类型浏览", en: "Browse by type" },
     typesLede: {
-      zh: "类型来自 data/agent-ui.json 里实际出现过的 types[]。当前 {n} 类。",
-      en: "Types are types[] values that actually appear in data/agent-ui.json. {n} now.",
+      zh: "按落地页、背景、按钮等主题浏览可复制的界面组件。当前 {n} 类。",
+      en: "Browse copy-ready UI components by topic — landing pages, backgrounds, buttons, and more. {n} types now.",
     },
     typesTitle: { zh: "Agent UI 类型 · AI UP LAB", en: "Agent UI types · AI UP LAB" },
     typesDesc: {

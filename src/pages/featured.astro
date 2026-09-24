@@ -3,10 +3,11 @@ import Loc from "../components/Loc.astro";
 import TimelineFeed from "../components/TimelineFeed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getFeaturedCases } from "../lib/cases";
-import { ui } from "../lib/i18n";
+import { fill, ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 
 const featured = getFeaturedCases();
+const lede = fill(ui.grok.featuredLede, { n: featured.length });
 ---
 
 <BaseLayout
@@ -20,14 +21,7 @@ const featured = getFeaturedCases();
     <section class="collection-hero">
       <p class="kicker">Featured</p>
       <h1><Loc zh={ui.grok.featuredH1.zh} en={ui.grok.featuredH1.en} /></h1>
-      <p class="lede">
-        <span class="loc-zh">
-          从 <code>data/cases.json</code> 中 <code>featured === true</code> 的条目整理而来，适合对照官方角色、例行与审批边界，作为第一个 Bot 或团队协作模板。当前 {featured.length} 条。
-        </span>
-        <span class="loc-en">
-          Items with <code>featured === true</code> in <code>data/cases.json</code>. Use them to compare official roles, routines, and approval bounds as a first Bot or team template. {featured.length} now.
-        </span>
-      </p>
+      <p class="lede"><Loc zh={lede.zh} en={lede.en} /></p>
       <div class="hero-actions">
         <a class="btn btn-ghost" href={withBase("latest/")}><Loc zh={ui.grok.viewLatest.zh} en={ui.grok.viewLatest.en} /></a>
         <a class="btn btn-ghost" href={withBase("types/")}><Loc zh={ui.grok.browseTypes.zh} en={ui.grok.browseTypes.en} /></a>

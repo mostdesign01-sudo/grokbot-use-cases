@@ -7,6 +7,7 @@ import { categoryIntro, categoryLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 
 const collections = getCategoryCollections();
+const lede = fill(ui.grok.typesLede, { n: collections.length });
 ---
 
 <BaseLayout
@@ -20,14 +21,7 @@ const collections = getCategoryCollections();
     <section class="collection-hero">
       <p class="kicker">Types</p>
       <h1><Loc zh={ui.grok.typesH1.zh} en={ui.grok.typesH1.en} /></h1>
-      <p class="lede">
-        <span class="loc-zh">
-          每个类型对应 <code>data/cases.json</code> 里出现过的 <code>categories[]</code> 值，单独生成静态 HTML 收集页。当前 {collections.length} 个类型。
-        </span>
-        <span class="loc-en">
-          Each type is a <code>categories[]</code> value that appears in <code>data/cases.json</code>, with its own static HTML page. {collections.length} types now.
-        </span>
-      </p>
+      <p class="lede"><Loc zh={lede.zh} en={lede.en} /></p>
       <div class="hero-actions">
         <a class="btn btn-ghost" href={withBase("featured/")}><Loc zh={ui.grok.featuredCases.zh} en={ui.grok.featuredCases.en} /></a>
         <a class="btn btn-ghost" href={withBase("latest/")}><Loc zh={ui.grok.latestCases.zh} en={ui.grok.latestCases.en} /></a>
