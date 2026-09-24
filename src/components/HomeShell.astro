@@ -4,6 +4,8 @@ import DigestCard from "./DigestCard.astro";
 import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
 import PlazaCard from "./PlazaCard.astro";
+import { agentUiItems } from "../lib/agent-ui";
+import { cases, getCaseBySlug } from "../lib/cases";
 import {
   dateHref,
   firstSentence,
@@ -12,9 +14,10 @@ import {
   packPlazaColumns,
   resolveDigestDate,
 } from "../lib/digest";
-import { getCaseBySlug } from "../lib/cases";
-import { ui } from "../lib/i18n";
-import { withBase } from "../lib/paths";
+import { shanghaiDateKey } from "../lib/format";
+import { htmlItems } from "../lib/html";
+import { fill, ui } from "../lib/i18n";
+import { assetUrl, withBase } from "../lib/paths";
 import { getStealAlso, getWeeklySteal } from "../lib/playbooks";
 import { siteName } from "../lib/site";
 
@@ -34,6 +37,55 @@ const stealLine = steal
   : ui.home.pathsStrip;
 const sibling = getCaseBySlug("grokbots-best");
 const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grokbots.best";
+
+function shiftDateKey(key: string, days: number): string {
+  const [year, month, day] = key.split("-").map(Number);
+  const shifted = new Date(Date.UTC(year, month - 1, day + days));
+  return [
+    shifted.getUTCFullYear(),
+    String(shifted.getUTCMonth() + 1).padStart(2, "0"),
+    String(shifted.getUTCDate()).padStart(2, "0"),
+  ].join("-");
+}
+
+function updatedThisWeek(items: { updatedAt: string }[], endKey: string): number {
+  const start = shiftDateKey(endKey, -6);
+  return items.filter((item) => {
+    const key = shanghaiDateKey(item.updatedAt);
+    return key >= start && key <= endKey;
+  }).length;
+}
+
+const libraries = [
+  {
+    href: withBase("cases/"),
+    name: ui.lib.grok,
+    count: cases.length,
+    week: updatedThisWeek(cases, day.dateKey),
+    image: assetUrl("/brand/lib-grok.webp"),
+    tone: "plaza-lib-grok",
+  },
+  {
+    href: withBase("html/"),
+    name: ui.lib.html,
+    count: htmlItems.length,
+    week: updatedThisWeek(htmlItems, day.dateKey),
+    image: assetUrl("/brand/lib-html.webp"),
+    tone: "plaza-lib-html",
+  },
+  {
+    href: withBase("agent-ui/"),
+    name: ui.lib.agentUi,
+    count: agentUiItems.length,
+    week: updatedThisWeek(agentUiItems, day.dateKey),
+    image: assetUrl("/brand/lib-agent-ui.webp"),
+    tone: "plaza-lib-agent",
+  },
+].map((lib) => ({
+  ...lib,
+  countLabel: fill(ui.home.countItems, { n: lib.count }),
+  weekLabel: fill(ui.home.weekBadge, { n: lib.week }),
+}));
 ---
 
 <div class="home-shell" data-home-shell>
@@ -110,24 +162,48 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
 
   <main class="home-plaza">
     <div class="home-plaza-scroll" data-plaza-scroll>
-      <aside class="plaza-position" data-position-band>
-        <p class="plaza-kicker"><Loc zh={ui.home.positionKicker.zh} en={ui.home.positionKicker.en} /></p>
-        <p class="plaza-position-lead">
-          <Loc zh={ui.home.positionLead.zh} en={ui.home.positionLead.en} />
+      <section class="plaza-hero">
+        <h1><Loc zh={ui.home.heroTitle.zh} en={ui.home.heroTitle.en} /></h1>
+        <p class="plaza-hero-sub">
+          <Loc zh={ui.home.heroSub.zh} en={ui.home.heroSub.en} />
         </p>
-        <p class="plaza-position-also">
-          <a
-            class="plaza-also-chip"
-            href={siblingHref}
-            rel={sibling ? undefined : "noreferrer"}
-          >
+        <div class="plaza-lib-row">
+          {
+            libraries.map((lib) => (
+              <a class:list={["plaza-lib-card", lib.tone]} href={lib.href}>
+                <img src={lib.image} alt="" width="168" height="112" />
+                <span class="plaza-lib-copy">
+                  <strong>
+                    <Loc zh={lib.name.zh} en={lib.name.en} />
+                  </strong>
+                  <span class="plaza-lib-meta">
+                    <span>
+                      <span class="loc-zh">{lib.countLabel.zh}</span>
+                      <span class="loc-en">{lib.countLabel.en}</span>
+                    </span>
+                    {
+                      lib.week > 0 && (
+                        <span class="plaza-week">
+                          <span class="loc-zh">{lib.weekLabel.zh}</span>
+                          <span class="loc-en">{lib.weekLabel.en}</span>
+                        </span>
+                      )
+                    }
+                  </span>
+                </span>
+              </a>
+            ))
+          }
+        </div>
+        <p class="plaza-position-also plaza-hero-also">
+          <a class="plaza-also-chip" href={siblingHref} rel={sibling ? undefined : "noreferrer"}>
             <Loc zh={ui.home.siblingChip.zh} en={ui.home.siblingChip.en} />
           </a>
           <span class="plaza-position-note">
             <Loc zh={ui.home.siblingNote.zh} en={ui.home.siblingNote.en} />
           </span>
         </p>
-      </aside>
+      </section>
       <aside class="plaza-paths-strip">
         <div class="plaza-paths-copy">
           <p class="plaza-kicker"><Loc zh={ui.home.steal.zh} en={ui.home.steal.en} /></p>

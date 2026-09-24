@@ -2733,6 +2733,108 @@ html[data-theme="light"] .home-plaza {
   line-height: 1.45;
 }
 
+.plaza-hero {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.plaza-hero h1 {
+  margin: 0;
+  max-width: 16em;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.plaza-hero-sub {
+  margin: 0;
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.plaza-lib-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.plaza-lib-card {
+  --lib: var(--brass);
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--lib) 14%, var(--bg-card)), var(--bg-card) 46%);
+  border: 1px solid color-mix(in srgb, var(--lib) 40%, var(--line));
+  box-shadow: var(--shadow-sm);
+}
+
+.plaza-lib-card:hover {
+  border-color: var(--lib);
+}
+
+.plaza-lib-grok { --lib: var(--brass); }
+.plaza-lib-html { --lib: var(--teal); }
+.plaza-lib-agent { --lib: var(--violet); }
+
+.plaza-lib-card img {
+  display: block;
+  width: 84px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--lib) 16%, var(--bg-soft));
+}
+
+.plaza-lib-copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.plaza-lib-copy strong {
+  font-size: 14.5px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.plaza-lib-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.plaza-week {
+  display: inline-flex;
+  padding: 1px 7px;
+  border-radius: 999px;
+  color: var(--lib);
+  background: color-mix(in srgb, var(--lib) 16%, transparent);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.plaza-hero-also {
+  margin: 2px 0 0;
+}
+
 .plaza-paths-strip {
   display: flex;
   align-items: flex-end;

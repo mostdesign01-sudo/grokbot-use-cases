@@ -378,8 +378,8 @@ if (
   }
 }
 
-if (!home.includes("核验精选") || !home.includes("plaza-position")) {
-  console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
+if (!home.includes("每天人工核验的 AI 用法与界面灵感") || !home.includes("plaza-hero")) {
+  console.error("Homepage is missing the hero (每天人工核验… / plaza-hero).");
   process.exit(1);
 }
 

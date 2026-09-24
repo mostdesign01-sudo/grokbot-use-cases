@@ -275,6 +275,16 @@ export const ui = {
   },
   home: {
     lede: { zh: "核验精选实验室", en: "Curated, human-checked use-cases" },
+    heroTitle: {
+      zh: "每天人工核验的 AI 用法与界面灵感",
+      en: "Hand-verified AI workflows and UI inspiration, daily",
+    },
+    heroSub: {
+      zh: "Grok Bot 用法 · HTML 范例 · Agent UI 组件，每条都附原文与收录理由。",
+      en: "Grok Bot workflows, HTML examples, and Agent UI components, each with the source and why it was listed.",
+    },
+    countItems: { zh: "{n} 条", en: "{n} items" },
+    weekBadge: { zh: "+{n} 本周", en: "+{n} this week" },
     positionKicker: { zh: "核验精选", en: "Curated & checked" },
     positionLead: {
       zh: "人核过的用法、路径、三库拣货（Cases / HTML / Agent UI + Paths + Combos）。",
