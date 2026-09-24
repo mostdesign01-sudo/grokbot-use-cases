@@ -25,14 +25,7 @@ import { categoryLabel, difficultyLabel, sourceBadgeLabel } from "../lib/labels"
     <section class="collection-hero">
       <p class="kicker">Search</p>
       <h1><Loc zh={ui.pages.searchH1.zh} en={ui.pages.searchH1.en} /></h1>
-      <p class="lede">
-        <span class="loc-zh">
-          在当前页面筛选 <code>cases.json</code>、<code>html-items.json</code> 与 <code>agent-ui.json</code>。不会混写成一套新闻流，只检索已收录的可复用条目。
-        </span>
-        <span class="loc-en">
-          Filter <code>cases.json</code>, <code>html-items.json</code>, and <code>agent-ui.json</code> on this page. Not a mixed news feed — only listed reusable items.
-        </span>
-      </p>
+      <p class="lede"><Loc zh={ui.pages.searchLede.zh} en={ui.pages.searchLede.en} /></p>
       <LibrarySearch library="all" liveFilter={false} />
     </section>
 

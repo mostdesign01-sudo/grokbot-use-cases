@@ -17,6 +17,8 @@ import {
   isOfficial,
   sourceTypeLabel,
 } from "../../lib/labels";
+import { cardLine } from "../../lib/cardline";
+import { caseCover } from "../../lib/covers";
 import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -83,40 +85,56 @@ const previewCreditEn = landing?.previewCreditEn;
       </h1>
       <p class="title-en loc-zh">{item.titleEn}</p>
       <p class="lede">
-        <span class="loc-zh">{item.summary}</span>
-        <span class="loc-en">{summaryEn}</span>
+        <span class="loc-zh">{cardLine(item, "zh")}</span>
+        <span class="loc-en">{cardLine(item, "en")}</span>
       </p>
-      <div class="hero-actions">
-        <FavButton lib="grok" id={item.id} variant="button" />
-      </div>
       {
-        item.previewImage && (
-          <figure class:list={["detail-preview", { "detail-preview-wide": Boolean(landing) }]}>
-            <img
-              src={assetUrl(item.previewImage)}
-              alt={previewAlt.zh}
-              data-aria-zh={previewAlt.zh}
-              data-aria-en={previewAltEn.en}
-            />
-            {(previewCredit || previewCreditEn) && (
+        <figure class:list={["detail-preview", { "detail-preview-wide": Boolean(landing), "is-cover": !item.previewImage }]}>
+          <img
+            src={assetUrl(item.previewImage ?? caseCover(item))}
+            alt={item.previewImage ? previewAlt.zh : ""}
+            data-aria-zh={item.previewImage ? previewAlt.zh : ""}
+            data-aria-en={item.previewImage ? previewAltEn.en : ""}
+          />
+          {
+            item.previewImage && (previewCredit || previewCreditEn) && (
               <figcaption>
                 <span class="loc-zh">{previewCredit ?? previewCreditEn}</span>
                 <span class="loc-en">{previewCreditEn ?? previewCredit}</span>
               </figcaption>
-            )}
-          </figure>
-        )
+            )
+          }
+        </figure>
       }
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
+          <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
+        </a>
+        <FavButton lib="grok" id={item.id} variant="button" />
+      </div>
     </article>
 
     <div class="detail-grid">
       <div>
         <section class="panel">
-          <h2><Loc zh={whatHeading.zh} en={whatHeading.en} /></h2>
+          <h2><Loc zh={ui.detail.details.zh} en={ui.detail.details.en} /></h2>
           <p>
-            <span class="loc-zh">{whatZh}</span>
-            <span class="loc-en">{whatEn}</span>
+            <span class="loc-zh">{item.summary}</span>
+            <span class="loc-en">{summaryEn}</span>
           </p>
+        </section>
+        <section class="panel">
+          {
+            landing?.what && (
+              <>
+                <h2><Loc zh={whatHeading.zh} en={whatHeading.en} /></h2>
+                <p>
+                  <span class="loc-zh">{whatZh}</span>
+                  <span class="loc-en">{whatEn}</span>
+                </p>
+              </>
+            )
+          }
           <p class="quality-note">
             <strong><Loc zh={ui.quality.zh} en={ui.quality.en} /></strong>
             <span class="loc-zh">{item.qualityNote}</span>

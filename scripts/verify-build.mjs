@@ -314,19 +314,26 @@ if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.incl
   process.exit(1);
 }
 
-if (!home.includes("可跑路径") || !home.includes("plaza-paths-strip")) {
-  console.error("Homepage is missing the playbooks strip (可跑路径 / plaza-paths-strip).");
+if (/paths\/|combos\//.test(home) || home.includes("本周可抄") || home.includes("plaza-paths-strip")) {
+  console.error("Homepage still exposes internal paths/ or combos/ (playbooks strip or links).");
   process.exit(1);
 }
 
-if (!home.includes("本周可抄") || !home.includes("paths/daily-to-draft")) {
-  console.error("Homepage is missing this week’s steal (本周可抄 → /paths/daily-to-draft/).");
-  process.exit(1);
+async function assertNoindex(rel) {
+  const page = await readFile(new URL(`../dist/${rel}`, import.meta.url), "utf8");
+  if (!page.includes('name="robots" content="noindex, nofollow"')) {
+    console.error(`${rel} is missing <meta name="robots" content="noindex, nofollow">.`);
+    process.exit(1);
+  }
 }
 
-if (!home.includes("combos/") || !home.includes("三库组合")) {
-  console.error("Homepage is missing the Combos rail link (combos/ / 三库组合).");
-  process.exit(1);
+await assertNoindex("paths/index.html");
+for (const path of pathsDataset.paths) {
+  await assertNoindex(`paths/${path.slug}/index.html`);
+}
+await assertNoindex("combos/index.html");
+for (const combo of combosDataset.combos) {
+  await assertNoindex(`combos/${combo.slug}/index.html`);
 }
 
 if (!home.includes("models/") || !home.includes("最新模型")) {
@@ -378,8 +385,13 @@ if (
   }
 }
 
-if (!home.includes("核验精选") || !home.includes("plaza-position")) {
-  console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
+if (!home.includes("每天更新的 AI 教程与拿来就用的工具") || !home.includes("plaza-hero")) {
+  console.error("Homepage is missing the hero (每天更新的 AI 教程… / plaza-hero).");
+  process.exit(1);
+}
+
+if (!home.includes("新手从这里开始") || !home.includes("cases/?difficulty=starter")) {
+  console.error("Homepage is missing the starter row (新手从这里开始 → /cases/?difficulty=starter).");
   process.exit(1);
 }
 
@@ -388,13 +400,13 @@ if (!home.includes("grokbots.best") || !home.includes("cases/grokbots-best")) {
   process.exit(1);
 }
 
-if (!home.includes("核验精选的可复用用法")) {
-  console.error("Homepage meta/OG is missing curated-use-case positioning.");
+if (!home.includes("给想提升 AI 能力的人")) {
+  console.error("Homepage meta/OG is missing the reader positioning.");
   process.exit(1);
 }
 
 // GitHub star CTA for this repo: home rail card + header pill / footer line on a regular page.
-const repoUrl = "https://github.com/mostdesign01-sudo/grokbot-use-cases";
+const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY || "mostdesign01-sudo/grokbot-use-cases"}`;
 if (!home.includes("给本项目点个 Star") || !home.includes("gh-star-rail") || !home.includes(repoUrl)) {
   console.error("Homepage is missing the GitHub star CTA (给本项目点个 Star / gh-star-rail → repo URL).");
   process.exit(1);
@@ -430,6 +442,45 @@ if (errandPage.includes("把跑通的步骤存成 Skill") || errandPage.includes
 if (missing.length) {
   console.error("Missing build outputs:\n" + missing.join("\n"));
   process.exit(1);
+}
+
+{
+  const hookNoise = /HTTP|gh api|Algolia|\d\s*pts\b|\bpts\b|★|撰写时|item \d|\d{4}-\d\d-\d\d/;
+  const hookBad = [];
+  const lintHooks = (label, items) => {
+    const absent = [];
+    const bad = [];
+    for (const item of items) {
+      const hasHook = item.hook !== undefined || item.hookEn !== undefined;
+      if (!hasHook) {
+        absent.push(item.id);
+        continue;
+      }
+      const zh = typeof item.hook === "string" ? item.hook : "";
+      const en = typeof item.hookEn === "string" ? item.hookEn : "";
+      const reasons = [];
+      if (!zh || !en) reasons.push("pair");
+      if ([...zh].length > 36) reasons.push(`zh ${[...zh].length}`);
+      if (en.length > 90) reasons.push(`en ${en.length}`);
+      if (!/[。！]$/.test(zh)) reasons.push("zh ending");
+      if (!/[.!]$/.test(en)) reasons.push("en ending");
+      if (hookNoise.test(zh + en)) reasons.push("banned token");
+      if (reasons.length) bad.push(`${item.id} (${reasons.join(", ")})`);
+    }
+    if (absent.length) {
+      console.warn(`hook lint: ${label} ${absent.length} without a hook: ${absent.join(", ")}`);
+    }
+    if (bad.length) {
+      hookBad.push(...bad.map((line) => `${label}/${line}`));
+      console.error(`hook lint: ${label} ${bad.length} format violation(s): ${bad.join("; ")}`);
+    } else {
+      console.log(`hook lint: ${label} ${items.length} items, ${absent.length} missing, 0 format violations.`);
+    }
+  };
+  lintHooks("cases", dataset.cases);
+  lintHooks("html", htmlDataset.items);
+  lintHooks("agent-ui", agentUiDataset.items);
+  if (hookBad.length) process.exit(1);
 }
 
 console.log(

@@ -7,6 +7,7 @@ import { fill, ui } from "../../../lib/i18n";
 import { withBase } from "../../../lib/paths";
 
 const collections = getHtmlTypeCollections();
+const lede = fill(ui.html.typesLede, { n: collections.length });
 ---
 
 <BaseLayout
@@ -20,14 +21,7 @@ const collections = getHtmlTypeCollections();
     <section class="collection-hero">
       <p class="kicker">HTML Types</p>
       <h1><Loc zh={ui.html.typesH1.zh} en={ui.html.typesH1.en} /></h1>
-      <p class="lede">
-        <span class="loc-zh">
-          类型来自 <code>data/html-items.json</code> 里实际出现过的 <code>types[]</code>。当前 {collections.length} 类。
-        </span>
-        <span class="loc-en">
-          Types are <code>types[]</code> values that actually appear in <code>data/html-items.json</code>. {collections.length} now.
-        </span>
-      </p>
+      <p class="lede"><Loc zh={lede.zh} en={lede.en} /></p>
     </section>
     <section class="section">
       <div class="doc-grid">

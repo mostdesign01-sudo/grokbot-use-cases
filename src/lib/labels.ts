@@ -14,6 +14,17 @@ export const categoryLabels: Record<string, string> = {
   "multi-agent": "多 Agent",
   coding: "编程",
   ops: "运营",
+  "getting-started": "入门",
+  productivity: "效率",
+  "project-management": "项目管理",
+  templates: "模板",
+  "customer-success": "客户成功",
+  directory: "目录",
+  prompts: "提示词",
+  sharing: "分享",
+  support: "客服支持",
+  community: "社区",
+  skills: "技能",
 };
 
 export const categoryLabelsEn: Record<string, string> = {
@@ -29,6 +40,17 @@ export const categoryLabelsEn: Record<string, string> = {
   "multi-agent": "Multi-agent",
   coding: "Coding",
   ops: "Ops",
+  "getting-started": "Getting started",
+  productivity: "Productivity",
+  "project-management": "Project management",
+  templates: "Templates",
+  "customer-success": "Customer success",
+  directory: "Directory",
+  prompts: "Prompts",
+  sharing: "Sharing",
+  support: "Customer support",
+  community: "Community",
+  skills: "Skills",
 };
 
 export const categoryIntros: Record<string, string> = {

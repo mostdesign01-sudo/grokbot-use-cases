@@ -1,16 +1,16 @@
 /** Public umbrella brand. Library names stay separate. */
 export const siteName = "AI UP LAB";
 
-export const siteTagline = "核验精选 · 人核过的用法、路径、三库拣货";
-export const siteTaglineEn = "Curated & checked · use-cases, paths, three-library picks";
+export const siteTagline = "每天更新的 AI 教程与工具";
+export const siteTaglineEn = "Daily AI tutorials and tools";
 
 export const siteDescription =
-  "AI UP LAB：核验精选的可复用用法。人核过的 Cases / HTML / Agent UI，加上 Paths 与 Combos。不是 bot 安装目录。";
+  "给想提升 AI 能力的人：跟着教程学会用 Agent，或直接拿走 Skill、组件和网页范例。每条都附原文链接。";
 export const siteDescriptionEn =
-  "AI UP LAB: curated, human-checked use-cases — Cases / HTML / Agent UI plus Paths and Combos. Not a bot install directory.";
+  "For people building their AI skills: learn Agents from a tutorial, or take a Skill, a component, or a web example and use it. Every entry links to the original.";
 
 /** Public source repo for this site. The GitHub-star CTA points here; it is unrelated to curator ★ or visitor ☆. */
-export const repoSlug = "mostdesign01-sudo/grokbot-use-cases";
+export const repoSlug: string = import.meta.env.PUBLIC_REPO_SLUG;
 export const repoUrl = `https://github.com/${repoSlug}`;
 /** Unauthenticated public endpoint used only to paint the live stargazer count client-side. */
 export const repoApiUrl = `https://api.github.com/repos/${repoSlug}`;

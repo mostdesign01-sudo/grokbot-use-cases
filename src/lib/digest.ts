@@ -1,4 +1,6 @@
 import { agentUiItems, agentUiMeta, agentUiSearchText } from "./agent-ui";
+import { cardLine, stripAuditNoise } from "./cardline";
+import { caseCover } from "./covers";
 import { cases, changelogNotes, meta as casesMeta, caseSearchText, type ChangelogNote } from "./cases";
 import { shanghaiDateKey } from "./format";
 import { htmlItems, htmlMeta, htmlSearchText } from "./html";
@@ -7,11 +9,16 @@ import { assetUrl, withBase } from "./paths";
 import { relatedPlaybooksForNotes } from "./playbooks";
 import { starsOf } from "./stars";
 
+export { firstSentence, splitSentences } from "./cardline";
+
 export type DigestLib = "grok" | "html" | "agent-ui";
 
 export interface DigestBullet {
-  zh: string;
-  en: string;
+  href: string;
+  title: string;
+  titleEn: string;
+  line: string;
+  lineEn: string;
 }
 
 export interface PlazaItem {
@@ -26,6 +33,8 @@ export interface PlazaItem {
   line: string;
   lineEn: string;
   thumb?: string;
+  /** Category illustration, not a real screenshot. Shorter in the masonry. */
+  thumbCover?: boolean;
   dateKey: string;
   updatedAt: string;
   searchText: string;
@@ -53,13 +62,7 @@ export interface DigestArchiveEntry {
   count: number;
 }
 
-const LIB_ORDER: DigestLib[] = ["grok", "html", "agent-ui"];
 const MIN_DIGEST_ADDS = 2;
-
-const COUNT_TRAIL_RE =
-  /(?:HTML 收集|HTML Collection|Grok Bot|Agent UI)\s*\d+\s*→\s*\d+[。.]?/g;
-const PREVIEW_TRAIL_RE = /(?:均带 3:2 自托管预览|Both have self-hosted 3:2 previews)[。.]?/gi;
-const ITEM_ID_RE = /[（(]item\s+\d+(?:、item\s+\d+)*[）)]/gi;
 
 interface CatalogItem {
   lib: DigestLib;
@@ -69,10 +72,11 @@ interface CatalogItem {
   titleEn: string;
   summary: string;
   summaryEn: string;
-  qualityNote: string;
-  qualityNoteEn: string;
+  hook?: string;
+  hookEn?: string;
   sourceUrl: string;
   previewImage?: string;
+  categories?: string[];
   publishedAt: string;
   updatedAt: string;
   searchText: string;
@@ -88,10 +92,11 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
-    qualityNote: item.qualityNote,
-    qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
+    hook: item.hook,
+    hookEn: item.hookEn,
     sourceUrl: item.sourceUrl,
     previewImage: item.previewImage,
+    categories: item.categories,
     publishedAt: item.publishedAt,
     updatedAt: item.updatedAt,
     searchText: caseSearchText(item),
@@ -105,8 +110,8 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn ?? item.title,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
-    qualityNote: item.qualityNote,
-    qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
+    hook: item.hook,
+    hookEn: item.hookEn,
     sourceUrl: item.sourceUrl,
     previewImage: item.previewImage,
     publishedAt: item.publishedAt,
@@ -122,8 +127,8 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn ?? item.title,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
-    qualityNote: item.qualityNote,
-    qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
+    hook: item.hook,
+    hookEn: item.hookEn,
     sourceUrl: item.sourceUrl,
     previewImage: item.previewImage,
     publishedAt: item.publishedAt,
@@ -140,56 +145,6 @@ export function sourceHost(url: string): string {
   } catch {
     return "";
   }
-}
-
-export function splitSentences(text: string): string[] {
-  const t = text.replace(/\s+/g, " ").trim();
-  if (!t) return [];
-  return t
-    .split(/(?<=[。！？])\s*|(?<=[.!?])\s+/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
-export function firstSentence(text: string): string {
-  return splitSentences(text)[0] ?? "";
-}
-
-function editorialLine(note: string, fallback: string): string {
-  return firstSentence(note) || firstSentence(fallback) || fallback.trim();
-}
-
-function stripNoteMeta(text: string): string {
-  return text
-    .replace(/来源\s+https?:\/\/\S+/g, "")
-    .replace(/来源\s+@[^\s。]+[。]?/g, "")
-    .replace(/From\s+https?:\/\/\S+[：:]?/gi, "")
-    .replace(/From\s+@[^\s.]+[.]?/gi, "")
-    .replace(/Source:\s+@[^\s.]+[.]?/gi, "")
-    .replace(COUNT_TRAIL_RE, "")
-    .replace(PREVIEW_TRAIL_RE, "")
-    .replace(ITEM_ID_RE, "")
-    .replace(/\s+/g, " ")
-    .replace(/^[：:\s]+/, "")
-    .replace(/[；;]\s*[。.]/g, "。")
-    .trim()
-    .replace(/[，,；;]\s*$/g, "");
-}
-
-function isWeakClause(text: string): boolean {
-  const t = text.replace(/[。.!]?$/, "").trim();
-  if (t.length < 8) return true;
-  if (/^@/.test(t) || /^https?:/i.test(t)) return true;
-  if (/^(来源|From|Source:)/i.test(t)) return true;
-  return false;
-}
-
-export function noteLibrary(note: ChangelogNote): DigestLib | "lab" {
-  const t = `${note.title} ${note.titleEn ?? ""}`;
-  if (/Agent UI/i.test(t)) return "agent-ui";
-  if (/HTML/i.test(t)) return "html";
-  if (/Grok/i.test(t)) return "grok";
-  return "lab";
 }
 
 function libCopy(lib: DigestLib): Copy {
@@ -267,135 +222,64 @@ function uniqueKeepOrder(values: string[]): string[] {
   return out;
 }
 
-function clauseAfterLead(text: string): string {
-  const cleaned = stripNoteMeta(text);
-  const colon = cleaned.match(/[：:]\s*(.+)/);
-  if (colon?.[1] && !isWeakClause(colon[1])) {
-    return firstSentence(colon[1].trim());
+function hanCount(text: string): number {
+  return [...text].filter((ch) => /\p{Script=Han}/u.test(ch)).length;
+}
+
+function shortTitle(title: string): string {
+  const head = title.split(/[：:]/)[0]?.trim() || title.trim();
+  return head.replace(/[（(][^）)]*[）)]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function composeLead(items: CatalogItem[]): Copy {
+  const n = items.length;
+  if (n === 0) return { zh: "今天没有新收条目。", en: "No new items today." };
+
+  const zhNames = uniqueKeepOrder(items.map((item) => shortTitle(item.title)));
+  let zhPicked: string[] = [];
+  for (const name of zhNames) {
+    const next = [...zhPicked, name];
+    const sentence = `今天新收 ${n} 条：${next.join("、")}。`;
+    if (hanCount(sentence) > 40) break;
+    zhPicked = next;
   }
-  const stripped = firstSentence(cleaned.replace(/^(?:增收|Added)\s*/i, ""));
-  return isWeakClause(stripped) ? "" : stripped;
-}
+  const zh = zhPicked.length ? `今天新收 ${n} 条：${zhPicked.join("、")}。` : `今天新收 ${n} 条。`;
 
-function sentenceForLibrary(
-  lib: DigestLib | "lab",
-  notes: ChangelogNote[],
-  items: CatalogItem[],
-  locale: "zh" | "en",
-): string {
-  const libNotes = notes.filter((note) => noteLibrary(note) === lib);
-  const clauses = uniqueKeepOrder(
-    libNotes
-      .map((note) => clauseAfterLead(locale === "en" ? (note.bodyEn ?? note.body) : note.body))
-      .filter((clause) => !isWeakClause(clause))
-      .map((clause) => clause.replace(/[。.!]+$/, "")),
-  );
-
-  if (clauses.length === 0) {
-    const bits = items
-      .filter((item) => item.lib === lib)
-      .map((item) =>
-        editorialLine(locale === "en" ? item.qualityNoteEn : item.qualityNote, locale === "en" ? item.summaryEn : item.summary),
-      )
-      .filter((bit) => !isWeakClause(bit))
-      .slice(0, 2)
-      .map((bit) => bit.replace(/[。.!]+$/, ""));
-    if (bits.length === 0) return "";
-    const name = lib === "lab" ? "" : libCopy(lib)[locale];
-    const head = name ? (locale === "en" ? `${name}: ` : `${name}：`) : "";
-    const joined = bits.join(locale === "en" ? "; " : "；");
-    return `${head}${joined}${locale === "en" ? "." : "。"}`;
+  const enNames = uniqueKeepOrder(items.map((item) => shortTitle(item.titleEn || item.title)));
+  let enPicked: string[] = [];
+  for (const name of enNames) {
+    const next = [...enPicked, name];
+    const sentence = `Today: ${n} new — ${next.join(", ")}.`;
+    if (sentence.length > 90) break;
+    enPicked = next;
   }
-
-  const joined = clauses.join(locale === "en" ? "; " : "；");
-  return `${joined}${locale === "en" ? "." : "。"}`;
+  const en = enPicked.length ? `Today: ${n} new — ${enPicked.join(", ")}.` : `Today: ${n} new.`;
+  return { zh, en };
 }
 
-function composeLead(notes: ChangelogNote[], items: CatalogItem[]): Copy {
-  const libs = LIB_ORDER.filter((lib) => notes.some((note) => noteLibrary(note) === lib) || items.some((item) => item.lib === lib));
-
-  const zhParts = libs.map((lib) => sentenceForLibrary(lib, notes, items, "zh")).filter(Boolean);
-  const enParts = libs.map((lib) => sentenceForLibrary(lib, notes, items, "en")).filter(Boolean);
-
-  if (zhParts.length === 0) {
-    const fallback = items[0];
-    if (!fallback) return { zh: "", en: "" };
-    return {
-      zh: editorialLine(fallback.qualityNote, fallback.summary),
-      en: editorialLine(fallback.qualityNoteEn, fallback.summaryEn),
-    };
-  }
-
-  const cap = (text: string) => text ? text.charAt(0).toUpperCase() + text.slice(1) : text;
-
-  return {
-    zh: zhParts.slice(0, 3).join(""),
-    en: enParts.slice(0, 3).map(cap).join(" "),
-  };
-}
-
-function claimFromNote(note: ChangelogNote, locale: "zh" | "en"): string {
-  const title = locale === "en" ? (note.titleEn ?? note.title) : note.title;
-  const body = locale === "en" ? (note.bodyEn ?? note.body) : note.body;
-  const cleaned = stripNoteMeta(body);
-  const sentence = firstSentence(cleaned);
-  if (sentence && sentence.length >= 10) return sentence;
-  const clause = clauseAfterLead(body);
-  if (clause) {
-    const name = title.replace(/^(?:HTML 收集|HTML Collection|Grok Bot|Agent UI)\s*[：:]\s*/, "");
-    return locale === "en" ? `${name.replace(/^add(?:ed)?\s+/i, "")}: ${clause}` : `${name}：${clause}`;
-  }
-  return firstSentence(title);
-}
-
-function claimFromItem(item: CatalogItem, locale: "zh" | "en"): string {
-  const note = locale === "en" ? item.qualityNoteEn : item.qualityNote;
-  const summary = locale === "en" ? item.summaryEn : item.summary;
-  const line = editorialLine(note, summary);
-  if (line.length >= 8) return line;
-  return locale === "en" ? item.titleEn : item.title;
-}
-
-function composeBullets(notes: ChangelogNote[], items: CatalogItem[]): DigestBullet[] {
-  const cap = (text: string) => (text ? text.charAt(0).toUpperCase() + text.slice(1) : text);
-  const fromNotes = notes.map((note) => ({
-    zh: claimFromNote(note, "zh"),
-    en: cap(claimFromNote(note, "en")),
+function composeBullets(items: CatalogItem[]): DigestBullet[] {
+  return items.slice(0, 4).map((item) => ({
+    href: itemHref(item),
+    title: item.title,
+    titleEn: item.titleEn,
+    line: cardLine(item, "zh"),
+    lineEn: cardLine(item, "en"),
   }));
-  const used = new Set(
-    items
-      .filter((item) =>
-        notes.some(
-          (note) =>
-            `${note.title} ${note.body}`.includes(item.title) ||
-            `${note.titleEn ?? ""} ${note.bodyEn ?? ""}`.includes(item.titleEn),
-        ),
-      )
-      .map((item) => item.id),
-  );
-  const fromItems = items
-    .filter((item) => !used.has(item.id))
-    .map((item) => ({
-      zh: claimFromItem(item, "zh"),
-      en: claimFromItem(item, "en"),
-    }));
+}
 
-  const merged = uniqueKeepOrder(
-    (fromNotes.length >= 4 ? fromNotes : [...fromNotes, ...fromItems]).map((b) => `${b.zh}|||${b.en}`),
-  )
-    .map((pair) => {
-      const [zh, en] = pair.split("|||");
-      return { zh, en };
-    })
-    .filter((b) => b.zh.length >= 4);
-
-  return merged.slice(0, 6);
+export function latestPlazaItems(lib: DigestLib, limit = 6, items = catalog()): PlazaItem[] {
+  return items
+    .filter((item) => item.lib === lib)
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit)
+    .map(toPlazaItem);
 }
 
 function toPlazaItem(item: CatalogItem): PlazaItem {
   const names = libCopy(item.lib);
   const host = sourceHost(item.sourceUrl);
   const dateKey = shanghaiDateKey(item.updatedAt);
+  const thumbCover = item.lib === "grok" && !item.previewImage;
   return {
     id: `${item.lib}:${item.id}`,
     lib: item.lib,
@@ -404,12 +288,23 @@ function toPlazaItem(item: CatalogItem): PlazaItem {
     title: item.title,
     titleEn: item.titleEn,
     sourceHost: host,
-    line: editorialLine(item.qualityNote, item.summary),
-    lineEn: editorialLine(item.qualityNoteEn, item.summaryEn),
-    thumb: assetUrl(item.previewImage),
+    line: cardLine(item, "zh"),
+    lineEn: cardLine(item, "en"),
+    searchText: [
+      item.title,
+      item.titleEn,
+      item.hook ?? "",
+      item.hookEn ?? "",
+      stripAuditNoise(item.summary),
+      stripAuditNoise(item.summaryEn),
+      names.zh,
+      names.en,
+      host,
+    ].join(" "),
+    thumb: assetUrl(thumbCover ? caseCover(item) : item.previewImage),
+    thumbCover,
     dateKey,
     updatedAt: item.updatedAt,
-    searchText: [item.searchText, names.zh, names.en, host].join(" "),
   };
 }
 
@@ -449,8 +344,8 @@ export function getDigestDay(dateKey?: string, all = catalog()): DigestDay | und
     dateKey: key,
     dateLabel: formatDigestDate(key),
     count: added.length,
-    lead: composeLead(notes, digestItems.length ? digestItems : added),
-    bullets: composeBullets(notes, added),
+    lead: composeLead(added.length ? added : digestItems),
+    bullets: composeBullets(added.length ? added : digestItems),
     items: added.map(toPlazaItem),
     relatedPaths: relatedPlaybooksForNotes(notes)
       .slice(0, 2)
@@ -472,7 +367,7 @@ export function packPlazaColumns(items: PlazaItem[]): [PlazaItem[], PlazaItem[],
   const cols: PlazaItem[][] = [[], [], []];
   const weights = [0, 0, 3.6];
   for (const item of items) {
-    const w = item.thumb ? 2.15 : 1.1;
+    const w = item.thumbCover ? 1.75 : item.thumb ? 2.15 : 1.1;
     let i = 0;
     if (weights[1] < weights[i]) i = 1;
     if (weights[2] < weights[i]) i = 2;

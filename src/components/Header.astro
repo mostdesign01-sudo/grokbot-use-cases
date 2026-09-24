@@ -27,14 +27,15 @@ type NavLink = { href: string; label: { zh: string; en: string }; section?: bool
 /** Visitor favorites live in localStorage; the badge count is painted client-side. */
 const favoritesLink: NavLink = { href: withBase("favorites/"), label: ui.nav.favorites, favorites: true };
 
-const labLinks: NavLink[] = [
+const labPrimary: NavLink[] = [
   { href: withBase("/"), label: ui.nav.home },
-  { href: withBase("paths/"), label: ui.nav.paths, section: true },
-  { href: withBase("combos/"), label: ui.nav.combos, section: true },
   { href: withBase("models/"), label: ui.nav.models, section: true },
-  { href: withBase("image-prompts/"), label: ui.nav.imagePrompts, section: true },
   { href: withBase("search/"), label: ui.nav.search },
   favoritesLink,
+];
+
+const labMore: NavLink[] = [
+  { href: withBase("image-prompts/"), label: ui.nav.imagePrompts, section: true },
   { href: withBase("docs/"), label: ui.nav.docs },
   { href: withBase("changelog/"), label: ui.nav.changelog },
 ];
@@ -67,7 +68,14 @@ const agentUiLinks: NavLink[] = [
 ];
 
 const links: NavLink[] =
-  currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : currentLib === "grok" ? grokLinks : labLinks;
+  currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : currentLib === "grok" ? grokLinks : labPrimary;
+const moreLinks: NavLink[] = currentLib === "lab" ? labMore : [];
+
+function linkCurrent(link: NavLink): boolean {
+  return link.section ? isSectionPath(path, link.href) : isCurrentPath(path, link.href);
+}
+
+const moreCurrent = moreLinks.some((link) => linkCurrent(link));
 
 const brandLine =
   currentLib === "agent-ui"
@@ -116,21 +124,33 @@ const brandLine =
       </nav>
     </div>
     <nav class="nav" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      <div class="nav-links">
       {
         links.map((link) => (
-          <a
-            href={link.href}
-            aria-current={(link.section
-              ? isSectionPath(path, link.href)
-              : isCurrentPath(path, link.href))
-              ? "page"
-              : undefined}
-          >
+          <a href={link.href} aria-current={linkCurrent(link) ? "page" : undefined}>
             <Loc zh={link.label.zh} en={link.label.en} />
             {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
           </a>
         ))
       }
+      {
+        moreLinks.length > 0 && (
+          <details class="nav-more" data-nav-more>
+            <summary class:list={[{ "is-current": moreCurrent }]}>
+              <Loc zh={ui.nav.more.zh} en={ui.nav.more.en} />
+            </summary>
+            <div class="nav-more-menu">
+              {moreLinks.map((link) => (
+                <a href={link.href} aria-current={linkCurrent(link) ? "page" : undefined}>
+                  <Loc zh={link.label.zh} en={link.label.en} />
+                </a>
+              ))}
+            </div>
+          </details>
+        )
+      }
+      </div>
+      <div class="nav-tools">
       <GitHubStar variant="pill" />
       <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
         <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
@@ -145,8 +165,12 @@ const brandLine =
         data-aria-zh={ui.header.theme.zh}
         data-aria-en={ui.header.theme.en}
       >
-        <span aria-hidden="true">◐</span>
+        <svg class="theme-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path fill="currentColor" d="M8 1.75a6.25 6.25 0 0 0 0 12.5V1.75Z" />
+        </svg>
       </button>
+      </div>
     </nav>
   </div>
 </header>
@@ -167,5 +191,27 @@ const brandLine =
     const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
     localStorage.setItem("theme", next);
+  });
+
+  const menus = document.querySelectorAll<HTMLDetailsElement>("details[data-nav-more]");
+  document.addEventListener("click", (event) => {
+    const target = event.target as Node | null;
+    menus.forEach((menu) => {
+      if (!menu.open || (target && menu.contains(target))) return;
+      menu.open = false;
+    });
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    menus.forEach((menu) => {
+      menu.open = false;
+    });
+  });
+  menus.forEach((menu) => {
+    menu.addEventListener("focusout", (event) => {
+      const next = event.relatedTarget as Node | null;
+      if (next && menu.contains(next)) return;
+      menu.open = false;
+    });
   });
 </script>

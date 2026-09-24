@@ -4,8 +4,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { changelogNotes, meta } from "../lib/cases";
 import { formatShanghaiDate, formatShanghaiDateTime, groupByShanghaiDay } from "../lib/format";
 import { ui } from "../lib/i18n";
-import { withBase } from "../lib/paths";
-import { relatedPlaybookForNote } from "../lib/playbooks";
 
 const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
 ---
@@ -20,14 +18,7 @@ const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
   <div class="wrap">
     <p class="kicker">Changelog</p>
     <h1><Loc zh={ui.pages.changelogH1.zh} en={ui.pages.changelogH1.en} /></h1>
-    <p class="lede">
-      <span class="loc-zh">
-        AI UP LAB 的数据更新时间以 <code>data/cases.json</code> 的 <code>meta.updatedAt</code> 为准，并按 Asia/Shanghai 显示。
-      </span>
-      <span class="loc-en">
-        AI UP LAB data freshness follows <code>meta.updatedAt</code> in <code>data/cases.json</code>, shown in Asia/Shanghai.
-      </span>
-    </p>
+    <p class="lede"><Loc zh={ui.pages.changelogLede.zh} en={ui.pages.changelogLede.en} /></p>
 
     <section class="stats" aria-label={ui.pages.dataVersion.zh} data-aria-zh={ui.pages.dataVersion.zh} data-aria-en={ui.pages.dataVersion.en}>
       <div class="stat">
@@ -72,9 +63,7 @@ const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
                 <span class="loc-en">{group.titleEn}</span>
               </h3>
               <div class="timeline">
-                {group.items.map((note) => {
-                  const related = relatedPlaybookForNote(note);
-                  return (
+                {group.items.map((note) => (
                     <article class="note">
                       <time datetime={note.date}>{note.date}</time>
                       <h3>
@@ -85,20 +74,8 @@ const groups = groupByShanghaiDay(changelogNotes, (note) => note.date);
                         <span class="loc-zh">{note.body}</span>
                         <span class="loc-en">{note.bodyEn ?? note.body}</span>
                       </p>
-                      {related && (
-                        <p class="note-related">
-                          <span class="note-related-label">
-                            <Loc zh={ui.home.relatedPath.zh} en={ui.home.relatedPath.en} />
-                          </span>
-                          <a href={withBase(`paths/${related.slug}/`)}>
-                            <span class="loc-zh">{related.title}</span>
-                            <span class="loc-en">{related.titleEn}</span>
-                          </a>
-                        </p>
-                      )}
                     </article>
-                  );
-                })}
+                  ))}
               </div>
             </section>
           ))

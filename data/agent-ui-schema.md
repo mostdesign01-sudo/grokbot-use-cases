@@ -28,12 +28,14 @@
 | `slug` | string | 详情路径 `/agent-ui/[slug]/`，勿使用 `featured` `latest` `types` |
 | `title` | string | 展示标题（专有名词可保持原文；ThreeUI 英文名两边都用） |
 | `titleEn` | string | 英文标题（专有名词可与 `title` 相同） |
-| `summary` | string | 中文摘要 |
+| `summary` | string | 中文摘要。读者向价值，不要写成核验日志 |
 | `summaryEn` | string | 英文摘要（EN 模式展示；翻译已有中文，勿新增条目） |
+| `hook` | string | 可选。读者向一句话：这是什么、为什么值得打开。中文 ≤ 36 个汉字。不写核验痕迹、HTTP 状态、星数或点数、日期 |
+| `hookEn` | string | 可选。英文一句话，≤ 90 个字符，只复述 `hook` 已有的事实 |
 | `types` | string[] | 见下方类型枚举 |
 | `sourceUrl` | string | ThreeUI Community 免费组件页，形态为 `https://threeui.com/{category}/{slug}`（可带 `/variant`） |
 | `secondaryUrls` | string[] | 可选，GitHub / browse |
-| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base` 加上 `/grokbot-use-cases` 前缀。缺省或加载失败时卡片回退 CSS 海报。 |
+| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base`（与仓库名相同，现为 `/ai-up-lab`）加上前缀。缺省或加载失败时卡片回退 CSS 海报。 |
 | `featured` | boolean | 是否出现在精选 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。编辑质量判断，不是 GitHub star 数；不填则不显示 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
@@ -44,6 +46,13 @@
 | `npmPackage` | string | 可选，如 `@designcodeio/threeui` |
 | `promptHint` | string | 可选，给 Agent 的换主题 / Skill 提示 |
 | `promptHintEn` | string | 可选，英文 Agent 提示 |
+
+## 文案规范 / copy rules
+
+- `hook` 与 `summary`（及 `hookEn` / `summaryEn`）是读者向价值：说明这条是什么、为什么值得打开。
+- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `qualityNote`。
+- 核验痕迹只写在 `qualityNote` / `qualityNoteEn`：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
+- 卡片短句优先用 `hook`。没有 `hook` 时，从 `summary` 取第一句并去掉上述核验碎片。不要把 `qualityNote` 当作卡片文案。详情页仍展示完整 `summary`。
 
 ## 类型枚举
 

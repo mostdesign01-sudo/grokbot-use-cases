@@ -23,7 +23,7 @@ const itemId = item.id.slice(item.lib.length + 1);
   <a class:list={["plaza-card", `plaza-card-${item.lib}`]} href={item.href}>
     {
       item.thumb && (
-        <div class="plaza-thumb">
+        <div class:list={["plaza-thumb", { "is-cover": item.thumbCover }]}>
           <img src={item.thumb} alt="" loading="lazy" decoding="async" />
         </div>
       )

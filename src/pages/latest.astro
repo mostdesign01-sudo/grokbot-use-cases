@@ -3,10 +3,11 @@ import Loc from "../components/Loc.astro";
 import TimelineFeed from "../components/TimelineFeed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getLatestCases } from "../lib/cases";
-import { ui } from "../lib/i18n";
+import { fill, ui } from "../lib/i18n";
 import { withBase } from "../lib/paths";
 
 const latest = getLatestCases();
+const lede = fill(ui.grok.latestLede, { n: latest.length });
 ---
 
 <BaseLayout
@@ -20,14 +21,7 @@ const latest = getLatestCases();
     <section class="collection-hero">
       <p class="kicker">Latest</p>
       <h1><Loc zh={ui.grok.latestH1.zh} en={ui.grok.latestH1.en} /></h1>
-      <p class="lede">
-        <span class="loc-zh">
-          按 <code>publishedAt</code> 再按 <code>updatedAt</code> 从新到旧排列，便于先看最近公开的用法。当前共 {latest.length} 条。
-        </span>
-        <span class="loc-en">
-          Sorted by <code>publishedAt</code>, then <code>updatedAt</code>, newest first. {latest.length} now.
-        </span>
-      </p>
+      <p class="lede"><Loc zh={lede.zh} en={lede.en} /></p>
       <div class="hero-actions">
         <a class="btn btn-ghost" href={withBase("featured/")}><Loc zh={ui.grok.viewFeatured.zh} en={ui.grok.viewFeatured.en} /></a>
         <a class="btn btn-ghost" href={withBase("types/")}><Loc zh={ui.grok.browseTypes.zh} en={ui.grok.browseTypes.en} /></a>

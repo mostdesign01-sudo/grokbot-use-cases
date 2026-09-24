@@ -4,19 +4,25 @@ import DigestCard from "./DigestCard.astro";
 import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
 import PlazaCard from "./PlazaCard.astro";
+import { agentUiItems } from "../lib/agent-ui";
+import { cases, getCaseBySlug } from "../lib/cases";
+import { caseCover } from "../lib/covers";
 import {
   dateHref,
-  firstSentence,
   getDigestArchive,
   getHomeDigest,
+  latestPlazaItems,
   packPlazaColumns,
   resolveDigestDate,
+  type DigestLib,
 } from "../lib/digest";
-import { getCaseBySlug } from "../lib/cases";
-import { ui } from "../lib/i18n";
-import { withBase } from "../lib/paths";
-import { getStealAlso, getWeeklySteal } from "../lib/playbooks";
+import { shanghaiDateKey } from "../lib/format";
+import { htmlItems } from "../lib/html";
+import { fill, ui } from "../lib/i18n";
+import { difficultyLabel } from "../lib/labels";
+import { assetUrl, withBase } from "../lib/paths";
 import { siteName } from "../lib/site";
+import { starterCases } from "../lib/starters";
 
 interface Props {
   dateKey?: string;
@@ -27,13 +33,85 @@ const latest = resolveDigestDate();
 const day = getHomeDigest(dateKey);
 const archive = getDigestArchive();
 const [col1, col2, col3] = packPlazaColumns(day.items);
-const steal = getWeeklySteal();
-const also = getStealAlso(steal, 3);
-const stealLine = steal
-  ? { zh: firstSentence(steal.summary), en: firstSentence(steal.summaryEn) }
-  : ui.home.pathsStrip;
+const railLinks = [
+  { href: withBase("models/"), label: ui.nav.models },
+  { href: withBase("image-prompts/"), label: ui.nav.imagePrompts },
+  { href: withBase("search/"), label: ui.nav.search },
+  { href: withBase("favorites/"), label: ui.home.favorites, favorites: true },
+  { href: withBase("docs/"), label: ui.nav.docs },
+  { href: withBase("changelog/"), label: ui.nav.changelog },
+];
+
 const sibling = getCaseBySlug("grokbots-best");
 const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grokbots.best";
+
+function shiftDateKey(key: string, days: number): string {
+  const [year, month, day] = key.split("-").map(Number);
+  const shifted = new Date(Date.UTC(year, month - 1, day + days));
+  return [
+    shifted.getUTCFullYear(),
+    String(shifted.getUTCMonth() + 1).padStart(2, "0"),
+    String(shifted.getUTCDate()).padStart(2, "0"),
+  ].join("-");
+}
+
+function updatedThisWeek(items: { updatedAt: string }[], endKey: string): number {
+  const start = shiftDateKey(endKey, -6);
+  return items.filter((item) => {
+    const key = shanghaiDateKey(item.updatedAt);
+    return key >= start && key <= endKey;
+  }).length;
+}
+
+const libraries = [
+  {
+    href: withBase("cases/"),
+    name: ui.lib.grok,
+    intent: ui.home.libGrok,
+    count: cases.length,
+    week: updatedThisWeek(cases, day.dateKey),
+    image: assetUrl("/brand/lib-grok.webp"),
+    tone: "plaza-lib-grok",
+  },
+  {
+    href: withBase("html/"),
+    name: ui.lib.html,
+    intent: ui.home.libHtml,
+    count: htmlItems.length,
+    week: updatedThisWeek(htmlItems, day.dateKey),
+    image: assetUrl("/brand/lib-html.webp"),
+    tone: "plaza-lib-html",
+  },
+  {
+    href: withBase("agent-ui/"),
+    name: ui.lib.agentUi,
+    intent: ui.home.libAgent,
+    count: agentUiItems.length,
+    week: updatedThisWeek(agentUiItems, day.dateKey),
+    image: assetUrl("/brand/lib-agent-ui.webp"),
+    tone: "plaza-lib-agent",
+  },
+].map((lib) => ({
+  ...lib,
+  countLabel: fill(ui.home.countItems, { n: lib.count }),
+  weekLabel: fill(ui.home.weekBadge, { n: lib.week }),
+}));
+
+const starters = starterCases().map((item) => {
+  const shot = assetUrl(item.previewImage);
+  return {
+    item,
+    href: withBase(`cases/${item.slug}/`),
+    thumb: shot ?? assetUrl(caseCover(item)),
+    isCover: !shot,
+    hook: item.hook ?? "",
+    hookEn: item.hookEn ?? item.hook ?? "",
+  };
+});
+
+const fallbackLibs: DigestLib[] = ["grok", "html", "agent-ui"];
+const fallbackItems = fallbackLibs.flatMap((lib) => latestPlazaItems(lib, 6));
+const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("starter", "en") };
 ---
 
 <div class="home-shell" data-home-shell>
@@ -63,11 +141,12 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
           data-aria-zh={ui.header.theme.zh}
           data-aria-en={ui.header.theme.en}
         >
-          <span aria-hidden="true">◐</span>
+          <svg class="theme-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <path fill="currentColor" d="M8 1.75a6.25 6.25 0 0 0 0 12.5V1.75Z" />
+          </svg>
         </button>
       </div>
-
-      <GitHubStar variant="rail" />
     </div>
 
     <nav class="home-dates" aria-label={ui.home.dates.zh} data-aria-zh={ui.home.dates.zh} data-aria-en={ui.home.dates.en}>
@@ -93,76 +172,119 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
       <a class="lib-agent" href={withBase("agent-ui/")}>Agent UI</a>
     </nav>
 
-    <nav class="home-rail-meta" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
-      <a href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a>
-      <a href={withBase("combos/")}><Loc zh={ui.nav.combos.zh} en={ui.nav.combos.en} /></a>
-      <a href={withBase("models/")}><Loc zh={ui.nav.models.zh} en={ui.nav.models.en} /></a>
-      <a href={withBase("image-prompts/")}><Loc zh={ui.nav.imagePrompts.zh} en={ui.nav.imagePrompts.en} /></a>
-      <a href={withBase("search/")}><Loc zh={ui.nav.search.zh} en={ui.nav.search.en} /></a>
-      <a href={withBase("favorites/")}>
-        <Loc zh={ui.home.favorites.zh} en={ui.home.favorites.en} />
-        <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>
-      </a>
-      <a href={withBase("docs/")}><Loc zh={ui.nav.docs.zh} en={ui.nav.docs.en} /></a>
-      <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+    <nav class="home-rail-meta home-rail-meta-desk" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      {
+        railLinks.map((link) => (
+          <a href={link.href}>
+            <Loc zh={link.label.zh} en={link.label.en} />
+            {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
+          </a>
+        ))
+      }
     </nav>
+    <GitHubStar variant="rail" />
+    <details class="home-rail-more">
+      <summary>
+        <Loc zh={ui.nav.more.zh} en={ui.nav.more.en} />
+      </summary>
+      <nav class="home-rail-meta" aria-label={ui.header.sections.zh}>
+        {
+          railLinks.map((link) => (
+            <a href={link.href}>
+              <Loc zh={link.label.zh} en={link.label.en} />
+              {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
   </aside>
 
   <main class="home-plaza">
     <div class="home-plaza-scroll" data-plaza-scroll>
-      <aside class="plaza-position" data-position-band>
-        <p class="plaza-kicker"><Loc zh={ui.home.positionKicker.zh} en={ui.home.positionKicker.en} /></p>
-        <p class="plaza-position-lead">
-          <Loc zh={ui.home.positionLead.zh} en={ui.home.positionLead.en} />
+      <section class="plaza-hero">
+        <h1><Loc zh={ui.home.heroTitle.zh} en={ui.home.heroTitle.en} /></h1>
+        <p class="plaza-hero-sub">
+          <Loc zh={ui.home.heroSub.zh} en={ui.home.heroSub.en} />
         </p>
-        <p class="plaza-position-also">
-          <a
-            class="plaza-also-chip"
-            href={siblingHref}
-            rel={sibling ? undefined : "noreferrer"}
-          >
+        <div class="plaza-lib-row">
+          {
+            libraries.map((lib) => (
+              <a class:list={["plaza-lib-card", lib.tone]} href={lib.href}>
+                <img src={lib.image} alt="" width="168" height="112" />
+                <span class="plaza-lib-copy">
+                  <strong>
+                    <Loc zh={lib.name.zh} en={lib.name.en} />
+                  </strong>
+                  <span class="plaza-lib-intent">
+                    <Loc zh={lib.intent.zh} en={lib.intent.en} />
+                  </span>
+                  <span class="plaza-lib-meta">
+                    <span>
+                      <span class="loc-zh">{lib.countLabel.zh}</span>
+                      <span class="loc-en">{lib.countLabel.en}</span>
+                    </span>
+                    {
+                      lib.week > 0 && (
+                        <span class="plaza-week">
+                          <span class="loc-zh">{lib.weekLabel.zh}</span>
+                          <span class="loc-en">{lib.weekLabel.en}</span>
+                        </span>
+                      )
+                    }
+                  </span>
+                </span>
+              </a>
+            ))
+          }
+        </div>
+        <p class="plaza-position-also plaza-hero-also">
+          <a class="plaza-also-chip" href={siblingHref} rel={sibling ? undefined : "noreferrer"}>
             <Loc zh={ui.home.siblingChip.zh} en={ui.home.siblingChip.en} />
           </a>
           <span class="plaza-position-note">
             <Loc zh={ui.home.siblingNote.zh} en={ui.home.siblingNote.en} />
           </span>
         </p>
-      </aside>
-      <aside class="plaza-paths-strip">
-        <div class="plaza-paths-copy">
-          <p class="plaza-kicker"><Loc zh={ui.home.steal.zh} en={ui.home.steal.en} /></p>
+      </section>
+      <section class="plaza-start" aria-label={ui.home.startTitle.zh} data-aria-zh={ui.home.startTitle.zh} data-aria-en={ui.home.startTitle.en}>
+        <div class="plaza-start-head">
+          <h2><Loc zh={ui.home.startTitle.zh} en={ui.home.startTitle.en} /></h2>
+          <a href={withBase("cases/?difficulty=starter")}>
+            <Loc zh={ui.home.startMore.zh} en={ui.home.startMore.en} />
+          </a>
+        </div>
+        <div class="plaza-start-row">
           {
-            steal ? (
-              <h2 class="plaza-steal-title">
-                <a href={withBase(`paths/${steal.slug}/`)}>
-                  <span class="loc-zh">{steal.title}</span>
-                  <span class="loc-en">{steal.titleEn}</span>
-                </a>
-              </h2>
-            ) : (
-              <p class="plaza-line"><Loc zh={ui.home.paths.zh} en={ui.home.paths.en} /></p>
-            )
-          }
-          <p class="plaza-line">
-            <Loc zh={stealLine.zh} en={stealLine.en} />
-          </p>
-          {
-            also.length > 0 && (
-              <p class="plaza-path-chips">
-                {also.map((path) => (
-                  <a href={withBase(`paths/${path.slug}/`)}>
-                    <span class="loc-zh">{path.title}</span>
-                    <span class="loc-en">{path.titleEn}</span>
-                  </a>
-                ))}
-              </p>
-            )
+            starters.map((card) => (
+              <a class:list={["start-card", { "is-cover": card.isCover }]} href={card.href}>
+                <img src={card.thumb} alt="" width="320" height="160" loading="lazy" decoding="async" />
+                <span class="start-badge">
+                  <Loc zh={starterBadge.zh} en={starterBadge.en} />
+                </span>
+                <strong>
+                  <Loc zh={card.item.title} en={card.item.titleEn} />
+                </strong>
+                {
+                  (card.hook || card.hookEn) && (
+                    <span class="start-hook">
+                      <Loc zh={card.hook} en={card.hookEn || card.hook} />
+                    </span>
+                  )
+                }
+              </a>
+            ))
           }
         </div>
-        <a class="btn btn-ghost" href={withBase("paths/")}>
-          <Loc zh={ui.home.allPaths.zh} en={ui.home.allPaths.en} />
-        </a>
-      </aside>
+      </section>
+      <div class="plaza-fallback" data-plaza-fallback hidden>
+        <p class="plaza-fallback-note">
+          <Loc zh={ui.home.fallback.zh} en={ui.home.fallback.en} />
+        </p>
+        <div class="plaza-fallback-grid">
+          {fallbackItems.map((item) => <PlazaCard item={item} />)}
+        </div>
+      </div>
       <div class="home-plaza-cols" data-plaza-grid>
         <div class="home-col" data-plaza-col>
           {col1.map((item) => <PlazaCard item={item} />)}
@@ -186,11 +308,15 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
       <button type="button" data-plaza-lib="all" aria-pressed="true">
         <Loc zh={ui.lib.all.zh} en={ui.lib.all.en} />
       </button>
-      <button type="button" data-plaza-lib="grok" aria-pressed="false">Grok Bot</button>
-      <button type="button" data-plaza-lib="html" aria-pressed="false">
-        <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} />
+      <button type="button" data-plaza-lib="grok" aria-pressed="false">
+        <Loc zh={ui.home.filterGrok.zh} en={ui.home.filterGrok.en} />
       </button>
-      <button type="button" data-plaza-lib="agent-ui" aria-pressed="false">Agent UI</button>
+      <button type="button" data-plaza-lib="html" aria-pressed="false">
+        <Loc zh={ui.home.filterHtml.zh} en={ui.home.filterHtml.en} />
+      </button>
+      <button type="button" data-plaza-lib="agent-ui" aria-pressed="false">
+        <Loc zh={ui.home.filterAgent.zh} en={ui.home.filterAgent.en} />
+      </button>
     </div>
   </main>
 </div>
@@ -214,9 +340,12 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
 
   const shell = document.querySelector("[data-home-shell]");
   const buttons = shell?.querySelectorAll<HTMLButtonElement>("[data-plaza-lib]");
-  const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-card]");
+  const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-grid] [data-plaza-card]");
+  const grid = shell?.querySelector<HTMLElement>("[data-plaza-grid]");
+  const fallback = shell?.querySelector<HTMLElement>("[data-plaza-fallback]");
+  const fallbackCards = shell?.querySelectorAll<HTMLElement>("[data-plaza-fallback] [data-plaza-card]");
   const empty = shell?.querySelector<HTMLElement>("[data-plaza-empty]");
-  if (shell && buttons && cards) {
+  if (shell && buttons && cards && grid && fallback && fallbackCards) {
     const apply = (lib: string) => {
       let visible = 0;
       cards.forEach((card) => {
@@ -224,10 +353,16 @@ const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grok
         card.hidden = !show;
         if (show) visible += 1;
       });
+      const useFallback = visible === 0 && lib !== "all";
+      fallbackCards.forEach((card) => {
+        card.hidden = !(useFallback && card.dataset.lib === lib);
+      });
+      fallback.hidden = !useFallback;
+      grid.hidden = useFallback;
       buttons.forEach((button) => {
         button.setAttribute("aria-pressed", button.dataset.plazaLib === lib ? "true" : "false");
       });
-      if (empty) empty.hidden = visible > 0;
+      if (empty) empty.hidden = visible > 0 || useFallback;
     };
 
     buttons.forEach((button) => {
