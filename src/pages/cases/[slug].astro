@@ -107,6 +107,9 @@ const previewCreditEn = landing?.previewCreditEn;
         </figure>
       }
       <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
+          <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
+        </a>
         <FavButton lib="grok" id={item.id} variant="button" />
       </div>
     </article>
