@@ -433,7 +433,7 @@ if (missing.length) {
 }
 
 {
-  const hookNoise = /HTTP|gh api|Algolia|pts|★|撰写时|item \d|\d{4}-\d\d-\d\d/;
+  const hookNoise = /HTTP|gh api|Algolia|\d\s*pts\b|\bpts\b|★|撰写时|item \d|\d{4}-\d\d-\d\d/;
   const hookBad = [];
   const lintHooks = (label, items) => {
     const absent = [];
