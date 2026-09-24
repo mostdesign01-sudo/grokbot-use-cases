@@ -425,7 +425,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-16",
-      "updatedAt": "2026-09-16T01:10:52Z"
+      "updatedAt": "2026-09-16T01:10:52Z",
+      "hook": "官方销售小队：会前准备、过夜拓客，再写回 Salesforce。",
+      "hookEn": "Official sales squad: prep the meeting, prospect overnight, write back to Salesforce."
     },
     {
       "id": "grok-bot-for-pms",
@@ -462,7 +464,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-15",
-      "updatedAt": "2026-09-16T01:10:52Z"
+      "updatedAt": "2026-09-16T01:10:52Z",
+      "hook": "给产品经理的汇报小队，用活的注意力清单代替周目标。",
+      "hookEn": "A product-manager squad that uses a living attention list instead of weekly goals."
     },
     {
       "id": "ronglecat-awesome-grok-bot",
@@ -494,7 +498,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "中英日三语的资源目录，教程、技能和踩坑都在。",
+      "hookEn": "A directory in three languages, covering tutorials, skills, and pitfalls."
     },
     {
       "id": "grok-ship",
@@ -531,7 +537,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-14",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "在共享电脑上装软件工厂：侦察只出报告，改动要授权。",
+      "hookEn": "A software factory on the shared computer: scouts report, and changes need a go-ahead."
     },
     {
       "id": "rosterroom-prompts",
@@ -564,7 +572,9 @@
       "language": "en",
       "featured": false,
       "publishedAt": "2026-09-02",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "可粘贴的小队配方，默认可读可草稿，发送必须人批。",
+      "hookEn": "Paste-ready team recipes that read and draft by default, and wait before sending."
     },
     {
       "id": "how-i-run-multiple-teams",
@@ -599,7 +609,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-27",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "一个项目一个频道，由项目经理 Bot 来组班。",
+      "hookEn": "One project, one channel, staffed by a projects-manager Bot."
     },
     {
       "id": "templates-for-grok-bot",
@@ -634,7 +646,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "模板是菜谱：打包技能和例行，不含密钥。",
+      "hookEn": "A template is a recipe of skills and routines, with no secrets inside."
     },
     {
       "id": "grok-bot-for-support",
@@ -669,7 +683,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "客服五类活：跟踪发版、复现缺陷，退款等人批。",
+      "hookEn": "Five support jobs: track releases, reproduce bugs, and hold refunds for approval."
     },
     {
       "id": "grok-bot-101",
@@ -709,7 +725,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "把 Bot 当有持久桌面的同事，从聊天走到例行。",
+      "hookEn": "Treat a Bot as a colleague with a persistent desk, from chat through to a routine."
     },
     {
       "id": "grok-bot-for-engineering",
@@ -748,7 +766,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "专科工程 Bot 拉起云端 Agent，人守高后果的闸门。",
+      "hookEn": "Specialist engineer Bots launch cloud agents, and a person holds the high-stakes gate."
     },
     {
       "id": "moclaw-cloud-vs-grok",
@@ -785,7 +805,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-20",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "按活来选：隔离的云端 Agent，还是共享的那台电脑。",
+      "hookEn": "Pick by the job: an isolated cloud agent, or the one shared computer."
     },
     {
       "id": "saily-us-number-esim",
@@ -820,7 +842,9 @@
       "featured": false,
       "previewImage": "/previews/saily-us-number-esim.webp",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-13T08:30:00Z"
+      "updatedAt": "2026-09-13T08:30:00Z",
+      "hook": "用美国号码收短信，方便部分海外账号注册。",
+      "hookEn": "A US number that receives texts, for signups that ask for one."
     },
     {
       "id": "native-subtitle-quote-image",
@@ -858,7 +882,9 @@
       "featured": false,
       "previewImage": "/previews/native-subtitle-quote-image.webp",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T05:20:00Z"
+      "updatedAt": "2026-09-11T05:20:00Z",
+      "hook": "从真实视频帧拼出字幕长图，发不发仍由人决定。",
+      "hookEn": "Stitch real video frames into subtitle cards, and leave publishing to a person."
     },
     {
       "id": "youngurban-how-to-use-grok-bot",
@@ -897,7 +923,9 @@
       "qualityNote": "第三方教程（标注 Last verified 2026-09-08）。价位与周额度多次变动，文内数字只作快照；本库不把未核验的交易收益类声称当事实。官方可核对面是 get-started 与 skills-routines。",
       "qualityNoteEn": "Third-party tutorial (Last verified 2026-09-08). Pricing and weekly allowances have moved; treat in-article figures as snapshots. Unverifiable trading claims are not treated as facts here. Checkable official surface: get-started and skills-routines.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "先给幕僚长一个窄任务，再把它和聊天、自动化分开。",
+      "hookEn": "Start with one narrow chief-of-staff task, kept apart from chat and automations."
     },
     {
       "id": "compound-engineering-plugin",
@@ -933,7 +961,9 @@
       "qualityNote": "公开仓库（2026-09-11 核对约 25010 star）。面向 Claude Code / Codex / Cursor 等多端；Grok Bot 用法以 README「Grok Bot」节为准。插件本身不是 Grok Bot 专属，但是可复现的装法。",
       "qualityNoteEn": "Public repo (~25,010 stars checked 2026-09-11). Multi-host (Claude Code / Codex / Cursor); Grok Bot path is the README’s Grok Bot section. Not Grok-Bot-only, but the install path is reproducible.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "把写码循环做成可调用技能，Bot 共用你的插件库。",
+      "hookEn": "Turn the coding loop into callable skills the Bot loads from your plugin library."
     },
     {
       "id": "gbdl-definition-language",
@@ -970,7 +1000,9 @@
       "qualityNote": "HN Show 49628911（2026-09-09）。公开仓库约 2 star（2026-09-10 核对）。规格与示例可照抄；加载器需自备或手搓 reinstate。",
       "qualityNoteEn": "HN Show 49628911 (2026-09-09). Public repo ~2 GitHub stars (checked 2026-09-10). Spec + examples are copyable; you still need a loader or a manual reinstate.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "用一份文件记下整支 Bot 小队，方便进版本库。",
+      "hookEn": "Save a whole Bot squad in one file so it can live in version control."
     },
     {
       "id": "shrdgn-grokbot-skills",
@@ -1002,7 +1034,9 @@
       "qualityNote": "HN 49537739。2026-09-10 核对 README 自称 74 skills；公开页约 1 star。仓库未标 SPDX 许可证，收录为社区配方参考，使用前自行确认许可。",
       "qualityNoteEn": "HN 49537739. README claims 74 skills (checked 2026-09-10); public page ~1 GitHub star. No SPDX license on the repo — treat as community recipes and confirm licensing before reuse.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "可直接粘贴的技能配方，审批优先，安静为默认。",
+      "hookEn": "Paste-ready skill recipes that ask before acting and stay quiet by default."
     },
     {
       "id": "awesome-grokbot-shares",
@@ -1037,7 +1071,9 @@
       "qualityNote": "社区分享目录，条目未逐一背书。README 写明社区 bot 不可信、同账号共享一台电脑。导入前先读 docs/vetting.md。与 ZeroPointRepo/awesome-grok-bot（Skill/Plugin/MCP 目录）不是同一仓库。",
       "qualityNoteEn": "Community share catalog — individual bots are not endorsed. README warns shares are untrusted and all bots on one account share a single computer; read docs/vetting.md before importing. Distinct from ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP directory).",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "可点进的公开 Bot 分享目录，导入前有一份核对清单。",
+      "hookEn": "A catalog of public Bot shares you can open, with a checklist before you import one."
     },
     {
       "id": "continuum-routines-guide",
@@ -1072,7 +1108,9 @@
       "qualityNote": "教程。文内「10 分钟演示 / 50 routines / 20 条运行保留」等数字来自 Daily Dose of Data Science，作者标明 xAI 未确认——本库不把它们写成事实。官方可核对面是 overview 与 skills-routines 文档。",
       "qualityNoteEn": "Tutorial. Figures such as a 10-minute demo cap, 50 routines, and 20-run retention come from Daily Dose of Data Science and are marked unconfirmed by xAI — this library does not state them as facts. Checkable official surface is the overview and skills-routines docs.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "讲清例行和技能怎么不同，以及和自动化的分界。",
+      "hookEn": "How routines differ from skills, and where they split from automations."
     },
     {
       "id": "aibuilderclub-practical-guide",
@@ -1111,7 +1149,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-25",
-      "updatedAt": "2026-09-03T01:10:00Z"
+      "updatedAt": "2026-09-03T01:10:00Z",
+      "hook": "幕僚长模式加来源账本，并纠正「每 Bot 一台电脑」。",
+      "hookEn": "A chief-of-staff pattern with a source ledger, and a correction of one computer per Bot."
     },
     {
       "id": "gauraw-grok-bot-control-guide",
@@ -1147,7 +1187,9 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-08-30",
-      "updatedAt": "2026-09-03T01:10:00Z"
+      "updatedAt": "2026-09-03T01:10:00Z",
+      "hook": "先跑一次安全的窄任务，再把小队扩出去。",
+      "hookEn": "Run one safe, narrow task before you grow the squad."
     },
     {
       "id": "gawkbot-opensource",
@@ -1179,7 +1221,9 @@
       "language": "en",
       "featured": false,
       "publishedAt": "2026-09-01",
-      "updatedAt": "2026-09-03T01:10:00Z"
+      "updatedAt": "2026-09-03T01:10:00Z",
+      "hook": "本机多 Bot，外发和删除都要逐次批准。",
+      "hookEn": "Local bots where every send or delete waits for approval."
     },
     {
       "id": "howdoiuseai-agent-teams",
@@ -1216,7 +1260,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-23",
-      "updatedAt": "2026-09-02T01:10:00Z"
+      "updatedAt": "2026-09-02T01:10:00Z",
+      "hook": "给非技术运营者：先技能，再例行，再一份日报。",
+      "hookEn": "For a non-technical operator: a skill, then a routine, then a daily debrief."
     },
     {
       "id": "awesome-grok-bot",
@@ -1251,7 +1297,9 @@
       "featured": true,
       "stars": 4,
       "publishedAt": "2026-08-11",
-      "updatedAt": "2026-09-02T01:10:00Z"
+      "updatedAt": "2026-09-02T01:10:00Z",
+      "hook": "已对照一手源的技能、插件和连接器目录。",
+      "hookEn": "A directory of skills, plugins, and connectors, each checked against a primary source."
     },
     {
       "id": "flavio-grok-bot-deep-dive",
@@ -1289,7 +1337,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-22",
-      "updatedAt": "2026-08-31T01:28:18Z"
+      "updatedAt": "2026-08-31T01:28:18Z",
+      "hook": "先跑通再存技能，并写清审批停在哪里。",
+      "hookEn": "Run the job once, save it as a skill, and write down where approval stops."
     },
     {
       "id": "grokbot-explorers-21",
@@ -1325,7 +1375,9 @@
       "featured": true,
       "previewImage": "/previews/grokbot-explorers-21.webp",
       "publishedAt": "2026-08-30",
-      "updatedAt": "2026-08-30T16:44:00Z"
+      "updatedAt": "2026-08-30T16:44:00Z",
+      "hook": "一份值得先看的探索者名单，从三位官方账号开始。",
+      "hookEn": "A short list of people to follow, starting with three official accounts."
     },
     {
       "id": "grokbot-guides",
@@ -1370,7 +1422,9 @@
       "stars": 5,
       "previewImage": "/previews/grokbot-guides.webp",
       "publishedAt": "2026-08-27",
-      "updatedAt": "2026-08-30T02:08:00Z"
+      "updatedAt": "2026-08-30T02:08:00Z",
+      "hook": "官方实操手册：多团队、设计、销售和产品经理。",
+      "hookEn": "Official playbooks for multi-team work, design, sales, and product managers."
     },
     {
       "id": "grokbot-linux-unofficial",
@@ -1402,7 +1456,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-27",
-      "updatedAt": "2026-08-28T01:10:00Z"
+      "updatedAt": "2026-08-28T01:10:00Z",
+      "hook": "社区把桌面端搬到 Linux，云端电脑仍然是原来那台。",
+      "hookEn": "A community desktop build for Linux; the cloud computer stays the same one."
     },
     {
       "id": "mobile-game-studio-rankem",
@@ -1442,7 +1498,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-25",
-      "updatedAt": "2026-08-28T01:10:00Z"
+      "updatedAt": "2026-08-28T01:10:00Z",
+      "hook": "六个 Bot 分工跑一款手游，从发行到修缺陷。",
+      "hookEn": "Six Bots split a mobile game, from release work through bug fixes."
     },
     {
       "id": "grokbot-getting-started",
@@ -1482,7 +1540,9 @@
       "featured": true,
       "previewImage": "/previews/grokbot-getting-started.webp",
       "publishedAt": "2026-08-25",
-      "updatedAt": "2026-08-27T17:05:00Z"
+      "updatedAt": "2026-08-27T17:05:00Z",
+      "hook": "短入门：Bot 是什么，以及四条可以跟着做的流程。",
+      "hookEn": "A short start: what a Bot is, plus four workflows you can follow along."
     },
     {
       "id": "daily-briefing-writer",
@@ -1517,7 +1577,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Daily Briefing Writer: start the day with high-quality inputs instead of noise. Delivers a tight daily brief of only the stories that matter to you. Does not send or change the calendar.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest in the morning 65-case ingest. Chief of Staff maps Slack/email/calendar to priorities; this is a news/story brief.",
-      "approvalBoundaryEn": "Do not send the brief or change the calendar; return a review-only shortlist of stories."
+      "approvalBoundaryEn": "Do not send the brief or change the calendar; return a review-only shortlist of stories.",
+      "hook": "只交真正重要的故事，一份收紧的每日简报。",
+      "hookEn": "A tight daily brief of only the stories that matter."
     },
     {
       "id": "executive-assistant",
@@ -1553,7 +1615,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Executive Assistant: stay oriented without living in channels. Delivers a morning briefing, plus an automatic catch-up summary whenever you join a new room, so you are never lost in a thread you just entered. Does not send messages or change meetings.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-stand-in in the morning 65-case ingest. Chief of Staff is a priority map; Meeting Stand-in joins when you are absent; this is a morning brief plus in-room catch-up.",
-      "approvalBoundaryEn": "Do not send messages, change meetings, or make commitments; return the morning briefing and in-room catch-up only."
+      "approvalBoundaryEn": "Do not send messages, change meetings, or make commitments; return the morning briefing and in-room catch-up only.",
+      "hook": "晨间简报，并在你进新房间时补一份上下文。",
+      "hookEn": "A morning briefing, plus a catch-up when you walk into a new room."
     },
     {
       "id": "newsletter-writer",
@@ -1589,7 +1653,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Newsletter Writer: ship monthly marketing and product updates on time. Pulls what's new from launches, wins, and your calendar, writes the issue in your voice, and parks it for review so marketing can edit once and send.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of one-person-company-stack in the morning 65-case ingest. The one-person stack is a multi-agent ops model that happens to include a newsletter; this is a standalone monthly Newsletter Writer.",
-      "approvalBoundaryEn": "Do not send the newsletter or change published dates; return the parked issue draft only."
+      "approvalBoundaryEn": "Do not send the newsletter or change published dates; return the parked issue draft only.",
+      "hook": "按你的声音写月度更新，停在待审，不自己发。",
+      "hookEn": "Writes the monthly update in your voice and parks it for review."
     },
     {
       "id": "prospecting-plan-builder",
@@ -1625,7 +1691,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Prospecting Plan Builder: build the week's book of work. Seeds contacts, enriches email/mobile, and writes a ready-to-work tracker so outbound starts from a list. No send, no CRM writes.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of sales-outbound-overnight / account-research-specialist in the morning 65-case ingest. Outbound is overnight scoring plus drafts; Account Research is a pre-touch pack; this is the week's prospecting list and tracker.",
-      "approvalBoundaryEn": "Do not send outreach, edit the CRM, or add to sequences; return the seeded list, enrichments, and review-only tracker."
+      "approvalBoundaryEn": "Do not send outreach, edit the CRM, or add to sequences; return the seeded list, enrichments, and review-only tracker.",
+      "hook": "播下联系人并补全方式，交出本周可开工的追踪表。",
+      "hookEn": "Seeds contacts, fills in how to reach them, and hands you this week's tracker."
     },
     {
       "id": "status-report-writer",
@@ -1661,7 +1729,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Status Report Writer: own the to-do so nothing slips. Pulls open action items from docs, meetings, and Slack into one living list and a morning digest. Does not send or close items.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-notes-tasks in the morning 65-case ingest. Chief of Staff maps channels to priorities; meeting notes drop tasks; this is a living action list plus morning digest.",
-      "approvalBoundaryEn": "Do not send the digest, change others' tasks, or close items; return the living list and review-only morning digest."
+      "approvalBoundaryEn": "Do not send the digest, change others' tasks, or close items; return the living list and review-only morning digest.",
+      "hook": "把散落的未完成事项收成一份活清单和晨间摘要。",
+      "hookEn": "Pulls open actions into one living list and a morning digest."
     },
     {
       "id": "crm-operations-manager",
@@ -1697,7 +1767,9 @@
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official CRM Operations Manager: keep the pipeline clean. Handles CRM and org-chart hygiene before and after meetings so records stay current without a manual pass. Writes stop for approval by default.",
       "qualityNoteEn": "Official catalog role missed as a near-dupe of crm-monday-scoreboard (Pipeline Analyst) in the morning 65-case ingest. The Monday scoreboard is a stall/commit-risk board; this is pre- and post-meeting CRM and org-chart hygiene.",
-      "approvalBoundaryEn": "Do not write to the CRM or org chart, and do not send updates; park hygiene edits for approval."
+      "approvalBoundaryEn": "Do not write to the CRM or org chart, and do not send updates; park hygiene edits for approval.",
+      "hook": "会前会后打扫记录，写入先停在审批。",
+      "hookEn": "Cleans records before and after meetings, and holds writes for approval."
     },
     {
       "id": "apartment-scout",
@@ -1733,7 +1805,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Life & Leverage role Apartment Scout: as soon as listings hit the market it filters a shortlist, emails to book tour times, and applies only for the ones you pick. Outbound mail, bookings, and applications stop for approval by default.",
       "qualityNoteEn": "New official catalog role. Reproducible life-admin flow: filter → book tours → apply only after you pick. Distinct from grocery shopping and website builder.",
-      "approvalBoundaryEn": "Do not book tours, submit applications, or send email; return only an eligible shortlist and draft booking messages."
+      "approvalBoundaryEn": "Do not book tours, submit applications, or send email; return only an eligible shortlist and draft booking messages.",
+      "hook": "房源一上架就筛短名单，申请只对你点头的那几套。",
+      "hookEn": "Filters new listings into a shortlist and applies only for the ones you pick."
     },
     {
       "id": "travel-coordinator",
@@ -1769,7 +1843,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Travel Coordinator: compares flights and hotels against your rules, holds the best option before it expires, books only after you confirm, and drops the itinerary onto the calendar. Ticketing, payment, and changes need a human.",
       "qualityNoteEn": "Official catalog is explicit: hold first, book after confirm. Distinct from meeting stand-in and office-manager scheduling.",
-      "approvalBoundaryEn": "Do not pay, ticket, or change bookings; return only the comparison, a recommended hold, and a confirm request."
+      "approvalBoundaryEn": "Do not pay, ticket, or change bookings; return only the comparison, a recommended hold, and a confirm request.",
+      "hook": "先比价占位，你确认之后才预订。",
+      "hookEn": "Compares options and holds one, then books only after you confirm."
     },
     {
       "id": "calendar-coordinator",
@@ -1805,7 +1881,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Recruiting & People role Calendar Coordinator: gets people in the same room across calendars and chases the holds nobody else has time to chase. External invites and reschedules stop for approval by default.",
       "qualityNoteEn": "New official role. Existing meeting-notes and meeting-stand-in do not cover cross-calendar convening and hold-chasing.",
-      "approvalBoundaryEn": "Do not send invites or change others’ calendars; return feasible slots, conflicts, and draft invites only."
+      "approvalBoundaryEn": "Do not send invites or change others’ calendars; return feasible slots, conflicts, and draft invites only.",
+      "hook": "跨日历把人约到一起，并追那些没人去追的占位。",
+      "hookEn": "Gets people into one room across calendars, and chases the holds nobody else will."
     },
     {
       "id": "hiring-screener",
@@ -1841,7 +1919,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Hiring Screener: scores applications or work samples against a defined bar and hands off an ATS-ready review. Distinct from Talent Scout (outbound sourcing)—this role consumes inbound materials. Do not contact candidates.",
       "qualityNoteEn": "Official catalog splits sourcing (Talent Scout) from screening. The existing 29 only cover sourcing.",
-      "approvalBoundaryEn": "Do not contact candidates, change ATS status, reject, or advance anyone; return a scored, evidence-backed review list only."
+      "approvalBoundaryEn": "Do not contact candidates, change ATS status, reject, or advance anyone; return a scored, evidence-backed review list only.",
+      "hook": "按既定标准给已投递的材料打分，不联系候选人。",
+      "hookEn": "Scores applications already in hand, and does not contact candidates."
     },
     {
       "id": "onboarding-manager",
@@ -1879,7 +1959,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Onboarding Manager: builds the checklist, pulls the right docs, answers day-one questions, and routes each ask to whoever can unblock it. Does not provision accounts or send welcome mail on its own.",
       "qualityNoteEn": "New official People role. Talent Scout and Office Manager do not cover a new-hire path.",
-      "approvalBoundaryEn": "Do not provision accounts, change permissions, or send welcome mail; return the checklist, doc pack, and routed questions only."
+      "approvalBoundaryEn": "Do not provision accounts, change permissions, or send welcome mail; return the checklist, doc pack, and routed questions only.",
+      "hook": "给新人一条路径，卡住的事转给能解开的人。",
+      "hookEn": "Gives a new hire one path, and routes each stuck ask to someone who can unblock it."
     },
     {
       "id": "account-research-specialist",
@@ -1915,7 +1997,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Sales role Account Research Specialist: before you touch accounts, pulls Salesforce plus live signals, scores fit and warmth, and builds a shareable research pack per account. No outreach, no CRM edits.",
       "qualityNoteEn": "Official catalog splits overnight outbound from pre-touch research packs. Existing sales-outbound covers drafts, not a standalone research pack.",
-      "approvalBoundaryEn": "Do not contact accounts, edit the CRM, or add to sequences; return tiers, scores, and sourced research packs only."
+      "approvalBoundaryEn": "Do not contact accounts, edit the CRM, or add to sequences; return tiers, scores, and sourced research packs only.",
+      "hook": "你出手之前，先给每个客户一份可分享的研究包。",
+      "hookEn": "Builds a shareable research pack on each account before you reach out."
     },
     {
       "id": "meeting-prep-buddy",
@@ -1952,7 +2036,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Meeting Prep Buddy: builds prep packs from calendar, notes, CRM, Gong, and Slack—who is in the room, last touch, open threads, and a suggested agenda. Distinct from meeting-notes tasks and meeting stand-in: this is before the call.",
       "qualityNoteEn": "New official Sales role. Existing meeting cases are in-meeting stand-in or post-meeting tasks, not a prep pack.",
-      "approvalBoundaryEn": "Do not change meetings, send pre-reads, or update the CRM; return the prep pack only."
+      "approvalBoundaryEn": "Do not change meetings, send pre-reads, or update the CRM; return the prep pack only.",
+      "hook": "会前拼好谁在场、上次接触和未结事项。",
+      "hookEn": "Before the meeting, packs who is there, the last touch, and what is still open."
     },
     {
       "id": "sales-call-coach",
@@ -1987,7 +2073,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Sales Call Coach: reviews Gong calls and leaves timestamped coaching on discovery, objections, and executive presence, plus a call score—homework after every call. No CRM edits, no customer follow-up.",
       "qualityNoteEn": "New official role. Owns call coaching, not outbound or account follow-up.",
-      "approvalBoundaryEn": "Do not share coaching outside the seller, edit the CRM, or contact the customer; return timestamped notes and a score only."
+      "approvalBoundaryEn": "Do not share coaching outside the seller, edit the CRM, or contact the customer; return timestamped notes and a score only.",
+      "hook": "复盘通话并留下作业，不改记录、不跟进客户。",
+      "hookEn": "Reviews the call and leaves homework, without editing records or following up."
     },
     {
       "id": "deal-desk-coordinator",
@@ -2023,7 +2111,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Deal Desk Coordinator: drafts contextual internal deal notes from past emails, Salesforce, and calls, then submits in Salesforce once you approve. Pricing, terms, and external commitments stay behind approval.",
       "qualityNoteEn": "Official copy is explicit: draft first, write to Salesforce after approval. The Monday scoreboard does not cover deal-desk paper.",
-      "approvalBoundaryEn": "Do not submit to Salesforce, change price or terms, or commit externally; return the internal deal-note draft only."
+      "approvalBoundaryEn": "Do not submit to Salesforce, change price or terms, or commit externally; return the internal deal-note draft only.",
+      "hook": "先拟内部交易说明，你批准后再写入 Salesforce。",
+      "hookEn": "Drafts the internal deal note, then writes it to Salesforce only after you approve."
     },
     {
       "id": "renewal-desk-operator",
@@ -2059,7 +2149,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Renewal Desk Operator: builds a 90-day pack per account from usage, tickets, Gong, and CRM, drafts the commercial note, and nudges legal only when terms are stuck. No customer contact, no contract edits.",
       "qualityNoteEn": "Official catalog splits renewal desk from account-health watch: the output is a 90-day commercial pack, not a risk list.",
-      "approvalBoundaryEn": "Do not contact the customer, change contracts or quotes, or ping anyone but legal when stuck; return the pack and draft commercial note only."
+      "approvalBoundaryEn": "Do not contact the customer, change contracts or quotes, or ping anyone but legal when stuck; return the pack and draft commercial note only.",
+      "hook": "带着续约材料包走进每场续约，不联系客户。",
+      "hookEn": "Walks into each renewal with a prepared pack, and does not contact the customer."
     },
     {
       "id": "deck-updater",
@@ -2094,7 +2186,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Deck Updater: updates your deck from discovery notes mid-call or right after, with next steps baked in, so you leave the room with the slide already moving. Does not send the deck or change the master brand system.",
       "qualityNoteEn": "New official Sales role. Existing content cases are ad video / site build, not mid-call deck updates.",
-      "approvalBoundaryEn": "Do not send the deck to the customer or change the master template; update this meeting’s copy and mark the diffs."
+      "approvalBoundaryEn": "Do not send the deck to the customer or change the master template; update this meeting’s copy and mark the diffs.",
+      "hook": "把会中发现写进下一页，离开房间时幻灯片已经在动。",
+      "hookEn": "Writes mid-meeting findings onto the next slide before you leave the room."
     },
     {
       "id": "beta-adoption-watcher",
@@ -2131,7 +2225,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Product role Beta Adoption Watcher: monitors usage and surfaces which customers are actually in on the new feature so the team can follow up. No customer contact, no flag flips.",
       "qualityNoteEn": "New official Product role. Account Health is churn/expansion; this is “who is actually using the new feature.”",
-      "approvalBoundaryEn": "Do not contact customers or change flags/experiments; return the adoption list and evidence links only."
+      "approvalBoundaryEn": "Do not contact customers or change flags/experiments; return the adoption list and evidence links only.",
+      "hook": "看哪些客户真的在用新功能，方便团队跟进。",
+      "hookEn": "Shows which customers are actually using the new feature, so the team can follow up."
     },
     {
       "id": "call-faq-miner",
@@ -2166,7 +2262,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Call FAQ Miner: keeps enablement current from real calls—tracks questions, timestamps answers, and links back to the source recording. Does not publish to the help center or treat excerpts as final scripts.",
       "qualityNoteEn": "New official Product role. Meeting-notes→tasks does not cover mining FAQs with timestamped source recordings.",
-      "approvalBoundaryEn": "Do not publish to the help center or external scripts; return a FAQ draft with timestamps and source links only."
+      "approvalBoundaryEn": "Do not publish to the help center or external scripts; return a FAQ draft with timestamps and source links only.",
+      "hook": "从真实通话里抽出问题，并链回原来的录音。",
+      "hookEn": "Pulls questions out of real calls and links each answer back to the recording."
     },
     {
       "id": "docs-auditor",
@@ -2202,7 +2300,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Docs Auditor: diffs the help center and internal notes against what shipped last week, flags stale pages, and drafts the rewrite. Does not edit live docs.",
       "qualityNoteEn": "New official Product role. Product-performance investigation does not cover stale-docs audit.",
-      "approvalBoundaryEn": "Do not edit the live help center or public docs; return the stale-page list and rewrite drafts only."
+      "approvalBoundaryEn": "Do not edit the live help center or public docs; return the stale-page list and rewrite drafts only.",
+      "hook": "对照刚发版的功能，标出已经过期的说明页。",
+      "hookEn": "Checks the docs against what just shipped and flags the pages that went stale."
     },
     {
       "id": "feature-request-tracker",
@@ -2238,7 +2338,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Feature Request Tracker: mines Slack and calls into a living list tied to customers, so the spec has a real demand trail. Does not file tickets or promise a schedule.",
       "qualityNoteEn": "New official Product role. Support refunds / ticket triage do not cover a customer-tied demand trail.",
-      "approvalBoundaryEn": "Do not file tickets, promise a schedule, or reply to customers; return a customer-tied request list with sources only."
+      "approvalBoundaryEn": "Do not file tickets, promise a schedule, or reply to customers; return a customer-tied request list with sources only.",
+      "hook": "把谁提过这个功能收成一份绑到客户的清单。",
+      "hookEn": "Keeps a living list of who asked for each feature, tied to the customer."
     },
     {
       "id": "product-feedback-analyst",
@@ -2275,7 +2377,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Product Feedback Analyst: collects and clusters feedback from connected sources, weighs evidence and urgency, and drafts routing recommendations for approval. No roadmap edits, no user replies.",
       "qualityNoteEn": "Official catalog splits clustered feedback routing from request tracking and performance investigation.",
-      "approvalBoundaryEn": "Do not change the roadmap, reply to users, or file tickets; return clusters, evidence, and routing drafts only."
+      "approvalBoundaryEn": "Do not change the roadmap, reply to users, or file tickets; return clusters, evidence, and routing drafts only.",
+      "hook": "把散落反馈收成聚类，路由建议等人批准。",
+      "hookEn": "Clusters scattered feedback and drafts where it should go, for you to approve."
     },
     {
       "id": "playtest-operator",
@@ -2312,7 +2416,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Playtest Operator: brute-force tests the product path on a computer when APIs are not enough, captures failures, and returns a tight findings pack. Distinct from bug reproduction: this is proactive path-pressing, not following one ticket.",
       "qualityNoteEn": "New official Engineering role. Existing bug-repro follows a report; this proactively playtests a path.",
-      "approvalBoundaryEn": "Do not change production, touch real customer data, or open a PR; return steps, screenshots, and a findings pack only."
+      "approvalBoundaryEn": "Do not change production, touch real customer data, or open a PR; return steps, screenshots, and a findings pack only.",
+      "hook": "接口不够时，就在界面上把路径走一遍并记下失败。",
+      "hookEn": "When there is no interface, it walks the product path and writes down what failed."
     },
     {
       "id": "prototype-builder",
@@ -2348,7 +2454,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Prototype Builder: writes on its computer and goes from ask to something clickable fast, coming back with a screenshot plus a live URL. Does not buy a domain or attach production traffic.",
       "qualityNoteEn": "New official Engineering role. Website Builder buys a domain and ships live; this stops at a clickable prototype.",
-      "approvalBoundaryEn": "Do not buy a domain, attach production, or promote publicly; return the prototype URL, screenshots, and known limits."
+      "approvalBoundaryEn": "Do not buy a domain, attach production, or promote publicly; return the prototype URL, screenshots, and known limits.",
+      "hook": "从一句话做出可点的东西，回来时带上地址。",
+      "hookEn": "Turns a sentence into something you can click, and comes back with the address."
     },
     {
       "id": "cloud-agent-orchestrator",
@@ -2386,7 +2494,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Cloud Agent Orchestrator: kicks off many cloud-agent runs, monitors them, chases what is stuck, and summarizes the report so you are not babysitting each one. No production changes, no permission expansion.",
       "qualityNoteEn": "New official Engineering role. Cursor Automations is adjacent; this is Grok Bot owning a fleet of cloud-agent runs.",
-      "approvalBoundaryEn": "Do not change production, expand permissions, or merge unreviewed results; start runs, chase stuck ones, and return the summary."
+      "approvalBoundaryEn": "Do not change production, expand permissions, or merge unreviewed results; start runs, chase stuck ones, and return the summary.",
+      "hook": "同时盯一堆云端任务，卡住的再去催。",
+      "hookEn": "Watches many cloud runs at once and chases the ones that stall."
     },
     {
       "id": "security-questionnaire-filler",
@@ -2423,7 +2533,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Security Questionnaire Filler: logs into the vendor questionnaire site, pulls answers from your trust center and past RFPs, drafts every field, and parks submit for you. Does not invent compliance answers.",
       "qualityNoteEn": "New official Ops role and a canonical computer-use job: portals with no clean API. None of the existing 29 cover security questionnaires.",
-      "approvalBoundaryEn": "Do not submit or sign, and do not invent unsourced answers; mark gaps as needs-input."
+      "approvalBoundaryEn": "Do not submit or sign, and do not invent unsourced answers; mark gaps as needs-input.",
+      "hook": "先把安全问卷填满，提交按钮留给你。",
+      "hookEn": "Fills the security questionnaire and leaves the submit button for you."
     },
     {
       "id": "vendor-portal-operator",
@@ -2460,7 +2572,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Vendor Portal Operator: runs renewals, seats, and procurement on portals with no clean API, clicks the same path every week, and comes back with exceptions only. Orders, seat changes, and payments need a human.",
       "qualityNoteEn": "New official Ops role. Office Manager is work-order portals; this is vendor renewal and procurement portals.",
-      "approvalBoundaryEn": "Do not place orders, change seats, or pay; return this week’s exceptions and a pending-action list."
+      "approvalBoundaryEn": "Do not place orders, change seats, or pay; return this week’s exceptions and a pending-action list.",
+      "hook": "在没有接口的门户上走同一条路，只把例外带回来。",
+      "hookEn": "Clicks the same path on a portal with no clean interface, and brings back only exceptions."
     },
     {
       "id": "contract-desk",
@@ -2496,7 +2610,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Contract Desk: summarizes the week of paper by stage and owner, pulls key terms, and flags blocked reviews. No term edits, no signing.",
       "qualityNoteEn": "New official Finance role. Invoice pipeline and expense manager do not cover contract stages or term extraction.",
-      "approvalBoundaryEn": "Do not edit terms, sign, or send contracts; return the stage table, key terms, and blockers only."
+      "approvalBoundaryEn": "Do not edit terms, sign, or send contracts; return the stage table, key terms, and blockers only.",
+      "hook": "本周合同按阶段和负责人摊开，卡住的评审标出来。",
+      "hookEn": "Lays out this week's contracts by stage and owner, and flags reviews that are stuck."
     },
     {
       "id": "refunds-manager-claims",
@@ -2533,7 +2649,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official expansion-post Refunds manager: finds the claim, files it, and follows it through, coming back with the refund or discount it recovered. This is you claiming money back—not in-policy customer refunds.",
       "qualityNoteEn": "New official “Jobs Bots are doing today” role. Existing support-in-policy-refunds issues refunds to customers; this files claims on your behalf.",
-      "approvalBoundaryEn": "Do not file a claim, accept a settlement, or change payment methods; return the recoverable list, draft packets, and follow-up status."
+      "approvalBoundaryEn": "Do not file a claim, accept a settlement, or change payment methods; return the recoverable list, draft packets, and follow-up status.",
+      "hook": "找到该追的索赔，提交并跟到退款或折扣回来。",
+      "hookEn": "Finds the claim, files it, and follows it until a refund or discount comes back."
     },
     {
       "id": "seo-aeo-auditor",
@@ -2568,7 +2686,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official SEO / AEO Auditor: tracks keyword, technical, AI-prompt, and competitor movement in one place, surfaces whether you are gaining or losing ground, flags site issues, and returns an optimization plan. Does not edit live pages.",
       "qualityNoteEn": "New official Marketing role. Competitive-intel swarm is a company simulation, not a site SEO/AEO audit.",
-      "approvalBoundaryEn": "Do not edit live pages, publish, or buy links; return the audit and the plan only."
+      "approvalBoundaryEn": "Do not edit live pages, publish, or buy links; return the audit and the plan only.",
+      "hook": "把关键词、站点和对手动向收在一处，并给出可执行计划。",
+      "hookEn": "Tracks keywords, the site, and competitors together, and returns a plan you can act on."
     },
     {
       "id": "social-media-manager",
@@ -2603,7 +2723,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Social Media Manager: studies your real history, drafts when something noteworthy ships, parks posts for you to publish, and keeps the queue moving. Does not publish or engage on its own.",
       "qualityNoteEn": "New official Marketing role. The one-person newsletter stack is not a dedicated social queue Bot.",
-      "approvalBoundaryEn": "Do not publish, like, or reply; return drafts and a suggested post window only."
+      "approvalBoundaryEn": "Do not publish, like, or reply; return drafts and a suggested post window only.",
+      "hook": "按你的声音起草，帖子停在队列里等人点发布。",
+      "hookEn": "Drafts in your voice and parks each post until you publish it."
     },
     {
       "id": "paid-media-creative-strategist",
@@ -2638,7 +2760,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Paid Media Creative Strategist: spots early creative winners, writes a sharp why-it-works hypothesis, and proposes the next test. Official rule: no invented metrics. Distinct from paid-media budget monitoring.",
       "qualityNoteEn": "Official catalog splits creative strategy from budget monitoring. Existing paid-media-monitor only reallocates spend/CAC.",
-      "approvalBoundaryEn": "Do not change ads or budgets, and do not invent metrics; return the hypothesis, evidence, and next-test plan."
+      "approvalBoundaryEn": "Do not change ads or budgets, and do not invent metrics; return the hypothesis, evidence, and next-test plan.",
+      "hook": "在赢家变明显之前写下为什么有效，并提议下一轮测试。",
+      "hookEn": "Writes why an early winner works, and proposes the next test."
     },
     {
       "id": "linkedin-campaign-manager",
@@ -2674,7 +2798,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official LinkedIn Campaign Manager: owns lead-gen funnel consistency across ads, forms, follow-up, and UTMs. Drafts campaigns for approval and keeps every offer and handoff clean. Does not launch spend on its own.",
       "qualityNoteEn": "New official Marketing role. Paid Media is cross-channel budget; this owns LinkedIn funnel consistency.",
-      "approvalBoundaryEn": "Do not enable ads, change budgets, or send follow-up; return campaign drafts, UTMs, and the handoff list."
+      "approvalBoundaryEn": "Do not enable ads, change budgets, or send follow-up; return campaign drafts, UTMs, and the handoff list.",
+      "hook": "把广告、表单和跟进对齐，活动先起草等人批。",
+      "hookEn": "Lines up ads, forms, and follow-up, and drafts the campaign for approval."
     },
     {
       "id": "marketing-calendar-owner",
@@ -2710,7 +2836,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Marketing Calendar Owner: keeps regional and global content, launch, and events calendars in sync, pulls from Notion, and keeps webinars and campaigns current without a weekly chase. Does not send public announcements.",
       "qualityNoteEn": "New official Marketing role. The one-person stack has a newsletter, not a regional/global marketing-calendar owner.",
-      "approvalBoundaryEn": "Do not send public announcements or change published dates; return conflicts, gaps, and pending calendar updates."
+      "approvalBoundaryEn": "Do not send public announcements or change published dates; return conflicts, gaps, and pending calendar updates.",
+      "hook": "让区域和全球的内容与活动日历保持同步。",
+      "hookEn": "Keeps regional and global content and event calendars in sync."
     },
     {
       "id": "merch-fulfillment-operator",
@@ -2747,7 +2875,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Merch Fulfillment Operator: runs outreach, watches the redemption form, pings you in chat to approve/reject submissions, and sends the swag vendor a daily order form so they know when and where to dispatch. Shipping and outbound messages need a human.",
       "qualityNoteEn": "New official Marketing role with the approval gate written in (approve/reject in chat). None of the 29 cover merch fulfillment.",
-      "approvalBoundaryEn": "Do not approve redemptions, place vendor orders, or ship merch; return pending submissions and a daily order-form draft."
+      "approvalBoundaryEn": "Do not approve redemptions, place vendor orders, or ship merch; return pending submissions and a daily order-form draft.",
+      "hook": "兑换先等你点头，再给供应商发当天的发货单。",
+      "hookEn": "Waits for your yes on each redemption, then sends the vendor that day's order."
     },
     {
       "id": "community-operations-manager",
@@ -2783,7 +2913,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Community Operations Manager: screens apps, triages DMs across channels, and drafts nurture on a cadence so community is not a full-time chase. Does not approve applicants or send official promises on its own.",
       "qualityNoteEn": "New official Marketing role. Support refunds and inbox triage do not cover an ambassador loop.",
-      "approvalBoundaryEn": "Do not accept or reject applicants, and do not send DMs; return the screen, triage queue, and nurture drafts."
+      "approvalBoundaryEn": "Do not accept or reject applicants, and do not send DMs; return the screen, triage queue, and nurture drafts.",
+      "hook": "筛申请、分拣私信，并按节奏起草培育，不自己通过。",
+      "hookEn": "Screens applications, sorts messages, and drafts nurture, without approving anyone."
     },
     {
       "id": "compelling-events-monitor",
@@ -2820,7 +2952,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Compelling Events Monitor: watches leadership posts for awards, launches, and hiring signals, then sends a short digest of posts to engage with, plus comments or quote-reposts in your voice. Does not post on its own.",
       "qualityNoteEn": "New official Marketing role. Paid-media monitor and competitive intel do not cover a leadership-trigger engagement digest.",
-      "approvalBoundaryEn": "Do not post, comment, or quote-repost; return the trigger digest and draft engagements only."
+      "approvalBoundaryEn": "Do not post, comment, or quote-repost; return the trigger digest and draft engagements only.",
+      "hook": "有真实由头才建议互动，评论先起草，不自己发。",
+      "hookEn": "Suggests a reply only when there is a real reason, and does not post it."
     },
     {
       "id": "event-guest-screener",
@@ -2856,7 +2990,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Event Guest Screener: scores event applicants against your ICP and batch-approves strong fits in the invite tool. Does not send invites on its own.",
       "qualityNoteEn": "New official Marketing role. Hiring Screener scores job applications; this scores event applicants.",
-      "approvalBoundaryEn": "Do not send invites or batch-approve; return ICP scores and a pending list only."
+      "approvalBoundaryEn": "Do not send invites or batch-approve; return ICP scores and a pending list only.",
+      "hook": "按目标客户给申请打分，邀请先停在待批。",
+      "hookEn": "Scores applicants against the customers you want, and holds invites for approval."
     },
     {
       "id": "enablement-fulfillment-specialist",
@@ -2893,7 +3029,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Enablement Fulfillment Specialist: finds Zoom assets, builds one-pagers, uploads to Drive, and drafts the reply with links so “send me the recordings” does not mean digging. Does not send the reply on its own.",
       "qualityNoteEn": "New official CS role. Meeting-notes→tasks does not cover Zoom→one-pager→Drive→draft reply.",
-      "approvalBoundaryEn": "Do not send email or share recordings with unapproved recipients; return asset links and a draft reply."
+      "approvalBoundaryEn": "Do not send email or share recordings with unapproved recipients; return asset links and a draft reply.",
+      "hook": "找到录音、做成一页纸，并把带链接的回复停在草稿。",
+      "hookEn": "Finds the recording, makes a one-pager, and parks a reply that includes the link."
     },
     {
       "id": "ticket-triage-specialist",
@@ -2929,7 +3067,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Ticket Triage Specialist: watches support on a cadence, drafts replies only, and stays quiet when it is clean. Distinct from in-policy refunds: no refunds, no closing tickets.",
       "qualityNoteEn": "New official CS role. Existing support-in-policy-refunds handles refunds; this is queue triage with draft-only replies.",
-      "approvalBoundaryEn": "Do not send replies, close tickets, or issue refunds; return triage and drafts only."
+      "approvalBoundaryEn": "Do not send replies, close tickets, or issue refunds; return triage and drafts only.",
+      "hook": "盯支持队列，只起草回复，干净时保持安静。",
+      "hookEn": "Watches the support queue, drafts replies only, and stays quiet when it is clean."
     },
     {
       "id": "presentation-designer",
@@ -2963,7 +3103,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Presentation Designer: builds on-brand decks from your master template and brand system—not a blank slide—and delivers an editable link ready to refine and present. Does not send externally or change the brand master.",
       "qualityNoteEn": "New official General role. Deck Updater edits an existing deck mid-call; this builds a new one from the master.",
-      "approvalBoundaryEn": "Do not send the deck externally or change the brand master; return an editable link only."
+      "approvalBoundaryEn": "Do not send the deck externally or change the brand master; return an editable link only.",
+      "hook": "从主模板做出可继续改的演示，不从空白页开始。",
+      "hookEn": "Builds the deck from your master template, not from a blank slide."
     },
     {
       "id": "internal-communications-manager",
@@ -2999,7 +3141,9 @@
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Internal Communications Manager: drafts clear, on-voice copy from your real context, matched to each audience and channel. Officially review-only—it never sends on its own.",
       "qualityNoteEn": "New official Marketing role with review-only in the copy. Chief of Staff is a digest, not internal comms drafting.",
-      "approvalBoundaryEn": "Do not send any internal or external message; return audience- and channel-matched drafts only."
+      "approvalBoundaryEn": "Do not send any internal or external message; return audience- and channel-matched drafts only.",
+      "hook": "按对象和渠道起草对内文案，只审不发。",
+      "hookEn": "Drafts internal copy for each audience and channel, and never sends it."
     },
     {
       "id": "sales-outbound-overnight",
@@ -3037,7 +3181,9 @@
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Sales Outbound Bot researches CRM accounts overnight, scores them by ICP/intent, finds contacts, and drafts email and LinkedIn copy in the seller’s voice — leaving only a review inbox. Official rule: do not send or add to sequences until approved.",
       "qualityNoteEn": "Official canonical flow, with a starter prompt and a clear approval boundary.",
-      "approvalBoundaryEn": "Do not send or add to sequences; stop at the review list"
+      "approvalBoundaryEn": "Do not send or add to sequences; stop at the review list",
+      "hook": "过夜研究客户并起草外呼，发送必须等人批。",
+      "hookEn": "Researches accounts overnight and drafts the outreach, which waits for approval."
     },
     {
       "id": "demo-env-readiness",
@@ -3068,7 +3214,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Demo Bot stands up the environment overnight, checks product UI/demo data, fixes bad seeds and stale data, and hands over a “demo-ready” checklist before the customer call.",
-      "qualityNoteEn": "Binary, clear outcome: demo-ready. A good sales + engineering collaboration story."
+      "qualityNoteEn": "Binary, clear outcome: demo-ready. A good sales + engineering collaboration story.",
+      "hook": "通话前把演示环境和数据检查一遍，交出就绪清单。",
+      "hookEn": "Checks the demo environment and its data before the call, then hands over a ready list."
     },
     {
       "id": "crm-monday-scoreboard",
@@ -3099,7 +3247,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "The Bot keeps CRM and org hygiene, flags stalled deals and commitment risk, and posts a Monday scoreboard so the team starts aligned.",
-      "qualityNoteEn": "A typical recurring ops-digest pattern."
+      "qualityNoteEn": "A typical recurring ops-digest pattern.",
+      "hook": "标出停滞的交易，周一交出一份让团队对齐的记分板。",
+      "hookEn": "Flags stalled deals and posts a Monday scoreboard so the team starts aligned."
     },
     {
       "id": "account-followup-warmth",
@@ -3130,7 +3280,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Updates CRM notes from call recaps, drafts product updates, opens support tickets, and syncs next steps in the tools the team already uses — work lands in real systems, not only in chat.",
-      "qualityNoteEn": "An internal practice case that stresses “results land in the systems people use.”"
+      "qualityNoteEn": "An internal practice case that stresses “results land in the systems people use.”",
+      "hook": "把下一步写进团队已经在用的系统，而不只停在聊天。",
+      "hookEn": "Lands the next step in the tools the team already uses, not only in chat."
     },
     {
       "id": "talent-scout",
@@ -3164,7 +3316,9 @@
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Owns sourcing, candidate research, outreach drafts, and calendar prep. Example: find 20 candidates who meet hard criteria, drop ATS duplicates, cite evidence, and draft personalized outreach — do not contact anyone.",
       "qualityNoteEn": "Official role with privacy/compliance notes. Fits “draft outreach only.”",
-      "approvalBoundaryEn": "Do not contact candidates"
+      "approvalBoundaryEn": "Do not contact candidates",
+      "hook": "找出符合条件的人并起草外联，不主动联系。",
+      "hookEn": "Finds people who fit and drafts the note, without contacting them."
     },
     {
       "id": "paid-media-monitor",
@@ -3197,7 +3351,9 @@
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Pulls spend and performance by campaign, compares them to the monthly budget and target CAC, writes a numbered reallocation recommendation, and drafts a Slack update for growth — does not change budgets or send.",
       "qualityNoteEn": "A clear analyze → recommend → approve loop.",
-      "approvalBoundaryEn": "Do not change budgets or send"
+      "approvalBoundaryEn": "Do not change budgets or send",
+      "hook": "对照预算给出再分配建议，不改花费、不自己发。",
+      "hookEn": "Recommends where to move spend against the budget, without changing it or sending."
     },
     {
       "id": "weekly-expense-manager",
@@ -3231,7 +3387,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Builds a weekly report from the expense system + policy, matches receipts in the finance inbox, flags missing categories and policy exceptions with sources, and drafts one follow-up per owner — returns only the summary and drafts.",
-      "qualityNoteEn": "High-repetition finance chores; the docs stress reconciling against source data."
+      "qualityNoteEn": "High-repetition finance chores; the docs stress reconciling against source data.",
+      "hook": "汇总一周费用，标出缺收据和例外，并起草跟进。",
+      "hookEn": "Summarizes the week's expenses, flags what is missing, and drafts the follow-up."
     },
     {
       "id": "product-perf-investigation",
@@ -3263,7 +3421,9 @@
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Example: investigate checkout latency after yesterday’s release. Check dashboards/traces/flame graphs and return a short report with screenshots and links, separating facts from guesses. Do not change production or alerts.",
       "qualityNoteEn": "An evidence-first engineering investigation pattern.",
-      "approvalBoundaryEn": "Do not change production/alerts"
+      "approvalBoundaryEn": "Do not change production/alerts",
+      "hook": "查延迟并交回短报告，把事实和猜测分开，不改生产。",
+      "hookEn": "Investigates the slowdown and returns a short report that separates facts from guesses."
     },
     {
       "id": "bug-repro-staging",
@@ -3297,7 +3457,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Reads the bug report, reproduces it on staging with a fresh test account, and returns exact steps, expected/actual, screenshots, browser/OS, console and network notes, and a minimal case. Example trigger: Slack #customer-escalations + “needs repro.”",
-      "qualityNoteEn": "The best official event-triggered engineering workflow."
+      "qualityNoteEn": "The best official event-triggered engineering workflow.",
+      "hook": "在预发用新账号复现缺陷，交回步骤和截图。",
+      "hookEn": "Reproduces the bug on staging with a fresh account, and returns the steps and shots."
     },
     {
       "id": "account-health-watch",
@@ -3334,7 +3496,9 @@
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Scores a portfolio of accounts by usage, support escalations, renewal timing, and stakeholder activity; returns evidence, why it matters, and a suggested next step — does not contact customers or edit CRM. Can be promoted to a weekday 8:00 skill+routine.",
       "qualityNoteEn": "The docs’ flagship “skill → routine” example.",
-      "approvalBoundaryEn": "Do not contact customers or edit CRM"
+      "approvalBoundaryEn": "Do not contact customers or edit CRM",
+      "hook": "按用量和续约时点给客户打分，不联系、不改记录。",
+      "hookEn": "Scores accounts by usage and renewal timing, without contacting them or editing records."
     },
     {
       "id": "chief-of-staff-digest",
@@ -3369,7 +3533,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Against a priority doc, reviews Slack/email/calendar/meeting notes since yesterday; returns only matches, with source, why it matters, a suggested next step, and whether you owe a decision — does not send or change meetings.",
-      "qualityNoteEn": "The most-cited “first Bot” role."
+      "qualityNoteEn": "The most-cited “first Bot” role.",
+      "hook": "对照优先级，只交相关的事，并标出你是否欠一个决定。",
+      "hookEn": "Against your priorities, returns only what matches, and whether you owe a decision."
     },
     {
       "id": "inbox-triage-clickup",
@@ -3401,7 +3567,9 @@
       "publishedAt": "2026-08-13",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "A scheduled Inbox Triage Bot pulls Gmail (+ calendar), flags urgent items, and hands a structured brief to the chief of staff, who creates dated, prioritized ClickUp tasks — the team looks at a board, not only chat.",
-      "qualityNoteEn": "A strong community demo: two narrow Agents + an existing PM tool as system of record."
+      "qualityNoteEn": "A strong community demo: two narrow Agents + an existing PM tool as system of record.",
+      "hook": "收件箱里的急事交给幕僚长，落到看板上而不是只留在聊天。",
+      "hookEn": "Hands urgent inbox items to the chief of staff, who puts them on the board."
     },
     {
       "id": "invoice-agent-pipeline",
@@ -3432,7 +3600,9 @@
       "publishedAt": "2026-08-13",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Upload a reference invoice PDF. Invoice Agent drafts a matching invoice, a Gmail reply draft with attachment, and tracks status on the ClickUp “Invoices and Payments” board. Can hand off in a group chat with Inbox Triage so invoice mail routes automatically.",
-      "qualityNoteEn": "End-to-end SMB ops loop; sending in production still needs approval."
+      "qualityNoteEn": "End-to-end SMB ops loop; sending in production still needs approval.",
+      "hook": "照着样张起草发票和回复，并在看板上跟踪状态。",
+      "hookEn": "Drafts a matching invoice and reply from a sample, and tracks it on the board."
     },
     {
       "id": "meeting-notes-tasks",
@@ -3462,7 +3632,9 @@
       "publishedAt": "2026-08-13",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "A 17:00 daily routine pulls Granola notes, extracts action items, routes them to the right ClickUp board (e.g. agency vs YouTube) by rule, and fills owner, priority, and due date.",
-      "qualityNoteEn": "A high-leverage “meeting debt” killer."
+      "qualityNoteEn": "A high-leverage “meeting debt” killer.",
+      "hook": "从会议笔记抽出行动项，按规则送到对应看板。",
+      "hookEn": "Pulls action items from meeting notes and routes each one to the right board."
     },
     {
       "id": "product-ad-video",
@@ -3491,7 +3663,9 @@
       "publishedAt": "2026-08-13",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Video Agent + Higgsfield plugin + a saved product-ad skill: shoot the product on iOS, prompt “generate a product ad,” and get a finished cut in minutes. The skill can be invoked with /.",
-      "qualityNoteEn": "A concrete creator-side teach/skill pattern."
+      "qualityNoteEn": "A concrete creator-side teach/skill pattern.",
+      "hook": "用手机拍产品，几分钟得到一条广告成片。",
+      "hookEn": "Shoot the product on your phone and get a finished ad back in minutes."
     },
     {
       "id": "competitive-intel-swarm",
@@ -3521,7 +3695,9 @@
       "publishedAt": "2026-08-15",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Several role Bots (research, verify, strategy, engineering, marketing) share context in a group chat; Composio can connect multiple apps. Example: parallel owners comparing coding-agent evals, or a competitor pricing/feature swarm → exec brief.",
-      "qualityNoteEn": "The best-written multi-agent architecture guide, including token and shared-computer safety notes."
+      "qualityNoteEn": "The best-written multi-agent architecture guide, including token and shared-computer safety notes.",
+      "hook": "多个角色在同一群里分工，最后交一份高管简报。",
+      "hookEn": "Several roles share one chat and come back with a briefing for leadership."
     },
     {
       "id": "one-person-company-stack",
@@ -3556,7 +3732,9 @@
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Chief of staff audits the business and names the first Agents (research, sales, platform specialist); one account per project to control context/tokens; routines move newsletter, directory, and Shopify work into the night.",
-      "qualityNoteEn": "An executable founder ops model: audit → hire Agents → weekly report."
+      "qualityNoteEn": "An executable founder ops model: audit → hire Agents → weekly report.",
+      "hook": "先点名第一批 Agent，再把重复的活挪到夜里。",
+      "hookEn": "Names the first agents, then moves the repeating work into the night."
     },
     {
       "id": "website-launch-group",
@@ -3584,7 +3762,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Docs pattern: a Website Launch group with launch coordination, content editing, and analytics review; the coordinator assigns work, and handoffs stay visible in the same thread. Community examples also have an EA handing site-building to an engineering Bot in natural language.",
-      "qualityNoteEn": "A clear “project pod” collaboration IA."
+      "qualityNoteEn": "A clear “project pod” collaboration IA.",
+      "hook": "上线小组里，协调员分派，交接留在同一段对话。",
+      "hookEn": "In a launch group the coordinator assigns work, and handoffs stay in the same thread."
     },
     {
       "id": "slack-repro-escalation",
@@ -3615,7 +3795,9 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "A narrow event rule: when #customer-escalations has a ticket link + “needs repro,” the Bot opens the ticket, reproduces on staging, and posts the repro pack in the thread — does not reply in Slack without approval. Avoid listening to “every new message.”",
-      "qualityNoteEn": "Gold standard for event-trigger design: narrow match, approval, failure policy."
+      "qualityNoteEn": "Gold standard for event-trigger design: narrow match, approval, failure policy.",
+      "hook": "看到需要复现才动手，未经批准不回帖。",
+      "hookEn": "Acts only when a thread asks for a reproduction, and does not reply until you approve."
     },
     {
       "id": "cursor-automations-eng-factory",
@@ -3652,7 +3834,9 @@
       "publishedAt": "2026-08-01",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Same-ecosystem Cursor cloud Agents: main-push security review→Slack; PR agentic codeowners; PagerDuty→Datadog investigation→Slack+fix PR; weekly repo digest; morning coverage PR; Slack bug triage→Linear→attempted fix.",
-      "qualityNoteEn": "Not the Grok Bot UI, but the same Cursor-ecosystem “always-on Agent” pattern. Useful when filtering for Coding/DevOps."
+      "qualityNoteEn": "Not the Grok Bot UI, but the same Cursor-ecosystem “always-on Agent” pattern. Useful when filtering for Coding/DevOps.",
+      "hook": "推送做安全审查，告警去调查，缺陷尝试修好再提。",
+      "hookEn": "Reviews a push for security, investigates an alert, and tries a fix for a bug."
     },
     {
       "id": "teach-a-task-skill",
@@ -3689,7 +3873,9 @@
       "updatedAt": "2026-08-24T01:10:00Z",
       "summaryEn": "The executable pattern from the official Skills / Routines docs: open computer view in a 1:1, choose Teach a task, demo a browser flow of about 10 minutes max, and the Bot drafts a Skill. Add decision rules, failure handling, and approval bounds, then Test run, and only then turn it into a routine. No audio recording; do not expose secrets during the demo; hand credentials over securely.",
       "qualityNoteEn": "The official “one-off task → Skill → Routine” loop. Complements the business-role cases and can be followed from the docs.",
-      "approvalBoundaryEn": "Keep writes and outbound behind approval; do not expose secrets during the demo"
+      "approvalBoundaryEn": "Keep writes and outbound behind approval; do not expose secrets during the demo",
+      "hook": "演示一遍浏览器流程，Bot 先写成草稿技能。",
+      "hookEn": "Demo a browser flow once, and the Bot writes it up as a draft skill."
     },
     {
       "id": "kanekoa-video-research",
@@ -3727,7 +3913,9 @@
       "updatedAt": "2026-08-25T00:58:00Z",
       "summaryEn": "KanekoaTheGreat asked Grok Bot in natural language to find every Dr. Roger Seheult video on sunlight, red light, infrared, and mitochondria (including MedCram and talks with Huberman, Eric Berg, Steven Bartlett, and others). Minutes later it returned: a Word file of 38 video transcripts, 13 science segments cut into a 19:35 film, and a Markdown brief with source timestamps. No script, no code.",
       "qualityNoteEn": "A real community workflow: a non-programmer finished “find–transcribe–select–edit–summarize” in one sentence. A good research/content Bot demo; still review before publishing the cut.",
-      "approvalBoundaryEn": "Human review before the cut goes public; cite sources and timestamps, and do not treat transcripts as final quotes."
+      "approvalBoundaryEn": "Human review before the cut goes public; cite sources and timestamps, and do not treat transcripts as final quotes.",
+      "hook": "把一批访谈收成一份文稿和一条可看的成片。",
+      "hookEn": "Gathers a set of interviews into one transcript and a cut you can watch."
     },
     {
       "id": "digital-declutterer",
@@ -3761,7 +3949,9 @@
       "updatedAt": "2026-08-25T01:10:00Z",
       "summaryEn": "Digital declutterer from the official expansion post: around-the-clock audit of email, Drive, and paid subscriptions, producing a cancel list (amount, last used). It discards or unsubscribes only after you nod.",
       "qualityNoteEn": "A new official “Jobs Bots are doing today” role. The approval bound is very clear: audit and list only; canceling needs a human. A good first life-admin Routine.",
-      "approvalBoundaryEn": "Do not discard files, unsubscribe, or delete accounts; return only the audit list."
+      "approvalBoundaryEn": "Do not discard files, unsubscribe, or delete accounts; return only the audit list.",
+      "hook": "审计邮箱、网盘和订阅，取消之前先等你点头。",
+      "hookEn": "Audits mail, files, and subscriptions, and cancels only after you say yes."
     },
     {
       "id": "meeting-stand-in",
@@ -3794,7 +3984,9 @@
       "updatedAt": "2026-08-25T01:10:00Z",
       "summaryEn": "Official expansion role Meeting stand-in: when you cannot go, the Bot joins, tells the room you are represented, takes detailed notes, and sends a summary so you can still catch up.",
       "qualityNoteEn": "Different from “meeting notes → tasks”: this is a stand-in when a person is absent. Calendar/meeting permissions are sensitive; sending the summary needs approval.",
-      "approvalBoundaryEn": "Joining and sending the summary need human review; do not make commitments or change the calendar."
+      "approvalBoundaryEn": "Joining and sending the summary need human review; do not make commitments or change the calendar.",
+      "hook": "你去不了时由它入会，回来带一份摘要。",
+      "hookEn": "Joins the meeting when you cannot, and comes back with a summary."
     },
     {
       "id": "website-builder-bot",
@@ -3827,7 +4019,9 @@
       "updatedAt": "2026-08-25T01:10:00Z",
       "summaryEn": "Official expansion role Website builder: build the site, buy a domain, and deploy the final version, help configure plugins, hand over a reachable URL, and add redirect rules. Complements the multi-bot launch group; this is one Bot delivering end to end.",
       "qualityNoteEn": "Officially named as buying domains and deploying — high-consequence actions. Build in a draft environment first; domain purchase and DNS/redirects must be approved.",
-      "approvalBoundaryEn": "Do not buy a domain, change DNS, or deploy to production; hand over a preview site and a checklist first."
+      "approvalBoundaryEn": "Do not buy a domain, change DNS, or deploy to production; hand over a preview site and a checklist first.",
+      "hook": "做站、买域名并部署，交出可访问的地址。",
+      "hookEn": "Builds the site, buys the domain, deploys it, and hands over an address you can open."
     },
     {
       "id": "game-artist-pipeline",
@@ -3860,7 +4054,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-26T01:20:00Z"
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "hook": "按你的方向出游戏素材，入库之前要人审。",
+      "hookEn": "Makes game art in the direction you set, and waits for a person before it ships."
     },
     {
       "id": "office-manager-work-orders",
@@ -3893,7 +4089,9 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-26T01:20:00Z"
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "hook": "在几个门户之间代点工单和排班，对外消息先等人批。",
+      "hookEn": "Clicks through work orders across portals, and holds outbound notes for approval."
     },
     {
       "id": "support-in-policy-refunds",
@@ -3929,7 +4127,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-21",
-      "updatedAt": "2026-08-26T01:20:00Z"
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "hook": "政策内的退款先拟好，打款前在界面里等你确认。",
+      "hookEn": "Drafts in-policy refunds and waits on screen for you to confirm the payment."
     },
     {
       "id": "mobile-grocery-shopping",
@@ -3961,7 +4161,9 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-08-24",
-      "updatedAt": "2026-08-26T01:20:00Z"
+      "updatedAt": "2026-08-26T01:20:00Z",
+      "hook": "边走边用语音往购物车加东西，付款仍由你点头。",
+      "hookEn": "Adds to the grocery cart by voice while you walk, and leaves payment for you."
     },
     {
       "id": "grokbot-boring-directory",
@@ -4001,7 +4203,9 @@
       "featured": false,
       "previewImage": "/previews/grokbot-boring-directory.webp",
       "publishedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T00:10:00Z"
+      "updatedAt": "2026-09-01T00:10:00Z",
+      "hook": "每晚长一页小目录，找的是没人写的日常搜索。",
+      "hookEn": "Publishes one small directory page a night, in a daily-search niche nobody covers."
     },
     {
       "id": "grokbot-ssh-tailscale",
@@ -4040,7 +4244,9 @@
       "featured": false,
       "previewImage": "/previews/grokbot-ssh-tailscale.webp",
       "publishedAt": "2026-08-28",
-      "updatedAt": "2026-09-01T00:13:00Z"
+      "updatedAt": "2026-09-01T00:13:00Z",
+      "hook": "用私有网连上 Bot 背后的那台 Linux，再远程登录。",
+      "hookEn": "Join the Bot's Linux machine on a private network, then sign in remotely."
     },
     {
       "id": "grok-bot-and-x",
@@ -4076,7 +4282,9 @@
       "featured": true,
       "previewImage": "/previews/grok-bot-and-x.webp",
       "publishedAt": "2026-08-29",
-      "updatedAt": "2026-09-01T01:41:20Z"
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "hook": "在 Bot 里登录后就能搜帖、读提及和管理书签。",
+      "hookEn": "Once signed in, the Bot can search posts, read mentions, and manage bookmarks."
     },
     {
       "id": "jtemporal-ai-squad",
@@ -4115,7 +4323,9 @@
       "featured": true,
       "previewImage": "/previews/jtemporal-ai-squad.webp",
       "publishedAt": "2026-08-30",
-      "updatedAt": "2026-09-01T01:41:20Z"
+      "updatedAt": "2026-09-01T01:41:20Z",
+      "hook": "一个周六，六席 Bot 把一个小站推上线。",
+      "hookEn": "One Saturday, six Bots shipped a small site."
     },
     {
       "id": "figma-bro",
@@ -4150,7 +4360,9 @@
       "featured": true,
       "previewImage": "/previews/figma-bro.webp",
       "publishedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T02:00:00Z"
+      "updatedAt": "2026-09-01T02:00:00Z",
+      "hook": "走真实组件库改设计稿，而不是对着截图描。",
+      "hookEn": "Edits the design through the real component library, not by tracing a screenshot."
     },
     {
       "id": "grokbots-best",
@@ -4181,7 +4393,9 @@
       "featured": true,
       "previewImage": "/previews/grokbots-best.webp",
       "publishedAt": "2026-08-30",
-      "updatedAt": "2026-09-01T11:40:00Z"
+      "updatedAt": "2026-09-01T11:40:00Z",
+      "hook": "社区做的 Bot 目录，按安装量和集成来筛。",
+      "hookEn": "A community directory of Bots you can filter by installs and integrations."
     },
     {
       "id": "lingxi-engineering-org",
@@ -4220,7 +4434,9 @@
       "featured": true,
       "previewImage": "/previews/lingxi-engineering-org.webp",
       "publishedAt": "2026-08-31",
-      "updatedAt": "2026-09-02T05:35:00Z"
+      "updatedAt": "2026-09-02T05:35:00Z",
+      "hook": "专科工头拉起云端 Agent，人只守高后果的闸门。",
+      "hookEn": "Specialist bosses launch cloud agents, and people only hold the high-stakes gates."
     },
     {
       "id": "claude-fable-5-1",
@@ -4253,7 +4469,9 @@
       "featured": false,
       "previewImage": "/previews/claude-fable-5-1.webp",
       "publishedAt": "2026-09-01",
-      "updatedAt": "2026-09-03T00:10:00Z"
+      "updatedAt": "2026-09-03T00:10:00Z",
+      "hook": "同一模型两档防护：一档公开，一档只给受信访问。",
+      "hookEn": "One model at two safeguard levels: one public, one limited to trusted access."
     },
     {
       "id": "designing-grok-bot",
@@ -4288,7 +4506,9 @@
       "stars": 4,
       "previewImage": "/previews/designing-grok-bot.webp",
       "publishedAt": "2026-09-03",
-      "updatedAt": "2026-09-04T02:00:14Z"
+      "updatedAt": "2026-09-04T02:00:14Z",
+      "hook": "从聊天会话改成名册：每个 Bot 有自己的电脑和例行。",
+      "hookEn": "From chat sessions to a roster, where each Bot has its own computer and routines."
     },
     {
       "id": "mindstudio-grok-bot-tips",
@@ -4323,7 +4543,9 @@
       "featured": false,
       "previewImage": "/previews/mindstudio-grok-bot-tips.webp",
       "publishedAt": "2026-08-19",
-      "updatedAt": "2026-09-04T02:00:14Z"
+      "updatedAt": "2026-09-04T02:00:14Z",
+      "hook": "用幕僚长路由专精席，再用追问把上下文问清楚。",
+      "hookEn": "Route work through a chief of staff, then grill for the context that is still missing."
     },
     {
       "id": "granda-botops",
@@ -4361,7 +4583,9 @@
       "featured": true,
       "previewImage": "/previews/granda-botops.webp",
       "publishedAt": "2026-09-06",
-      "updatedAt": "2026-09-07T01:23:22Z"
+      "updatedAt": "2026-09-07T01:23:22Z",
+      "hook": "幕僚长、领域主、临时工三层，工单记在 Notion。",
+      "hookEn": "Three layers — chief of staff, domain owners, and temps — with tickets kept in Notion."
     },
     {
       "id": "greenlit-chief-of-staff",
@@ -4392,7 +4616,9 @@
       "featured": false,
       "previewImage": "/previews/greenlit-chief-of-staff.webp",
       "publishedAt": "2026-08-27",
-      "updatedAt": "2026-09-07T01:23:22Z"
+      "updatedAt": "2026-09-07T01:23:22Z",
+      "hook": "把幕僚长写成五份合同，而不是一张待办清单。",
+      "hookEn": "Writes the chief of staff as five contracts, not as a to-do list."
     },
     {
       "id": "laozhang-getting-started",
@@ -4423,7 +4649,9 @@
       "featured": false,
       "previewImage": "/previews/laozhang-getting-started.webp",
       "publishedAt": "2026-09-03",
-      "updatedAt": "2026-09-08T01:27:40Z"
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "hook": "第一天先建一个文档检查员，跑通后再存成技能。",
+      "hookEn": "Day one is a document checker you run once, then save as a skill."
     },
     {
       "id": "aimaker-seven-bot-team",
@@ -4460,7 +4688,9 @@
       "featured": true,
       "previewImage": "/previews/aimaker-seven-bot-team.webp",
       "publishedAt": "2026-09-06",
-      "updatedAt": "2026-09-08T01:27:40Z"
+      "updatedAt": "2026-09-08T01:27:40Z",
+      "hook": "七席从手机跑：先手工做稳，再存成技能和例行。",
+      "hookEn": "Seven seats run from the phone: do it by hand until it is stable, then save it."
     },
     {
       "id": "mobile-mcp",
@@ -4504,7 +4734,9 @@
       "featured": true,
       "previewImage": "/previews/mobile-mcp.webp",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-08T16:20:00Z"
+      "updatedAt": "2026-09-08T16:20:00Z",
+      "hook": "让 Agent 直接点手机应用，读得到结构就不用猜坐标。",
+      "hookEn": "Lets an agent tap phone apps, reading the structure before it guesses a coordinate."
     },
     {
       "id": "6yuwei-grok-bot-six-workflows",

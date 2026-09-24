@@ -34,7 +34,9 @@
       "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49824144，核对 3pts。许可证以站点 humans.txt / llms.txt 的 CC0 1.0 为准；实验计数以 /api/v1/experiments 与首页列表为 31。无独立 GitHub 仓库可核。预览为 Playwright 实拍首页裁 3:2 WebP。",
       "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49824144, 3pts at check time. License follows the site’s humans.txt / llms.txt CC0 1.0 claim; experiment count is 31 per /api/v1/experiments and the homepage list. No separate GitHub repo to verify. Preview is a Playwright homepage capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "可整页粘贴的复古立体技巧，每件都是一个文件。",
+      "hookEn": "A museum of retro 3D tricks, each one a single file you can paste into a page."
     },
     {
       "id": "fractalysis",
@@ -64,7 +66,9 @@
       "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49816840，核对 2pts。无限放大与扰动法为作者自述，本库未复测深度极限。预览为 Playwright 实拍首屏裁 3:2 WebP（首屏 canvas 需短暂等待才有图）。",
       "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49816840, 2pts at check time. Infinite-zoom / perturbation claims are the author’s; this library did not re-test depth limits. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP (the canvas needs a short wait before it paints).",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "在浏览器里把分形放大到普通精度之外。",
+      "hookEn": "Zoom a fractal in the browser, far past ordinary precision."
     },
     {
       "id": "simten-nand",
@@ -98,7 +102,9 @@
       "qualityNote": "公开页与 GitHub 均 HTTP 200（2026-09-24）。gh api：Apache-2.0、18★。Show HN item 49817114，核对 3pts。FPGA / Verilog 导出为站点自述，本库未在硬件上复测。页面临时提示桌面向。预览为 Playwright 实拍关卡页裁 3:2 WebP。",
       "qualityNoteEn": "Site and GitHub both HTTP 200 (2026-09-24). gh api: Apache-2.0, 18★. Show HN item 49817114, 3pts at check time. FPGA / Verilog export is the site’s claim and was not re-tested on hardware. The page notes a desktop viewport. Preview is a Playwright level-page capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "在浏览器用代码接线，从门电路搭起一台处理器。",
+      "hookEn": "Wire gates in the browser and build a processor up from them."
     },
     {
       "id": "lineselect",
@@ -672,7 +678,9 @@
       "qualityNote": "公开页 200（2026-09-16）。Show HN ≈163 分；预览取项目 OG 图裁成 3:2（无头 Chrome WebGL 截图空白）。",
       "qualityNoteEn": "Public page returned 200 (2026-09-16). Show HN ~163 points; preview is the project OG image cropped to 3:2 (headless Chrome WebGL shot was blank).",
       "publishedAt": "2026-09-12",
-      "updatedAt": "2026-09-16T01:10:52Z"
+      "updatedAt": "2026-09-16T01:10:52Z",
+      "hook": "在立体场景里走一遍 Redis 内部是怎么工作的。",
+      "hookEn": "Walk through how Redis works, as an interactive scene in the browser."
     },
     {
       "id": "code-preview-element",
@@ -702,7 +710,9 @@
       "qualityNote": "公开演示 200（2026-09-15）。GitHub star 很少，但 API 清晰、可复现；预览取文档首页 3:2。",
       "qualityNoteEn": "Public demo returned 200 (2026-09-15). Few GitHub stars, but the API is clear and reproducible; preview is a 3:2 crop of the docs home.",
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "代码块自己渲染成预览，改字的时候页面跟着变。",
+      "hookEn": "A code block that renders itself, and updates as you edit."
     },
     {
       "id": "neobrutalism",
@@ -1373,7 +1383,9 @@
         "retro",
         "classless",
         "hacker-news"
-      ]
+      ],
+      "hook": "把语义页面收成九十年代末的银行后台。",
+      "hookEn": "Restyle a semantic page as a late-nineties bank back office."
     },
     {
       "id": "single-file-saas",
@@ -1401,7 +1413,9 @@
         "saas",
         "byok",
         "html"
-      ]
+      ],
+      "hook": "一整套自带密钥的应用脚手架，塞在一个文件里。",
+      "hookEn": "A whole bring-your-own-key app scaffold, packed into one file."
     },
     {
       "id": "motionsites",
@@ -1769,7 +1783,9 @@
       "previewImage": "/previews/css-grid-garden.webp",
       "titleEn": "CSS Grid Garden",
       "summaryEn": "Learn CSS Grid by watering a garden. Same author series as Flexbox Froggy, open source, playable in the browser.",
-      "qualityNoteEn": "A counterpart practice page for Grid layout. The URL has been stable for years."
+      "qualityNoteEn": "A counterpart practice page for Grid layout. The URL has been stable for years.",
+      "hook": "用浇水闯关来学网格布局。",
+      "hookEn": "Learn grid layout as a game of watering a garden."
     },
     {
       "id": "animate-css",
@@ -1850,7 +1866,9 @@
       "previewImage": "/previews/pico-css.webp",
       "titleEn": "Pico CSS",
       "summaryEn": "Minimal CSS framework site for semantic HTML: almost no classes, styles native forms, buttons, and type directly.",
-      "qualityNoteEn": "Useful for comparing “few classes, more semantic tags” component/docs writing."
+      "qualityNoteEn": "Useful for comparing “few classes, more semantic tags” component/docs writing.",
+      "hook": "几乎不用类名，直接把原生表单和按钮变好看。",
+      "hookEn": "Styles native forms and buttons with almost no class names."
     },
     {
       "id": "shoelace",
@@ -1873,7 +1891,9 @@
       "previewImage": "/previews/shoelace.webp",
       "titleEn": "Shoelace",
       "summaryEn": "Open-source Web Components library docs (now pointing to Web Awesome). Drop custom elements such as <sl-button> in via CDN.",
-      "qualityNoteEn": "A framework-agnostic custom-element demo; the site itself is a component docs page."
+      "qualityNoteEn": "A framework-agnostic custom-element demo; the site itself is a component docs page.",
+      "hook": "用自定义元素把按钮和表单插进页面。",
+      "hookEn": "Drop buttons and forms into a page as custom elements."
     },
     {
       "id": "mdn-css-examples",
@@ -1955,7 +1975,9 @@
       "previewImage": "/previews/open-props.webp",
       "titleEn": "Open Props",
       "summaryEn": "Adam Argyle’s CSS-variable design-token site: colors, shadows, motion, and other props you can drop into a plain HTML page.",
-      "qualityNoteEn": "The docs site itself demos tokens and components. Useful as a design-system page comparison."
+      "qualityNoteEn": "The docs site itself demos tokens and components. Useful as a design-system page comparison.",
+      "hook": "颜色、阴影和动效的变量，可以直接引进普通页面。",
+      "hookEn": "Color, shadow, and motion variables you can drop into a plain page."
     },
     {
       "id": "shadow-palette",
@@ -1978,7 +2000,9 @@
       "previewImage": "/previews/shadow-palette.webp",
       "titleEn": "CSS Shadow Palette Generator",
       "summaryEn": "Josh Comeau’s shadow-palette generator: tune height and light, then copy CSS custom properties. A ready-to-use tool page.",
-      "qualityNoteEn": "A high-quality front-end tool page. Output can go straight into HTML/CSS."
+      "qualityNoteEn": "A high-quality front-end tool page. Output can go straight into HTML/CSS.",
+      "hook": "调高度和光线，然后复制阴影变量。",
+      "hookEn": "Tune height and light, then copy the shadow variables."
     },
     {
       "id": "threejs-examples",
@@ -2004,7 +2028,9 @@
       "previewImage": "/previews/threejs-examples.webp",
       "titleEn": "three.js examples",
       "summaryEn": "Official three.js example wall: many in-browser WebGL / HTML interactive demos you can open to read the source.",
-      "qualityNoteEn": "Official interactive example index. Fits 3D/game-leaning HTML demos."
+      "qualityNoteEn": "Official interactive example index. Fits 3D/game-leaning HTML demos.",
+      "hook": "一墙可在浏览器里跑的立体示例，点进去能看源码。",
+      "hookEn": "A wall of 3D demos you can run in the browser and open to read the source."
     },
     {
       "id": "bootstrap-examples",
@@ -2028,7 +2054,9 @@
       "previewImage": "/previews/bootstrap-examples.webp",
       "titleEn": "Bootstrap Examples",
       "summaryEn": "Official Bootstrap 5.3 examples: full HTML page fragments and starter templates for covers, pricing, dashboards, blogs, albums, and more.",
-      "qualityNoteEn": "Official landing/component example directory. You can compare the source structure directly."
+      "qualityNoteEn": "Official landing/component example directory. You can compare the source structure directly.",
+      "hook": "封面、定价和仪表盘的完整页面，拿来就能改。",
+      "hookEn": "Full pages for a cover, pricing, and a dashboard, ready to adapt."
     },
     {
       "id": "css-zen-garden",
@@ -2115,7 +2143,9 @@
       "previewImage": "/previews/squoosh.webp",
       "titleEn": "Squoosh",
       "summaryEn": "GoogleChromeLabs in-browser image compressor: local codecs, side-by-side compare, originals never upload. A high-quality web tool page.",
-      "qualityNoteEn": "Open source, works offline. Fits the “tool” type."
+      "qualityNoteEn": "Open source, works offline. Fits the “tool” type.",
+      "hook": "在浏览器里压缩图片，原图不上传。",
+      "hookEn": "Compress an image in the browser, and the original never uploads."
     },
     {
       "id": "clippy",
@@ -2141,7 +2171,9 @@
       "previewImage": "/previews/clippy.webp",
       "titleEn": "Clippy: CSS clip-path maker",
       "summaryEn": "Bennett Feely’s visual clip-path editor. Drag points to make circle / ellipse / polygon / inset, then copy the CSS.",
-      "qualityNoteEn": "A long-maintained classic CSS tool page. The link still works."
+      "qualityNoteEn": "A long-maintained classic CSS tool page. The link still works.",
+      "hook": "拖点生成裁剪路径，再把样式复制走。",
+      "hookEn": "Drag points to draw a clip shape, then copy the style."
     },
     {
       "id": "css-doodle",
@@ -2169,7 +2201,9 @@
       "previewImage": "/previews/css-doodle.webp",
       "titleEn": "css-doodle",
       "summaryEn": "Web Components CSS pattern generator: draw grids, shapes, and motion with an extended CSS syntax. The docs site is a clickable live demo.",
-      "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive."
+      "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive.",
+      "hook": "用扩展的样式语法画网格和动画，文档页就是现场。",
+      "hookEn": "Draw grids and motion with an extended style syntax; the docs are the live demo."
     },
     {
       "id": "slidevars",
@@ -2200,7 +2234,9 @@
         "codepen",
         "mit",
         "devtools"
-      ]
+      ],
+      "hook": "自动给样式变量做出滑杆，改值页面立刻变。",
+      "hookEn": "Builds sliders for style variables, and the page updates as you move them."
     },
     {
       "id": "dont-wordle",
@@ -2292,7 +2328,9 @@
         "directory",
         "skeuomorphic",
         "mobile"
-      ]
+      ],
+      "hook": "复古手机应用的目录，格子里带着视频预览。",
+      "hookEn": "A directory of retro phone apps, each tile with a video preview."
     },
     {
       "id": "polycss",
@@ -2385,7 +2423,9 @@
         "glitch",
         "tool",
         "hacker-news"
-      ]
+      ],
+      "hook": "在本地生成纹理和故障滤镜，再导出图片。",
+      "hookEn": "Generate textures and glitch filters locally, then export the image."
     },
     {
       "id": "cocoon",
@@ -2413,7 +2453,9 @@
         "template",
         "landing",
         "mit"
-      ]
+      ],
+      "hook": "深色单页模板，免构建就能部署。",
+      "hookEn": "A dark one-page template you can deploy with no build step."
     },
     {
       "id": "html-presentation-editor",

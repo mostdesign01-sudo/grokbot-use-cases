@@ -706,7 +706,9 @@
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt，改主色即可。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and retint the accent.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "圆形按钮，暗玻璃表面上有一圈转动的光。",
+      "hookEn": "Circle buttons on dark glass, with a light that travels the rim."
     },
     {
       "id": "wireframe-forms-cube",
@@ -1102,7 +1104,9 @@
       "titleEn": "Brand Orbs",
       "summaryEn": "A set of Canvas brand orbs: free Claude, Cursor, GitHub, Figma, and other variants. Fits a tools wall or integrations list.",
       "qualityNoteEn": "A ready start for an integrations icon wall. On the Skill side, swap logos and size; the theme can change as a group.",
-      "promptHintEn": "Use Brand Orbs as a “tools we connect” row. Keep free variants only, unify the size, and let hover spin gently."
+      "promptHintEn": "Use Brand Orbs as a “tools we connect” row. Keep free variants only, unify the size, and let hover spin gently.",
+      "hook": "一排品牌球，适合做工具墙或集成列表。",
+      "hookEn": "A row of brand orbs for a tools wall or an integrations list."
     },
     {
       "id": "rectangle-buttons",
@@ -1135,7 +1139,9 @@
       "titleEn": "Rectangle Buttons",
       "summaryEn": "Community rectangle button family: dark glass, Launch, dotted borders, sliding type, gradient beams, and other free CTAs. Pure CSS/DOM.",
       "qualityNoteEn": "The fastest swap for a landing primary button. Copy the prompt, change color and copy; the Agent does not need to rewrite motion.",
-      "promptHintEn": "Pick a free CTA from Rectangle Buttons. Change the copy to “Start trial” and the color to the site accent."
+      "promptHintEn": "Pick a free CTA from Rectangle Buttons. Change the copy to “Start trial” and the color to the site accent.",
+      "hook": "矩形的主按钮，从暗玻璃到渐变光束都有。",
+      "hookEn": "Rectangle actions, from dark glass to a gradient beam."
     },
     {
       "id": "shader-buttons",
@@ -1240,7 +1246,9 @@
       "titleEn": "Landscape",
       "summaryEn": "A 3D landscape that can switch time of day and weather: free sunrise, noon, sunset, night, rain, and snow variants.",
       "qualityNoteEn": "A ready scene for an atmosphere page or weather product. The Agent only needs to change the time of day per the Skill — no need to rebuild terrain.",
-      "promptHintEn": "Use the Landscape sunset variant as a cover. Stay on the free Community set; do not switch to Pro terrain."
+      "promptHintEn": "Use the Landscape sunset variant as a cover. Stay on the free Community set; do not switch to Pro terrain.",
+      "hook": "可切换晨昏和天气的三维地貌。",
+      "hookEn": "A 3D landscape that switches time of day and weather."
     },
     {
       "id": "sketchbook",
@@ -1273,7 +1281,9 @@
       "titleEn": "Sketchbook",
       "summaryEn": "MengTo Sketchbook landing: like a flip-through sketchbook. The full Community page opens with no login.",
       "qualityNoteEn": "A full-page template for portfolio narrative. Hand the prompt to an Agent, swap cover type and paper color, and leave the structure alone at first.",
-      "promptHintEn": "Use the Sketchbook landing as the skeleton of our portfolio home. Keep the page-turn rhythm; only change copy and primary color."
+      "promptHintEn": "Use the Sketchbook landing as the skeleton of our portfolio home. Keep the page-turn rhythm; only change copy and primary color.",
+      "hook": "像一本可以翻开的速写本，整页打开就能看。",
+      "hookEn": "A landing that opens like a sketchbook you can flip through."
     },
     {
       "id": "kage",
@@ -1341,7 +1351,9 @@
       "titleEn": "Complete Shelf",
       "summaryEn": "A full-wall bookshelf landing: fits a bookstore, course catalog, or “all work” index. Free Community full page.",
       "qualityNoteEn": "Catalog sites can reuse this as-is. Let the Agent change spine colors and titles per the Skill — do not rebuild the shelf geometry.",
-      "promptHintEn": "Use Complete Shelf as a course catalog. Each spine is a course name; primary color follows the site paper tone."
+      "promptHintEn": "Use Complete Shelf as a course catalog. Each spine is a course name; primary color follows the site paper tone.",
+      "hook": "整面书架，适合书店、课程或全部作品。",
+      "hookEn": "A full wall of shelves for a bookstore, a course list, or all of the work."
     },
     {
       "id": "sylva-living-green",
@@ -1410,7 +1422,9 @@
       "titleEn": "Text Path Studies",
       "summaryEn": "Path-type studies: free Canvas variants for globe type, outline flow, glyph clouds, cloth, ripples, and spheres.",
       "qualityNoteEn": "Use when a chapter title should “walk a path.” The Agent only changes the words and hue; geometry stays with the existing Skill.",
-      "promptHintEn": "Use Text Path Studies for a chapter title. Change the words to the Chinese product name; hue should sit with the paper base."
+      "promptHintEn": "Use Text Path Studies for a chapter title. Change the words to the Chinese product name; hue should sit with the paper base.",
+      "hook": "字沿着路径走：地球、布料、涟漪和球体。",
+      "hookEn": "Type that follows a path: a globe, cloth, ripples, and a sphere."
     },
     {
       "id": "gallery-heading",
@@ -1443,7 +1457,9 @@
       "titleEn": "Gallery Heading",
       "summaryEn": "Gallery wordmarks: free rising-diagonal, falling, sweep, and loop variants. Fits portfolio section breaks.",
       "qualityNoteEn": "Ready motion for section titles. Copy the prompt to change type and hue; the Agent does not need to rebuild the sweep.",
-      "promptHintEn": "Use Gallery Heading for portfolio sections. Change the title to “Featured,” make the type a bit heavier, hue toward indigo."
+      "promptHintEn": "Use Gallery Heading for portfolio sections. Change the title to “Featured,” make the type a bit heavier, hue toward indigo.",
+      "hook": "画廊用的字标，斜向升起、坠落或横扫。",
+      "hookEn": "Gallery wordmarks that rise on a diagonal, fall, or sweep across."
     },
     {
       "id": "article-headings",
@@ -1477,7 +1493,9 @@
       "titleEn": "Article Headings",
       "summaryEn": "Article-open wordmarks: free intro type, particle wordmarks, and audio wordmarks. Fits a long-form or changelog header.",
       "qualityNoteEn": "Reusable for blog/log titles. Hand the Skill to an Agent to change copy and rhythm; keep particle density low.",
-      "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read."
+      "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read.",
+      "hook": "文章开头的字标，适合长文或更新日志的顶栏。",
+      "hookEn": "Wordmarks for the top of a long piece or a changelog."
     },
     {
       "id": "koi-studies",
@@ -1583,7 +1601,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Country Towers 的 Japan 变体做文化产品首屏。保持 Community 免费版，相机再远一点，搭建动画放慢，地形再绿一些。",
-      "promptHintEn": "Use the Japan variant of Country Towers as a cultural-product first screen. Keep the free Community edition, pull the camera back, slow the build animation, and make the terrain a bit greener."
+      "promptHintEn": "Use the Japan variant of Country Towers as a cultural-product first screen. Keep the free Community edition, pull the camera back, slow the build animation, and make the terrain a bit greener.",
+      "hook": "六国塔楼立在程序化的地形上，可以转着看。",
+      "hookEn": "Towers from six countries stand on a generated landscape you can orbit."
     },
     {
       "id": "character-carousel",
@@ -1617,7 +1637,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Character Carousel 的 filmstrip 变体做 Agent 团队墙。保持 Community 免费版，换成我们的人名与职责，主色跟品牌走。",
-      "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color."
+      "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color.",
+      "hook": "人像卡片走马灯，指针、滚轮和键盘都能换。",
+      "hookEn": "A carousel of character cards you switch with the pointer, the wheel, or the keyboard."
     },
     {
       "id": "warp-field",
@@ -1922,7 +1944,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Animated Top Dock 做控制台顶栏。选 Sable 或 Liquid Glass，保持免费变体。",
       "promptHintEn": "Use Animated Top Dock as a console top bar. Pick Sable or Liquid Glass; keep the free variants.",
-      "previewImage": "/previews/animated-top-dock.webp"
+      "previewImage": "/previews/animated-top-dock.webp",
+      "hook": "顶部停靠栏，从命令条到液态玻璃都有。",
+      "hookEn": "A top dock, from a command bar to liquid glass."
     },
     {
       "id": "threeui-gallery",
