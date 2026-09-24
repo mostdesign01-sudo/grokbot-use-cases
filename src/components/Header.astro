@@ -29,14 +29,12 @@ const favoritesLink: NavLink = { href: withBase("favorites/"), label: ui.nav.fav
 
 const labPrimary: NavLink[] = [
   { href: withBase("/"), label: ui.nav.home },
-  { href: withBase("paths/"), label: ui.nav.paths, section: true },
   { href: withBase("models/"), label: ui.nav.models, section: true },
   { href: withBase("search/"), label: ui.nav.search },
   favoritesLink,
 ];
 
 const labMore: NavLink[] = [
-  { href: withBase("combos/"), label: ui.nav.combos, section: true },
   { href: withBase("image-prompts/"), label: ui.nav.imagePrompts, section: true },
   { href: withBase("docs/"), label: ui.nav.docs },
   { href: withBase("changelog/"), label: ui.nav.changelog },

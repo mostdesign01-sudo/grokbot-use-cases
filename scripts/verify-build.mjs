@@ -314,19 +314,26 @@ if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.incl
   process.exit(1);
 }
 
-if (!home.includes("可跑路径") || !home.includes("plaza-paths-strip")) {
-  console.error("Homepage is missing the playbooks strip (可跑路径 / plaza-paths-strip).");
+if (/paths\/|combos\//.test(home) || home.includes("本周可抄") || home.includes("plaza-paths-strip")) {
+  console.error("Homepage still exposes internal paths/ or combos/ (playbooks strip or links).");
   process.exit(1);
 }
 
-if (!home.includes("本周可抄") || !home.includes("paths/daily-to-draft")) {
-  console.error("Homepage is missing this week’s steal (本周可抄 → /paths/daily-to-draft/).");
-  process.exit(1);
+async function assertNoindex(rel) {
+  const page = await readFile(new URL(`../dist/${rel}`, import.meta.url), "utf8");
+  if (!page.includes('name="robots" content="noindex, nofollow"')) {
+    console.error(`${rel} is missing <meta name="robots" content="noindex, nofollow">.`);
+    process.exit(1);
+  }
 }
 
-if (!home.includes("combos/") || !home.includes("三库组合")) {
-  console.error("Homepage is missing the Combos rail link (combos/ / 三库组合).");
-  process.exit(1);
+await assertNoindex("paths/index.html");
+for (const path of pathsDataset.paths) {
+  await assertNoindex(`paths/${path.slug}/index.html`);
+}
+await assertNoindex("combos/index.html");
+for (const combo of combosDataset.combos) {
+  await assertNoindex(`combos/${combo.slug}/index.html`);
 }
 
 if (!home.includes("models/") || !home.includes("最新模型")) {

@@ -8,7 +8,6 @@ import { agentUiItems } from "../lib/agent-ui";
 import { cases, getCaseBySlug } from "../lib/cases";
 import {
   dateHref,
-  firstSentence,
   getDigestArchive,
   getHomeDigest,
   packPlazaColumns,
@@ -18,7 +17,6 @@ import { shanghaiDateKey } from "../lib/format";
 import { htmlItems } from "../lib/html";
 import { fill, ui } from "../lib/i18n";
 import { assetUrl, withBase } from "../lib/paths";
-import { getStealAlso, getWeeklySteal } from "../lib/playbooks";
 import { siteName } from "../lib/site";
 
 interface Props {
@@ -30,14 +28,7 @@ const latest = resolveDigestDate();
 const day = getHomeDigest(dateKey);
 const archive = getDigestArchive();
 const [col1, col2, col3] = packPlazaColumns(day.items);
-const steal = getWeeklySteal();
-const also = getStealAlso(steal, 3);
-const stealLine = steal
-  ? { zh: firstSentence(steal.summary), en: firstSentence(steal.summaryEn) }
-  : ui.home.pathsStrip;
 const railLinks = [
-  { href: withBase("paths/"), label: ui.nav.paths },
-  { href: withBase("combos/"), label: ui.nav.combos },
   { href: withBase("models/"), label: ui.nav.models },
   { href: withBase("image-prompts/"), label: ui.nav.imagePrompts },
   { href: withBase("search/"), label: ui.nav.search },
@@ -230,41 +221,6 @@ const libraries = [
           </span>
         </p>
       </section>
-      <aside class="plaza-paths-strip">
-        <div class="plaza-paths-copy">
-          <p class="plaza-kicker"><Loc zh={ui.home.steal.zh} en={ui.home.steal.en} /></p>
-          {
-            steal ? (
-              <h2 class="plaza-steal-title">
-                <a href={withBase(`paths/${steal.slug}/`)}>
-                  <span class="loc-zh">{steal.title}</span>
-                  <span class="loc-en">{steal.titleEn}</span>
-                </a>
-              </h2>
-            ) : (
-              <p class="plaza-line"><Loc zh={ui.home.paths.zh} en={ui.home.paths.en} /></p>
-            )
-          }
-          <p class="plaza-line">
-            <Loc zh={stealLine.zh} en={stealLine.en} />
-          </p>
-          {
-            also.length > 0 && (
-              <p class="plaza-path-chips">
-                {also.map((path) => (
-                  <a href={withBase(`paths/${path.slug}/`)}>
-                    <span class="loc-zh">{path.title}</span>
-                    <span class="loc-en">{path.titleEn}</span>
-                  </a>
-                ))}
-              </p>
-            )
-          }
-        </div>
-        <a class="btn btn-ghost" href={withBase("paths/")}>
-          <Loc zh={ui.home.allPaths.zh} en={ui.home.allPaths.en} />
-        </a>
-      </aside>
       <div class="home-plaza-cols" data-plaza-grid>
         <div class="home-col" data-plaza-col>
           {col1.map((item) => <PlazaCard item={item} />)}
