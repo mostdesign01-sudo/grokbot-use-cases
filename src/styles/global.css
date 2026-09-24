@@ -349,12 +349,18 @@ code {
 
 .theme-toggle {
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   display: grid;
   place-items: center;
   margin-left: 2px;
+}
+
+.theme-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .locale-toggle {
