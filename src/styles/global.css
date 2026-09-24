@@ -2530,7 +2530,7 @@ a.tweet-card.case-card {
 }
 
 .tweet-media.is-cover img {
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 2 / 1;
   max-height: none;
   object-position: center;
   background: #f4efe6;
@@ -3446,7 +3446,7 @@ a.plaza-card:hover {
 }
 
 .plaza-thumb.is-cover img {
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 2 / 1;
   height: auto;
   object-position: center;
   border-radius: 10px;

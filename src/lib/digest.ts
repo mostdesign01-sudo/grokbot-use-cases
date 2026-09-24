@@ -359,7 +359,7 @@ export function packPlazaColumns(items: PlazaItem[]): [PlazaItem[], PlazaItem[],
   const cols: PlazaItem[][] = [[], [], []];
   const weights = [0, 0, 3.6];
   for (const item of items) {
-    const w = item.thumbCover ? 1.55 : item.thumb ? 2.15 : 1.1;
+    const w = item.thumbCover ? 1.75 : item.thumb ? 2.15 : 1.1;
     let i = 0;
     if (weights[1] < weights[i]) i = 1;
     if (weights[2] < weights[i]) i = 2;
