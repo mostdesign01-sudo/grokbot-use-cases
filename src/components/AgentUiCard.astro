@@ -1,4 +1,5 @@
 ---
+import { cardLine } from "../lib/cardline";
 import type { AgentUiItem } from "../lib/agent-ui";
 import { agentUiTypeLabel } from "../lib/agent-ui-labels";
 import { ui } from "../lib/i18n";
@@ -15,6 +16,8 @@ interface Props {
 
 const { item, showLibBadge = false } = Astro.props;
 const titleEn = item.titleEn ?? item.title;
+const lineZh = cardLine(item, "zh");
+const lineEn = cardLine(item, "en");
 ---
 
 <div class="card-shell card-shell-pin">
@@ -35,8 +38,8 @@ const titleEn = item.titleEn ?? item.title;
         <span class="loc-en">{titleEn}</span>
       </h3>
       <p class="pin-reveal summary">
-        <span class="loc-zh">{item.summary}</span>
-        <span class="loc-en">{item.summaryEn ?? item.summary}</span>
+        <span class="loc-zh">{lineZh}</span>
+        <span class="loc-en">{lineEn}</span>
       </p>
       <div class="card-meta">
         <span>{item.tags.slice(0, 2).join(" · ")}</span>

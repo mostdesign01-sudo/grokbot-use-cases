@@ -1,4 +1,5 @@
 import { agentUiItems, agentUiMeta, agentUiSearchText } from "./agent-ui";
+import { cardLine, firstSentence, splitSentences, stripAuditNoise } from "./cardline";
 import { cases, changelogNotes, meta as casesMeta, caseSearchText, type ChangelogNote } from "./cases";
 import { shanghaiDateKey } from "./format";
 import { htmlItems, htmlMeta, htmlSearchText } from "./html";
@@ -6,6 +7,8 @@ import { ui, type Copy } from "./i18n";
 import { assetUrl, withBase } from "./paths";
 import { relatedPlaybooksForNotes } from "./playbooks";
 import { starsOf } from "./stars";
+
+export { firstSentence, splitSentences };
 
 export type DigestLib = "grok" | "html" | "agent-ui";
 
@@ -69,6 +72,8 @@ interface CatalogItem {
   titleEn: string;
   summary: string;
   summaryEn: string;
+  hook?: string;
+  hookEn?: string;
   qualityNote: string;
   qualityNoteEn: string;
   sourceUrl: string;
@@ -88,6 +93,8 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
+    hook: item.hook,
+    hookEn: item.hookEn,
     qualityNote: item.qualityNote,
     qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
     sourceUrl: item.sourceUrl,
@@ -105,6 +112,8 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn ?? item.title,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
+    hook: item.hook,
+    hookEn: item.hookEn,
     qualityNote: item.qualityNote,
     qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
     sourceUrl: item.sourceUrl,
@@ -122,6 +131,8 @@ function catalog(): CatalogItem[] {
     titleEn: item.titleEn ?? item.title,
     summary: item.summary,
     summaryEn: item.summaryEn ?? item.summary,
+    hook: item.hook,
+    hookEn: item.hookEn,
     qualityNote: item.qualityNote,
     qualityNoteEn: item.qualityNoteEn ?? item.qualityNote,
     sourceUrl: item.sourceUrl,
@@ -142,21 +153,8 @@ export function sourceHost(url: string): string {
   }
 }
 
-export function splitSentences(text: string): string[] {
-  const t = text.replace(/\s+/g, " ").trim();
-  if (!t) return [];
-  return t
-    .split(/(?<=[。！？])\s*|(?<=[.!?])\s+/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
-export function firstSentence(text: string): string {
-  return splitSentences(text)[0] ?? "";
-}
-
-function editorialLine(note: string, fallback: string): string {
-  return firstSentence(note) || firstSentence(fallback) || fallback.trim();
+function editorialLine(item: CatalogItem, locale: "zh" | "en"): string {
+  return cardLine(item, locale);
 }
 
 function stripNoteMeta(text: string): string {
@@ -294,9 +292,7 @@ function sentenceForLibrary(
   if (clauses.length === 0) {
     const bits = items
       .filter((item) => item.lib === lib)
-      .map((item) =>
-        editorialLine(locale === "en" ? item.qualityNoteEn : item.qualityNote, locale === "en" ? item.summaryEn : item.summary),
-      )
+      .map((item) => editorialLine(item, locale))
       .filter((bit) => !isWeakClause(bit))
       .slice(0, 2)
       .map((bit) => bit.replace(/[。.!]+$/, ""));
@@ -321,8 +317,8 @@ function composeLead(notes: ChangelogNote[], items: CatalogItem[]): Copy {
     const fallback = items[0];
     if (!fallback) return { zh: "", en: "" };
     return {
-      zh: editorialLine(fallback.qualityNote, fallback.summary),
-      en: editorialLine(fallback.qualityNoteEn, fallback.summaryEn),
+      zh: editorialLine(fallback, "zh"),
+      en: editorialLine(fallback, "en"),
     };
   }
 
@@ -349,9 +345,7 @@ function claimFromNote(note: ChangelogNote, locale: "zh" | "en"): string {
 }
 
 function claimFromItem(item: CatalogItem, locale: "zh" | "en"): string {
-  const note = locale === "en" ? item.qualityNoteEn : item.qualityNote;
-  const summary = locale === "en" ? item.summaryEn : item.summary;
-  const line = editorialLine(note, summary);
+  const line = editorialLine(item, locale);
   if (line.length >= 8) return line;
   return locale === "en" ? item.titleEn : item.title;
 }
@@ -404,12 +398,22 @@ function toPlazaItem(item: CatalogItem): PlazaItem {
     title: item.title,
     titleEn: item.titleEn,
     sourceHost: host,
-    line: editorialLine(item.qualityNote, item.summary),
-    lineEn: editorialLine(item.qualityNoteEn, item.summaryEn),
+    line: editorialLine(item, "zh"),
+    lineEn: editorialLine(item, "en"),
+    searchText: [
+      item.title,
+      item.titleEn,
+      item.hook ?? "",
+      item.hookEn ?? "",
+      stripAuditNoise(item.summary),
+      stripAuditNoise(item.summaryEn),
+      names.zh,
+      names.en,
+      host,
+    ].join(" "),
     thumb: assetUrl(item.previewImage),
     dateKey,
     updatedAt: item.updatedAt,
-    searchText: [item.searchText, names.zh, names.en, host].join(" "),
   };
 }
 
