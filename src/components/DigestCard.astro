@@ -30,7 +30,13 @@ const { day } = Astro.props;
       <ul class="plaza-digest-bullets">
         {day.bullets.map((bullet) => (
           <li>
-            <Loc zh={bullet.zh} en={bullet.en} />
+            <a href={bullet.href}>
+              <span class="loc-zh">{bullet.title}</span>
+              <span class="loc-en">{bullet.titleEn}</span>
+            </a>
+            <span class="plaza-digest-line">
+              <Loc zh={bullet.line} en={bullet.lineEn || bullet.line} />
+            </span>
           </li>
         ))}
       </ul>

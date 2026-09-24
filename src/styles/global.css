@@ -3149,14 +3149,32 @@ a.plaza-card:hover {
 
 .plaza-digest-bullets {
   margin: 0;
-  padding-left: 1.15em;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
   color: var(--muted);
   font-size: 13.5px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
-.plaza-digest-bullets li + li {
-  margin-top: 8px;
+.plaza-digest-bullets a {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.plaza-digest-bullets a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.plaza-digest-line {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-weight: 400;
 }
 
 .plaza-digest-related,
