@@ -74,7 +74,7 @@
       "summary": "HN（item 49732259，2026-09-16，28pts）https://runboli.com/ — 作者把 Halo 3 主菜单/大厅/Guardian 地图做成浏览器可逛个人站：WASD+鼠标，无注册；地图里藏照片、故事、任务与小游戏。非商业粉丝项目。公开页 200；预览为 Playwright 实拍主菜单首屏裁 3:2 WebP（头less 下 3D 场景可能略简）。",
       "summaryEn": "HN item 49732259 (2026-09-16, 28pts) at https://runboli.com/ — the author rebuilt the Halo 3 main menu / lobby / Guardian map as an explorable personal site in the browser (WASD + mouse, no signup) with photos, stories, quests, and mini-games hidden in the map. Unofficial non-commercial fan project. Public page 200; preview is a Playwright main-menu capture cropped to 3:2 WebP (3D may simplify headless).",
       "hook": "把 Halo 3 大厅做成可逛的个人站，藏着照片和小游戏。",
-      "hookEn": "Halo 3's lobby as a walkable personal site, with photos and mini-games.",
+      "hookEn": "Walk Halo 3's lobby as a personal site, with photos and mini-games tucked in.",
       "sourceUrl": "https://runboli.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49732259"
@@ -170,8 +170,8 @@
       "titleEn": "System Design Atlas: system-design reading with interactive architecture diagrams",
       "summary": "HN（item 49799241，2026-09-22）https://atlas-sysdes.vercel.app/ — 系统设计阅读站：概念模块、技术页，以及带交互架构图的完整设计文档；GitHub mertkahyaoglu/atlas（MIT）描述与主页一致。公开页与仓库均核到可达；预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "summaryEn": "HN item 49799241 (2026-09-22) at https://atlas-sysdes.vercel.app/ — a system-design reading site with concept modules, technology pages, and worked designs that include interactive architecture diagrams; GitHub mertkahyaoglu/atlas (MIT) matches the homepage description. Public page and repo verified reachable; preview is a Playwright capture cropped to 3:2 WebP.",
-      "hook": "系统设计阅读站，文档里带着可点的架构图。",
-      "hookEn": "System-design reading with architecture diagrams you can click.",
+      "hook": "系统设计阅读站，点开文档就能看架构图。",
+      "hookEn": "Read system-design notes and click through the architecture diagrams.",
       "sourceUrl": "https://atlas-sysdes.vercel.app/",
       "secondaryUrls": [
         "https://github.com/mertkahyaoglu/atlas",
@@ -611,8 +611,8 @@
       "titleEn": "Neobrutalism.dev: neobrutalist React/Tailwind components",
       "summary": "公开组件站：约 64 个粗野主义组件/图表/星形，基于 shadcn/ui 与 Base UI，面向 React + Tailwind v4。Show HN「Just added Base UI support…」（item 49699159，2026-09-14）。演示与文档免登录。",
       "summaryEn": "Public component site: ~64 neobrutalist components/charts/stars on shadcn/ui + Base UI for React and Tailwind v4. Show HN “Just added Base UI support…” (item 49699159, 2026-09-14). Docs/demo need no login.",
-      "hook": "公开组件站：约 64 个粗野主义组件/图表/星形，基于 shadcn/ui 与 Base UI，面向 React + Tailwind v4",
-      "hookEn": "Public component site: ~64 neobrutalist components/charts/stars on shadcn/ui + Base UI",
+      "hook": "粗野主义的 React 组件站，文档和演示不用登录。",
+      "hookEn": "A public site of neobrutalist React components you can browse without signing in.",
       "sourceUrl": "https://www.neobrutalism.dev/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49699159"
@@ -642,8 +642,8 @@
       "titleEn": "Soundmap: a sound camera on your webcam",
       "summary": "浏览器里用摄像头画面叠声音可视化的互动页（标题 Soundmap · Sound camera）。Show HN「See Sounds on Your Webcam」（item 49644603，2026-09-10）。需本机摄像头 / 麦克风权限；预览取欢迎屏，未在本站授权摄像头。",
       "summaryEn": "An in-browser interactive page that overlays sound visualization on the webcam feed (title: Soundmap · Sound camera). Show HN “See Sounds on Your Webcam” (item 49644603, 2026-09-10). Needs local camera / mic permission; the preview is the welcome screen — camera was not granted here.",
-      "hook": "浏览器里用摄像头画面叠声音可视化的互动页（标题 Soundmap · Sound camera）",
-      "hookEn": "An in-browser interactive page that overlays sound visualization on the webcam feed",
+      "hook": "把声音叠在摄像头画面上，在浏览器里看见它。",
+      "hookEn": "See sound drawn over your webcam, right in the browser.",
       "sourceUrl": "https://soundmap.darebuild.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49644603",
@@ -674,8 +674,8 @@
       "titleEn": "Hopla Games: Kinect-style kids games in the browser",
       "summary": "免费儿童摄像头体感小游戏站（气球、定格舞、躲避等）：无下载、无账号，官网自称画面只在本机浏览器处理、不上传。Show HN「The Kinect is dead…」（item 49682477，2026-09-13）。预览取英文落地页，未授权摄像头。",
       "summaryEn": "Free webcam movement games for kids (balloons, freeze dance, dodge, and more): no download, no account; the site claims the camera image stays in-browser and is never uploaded. Show HN “The Kinect is dead…” (item 49682477, 2026-09-13). Preview is the English landing page; camera was not granted here.",
-      "hook": "免费儿童摄像头体感小游戏站（气球，定格舞，躲避等）：无下载，无账号",
-      "hookEn": "Free webcam movement games for kids (balloons, freeze dance, dodge, and more): no",
+      "hook": "免费儿童体感小游戏，摄像头画面留在本机。",
+      "hookEn": "Free webcam movement games for kids, with the camera staying on the device.",
       "sourceUrl": "https://hoplagames.com/en/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49682477",
@@ -806,8 +806,8 @@
       "titleEn": "Session Context: what one web page can learn about you",
       "summary": "公开互动页：把浏览器在未授权前就能测到的指纹 / 头信息 / 存储与设备线索，先写成白话结论，再展开字段表；权限类能力单独列出且默认不索取。Show HN item 49678035（2026-09-12）。",
       "summaryEn": "A public interactive page that turns what a browser can measure before any permission prompt—fingerprints, headers, storage and device hints—into plain-English findings, then field tables; permission-gated APIs are listed separately and not requested by default. Show HN item 49678035 (2026-09-12).",
-      "hook": "公开互动页：把浏览器在未授权前就能测到的指纹 / 头信息 / 存储与设备线索",
-      "hookEn": "A public interactive page that turns what a browser can measure before any permission",
+      "hook": "看清一张网页在要权限之前，能从浏览器知道什么。",
+      "hookEn": "See what one page can learn about you before it asks for permission.",
       "sourceUrl": "https://sessioncontext.org",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49678035"
@@ -837,8 +837,8 @@
       "titleEn": "Programming Museum: a walkable museum of source code",
       "summary": "把可运行的源码当成展品挂进可漫游的房间：旁有策展说明，代码全文可见；收录范围限 MIT / Unlicense 借展，并钉到具体 commit。无登录、无广告。Show HN item 49682008（2026-09-13）。",
       "summaryEn": "Runnable source hung as framed works in rooms you can walk through, each with a curator note and the full file; loans limited to MIT / Unlicense and pinned to a commit. No login, no ads. Show HN item 49682008 (2026-09-13).",
-      "hook": "把可运行的源码当成展品挂进可漫游的房间：旁有策展说明，代码全文可见",
-      "hookEn": "Runnable source hung as framed works in rooms you can walk through, each with a curator",
+      "hook": "走进可漫游的房间，把能跑的源码当展品看。",
+      "hookEn": "Walk through rooms where runnable source code hangs as the exhibits.",
       "sourceUrl": "https://www.programmingmuseum.com",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49682008"
@@ -868,8 +868,8 @@
       "titleEn": "Bodily Oddities: strange things bodies can (sometimes) do",
       "summary": "Demjan Vester 的公开互动百科：收录约 143 条人体小怪癖 / 反射 / 感知现象（耳鸣轰鸣、胃咕噜、jamais vu 等），可按身体部位与类型浏览，带「吓人但正常」「现在就能试」入口与搜索。纯前端，Show HN item 49649789（约 271 分）。",
       "summaryEn": "Demjan Vester’s public interactive encyclopedia of ~143 bodily quirks / reflexes / percepts (ear rumbling, stomach growling, jamais vu, …), browsable by body region and kind, with “scary but normal” / “try right now” entry points and search. Pure front-end; Show HN item 49649789 (~271 points).",
-      "hook": "Demjan Vester 的公开互动百科：收录约 143 条人体小怪癖 / 反射 / 感知现象（耳鸣轰鸣，胃咕噜，jamais vu 等）",
-      "hookEn": "Demjan Vester’s public interactive encyclopedia of ~143 bodily quirks / reflexes /",
+      "hook": "可检索的人体小怪癖百科，吓人的往往也正常。",
+      "hookEn": "A searchable guide to odd bodily quirks, including the scary-but-normal ones.",
       "sourceUrl": "https://vester.si/bodily-oddities/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49649789"
@@ -899,8 +899,8 @@
       "titleEn": "SparkUI: ephemeral interactive pages for AI agents (UI via URL)",
       "summary": "Limeade Labs 开源的 Agent UI 工具：Agent 一次 API / MCP 调用推送结账、计时、投票、审批等模板页，用户点开 URL 互动，结果经 WebSocket 回传，页可自毁。npm `@limeade-labs/sparkui`，宣称 11 模板 / 8 组件 / MIT；演示站公开可开。非 Grok Bot 官方件，接 MCP 以当日客户端为准。",
       "summaryEn": "Limeade Labs’ open-source agent UI toolkit: one API / MCP call pushes checkout, timer, poll, approval and other template pages; the user opens a URL, actions stream back over WebSocket, pages can self-destruct. npm `@limeade-labs/sparkui`; site claims 11 templates / 8 components / MIT; public demo. Not an official Grok Bot piece — MCP wiring depends on the client of the day.",
-      "hook": "Limeade Labs 开源的 Agent UI 工具：Agent 一次 API / MCP 调用推送结账，计时，投票，审批等模板页，用户点开 URL 互动，结果经 WebSocket 回传",
-      "hookEn": "Limeade Labs’ open-source agent UI toolkit: one API / MCP call pushes checkout, timer",
+      "hook": "给 Agent 的一次性互动页，点开链接就能操作。",
+      "hookEn": "Ephemeral pages an agent can hand you: open the link, act, and send the result back.",
       "sourceUrl": "https://sparkui.dev/",
       "secondaryUrls": [
         "https://github.com/Limeade-Labs/sparkui",
@@ -932,8 +932,8 @@
       "titleEn": "DAUB: CSS component library for AI (84 parts / llms.txt / MCP)",
       "summary": "sliday 的 DAUB：两文件零构建 CSS/JS 组件库（约 84 组件、21 主题族），带 classless 模式、llms.txt、agent-skills、可复制提示与远程 MCP（generate_ui / catalog / validate / render）。演示站与 playground 公开可开；MIT。",
       "summaryEn": "sliday’s DAUB: a two-file, zero-build CSS/JS kit (~84 components, 21 theme families) with classless mode, llms.txt, agent-skills, pasteable prompts, and a remote MCP (generate_ui / catalog / validate / render). Demo and playground are public; MIT.",
-      "hook": "sliday 的 DAUB：两文件零构建 CSS/JS 组件库（约 84 组件、21 主题族），带 classless 模式、llms.txt、agent-skills、可复制提示与远程 MCP（generate_ui / catalog / validate / render）",
-      "hookEn": "sliday’s DAUB: a two-file, zero-build CSS/JS kit (~84 components, 21 theme families) with",
+      "hook": "给 AI 用的零构建 CSS 组件库，带目录和校验。",
+      "hookEn": "A zero-build CSS kit for AI, with a catalog and a way to check the UI.",
       "sourceUrl": "https://daub.dev/",
       "secondaryUrls": [
         "https://github.com/sliday/daub",
@@ -966,8 +966,8 @@
       "titleEn": "njX UI: CDN landing-page CSS kit (30+ components / 9 themes)",
       "summary": "njX UI：一条 CDN 链即可拼落地页的 CSS 优先库——按钮 / 卡片 / 表单 / 动效 / 渐变 / Hero 块，九套 data-theme，可选 Alpine 预设。本页即完整预览，npm 包 `njx-ui`。无框架、无构建。",
       "summaryEn": "njX UI: a CSS-first landing kit from one CDN link — buttons / cards / forms / motion / gradients / hero blocks, nine `data-theme` palettes, optional Alpine preset. This page is the full live preview; npm package `njx-ui`. No framework, no build.",
-      "hook": "njX UI：一条 CDN 链即可拼落地页的 CSS 优先库——按钮 / 卡片 / 表单 / 动效 / 渐变 / Hero 块，九套 data-theme，可选 Alpine 预设",
-      "hookEn": "njX UI: a CSS-first landing kit from one CDN link",
+      "hook": "一条链接就能拼落地页的样式库，不用框架。",
+      "hookEn": "A CSS landing kit from one link, with no framework and no build.",
       "sourceUrl": "https://njxui.dev/",
       "secondaryUrls": [
         "https://www.npmjs.com/package/njx-ui"
@@ -998,8 +998,8 @@
       "titleEn": "Relativity Park: special relativity when light walks",
       "summary": "Dmitry Brant 的公开互动演示：把光速压到 5 km/h（约步行速度），在公园视角里用 WASD 加速，观察洛伦兹收缩、光行差、多普勒变色与相对论光束效应，各效应可单独开关。Show HN 当日上过热榜（item 49637385）；纯前端可打开，无需登录。",
       "summaryEn": "Dmitry Brant’s public interactive demo: the speed of light is set to 5 km/h (a brisk walk); accelerate with WASD through a park and watch length contraction, aberration, Doppler colour shift, and relativistic beaming, each toggleable. Hit the Show HN front page the same day (item 49637385); pure front-end, no login.",
-      "hook": "Dmitry Brant 的公开互动演示：把光速压到 5 km/h（约步行速度），在公园视角里用 WASD 加速，观察洛伦兹收缩，光行差",
-      "hookEn": "Dmitry Brant’s public interactive demo: the speed of light is set to 5 km/h (a brisk walk)",
+      "hook": "把光速降到步行，在公园里看见相对论。",
+      "hookEn": "Set the speed of light to a walking pace and watch relativity in a park.",
       "sourceUrl": "https://rivendell.dmitrybrant.com/relativity/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49637385"
@@ -1029,8 +1029,8 @@
       "titleEn": "Roadwright: draw a wheel, see the road it rolls on",
       "summary": "Basel Ashraf 的浏览器几何小品：手绘（或选一个）轮子轮廓并放好轴心，即时算出该轮无滑滚动时对应的路面曲线，可调滚速、双轮轴距、路面倾斜，并导出 PNG / 切割文件 / 录制循环。纯前端互动；Show HN item 49641755，仓库开源。",
       "summaryEn": "Basel Ashraf’s browser geometry toy: draw (or pick) a wheel outline, place its axle, and instantly get the road profile it rolls on without slipping; adjust roll speed, two-wheel wheelbase and road tilt, and export PNG / cut files / a recorded loop. Pure front-end interactive; Show HN item 49641755, source on GitHub.",
-      "hook": "Basel Ashraf 的浏览器几何小品：手绘（或选一个）轮子轮廓并放好轴心",
-      "hookEn": "Basel Ashraf’s browser geometry toy: draw (or pick) a wheel outline, place its axle, and",
+      "hook": "画一个轮子，立刻看到它无滑滚动时的路面。",
+      "hookEn": "Draw a wheel and instantly see the road it rolls along without slipping.",
       "sourceUrl": "https://baselashraf.com/roadwright/",
       "secondaryUrls": [
         "https://github.com/BaselAshraf81/roadwright",
@@ -1062,8 +1062,8 @@
       "titleEn": "shadcss: shadcn-look HTML/CSS with zero JS framework",
       "summary": "russfranky 的 MIT 组件库：把 shadcn/ui 视觉搬到纯 HTML/CSS（`:has()`、Popover API、原生 dialog、设计 token），面向 SSR / HTMX / Astro / AI 生成页。演示站公开可打开，声称数十个组件、gzip 十多 KB、零运行时依赖。",
       "summaryEn": "russfranky’s MIT kit: shadcn/ui visuals in plain HTML/CSS (`:has()`, Popover API, native dialog, design tokens) for SSR / HTMX / Astro / AI-generated pages. Public demo; dozens of components, ~tens of KB gzipped, zero JS runtime.",
-      "hook": "russfranky 的 MIT 组件库：把 shadcn/ui 视觉搬到纯 HTML/CSS（`:has`、Popover API、原生 dialog、设计 token），面向 SSR / HTMX / Astro / AI 生成页",
-      "hookEn": "russfranky’s MIT kit: shadcn/ui visuals in plain HTML/CSS (`:has`, Popover API, native",
+      "hook": "把 shadcn 的样子做成纯 HTML 和 CSS，不靠框架。",
+      "hookEn": "shadcn-style pieces in plain HTML and CSS, with no JavaScript framework.",
       "sourceUrl": "https://shadcss.vercel.app/",
       "secondaryUrls": [
         "https://github.com/russfranky/shadcss-ui",
@@ -1094,8 +1094,8 @@
       "titleEn": "NissyGirl: a 3D handheld console rendered in HTML/CSS",
       "summary": "tanishalfelven 的公开演示：用 HTML/CSS 做可交互 3D 掌机壳体与卡带流程，配自研小游戏引擎（PixiJS 画屏）与触控优先操控。Show HN 可对上；仓库开源可点进。",
       "summaryEn": "tanishalfelven’s public demo: an interactive 3D handheld shell and cartridge flow in HTML/CSS, plus a small game engine (PixiJS for the screen) and touch-first controls. Tied to a Show HN; source is open on GitHub.",
-      "hook": "tanishalfelven 的公开演示：用 HTML/CSS 做可交互 3D 掌机壳体与卡带流程，配自研小游戏引擎（PixiJS 画屏）与触控优先操控",
-      "hookEn": "tanishalfelven’s public demo: an interactive 3D handheld shell and cartridge flow in",
+      "hook": "纯 HTML 和 CSS 做出可交互的立体掌机壳体。",
+      "hookEn": "An interactive 3D handheld shell built in HTML and CSS.",
       "sourceUrl": "https://nissygirl.com/",
       "secondaryUrls": [
         "https://github.com/tanishalfelven/nissy-girl/",
@@ -1126,8 +1126,8 @@
       "titleEn": "Maple: zero-build atomic CSS",
       "summary": "f12io 的 Maple：浏览器内按 DOM 出现的工具类即时生成原子 CSS，无需构建与配置文件；可变优先、OKLCH 调色与混合暗色模式。演示站可公开打开。",
       "summaryEn": "f12io’s Maple: a variable-first atomic CSS engine that generates utilities in the browser as classes appear in the DOM — no build step, no config. OKLCH palettes and hybrid dark mode. Demo is publicly open.",
-      "hook": "f12io 的 Maple：浏览器内按 DOM 出现的工具类即时生成原子 CSS，无需构建与配置文件，可变优先",
-      "hookEn": "f12io’s Maple: a variable-first atomic CSS engine that generates utilities in the browser",
+      "hook": "浏览器里按类名即时生成原子 CSS，不用构建。",
+      "hookEn": "Atomic CSS generated in the browser as classes appear, with no build step.",
       "sourceUrl": "https://maple.f12.io/",
       "secondaryUrls": [
         "https://github.com/f12io/maple",
@@ -1158,8 +1158,8 @@
       "titleEn": "Topological Picture Book: pen-and-ink topology surfaces",
       "summary": "e-infinity 的拓扑图画书：钢笔素描风格的拓扑曲面与空间，可在浏览器里翻页浏览。公开可玩。",
       "summaryEn": "e-infinity’s topological picture book: pen-and-ink topology surfaces and spaces, browsable in the browser. Publicly open.",
-      "hook": "e-infinity 的拓扑图画书：钢笔素描风格的拓扑曲面与空间，可在浏览器里翻页浏览",
-      "hookEn": "e-infinity’s topological picture book: pen-and-ink topology surfaces and spaces",
+      "hook": "用钢笔素描翻看拓扑曲面，在浏览器里就能读。",
+      "hookEn": "Turn the pages of a pen-and-ink book of topology surfaces in the browser.",
       "sourceUrl": "https://e-infinity.space/picture-book/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49618050",
@@ -1190,8 +1190,8 @@
       "titleEn": "Laser Graffiti: draw on walls in the browser",
       "summary": "纯浏览器激光涂鸦：鼠标当激光可当场试；也可接投影仪+摄像头校准后用真激光指针在墙上画。零依赖、MIT。刷子、墨水滴落、3D 挤出、万花筒与井字棋都有。",
       "summaryEn": "Browser laser graffiti: try with your mouse as the laser, or calibrate a projector + webcam and draw on a wall with a real pointer. Zero dependencies, MIT. Brushes, wet ink, 3D extrusion, kaleidoscope, and tic-tac-toe.",
-      "hook": "纯浏览器激光涂鸦：鼠标当激光可当场试",
-      "hookEn": "Browser laser graffiti: try with your mouse as the laser, or calibrate a projector +",
+      "hook": "用鼠标当激光在浏览器里涂鸦，也能接到墙上。",
+      "hookEn": "Draw laser graffiti in the browser with your mouse, or aim a real pointer at a wall.",
       "types": [
         "interactive",
         "demo"
@@ -1221,8 +1221,8 @@
       "titleEn": "Ambient CSS v3: physically based CSS",
       "summary": "kikkupico 的物理光照 CSS：共享 key/fill 光，阴影与表面梯度跟着光向走。演示页可调材质、厚度、边缘与旋钮面板；另有纯 CSS 包与 React 组件。",
       "summaryEn": "kikkupico’s physically based CSS: a shared key/fill light so shadows and surface gradients follow the light vector. The demo retints materials, thickness, edges, and knob panels; ships a pure CSS package plus React components.",
-      "hook": "kikkupico 的物理光照 CSS：共享 key/fill 光，阴影与表面梯度跟着光向走",
-      "hookEn": "kikkupico’s physically based CSS: a shared key/fill light so shadows and surface",
+      "hook": "共享一盏光的 CSS，阴影和表面跟着光向走。",
+      "hookEn": "Physically based CSS where shadows and surfaces follow one shared light.",
       "types": [
         "component",
         "interactive",
@@ -1310,8 +1310,8 @@
       "titleEn": "MotionSites",
       "summary": "现成落地页提示库，给 Lovable / Bolt / Cursor / Claude 复制即用。分类有落地页、Hero、页脚、SaaS，偏电影感和 3D 动效。",
       "summaryEn": "Ready-to-use landing-page prompts for Lovable, Bolt, Cursor, and Claude. Browse landing pages, heroes, footers, SaaS — cinematic and 3D motion.",
-      "hook": "现成落地页提示库，给 Lovable / Bolt / Cursor / Claude 复制即用",
-      "hookEn": "Ready-to-use landing-page prompts for Lovable, Bolt, Cursor, and Claude",
+      "hook": "现成的落地页文案，复制就能交给编程助手。",
+      "hookEn": "Ready-made landing-page lines you can paste into a coding agent.",
       "types": [
         "tool",
         "landing"
@@ -1342,8 +1342,8 @@
       "titleEn": "MeiGen",
       "summary": "免费 GPT Image 2 / Nano Banana / Seedance 2.5 提示画廊。按广告、品牌、视频、插画、海报、人像分类，复制即用。另有 MCP、Skills、Figma 插件。",
       "summaryEn": "Free prompt gallery for GPT Image 2, Nano Banana, and Seedance 2.5. Browse ads, branding, video, illustration, posters, portraits — copy and generate. Also MCP, Skills, and a Figma plugin.",
-      "hook": "免费 GPT Image 2 / Nano Banana / Seedance 2.5 提示画廊",
-      "hookEn": "Free prompt gallery for GPT Image 2, Nano Banana, and Seedance 2.5",
+      "hook": "免费的图像文案画廊，按广告、海报和人像分类。",
+      "hookEn": "A free gallery of image lines, sorted into ads, posters, and portraits.",
       "types": [
         "tool"
       ],
@@ -1373,7 +1373,7 @@
       "summary": "2000+ 份从真实产品站抽出来的 DESIGN.md：颜色、字体、间距、组件，给 Cursor / Claude Code / Codex 直接读。",
       "summaryEn": "2,000+ DESIGN.md files pulled from real product sites — colors, type, spacing, components — readable by Cursor, Claude Code, and Codex.",
       "hook": "从真实产品站抽出的设计说明，编程助手可以直接读。",
-      "hookEn": "DESIGN.md files pulled from real product sites, ready for coding agents.",
+      "hookEn": "Design notes pulled from real product sites, ready for a coding agent to read.",
       "types": [
         "tool",
         "docs"
@@ -1403,8 +1403,8 @@
       "titleEn": "Taste Skill",
       "summary": "给编程助手装上设计品味的 Anti-Slop 技能包。13 个 Skill：代码实现（含 soft / minimalist / brutalist）和图像参考稿。先读简报，再映射设计系统，出厂前约 60 项检查。",
       "summaryEn": "Anti-slop agent skills that give coding agents design taste. 13 skills: code output (including soft / minimalist / brutalist) and image-gen references. Read the brief first, map a real design system, then a ~60-item ship check.",
-      "hook": "给编程助手装上设计品味的 Anti-Slop 技能包",
-      "hookEn": "Anti-slop agent skills that give coding agents design taste",
+      "hook": "给编程助手装上设计品味，先读简报再动手。",
+      "hookEn": "Skills that give a coding agent design taste, starting from the brief.",
       "types": [
         "tool",
         "docs"
@@ -1434,8 +1434,8 @@
       "titleEn": "OpenDesign",
       "summary": "开源 Claude Design 替代：本机优先的桌面应用，用已有的编程助手生成落地页、仪表盘、幻灯片、图片和视频，导出 HTML / PDF / PPTX / MP4。自带 BYOK，接 20 多种 CLI。",
       "summaryEn": "Open-source Claude Design alternative: a local-first desktop app that turns your coding agent into a design engine — prototypes, landing pages, dashboards, decks, images and video, exported as HTML / PDF / PPTX / MP4. BYOK across 20+ CLIs.",
-      "hook": "开源 Claude Design 替代：本机优先的桌面应用，用已有的编程助手生成落地页，仪表盘，幻灯片",
-      "hookEn": "Open-source Claude Design alternative: a local-first desktop app that turns your coding",
+      "hook": "本机优先的设计桌面应用，用你已有的编程助手出稿。",
+      "hookEn": "A local-first desktop app that turns your coding agent into a design studio.",
       "types": [
         "tool"
       ],
@@ -1464,8 +1464,8 @@
       "titleEn": "Voronoi Go: Go without the grid",
       "summary": "把围棋落在 Voronoi 剖分上的网页对弈：可人机、可旁观、可通信对局。浏览器即开即玩的交互棋盘，规则与传统围棋同源但棋盘几何不同。",
       "summaryEn": "Play Go on a Voronoi tessellation in the browser — human vs bot, watch mode, and correspondence games. Same lineage as classic Go, different board geometry.",
-      "hook": "把围棋落在 Voronoi 剖分上的网页对弈：可人机、可旁观、可通信对局",
-      "hookEn": "Play Go on a Voronoi tessellation in the browser",
+      "hook": "在没有方格的棋盘上下围棋，浏览器里就能开局。",
+      "hookEn": "Play Go on a board with no grid, right in the browser.",
       "types": [
         "interactive"
       ],
@@ -1494,8 +1494,8 @@
       "titleEn": "GlassBox: browser fingerprint bench",
       "summary": "单页静态 HTML：在浏览器里跑约 31 项探针（canvas、WebGL/WebGPU、音频、字体、WASM、WebRTC IP 等），展示原始值与可识别度估计。默认本地运行，仅 IP 地理可选外联；MIT 源码。",
       "summaryEn": "One static HTML page: ~31 in-browser probes (canvas, WebGL/WebGPU, audio, fonts, WASM, WebRTC IP, …) with raw values and an identifiability estimate. Mostly local; IP geo is the optional phone-home. MIT source.",
-      "hook": "单页静态 HTML：在浏览器里跑约 31 项探针（canvas、WebGL/WebGPU、音频、字体、WASM、WebRTC IP 等），展示原始值与可识别度估计",
-      "hookEn": "One static HTML page: ~31 in-browser probes (canvas, WebGL/WebGPU, audio, fonts, WASM",
+      "hook": "在浏览器里跑指纹探针，看自己有多好认。",
+      "hookEn": "Run fingerprint probes in the browser and see how identifiable you are.",
       "types": [
         "interactive",
         "tool"
@@ -1528,8 +1528,8 @@
       "titleEn": "DesignLang",
       "summary": "开源 CLI：对任意网址跑一遍 headless Chromium，抽出完整设计系统。DTCG token、Tailwind、CSS 变量、Figma、SwiftUI / Compose / Flutter，以及给 Cursor 的 MCP。",
       "summaryEn": "Open-source CLI: point headless Chromium at any URL and pull the full design system — DTCG tokens, Tailwind, CSS variables, Figma, SwiftUI / Compose / Flutter, plus an MCP for Cursor.",
-      "hook": "开源 CLI：对任意网址跑一遍 headless Chromium，抽出完整设计系统",
-      "hookEn": "Open-source CLI: point headless Chromium at any URL and pull the full design system",
+      "hook": "对任意网址抽出设计系统，交给编程助手用。",
+      "hookEn": "Point it at any URL and pull a design system your coding agent can use.",
       "types": [
         "tool",
         "docs"
@@ -1560,7 +1560,7 @@
       "summary": "Adrian Punk 的 AI 海报 / HTML 构图手册上册：16 种控制焦点、平衡、几何骨架和视线动势的构图，每条带图像模型与 HTML/CSS 提示词。",
       "summaryEn": "Adrian Punk’s AI poster / HTML composition handbook, vol. 1: 16 layouts for focus, balance, geometric skeleton, and eye path — each with image-model and HTML/CSS prompts.",
       "hook": "海报构图上册：用构图管焦点、平衡和视线怎么走。",
-      "hookEn": "Poster layouts for focus, balance, and where the eye travels.",
+      "hookEn": "Poster layouts that steer focus, balance, and where the eye travels.",
       "types": [
         "docs",
         "tool"
@@ -1640,8 +1640,8 @@
       "previewImage": "/previews/flexbox-froggy.webp",
       "titleEn": "Flexbox Froggy",
       "summaryEn": "Learn CSS Flexbox as a game: write properties to put frogs on lily pads. By Thomas Park / Codepip, open source, with Simplified Chinese.",
-      "hook": "用闯关游戏学习 CSS Flexbox：写属性把青蛙放到荷叶上",
-      "hookEn": "Learn CSS Flexbox as a game: write properties to put frogs on lily pads",
+      "hook": "写 Flexbox 把青蛙放到荷叶上，用闯关来学。",
+      "hookEn": "Learn Flexbox as a game: write the properties that land frogs on lily pads.",
       "qualityNoteEn": "A classic interactive teaching page. Fits the “game / interactive” HTML learning UI collection."
     },
     {
@@ -1695,8 +1695,8 @@
       "previewImage": "/previews/animate-css.webp",
       "titleEn": "Animate.css",
       "summaryEn": "Drop-in cross-browser CSS animation library site: preview bounce, fade, flip, and more, plus install and accessibility notes.",
-      "hook": "即加即用的跨浏览器 CSS 动画库官网：可预览 bounce、fade、flip 等类，并查看安装与无障碍说明",
-      "hookEn": "Drop-in cross-browser CSS animation library site: preview bounce, fade, flip, and more",
+      "hook": "打开就能预览的 CSS 动画库，加上类名即用。",
+      "hookEn": "A CSS animation library you can preview, then drop in with a class name.",
       "qualityNoteEn": "A motion reference site that shows how to demo animations with plain CSS classes."
     },
     {
@@ -1724,8 +1724,8 @@
       "previewImage": "/previews/a-single-div.webp",
       "titleEn": "A Single Div",
       "summaryEn": "Lynn Fisher’s CSS drawing project: each picture uses one HTML div. Both a portfolio and a pure-CSS graphics experiment.",
-      "hook": "Lynn Fisher 的 CSS 绘画项目：每幅画只用一个 HTML div",
-      "hookEn": "Lynn Fisher’s CSS drawing project: each picture uses one HTML div",
+      "hook": "每幅画只用一个 div，看纯 CSS 能画到哪。",
+      "hookEn": "Each picture uses a single div, showing how far pure CSS can draw.",
       "qualityNoteEn": "A portfolio that shows how far HTML+CSS can go. Source is public."
     },
     {
@@ -1801,8 +1801,8 @@
       "previewImage": "/previews/mdn-css-examples.webp",
       "titleEn": "MDN CSS Examples",
       "summaryEn": "Runnable example index that accompanies MDN’s CSS docs: standalone HTML demos for object-fit, overscroll, counter styles, and small tools.",
-      "hook": "MDN CSS 文档配套的可运行示例仓库页：含 object-fit、overscroll、计数器样式与小工具等独立 HTML 演示",
-      "hookEn": "Runnable example index that accompanies MDN’s CSS docs: standalone HTML demos for",
+      "hook": "配着文档的可运行 CSS 示例，打开就能看。",
+      "hookEn": "Runnable CSS examples that accompany the docs, each on its own page.",
       "qualityNoteEn": "An official docs example index with stable links. A good HTML-demo collection entry."
     },
     {
@@ -1827,8 +1827,8 @@
       "previewImage": "/previews/html5up.webp",
       "titleEn": "HTML5 UP",
       "summaryEn": "Free responsive HTML5/CSS3 template library: downloadable landings, portfolios, and more, CCA licensed.",
-      "hook": "免费响应式 HTML5/CSS3 站点模板库：落地页、作品集等可下载模板，CCA 许可",
-      "hookEn": "Free responsive HTML5/CSS3 template library: downloadable landings, portfolios, and more",
+      "hook": "免费的响应式 HTML 模板，下载就能改。",
+      "hookEn": "Free responsive HTML templates you can download and adapt.",
       "qualityNoteEn": "A long-maintained open template directory. Fits landing and portfolio HTML."
     },
     {
@@ -1954,8 +1954,8 @@
       "previewImage": "/previews/css-zen-garden.webp",
       "titleEn": "CSS Zen Garden",
       "summaryEn": "The same HTML, different authors’ external stylesheets — a show of how far pure CSS can restyle a page. Dave Shea’s classic CSS design exhibit.",
-      "hook": "同一份 HTML，切换不同作者的外部样式表，展示纯 CSS 能把页面做成完全不同的视觉设计",
-      "hookEn": "The same HTML, different authors’ external stylesheets",
+      "hook": "同一份 HTML，换一张样式表就变成另一座花园。",
+      "hookEn": "The same HTML, restyled by other stylesheets into a different page.",
       "qualityNoteEn": "A textbook public page on separating structure from presentation. Fits “portfolio / docs.”"
     },
     {
@@ -1986,8 +1986,8 @@
       "previewImage": "/previews/scroll-driven-animations.webp",
       "titleEn": "Scroll-driven Animations",
       "summaryEn": "Bramus’s Chrome-developer demo site: reading progress, cover-flow, stacked cards, horizontal scroll, all scroll-driven. The demo itself is handwritten HTML/CSS/JS with no build step.",
-      "hook": "Chrome 开发者布拉姆斯做的演示站：阅读进度，封面流转，堆叠卡片，横向卷轴等",
-      "hookEn": "Bramus’s Chrome-developer demo site: reading progress, cover-flow, stacked cards",
+      "hook": "用滚动驱动的演示：进度、封面和堆叠卡片。",
+      "hookEn": "Scroll-driven demos for reading progress, cover flow, and stacked cards.",
       "qualityNoteEn": "Official-quality motion lab. Types cover motion, interactive, and docs."
     },
     {
@@ -2109,8 +2109,8 @@
       "titleEn": "Don't Wordle",
       "summary": "免费每日单词游戏：规则像 Wordle，但目标是避开隐藏词。绿格必须留在原位、黄格必须换位、灰格禁用；有效词池会越猜越少，猜中即败。可撤销。",
       "summaryEn": "A free daily word game: Wordle rules, but you lose if you guess the hidden word. Greens stay put, yellows must move, grays are banned; the valid-word pool shrinks until you get cornered. Undos allowed.",
-      "hook": "免费每日单词游戏：规则像 Wordle，但目标是避开隐藏词",
-      "hookEn": "A free daily word game: Wordle rules, but you lose if you guess the hidden word",
+      "hook": "每天一词，规则像 Wordle，但猜中隐藏词就输。",
+      "hookEn": "A daily word game with Wordle's rules, except guessing the hidden word loses.",
       "types": [
         "interactive"
       ],
@@ -2139,8 +2139,8 @@
       "titleEn": "RACK-02: a techno machine in one HTML file",
       "summary": "整台模块化 techno 机写在一个 HTML 文件里：鼓组、贝斯、效果、场景与 CV 接线，浏览器即开即玩，无需安装。GitHub Pages 上的可玩页。",
       "summaryEn": "A modular techno machine in a single HTML file: drums, bass, FX, scenes, and a CV patchbay. Open it in the browser — no install. Live on GitHub Pages.",
-      "hook": "整台模块化 techno 机写在一个 HTML 文件里：鼓组、贝斯、效果、场景与 CV 接线，浏览器即开即玩，无需安装",
-      "hookEn": "A modular techno machine in a single HTML file: drums, bass, FX, scenes, and a CV patchbay",
+      "hook": "一整台 techno 机写在一个 HTML 文件里，打开即玩。",
+      "hookEn": "A modular techno machine in one HTML file that plays in the browser.",
       "types": [
         "interactive",
         "tool"
@@ -2201,8 +2201,8 @@
       "titleEn": "PolyCSS: a CSS 3D engine without WebGL",
       "summary": "Layoutit 的 DOM 原生 CSS 3D：OBJ/glTF/VOX 的每个多边形都是可点选的 DOM 节点，用 matrix3d 摆位置。有公开画廊、builder，以及 vanilla / React / Vue 入口。",
       "summaryEn": "Layoutit’s DOM-native CSS 3D: every polygon from OBJ/glTF/VOX is a clickable DOM node placed with matrix3d. Public gallery and builder, plus vanilla / React / Vue entry points.",
-      "hook": "Layoutit 的 DOM 原生 CSS 3D：OBJ/glTF/VOX 的每个多边形都是可点选的 DOM 节点，用 matrix3d 摆位置",
-      "hookEn": "Layoutit’s DOM-native CSS 3D: every polygon from OBJ/glTF/VOX is a clickable DOM node",
+      "hook": "不用 WebGL 的 CSS 立体引擎，每个面都能点。",
+      "hookEn": "A CSS 3D engine without WebGL, where every polygon is a clickable element.",
       "types": [
         "component",
         "interactive",
@@ -2234,8 +2234,8 @@
       "titleEn": "Sirenfall: a browser civil-defense siren scene",
       "summary": "纯浏览器民防警报场景：雨夜庇护所窗外城市，拉闸后警报塔用 Web Audio 实时合成双音（非录音）。源码单 HTML、MIT；另有 how-it-works 说明页。",
       "summaryEn": "A free browser scene: rainy city outside a shelter window; pull the breaker and a civil-defense siren spins up — synthesized live in Web Audio, not a recording. Single-file MIT source; how-it-works page included.",
-      "hook": "纯浏览器民防警报场景：雨夜庇护所窗外城市，拉闸后警报塔用 Web Audio 实时合成双音（非录音）",
-      "hookEn": "A free browser scene: rainy city outside a shelter window",
+      "hook": "雨夜里拉下闸，听浏览器实时合成的民防警报。",
+      "hookEn": "Pull the breaker on a rainy night and hear a siren synthesized in the browser.",
       "types": [
         "interactive",
         "demo"
@@ -2322,8 +2322,8 @@
       "titleEn": "HTML Presentation Editor: self-editing single-file slides",
       "summary": "MIT 单文件（~42KB）演示稿编辑器：浏览器内 contenteditable，Cmd+S 写回同文件；文档/幻灯双模式、主题与强调色、图片嵌 base64，无构建无服务器。",
       "summaryEn": "MIT single-file (~42KB) presentation editor: in-browser contenteditable, Cmd+S writes the same file; document/slides modes, themes + accents, base64 images — no build, no server.",
-      "hook": "MIT 单文件（~42KB）演示稿编辑器：浏览器内 contenteditable，Cmd+S 写回同文件，文档/幻灯双模式，主题与强调色，图片嵌 base64",
-      "hookEn": "MIT single-file (~42KB) presentation editor: in-browser contenteditable, Cmd+S writes the",
+      "hook": "单文件演示稿编辑器，改完就写回原来的文件。",
+      "hookEn": "A single-file slide editor: change it in the browser and save the same file.",
       "types": [
         "tool",
         "demo",
@@ -2354,8 +2354,8 @@
       "titleEn": "Ptree: interactive tree of life",
       "summary": "浏览器里的系统发育生命树：按性状滑块过滤类群，比较祖先与照片/分布。Show HN 公开演示。",
       "summaryEn": "An interactive phylogeny tree of life in the browser: trait sliders filter taxa; compare ancestors with photos/ranges. Public Show HN demo.",
-      "hook": "浏览器里的系统发育生命树：按性状滑块过滤类群，比较祖先与照片/分布",
-      "hookEn": "An interactive phylogeny tree of life in the browser: trait sliders filter taxa",
+      "hook": "在浏览器里翻生命树，用性状滑块筛出类群。",
+      "hookEn": "Browse a tree of life in the browser and filter groups with trait sliders.",
       "types": [
         "demo",
         "interactive",
@@ -2385,8 +2385,8 @@
       "titleEn": "SceneAI: UI prompt library (source of AETHER’s Claude hero demo)",
       "summary": "Orixadesign 出品的 UI 提示库：140+ 落地页 / Hero 区块提示、70+ 动态背景与渐变，每周上新，可复制进 Claude / GPT / Gemini 等生成。首页免费浏览样本；「Copy Prompt」与下载需 All Access（$49/月或 $199 终身，标价 $498 六折）。AETHER 的 3Portals Claude 网页设计演示片回复串即链到此站。",
       "summaryEn": "A UI prompt library by Orixadesign: 140+ landing-page / hero prompts, 70+ animated backgrounds and gradients, weekly drops, meant to be pasted into Claude / GPT / Gemini and friends. Samples browse free on the homepage; Copy Prompt and downloads need All Access ($49/mo or $199 lifetime, listed $498 at 60% off). AETHER’s 3Portals Claude web-design clip links here in its reply thread.",
-      "hook": "Orixadesign 出品的 UI 提示库：140+ 落地页 / Hero 区块提示、70+ 动态背景与渐变，每周上新，可复制进 Claude / GPT / Gemini 等生成",
-      "hookEn": "A UI prompt library by Orixadesign: 140+ landing-page / hero prompts, 70+ animated",
+      "hook": "落地页和动态背景的文案库，首页可以免费看样本。",
+      "hookEn": "A library of landing and background lines, with free samples on the homepage.",
       "types": [
         "tool",
         "landing"
