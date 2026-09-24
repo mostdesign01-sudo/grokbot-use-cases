@@ -6,18 +6,23 @@ import Loc from "./Loc.astro";
 import PlazaCard from "./PlazaCard.astro";
 import { agentUiItems } from "../lib/agent-ui";
 import { cases, getCaseBySlug } from "../lib/cases";
+import { caseCover } from "../lib/covers";
 import {
   dateHref,
   getDigestArchive,
   getHomeDigest,
+  latestPlazaItems,
   packPlazaColumns,
   resolveDigestDate,
+  type DigestLib,
 } from "../lib/digest";
 import { shanghaiDateKey } from "../lib/format";
 import { htmlItems } from "../lib/html";
 import { fill, ui } from "../lib/i18n";
+import { difficultyLabel } from "../lib/labels";
 import { assetUrl, withBase } from "../lib/paths";
 import { siteName } from "../lib/site";
+import { starterCases } from "../lib/starters";
 
 interface Props {
   dateKey?: string;
@@ -62,6 +67,7 @@ const libraries = [
   {
     href: withBase("cases/"),
     name: ui.lib.grok,
+    intent: ui.home.libGrok,
     count: cases.length,
     week: updatedThisWeek(cases, day.dateKey),
     image: assetUrl("/brand/lib-grok.webp"),
@@ -70,6 +76,7 @@ const libraries = [
   {
     href: withBase("html/"),
     name: ui.lib.html,
+    intent: ui.home.libHtml,
     count: htmlItems.length,
     week: updatedThisWeek(htmlItems, day.dateKey),
     image: assetUrl("/brand/lib-html.webp"),
@@ -78,6 +85,7 @@ const libraries = [
   {
     href: withBase("agent-ui/"),
     name: ui.lib.agentUi,
+    intent: ui.home.libAgent,
     count: agentUiItems.length,
     week: updatedThisWeek(agentUiItems, day.dateKey),
     image: assetUrl("/brand/lib-agent-ui.webp"),
@@ -88,6 +96,22 @@ const libraries = [
   countLabel: fill(ui.home.countItems, { n: lib.count }),
   weekLabel: fill(ui.home.weekBadge, { n: lib.week }),
 }));
+
+const starters = starterCases().map((item) => {
+  const shot = assetUrl(item.previewImage);
+  return {
+    item,
+    href: withBase(`cases/${item.slug}/`),
+    thumb: shot ?? assetUrl(caseCover(item)),
+    isCover: !shot,
+    hook: item.hook ?? "",
+    hookEn: item.hookEn ?? item.hook ?? "",
+  };
+});
+
+const fallbackLibs: DigestLib[] = ["grok", "html", "agent-ui"];
+const fallbackItems = fallbackLibs.flatMap((lib) => latestPlazaItems(lib, 6));
+const starterBadge = { zh: difficultyLabel("starter"), en: difficultyLabel("starter", "en") };
 ---
 
 <div class="home-shell" data-home-shell>
@@ -123,8 +147,6 @@ const libraries = [
           </svg>
         </button>
       </div>
-
-      <GitHubStar variant="rail" />
     </div>
 
     <nav class="home-dates" aria-label={ui.home.dates.zh} data-aria-zh={ui.home.dates.zh} data-aria-en={ui.home.dates.en}>
@@ -160,6 +182,7 @@ const libraries = [
         ))
       }
     </nav>
+    <GitHubStar variant="rail" />
     <details class="home-rail-more">
       <summary>
         <Loc zh={ui.nav.more.zh} en={ui.nav.more.en} />
@@ -193,6 +216,9 @@ const libraries = [
                   <strong>
                     <Loc zh={lib.name.zh} en={lib.name.en} />
                   </strong>
+                  <span class="plaza-lib-intent">
+                    <Loc zh={lib.intent.zh} en={lib.intent.en} />
+                  </span>
                   <span class="plaza-lib-meta">
                     <span>
                       <span class="loc-zh">{lib.countLabel.zh}</span>
@@ -221,6 +247,36 @@ const libraries = [
           </span>
         </p>
       </section>
+      <section class="plaza-start" aria-label={ui.home.startTitle.zh} data-aria-zh={ui.home.startTitle.zh} data-aria-en={ui.home.startTitle.en}>
+        <div class="plaza-start-head">
+          <h2><Loc zh={ui.home.startTitle.zh} en={ui.home.startTitle.en} /></h2>
+          <a href={withBase("cases/?difficulty=starter")}>
+            <Loc zh={ui.home.startMore.zh} en={ui.home.startMore.en} />
+          </a>
+        </div>
+        <div class="plaza-start-row">
+          {
+            starters.map((card) => (
+              <a class:list={["start-card", { "is-cover": card.isCover }]} href={card.href}>
+                <img src={card.thumb} alt="" width="320" height="160" loading="lazy" decoding="async" />
+                <span class="start-badge">
+                  <Loc zh={starterBadge.zh} en={starterBadge.en} />
+                </span>
+                <strong>
+                  <Loc zh={card.item.title} en={card.item.titleEn} />
+                </strong>
+                {
+                  (card.hook || card.hookEn) && (
+                    <span class="start-hook">
+                      <Loc zh={card.hook} en={card.hookEn || card.hook} />
+                    </span>
+                  )
+                }
+              </a>
+            ))
+          }
+        </div>
+      </section>
       <div class="home-plaza-cols" data-plaza-grid>
         <div class="home-col" data-plaza-col>
           {col1.map((item) => <PlazaCard item={item} />)}
@@ -231,6 +287,14 @@ const libraries = [
         <div class="home-col" data-plaza-col>
           <DigestCard day={day} />
           {col3.map((item) => <PlazaCard item={item} />)}
+        </div>
+      </div>
+      <div class="plaza-fallback" data-plaza-fallback hidden>
+        <p class="plaza-fallback-note">
+          <Loc zh={ui.home.fallback.zh} en={ui.home.fallback.en} />
+        </p>
+        <div class="plaza-fallback-grid">
+          {fallbackItems.map((item) => <PlazaCard item={item} />)}
         </div>
       </div>
       <p class="home-empty" hidden data-plaza-empty>
@@ -244,11 +308,15 @@ const libraries = [
       <button type="button" data-plaza-lib="all" aria-pressed="true">
         <Loc zh={ui.lib.all.zh} en={ui.lib.all.en} />
       </button>
-      <button type="button" data-plaza-lib="grok" aria-pressed="false">Grok Bot</button>
-      <button type="button" data-plaza-lib="html" aria-pressed="false">
-        <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} />
+      <button type="button" data-plaza-lib="grok" aria-pressed="false">
+        <Loc zh={ui.home.filterGrok.zh} en={ui.home.filterGrok.en} />
       </button>
-      <button type="button" data-plaza-lib="agent-ui" aria-pressed="false">Agent UI</button>
+      <button type="button" data-plaza-lib="html" aria-pressed="false">
+        <Loc zh={ui.home.filterHtml.zh} en={ui.home.filterHtml.en} />
+      </button>
+      <button type="button" data-plaza-lib="agent-ui" aria-pressed="false">
+        <Loc zh={ui.home.filterAgent.zh} en={ui.home.filterAgent.en} />
+      </button>
     </div>
   </main>
 </div>
@@ -272,9 +340,11 @@ const libraries = [
 
   const shell = document.querySelector("[data-home-shell]");
   const buttons = shell?.querySelectorAll<HTMLButtonElement>("[data-plaza-lib]");
-  const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-card]");
+  const cards = shell?.querySelectorAll<HTMLElement>("[data-plaza-grid] [data-plaza-card]");
+  const fallback = shell?.querySelector<HTMLElement>("[data-plaza-fallback]");
+  const fallbackCards = shell?.querySelectorAll<HTMLElement>("[data-plaza-fallback] [data-plaza-card]");
   const empty = shell?.querySelector<HTMLElement>("[data-plaza-empty]");
-  if (shell && buttons && cards) {
+  if (shell && buttons && cards && fallback && fallbackCards) {
     const apply = (lib: string) => {
       let visible = 0;
       cards.forEach((card) => {
@@ -282,10 +352,15 @@ const libraries = [
         card.hidden = !show;
         if (show) visible += 1;
       });
+      const useFallback = visible === 0 && lib !== "all";
+      fallbackCards.forEach((card) => {
+        card.hidden = !(useFallback && card.dataset.lib === lib);
+      });
+      fallback.hidden = !useFallback;
       buttons.forEach((button) => {
         button.setAttribute("aria-pressed", button.dataset.plazaLib === lib ? "true" : "false");
       });
-      if (empty) empty.hidden = visible > 0;
+      if (empty) empty.hidden = visible > 0 || useFallback;
     };
 
     buttons.forEach((button) => {

@@ -267,6 +267,14 @@ function composeBullets(items: CatalogItem[]): DigestBullet[] {
   }));
 }
 
+export function latestPlazaItems(lib: DigestLib, limit = 6, items = catalog()): PlazaItem[] {
+  return items
+    .filter((item) => item.lib === lib)
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit)
+    .map(toPlazaItem);
+}
+
 function toPlazaItem(item: CatalogItem): PlazaItem {
   const names = libCopy(item.lib);
   const host = sourceHost(item.sourceUrl);

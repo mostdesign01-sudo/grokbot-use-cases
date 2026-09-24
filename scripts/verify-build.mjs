@@ -385,8 +385,13 @@ if (
   }
 }
 
-if (!home.includes("每天人工核验的 AI 用法与界面灵感") || !home.includes("plaza-hero")) {
-  console.error("Homepage is missing the hero (每天人工核验… / plaza-hero).");
+if (!home.includes("每天更新的 AI 教程与拿来就用的工具") || !home.includes("plaza-hero")) {
+  console.error("Homepage is missing the hero (每天更新的 AI 教程… / plaza-hero).");
+  process.exit(1);
+}
+
+if (!home.includes("新手从这里开始") || !home.includes("cases/?difficulty=starter")) {
+  console.error("Homepage is missing the starter row (新手从这里开始 → /cases/?difficulty=starter).");
   process.exit(1);
 }
 
