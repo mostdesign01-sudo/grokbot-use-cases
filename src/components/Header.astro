@@ -126,6 +126,7 @@ const brandLine =
       </nav>
     </div>
     <nav class="nav" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      <div class="nav-links">
       {
         links.map((link) => (
           <a href={link.href} aria-current={linkCurrent(link) ? "page" : undefined}>
@@ -150,6 +151,8 @@ const brandLine =
           </details>
         )
       }
+      </div>
+      <div class="nav-tools">
       <GitHubStar variant="pill" />
       <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
         <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
@@ -166,6 +169,7 @@ const brandLine =
       >
         <span aria-hidden="true">◐</span>
       </button>
+      </div>
     </nav>
   </div>
 </header>
