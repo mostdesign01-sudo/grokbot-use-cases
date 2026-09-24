@@ -7,6 +7,8 @@
       "titleEn": "Errand: open-source Grok Bot / Muse-style desktop (Runta)",
       "summary": "Apache-2.0 桌面壳 Errand（runerrand.dev）：每个队友一台 Runta 云电脑（shell / 浏览器 / 文件）。用来对照 Grok Bot「每席一电脑」，不是官方替代品。",
       "summaryEn": "Apache-2.0 desktop shell Errand (runerrand.dev): each teammate gets a Runta cloud computer (shell / browser / files). Listed beside Grok Bot’s per-seat computer — not an official replacement.",
+      "hook": "开源桌面壳：每人一台云电脑，用来对照 Grok Bot。",
+      "hookEn": "Open-source desk where each teammate gets a cloud computer beside Grok Bot.",
       "categories": [
         "community",
         "engineering",
@@ -155,6 +157,8 @@
       "titleEn": "HN case: multi-Bot fabric sourcing to Vietnam suppliers",
       "summary": "来自 HN「Grok Bot」帖（item 49261514）下 jjcm 的可复现流程：按领域拆 Bot（各自 Routine/上下文/电脑），异步跑；面料 Bot 先联约 5 家越南供应商，无回再扩 5 家，再人工推到约 40 家（多走 WhatsApp）；与原型 Bot 协作生成带 logo 的随机花纹并导出 .ai 发给供应商。强调域隔离比堆一个全能 Bot 更稳，但也提醒常驻 Agent 会显著烧 token。",
       "summaryEn": "From the HN “Grok Bot” thread (item 49261514), jjcm’s reproducible flow: split Bots by domain (each with its own routines, context, and computer) for async work; a fabric Bot first reaches ~5 Vietnam suppliers, expands by 5 when silent, then is pushed to ~40 (often via WhatsApp); it collaborates with a prototyper Bot to generate a logo-based random pattern and send a .ai file. Domain isolation beats one mega-Bot, but always-on Agents burn tokens hard.",
+      "hook": "按领域拆开 Bot，向越南面料厂询价并出样。",
+      "hookEn": "Split Bots by domain to ask Vietnam fabric mills for samples.",
       "categories": [
         "ops",
         "multi-agent",
@@ -193,6 +197,8 @@
       "titleEn": "Open Bot: open-source Grok Bot-style coworkers on any AG-UI harness",
       "summary": "Show HN（item 49365575）CopilotKit/OpenBot：MIT 开源「AI coworkers」——每席有独立电脑（浏览器/文件/工具），动作先决策后记录；可接任意 AG-UI agent harness，不绑死单一厂商。仓库 README 与站点可核验；维护者在 HN 注明仍为 alpha。对想对照 Grok Bot「专席电脑 + 可审动作」的人，是可自建的相邻方案。",
       "summaryEn": "Show HN (item 49365575) CopilotKit/OpenBot: MIT open-source AI coworkers — each seat gets its own computer (browser/files/tools), with actions decided before and recorded after; bring any AG-UI agent harness, no single-vendor lock-in. README and site verified; maintainers note alpha on HN. A self-hostable adjacent option for people comparing Grok Bot’s per-seat computer + reviewable actions.",
+      "hook": "开源同事席：每席一台电脑，可接任意 Agent。",
+      "hookEn": "Open-source coworkers, each with a computer and any agent harness.",
       "categories": [
         "community",
         "engineering",
@@ -231,6 +237,8 @@
       "titleEn": "Official guide: Designing Grok Bot with Grok Bot",
       "summary": "John Bai 2026-08-24 官方 Guides：设计师用常驻 Bot 小队探索创意——Experiments 做 Notch/桌角/跟光标等 ambient 入口原型；Motion God 在真实产品动画资产上调弹簧与时序；Figma Bro 经 Figma MCP 批量填入门 Bot 肖像与工具 logo。强调更快把想法做成可试用物，判断仍留在人手。",
       "summaryEn": "Official Aug 24, 2026 Guides piece by John Bai: a designer’s always-on Bot squad — Experiments for ambient Bot-access prototypes (notch, desktop peek, cursor companion); Motion God tuning real production animation assets by feel; Figma Bro filling onboarding Bot cards and tool logos via Figma MCP. Faster exploration; judgment stays human.",
+      "hook": "官方指南：用常驻 Bot 小队把想法做成可试原型。",
+      "hookEn": "Official guide: an always-on Bot squad turns ideas into prototypes.",
       "categories": [
         "content",
         "multi-agent",
@@ -271,6 +279,8 @@
       "titleEn": "Bot Store Academy: Teach a task → draft Skill → then Routine",
       "summary": "bot.store Academy 免费页（2026-08-31）：对照官方 Skills/Routines，讲清 Teach a task（最多约 10 分钟可见交互、不录音频）如何变成草稿 Skill，再补决策/失败/审批后 Test run，最后才挂 Routine。给出适合/不适合首教的任务清单（收发票字段、改名报告 ✅；发客户信、花钱、删生产 ❌）。",
       "summaryEn": "Free bot.store Academy page (2026-08-31): maps Teach a task (≤~10 min visible interaction, no mic) to a draft Skill, then decision/failure/approval rules, Test run, and only then a Routine. Includes good vs poor first-teach examples (invoice fields/rename report ✅; customer send/spend/delete prod ❌).",
+      "hook": "免费课：演示教学先变成草稿技能，再挂例行。",
+      "hookEn": "Free lesson: a live demo becomes a draft skill, then a routine.",
       "categories": [
         "getting-started",
         "skills",
@@ -308,6 +318,8 @@
       "titleEn": "DataCamp: Scout weekly learning plan → Skill / Routine / approvals",
       "summary": "DataCamp 教程：从零建 Scout（DataCamp Learning Bot），读 learner-profile + 四小时预算，打开课程页核对等级/时长/先修（禁止用搜索摘要估时），审完再存成 Skill，周一 Routine 只出计划不代点报名。强调账号级共享云电脑、缺时长写 not listed、被挡时交还控制权。",
       "summaryEn": "DataCamp tutorial: create Scout (a DataCamp Learning Bot), read a learner profile plus a four-hour budget, open course pages to verify level/duration/prereqs (no estimating from search snippets), then save the reviewed method as a Skill and a Monday Routine that only plans—never enrolls. Stresses one account-scoped cloud computer, “not listed” for missing durations, and handing back control when a page blocks the Bot.",
+      "hook": "建一个学习 Bot，核对课程页后只出周一计划。",
+      "hookEn": "A learning Bot that checks course pages and only outputs a Monday plan.",
       "categories": [
         "getting-started",
         "skills",
@@ -345,6 +357,8 @@
       "titleEn": "Developers Digest: Routines invert automation (do the job, then schedule)",
       "summary": "2026-08-23 长文：对照 Zapier/n8n「先搭触发器」与 Grok Bot「先做完再存 Skill / Routine」。写清 Teach a task 草稿边界、六要素排期（Bot/时区/输入/输出/审批/缺数策略）、适合低判断多步骤琐事，以及演示型 Routine 不如节点工作流可审计的诚实代价。",
       "summaryEn": "Aug 23, 2026 essay: contrasts Zapier/n8n “build triggers first” with Grok Bot’s “finish the job, then save a Skill/Routine.” Covers Teach-a-task drafts, the six scheduling facts (Bot / timezone / inputs / outputs / approval / missing-data policy), fit for low-judgment multi-step chores, and the honest tradeoff that demonstrated routines are less auditable than node graphs.",
+      "hook": "先把活做完再排期，而不是先搭触发器。",
+      "hookEn": "Finish the job, then schedule it, instead of building the trigger first.",
       "categories": [
         "automation",
         "skills",
@@ -4499,6 +4513,8 @@
       "titleEn": "6yuwei: shared cloud computer, approval gates, and six testable workflows",
       "summary": "2026-08-28 长文：把 Grok Bot 与 Grok 聊天 / Grok Build / API 拆开讲，再落到四根架构柱（共享云电脑、Computer Use、演示学任务/Routine、人审门），并给出可谨慎试跑的六种模式——幕僚长多 Agent、意向线索、缺陷复现开 Issue、无 API 遗留系统 RPA、品牌竞品值守、夜间批处理。强调窄角色、先读后写、Bot 不是安全边界。",
       "summaryEn": "Aug 28, 2026 guide: separates Grok Bot from Grok chat / Grok Build / API, then covers four pillars (shared cloud computer, computer use, teach/routines, approval gates) and six carefully testable patterns—chief-of-staff multi-agent, intent lead prep, bug reproduction tickets, legacy RPA without APIs, brand/competitor watch, and nightly batch jobs. Stresses narrow roles, read-and-prepare first, and that Bots are not security boundaries.",
+      "hook": "把聊天和 Bot 拆开，列出可以谨慎试跑的工作流。",
+      "hookEn": "Separates chat from Bot and lists workflows you can try carefully.",
       "categories": [
         "automation",
         "ops",
@@ -4540,6 +4556,8 @@
       "titleEn": "Cursor docs: install desktop through first review",
       "summary": "Cursor 官方 Get started：从仪表盘下载桌面端、用 Cursor 账号登录、创建专注 Bot（示例 Piper：产品性能调查、证据与假设分开、不改生产设置）、给边界清晰的首任务、在 Agent Computer 上手动登录工具、审阅后沉淀为 skill/routine；并说明 iOS 同云电脑可消息/接管/审批，但 Teach a task 与改 Routine 仍在桌面。",
       "summaryEn": "Official Cursor Get started: download the desktop app from the dashboard, sign in with Cursor, create a focused Bot (example Piper: product-performance investigation, evidence vs hypotheses, never change production), hand a bounded first task, take over Agent Computer for tool logins, then review and save a skill/routine. Notes iOS shares the same cloud computer for messaging/takeover/approvals, while Teach a task and routine editing stay on desktop.",
+      "hook": "官方入门：装上桌面端，审完第一次任务再存技能。",
+      "hookEn": "Official start: install the desktop app, review a task, then save a skill.",
       "categories": [
         "getting-started",
         "automation",

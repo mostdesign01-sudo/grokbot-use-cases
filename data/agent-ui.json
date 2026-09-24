@@ -7,6 +7,8 @@
       "titleEn": "RondoFlow: visually orchestrate local Claude Code agent teams",
       "summary": "Show HN（item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts）https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。官网与仓库均 HTTP 200；无 npm 包。预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
       "summaryEn": "Show HN item 49812163 (2026-09-23 ~05:55Z, 3pts on Algolia at check time) at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; no npm package. Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP.",
+      "hook": "在画布上编排本机 Agent，真的会改文件、跑命令。",
+      "hookEn": "Arrange local agents on a canvas that edits files and runs commands.",
       "sourceUrl": "https://rondoflow.app/",
       "secondaryUrls": [
         "https://github.com/rondoflow/rondoflow",
@@ -40,6 +42,8 @@
       "titleEn": "Facet: copy-paste React Three Fiber 3D components (MCP / llms.txt)",
       "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。预览为 Playwright 实拍 playground 首屏裁 3:2。",
       "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "hook": "30 个可复制进项目的三维组件，Agent 也能按目录装。",
+      "hookEn": "30 copy-paste 3D components, with a catalog an agent can install from.",
       "sourceUrl": "https://assetmaker-nine.vercel.app/",
       "secondaryUrls": [
         "https://github.com/elberacasa/facet",
@@ -76,6 +80,8 @@
       "titleEn": "Sylva Living World",
       "summary": "ThreeUI Community：场景向程序化世界——living green 苔根生长为苔藓树冠的 Three.js 场景（免费 Living Green 变体，`SylvaLivingWorldScene`）；同页 Sakura Sunset / Maple Autumn / Sequoia Mist 三个季节变体标 PRO，本库不收录。免登录，MIT Community 包 `@designcodeio/threeui`。",
       "summaryEn": "ThreeUI Community scene-only procedural world: living-green moss roots growing into mossy boughs (free Living Green variant, `SylvaLivingWorldScene`). The Sakura Sunset / Maple Autumn / Sequoia Mist seasonal variants on the same page are marked PRO and are not listed here. No login; MIT Community package `@designcodeio/threeui`.",
+      "hook": "免费的苔藓森林场景；同页的季节变体不收录。",
+      "hookEn": "A free moss-forest scene; seasonal variants on the page are not listed.",
       "sourceUrl": "https://threeui.com/three-js/sylva-living-world",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -110,6 +116,8 @@
       "titleEn": "Bookshelf",
       "summary": "ThreeUI Community：七册书架场景——房间、旋转书架、封面箔印、翻页与检视。免登录，MIT Community 包 `@designcodeio/threeui` 可装。",
       "summaryEn": "ThreeUI Community seven-volume bookshelf scene with authored room, carousel shelf, foil covers, inspection, opening, and page-turn. No login; MIT Community package `@designcodeio/threeui`.",
+      "hook": "可以翻开检视的书架场景，封面带着箔印。",
+      "hookEn": "A bookshelf scene you can open and page through, with foil covers.",
       "sourceUrl": "https://threeui.com/three-js/bookshelf",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -144,6 +152,8 @@
       "titleEn": "Engraved Certificate",
       "summary": "ThreeUI Community：雕版证书板面 + 双圆形扭索纹，Canvas 2D 谐波态自动轮换。免登录，MIT Community 包 `@designcodeio/threeui` 可装。",
       "summaryEn": "ThreeUI Community engraved certificate plate with dual guilloche rosettes and a Canvas 2D harmonic pass that auto-cycles states. No login; MIT Community package `@designcodeio/threeui`.",
+      "hook": "雕版证书板面，圆形扭索纹会自己轮换状态。",
+      "hookEn": "An engraved certificate whose guilloche rosettes cycle on their own.",
       "sourceUrl": "https://threeui.com/ui-elements/engraved-certificate",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -177,6 +187,8 @@
       "titleEn": "Zephyr: agent-controllable zero-runtime web components",
       "summary": "daltlc/zephyr-framework：约 14 个 Web Components（手风琴/模态/标签/表格等），用 CSS `:has()`、View Transitions、容器查询驱动交互；暴露 `Zephyr.agent.act()` 让 Agent 开模态、切标签、推数据。演示 https://daltlc.github.io/zephyr-framework/ ，免登录。",
       "summaryEn": "daltlc/zephyr-framework: ~14 web components (accordion/modal/tabs/grid, …) with CSS `:has()`, View Transitions, and container queries; exposes `Zephyr.agent.act()` so an agent can open modals, switch tabs, or push data. Demo https://daltlc.github.io/zephyr-framework/ , no login.",
+      "hook": "daltlc/zephyr-framework：约 14 个 Web Components（手风琴/模态/标签/表格等），用 CSS `:has`、View Transitions、容器查询驱动交互；暴露 `Zephyr.agent.act` 让 Agent 开模态、切标签、推数据",
+      "hookEn": "daltlc/zephyr-framework: ~14 web components (accordion/modal/tabs/grid, …) with CSS",
       "sourceUrl": "https://daltlc.github.io/zephyr-framework/",
       "secondaryUrls": [
         "https://github.com/daltlc/zephyr-framework",
@@ -211,6 +223,8 @@
       "titleEn": "Cloud Field",
       "summary": "ThreeUI Community 背景：Portal Field 变体 Cloud Field — 星空下的云层迁移气流场，可作 Agent 落地页或控制台氛围底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community background: the Portal Field Cloud Field variant — a starfield cloud-migration airflow field for Agent landing or console atmosphere. No login; copy the prompt.",
+      "hook": "ThreeUI Community 背景：Portal Field 变体 Cloud Field — 星空下的云层迁移气流场，可作 Agent 落地页或控制台氛围底",
+      "hookEn": "ThreeUI Community background: the Portal Field Cloud Field variant",
       "sourceUrl": "https://threeui.com/backgrounds/portal-field/cloud-field",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -244,6 +258,8 @@
       "titleEn": "Dot Border Button",
       "summary": "ThreeUI Community 按钮：四角点阵 + 虚线描边 CTA（Rectangle Buttons 变体），适合 Agent 控制台主操作。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community button: a four-corner dotted CTA with sequentially drawn dashed borders (Rectangle Buttons variant), suited to Agent-console primary actions. No login; copy the prompt.",
+      "hook": "ThreeUI Community 按钮：四角点阵 + 虚线描边 CTA（Rectangle Buttons 变体），适合 Agent 控制台主操作",
+      "hookEn": "ThreeUI Community button: a four-corner dotted CTA with sequentially drawn dashed borders",
       "sourceUrl": "https://threeui.com/buttons/rectangle-buttons/dot-border-button",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -277,6 +293,8 @@
       "titleEn": "Typography Vortex",
       "summary": "ThreeUI Community 文字动效：预渲染字环旋转、漂浮字形、指针溶解与点击吸力，Canvas 2D，有深浅色表面。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community text animation: prerendered typography rings, drifting glyphs, pointer dissolution and click suction on Canvas 2D, with dark and light surfaces. No login; copy the prompt.",
+      "hook": "ThreeUI Community 文字动效：预渲染字环旋转、漂浮字形、指针溶解与点击吸力，Canvas 2D，有深浅色表面",
+      "hookEn": "ThreeUI Community text animation: prerendered typography rings, drifting glyphs, pointer",
       "sourceUrl": "https://threeui.com/text-animation/typography-vortex",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -310,6 +328,8 @@
       "titleEn": "Semantic Bloom",
       "summary": "ThreeUI Community 文字动效：可改的 Codex 字标，黏稠粒子网络被字母吸过去并点亮字形，Canvas 2D + DOM/CSS。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community text animation: a customizable Codex wordmark that draws a viscous particle network toward its letters and lights them up — Canvas 2D + DOM/CSS. No login; copy the prompt.",
+      "hook": "ThreeUI Community 文字动效：可改的 Codex 字标，黏稠粒子网络被字母吸过去并点亮字形，Canvas 2D + DOM/CSS",
+      "hookEn": "ThreeUI Community text animation: a customizable Codex wordmark that draws a viscous",
       "sourceUrl": "https://threeui.com/text-animation/semantic-bloom",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -343,6 +363,8 @@
       "titleEn": "Uplink Loader",
       "summary": "ThreeUI Community 赛博上行加载条：阶梯进度、遥测刻度、霓虹读数、角标与扫描线颗粒，CSS/DOM 运行时。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community cinematic uplink loader: stepped progress, telemetry ticks, neon readouts, corner markers, scanlines and grain on a DOM/CSS runtime. No login; copy the prompt.",
+      "hook": "ThreeUI Community 赛博上行加载条：阶梯进度、遥测刻度、霓虹读数、角标与扫描线颗粒，CSS/DOM 运行时",
+      "hookEn": "ThreeUI Community cinematic uplink loader: stepped progress, telemetry ticks, neon",
       "sourceUrl": "https://threeui.com/css/uplink-loader",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -376,6 +398,8 @@
       "titleEn": "Spark Badge · Badge",
       "summary": "ThreeUI Community 光雨徽章背景：Badge / Browser / iPhone / Studio Display 四免费变体，Canvas 2D 光雨与 curl-noise 余烬拼出凭证感徽章，适合 Agent 成就 / 密钥卡氛围底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community luminous-rain badge background: four free variants (Badge / Browser / iPhone / Studio Display). Canvas 2D rain and curl-noise embers assemble a credential-style badge — fits Agent achievement / key-card atmospheres. No login; copy the prompt.",
+      "hook": "ThreeUI Community 光雨徽章背景：Badge / Browser / iPhone / Studio Display 四免费变体，Canvas 2D 光雨与 curl-noise 余烬拼出凭证感徽章，适合 Agent 成就 / 密钥卡氛围底",
+      "hookEn": "ThreeUI Community luminous-rain badge background: four free variants (Badge / Browser /",
       "sourceUrl": "https://threeui.com/backgrounds/spark-badge/badge",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -409,6 +433,8 @@
       "titleEn": "3D Paper · Original",
       "summary": "ThreeUI Community 立体纸张：Original / Site of the Year / Japanese / Certificate 四免费变体，适合 Agent 作品集封面与证书卡。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community dimensional paper: free Original / Site of the Year / Japanese / Certificate variants. Fits Agent portfolio covers and certificate cards. No login; copy the prompt.",
+      "hook": "ThreeUI Community 立体纸张：Original / Site of the Year / Japanese / Certificate 四免费变体，适合 Agent 作品集封面与证书卡",
+      "hookEn": "ThreeUI Community dimensional paper: free Original / Site of the Year / Japanese /",
       "sourceUrl": "https://threeui.com/three-js/3d-paper/original",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -441,6 +467,8 @@
       "titleEn": "Woven Cloth · Woven Cloth",
       "summary": "ThreeUI Community 编织布料 Three.js 背景：Woven Cloth / Iridescent Silk / Atelier Flag / Washi Noren 四免费变体，适合 Agent 落地页材质底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community woven-cloth Three.js background: free Woven Cloth / Iridescent Silk / Atelier Flag / Washi Noren variants. Fits an Agent landing material base. No login; copy the prompt.",
+      "hook": "ThreeUI Community 编织布料 Three.js 背景：Woven Cloth / Iridescent Silk / Atelier Flag / Washi Noren 四免费变体，适合 Agent 落地页材质底",
+      "hookEn": "ThreeUI Community woven-cloth Three.js background: free Woven Cloth / Iridescent Silk /",
       "sourceUrl": "https://threeui.com/three-js/woven-cloth/woven-cloth",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -474,6 +502,8 @@
       "titleEn": "Matrix Junction · Laser",
       "summary": "ThreeUI Community 指针响应激光矩阵背景：Laser 家族 4 个免费变体（Matrix Junction / Atmospheric Blade / Vanishing Array / Halftone Relay），Raw WebGL 单 pass，可调速度、尺寸、长度、密度、色相与不透明度，适合 Agent 面板氛围底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community pointer-reactive laser matrix background: four free Laser-family variants (Matrix Junction / Atmospheric Blade / Vanishing Array / Halftone Relay), single raw-WebGL pass with live speed, size, length, density, hue and opacity controls — fits an Agent-panel atmosphere base. No login; copy the prompt.",
+      "hook": "ThreeUI Community 指针响应激光矩阵背景：Laser 家族 4 个免费变体（Matrix Junction / Atmospheric Blade / Vanishing Array / Halftone Relay），Raw WebGL 单 pass，可调速度，尺寸，长度，密度，色相与不透明度",
+      "hookEn": "ThreeUI Community pointer-reactive laser matrix background: four free Laser-family",
       "sourceUrl": "https://threeui.com/backgrounds/matrix-field/matrix-field",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -508,6 +538,8 @@
       "titleEn": "Liquid Metal Button · Pill",
       "summary": "ThreeUI Community 液态金属 CTA：Sign up Pill / Liquid Orb / Play Circle 三个免费变体，Raw WebGL 2 + DOM/CSS 原生 button，指针跟随金属光谱与 bloom、按压出多面涟漪，支持 Enter/Space 触发与 reduced-motion 冻结。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community liquid-metal CTA: three free variants (Sign up Pill / Liquid Orb / Play Circle) on a native button with raw WebGL 2 + DOM/CSS — pointer-following spectral metal and bloom, faceted press ripples, Enter/Space activation and a reduced-motion freeze. No login; copy the prompt.",
+      "hook": "ThreeUI Community 液态金属 CTA：Sign up Pill / Liquid Orb / Play Circle 三个免费变体，Raw WebGL 2 + DOM/CSS 原生 button，指针跟随金属光谱与 bloom、按压出多面涟漪，支持 Enter/Space 触发与 reduced-motion 冻结",
+      "hookEn": "ThreeUI Community liquid-metal CTA: three free variants (Sign up Pill / Liquid Orb / Play",
       "sourceUrl": "https://threeui.com/buttons/liquid-metal-button/pill",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -542,6 +574,8 @@
       "titleEn": "Energy Orb · Globe",
       "summary": "ThreeUI Community 能量球体背景：分层 FBM 球体、边缘辉光与星场，适合 Agent 面板的 WebGL 氛围底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community energy globe background: layered FBM sphere, rim glow, and star field for Agent-panel WebGL atmosphere. No login; copy the prompt.",
+      "hook": "ThreeUI Community 能量球体背景：分层 FBM 球体、边缘辉光与星场，适合 Agent 面板的 WebGL 氛围底",
+      "hookEn": "ThreeUI Community energy globe background: layered FBM sphere, rim glow, and star field",
       "sourceUrl": "https://threeui.com/backgrounds/energy-orb/energy-orb",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -575,6 +609,8 @@
       "titleEn": "Elements · Generative Tree",
       "summary": "ThreeUI Community Elements 变体：画笔感树枝从赭石长到金尖，指针风吹并掉落微粒。适合 Agent 等待/氛围页。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community Elements variant: a painterly branching tree grows from warm sienna to golden tips, sways with pointer wind, and sheds motes — good for Agent wait/atmosphere pages. No login; copy the prompt.",
+      "hook": "ThreeUI Community Elements 变体：画笔感树枝从赭石长到金尖，指针风吹并掉落微粒",
+      "hookEn": "ThreeUI Community Elements variant: a painterly branching tree grows from warm sienna to",
       "sourceUrl": "https://threeui.com/backgrounds/elements/generative-tree",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -609,6 +645,8 @@
       "titleEn": "PerformanceGauges · Tachometer",
       "summary": "ThreeUI Community 性能仪表盘：tachometer 等 4 个免费变体，适合 Agent 面板上的实时指标装饰。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community performance gauges: free tachometer and three sibling variants for live-metric Agent panel ornament. No login; copy the prompt.",
+      "hook": "ThreeUI Community 性能仪表盘：tachometer 等 4 个免费变体，适合 Agent 面板上的实时指标装饰",
+      "hookEn": "ThreeUI Community performance gauges: free tachometer and three sibling variants for",
       "sourceUrl": "https://threeui.com/css/performance-gauges/tachometer",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
@@ -677,6 +715,8 @@
       "titleEn": "Wireframe Forms · Cube",
       "summary": "ThreeUI Community 的棱镜线框立方体：cube / cylinders / sphere 免费变体，Canvas 2D，适合 Agent 界面装饰。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community prismatic wireframe cube: free variants cube / cylinders / sphere on Canvas 2D. Fits Agent UI ornament. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的棱镜线框立方体：cube / cylinders / sphere 免费变体，Canvas 2D，适合 Agent 界面装饰",
+      "hookEn": "ThreeUI Community prismatic wireframe cube: free variants cube / cylinders / sphere on",
       "types": [
         "ui",
         "threejs"
@@ -710,6 +750,8 @@
       "titleEn": "three.ws",
       "summary": "开源 3D AI Agent 平台（Apache-2.0）：两行 HTML 嵌入 agent-3d，文字/自拍造形象，语音与记忆可选。免登录可玩 Forge 与嵌入预览。",
       "summaryEn": "Open-source 3D AI agent platform (Apache-2.0): embed agent-3d in two lines of HTML, build avatars from text or selfies, optional voice and memory. Forge and embed previews work without login.",
+      "hook": "开源 3D AI Agent 平台（Apache-2.0）：两行 HTML 嵌入 agent-3d，文字/自拍造形象，语音与记忆可选",
+      "hookEn": "Open-source 3D AI agent platform (Apache-2.0): embed agent-3d in two lines of HTML, build",
       "types": [
         "threejs",
         "ui",
@@ -744,6 +786,8 @@
       "titleEn": "shadcn/ui",
       "summary": "开源、开代码的设计系统地基。组件可复制进项目再改，是 Agent 拼界面时最稳的默认库。",
       "summaryEn": "Open-source, open-code design-system foundation. Copy components into the project and make them yours — the safest default kit for an Agent assembling UI.",
+      "hook": "开源、开代码的设计系统地基",
+      "hookEn": "Open-source, open-code design-system foundation",
       "types": [
         "ui"
       ],
@@ -772,6 +816,8 @@
       "titleEn": "Transitions.dev",
       "summary": "给 AI Agent 用的 UI 过渡合集：卡片缩放、数字翻动、流式文字、思考态。首页免费可逛，部分效果标了 Pro。",
       "summaryEn": "UI transitions for AI agents: card resize, number pop, streaming text, thinking states. The gallery is free to browse; some effects are Pro.",
+      "hook": "给 AI Agent 用的 UI 过渡合集：卡片缩放、数字翻动、流式文字、思考态",
+      "hookEn": "UI transitions for AI agents: card resize, number pop, streaming text, thinking states",
       "types": [
         "motion",
         "ui"
@@ -801,6 +847,8 @@
       "titleEn": "Rare UI",
       "summary": "少见的动效 React 组件合集，偏展示和交互实验，适合给 Agent 当高完成度参考。",
       "summaryEn": "A collection of uncommon animated React components — more showcase and interaction experiments. A high-finish reference for an Agent.",
+      "hook": "少见的动效 React 组件合集，偏展示和交互实验，适合给 Agent 当高完成度参考",
+      "hookEn": "A collection of uncommon animated React components",
       "types": [
         "ui",
         "motion"
@@ -829,6 +877,8 @@
       "titleEn": "beUI",
       "summary": "React / Next.js 动效组件，带 Agent 指南和 registry。npx shadcn add 就能装，还有 MCP 和 OpenUI 用法。",
       "summaryEn": "Animated React / Next.js components with an agent guide and registry. Install via npx shadcn add; MCP and OpenUI docs included.",
+      "hook": "React / Next.js 动效组件，带 Agent 指南和 registry",
+      "hookEn": "Animated React / Next.js components with an agent guide and registry",
       "types": [
         "ui",
         "motion"
@@ -859,6 +909,8 @@
       "titleEn": "Beautiful UI",
       "summary": "给 AI 原生界面用的组件原语：加载、思考轨迹、流式文本、审批卡、工具芯片、Prompt Bar。可直接丢给 Agent 抄进项目。",
       "summaryEn": "Primitives for AI-native interfaces: loading, thinking traces, streaming text, approval cards, tool chips, prompt bar. Hand the page to an Agent and let it pick.",
+      "hook": "给 AI 原生界面用的组件原语：加载、思考轨迹、流式文本、审批卡、工具芯片、Prompt Bar",
+      "hookEn": "Primitives for AI-native interfaces: loading, thinking traces, streaming text, approval",
       "types": [
         "ui"
       ],
@@ -886,6 +938,8 @@
       "titleEn": "Buttermax",
       "summary": "Buttermax 数字制作作品集站：鼠标跟随、3D、液态动效和页面转场都做得很顺，适合拆个人作品集的交互。",
       "summaryEn": "Buttermax’s digital-production site: mouse-follow, 3D, liquid motion, and page transitions done smoothly — worth taking apart if you’re building a personal portfolio.",
+      "hook": "Buttermax 数字制作作品集站：鼠标跟随，3D，液态动效和页面转场都做得很顺",
+      "hookEn": "Buttermax’s digital-production site: mouse-follow, 3D, liquid motion, and page",
       "types": [
         "landing",
         "motion",
@@ -918,6 +972,8 @@
       "titleEn": "MetalForge Progress",
       "summary": "MetalForge 的 Progress 进度条着色器：浏览器里免费调参、WebGPU 实时预览，可导出 SwiftUI Metal 或 React Native Skia（导出要 Pro）。",
       "summaryEn": "MetalForge’s Progress bar shaders: free in-browser tweaking with a live WebGPU preview; export SwiftUI Metal or React Native Skia (export is Pro).",
+      "hook": "MetalForge 的 Progress 进度条着色器：浏览器里免费调参、WebGPU 实时预览，可导出 SwiftUI Metal 或 React Native Skia",
+      "hookEn": "MetalForge’s Progress bar shaders: free in-browser tweaking with a live WebGPU preview",
       "types": [
         "ui",
         "motion"
@@ -974,6 +1030,8 @@
       "previewImage": "/previews/structure-flow.webp",
       "titleEn": "Structure Flow",
       "summaryEn": "A ThreeUI Community 3D field study: free variants for structure flow, orbit orbs, lattices, nebulae, and fluid fields. No login; preview on the browse page.",
+      "hook": "ThreeUI Community 的三维场研究：结构流、轨道球、点阵、星云与流体场等免费变体",
+      "hookEn": "A ThreeUI Community 3D field study: free variants for structure flow, orbit orbs",
       "qualityNoteEn": "A good first 3D hero for an Agent: copy the page prompt / Skill.md and only change hue, point size, and speed — no hand-editing of procedural JS.",
       "promptHintEn": "Use Structure Flow as a product first-screen background. Keep the free Community variant, switch to our primary color, slow it down, and thin out the points."
     },
@@ -1008,6 +1066,8 @@
       "previewImage": "/previews/predictive-arc.webp",
       "titleEn": "Predictive Arc",
       "summaryEn": "Canvas / WebGL signal arcs: predictive arc, pixel arc, particles, grid, and halftone flow. Free variants live in the Community directory.",
+      "hook": "Canvas / WebGL 信号弧：预测弧、像素弧、粒子、网格与半调流动",
+      "hookEn": "Canvas / WebGL signal arcs: predictive arc, pixel arc, particles, grid, and halftone flow",
       "qualityNoteEn": "Works well for a dashboard or “thinking” state. Hand the prompt to an Agent, tune hue / speed, and make it your data arc — stay off Pro variants.",
       "promptHintEn": "Drop Predictive Arc into a console top bar. Use a free variant, switch to brand amber, slow it down, and keep it readable."
     },
@@ -1108,6 +1168,8 @@
       "previewImage": "/previews/shader-buttons.webp",
       "titleEn": "Shader Buttons",
       "summaryEn": "Shader buttons: free WebGL variants such as Star Portal, Ignition, Plasma, and Thinking. Fits a high-energy CTA.",
+      "hook": "着色器按钮：Star Portal、Ignition、Plasma、Thinking 等免费 WebGL 变体，适合高能量 CTA",
+      "hookEn": "Shader buttons: free WebGL variants such as Star Portal, Ignition, Plasma, and Thinking",
       "qualityNoteEn": "Use this set when you want an Agent to make a button that “breathes.” Changing hue in Skill.md is enough — do not hand-write GLSL.",
       "promptHintEn": "Use the free Thinking variant from Shader Buttons as a “generating” button. Switch to indigo and drop the brightness a little."
     },
@@ -1141,6 +1203,8 @@
       "previewImage": "/previews/constellation-field.webp",
       "titleEn": "Constellation Field",
       "summaryEn": "Particle constellation fields: free Canvas variants for drift, networks, gate flow, links, and contours. Fits a connected-feeling background.",
+      "hook": "粒子星座场：漂移、网络、关口流、连线与等高线等免费 Canvas 变体，适合做连接感背景",
+      "hookEn": "Particle constellation fields: free Canvas variants for drift, networks, gate flow",
       "qualityNoteEn": "A background for multi-agent / network stories. Hand the prompt to an Agent, tune density and stroke; once the theme changes, ship it.",
       "promptHintEn": "Use Constellation Field as a “collaboration network” background. Fewer particles, thinner lines, colors that sit with the paper base."
     },
@@ -1241,6 +1305,8 @@
       "previewImage": "/previews/kage.webp",
       "titleEn": "Kage",
       "summaryEn": "Kage landing: a full-page template of shadow and leftover space. Community-free; title type and primary color can be tuned.",
+      "hook": "Kage 落地页：偏影与留白的整页模板，Community 免费，可调标题字体与主色",
+      "hookEn": "Kage landing: a full-page template of shadow and leftover space",
       "qualityNoteEn": "A good start for a quiet brand site. The Skill controls type and primary color; an Agent rethemes faster than rewriting layout.",
       "promptHintEn": "Use Kage as a brand intro page. Change the title to our Chinese name, use indigo as the primary, and keep the large leftover space."
     },
@@ -1308,6 +1374,8 @@
       "previewImage": "/previews/sylva-living-green.webp",
       "titleEn": "Sylva · Living Green",
       "summaryEn": "The free Living Green variant of the Sylva landing: a full-page forest mood. Sakura / Maple / Sequoia in the same series are Pro and are not listed here.",
+      "hook": "Sylva 落地页的免费 Living Green 变体：整页森林氛围",
+      "hookEn": "The free Living Green variant of the Sylva landing: a full-page forest mood",
       "qualityNoteEn": "A free full page for nature-leaning products. Link Living Green only; do not open or prompt sakura / maple and other Pro variants.",
       "promptHintEn": "Use only Sylva’s Living Green. Change the title and primary color. Do not switch to seasonal variants marked PRO."
     },
@@ -1418,6 +1486,8 @@
       "titleEn": "Koi Studies",
       "summary": "ThreeUI Community 的锦鲤卡片叠：CSS 3D 深度、指针倾斜、拖拽/键盘翻页，三张日本画风研究（Kōhaku / Shūsui / Utsuri）。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community koi card stack: CSS 3D depth, pointer tilt, drag and keyboard paging, three Japanese studies (Kōhaku / Shūsui / Utsuri). No login; copy the prompt.",
+      "hook": "ThreeUI Community 的锦鲤卡片叠：CSS 3D 深度、指针倾斜、拖拽/键盘翻页，三张日本画风研究（Kōhaku / Shūsui / Utsuri）",
+      "hookEn": "ThreeUI Community koi card stack: CSS 3D depth, pointer tilt, drag and keyboard paging",
       "types": [
         "ui",
         "motion",
@@ -1452,6 +1522,8 @@
       "titleEn": "Bestsellers Book Showcase",
       "summary": "ThreeUI Community 的完整 Field Manuals 书封陈列落地页：编辑式排版、作者动效、嵌入媒体，可改标题字体与主色。免登录。",
       "summaryEn": "ThreeUI Community’s complete Field Manuals book-cover showcase landing page: editorial layout, authored motion, embedded media, with heading font and primary color controls. No login.",
+      "hook": "ThreeUI Community 的完整 Field Manuals 书封陈列落地页：编辑式排版、作者动效、嵌入媒体，可改标题字体与主色",
+      "hookEn": "ThreeUI Community’s complete Field Manuals book-cover showcase landing page: editorial",
       "types": [
         "landing",
         "hero",
@@ -1554,6 +1626,8 @@
       "titleEn": "Warp Field",
       "summary": "ThreeUI Community 的跃迁拖影场：streaks 等免费变体，适合 Agent 落地页首屏。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community warp-streak field: free variants such as streaks. Fits an Agent landing hero. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的跃迁拖影场：streaks 等免费变体，适合 Agent 落地页首屏",
+      "hookEn": "ThreeUI Community warp-streak field: free variants such as streaks",
       "types": [
         "threejs",
         "hero",
@@ -1587,6 +1661,8 @@
       "titleEn": "Diagnostics Panel",
       "summary": "ThreeUI Community 的等距诊断台：layers / nodes / flow 免费变体，适合 Agent 运维或系统可视化。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community isometric diagnostics board: free variants layers / nodes / flow. Fits Agent ops or systems visuals. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的等距诊断台：layers / nodes / flow 免费变体，适合 Agent 运维或系统可视化",
+      "hookEn": "ThreeUI Community isometric diagnostics board: free variants layers / nodes / flow",
       "types": [
         "ui",
         "threejs"
@@ -1619,6 +1695,8 @@
       "titleEn": "Liquid Form",
       "summary": "ThreeUI Community 的液态金属 WebGL 背景：光线步进，体积小，适合 Hero 底。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community liquid-metal WebGL background: ray-marched, compact, fits a hero base. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的液态金属 WebGL 背景：光线步进，体积小，适合 Hero 底",
+      "hookEn": "ThreeUI Community liquid-metal WebGL background: ray-marched, compact, fits a hero base",
       "types": [
         "background",
         "threejs"
@@ -1651,6 +1729,8 @@
       "titleEn": "CRT",
       "summary": "ThreeUI Community 的 CRT 曲面玻璃背景：Terminal / Cinematic / Blue Screen / Nintendo 四变体，适合复古 Agent 首屏。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community curved-glass CRT background: Terminal / Cinematic / Blue Screen / Nintendo variants. Fits a retro Agent hero. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的 CRT 曲面玻璃背景：Terminal / Cinematic / Blue Screen / Nintendo 四变体，适合复古 Agent 首屏",
+      "hookEn": "ThreeUI Community curved-glass CRT background: Terminal / Cinematic / Blue Screen /",
       "types": [
         "background",
         "threejs"
@@ -1683,6 +1763,8 @@
       "titleEn": "Skeuomorphic Toggle",
       "summary": "ThreeUI Community 的拟物开关：Skeuomorphic / Modern / Glass / Shader 四变体，自动适配亮暗。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community skeuomorphic toggle: Skeuomorphic / Modern / Glass / Shader variants, auto light/dark. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的拟物开关：Skeuomorphic / Modern / Glass / Shader 四变体，自动适配亮暗",
+      "hookEn": "ThreeUI Community skeuomorphic toggle: Skeuomorphic / Modern / Glass / Shader variants",
       "types": [
         "ui",
         "threejs"
@@ -1715,6 +1797,8 @@
       "titleEn": "Portal Field",
       "summary": "ThreeUI Community 背景场：Portal / Cloud / Flow / Bell / Stream Convergence 等免费变体，免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community background field: free Portal / Cloud / Flow / Bell / Stream Convergence variants. No login; copy the prompt.",
+      "hook": "ThreeUI Community 背景场：Portal / Cloud / Flow / Bell / Stream Convergence 等免费变体，免登录，可复制 prompt",
+      "hookEn": "ThreeUI Community background field: free Portal / Cloud / Flow / Bell / Stream",
       "types": [
         "background",
         "threejs"
@@ -1747,6 +1831,8 @@
       "titleEn": "Canvas UI",
       "summary": "开源「HTML-in-canvas」着色器组件库：Liquid/Glass 等效果叠在可交互 DOM 上，shadcn 式复制进仓库，并带 MCP 安装路径。",
       "summaryEn": "Open-source html-in-canvas shader components: Liquid/Glass and more over live interactive DOM, shadcn-style copy-into-repo, with an MCP install path.",
+      "hook": "开源「HTML-in-canvas」着色器组件库：Liquid/Glass 等效果叠在可交互 DOM 上，shadcn 式复制进仓库，并带 MCP 安装路径",
+      "hookEn": "Open-source html-in-canvas shader components: Liquid/Glass and more over live interactive",
       "types": [
         "ui",
         "shader",
@@ -1779,6 +1865,8 @@
       "titleEn": "Temple Night",
       "summary": "ThreeUI Community 的京都夜寺场景：默认 Temple Night 免费，雨雾叶与指针光点；其余日落变体标 PRO 不收。免登录，可复制 prompt。",
       "summaryEn": "ThreeUI Community Kyoto night-temple scene: free default Temple Night with rain, mist, leaves, and pointer wisps. Sunset variants marked PRO are skipped. No login; copy the prompt.",
+      "hook": "ThreeUI Community 的京都夜寺场景：默认 Temple Night 免费，雨雾叶与指针光点；其余日落变体标 PRO 不收",
+      "hookEn": "ThreeUI Community Kyoto night-temple scene: free default Temple Night with rain, mist",
       "types": [
         "threejs",
         "hero"
@@ -1843,6 +1931,8 @@
       "titleEn": "Gallery",
       "summary": "ThreeUI Community：Vantrix 风格英雄图带——十六块弯曲编辑图板绕竖直圆柱轨道旋转，纸感网格底；免登录，页内可调 speed / scale / opacity，并可 Copy Prompt。MIT Community 包 `@designcodeio/threeui`。",
       "summaryEn": "ThreeUI Community Vantrix-style hero image ribbon: sixteen curved editorial panels orbit a vertical cylindrical rail on a quiet paper grid. No login; tune speed / scale / opacity on-page and Copy Prompt. MIT Community package `@designcodeio/threeui`.",
+      "hook": "弯曲图板绕柱旋转的英雄图带，可调速度和透明度。",
+      "hookEn": "A hero ribbon of curved panels on a column, with speed and opacity.",
       "sourceUrl": "https://threeui.com/ui-elements/gallery",
       "secondaryUrls": [
         "https://github.com/MengTo/threeui",
