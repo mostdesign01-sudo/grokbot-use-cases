@@ -3449,3 +3449,24 @@ html[data-theme="light"] .home-pill {
   }
 }
 
+@media (max-width: 640px) {
+  .plaza-hero h1 {
+    font-size: 1.32rem;
+  }
+
+  .plaza-lib-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    margin-inline: -2px;
+    padding: 0 2px 2px;
+    scrollbar-width: none;
+  }
+
+  .plaza-lib-card {
+    flex: 0 0 84%;
+    scroll-snap-align: start;
+  }
+}
+
