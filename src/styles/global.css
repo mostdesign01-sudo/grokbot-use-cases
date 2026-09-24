@@ -3908,6 +3908,10 @@ html[data-theme="light"] .home-pill {
     padding-bottom: 2px;
   }
 
+  .plaza-start-row::-webkit-scrollbar {
+    display: none;
+  }
+
   .start-card {
     flex: 0 0 78%;
     scroll-snap-align: start;
