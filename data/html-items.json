@@ -1,6 +1,69 @@
 {
   "items": [
     {
+      "id": "c3-playground",
+      "slug": "c3-playground",
+      "title": "C3 Playground：浏览器里编图形与声音的 C3 游乐场",
+      "titleEn": "C3 Playground: in-browser C3 with graphics and sound",
+      "summary": "Show HN（item 49828605，2026-09-24 ~10:24Z，Algolia/HN 核对 5pts）https://play.c3-lang.org/ — 官方 C3 语言的 WebAssembly 游乐场：零后端依赖，在浏览器里编译并跑交互图形 / 声音程序（示例含 VoxelSpace + Synthwave / Raylib）。C3 编译器仓库 c3lang/c3c 为 MIT（gh api 核对 5834★）。公开页 HTTP 200；预览为 Playwright 实拍 VoxelSpace 示例运行画面裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49828605 (2026-09-24 ~10:24Z, 5pts on HN/Algolia at check time) at https://play.c3-lang.org/ — the official C3 WebAssembly playground: zero backend, compile and run interactive graphics/sound programs in the browser (examples include VoxelSpace + Synthwave / Raylib). The C3 compiler repo c3lang/c3c is MIT (5834★ via gh api at check time). Public page HTTP 200. Preview is a Playwright capture of the VoxelSpace example running, cropped to 3:2 WebP.",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "sourceUrl": "https://play.c3-lang.org/?example=voxelspace_synthwave",
+      "secondaryUrls": [
+        "https://play.c3-lang.org/",
+        "https://c3-lang.org/",
+        "https://github.com/c3lang/c3c",
+        "https://news.ycombinator.com/item?id=49828605"
+      ],
+      "previewImage": "/previews/c3-playground.webp",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-09-24T12:24:19Z",
+      "qualityNote": "主源是 Show HN 49828605 与官方游乐场。C3 编译器 MIT（c3lang/c3c，gh api 5834★）；游乐场本身是公开可试的浏览器 demo，本站未审计 WASM 工具链。收录理由：比「只打印 stdout」的语言 playground 更适合 HTML 库——能直接看到图形与声音。预览自托管。不打星。",
+      "qualityNoteEn": "Primary sources are Show HN 49828605 and the official playground. The C3 compiler is MIT (c3lang/c3c, 5834★ via gh api); the playground is a public in-browser demo — this site did not audit the WASM toolchain. Listing rationale: more useful for an HTML library than stdout-only language playgrounds because graphics and sound show up in-page. Self-hosted preview. Unrated.",
+      "tags": [
+        "c3",
+        "wasm",
+        "playground",
+        "raylib",
+        "show-hn"
+      ]
+    },
+    {
+      "id": "cms-ep-sfx-airgap",
+      "slug": "cms-ep-sfx-airgap",
+      "title": "CMS-EP-SFX：气隙可用的自解密 HTML 加密页",
+      "titleEn": "CMS-EP-SFX: air-gapped self-decrypting HTML encryption",
+      "summary": "Show HN（item 49827375，2026-09-24 ~07:22Z，Algolia/HN 核对 6pts）https://cms-sfx-demo.apeleg.com/ — 浏览器本地用 CMS / PWRI + AES-256-GCM 把文件打成「自带解密 UI」的单页 HTML；演示页可 Download for offline use。仓库 ApelegHQ/ts-cms-ep-sfx 为 Apache-2.0（gh api 核对 20★，LICENSE 标注 Apache-2.0 with LLVM exception）。公开页 HTTP 200；预览为 Playwright 实拍加密页裁 3:2 WebP。本条是工具演示笔记，不是安全审计结论。",
+      "summaryEn": "Show HN item 49827375 (2026-09-24 ~07:22Z, 6pts on HN/Algolia at check time) at https://cms-sfx-demo.apeleg.com/ — encrypt a file locally in the browser with CMS / PWRI + AES-256-GCM into a single HTML page that carries its own decrypt UI; the demo offers Download for offline use. Repo ApelegHQ/ts-cms-ep-sfx is Apache-2.0 (20★ via gh api; LICENSE notes Apache-2.0 with LLVM exception). Public page HTTP 200. Preview is a Playwright capture of the encrypt UI, cropped to 3:2 WebP. A tool-demo note — not a security audit.",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "sourceUrl": "https://cms-sfx-demo.apeleg.com/",
+      "secondaryUrls": [
+        "https://github.com/ApelegHQ/ts-cms-ep-sfx",
+        "https://news.ycombinator.com/item?id=49827375"
+      ],
+      "previewImage": "/previews/cms-ep-sfx-airgap.webp",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-09-24T12:24:19Z",
+      "qualityNote": "主源 Show HN 49827375 + 官方 demo。许可证 Apache-2.0（gh api / README badge）。作者强调本地处理、气隙可用；本站未做密码学审计，也不保证对抗侧信道或弱口令。收录理由：单文件自解密 HTML 在 HTML 工具页里少见，且可离线试用。预览自托管。不打星。",
+      "qualityNoteEn": "Primary sources are Show HN 49827375 and the official demo. License Apache-2.0 (gh api / README badge). The author stresses local processing and offline use; this site did not perform a crypto audit and does not claim resistance to side channels or weak passwords. Listing rationale: self-decrypting single-file HTML is uncommon among HTML tool pages and can be tried offline. Self-hosted preview. Unrated.",
+      "tags": [
+        "encryption",
+        "cms",
+        "offline",
+        "html",
+        "show-hn",
+        "apache-2.0"
+      ]
+    },
+    {
       "id": "3d-retro",
       "slug": "3d-retro",
       "title": "3d-retro：CC0 可整页粘贴的复古 3D 技巧博物馆",
@@ -2424,9 +2487,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-24T01:13:59Z",
+    "updatedAt": "2026-09-24T12:24:19Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.38",
-    "count": 83
+    "version": "1.3.39",
+    "count": 85
   }
 }
