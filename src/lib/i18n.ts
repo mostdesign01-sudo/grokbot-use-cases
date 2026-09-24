@@ -47,6 +47,7 @@ export const ui = {
     models: { zh: "最新模型", en: "Models" },
     imagePrompts: { zh: "Image 2.5 提示词", en: "Image 2.5 prompts" },
     favorites: { zh: "收藏", en: "Favorites" },
+    more: { zh: "更多", en: "More" },
     overview: { zh: "总览", en: "Overview" },
     featured: { zh: "精选", en: "Featured" },
     latest: { zh: "最新", en: "Latest" },

@@ -2662,6 +2662,38 @@ html[data-shell="plaza"] body {
   padding-top: 8px;
 }
 
+.home-rail-more {
+  display: none;
+}
+
+.home-rail-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  min-height: 32px;
+  padding: 0 2px;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 550;
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-rail-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-rail-more > summary::after {
+  content: "▾";
+  color: var(--faint);
+  font-size: 11px;
+}
+
+.home-rail-more[open] > summary::after {
+  content: "▴";
+}
+
 .home-plaza {
   position: relative;
   flex: 1;
@@ -3395,34 +3427,98 @@ html[data-theme="light"] .home-pill {
     flex: 0 0 auto;
     width: 100%;
     max-height: none;
-    padding: 16px 16px 8px;
-    gap: 14px;
+    padding: 10px 14px 6px;
+    gap: 8px;
+  }
+
+  .home-rail-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 6px 10px;
+  }
+
+  .home-wordmark {
+    align-items: center;
+    min-width: 0;
+  }
+
+  .home-lede {
+    display: none;
+  }
+
+  .home-wordmark-text strong {
+    white-space: nowrap;
+  }
+
+  .home-rail-tools {
+    margin-top: 0;
   }
 
   .gh-star-rail {
-    max-width: 380px;
+    grid-column: 1 / -1;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
+
+  .gh-star-repo {
+    display: none;
+  }
+
+  .gh-star-head strong {
+    font-size: 12.5px;
   }
 
   .home-dates {
     flex-direction: row;
-    overflow: auto;
+    flex-wrap: nowrap;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
   }
 
   .home-dates a {
     flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-height: 32px;
+    padding: 4px 10px;
+  }
+
+  .home-libs .home-rail-label {
+    display: none;
   }
 
   .home-libs {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 16px;
+    gap: 6px 14px;
+  }
+
+  .home-rail-meta-desk {
+    display: none;
+  }
+
+  .home-rail-more {
+    display: block;
   }
 
   .home-rail-meta {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 14px;
-    margin-top: 0;
+    gap: 8px 14px;
+    margin-top: 8px;
+    padding-top: 0;
+  }
+
+  .home-plaza-scroll {
+    padding: 12px 12px 88px;
   }
 
   .home-plaza {

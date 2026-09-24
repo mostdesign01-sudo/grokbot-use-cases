@@ -35,6 +35,17 @@ const also = getStealAlso(steal, 3);
 const stealLine = steal
   ? { zh: firstSentence(steal.summary), en: firstSentence(steal.summaryEn) }
   : ui.home.pathsStrip;
+const railLinks = [
+  { href: withBase("paths/"), label: ui.nav.paths },
+  { href: withBase("combos/"), label: ui.nav.combos },
+  { href: withBase("models/"), label: ui.nav.models },
+  { href: withBase("image-prompts/"), label: ui.nav.imagePrompts },
+  { href: withBase("search/"), label: ui.nav.search },
+  { href: withBase("favorites/"), label: ui.home.favorites, favorites: true },
+  { href: withBase("docs/"), label: ui.nav.docs },
+  { href: withBase("changelog/"), label: ui.nav.changelog },
+];
+
 const sibling = getCaseBySlug("grokbots-best");
 const siblingHref = sibling ? withBase(`cases/${sibling.slug}/`) : "https://grokbots.best";
 
@@ -145,19 +156,31 @@ const libraries = [
       <a class="lib-agent" href={withBase("agent-ui/")}>Agent UI</a>
     </nav>
 
-    <nav class="home-rail-meta" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
-      <a href={withBase("paths/")}><Loc zh={ui.nav.paths.zh} en={ui.nav.paths.en} /></a>
-      <a href={withBase("combos/")}><Loc zh={ui.nav.combos.zh} en={ui.nav.combos.en} /></a>
-      <a href={withBase("models/")}><Loc zh={ui.nav.models.zh} en={ui.nav.models.en} /></a>
-      <a href={withBase("image-prompts/")}><Loc zh={ui.nav.imagePrompts.zh} en={ui.nav.imagePrompts.en} /></a>
-      <a href={withBase("search/")}><Loc zh={ui.nav.search.zh} en={ui.nav.search.en} /></a>
-      <a href={withBase("favorites/")}>
-        <Loc zh={ui.home.favorites.zh} en={ui.home.favorites.en} />
-        <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>
-      </a>
-      <a href={withBase("docs/")}><Loc zh={ui.nav.docs.zh} en={ui.nav.docs.en} /></a>
-      <a href={withBase("changelog/")}><Loc zh={ui.nav.changelog.zh} en={ui.nav.changelog.en} /></a>
+    <nav class="home-rail-meta home-rail-meta-desk" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
+      {
+        railLinks.map((link) => (
+          <a href={link.href}>
+            <Loc zh={link.label.zh} en={link.label.en} />
+            {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
+          </a>
+        ))
+      }
     </nav>
+    <details class="home-rail-more">
+      <summary>
+        <Loc zh={ui.nav.more.zh} en={ui.nav.more.en} />
+      </summary>
+      <nav class="home-rail-meta" aria-label={ui.header.sections.zh}>
+        {
+          railLinks.map((link) => (
+            <a href={link.href}>
+              <Loc zh={link.label.zh} en={link.label.en} />
+              {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
   </aside>
 
   <main class="home-plaza">
