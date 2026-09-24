@@ -26,8 +26,10 @@
 | `slug` | string | 详情路径 `/html/[slug]/`，勿使用 `featured` `latest` `types` |
 | `title` | string | 中文界面展示的标题（专有名词可保持原文） |
 | `titleEn` | string | 英文标题（专有名词可与 `title` 相同） |
-| `summary` | string | 中文摘要 |
+| `summary` | string | 中文摘要。读者向价值，不要写成核验日志 |
 | `summaryEn` | string | 英文摘要（EN 模式展示；翻译已有中文，勿新增条目） |
+| `hook` | string | 可选。读者向一句话：这是什么、为什么值得打开。中文 ≤ 36 个汉字。不写核验痕迹、HTTP 状态、星数或点数、日期 |
+| `hookEn` | string | 可选。英文一句话，≤ 90 个字符，只复述 `hook` 已有的事实 |
 | `types` | string[] | 见下方类型枚举 |
 | `sourceUrl` | string | 公开原文 / 演示 URL |
 | `secondaryUrls` | string[] | 可选，仓库或其他来源 |
@@ -39,6 +41,12 @@
 | `qualityNote` | string | 为何收录；页面展示为「收录理由」 |
 | `qualityNoteEn` | string | 英文收录理由 |
 | `tags` | string[] | 检索用标签 |
+
+## 文案规范 / copy rules
+
+- `hook` 与 `summary`（及 `hookEn` / `summaryEn`）是读者向价值：说明这条是什么、为什么值得打开。
+- 核验痕迹只写在 `qualityNote` / `qualityNoteEn`：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
+- 卡片短句优先用 `hook`。没有 `hook` 时，从 `summary` 取第一句并去掉上述核验碎片。不要把 `qualityNote` 当作卡片文案。详情页仍展示完整 `summary`。
 
 ## 类型枚举
 

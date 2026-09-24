@@ -18,6 +18,8 @@ export interface CaseItem {
   titleEn: string;
   summary: string;
   summaryEn?: string;
+  hook?: string;
+  hookEn?: string;
   categories: string[];
   role: string;
   sourceUrl: string;
@@ -138,6 +140,8 @@ export function caseSearchText(item: CaseItem): string {
     item.titleEn,
     item.summary,
     item.summaryEn ?? "",
+    item.hook ?? "",
+    item.hookEn ?? "",
     item.qualityNote,
     item.qualityNoteEn ?? "",
     item.role,

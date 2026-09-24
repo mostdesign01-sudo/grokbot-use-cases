@@ -18,6 +18,8 @@ export interface AgentUiItem {
   titleEn?: string;
   summary: string;
   summaryEn?: string;
+  hook?: string;
+  hookEn?: string;
   types: AgentUiType[];
   sourceUrl: string;
   secondaryUrls?: string[];
@@ -72,6 +74,8 @@ export function agentUiSearchText(item: AgentUiItem): string {
     item.titleEn ?? "",
     item.summary,
     item.summaryEn ?? "",
+    item.hook ?? "",
+    item.hookEn ?? "",
     item.qualityNote,
     item.qualityNoteEn ?? "",
     item.promptHint ?? "",
