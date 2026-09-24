@@ -240,6 +240,7 @@ code {
   font-size: 13.5px;
   font-weight: 650;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .brand-text span {
@@ -247,6 +248,9 @@ code {
   font-size: 11px;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 12rem;
 }
 
 .nav {
@@ -279,6 +283,63 @@ code {
   color: var(--ink);
   border-color: var(--line);
   background: var(--bg-card);
+}
+
+.nav-more {
+  position: relative;
+}
+
+.nav-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-more > summary::after {
+  content: "▾";
+  color: var(--faint);
+  font-size: 10px;
+}
+
+.nav-more > summary:hover,
+.nav-more[open] > summary,
+.nav-more > summary.is-current {
+  color: var(--ink);
+  background: var(--bg-soft);
+}
+
+.nav-more-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 30;
+  display: grid;
+  min-width: 12.5rem;
+  padding: 6px;
+  border-radius: 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.nav-more-menu a {
+  display: flex;
+  border-radius: 8px;
 }
 
 .theme-toggle {
@@ -2436,20 +2497,39 @@ a.tweet-card.case-card {
   }
 
   .header-inner {
-    padding: 8px 0 10px;
-    align-items: flex-start;
+    padding: 8px 0 8px;
+    align-items: center;
     flex-wrap: wrap;
+    row-gap: 4px;
   }
 
   .header-start {
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .brand-text span {
+    max-width: 7.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .brand-text span {
+      display: none;
+    }
+  }
+
+  .collection-tabs {
+    flex-wrap: nowrap;
   }
 
   .nav {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
   .filters {
