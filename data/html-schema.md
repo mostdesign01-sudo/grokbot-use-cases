@@ -33,7 +33,7 @@
 | `types` | string[] | 见下方类型枚举 |
 | `sourceUrl` | string | 公开原文 / 演示 URL |
 | `secondaryUrls` | string[] | 可选，仓库或其他来源 |
-| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base` 加上 `/grokbot-use-cases` 前缀。缺省或加载失败时卡片回退 CSS 海报。 |
+| `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base`（与仓库名相同，现为 `/ai-up-lab`）加上前缀。缺省或加载失败时卡片回退 CSS 海报。 |
 | `featured` | boolean | 是否出现在精选 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。编辑质量判断，不是 GitHub star 数；不填则不显示 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |

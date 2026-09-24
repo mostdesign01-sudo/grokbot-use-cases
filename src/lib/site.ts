@@ -10,7 +10,7 @@ export const siteDescriptionEn =
   "For people building their AI skills: learn Agents from a tutorial, or take a Skill, a component, or a web example and use it. Every entry links to the original.";
 
 /** Public source repo for this site. The GitHub-star CTA points here; it is unrelated to curator ★ or visitor ☆. */
-export const repoSlug = "mostdesign01-sudo/grokbot-use-cases";
+export const repoSlug: string = import.meta.env.PUBLIC_REPO_SLUG;
 export const repoUrl = `https://github.com/${repoSlug}`;
 /** Unauthenticated public endpoint used only to paint the live stargazer count client-side. */
 export const repoApiUrl = `https://api.github.com/repos/${repoSlug}`;

@@ -406,7 +406,7 @@ if (!home.includes("给想提升 AI 能力的人")) {
 }
 
 // GitHub star CTA for this repo: home rail card + header pill / footer line on a regular page.
-const repoUrl = "https://github.com/mostdesign01-sudo/grokbot-use-cases";
+const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY || "mostdesign01-sudo/grokbot-use-cases"}`;
 if (!home.includes("给本项目点个 Star") || !home.includes("gh-star-rail") || !home.includes(repoUrl)) {
   console.error("Homepage is missing the GitHub star CTA (给本项目点个 Star / gh-star-rail → repo URL).");
   process.exit(1);

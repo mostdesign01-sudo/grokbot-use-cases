@@ -1,12 +1,12 @@
 # AI UP LAB
 
-核验精选：人核过的用法、路径、三库拣货。不是 bot 安装目录；要浏览/安装 bot 与 skill，见库内的 [grokbots.best](https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/grokbots-best/)。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
+每天更新的 AI 教程与工具。不是 bot 安装目录；要浏览/安装 bot 与 skill，见库内的 [grokbots.best](https://mostdesign01-sudo.github.io/ai-up-lab/cases/grokbots-best/)。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
 
 - 站点名：AI UP LAB
-- 标语：核验精选 · 人核过的用法、路径、三库拣货
+- 标语：每天更新的 AI 教程与工具
 - 当前内容库：Grok Bot 案例、HTML 收集、Agent UI（ThreeUI Community 免费件）
-- 仓库：https://github.com/mostdesign01-sudo/grokbot-use-cases
-- 预期公开地址：https://mostdesign01-sudo.github.io/grokbot-use-cases/
+- 仓库：https://github.com/mostdesign01-sudo/ai-up-lab（由 `grokbot-use-cases` 改名；GitHub 会把仓库地址跳到新名）
+- 公开地址：https://mostdesign01-sudo.github.io/ai-up-lab/
 
 本站**不是** xAI / SpaceXAI / Cursor 官方站点。所有案例来自公开文档与社区文章，原始链接写在每条记录里。
 
@@ -19,7 +19,7 @@ npm install
 npm run dev
 ```
 
-开发服务器默认在 `http://localhost:4321/grokbot-use-cases/`（因为 GitHub Pages 项目站使用 `/grokbot-use-cases/` 作为 `base`）。
+开发服务器默认在 `http://localhost:4321/grokbot-use-cases/`。GitHub Actions 里 `base` 跟仓库名走；本地想用新路径可先 `export GITHUB_REPOSITORY=mostdesign01-sudo/ai-up-lab`。
 
 ```bash
 npm run build    # 输出到 dist/，并校验 20 条详情页都已生成
@@ -83,7 +83,7 @@ Cases may stay thin in the directory. If one might be linked from X or another p
 
 GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
 
-构建后也可访问 `/grokbot-use-cases/data.json` 下载当前数据集。
+构建后也可访问 `/<仓库名>/data.json` 下载当前数据集。
 
 ## GitHub Pages 如何部署
 
@@ -102,16 +102,16 @@ GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 J
 公开 URL 形态：
 
 ```
-https://mostdesign01-sudo.github.io/grokbot-use-cases/
+https://mostdesign01-sudo.github.io/ai-up-lab/
 ```
 
 详情页：
 
 ```
-https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/<slug>/
+https://mostdesign01-sudo.github.io/ai-up-lab/cases/<slug>/
 ```
 
-Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路径。若改仓库名，同步改 `astro.config.mjs` 的 `base`。
+`astro.config.mjs` 的 `site` 和 `base` 从 `GITHUB_REPOSITORY` 读取（Actions 自带）。改仓库名不用改代码，重新跑一次 Deploy 即可。GitHub Pages 的旧路径不会自动跳转。
 
 ## 站点结构
 
@@ -140,7 +140,7 @@ Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路
 
 星级：各库与看板的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
 
-GitHub Star：站头「Star」药丸、首页左栏小卡、页脚一行都指向本仓库 https://github.com/mostdesign01-sudo/grokbot-use-cases（组件 `src/components/GitHubStar.astro`）。Star 数由浏览器读 GitHub 公开 API 填入并缓存一小时（键 `aiuplab:gh-stars`），读不到或为 0 就不显示。与 ★ 编辑星级、☆ 收藏是三回事。
+GitHub Star：站头「Star」药丸、首页左栏小卡、页脚一行都指向本仓库（组件 `src/components/GitHubStar.astro`，地址同样来自 `GITHUB_REPOSITORY`）。Star 数由浏览器读 GitHub 公开 API 填入并缓存一小时（键 `aiuplab:gh-stars`），读不到或为 0 就不显示。与 ★ 编辑星级、☆ 收藏是三回事。
 
 ## 界面
 

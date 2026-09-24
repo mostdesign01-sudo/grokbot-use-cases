@@ -123,8 +123,8 @@ export const ui = {
     star: { zh: "Star", en: "Star" },
     cta: { zh: "给本项目点个 Star", en: "Star this project on GitHub" },
     title: {
-      zh: "在 GitHub 给 mostdesign01-sudo/grokbot-use-cases 点 Star",
-      en: "Star mostdesign01-sudo/grokbot-use-cases on GitHub",
+      zh: "在 GitHub 给 AI UP LAB 点 Star",
+      en: "Star AI UP LAB on GitHub",
     },
     footer: {
       zh: "觉得有用？去 GitHub 给本项目点个 Star",
