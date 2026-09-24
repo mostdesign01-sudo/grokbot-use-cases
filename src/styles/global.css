@@ -23,7 +23,7 @@
   --radius: 12px;
   --radius-sm: 8px;
   --radius-xs: 6px;
-  --font-sans: "Geist", "Noto Sans SC", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Geist", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
   --max: 1120px;
   --max-wide: 1280px;
