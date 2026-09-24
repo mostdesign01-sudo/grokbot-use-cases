@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-24",
+      "title": "工作日晨更：HTML +3",
+      "titleEn": "Weekday morning: HTML +3",
+      "body": "HTML：收 Show HN 3d-retro（item 49824144，核对 3pts）——CC0 单文件可粘贴复古 3D/Canvas 实验博物馆（站点自称 31，含 /llms.txt 与 API），已配 3:2 自托管预览；收 Fractalysis（item 49816840，核对 2pts）——浏览器 Mandelbrot 无限放大查看器，已配 3:2 预览；收 Simten NAND（item 49817114，核对 3pts）——Apache-2.0 TypeScript HDL 浏览器关卡（simtenHQ/simten，gh api 18★），已配 3:2 预览。本次未改 Grok Bot / Agent UI（无已核实的新免费 ThreeUI；uilib.dev 仓库无 license API 结果未收；Cases 无新可复现 Grok Bot 用法教程）。X @bot 未走 API。html-items 80→83（1.3.37→1.3.38）。",
+      "bodyEn": "HTML: added Show HN 3d-retro (item 49824144, 3pts at check time) — a CC0 single-file pasteable retro 3D/Canvas experiment museum (site claims 31, with /llms.txt and an API) with a 3:2 self-hosted preview; Fractalysis (item 49816840, 2pts) — a browser Mandelbrot infinite-zoom viewer with a 3:2 preview; and Simten NAND (item 49817114, 3pts) — an Apache-2.0 TypeScript HDL browser level (simtenHQ/simten, 18★ on the gh api) with a 3:2 preview. No Grok Bot / Agent UI edits (no verified new free ThreeUI; uilib.dev had no license via the gh api and was skipped; no new reproducible Grok Bot usage tutorial for Cases). X @bot API skipped. html-items 80→83 (1.3.37→1.3.38)."
+    },
+    {
       "date": "2026-09-23",
       "title": "晚间收录：Agent UI +1、HTML +2",
       "titleEn": "Evening catalog: Agent UI +1, HTML +2",
