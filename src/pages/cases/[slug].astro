@@ -18,6 +18,7 @@ import {
   sourceTypeLabel,
 } from "../../lib/labels";
 import { cardLine } from "../../lib/cardline";
+import { caseCover } from "../../lib/covers";
 import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -88,22 +89,22 @@ const previewCreditEn = landing?.previewCreditEn;
         <span class="loc-en">{cardLine(item, "en")}</span>
       </p>
       {
-        item.previewImage && (
-          <figure class:list={["detail-preview", { "detail-preview-wide": Boolean(landing) }]}>
-            <img
-              src={assetUrl(item.previewImage)}
-              alt={previewAlt.zh}
-              data-aria-zh={previewAlt.zh}
-              data-aria-en={previewAltEn.en}
-            />
-            {(previewCredit || previewCreditEn) && (
+        <figure class:list={["detail-preview", { "detail-preview-wide": Boolean(landing), "is-cover": !item.previewImage }]}>
+          <img
+            src={assetUrl(item.previewImage ?? caseCover(item))}
+            alt={item.previewImage ? previewAlt.zh : ""}
+            data-aria-zh={item.previewImage ? previewAlt.zh : ""}
+            data-aria-en={item.previewImage ? previewAltEn.en : ""}
+          />
+          {
+            item.previewImage && (previewCredit || previewCreditEn) && (
               <figcaption>
                 <span class="loc-zh">{previewCredit ?? previewCreditEn}</span>
                 <span class="loc-en">{previewCreditEn ?? previewCredit}</span>
               </figcaption>
-            )}
-          </figure>
-        )
+            )
+          }
+        </figure>
       }
       <div class="hero-actions">
         <FavButton lib="grok" id={item.id} variant="button" />

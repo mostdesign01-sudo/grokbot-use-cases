@@ -1413,6 +1413,23 @@ select:focus {
   border: 1px solid var(--line);
 }
 
+.detail-preview.is-cover {
+  max-width: min(52rem, 100%);
+}
+
+.detail-preview.is-cover img {
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  background: #f4efe6;
+}
+
+@media (max-width: 640px) {
+  .detail-preview.is-cover img {
+    height: 168px;
+  }
+}
+
 .kv {
   display: grid;
   gap: 11px;
@@ -2508,6 +2525,17 @@ a.tweet-card.case-card {
   object-position: top center;
 }
 
+.tweet-media.is-cover {
+  max-height: none;
+}
+
+.tweet-media.is-cover img {
+  aspect-ratio: 3 / 1;
+  max-height: none;
+  object-position: center;
+  background: #f4efe6;
+}
+
 @media (max-width: 900px) {
   .hero,
   .detail-grid,
@@ -3409,6 +3437,21 @@ a.plaza-card:hover {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+.plaza-thumb.is-cover {
+  aspect-ratio: auto;
+  padding: 10px 10px 0;
+  background: transparent;
+}
+
+.plaza-thumb.is-cover img {
+  aspect-ratio: 3 / 1;
+  height: auto;
+  object-position: center;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #f4efe6;
 }
 
 .plaza-card-body {

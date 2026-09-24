@@ -1,5 +1,6 @@
 import { agentUiItems, agentUiMeta, agentUiSearchText } from "./agent-ui";
 import { cardLine, stripAuditNoise } from "./cardline";
+import { caseCover } from "./covers";
 import { cases, changelogNotes, meta as casesMeta, caseSearchText, type ChangelogNote } from "./cases";
 import { shanghaiDateKey } from "./format";
 import { htmlItems, htmlMeta, htmlSearchText } from "./html";
@@ -32,6 +33,8 @@ export interface PlazaItem {
   line: string;
   lineEn: string;
   thumb?: string;
+  /** Category illustration, not a real screenshot. Shorter in the masonry. */
+  thumbCover?: boolean;
   dateKey: string;
   updatedAt: string;
   searchText: string;
@@ -73,6 +76,7 @@ interface CatalogItem {
   hookEn?: string;
   sourceUrl: string;
   previewImage?: string;
+  categories?: string[];
   publishedAt: string;
   updatedAt: string;
   searchText: string;
@@ -92,6 +96,7 @@ function catalog(): CatalogItem[] {
     hookEn: item.hookEn,
     sourceUrl: item.sourceUrl,
     previewImage: item.previewImage,
+    categories: item.categories,
     publishedAt: item.publishedAt,
     updatedAt: item.updatedAt,
     searchText: caseSearchText(item),
@@ -266,6 +271,7 @@ function toPlazaItem(item: CatalogItem): PlazaItem {
   const names = libCopy(item.lib);
   const host = sourceHost(item.sourceUrl);
   const dateKey = shanghaiDateKey(item.updatedAt);
+  const thumbCover = item.lib === "grok" && !item.previewImage;
   return {
     id: `${item.lib}:${item.id}`,
     lib: item.lib,
@@ -287,7 +293,8 @@ function toPlazaItem(item: CatalogItem): PlazaItem {
       names.en,
       host,
     ].join(" "),
-    thumb: assetUrl(item.previewImage),
+    thumb: assetUrl(thumbCover ? caseCover(item) : item.previewImage),
+    thumbCover,
     dateKey,
     updatedAt: item.updatedAt,
   };
@@ -352,7 +359,7 @@ export function packPlazaColumns(items: PlazaItem[]): [PlazaItem[], PlazaItem[],
   const cols: PlazaItem[][] = [[], [], []];
   const weights = [0, 0, 3.6];
   for (const item of items) {
-    const w = item.thumb ? 2.15 : 1.1;
+    const w = item.thumbCover ? 1.55 : item.thumb ? 2.15 : 1.1;
     let i = 0;
     if (weights[1] < weights[i]) i = 1;
     if (weights[2] < weights[i]) i = 2;

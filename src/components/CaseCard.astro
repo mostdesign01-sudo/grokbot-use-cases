@@ -1,6 +1,7 @@
 ---
 import { cardLine } from "../lib/cardline";
 import type { CaseItem } from "../lib/cases";
+import { caseCover } from "../lib/covers";
 import { formatShanghaiStamp } from "../lib/format";
 import { ui } from "../lib/i18n";
 import { categoryLabel, difficultyLabel, sourceBadgeKind, sourceBadgeLabel } from "../lib/labels";
@@ -15,7 +16,9 @@ interface Props {
 }
 
 const { caseItem, showLibBadge = false } = Astro.props;
-const preview = assetUrl(caseItem.previewImage);
+const shot = assetUrl(caseItem.previewImage);
+const preview = shot ?? assetUrl(caseCover(caseItem));
+const isCover = !shot;
 const stampZh = formatShanghaiStamp(caseItem.updatedAt);
 const stampEn = formatShanghaiStamp(caseItem.updatedAt, "en-US");
 const lineZh = cardLine(caseItem, "zh");
@@ -54,7 +57,7 @@ const lineEn = cardLine(caseItem, "en");
     </p>
     {
       preview && (
-        <div class="tweet-media">
+        <div class:list={["tweet-media", { "is-cover": isCover }]}>
           <img src={preview} alt="" loading="lazy" decoding="async" />
         </div>
       )
