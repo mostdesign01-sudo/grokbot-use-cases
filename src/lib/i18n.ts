@@ -549,6 +549,7 @@ export const ui = {
       en: "Filter Grok Bot uses by category, source, difficulty, and capability.",
     },
     typeEntry: { zh: "类型入口", en: "Type entry points" },
+    moreCategories: { zh: "更多分类 +{n}", en: "More categories +{n}" },
     typesH1: { zh: "按类型浏览", en: "Browse by type" },
     typesLede: {
       zh: "每个类型对应 data/cases.json 里出现过的 categories[] 值，单独生成静态 HTML 收集页。当前 {n} 个类型。",

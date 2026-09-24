@@ -4,11 +4,14 @@ import Loc from "../../components/Loc.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { cases, getCategoryCollections, meta } from "../../lib/cases";
 import { formatShanghaiDateTime } from "../../lib/format";
-import { ui } from "../../lib/i18n";
+import { fill, ui } from "../../lib/i18n";
 import { categoryLabel } from "../../lib/labels";
 import { withBase } from "../../lib/paths";
 
 const types = getCategoryCollections();
+const topTypes = types.slice(0, 10);
+const moreTypes = types.slice(10);
+const moreCategories = fill(ui.grok.moreCategories, { n: moreTypes.length });
 const whenZh = formatShanghaiDateTime(meta.updatedAt);
 const whenEn = formatShanghaiDateTime(meta.updatedAt, "en-US");
 ---
@@ -34,7 +37,7 @@ const whenEn = formatShanghaiDateTime(meta.updatedAt, "en-US");
       </p>
       <div class="type-chips" aria-label={ui.grok.typeEntry.zh} data-aria-zh={ui.grok.typeEntry.zh} data-aria-en={ui.grok.typeEntry.en}>
         {
-          types.map((item) => (
+          topTypes.map((item) => (
             <a class="type-chip" href={withBase(`types/${item.category}/`)}>
               <strong>
                 <span class="loc-zh">{categoryLabel(item.category)}</span>
@@ -43,6 +46,29 @@ const whenEn = formatShanghaiDateTime(meta.updatedAt, "en-US");
               <span>{item.count}</span>
             </a>
           ))
+        }
+        {
+          moreTypes.length > 0 && (
+            <details class="type-chip-more">
+              <summary class="type-chip type-chip-toggle">
+                <span class="loc-zh">{moreCategories.zh}</span>
+                <span class="loc-en">{moreCategories.en}</span>
+              </summary>
+              <div class="type-chips">
+                {
+                  moreTypes.map((item) => (
+                    <a class="type-chip" href={withBase(`types/${item.category}/`)}>
+                      <strong>
+                        <span class="loc-zh">{categoryLabel(item.category)}</span>
+                        <span class="loc-en">{categoryLabel(item.category, "en")}</span>
+                      </strong>
+                      <span>{item.count}</span>
+                    </a>
+                  ))
+                }
+              </div>
+            </details>
+          )
         }
       </div>
     </section>

@@ -681,6 +681,28 @@ h3 {
   border-color: var(--line-strong);
 }
 
+.type-chip-more {
+  display: contents;
+}
+
+.type-chip-toggle {
+  cursor: pointer;
+  list-style: none;
+}
+
+.type-chip-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.type-chip-more > .type-chips {
+  display: none;
+  flex-basis: 100%;
+}
+
+.type-chip-more[open] > .type-chips {
+  display: flex;
+}
+
 .type-card h3 {
   margin-top: 0;
 }
