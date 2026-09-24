@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "id": "3d-retro",
+      "slug": "3d-retro",
+      "title": "3d-retro：CC0 可整页粘贴的复古 3D 技巧博物馆",
+      "titleEn": "3d-retro: CC0 museum of retro 3D tricks you can paste into a page",
+      "summary": "Show HN（item 49824144，2026-09-23 ~23:33Z，Algolia/HN 核对 3pts）https://3d-retro.com/ — 站点自称 31 个实验，每个可复制为单文件 HTML（WebGL 1 或 Canvas 2D），许可证 CC0 1.0（humans.txt / llms.txt）。含 Plasma、ASCII torus、Amiga Boing、Wolfenstein raycaster、palette fire 等；另有 /llms.txt 与 /api/v1/experiments 方便 Agent 拉取源码。公开页 HTTP 200。预览为 Playwright 实拍首页 Experiments 段裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49824144 (2026-09-23 ~23:33Z, 3pts on HN/Algolia at check time) at https://3d-retro.com/ — the site claims 31 experiments, each copyable as a single HTML file (WebGL 1 or Canvas 2D), licensed CC0 1.0 (humans.txt / llms.txt). Includes Plasma, ASCII torus, Amiga Boing, Wolfenstein raycaster, palette fire, and more; /llms.txt and /api/v1/experiments help agents fetch source. Public page HTTP 200. Preview is a Playwright capture of the homepage Experiments section, cropped to 3:2 WebP.",
+      "sourceUrl": "https://3d-retro.com/",
+      "secondaryUrls": [
+        "https://3d-retro.com/llms.txt",
+        "https://3d-retro.com/api/v1/experiments",
+        "https://news.ycombinator.com/item?id=49824144"
+      ],
+      "previewImage": "/previews/3d-retro.webp",
+      "types": [
+        "demo",
+        "interactive",
+        "library"
+      ],
+      "tags": [
+        "webgl",
+        "canvas",
+        "cc0",
+        "copy-paste",
+        "retro",
+        "demoscene",
+        "single-file",
+        "llms-txt",
+        "hn"
+      ],
+      "featured": true,
+      "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49824144，核对 3pts。许可证以站点 humans.txt / llms.txt 的 CC0 1.0 为准；实验计数以 /api/v1/experiments 与首页列表为 31。无独立 GitHub 仓库可核。预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49824144, 3pts at check time. License follows the site’s humans.txt / llms.txt CC0 1.0 claim; experiment count is 31 per /api/v1/experiments and the homepage list. No separate GitHub repo to verify. Preview is a Playwright homepage capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-24T01:13:59Z"
+    },
+    {
+      "id": "fractalysis",
+      "slug": "fractalysis",
+      "title": "Fractalysis：浏览器里无限放大的 Mandelbrot 查看器",
+      "titleEn": "Fractalysis: browser Mandelbrot viewer with infinite zoom",
+      "summary": "Show HN（item 49816840，2026-09-23 ~14:35Z，HN 核对 2pts / 6 评论）https://www.erwindegroot.nl/fractalysis/ — 作者称用扰动法与任意精度算术，在浏览器里放大到远超双精度的深度；纯前端、免账号。公开页 HTTP 200。预览为 Playwright 实拍首屏（Mandelbrot + Shadows 面板）裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49816840 (2026-09-23 ~14:35Z, 2pts / 6 comments on HN at check time) at https://www.erwindegroot.nl/fractalysis/ — the author says it uses perturbation and arbitrary-precision arithmetic to zoom far past double precision in the browser; client-side, no account. Public page HTTP 200. Preview is a Playwright above-the-fold capture (Mandelbrot + Shadows panel) cropped to 3:2 WebP.",
+      "sourceUrl": "https://www.erwindegroot.nl/fractalysis/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49816840"
+      ],
+      "previewImage": "/previews/fractalysis.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "fractal",
+        "mandelbrot",
+        "webgl",
+        "browser",
+        "math",
+        "hn"
+      ],
+      "featured": false,
+      "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49816840，核对 2pts。无限放大与扰动法为作者自述，本库未复测深度极限。预览为 Playwright 实拍首屏裁 3:2 WebP（首屏 canvas 需短暂等待才有图）。",
+      "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49816840, 2pts at check time. Infinite-zoom / perturbation claims are the author’s; this library did not re-test depth limits. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP (the canvas needs a short wait before it paints).",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-24T01:13:59Z"
+    },
+    {
+      "id": "simten-nand",
+      "slug": "simten-nand",
+      "title": "Simten NAND：在浏览器用 TypeScript 从门电路搭 CPU",
+      "titleEn": "Simten NAND: build a CPU from gates in TypeScript in the browser",
+      "summary": "Show HN（item 49817114，2026-09-23 ~14:53Z，HN 核对 3pts）https://play.simten.dev/nand — Simten 的浏览器关卡：用 TypeScript HDL 接线，电路图随代码更新；站点称可导出 Verilog 上 FPGA。仓库 simtenHQ/simten 于 2026-09-24 gh api：Apache-2.0、18★。公开页写明桌面向（手机不适配）。官网与仓库均 HTTP 200。预览为 Playwright 实拍关卡页（含引导弹层）裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49817114 (2026-09-23 ~14:53Z, 3pts on HN at check time) at https://play.simten.dev/nand — a Simten browser level where you wire circuits in a TypeScript HDL and the diagram updates as you type; the site says you can export Verilog for FPGAs. Repo simtenHQ/simten on the 2026-09-24 gh api: Apache-2.0, 18★. The public page says it needs a desktop viewport. Site and repo both HTTP 200. Preview is a Playwright capture of the level page (onboarding modal visible) cropped to 3:2 WebP.",
+      "sourceUrl": "https://play.simten.dev/nand",
+      "secondaryUrls": [
+        "https://simten.dev/",
+        "https://github.com/simtenHQ/simten",
+        "https://news.ycombinator.com/item?id=49817114"
+      ],
+      "previewImage": "/previews/simten-nand.webp",
+      "types": [
+        "interactive",
+        "demo",
+        "tool"
+      ],
+      "tags": [
+        "typescript",
+        "hdl",
+        "hardware",
+        "education",
+        "browser",
+        "apache",
+        "hn"
+      ],
+      "featured": false,
+      "qualityNote": "公开页与 GitHub 均 HTTP 200（2026-09-24）。gh api：Apache-2.0、18★。Show HN item 49817114，核对 3pts。FPGA / Verilog 导出为站点自述，本库未在硬件上复测。页面临时提示桌面向。预览为 Playwright 实拍关卡页裁 3:2 WebP。",
+      "qualityNoteEn": "Site and GitHub both HTTP 200 (2026-09-24). gh api: Apache-2.0, 18★. Show HN item 49817114, 3pts at check time. FPGA / Verilog export is the site’s claim and was not re-tested on hardware. The page notes a desktop viewport. Preview is a Playwright level-page capture cropped to 3:2 WebP.",
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-09-24T01:13:59Z"
+    },
+    {
       "id": "lineselect",
       "slug": "lineselect",
       "title": "lineselect：管道里交互勾选 stdin 行",
@@ -2448,9 +2548,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T12:28:44Z",
+    "updatedAt": "2026-09-24T01:13:59Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.37",
-    "count": 80
+    "version": "1.3.38",
+    "count": 83
   }
 }
