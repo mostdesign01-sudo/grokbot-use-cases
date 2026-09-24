@@ -9,6 +9,7 @@ import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
 import { htmlTypeIntro, htmlTypeLabel } from "../../lib/html-labels";
 import { fill, ui } from "../../lib/i18n";
+import { cardLine } from "../../lib/cardline";
 import { assetUrl, withBase } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -56,9 +57,21 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
         <span class="loc-en">{titleEn}</span>
       </h1>
       <p class="lede">
-        <span class="loc-zh">{item.summary}</span>
-        <span class="loc-en">{summaryEn}</span>
+        <span class="loc-zh">{cardLine(item, "zh")}</span>
+        <span class="loc-en">{cardLine(item, "en")}</span>
       </p>
+      {
+        item.previewImage && (
+          <figure class="detail-preview detail-preview-wide">
+            <img
+              src={assetUrl(item.previewImage)}
+              alt={previewAlt.zh}
+              data-aria-zh={previewAlt.zh}
+              data-aria-en={previewAltEn.en}
+            />
+          </figure>
+        )
+      }
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href={item.sourceUrl} rel="noreferrer">
           <Loc zh={ui.detail.openSource.zh} en={ui.detail.openSource.en} />
@@ -70,6 +83,13 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 
     <div class="detail-grid">
       <div>
+        <section class="panel">
+          <h2><Loc zh={ui.detail.details.zh} en={ui.detail.details.en} /></h2>
+          <p>
+            <span class="loc-zh">{item.summary}</span>
+            <span class="loc-en">{summaryEn}</span>
+          </p>
+        </section>
         <section class="panel">
           <h2><Loc zh={ui.detail.learnWhat.zh} en={ui.detail.learnWhat.en} /></h2>
           <ul class="learn-list">
@@ -93,18 +113,6 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
             <span class="loc-zh">{item.qualityNote}</span>
             <span class="loc-en">{qualityEn}</span>
           </p>
-          {
-            item.previewImage && (
-              <figure class="item-preview">
-                <img
-                  src={assetUrl(item.previewImage)}
-                  alt={previewAlt.zh}
-                  data-aria-zh={previewAlt.zh}
-                  data-aria-en={previewAltEn.en}
-                />
-              </figure>
-            )
-          }
         </section>
         {
           related.length > 0 && (

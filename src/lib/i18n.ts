@@ -232,6 +232,7 @@ export const ui = {
   detail: {
     lab: { zh: "实验室", en: "Lab" },
     whatItDoes: { zh: "这条用法在做什么", en: "What this use does" },
+    details: { zh: "详细介绍", en: "Details" },
     whatItIs: { zh: "它是什么", en: "What it is" },
     contrast: { zh: "对照", en: "Contrast" },
     tryIt: { zh: "怎么试", en: "Try it" },
