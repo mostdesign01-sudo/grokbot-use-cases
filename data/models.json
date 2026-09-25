@@ -1,11 +1,84 @@
 {
   "meta": {
-    "updatedAt": "2026-09-22T12:30:00Z",
+    "updatedAt": "2026-09-25T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.7",
-    "count": 10
+    "version": "1.1.8",
+    "count": 11
   },
   "models": [
+    {
+      "id": "claude-opus-5-5",
+      "slug": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "title": "Claude Opus 5.5（Anthropic）",
+      "titleEn": "Claude Opus 5.5 (Anthropic)",
+      "summary": "Anthropic 于 2026-09-22 发布的 Claude 5.5 家族第一款模型（官方页标题 “Introducing Claude Opus 5.5”，HTTP 200）。官方页正文称：它在多数工作上达到 Claude Fable 5.1 的水平，按典型负载跑起来比 Opus 5 少 40% 花费；meta description 称它在 agentic coding 与知识工作上领先，且比 Opus 5 少 40% 运行成本。官方价目（每百万 token）：输入 $4、输出 $20（称比 Opus 5 少 20%），cache reads $0.20（对照 Opus 5 的 $0.50，称少 60%），cache writes $5（对照 $6.25）；fast mode 为输入 $8 / 输出 $40，称最高 2.5 倍速度。第三方榜：Artificial Analysis 页面（变体 “Adaptive Reasoning, Max Effort, Default Fallback”）列出 Intelligence Index 58（#1 / 211）、输入 $4.00 / 输出 $20.00、缓存折扣 95%、每任务 $5.98、1M 上下文；速度栏为 N/A。HN：item 49803892（Algolia 核对 1793pts，2026-09-22 ~16:29Z）。",
+      "summaryEn": "Anthropic’s first model in the Claude 5.5 family, announced 2026-09-22 (official page title “Introducing Claude Opus 5.5”, HTTP 200). The page says it performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5 on typical workloads; the meta description says it leads in agentic coding and knowledge work and costs 40% less to run than Opus 5. Vendor price table (per 1M tokens): input $4, output $20 (claimed 20% less than Opus 5), cache reads $0.20 (vs Opus 5 at $0.50, claimed 60% less), cache writes $5 (vs $6.25); fast mode is $8 input / $40 output, claimed up to 2.5× speed. Third-party board: the Artificial Analysis page (variant “Adaptive Reasoning, Max Effort, Default Fallback”) lists Intelligence Index 58 (#1 / 211), $4.00 input / $20.00 output, a 95% cache discount, $5.98 per task, and a 1M context; the speed cell is N/A. HN: item 49803892 (1793pts on Algolia at check time, 2026-09-22 ~16:29Z).",
+      "announcedAt": "2026-09-22",
+      "publishedAt": "2026-09-25",
+      "updatedAt": "2026-09-25T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Anthropic 官方页：Introducing Claude Opus 5.5",
+          "labelEn": "Anthropic official page: Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "by": "Anthropic",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：Claude Opus 5.5 智能 / 速度 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: Claude Opus 5.5 intelligence / speed / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+          "by": "Artificial Analysis",
+          "date": "2026-09-25"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Claude Opus 5.5",
+          "labelEn": "Hacker News: Claude Opus 5.5",
+          "url": "https://news.ycombinator.com/item?id=49803892",
+          "by": "Hacker News",
+          "date": "2026-09-22"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Claude 5.5 家族第一款；正文写多数工作达到 Fable 5.1 水平，典型负载比 Opus 5 少 40% 花费，输出比 Opus 5 快 30% 以上。同页又称 Sonnet 5.5 与 Haiku 5.5 将在随后数周推出。平台模型 id 写作 claude-opus-5-5，并称已在全平台可用，包括 Amazon Web Services、Google Cloud 与 Microsoft Azure。",
+          "textEn": "Vendor claim: first model in the Claude 5.5 family; the page says it matches Fable 5.1 on most work, costs 40% less than Opus 5 on typical workloads, and generates output more than 30% faster than Opus 5. The same page says Sonnet 5.5 and Haiku 5.5 follow in the coming weeks. The platform model id is written claude-opus-5-5, and the page says it is available on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure."
+        },
+        {
+          "text": "官方称（价目表，每百万 token）：cache reads $0.20（Opus 5 为 $0.50）、输入 $4（Opus 5 为 $5）、输出 $20（Opus 5 为 $25）、cache writes $5（Opus 5 为 $6.25）。页面另写输入/输出比 Opus 5 少 20%，cache reads 少 60%；fast mode（Claude Code 与 Claude Platform）最高 2.5 倍速度，输入 $8 / 输出 $40。本库未实测 API。",
+          "textEn": "Vendor claim (price table, per 1M tokens): cache reads $0.20 (Opus 5 $0.50), input $4 (Opus 5 $5), output $20 (Opus 5 $25), cache writes $5 (Opus 5 $6.25). The page also says input/output are 20% less than Opus 5 and cache reads are 60% less; fast mode (Claude Code and the Claude Platform) is up to 2.5× speed at $8 input / $40 output. API not tested here."
+        },
+        {
+          "text": "官方称（对照表，列序 Opus 5.5 / Fable 5.1 / Opus 5 / GPT-6 Astra / GPT-5.6 Sol；页注除另有说明外 Opus 5.5 为 adaptive thinking、max effort；Terminal-Bench 4.0 的 Opus 5.5 为 xhigh、GPT-6 Astra 为 high，且为 OpenAI 所报）：Terminal-Bench 4.0 66.4% / 55.8% / 52.3% / 57.9% / 37.3%；FrontierCode v1.1 (Main) 54.4% / 50.3% / 48.0% / 53.3% / 47.5%。同表另有 Astra 更高的行：Terminal-Bench-Science 0.1 为 64.6% 对 Opus 5.5 的 58.7%；AutomationBench（页注由 Zapier 跑）为 41.4% 对 40.0%。页面自己也写：与 Fable 5.1 的实际差距比这些分数看起来更窄。本库未复跑。",
+          "textEn": "Vendor claim (comparison table, columns Opus 5.5 / Fable 5.1 / Opus 5 / GPT-6 Astra / GPT-5.6 Sol; the page says Opus 5.5 results use adaptive thinking at max effort unless noted; Terminal-Bench 4.0 is xhigh for Opus 5.5 and high for GPT-6 Astra, the latter as reported by OpenAI): Terminal-Bench 4.0 66.4% / 55.8% / 52.3% / 57.9% / 37.3%; FrontierCode v1.1 (Main) 54.4% / 50.3% / 48.0% / 53.3% / 47.5%. The same table has rows where Astra is ahead: Terminal-Bench-Science 0.1 is 64.6% vs Opus 5.5 at 58.7%; AutomationBench (page note: run by Zapier) is 41.4% vs 40.0%. The page itself also says the real gap versus Fable 5.1 is narrower than these scores suggest. None re-run here."
+        },
+        {
+          "text": "第三方榜（Artificial Analysis，非官方、非本库）：页面标题为 “Claude Opus 5.5 (max with fallback)”，变体 “Adaptive Reasoning, Max Effort, Default Fallback”；Intelligence Index 58（#1 / 211），速度 Output tokens per second 为 N/A，价格输入 $4.00 / 输出 $20.00、Cache Discount 95%、Cost per Intelligence Index task $5.98，Verbosity 260M output tokens（#96 / 211）。技术规格写推理版、输入 text and image、输出 text、上下文 1M。发布月记为 September 2026。不把 AA 的 95% 缓存折扣与官方 $0.20 cache reads 合成新指标。",
+          "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): page title “Claude Opus 5.5 (max with fallback)”, variant “Adaptive Reasoning, Max Effort, Default Fallback”; Intelligence Index 58 (#1 / 211); output tokens per second is N/A; pricing $4.00 input / $20.00 output, Cache Discount 95%, $5.98 cost per Intelligence Index task; verbosity 260M output tokens (#96 / 211). Specs list a reasoning version, text and image input, text output, and a 1M context. Release month is written September 2026. The AA 95% cache discount is not merged here with the vendor’s $0.20 cache-read price into a new figure."
+        },
+        {
+          "text": "社区演示（echohive 页面自述，非本库复跑，也不另开 Models demo 卡）：https://www.echohive.ai/experiments/dinosaurs 《The Last Day》自称 “A 2.5D PAINTING · MADE BY OPUS 5.5”。条目在 HTML 库 last-day-dinosaurs，不进本板。",
+          "textEn": "Community demo (echohive page self-description, not re-run here, and not a separate Models demo card): https://www.echohive.ai/experiments/dinosaurs “The Last Day” calls itself “A 2.5D PAINTING · MADE BY OPUS 5.5”. The entry lives in the HTML library as last-day-dinosaurs, not on this board."
+        }
+      ],
+      "qualityNote": "收录理由：2026-09-22 发布的 Anthropic 前沿卡，官方页、AA 第三方榜与 HN item 49803892（Algolia 核对 1793pts）当晚均可核，适合 Models 看板头条。核实边界：定位、40% 成本、价目、$4/$20/$0.20、fast mode、基准表与「全平台可用」一律为官方页自述（anthropic.com/claude-opus-5-5，2026-09-25 HTTP 200），本库未复跑、未实测 API；官方表里 Astra 在 Terminal-Bench-Science 0.1 与 AutomationBench 上高于 Opus 5.5，故不把 meta 里的 “leads” 当成全表第一。Intelligence Index 58、#1/211、$5.98/任务、95% 缓存折扣、速度 N/A、1M 上下文来自 Artificial Analysis 页面（2026-09-25 HTTP 200），非本库复跑。同板 step-5-preview 的官方对照表写的是 Claude Opus 5（不是 5.5），互链只表示同板相关，不表示阶跃评过 Opus 5.5。社区绘画演示只在 HTML 库。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "claude-fable-5-1",
+        "step-5-preview"
+      ],
+      "previewImage": "/previews/claude-opus-5-5.webp",
+      "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-opus-5-5 首屏",
+      "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-opus-5-5 above the fold",
+      "featured": true,
+      "stars": 4
+    },
     {
       "id": "mimo-v2-6",
       "slug": "mimo-v2-6",
@@ -110,7 +183,7 @@
       "summaryEn": "StepFun’s new flagship, announced 2026-09-20 and pitched by the vendor as a model “for agentic work”: software engineering, agentic tasks, professional knowledge work, with particular emphasis on finance. Vendor claims: sparse MoE with 600B total / 27B active parameters per token, a 1M-token context window, and native image input; available the same day via StepFun’s products and API, with open weights scheduled for 2026-10-15. Third-party board: Artificial Analysis Intelligence Index 44 (AA’s figure, not re-run here). Note: the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 / a placeholder tonight — weights are not downloadable yet. HN: item 49772532.",
       "announcedAt": "2026-09-20",
       "publishedAt": "2026-09-20",
-      "updatedAt": "2026-09-20T12:20:00Z",
+      "updatedAt": "2026-09-25T12:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -172,7 +245,8 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra",
-        "claude-fable-5-1"
+        "claude-fable-5-1",
+        "claude-opus-5-5"
       ],
       "previewImage": "/previews/step-5-preview.webp",
       "previewCredit": "预览：Playwright 实拍 stepfun.com/step-5-preview 首屏",
@@ -653,7 +727,7 @@
       "summaryEn": "Anthropic’s Sept 2026 launch of Claude Fable 5.1 (generally available) and Mythos 5.1 (trusted access) — same underlying model, different safeguard levels. Pitch is coding, knowledge work, and long-running / agentic tasks, plus early research demos. Already catalogued as AI news in the Grok Bot library; this is the board card, full copy lives on that entry.",
       "announcedAt": "2026-09-01",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-20T12:20:00Z",
+      "updatedAt": "2026-09-25T12:20:00Z",
       "sources": [
         {
           "kind": "official",
@@ -688,7 +762,8 @@
         "claude-fable-5-1"
       ],
       "relatedModelIds": [
-        "step-5-preview"
+        "step-5-preview",
+        "claude-opus-5-5"
       ],
       "previewImage": "/previews/claude-fable-5-1.webp",
       "previewCredit": "预览：Anthropic 官方 X 视频封面",
