@@ -1,6 +1,109 @@
 {
   "cases": [
     {
+      "id": "personal-jarvis",
+      "slug": "personal-jarvis-opensource",
+      "title": "Personal Jarvis：开源本机语音编排桌面（Grok Bot 相邻）",
+      "titleEn": "Personal Jarvis: open-source local voice-orchestrated desktop (Grok Bot-adjacent)",
+      "summary": "Show HN（item 49833292，2026-09-24 ~16:43Z，Algolia 核对 1pt）https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 本机桌面：Jarvis 用语音/文字编排 agents、coding session、桌面动作与 MCP；可挂例行与本地 Markdown wiki，产物进 Artifacts。作者在 HN 标题写成 Grok Bot 开源替代；README 强调跑在自己电脑上、模型自选（托管/本地）。仓库于 2026-09-25 gh api：Apache-2.0、65★。官网 personaljarvis.ai HTTP 200。收录为可复现的相邻栈，不当官方替代品。",
+      "summaryEn": "Show HN item 49833292 (2026-09-24 ~16:43Z, 1pt on Algolia at check time) at https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 local desktop: Jarvis orchestrates agents, coding sessions, desktop actions, and MCP by voice or text; supports routines and a local Markdown wiki, with outputs in Artifacts. The HN title frames it as an open-source Grok Bot alternative; the README stresses running on your own computer with your choice of hosted or local models. Repo on the 2026-09-25 gh api: Apache-2.0, 65★. Site personaljarvis.ai HTTP 200. Catalogued as a reproducible adjacent stack, not an official replacement.",
+      "categories": [
+        "community",
+        "engineering",
+        "multi-agent"
+      ],
+      "role": "Open-source adjacent stack",
+      "sourceUrl": "https://github.com/PersonalJarvis/PersonalJarvis",
+      "secondaryUrls": [
+        "https://personaljarvis.ai",
+        "https://news.ycombinator.com/item?id=49833292"
+      ],
+      "sourceType": "community",
+      "qualityNote": "Apache-2.0（2026-09-25 gh api，65★）。Show HN item 49833292。对照 README：本机桌面 + 语音编排 + agents/routines/MCP，不是「每席一云电脑」那条路；与 Errand / Open Bot 同属相邻对照，不当官方 Grok Bot 替代品宣传。",
+      "qualityNoteEn": "Apache-2.0 (gh api, 2026-09-25, 65★). Show HN item 49833292. Per the README: local desktop + voice orchestration + agents/routines/MCP — not the per-seat cloud-computer path; listed beside Errand / Open Bot as an adjacent comparison, not marketed as an official Grok Bot replacement.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "本机桌面控制、语音听写与对外连接由读者自己负责；未审流程不要直接上生产或开放权限。",
+      "approvalBoundaryEn": "The reader owns local desktop control, voice dictation, and outbound connections; do not put an unreviewed flow straight into production or open permissions.",
+      "connectors": [
+        "computer",
+        "browser",
+        "github"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "updatedAt": "2026-09-25T01:05:00Z",
+      "landing": {
+        "what": "Personal Jarvis 是开源本机桌面应用，许可证 Apache-2.0（GitHub license API 于 2026-09-25 仍为 Apache-2.0）。README 写明：中心是 Jarvis 语音编排器，把对话接到 agents、coding workspace、桌面动作，以及你选的插件 / skill / MCP；也可以打字。工作区可建带说明与例行的 specialist，用 Jarvis Voice 向其他 App 听写，知识放本地 Markdown wiki，报告和文件进 Artifacts。模型由你选（托管、本地或混用）。Show HN item 49833292 的标题把它写成 Grok Bot 开源替代。本站按相邻栈收录：可自建、可核对，不是官方 Grok Bot。",
+        "whatEn": "Personal Jarvis is an open-source desktop app under Apache-2.0 (GitHub license API still reported Apache-2.0 on 2026-09-25). The README puts Jarvis, a voice orchestrator, at the center: conversation connects to agents, a coding workspace, desktop actions, and the plugins / skills / MCP you choose — typing works too. The workspace can hold specialists with their own instructions and routines, Jarvis Voice can dictate into other apps, knowledge can live in a local Markdown wiki, and reports and files land in Artifacts. You pick the models (hosted, local, or mixed). The title of Show HN item 49833292 frames it as an open-source Grok Bot alternative. This library lists it as an adjacent stack you can self-host and check — not official Grok Bot.",
+        "contrast": {
+          "caption": "左列是仓库 README 与官网对得上的事实。右列只说明为什么放在 Grok Bot Cases 旁边对照，不补写本库没核过的官方细节。",
+          "captionEn": "The left column is what the README and site actually say. The right column only says why it sits next to Grok Bot Cases — it does not fill in official details this library has not checked.",
+          "leftLabel": "Personal Jarvis",
+          "leftLabelEn": "Personal Jarvis",
+          "rightLabel": "对照 Grok Bot",
+          "rightLabelEn": "Beside Grok Bot",
+          "rows": [
+            {
+              "aspect": "电脑在哪",
+              "aspectEn": "Where the computer is",
+              "left": "跑在你自己的 Windows / macOS / Linux 桌面上；语音、桌面动作和本地文件都在本机。云模型只在你选用时才接到请求内容。",
+              "leftEn": "Runs on your own Windows / macOS / Linux desktop; voice, desktop actions, and local files stay on-device. Cloud models only receive request content when you choose them.",
+              "right": "Grok Bot 文档强调每席有自己的云电脑。这里是本机路线，对照的是「有桌面、能动手」，不是同一托管模型。",
+              "rightEn": "Grok Bot docs emphasize a per-seat cloud computer. This is the local path — compared on “has a desktop and can act,” not the same hosting model."
+            },
+            {
+              "aspect": "怎么交办",
+              "aspectEn": "How you assign work",
+              "left": "语音或文字开聊；可建 specialist、挂例行、接 MCP / skill，并看 Artifacts 与 run history。",
+              "leftEn": "Start by voice or text; build specialists, attach routines, connect MCP / skills, and inspect Artifacts plus run history.",
+              "right": "用来对照「队友 + 可重复流程」。官方 Routine / Skill 名称以 xAI 文档为准。",
+              "rightEn": "Useful as a comparison for teammates plus repeatable flows. Official Routine / Skill names follow the xAI docs."
+            },
+            {
+              "aspect": "许可与边界",
+              "aspectEn": "License and boundary",
+              "left": "Apache-2.0；托管模型与订阅另计费。README 写明本地并不等于所有集成离线。",
+              "leftEn": "Apache-2.0; hosted models and subscriptions bill separately. The README notes that local install does not make every integration offline.",
+              "right": "收录为相邻开源栈；不要当成已替你跑通的官方替代路径。",
+              "rightEn": "Catalogued as an adjacent open-source stack — not a verified official replacement path."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "看仓库与许可",
+            "titleEn": "Check the repo and license",
+            "body": "打开 GitHub PersonalJarvis/PersonalJarvis，确认 LICENSE 仍是 Apache-2.0，并读 README 的隐私与本机数据说明。",
+            "bodyEn": "Open GitHub PersonalJarvis/PersonalJarvis, confirm LICENSE is still Apache-2.0, and read the privacy / local-data notes in the README."
+          },
+          {
+            "title": "按官方安装脚本装桌面",
+            "titleEn": "Install the desktop with the official script",
+            "body": "README 给出 macOS/Linux 的 curl 安装脚本与 Windows 的 irm 脚本；装完后在应用里选语言、唤醒词和模型提供方。本站未代跑安装。",
+            "bodyEn": "The README ships a curl installer for macOS/Linux and an irm script for Windows; finish language, wake phrase, and provider setup in the app. This site did not run the installer for you."
+          },
+          {
+            "title": "先试一条低风险对话",
+            "titleEn": "Try one low-risk conversation first",
+            "body": "先用文字 Chat 或短语音问一个不碰敏感账号的问题；确认审批与桌面控制开关符合你的预期，再接 MCP 或例行。",
+            "bodyEn": "Start with text Chat or a short voice ask that avoids sensitive accounts; confirm approvals and desktop-control toggles match what you want before attaching MCP or routines."
+          }
+        ],
+        "boundaries": [
+          "本站未替你安装或授权 Personal Jarvis；桌面控制与语音权限风险自担。",
+          "HN 标题写「Grok Bot 替代」不等于功能对等；云电脑、审批闸与官方插件以 xAI 文档为准。",
+          "托管模型会离开本机；本地模型能力受硬件与所选权重限制。"
+        ],
+        "previewCredit": "无自托管预览图；以仓库 README 与官网为准。",
+        "previewCreditEn": "No self-hosted preview image; refer to the repo README and the site."
+      }
+    },
+    {
       "id": "us-paypal-cn-visa",
       "slug": "us-paypal-cn-visa",
       "title": "工具：美区 PayPal 绑国内 Visa — AI / Apple 订阅旁路",
@@ -4763,11 +4866,14 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-24T12:24:19Z",
+    "updatedAt": "2026-09-25T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.29",
-    "count": 126,
+    "version": "1.4.30",
+    "count": 127,
     "sourcesCrawled": [
+      "https://github.com/PersonalJarvis/PersonalJarvis",
+      "https://news.ycombinator.com/item?id=49833292",
+      "https://personaljarvis.ai",
       "https://x.com/hejushang8/status/2102670557859000332",
       "https://x.com/i/article/2102588711330590720",
       "https://x.com/hejushang8/status/2102602033488634298",
