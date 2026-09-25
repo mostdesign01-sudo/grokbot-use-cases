@@ -36,7 +36,7 @@
       "language": "en",
       "featured": true,
       "publishedAt": "2026-09-25",
-      "updatedAt": "2026-09-25T01:05:00Z",
+      "updatedAt": "2026-09-25T01:12:00Z",
       "landing": {
         "what": "Personal Jarvis 是开源本机桌面应用，许可证 Apache-2.0（GitHub license API 于 2026-09-25 仍为 Apache-2.0）。README 写明：中心是 Jarvis 语音编排器，把对话接到 agents、coding workspace、桌面动作，以及你选的插件 / skill / MCP；也可以打字。工作区可建带说明与例行的 specialist，用 Jarvis Voice 向其他 App 听写，知识放本地 Markdown wiki，报告和文件进 Artifacts。模型由你选（托管、本地或混用）。Show HN item 49833292 的标题把它写成 Grok Bot 开源替代。本站按相邻栈收录：可自建、可核对，不是官方 Grok Bot。",
         "whatEn": "Personal Jarvis is an open-source desktop app under Apache-2.0 (GitHub license API still reported Apache-2.0 on 2026-09-25). The README puts Jarvis, a voice orchestrator, at the center: conversation connects to agents, a coding workspace, desktop actions, and the plugins / skills / MCP you choose — typing works too. The workspace can hold specialists with their own instructions and routines, Jarvis Voice can dictate into other apps, knowledge can live in a local Markdown wiki, and reports and files land in Artifacts. You pick the models (hosted, local, or mixed). The title of Show HN item 49833292 frames it as an open-source Grok Bot alternative. This library lists it as an adjacent stack you can self-host and check — not official Grok Bot.",
@@ -79,25 +79,60 @@
             "title": "看仓库与许可",
             "titleEn": "Check the repo and license",
             "body": "打开 GitHub PersonalJarvis/PersonalJarvis，确认 LICENSE 仍是 Apache-2.0，并读 README 的隐私与本机数据说明。",
-            "bodyEn": "Open GitHub PersonalJarvis/PersonalJarvis, confirm LICENSE is still Apache-2.0, and read the privacy / local-data notes in the README."
+            "bodyEn": "Open GitHub PersonalJarvis/PersonalJarvis, confirm LICENSE is still Apache-2.0, and read the privacy / local-data notes in the README.",
+            "links": [
+              {
+                "href": "https://github.com/PersonalJarvis/PersonalJarvis",
+                "label": "GitHub 仓库",
+                "labelEn": "GitHub repo"
+              }
+            ]
           },
           {
             "title": "按官方安装脚本装桌面",
             "titleEn": "Install the desktop with the official script",
             "body": "README 给出 macOS/Linux 的 curl 安装脚本与 Windows 的 irm 脚本；装完后在应用里选语言、唤醒词和模型提供方。本站未代跑安装。",
-            "bodyEn": "The README ships a curl installer for macOS/Linux and an irm script for Windows; finish language, wake phrase, and provider setup in the app. This site did not run the installer for you."
+            "bodyEn": "The README ships a curl installer for macOS/Linux and an irm script for Windows; finish language, wake phrase, and provider setup in the app. This site did not run the installer for you.",
+            "links": [
+              {
+                "href": "https://personaljarvis.ai",
+                "label": "官网",
+                "labelEn": "Website"
+              },
+              {
+                "href": "https://github.com/PersonalJarvis/PersonalJarvis#install",
+                "label": "安装说明",
+                "labelEn": "Install notes"
+              }
+            ]
           },
           {
             "title": "先试一条低风险对话",
             "titleEn": "Try one low-risk conversation first",
             "body": "先用文字 Chat 或短语音问一个不碰敏感账号的问题；确认审批与桌面控制开关符合你的预期，再接 MCP 或例行。",
-            "bodyEn": "Start with text Chat or a short voice ask that avoids sensitive accounts; confirm approvals and desktop-control toggles match what you want before attaching MCP or routines."
+            "bodyEn": "Start with text Chat or a short voice ask that avoids sensitive accounts; confirm approvals and desktop-control toggles match what you want before attaching MCP or routines.",
+            "links": [
+              {
+                "href": "https://news.ycombinator.com/item?id=49833292",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
           }
         ],
         "boundaries": [
-          "本站未替你安装或授权 Personal Jarvis；桌面控制与语音权限风险自担。",
-          "HN 标题写「Grok Bot 替代」不等于功能对等；云电脑、审批闸与官方插件以 xAI 文档为准。",
-          "托管模型会离开本机；本地模型能力受硬件与所选权重限制。"
+          {
+            "text": "本站未替你安装或授权 Personal Jarvis；桌面控制与语音权限风险自担。",
+            "textEn": "This site did not install or authorize Personal Jarvis for you; you own desktop-control and voice-permission risk."
+          },
+          {
+            "text": "HN 标题写「Grok Bot 替代」不等于功能对等；云电脑、审批闸与官方插件以 xAI 文档为准。",
+            "textEn": "An HN title that says “Grok Bot alternative” is not feature parity; cloud computers, approval gates, and official plugins follow the xAI docs."
+          },
+          {
+            "text": "托管模型会离开本机；本地模型能力受硬件与所选权重限制。",
+            "textEn": "Hosted models leave the machine; local-model capability is limited by hardware and the weights you choose."
+          }
         ],
         "previewCredit": "无自托管预览图；以仓库 README 与官网为准。",
         "previewCreditEn": "No self-hosted preview image; refer to the repo README and the site."
@@ -4866,7 +4901,7 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-25T01:05:00Z",
+    "updatedAt": "2026-09-25T01:12:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.30",
     "count": 127,
