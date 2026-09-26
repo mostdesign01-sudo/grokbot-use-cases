@@ -1,6 +1,235 @@
 {
   "cases": [
     {
+      "id": "opus-ui-motion-prompt-template",
+      "slug": "opus-ui-motion-prompt-template",
+      "title": "一条提示词做 Dribbble 级 UI 动效视频（纯代码，不用 AE）",
+      "titleEn": "One prompt for a Dribbble-level UI motion video (code only, no After Effects)",
+      "summary": "zero（@twoclipping）2026-09-25 的帖子公开了一份 UI 动效提示词模板：https://x.com/twoclipping/status/2103273003555402193 。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-24 23:58 UTC（上海时区为 2026-09-25），视频附件为 14 秒、1440×1440。作者称整支片子由 Opus 5.5 写成代码，After Effects 用了 0。模板让同一个形状沿大约 120 BPM 的节拍走完一串界面状态，样式在 seek(t) 里按时间计算。本站未重跑生成。",
+      "summaryEn": "zero (@twoclipping) published a UI-motion prompt template on 25 Sept 2026: https://x.com/twoclipping/status/2103273003555402193 . Checked via fxtwitter on 26 Sept 2026: the post was created at 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai), and the video attachment is 14 seconds at 1440×1440. The author says the whole piece was written as code by Opus 5.5, with zero After Effects. The template runs one shape through a chain of UI states on a ~120 BPM beat, with every style computed from time inside seek(t). Not re-run here.",
+      "categories": [
+        "content",
+        "coding"
+      ],
+      "role": "UI motion prompt template",
+      "sourceUrl": "https://x.com/twoclipping/status/2103273003555402193",
+      "secondaryUrls": [
+        "https://mixkit.co/free-stock-music/",
+        "https://vercel.com/font",
+        "https://playwright.dev/docs/screenshots",
+        "https://ffmpeg.org/ffmpeg-filters.html#tmix",
+        "https://numpy.org/"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "收录理由：一条可以从 X 点进来的提示词模板，结构写全了（inputs / direction / structure / build / gotchas / start），读者能照着准备状态、对节拍、再出片。2026-09-26 用 fxtwitter 核对正文与附件元数据（14 秒、1440×1440，显示名 zero，账号 @twoclipping）。核实边界：「整支视频是 Opus 5.5 写成的代码、没用 After Effects」是作者自述，本站未复跑。Mixkit 是否可商用以该曲许可页为准，不沿用模板里的举例句。预览是本站自写 HTML 的一帧，不是作者视频截图。不打星。",
+      "qualityNoteEn": "Why it is listed: a prompt template someone can open from X, with the structure written out (inputs / direction / structure / build / gotchas / start), so a reader can prepare states, lay them on the beat, and render. Checked via fxtwitter on 26 Sept 2026 for the text and the attachment metadata (14 seconds, 1440×1440, display name zero, account @twoclipping). Boundary: “the whole video is code written by Opus 5.5, with no After Effects” is the author’s own claim, not re-run here. Whether a Mixkit track allows commercial use follows that track’s license page, not the example line in the template. The preview is one frame of HTML written for this site, not a frame from the author’s video. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "browser",
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "previewImage": "/previews/opus-ui-motion-prompt-template.webp",
+      "landing": {
+        "what": "这是一份交给模型的提示词，作者 zero（显示名，账号 @twoclipping）把它贴在帖子正文里。目标是写出一个 HTML 文件，画面里只有一个形状：它改宽高、圆角和颜色，里面的内容换掉，切换时带很短的模糊，镜头再推近，让当前这一态铺满画面。作者把模板分成六段。inputs 先问你要哪些状态、什么配色、哪一首曲子。direction 规定画面气质和禁止项。structure 把状态排到节拍上。build 规定样式怎么从时间算出来、弹簧怎么写、片子怎么渲。gotchas 是他自己标出的坑。start 要求模型先把状态铺在节拍网格上，再写代码。帖子开头作者称这条片子是代码，After Effects 用了 0，模型是 Opus 5.5。fxtwitter 返回的附件是 14 秒的 1440×1440 视频。本站没有用 Opus 5.5 把这条提示词再跑一遍。",
+        "whatEn": "A prompt you hand to a model. The author, zero (display name, account @twoclipping), pasted it in the post. The aim is one HTML file and one shape on screen: it changes width, height, corner radius, and color, the content inside swaps with a short blur, and the camera pushes in so the current state fills the frame. The template is six blocks. inputs asks which states, which colors, and which track. direction sets the look and the bans. structure lays the states on the beat. build says how styles are computed from time, how the springs are written, and how the piece is rendered. gotchas are the traps he marks himself. start tells the model to lay the states on the beat grid before writing code. At the top of the post he says the piece is code, After Effects was not used, and the model is Opus 5.5. The fxtwitter attachment is a 14-second 1440×1440 video. This site did not run the prompt again on Opus 5.5.",
+        "contrast": {
+          "caption": "左列只写模板 build 段里对得上的做法。右列说明它和另外三种常见做法差在哪一类问题上，不补充本库没核过的软件版本或菜单。",
+          "captionEn": "The left column is only what the template’s build block actually specifies. The right column says which kind of problem separates it from three common approaches, without filling in software versions or menus this library has not checked.",
+          "leftLabel": "这份模板",
+          "leftLabelEn": "This template",
+          "rightLabel": "另外三种做法",
+          "rightLabelEn": "Three other approaches",
+          "rows": [
+            {
+              "aspect": "对照 CSS transition",
+              "aspectEn": "Beside CSS transitions",
+              "left": "每一帧的样式都在 seek(t) 里从时间算出来。模板写明不用 CSS transition，不用定时器，帧与帧之间不留状态。同一个 t 再算一次，结果应相同，所以可以按帧重渲。",
+              "leftEn": "Every frame’s styles are computed from time inside seek(t). The template says no CSS transitions, no timers, and no state carried between frames. The same t computed again should match, so a frame can be rendered again.",
+              "right": "普通 CSS transition 是把起点和终点交给浏览器，中间帧由它的时钟去插。时长和缓动写在样式里，想精确对到某一拍，通常要改数字再看一遍，中间帧不在你的脚本里。",
+              "rightEn": "A plain CSS transition hands a start and an end to the browser, and its clock interpolates the frames in between. Duration and easing live in the stylesheet. Hitting a specific beat usually means changing a number and watching again; the in-between frames are not in your script."
+            },
+            {
+              "aspect": "对照 After Effects",
+              "aspectEn": "Beside After Effects",
+              "left": "节拍来自对音频的测量：模板写用 numpy 找出节拍网格，从强拍起，界面上的声音对齐测到的峰值。状态先铺在这个网格上，再写代码。某一拍不对，可以只重渲那一拍。",
+              "leftEn": "The beat comes from measuring the audio: the template says to use numpy to find the beat grid, start on a downbeat, and place UI sounds on the measured peaks. States are laid on that grid before any code. A beat that is off can be re-rendered on its own.",
+              "right": "After Effects 的常见做法是把关键帧放在时间轴上，对拍时回去拖关键帧或写表达式。对照点在于：这里的时间轴是节拍数据和 seek(t)，改完再跑渲染脚本，而不是在时间轴上拖点。本站没有打开作者的工程，帖子也称没有用 After Effects。",
+              "rightEn": "The usual After Effects path puts keyframes on a timeline and matches the beat by moving those keys or writing expressions. The comparison is that the timeline here is the beat data plus seek(t): change it, then run the render script again, rather than dragging keys. This site did not open an author project; the post itself says After Effects was not used."
+            },
+            {
+              "aspect": "对照 Lottie",
+              "aspectEn": "Beside Lottie",
+              "left": "交付物是一个 HTML，加上渲染脚本：Playwright 每帧再画 4 个子帧，ffmpeg 的 tmix 合成 60fps，用来做运动模糊。循环靠最后一帧和第一帧相同，包括光标的位置和速度。",
+              "leftEn": "The deliverable is one HTML file plus a render script: Playwright draws 4 subframes per frame, and ffmpeg’s tmix blends them to 60fps for motion blur. The loop depends on the last frame matching the first, cursor position and speed included.",
+              "right": "Lottie 交给播放器的是一份动画数据，播放器按时间去播。对照点在于：这份模板的画面是脚本按 t 一帧帧算出来的，循环条件写在模板的坑和收尾里，重渲就是再跑一遍 Playwright 和 ffmpeg。本站没有把作者的片子转成 Lottie 来比较文件。",
+              "rightEn": "Lottie hands a player a piece of animation data, and the player plays it against time. The comparison is that this template’s frames are computed by a script at each t, the loop condition is written into the template’s gotchas and ending, and re-rendering means running Playwright and ffmpeg again. This site did not convert the author’s piece to Lottie to compare files."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "模板拆开：先问三样输入",
+            "titleEn": "Template, part one: it asks for three inputs",
+            "body": "inputs 段让模型先问你，而不是直接写代码。要的是 8 到 12 个界面状态，举例有按钮、加载、播放器、滑块、开关、标签、图表、命令面板、提示条；一套配色，纯黑白，或只加一个强调色；再加一首大约 120 BPM 的免版税曲子，文中举例 Mixkit。这一步还没有 HTML。",
+            "bodyEn": "The inputs block tells the model to ask you first, rather than writing code. It asks for 8 to 12 UI states — the examples are button, loader, player, slider, toggle, tabs, chart, command palette, toast — a color scheme of pure black and white or black and white plus one accent, and a royalty-free track around 120 BPM, with Mixkit named as the example. There is no HTML yet at this step.",
+            "links": [
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖里的模板",
+                "labelEn": "Template in the original post"
+              },
+              {
+                "href": "https://mixkit.co/free-stock-music/",
+                "label": "Mixkit 免费曲库",
+                "labelEn": "Mixkit free stock music"
+              }
+            ]
+          },
+          {
+            "title": "模板拆开：一条形状，沿节拍走完",
+            "titleEn": "Template, part two: one shape, through the beat",
+            "body": "direction 段要求不切镜头。同一个元素改尺寸、圆角和颜色，内容切换带短模糊；光标用真实的点击和拖拽推动每次变化；底是浅暖灰，组件黑白，字体点名 Geist；弹簧只允许很小的过冲；镜头推近，让每一态充满画面；最后一帧等于第一帧，用来无缝循环。作者在这一段写了禁止项：弹跳缓动、粒子爆发、辉光、控件上的渐变、图标描边不统一、空拍，以及看起来像套模板的东西。structure 段写明 120 BPM、7 小节、每一拍都有事。状态顺序是：按钮，加载，勾选，Dynamic Island，播放器（播放和暂停互变），拖进度条，进度条变成音量滑块并在拉过最大值时被拉长，开关在拍点上翻转，旋钮变成液态标签指示条，标签展开成自己画出来的图表并在悬停时出提示，收成 Cmd+K，打字筛选，回车，提示条，再回到按钮。",
+            "bodyEn": "The direction block says not to cut. The same element changes size, radius, and color, and content swaps with a short blur. A cursor drives every change with real clicks and drags. The canvas is a light warm gray, the components are black and white, and the font named is Geist. Springs get only a tiny overshoot. The camera pushes in so each state fills the frame. The last frame equals the first, so it loops. In that same block he bans bouncy easing, particle bursts, glows, gradients on the UI chrome, mismatched icon strokes, dead time, and anything that looks like a template. The structure block specifies 120 BPM, 7 bars, and something on every beat. The order is: button, loader, check, Dynamic Island, a player whose play and pause morph, a scrub of the progress bar, the bar becoming a volume slider that stretches when dragged past the max, a toggle flipping on the beat, the knob becoming a liquid tab indicator, the tabs opening into a chart that draws itself with a tooltip on hover, collapsing into Cmd+K, typing to filter, Enter, a toast, and back to the button.",
+            "links": [
+              {
+                "href": "https://vercel.com/font",
+                "label": "Geist 字体",
+                "labelEn": "Geist font"
+              },
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖",
+                "labelEn": "Original post"
+              }
+            ]
+          },
+          {
+            "title": "模板拆开：seek(t)、弹簧、节拍和出片",
+            "titleEn": "Template, part three: seek(t), springs, the beat, the render",
+            "body": "build 段一共七条。一个 HTML，画面 1440×1440。所有样式在 seek(t) 里按时间计算，没有 CSS transition，没有定时器，帧与帧之间不留状态。弹簧写成闭式的阶跃响应；一个值的目标改过好几次，就把每一次变化的弹簧加起来，结果仍然只取决于时间。标签指示条的两条边用不同的弹簧，前缘先被拉开，开关旋钮用同一手法。按住拖拽时，数值由光标位置算出；松开后从当时的位置弹回。用 numpy 分析曲子，找出节拍网格，从强拍开始，界面音效放到测到的峰值上。渲染用 Playwright：每帧 4 个子帧，再用 ffmpeg 的 tmix 混成 60fps 的运动模糊。正式出片前，先每一拍渲一帧，格子歪了、挤了或看不清就改。",
+            "bodyEn": "The build block has seven points. One HTML file, square, 1440×1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames. Springs are closed-form step responses. When a value changes target several times, you add one spring per change, and the result is still a function of time only. The tab indicator’s two edges ride different springs, so the leading edge stretches ahead of the trailing one; the toggle knob uses the same trick. While a drag is held, the value is computed from the cursor position; on release it springs back from wherever it was. numpy analyzes the song, finds the beat grid, and starts on a downbeat; UI sounds sit on the measured peaks. The render is Playwright at 4 subframes per frame, blended with ffmpeg’s tmix into 60fps motion blur. Before the full render, render one frame per beat and fix anything off the grid, cramped, or hard to read.",
+            "links": [
+              {
+                "href": "https://numpy.org/",
+                "label": "numpy",
+                "labelEn": "numpy"
+              },
+              {
+                "href": "https://playwright.dev/docs/screenshots",
+                "label": "Playwright 截图文档",
+                "labelEn": "Playwright screenshots"
+              },
+              {
+                "href": "https://ffmpeg.org/ffmpeg-filters.html#tmix",
+                "label": "ffmpeg tmix",
+                "labelEn": "ffmpeg tmix"
+              }
+            ]
+          },
+          {
+            "title": "模板拆开：坑，以及动笔前的那一步",
+            "titleEn": "Template, part four: the gotchas, and the step before code",
+            "body": "gotchas 段写了三件具体的事。相机会缩放的东西不要加 will-change，否则文字发糊。变形容器里更换的文字要单独给进入和离开的时间，不然两段字叠在一起。最后一帧必须和第一帧相同，包括光标的位置和速度，否则循环会顿一下。start 段只有一句要求：先问输入，然后把状态列表铺在节拍网格上给作者看，之后才写代码。",
+            "bodyEn": "The gotchas block names three concrete things. Do not put will-change on anything the camera scales, or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing, or the two strings overlap. The last frame must match the first, cursor position and speed included, or the loop stutters. The start block has one requirement: ask for the inputs, then show the state list laid on the beat grid, and only then write code.",
+            "links": [
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖里的 gotchas / start",
+                "labelEn": "gotchas / start in the original post"
+              }
+            ]
+          },
+          {
+            "title": "准备状态、配色和一首约 120 BPM 的曲子",
+            "titleEn": "Prepare the states, the colors, and a ~120 BPM track",
+            "body": "自己试的时候按 inputs：先列出 8 到 12 个你想让这个形状变成的界面状态，定黑白或再加一个强调色，选一首大约 120 BPM 的曲子。模板举例 Mixkit，并写了 free for commercial use。这一句是作者的举例。商用前打开 Mixkit 上那一条音轨的许可，以站点当时的条款为准。字体若要跟模板一致，用 Geist。",
+            "bodyEn": "To try it, follow inputs: list 8 to 12 UI states you want the shape to become, pick black and white or black and white plus one accent, and choose a track around 120 BPM. The template names Mixkit and writes “free for commercial use.” That line is the author’s example. Before commercial use, open the license on that Mixkit track and follow the terms on the site at the time. For the font the template names, use Geist.",
+            "links": [
+              {
+                "href": "https://mixkit.co/free-stock-music/",
+                "label": "Mixkit 曲库",
+                "labelEn": "Mixkit music library"
+              },
+              {
+                "href": "https://vercel.com/font",
+                "label": "Geist",
+                "labelEn": "Geist"
+              },
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖",
+                "labelEn": "Original post"
+              }
+            ]
+          },
+          {
+            "title": "先让模型把状态铺到节拍上",
+            "titleEn": "Have the model lay the states on the beat first",
+            "body": "把模板交给模型之后，停在 start。让它复述你的状态、配色和曲子，并把每一拍上是哪个状态列出来。网格对了，再让它写那个单文件 HTML，样式都放进 seek(t)。跳过这一步直接要成片，模板自己的顺序就被打乱了。",
+            "bodyEn": "After you hand over the template, stop at start. Have the model restate your states, colors, and track, and list which state sits on each beat. Once that grid looks right, have it write the single HTML file with every style inside seek(t). Asking for the finished piece before that skips the order the template sets.",
+            "links": [
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖的 start 段",
+                "labelEn": "The start block in the post"
+              }
+            ]
+          },
+          {
+            "title": "用 Playwright 子帧和 ffmpeg tmix 出片",
+            "titleEn": "Render with Playwright subframes and ffmpeg tmix",
+            "body": "模板的出片是：Playwright 打开那个 HTML，每一帧再采样 4 个子帧，ffmpeg 的 tmix 把它们合成 60fps。子帧是为了运动模糊。页面里没有 transition，也没有定时器，所以这不是在录一段 CSS 动画。正式渲之前，模板还要求先每一拍出一帧，检查是否出格、挤在一起或看不清。本站只渲了自己写的一帧示意（按钮收到加载），没有跑完这条出片管线，也没有重做作者的 14 秒片子。",
+            "bodyEn": "The template’s render is: Playwright opens that HTML, samples 4 subframes per frame, and ffmpeg’s tmix blends them to 60fps. The subframes are there for motion blur. The page has no transitions and no timers, so this is not a recording of a CSS animation. Before the full render, the template also asks for one frame per beat, to check anything off the grid, cramped, or hard to read. This site rendered one frame of its own (a button tightening into a loader) and did not run the full pipeline, or remake the author’s 14-second piece.",
+            "links": [
+              {
+                "href": "https://playwright.dev/docs/screenshots",
+                "label": "Playwright 截图",
+                "labelEn": "Playwright screenshots"
+              },
+              {
+                "href": "https://ffmpeg.org/ffmpeg-filters.html#tmix",
+                "label": "ffmpeg tmix 滤镜",
+                "labelEn": "ffmpeg tmix filter"
+              },
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "原帖",
+                "labelEn": "Original post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "「整支视频是 Opus 5.5 做的、没有用 After Effects」是作者自己的说法。本站没有用 Opus 5.5 重跑这条提示词，也没有核对成片里的每一帧是否来自同一次生成。附件时长和尺寸来自 fxtwitter 的媒体元数据（14 秒、1440×1440）。",
+            "textEn": "“The whole video was made by Opus 5.5, with no After Effects” is the author’s own claim. This site did not re-run the prompt on Opus 5.5, and did not check that every frame of the piece came from one generation. The attachment length and size come from fxtwitter’s media metadata (14 seconds, 1440×1440)."
+          },
+          {
+            "text": "曲子如果用 Mixkit，许可以 Mixkit 自己的条款为准。商用前先打开那一条音轨的许可页。模板里的 free for commercial use 是作者的举例，不是本站复核过的法律结论。",
+            "textEn": "If the track is from Mixkit, the license is Mixkit’s own terms. Open that track’s license page before commercial use. The template’s “free for commercial use” is the author’s example, not a legal conclusion checked here."
+          },
+          {
+            "text": "成片取决于你用的模型和来回改的次数。direction 里禁止的效果，模型不一定一次就守住。will-change 和循环首尾这两条，模板写明是容易出错的地方。",
+            "textEn": "The result depends on the model and on how many times you iterate. The effects banned in direction are not something a model is guaranteed to respect on the first pass. The template itself marks will-change and the loop’s first and last frames as easy places to get wrong."
+          },
+          {
+            "text": "预览图是本站用同一思路写的一小段 HTML：一个按钮按时间收成加载，样式在 seek(t) 里计算。Playwright 截了一帧，存成 1000×667 的 WebP。不是作者视频的截帧。",
+            "textEn": "The preview is a short HTML page written here in the same spirit: a button tightening into a loader over time, with styles computed in seek(t). Playwright captured one frame, saved as a 1000×667 WebP. It is not a frame from the author’s video."
+          }
+        ],
+        "previewCredit": "预览：本站自写的一帧。暖灰底上，按钮按 seek(t) 收向加载，右侧出现圆弧；下方标了按钮 / 加载 / 勾选。Playwright 截取，1000×667。不是 @twoclipping 视频的截帧。",
+        "previewCreditEn": "Preview: one frame written for this site. On a warm-gray ground, a button tightens toward a loader via seek(t), with an arc on the right; button / loader / check are marked underneath. Captured with Playwright at 1000×667. Not a frame from @twoclipping’s video."
+      },
+      "publishedAt": "2026-09-25",
+      "updatedAt": "2026-09-26T06:10:00Z"
+    },
+    {
       "id": "personal-jarvis",
       "slug": "personal-jarvis-opensource",
       "title": "Personal Jarvis：开源本机语音编排桌面（Grok Bot 相邻）",
@@ -4901,11 +5130,18 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-25T01:12:00Z",
+    "updatedAt": "2026-09-26T06:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.30",
-    "count": 127,
+    "version": "1.4.31",
+    "count": 128,
     "sourcesCrawled": [
+      "https://x.com/twoclipping/status/2103273003555402193",
+      "https://api.fxtwitter.com/twoclipping/status/2103273003555402193",
+      "https://mixkit.co/free-stock-music/",
+      "https://vercel.com/font",
+      "https://playwright.dev/docs/screenshots",
+      "https://ffmpeg.org/ffmpeg-filters.html#tmix",
+      "https://numpy.org/",
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
       "https://personaljarvis.ai",

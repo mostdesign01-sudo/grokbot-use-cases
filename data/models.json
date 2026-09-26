@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-25T12:20:00Z",
+    "updatedAt": "2026-09-26T06:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "count": 11
   },
   "models": [
@@ -17,7 +17,7 @@
       "summaryEn": "Anthropic’s first model in the Claude 5.5 family, announced 2026-09-22 (official page title “Introducing Claude Opus 5.5”, HTTP 200). The page says it performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5 on typical workloads; the meta description says it leads in agentic coding and knowledge work and costs 40% less to run than Opus 5. Vendor price table (per 1M tokens): input $4, output $20 (claimed 20% less than Opus 5), cache reads $0.20 (vs Opus 5 at $0.50, claimed 60% less), cache writes $5 (vs $6.25); fast mode is $8 input / $40 output, claimed up to 2.5× speed. Third-party board: the Artificial Analysis page (variant “Adaptive Reasoning, Max Effort, Default Fallback”) lists Intelligence Index 58 (#1 / 211), $4.00 input / $20.00 output, a 95% cache discount, $5.98 per task, and a 1M context; the speed cell is N/A. HN: item 49803892 (1793pts on Algolia at check time, 2026-09-22 ~16:29Z).",
       "announcedAt": "2026-09-22",
       "publishedAt": "2026-09-25",
-      "updatedAt": "2026-09-25T12:20:00Z",
+      "updatedAt": "2026-09-26T06:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -64,10 +64,14 @@
         {
           "text": "社区演示（echohive 页面自述，非本库复跑，也不另开 Models demo 卡）：https://www.echohive.ai/experiments/dinosaurs 《The Last Day》自称 “A 2.5D PAINTING · MADE BY OPUS 5.5”。条目在 HTML 库 last-day-dinosaurs，不进本板。",
           "textEn": "Community demo (echohive page self-description, not re-run here, and not a separate Models demo card): https://www.echohive.ai/experiments/dinosaurs “The Last Day” calls itself “A 2.5D PAINTING · MADE BY OPUS 5.5”. The entry lives in the HTML library as last-day-dinosaurs, not on this board."
+        },
+        {
+          "text": "社区演示（作者帖自述，非本库复跑，也不另开 Models demo 卡）：https://x.com/twoclipping/status/2103273003555402193 zero（@twoclipping）2026-09-25 公开一套提示词模板，称 14 秒 1440×1440 的 UI 动效视频全部由 Opus 5.5 写成代码、未用 After Effects。条目在 Cases 库 opus-ui-motion-prompt-template，不进本板。",
+          "textEn": "Community demo (the author’s post, not re-run here, and not a separate Models demo card): https://x.com/twoclipping/status/2103273003555402193 zero (@twoclipping) on 2026-09-25 published a prompt template and says a 14-second 1440×1440 UI motion video was written entirely as code by Opus 5.5, with no After Effects. The entry lives in the Cases library as opus-ui-motion-prompt-template, not on this board."
         }
       ],
-      "qualityNote": "收录理由：2026-09-22 发布的 Anthropic 前沿卡，官方页、AA 第三方榜与 HN item 49803892（Algolia 核对 1793pts）当晚均可核，适合 Models 看板头条。核实边界：定位、40% 成本、价目、$4/$20/$0.20、fast mode、基准表与「全平台可用」一律为官方页自述（anthropic.com/claude-opus-5-5，2026-09-25 HTTP 200），本库未复跑、未实测 API；官方表里 Astra 在 Terminal-Bench-Science 0.1 与 AutomationBench 上高于 Opus 5.5，故不把 meta 里的 “leads” 当成全表第一。Intelligence Index 58、#1/211、$5.98/任务、95% 缓存折扣、速度 N/A、1M 上下文来自 Artificial Analysis 页面（2026-09-25 HTTP 200），非本库复跑。同板 step-5-preview 的官方对照表写的是 Claude Opus 5（不是 5.5），互链只表示同板相关，不表示阶跃评过 Opus 5.5。社区绘画演示只在 HTML 库。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "收录理由：2026-09-22 发布的 Anthropic 前沿卡，官方页、AA 第三方榜与 HN item 49803892（Algolia 核对 1793pts）当晚均可核，适合 Models 看板头条。核实边界：定位、40% 成本、价目、$4/$20/$0.20、fast mode、基准表与「全平台可用」一律为官方页自述（anthropic.com/claude-opus-5-5，2026-09-25 HTTP 200），本库未复跑、未实测 API；官方表里 Astra 在 Terminal-Bench-Science 0.1 与 AutomationBench 上高于 Opus 5.5，故不把 meta 里的 “leads” 当成全表第一。Intelligence Index 58、#1/211、$5.98/任务、95% 缓存折扣、速度 N/A、1M 上下文来自 Artificial Analysis 页面（2026-09-25 HTTP 200），非本库复跑。同板 step-5-preview 的官方对照表写的是 Claude Opus 5（不是 5.5），互链只表示同板相关，不表示阶跃评过 Opus 5.5。社区绘画演示在 HTML 库 last-day-dinosaurs。2026-09-26 增补 Cases 条目 opus-ui-motion-prompt-template（@twoclipping 提示词模板，作者称片子由 Opus 5.5 写成代码），本库未复跑，不另开 Models demo 卡。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library as last-day-dinosaurs. On 2026-09-26 a Cases pointer was added for opus-ui-motion-prompt-template (@twoclipping’s prompt template; the author says the piece was written as code by Opus 5.5) — not re-run here, and not a separate Models demo card. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "claude-fable-5-1",

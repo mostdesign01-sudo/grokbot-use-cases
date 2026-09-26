@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-26",
+      "title": "Cases +1：Opus 纯代码 UI 动效提示词",
+      "titleEn": "Cases +1: Opus code-only UI motion prompt",
+      "body": "Grok Bot Cases：收 zero（@twoclipping）2026-09-25 帖（status 2103273003555402193）。2026-09-26 用 fxtwitter 核对：created_at 为 2026-09-24 23:58 UTC（上海时区 2026-09-25），附件元数据 14 秒、1440×1440。作者称整支 UI 动效由 Opus 5.5 写成代码、未用 After Effects，并公开提示词模板（inputs / direction / structure / build / gotchas / start）。详情加厚：它是什么、对照 CSS transition / After Effects / Lottie、模板拆解与怎么试、边界。预览为本站自写 HTML 的一帧（按钮按 seek(t) 收到加载），Playwright 截 1000×667 WebP，不是作者视频截帧。「整支由 Opus 5.5 完成」仍标作者自述，本站未复跑。Models：claude-opus-5-5 增一行社区演示指针，指向 Cases 条目 opus-ui-motion-prompt-template，不另开 demo 卡。cases 127→128（1.4.30→1.4.31）；models 仍为 11（1.1.8→1.1.9）。未改 html / agent-ui。",
+      "bodyEn": "Grok Bot Cases: added zero (@twoclipping)’s 25 Sept 2026 post (status 2103273003555402193). Checked via fxtwitter on 26 Sept 2026: created_at is 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai); attachment metadata is 14 seconds at 1440×1440. The author says the UI motion piece was written as code by Opus 5.5 with no After Effects, and published the prompt template (inputs / direction / structure / build / gotchas / start). The landing is thickened: what it is, contrast with CSS transitions / After Effects / Lottie, a breakdown of the template plus how to try it, and boundaries. Preview is one frame of HTML written here (a button tightening into a loader via seek(t)), captured with Playwright as a 1000×667 WebP, not a frame from the author’s video. “Made entirely by Opus 5.5” stays the author’s claim; not re-run here. Models: claude-opus-5-5 gains a one-line community-demo pointer to Cases entry opus-ui-motion-prompt-template, with no new demo card. cases 127→128 (1.4.30→1.4.31); models stay at 11 (1.1.8→1.1.9). No html / agent-ui edits."
+    },
+    {
       "date": "2026-09-25",
       "title": "晚间收录：Models +1、HTML +2",
       "titleEn": "Evening catalog: Models +1, HTML +2",
