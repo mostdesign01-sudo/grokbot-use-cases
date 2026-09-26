@@ -51,6 +51,32 @@ export const ui = {
     featured: { zh: "精选", en: "Featured" },
     latest: { zh: "最新", en: "Latest" },
     types: { zh: "类型", en: "Types" },
+    design: { zh: "设计", en: "Design" },
+  },
+  design: {
+    kicker: { zh: "跨三库", en: "Across the three libraries" },
+    h1: { zh: "设计", en: "Design" },
+    title: { zh: "设计 · AI UP LAB", en: "Design · AI UP LAB" },
+    desc: {
+      zh: "AI UP LAB 的设计索引：界面动效、组件库、字体和设计资源。条目仍在原来的三套库里。",
+      en: "AI UP LAB’s design index: UI motion, component kits, fonts, and design resources. The items stay in the existing three libraries.",
+    },
+    lede: {
+      zh: "Grok Bot 用分类 design，HTML 和 Agent UI 用标签 design。这一页把三边带这个标记的条目放在一起，数据仍是原来的三套 JSON。收的是界面动效、组件库、字体和设计资源。背景场、游戏和工程演示没有打这个标记。",
+      en: "Grok Bot uses the design category; HTML and Agent UI use the design tag. This page lists the items that carry that mark, still read from the existing three JSON files. It covers UI motion, component kits, fonts, and design resources. Background fields, games, and engineering demos are left unmarked.",
+    },
+    casesHint: {
+      zh: "分类含 design 的案例。Grok Bot 自己的类型页在 /types/design/。",
+      en: "Cases whose categories include design. The Grok Bot type page is /types/design/.",
+    },
+    htmlHint: {
+      zh: "标签含 design 的 HTML 条目：组件库、动效、字体和设计资源。",
+      en: "HTML items tagged design: component kits, motion, fonts, and design resources.",
+    },
+    agentHint: {
+      zh: "标签含 design 的 Agent UI：按钮、界面件、文字动效和组件库。纯背景场不在这里。",
+      en: "Agent UI items tagged design: buttons, UI pieces, type motion, and component kits. Plain background fields are not here.",
+    },
   },
   lib: {
     grok: { zh: "Grok Bot", en: "Grok Bot" },

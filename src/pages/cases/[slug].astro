@@ -45,6 +45,7 @@ const whatEn = landing?.whatEn ?? summaryEn;
 const whatHeading = landing ? ui.detail.whatItIs : ui.detail.whatItDoes;
 const trySteps = landing?.steps ?? [];
 const contrast = landing?.contrast;
+const landingSections = landing?.sections ?? [];
 const boundaries = landing?.boundaries ?? [];
 const previewAlt = fill(ui.detail.previewAlt, { title: item.title });
 const previewAltEn = fill(ui.detail.previewAlt, { title: item.titleEn });
@@ -177,6 +178,33 @@ const previewCreditEn = landing?.previewCreditEn;
               </div>
             </section>
           )
+        }
+
+        {
+          landingSections.map((section) => (
+            <section class="panel">
+              <h2>
+                <span class="loc-zh">{section.heading}</span>
+                <span class="loc-en">{section.headingEn}</span>
+              </h2>
+              {section.paragraphs.map((paragraph) => (
+                <p>
+                  <span class="loc-zh">{paragraph.text}</span>
+                  <span class="loc-en">{paragraph.textEn}</span>
+                </p>
+              ))}
+              {(section.links ?? []).length > 0 && (
+                <p class="start-links">
+                  {(section.links ?? []).map((link) => (
+                    <a href={link.href} rel="noreferrer">
+                      <span class="loc-zh">{link.label}</span>
+                      <span class="loc-en">{link.labelEn}</span>
+                    </a>
+                  ))}
+                </p>
+              )}
+            </section>
+          ))
         }
 
         <section class="panel">

@@ -61,7 +61,8 @@
         "copy-paste",
         "mcp",
         "llms-txt",
-        "open-source"
+        "open-source",
+        "design"
       ],
       "featured": true,
       "qualityNote": "MIT（2026-09-22 gh api）。公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。预览为 Playwright 实拍 playground 首屏裁 3:2。",
@@ -162,7 +163,8 @@
         "community",
         "certificate",
         "canvas",
-        "guilloche"
+        "guilloche",
+        "design"
       ],
       "featured": false,
       "qualityNote": "community-sync-report 含 engraved-certificate（Community 免费）。公开页 200（2026-09-17）；预览取官方缩略图裁 3:2。",
@@ -196,7 +198,8 @@
         "agent-ui",
         "web-components",
         "css-has",
-        "zero-js"
+        "zero-js",
+        "design"
       ],
       "featured": true,
       "qualityNote": "公开演示 200（2026-09-15）。组件数为站点自述；预览取文档页 Agent API 段 3:2。非 ThreeUI。",
@@ -262,7 +265,8 @@
         "community",
         "button",
         "cta",
-        "css"
+        "css",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费按钮（2026-09-14 核到 Copy Prompt、无 Pro template 遮罩；规范 URL 为 /buttons/rectangle-buttons/dot-border-button）。复制 prompt，勿手写描边动画。",
@@ -295,7 +299,8 @@
         "community",
         "typography",
         "canvas",
-        "vortex"
+        "vortex",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写粒子环。",
@@ -328,7 +333,8 @@
         "community",
         "typography",
         "particles",
-        "wordmark"
+        "wordmark",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写黏稠粒子场。",
@@ -361,7 +367,8 @@
         "community",
         "loader",
         "css",
-        "agent-console"
+        "agent-console",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费 CSS 加载件（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。复制 prompt，勿手写着色器。",
@@ -394,7 +401,8 @@
         "community",
         "badge",
         "background",
-        "canvas"
+        "canvas",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费背景（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。四变体均按免费收录。",
@@ -527,7 +535,8 @@
         "webgl",
         "button",
         "cta",
-        "liquid-metal"
+        "liquid-metal",
+        "design"
       ],
       "featured": true,
       "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。预览为现场演示帧（指针悬停态）裁 3:2。",
@@ -627,7 +636,8 @@
         "community",
         "gauge",
         "dashboard",
-        "css"
+        "css",
+        "design"
       ],
       "featured": true,
       "stars": 4,
@@ -661,7 +671,8 @@
         "community",
         "button",
         "circle",
-        "cta"
+        "cta",
+        "design"
       ],
       "featured": false,
       "stars": 4,
@@ -759,7 +770,8 @@
       "qualityNoteEn": "The most general base of the five. Connects to beUI’s shadcn add flow.",
       "tags": [
         "ui",
-        "css"
+        "css",
+        "design"
       ],
       "promptHint": "先用 shadcn/ui 搭按钮、表单和对话框，再往上叠 Beautiful UI 的 Agent 原语。",
       "promptHintEn": "Build buttons, forms, and dialogs with shadcn/ui first, then stack Beautiful UI’s agent primitives on top.",
@@ -788,7 +800,8 @@
       "tags": [
         "motion",
         "ui",
-        "css"
+        "css",
+        "design"
       ],
       "promptHint": "从 Transitions.dev 免费区抄一个流式文字或思考态过渡，接到现有 Chat 组件上。",
       "promptHintEn": "Copy one free streaming-text or thinking-state transition from Transitions.dev onto the existing Chat component.",
@@ -816,7 +829,8 @@
       "qualityNoteEn": "One of the five sites in the post. More of a showcase; check license and deps before copying.",
       "tags": [
         "ui",
-        "motion"
+        "motion",
+        "design"
       ],
       "promptHint": "参考 Rare UI 的动效密度，只抄一个交互进现有页面，不要整站换皮。",
       "promptHintEn": "Take Rare UI’s motion density; copy one interaction into the existing page, don’t reskin the whole site.",
@@ -846,7 +860,8 @@
       "tags": [
         "ui",
         "motion",
-        "css"
+        "css",
+        "design"
       ],
       "promptHint": "从 beUI registry 装一个 Prompt Input 和 Approval Card，动效跟项目主色走。",
       "promptHintEn": "Install a Prompt Input and Approval Card from the beUI registry. Match motion to the project’s primary color.",
@@ -873,7 +888,8 @@
       "qualityNoteEn": "First of the five sites in 周览资源’s post. Built for agent UIs, not a generic button kit.",
       "tags": [
         "ui",
-        "css"
+        "css",
+        "design"
       ],
       "promptHint": "用 Beautiful UI 的 Approval Card 和 Thinking 做 Agent 对话页。保持深色，审批默认停住。",
       "promptHintEn": "Use Beautiful UI’s Approval Card and Thinking for an agent chat. Keep it dark; approvals stay blocked by default.",
@@ -937,7 +953,8 @@
         "webgpu",
         "swiftui",
         "motion",
-        "ui"
+        "ui",
+        "design"
       ],
       "promptHint": "用 MetalForge Progress 做同步/加载进度条。先在编辑器里选 Spring 或 Slosh，换成我们的主色，导出前先截预览给设计看。",
       "promptHintEn": "Use MetalForge Progress for a sync/loading bar. Pick Spring or Slosh in the editor, switch to our primary color, and screenshot the preview for design before exporting.",
@@ -1067,7 +1084,8 @@
         "community",
         "button",
         "cta",
-        "css"
+        "css",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "从 Rectangle Buttons 挑一个免费 CTA。文案改成「开始试用」，主色换成站点强调色。",
@@ -1101,7 +1119,8 @@
         "community",
         "shader",
         "button",
-        "webgl"
+        "webgl",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Shader Buttons 的免费 Thinking 变体做「生成中」按钮。换成靛紫色，亮度略降。",
@@ -1334,7 +1353,8 @@
         "community",
         "typography",
         "path",
-        "canvas"
+        "canvas",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Text Path Studies 做章节大标题。文字改成中文产品名，色相跟纸色底协调。",
@@ -1367,7 +1387,8 @@
         "community",
         "gallery",
         "heading",
-        "typography"
+        "typography",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Gallery Heading 做作品集分节。标题换成「精选」，字体粗一点，色相偏靛。",
@@ -1401,7 +1422,8 @@
         "community",
         "article",
         "heading",
-        "wordmark"
+        "wordmark",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Article Headings 做更新日志顶栏。文字改成「今日收录」，粒子少一点，方便阅读。",
@@ -1541,7 +1563,8 @@
         "community",
         "carousel",
         "cards",
-        "ui"
+        "ui",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Character Carousel 的 filmstrip 变体做 Agent 团队墙。保持 Community 免费版，换成我们的人名与职责，主色跟品牌走。",
@@ -1701,7 +1724,8 @@
         "threeui",
         "community",
         "ui",
-        "skeuomorphic"
+        "skeuomorphic",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Skeuomorphic Toggle 做设置页开关。保持免费 Community 变体，色相换成我们的主色。",
@@ -1765,7 +1789,8 @@
         "canvas",
         "shader",
         "shadcn-registry",
-        "mcp"
+        "mcp",
+        "design"
       ],
       "npmPackage": "@canvas-ui/core",
       "promptHint": "从 Canvas UI 复制 Liquid 组件进项目，保持 DOM 可选中可点击，并做无 html-in-canvas 时的降级。",
@@ -1829,7 +1854,8 @@
         "threeui",
         "community",
         "dock",
-        "css"
+        "css",
+        "design"
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Animated Top Dock 做控制台顶栏。选 Sable 或 Liquid Glass，保持免费变体。",
@@ -1873,9 +1899,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T12:28:44Z",
+    "updatedAt": "2026-09-26T07:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.21",
+    "version": "1.4.22",
     "count": 57
   }
 }

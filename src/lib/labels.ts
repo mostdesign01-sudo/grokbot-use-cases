@@ -14,6 +14,7 @@ export const categoryLabels: Record<string, string> = {
   "multi-agent": "多 Agent",
   coding: "编程",
   ops: "运营",
+  design: "设计",
 };
 
 export const categoryLabelsEn: Record<string, string> = {
@@ -29,6 +30,7 @@ export const categoryLabelsEn: Record<string, string> = {
   "multi-agent": "Multi-agent",
   coding: "Coding",
   ops: "Ops",
+  design: "Design",
 };
 
 export const categoryIntros: Record<string, string> = {
@@ -44,6 +46,7 @@ export const categoryIntros: Record<string, string> = {
   "multi-agent": "多 Bot 群聊、交接与蜂群协作。",
   coding: "建站、代码审查与工程工厂相邻用法。",
   ops: "日常运营与流程卫生相关用法。",
+  design: "界面动效、组件库、字体和设计资源。HTML 与 Agent UI 里带同一标记的条目，见顶部「设计」。",
 };
 
 export const categoryIntrosEn: Record<string, string> = {
@@ -59,6 +62,7 @@ export const categoryIntrosEn: Record<string, string> = {
   "multi-agent": "Multi-bot group chats, handoffs, and swarm collaboration.",
   coding: "Site launches, code review, and engineering-factory adjacent uses.",
   ops: "Day-to-day operations and process hygiene.",
+  design: "UI motion, component kits, fonts, and design resources. HTML and Agent UI items with the same mark are under Design in the header.",
 };
 
 export const sourceTypeLabels: Record<SourceType, string> = {

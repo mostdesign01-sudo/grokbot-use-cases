@@ -5,9 +5,10 @@
       "slug": "opus-ui-motion-prompt-template",
       "title": "一条提示词做 Dribbble 级 UI 动效视频（纯代码，不用 AE）",
       "titleEn": "One prompt for a Dribbble-level UI motion video (code only, no After Effects)",
-      "summary": "zero（@twoclipping）2026-09-25 的帖子公开了一份 UI 动效提示词模板：https://x.com/twoclipping/status/2103273003555402193 。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-24 23:58 UTC（上海时区为 2026-09-25），视频附件为 14 秒、1440×1440。作者称整支片子由 Opus 5.5 写成代码，After Effects 用了 0。模板让同一个形状沿大约 120 BPM 的节拍走完一串界面状态，样式在 seek(t) 里按时间计算。本站未重跑生成。",
-      "summaryEn": "zero (@twoclipping) published a UI-motion prompt template on 25 Sept 2026: https://x.com/twoclipping/status/2103273003555402193 . Checked via fxtwitter on 26 Sept 2026: the post was created at 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai), and the video attachment is 14 seconds at 1440×1440. The author says the whole piece was written as code by Opus 5.5, with zero After Effects. The template runs one shape through a chain of UI states on a ~120 BPM beat, with every style computed from time inside seek(t). Not re-run here.",
+      "summary": "zero（@twoclipping）2026-09-25 的帖子公开了一份 UI 动效提示词模板：https://x.com/twoclipping/status/2103273003555402193 。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-24 23:58 UTC（上海时区为 2026-09-25），视频附件为 14 秒、1440×1440。作者称整支片子由 Opus 5.5 写成代码，After Effects 用了 0。模板让同一个形状沿大约 120 BPM 的节拍走完一串界面状态，样式在 seek(t) 里按时间计算。本站未重跑生成。同日 Martijn Verbove（@verbove，做 MakerMap / doczen）用同一类做法讲自己的产品 MakerMap：https://x.com/verbove/status/2103483957266268381 。fxtwitter 附件为 20 秒、1440×1440。两条都是作者自述，本站未重跑。",
+      "summaryEn": "zero (@twoclipping) published a UI-motion prompt template on 25 Sept 2026: https://x.com/twoclipping/status/2103273003555402193 . Checked via fxtwitter on 26 Sept 2026: the post was created at 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai), and the video attachment is 14 seconds at 1440×1440. The author says the whole piece was written as code by Opus 5.5, with zero After Effects. The template runs one shape through a chain of UI states on a ~120 BPM beat, with every style computed from time inside seek(t). Not re-run here. The same day, Martijn Verbove (@verbove, who builds MakerMap / doczen) used the same kind of approach to explain his own product, MakerMap: https://x.com/verbove/status/2103483957266268381 . The fxtwitter attachment is 20 seconds at 1440×1440. Both posts stay the authors’ own claims; not re-run here.",
       "categories": [
+        "design",
         "content",
         "coding"
       ],
@@ -18,11 +19,14 @@
         "https://vercel.com/font",
         "https://playwright.dev/docs/screenshots",
         "https://ffmpeg.org/ffmpeg-filters.html#tmix",
-        "https://numpy.org/"
+        "https://numpy.org/",
+        "https://x.com/verbove/status/2103483957266268381",
+        "https://www.makermap.lol/",
+        "https://www.doczen.com/"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "收录理由：一条可以从 X 点进来的提示词模板，结构写全了（inputs / direction / structure / build / gotchas / start），读者能照着准备状态、对节拍、再出片。2026-09-26 用 fxtwitter 核对正文与附件元数据（14 秒、1440×1440，显示名 zero，账号 @twoclipping）。核实边界：「整支视频是 Opus 5.5 写成的代码、没用 After Effects」是作者自述，本站未复跑。Mixkit 是否可商用以该曲许可页为准，不沿用模板里的举例句。预览是本站自写 HTML 的一帧，不是作者视频截图。不打星。",
-      "qualityNoteEn": "Why it is listed: a prompt template someone can open from X, with the structure written out (inputs / direction / structure / build / gotchas / start), so a reader can prepare states, lay them on the beat, and render. Checked via fxtwitter on 26 Sept 2026 for the text and the attachment metadata (14 seconds, 1440×1440, display name zero, account @twoclipping). Boundary: “the whole video is code written by Opus 5.5, with no After Effects” is the author’s own claim, not re-run here. Whether a Mixkit track allows commercial use follows that track’s license page, not the example line in the template. The preview is one frame of HTML written for this site, not a frame from the author’s video. Unrated.",
+      "qualityNote": "收录理由：一条可以从 X 点进来的提示词模板，结构写全了（inputs / direction / structure / build / gotchas / start），读者能照着准备状态、对节拍、再出片。2026-09-26 用 fxtwitter 核对正文与附件元数据（14 秒、1440×1440，显示名 zero，账号 @twoclipping）。核实边界：「整支视频是 Opus 5.5 写成的代码、没用 After Effects」是作者自述，本站未复跑。Mixkit 是否可商用以该曲许可页为准，不沿用模板里的举例句。预览是本站自写 HTML 的一帧，不是作者视频截图。不打星。同日另核 @verbove 帖 2103483957266268381（显示名 Martijn Verbove）：附件 20 秒、1440×1440。MakerMap 人数 3,393 为作者产品数据，未核对。",
+      "qualityNoteEn": "Why it is listed: a prompt template someone can open from X, with the structure written out (inputs / direction / structure / build / gotchas / start), so a reader can prepare states, lay them on the beat, and render. Checked via fxtwitter on 26 Sept 2026 for the text and the attachment metadata (14 seconds, 1440×1440, display name zero, account @twoclipping). Boundary: “the whole video is code written by Opus 5.5, with no After Effects” is the author’s own claim, not re-run here. Whether a Mixkit track allows commercial use follows that track’s license page, not the example line in the template. The preview is one frame of HTML written for this site, not a frame from the author’s video. Unrated. The same day, also checked @verbove post 2103483957266268381 (display name Martijn Verbove): attachment 20 seconds at 1440×1440. The MakerMap count of 3,393 is the author’s product data and was not checked here.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -203,6 +207,29 @@
                 "labelEn": "Original post"
               }
             ]
+          },
+          {
+            "title": "接触表先看一遍，再按画幅出片",
+            "titleEn": "Check a contact sheet first, then export each aspect ratio",
+            "body": "zero 的模板在正式出片前先每一拍渲一帧，再走 Playwright：每帧 4 个子帧，ffmpeg 的 tmix 合成 60fps。Verbove 把这一步写成接触表：先按拍把所有状态铺开，挤了就改，然后用无头 Chrome 以 60fps 渲，每帧平均 6 个子帧，ffmpeg 出 H.264、像素格式 yuv420p，1:1、16:9、9:16 并行导出。两条都是作者写在帖子里的步骤。本站没有跑完其中任何一条出片管线。",
+            "bodyEn": "zero’s template renders one frame per beat before the full piece, then Playwright at 4 subframes per frame, blended with ffmpeg’s tmix to 60fps. Verbove writes that pass as a contact sheet: lay every state out on the beat, fix anything cramped, then render in headless Chrome at 60fps, averaging 6 subframes per frame, and export with ffmpeg as H.264, pixel format yuv420p, with 1:1, 16:9, and 9:16 in parallel. Both are steps the authors wrote in their posts. This site did not run either full render pipeline.",
+            "links": [
+              {
+                "href": "https://x.com/verbove/status/2103483957266268381",
+                "label": "@verbove 的出片步骤",
+                "labelEn": "@verbove’s render steps"
+              },
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "@twoclipping 的出片步骤",
+                "labelEn": "@twoclipping’s render steps"
+              },
+              {
+                "href": "https://ffmpeg.org/ffmpeg-filters.html#tmix",
+                "label": "ffmpeg tmix",
+                "labelEn": "ffmpeg tmix"
+              }
+            ]
           }
         ],
         "boundaries": [
@@ -221,13 +248,71 @@
           {
             "text": "预览图是本站用同一思路写的一小段 HTML：一个按钮按时间收成加载，样式在 seek(t) 里计算。Playwright 截了一帧，存成 1000×667 的 WebP。不是作者视频的截帧。",
             "textEn": "The preview is a short HTML page written here in the same spirit: a button tightening into a loader over time, with styles computed in seek(t). Playwright captured one frame, saved as a 1000×667 WebP. It is not a frame from the author’s video."
+          },
+          {
+            "text": "「整支由 Opus 5.5 写成、没用 After Effects」对两条帖子都是作者自述。Verbove 的附件经 fxtwitter 核对为 20 秒、1440×1440。本站没有重跑，也没有使用他的视频画面。片子里点亮地球的 3,393 个 maker 是 @verbove 写在帖子里的产品数据，本站没有登录 MakerMap，也没有核对这个人数。",
+            "textEn": "“Written by Opus 5.5, with no After Effects” is the author’s own claim on both posts. Verbove’s attachment, checked via fxtwitter, is 20 seconds at 1440×1440. This site did not re-run it and did not use frames from his video. The 3,393 makers lighting the globe are product data @verbove wrote in the post; this site did not sign in to MakerMap and did not check that count."
           }
         ],
-        "previewCredit": "预览：本站自写的一帧。暖灰底上，按钮按 seek(t) 收向加载，右侧出现圆弧；下方标了按钮 / 加载 / 勾选。Playwright 截取，1000×667。不是 @twoclipping 视频的截帧。",
-        "previewCreditEn": "Preview: one frame written for this site. On a warm-gray ground, a button tightens toward a loader via seek(t), with an arc on the right; button / loader / check are marked underneath. Captured with Playwright at 1000×667. Not a frame from @twoclipping’s video."
+        "previewCredit": "预览：本站自写的一帧。暖灰底上，按钮按 seek(t) 收向加载，右侧出现圆弧；下方标了按钮 / 加载 / 勾选。Playwright 截取，1000×667。不是 @twoclipping 的视频截帧，也不是 @verbove 的视频截帧。",
+        "previewCreditEn": "Preview: one frame written for this site. On a warm-gray ground, a button tightens toward a loader via seek(t), with an arc on the right; button / loader / check are marked underneath. Captured with Playwright at 1000×667. Not a frame from @twoclipping’s video, and not a frame from @verbove’s video.",
+        "sections": [
+          {
+            "heading": "第二个例子：用它讲自己的产品",
+            "headingEn": "A second example: use it to explain your own product",
+            "paragraphs": [
+              {
+                "text": "同一天，Martijn Verbove（显示名，账号 @verbove，做 MakerMap 和 doczen）发了另一条帖。他把一条已经在传的动效帖给 Opus 5.5 看，然后写了一句：explain MakerMap, but make it insane。作者称得到一支片子：一个形状沿产品走完注册、钉上一枚图钉、maker 把地球点亮、匹配、聚会、搜索。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-25 13:57 UTC，附件元数据是 20 秒、1440×1440。帖子里写点亮地球的是 3,393 个 maker。这个人数是他写在帖子里的产品数据，本站没有登录 MakerMap，也没有核对。他用的函数名是 draw(t)；zero 的模板里对应的是 seek(t)。「整支由 Opus 5.5 写成、没用 After Effects」仍是作者自述，本站没有重跑，也没有从他的视频里截帧。",
+                "textEn": "The same day, Martijn Verbove (display name, account @verbove, who builds MakerMap and doczen) posted another one. He showed Opus 5.5 one motion post that was already circulating, then wrote: explain MakerMap, but make it insane. He says the result is one shape moving through the product: sign up, drop a pin, makers lighting up a globe, matches, a meetup, search. Checked via fxtwitter on 26 Sept 2026: the post was created at 13:57 UTC on 25 Sept 2026, and the attachment metadata is 20 seconds at 1440×1440. The post says 3,393 makers light the globe. That count is product data he wrote in the post; this site did not sign in to MakerMap and did not check the number. His function name is draw(t); the matching function in zero’s template is seek(t). “Written by Opus 5.5, with no After Effects” stays his claim. Not re-run here, and no frame was taken from his video."
+              },
+              {
+                "text": "他公开的骨架第一段是 inputs。先写产品和网址，再列 8 到 12 个界面状态，每个状态配上真实数据，然后是品牌色、字体和强调色，最后写需要的画幅：1:1、16:9、9:16。和 zero 的 inputs 相比，这里多了产品本身、每个状态上的真实数据，以及三种画幅一起交。",
+                "textEn": "The first block of the skeleton he published is inputs. Name the product and its URL, list 8 to 12 UI states, put real data on each state, then brand colors, fonts, and the accent, and finally the formats required: 1:1, 16:9, and 9:16. Next to zero’s inputs, this one adds the product itself, real data on every state, and all three aspect ratios in one handoff."
+              },
+              {
+                "text": "rules 段规定一个 HTML 文件、一块画布、一个 draw(t)。不用 CSS transition，不用定时器，帧与帧之间不留状态。同一个形状从头走到尾，中间不切。一只光标推动整段：真实的点击、打字，外加一次拖拽。界面和数据都用真的，不用占位符。",
+                "textEn": "The rules block specifies one HTML file, one canvas, and one draw(t). No CSS transitions, no timers, and no state carried between frames. One shape runs the whole way and is never cut. A cursor drives the sequence: real clicks, typing, and one drag. The UI and the data are real, with no placeholders."
+              },
+              {
+                "text": "structure 段把时间放在 120 BPM 的网格上，每一拍都有事。他写出的顺序是：logo，按钮，用户名输入，确认是不是你，加载，图钉，地球被用户点亮，匹配，标签，RSVP，搜索，再回到 logo。",
+                "textEn": "The structure block puts time on a 120 BPM grid, with something on every beat. The order he wrote is: logo, button, a handle field, a confirmation that asks whether this is you, a loader, a pin, a globe filling with users, matches, tabs, an RSVP, search, and back to the logo."
+              },
+              {
+                "text": "motion 段用闭式弹簧，过冲很小。目标每改一次，就加一条弹簧，再把它们加在一起。内容要等容器开始变形之后才进来，并在下一次变形之前离开。切换时只给很短的模糊。不要从纯黑直接淡进强调色。标签指示条的两条边用不同的弹簧。镜头推近，让每一态铺满画面。最后一帧等于第一帧。",
+                "textEn": "The motion block uses closed-form springs with a tiny overshoot. Each time a target changes, add one spring and sum them. Content enters after the container starts morphing and leaves before the next morph. Transitions get only a short blur. Do not fade straight from black into the accent. The tab indicator’s two edges ride different springs. The camera zooms so each state fills the frame. The last frame equals the first."
+              },
+              {
+                "text": "export 段先要求按拍出一张接触表，把挤在一起的状态改掉，再用无头 Chrome 以 60fps 渲，每帧平均 6 个子帧，ffmpeg 出 H.264、yuv420p，1:1、16:9、9:16 并行导出。和 zero 的出片差在哪，写在下面「怎么试」的最后一步。下面是转述后的骨架，不是帖子原文；原帖在 @verbove，前一条模板在 @twoclipping。",
+                "textEn": "The export block first asks for one frame per beat as a contact sheet, and for cramped states to be fixed, then a headless Chrome render at 60fps that averages 6 subframes per frame, ffmpeg to H.264 yuv420p, and 1:1, 16:9, and 9:16 exported in parallel. How that differs from zero’s render is in the last step under How to try it. The skeleton above is a paraphrase, not the post verbatim. The original post is @verbove’s; the earlier template is @twoclipping’s."
+              }
+            ],
+            "links": [
+              {
+                "href": "https://x.com/verbove/status/2103483957266268381",
+                "label": "@verbove 的原帖",
+                "labelEn": "@verbove’s post"
+              },
+              {
+                "href": "https://www.makermap.lol/",
+                "label": "MakerMap",
+                "labelEn": "MakerMap"
+              },
+              {
+                "href": "https://www.doczen.com/",
+                "label": "doczen",
+                "labelEn": "doczen"
+              },
+              {
+                "href": "https://x.com/twoclipping/status/2103273003555402193",
+                "label": "@twoclipping 的模板帖",
+                "labelEn": "@twoclipping’s template post"
+              }
+            ]
+          }
+        ]
       },
       "publishedAt": "2026-09-25",
-      "updatedAt": "2026-09-26T06:10:00Z"
+      "updatedAt": "2026-09-26T07:20:00Z"
     },
     {
       "id": "personal-jarvis",
@@ -5130,11 +5215,15 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-26T06:10:00Z",
+    "updatedAt": "2026-09-26T07:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.31",
+    "version": "1.4.32",
     "count": 128,
     "sourcesCrawled": [
+      "https://x.com/verbove/status/2103483957266268381",
+      "https://api.fxtwitter.com/verbove/status/2103483957266268381",
+      "https://www.makermap.lol/",
+      "https://www.doczen.com/",
       "https://x.com/twoclipping/status/2103273003555402193",
       "https://api.fxtwitter.com/twoclipping/status/2103273003555402193",
       "https://mixkit.co/free-stock-music/",
