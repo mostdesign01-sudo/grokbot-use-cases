@@ -431,6 +431,7 @@ for (const needle of errandChecks) {
 const designPage = await readFile(new URL("../dist/design/index.html", import.meta.url), "utf8");
 for (const needle of [
   "opus-ui-motion-prompt-template",
+  "dashi-ppt-skill",
   "html/react-bits",
   "html/animata",
   "html/vengeance-ui",
@@ -457,6 +458,28 @@ for (const needle of [
 ]) {
   if (!motionCase.includes(needle)) {
     console.error(`cases/opus-ui-motion-prompt-template/ is missing ${needle}`);
+    process.exit(1);
+  }
+}
+
+const dashiCase = await readFile(
+  new URL("../dist/cases/dashi-ppt-skill/index.html", import.meta.url),
+  "utf8",
+);
+for (const needle of [
+  "大师 PPT Skill：文档丢给 Agent，出可改的网页 PPT 和 PPTX",
+  "https://github.com/chuspeeism/dashi-ppt-skill",
+  "https://x.com/dashiAIxz/status/2103692814995632185",
+  "https://x.com/dashiAIxz/status/2103691858698448981",
+  "AGPL-3.0",
+  "8794",
+  "npx dashi-ppt-skill@latest",
+  "theme01.jpg",
+  "1020",
+  "html-deck-to-pptx",
+]) {
+  if (!dashiCase.includes(needle)) {
+    console.error(`cases/dashi-ppt-skill/ is missing ${needle}`);
     process.exit(1);
   }
 }
