@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updatedAt": "2026-09-25T12:20:00Z",
+    "updatedAt": "2026-09-26T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.8",
-    "count": 11
+    "version": "1.1.9",
+    "count": 13
   },
   "models": [
     {
@@ -76,6 +76,154 @@
       "previewImage": "/previews/claude-opus-5-5.webp",
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-opus-5-5 首屏",
       "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-opus-5-5 above the fold",
+      "featured": true,
+      "stars": 4
+    },
+    {
+      "id": "ollaya",
+      "slug": "ollaya",
+      "name": "Ollaya",
+      "vendor": "ollaya-dev",
+      "title": "Ollaya：本机跑开源决策模型（Jev / Laya 相邻）",
+      "titleEn": "Ollaya: run open decision models locally (Jev / Laya-adjacent)",
+      "summary": "HN 首页（item 49848269，2026-09-25 ~18:33Z，Algolia 核对 483pts）https://ollaya.dev/ — 作者定位「像 Ollama 跑 LLM 一样，本机跑开源决策模型」。拉 Laya / decider / NLI / GLiClass 等开源权重，本地 daemon 提供 TypeSafe 兼容的 /v1/systemone；官方称可改 TYPESAFE_BASE_URL 指向本机，现有 Jev 客户端不用改代码。仓库 ollaya-dev/ollaya 于 2026-09-26 gh api：Apache-2.0、296★。官网与仓库均 HTTP 200。延迟对比数字（如 Laya 8–10ms、Jev hosted 236–276ms）一律标官网自述 / 第三方基准，本库未复跑。另有当日 Show HN Ollaya Web UI（item 49855683）为第三方 Web UI，无 license、1★，不单独开卡。",
+      "summaryEn": "HN front-page item 49848269 (2026-09-25 ~18:33Z, 483pts on Algolia at check time) at https://ollaya.dev/ — pitched as “Ollama for open decision models.” It pulls open weights such as Laya / decider / NLI / GLiClass and serves a local TypeSafe-compatible /v1/systemone daemon; the site says existing Jev clients work by pointing TYPESAFE_BASE_URL at localhost. Repo ollaya-dev/ollaya on the 2026-09-26 gh api: Apache-2.0, 296★. Site and repo both HTTP 200. Latency comparisons (e.g. Laya 8–10ms, Jev hosted 236–276ms) are site or third-party claims — not re-run here. Same-day Show HN Ollaya Web UI (item 49855683) is a third-party UI with no license and 1★; not a separate card.",
+      "announcedAt": "2026-09-25",
+      "publishedAt": "2026-09-26",
+      "updatedAt": "2026-09-26T12:05:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Ollaya 官网",
+          "labelEn": "Ollaya homepage",
+          "url": "https://ollaya.dev/",
+          "by": "ollaya-dev",
+          "date": "2026-09-25"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：ollaya-dev/ollaya（Apache-2.0）",
+          "labelEn": "GitHub: ollaya-dev/ollaya (Apache-2.0)",
+          "url": "https://github.com/ollaya-dev/ollaya",
+          "by": "ollaya-dev"
+        },
+        {
+          "kind": "product",
+          "label": "Ollaya 模型目录 /search",
+          "labelEn": "Ollaya model catalog /search",
+          "url": "https://ollaya.dev/search",
+          "by": "ollaya-dev"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Ollaya – Ollama for open-source, Jev-style decision models",
+          "labelEn": "Hacker News: Ollaya – Ollama for open-source, Jev-style decision models",
+          "url": "https://news.ycombinator.com/item?id=49848269",
+          "by": "Hacker News",
+          "date": "2026-09-25"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者称：本机 pull / serve 开源决策模型，单次前向返回校准概率，不生成文本；CLI 命令风格对齐 Ollama（serve / run / pull / list）。",
+          "textEn": "Author claim: pull and serve open decision models locally; one forward pass returns calibrated probabilities, no text generation; CLI mirrors Ollama (serve / run / pull / list)."
+        },
+        {
+          "text": "作者称：提供 TypeSafe 兼容的 /v1/systemone；把 TYPESAFE_BASE_URL 指到 http://localhost:11435 即可用官方 SDK 打本机。",
+          "textEn": "Author claim: speaks TypeSafe’s /v1/systemone; point TYPESAFE_BASE_URL at http://localhost:11435 and the official SDK talks to the local server."
+        },
+        {
+          "text": "官网延迟表自述：RTX 4090 上五问请求，Laya 约 8–10ms；对照栏写 TypeSafe Jev hosted API 中位 236–276ms（含网络，来自第三方基准页）。本库未复跑。",
+          "textEn": "Site latency table claim: five-question request on an RTX 4090, Laya about 8–10ms; comparison cell lists TypeSafe Jev hosted API median 236–276ms (includes network, from third-party benchmarks). Not re-run here."
+        },
+        {
+          "text": "仓库 Apache-2.0；权重仍从各作者 Hugging Face 仓按 commit + sha256 拉取，Ollaya 自称不重托管。桌面端 / CLI / Docker 均有，详见官网 Platforms。",
+          "textEn": "Repo is Apache-2.0; weights are pulled from each author’s Hugging Face repo pinned by commit + sha256 — Ollaya says it does not re-host them. Desktop / CLI / Docker are listed on the site Platforms table."
+        }
+      ],
+      "qualityNote": "收录理由：HN 首页热帖（核对 483pts），把站内已收的 Jev / Laya 补上「本机 Ollama 式」运行时，可直接试。边界：速度 / 对照数字是官网与第三方基准自述，本库未复跑；未实测 MCP / 桌面端。第三方 Ollaya Web UI 无 license，不另开卡。预览为 Playwright 实拍官网首屏裁 3:2。",
+      "qualityNoteEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "laya-system-one"
+      ],
+      "previewImage": "/previews/ollaya.webp",
+      "previewCredit": "Playwright 实拍 ollaya.dev 首屏，裁 3:2",
+      "previewCreditEn": "Playwright capture of ollaya.dev above the fold, cropped to 3:2",
+      "featured": true,
+      "stars": 4
+    },
+    {
+      "id": "jev-plays-pokemon",
+      "slug": "jev-plays-pokemon",
+      "name": "Jev Plays Pokémon Red",
+      "vendor": "TypeSafe AI",
+      "title": "Jev 玩宝可梦红（社区 live demo）",
+      "titleEn": "Jev Plays Pokémon Red (community live demo)",
+      "summary": "Show HN（item 49845172，2026-09-25 ~14:28Z，Algolia 核对 214pts）https://jev-pokemon.vercel.app/ — 社区 live：用 TypeSafe Jev 决策模型通关《宝可梦 红》。作者称 harness 只读 Game Boy RAM、列出合法选项与事实，由 Jev 选一项再按键；无脚本通关、不写内存。开源仓库 christianmat/jev-pokemon 于 2026-09-26 gh api：GPL-2.0、62★。直播页自称默认静音、右侧显示每次决策与概率；页内有 Frigade 推广条，且写明与任天堂 / Game Freak / The Pokémon Company 无关、不附带 ROM。本卡只记 Jev 能力展示，不是可下载的游戏 ROM。",
+      "summaryEn": "Show HN item 49845172 (2026-09-25 ~14:28Z, 214pts on Algolia at check time) at https://jev-pokemon.vercel.app/ — a community live run of TypeSafe’s Jev decision model through Pokémon Red. The author says the harness only reads Game Boy RAM, lists legal options with facts, and lets Jev pick one before pressing buttons; no scripted win path, no memory writes. Open-source repo christianmat/jev-pokemon on the 2026-09-26 gh api: GPL-2.0, 62★. The live page says it starts muted and shows each decision and odds on the right; it also carries a Frigade promo bar and states it is not affiliated with Nintendo / Game Freak / The Pokémon Company and ships no ROM. Catalogued as a Jev capability showcase only, not a downloadable game ROM.",
+      "announcedAt": "2026-09-25",
+      "publishedAt": "2026-09-26",
+      "updatedAt": "2026-09-26T12:05:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "TypeSafe：Introducing System One Models & Jev（所用模型）",
+          "labelEn": "TypeSafe: Introducing System One Models & Jev (the model used)",
+          "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+          "by": "TypeSafe AI",
+          "date": "2026-09-15"
+        },
+        {
+          "kind": "community",
+          "label": "直播页：Jev Plays Pokémon Red",
+          "labelEn": "Live page: Jev Plays Pokémon Red",
+          "url": "https://jev-pokemon.vercel.app/",
+          "by": "christianmat",
+          "date": "2026-09-25"
+        },
+        {
+          "kind": "community",
+          "label": "GitHub：christianmat/jev-pokemon（GPL-2.0）",
+          "labelEn": "GitHub: christianmat/jev-pokemon (GPL-2.0)",
+          "url": "https://github.com/christianmat/jev-pokemon",
+          "by": "christianmat"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Show HN: Jev Plays Pokémon Red",
+          "labelEn": "Hacker News: Show HN: Jev Plays Pokémon Red",
+          "url": "https://news.ycombinator.com/item?id=49845172",
+          "by": "Hacker News",
+          "date": "2026-09-25"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者称：无作弊脚本；harness 读 RAM → 合法选项 + 事实 → Jev 选一项 → 按键；路径寻找与菜单操作由 harness 执行，决策全交给 Jev。",
+          "textEn": "Author claim: no cheat scripts; harness reads RAM → legal options + facts → Jev picks one → button presses; pathfinding and menu mechanics stay in the harness, decisions stay with Jev."
+        },
+        {
+          "text": "作者称：可自建复跑，但必须自备合法取得的《宝可梦 红》ROM（仓库不附带）；默认 JEV_MODE=mock 可免费干跑，真 Jev 走 Vercel AI Gateway。",
+          "textEn": "Author claim: you can reproduce locally with your own legally obtained Pokémon Red ROM (none is shipped); default JEV_MODE=mock is a free dumb stand-in, real Jev goes through Vercel AI Gateway."
+        },
+        {
+          "text": "README 自述成本口径：真 Jev 实时约 800–1,300 次/小时，约 $1–1.70 / 24h（作者称，$0.042/MTok 输入、输出免费）。本库未复跑。",
+          "textEn": "README cost claim: real Jev at real-time speed about 800–1,300 calls/hour, about $1–1.70 per 24h (author figures at $0.042/MTok input, free output). Not re-run here."
+        }
+      ],
+      "qualityNote": "收录理由：Show HN 热帖（核对 214pts）+ 可打开的 live 页，是站内 typesafe-jev 的社区能力展示（对齐 Astra 迷你 LOL 卡形态）。边界：不附 ROM、与任天堂无关；页内有第三方推广；成本与「无脚本」均为作者自述，本库未复跑全程。预览为 Playwright 实拍直播页首屏裁 3:2。",
+      "qualityNoteEn": "Why: Show HN hit (214pts at check time) plus a tryable live page — a community capability showcase for catalogued typesafe-jev (same shape as the Astra mini-LoL card). Boundary: no ROM shipped, not affiliated with Nintendo; page carries a third-party promo; cost and “no scripts” claims are the author’s, full run not re-played here. Preview is a Playwright capture of the live page above the fold, cropped to 3:2.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "laya-system-one",
+        "ollaya"
+      ],
+      "previewImage": "/previews/jev-plays-pokemon.webp",
+      "previewCredit": "Playwright 实拍 jev-pokemon.vercel.app 首屏，裁 3:2",
+      "previewCreditEn": "Playwright capture of jev-pokemon.vercel.app above the fold, cropped to 3:2",
       "featured": true,
       "stars": 4
     },
@@ -328,7 +476,9 @@
       "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
-        "typesafe-jev"
+        "typesafe-jev",
+        "ollaya",
+        "jev-plays-pokemon"
       ],
       "previewImage": "/previews/laya-system-one.webp",
       "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
@@ -826,7 +976,9 @@
       "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
       "relatedCaseIds": [],
       "relatedModelIds": [
-        "laya-system-one"
+        "laya-system-one",
+        "ollaya",
+        "jev-plays-pokemon"
       ],
       "featured": true,
       "stars": 4
