@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-09-26",
+      "title": "同日：动效模板第三来源 HyperFrames",
+      "titleEn": "Same day: third source for the motion template, HyperFrames",
+      "body": "opus-ui-motion-prompt-template 补第三来源，不新开条目：Zsolt Kacso（@kaolti）2026-09-25 帖 status 2103481296018092204。fxtwitter 核对 created_at 为 2026-09-25 13:46 UTC，附件 39.5 秒、1920×1080。作者称在 HyperFrames 里给 Cosmos 做了这支片子，2 条提示词、没有参考。回复串里的提示词没有取到（fxtwitter 无回复正文，xcancel 451），页面只链原帖，不编提示词。详情加一节「第三种路子：用现成框架」：对照 zero / Verbove 的单文件 seek(t) / draw(t)，和 HyperFrames 的 data 属性加 CLI 渲染。HyperFrames 主页 hyperframes.dev 与文档 hyperframes.heygen.com/introduction 当日 HTTP 200；仓库 heygen-com/hyperframes，gh api Apache-2.0、53121 stars。不另开目录条目。cases 仍为 129（1.4.33→1.4.34）。未改 html / agent-ui / models。",
+      "bodyEn": "Third source on opus-ui-motion-prompt-template, no new entry: Zsolt Kacso (@kaolti), 25 Sept 2026, status 2103481296018092204. fxtwitter: created_at 13:46 UTC on 25 Sept 2026, attachment 39.5 seconds at 1920×1080. He says the piece was built in HyperFrames for Cosmos with 2 prompts and no references. The prompts in the reply thread were not retrieved (fxtwitter returned no reply text; xcancel returned 451); the page links the post and does not invent prompt text. The landing gains “A third route: use a framework that already exists,” contrasting zero / Verbove’s single-file seek(t) / draw(t) with HyperFrames’ data attributes and CLI render. hyperframes.dev and hyperframes.heygen.com/introduction returned HTTP 200 that day; repo heygen-com/hyperframes, gh api Apache-2.0, 53121 stars. No new catalog entry. cases stay at 129 (1.4.33→1.4.34). No html / agent-ui / models edits."
+    },
+    {
+      "date": "2026-09-26",
       "title": "Cases +1：大师 PPT Skill",
       "titleEn": "Cases +1: Dashi PPT Skill",
       "body": "Grok Bot Cases 新开 dashi-ppt-skill，归入分类 design。来源是 @dashiAIxz（显示名大师的AI小灶）2026-09-26 推荐帖 status 2103692814995632185，fxtwitter 核对它引用了同日宣传片帖 2103691858698448981（附件 42.583 秒、1920×1080）。仓库 chuspeeism/dashi-ppt-skill，2026-09-26 gh api：8794 stars、AGPL-3.0、pushed_at 2026-09-12。README 的 12 / 1020 / 8576 标为自称。详情写安装、选主题、浏览器里改、导出 PPTX，以及 AGPL-3.0 与导出引擎专有许可的边界。预览为 release readme-assets-v1 的 theme01.jpg 装进 1000×667，不是宣传片截帧。cases 128→129（1.4.32→1.4.33）。未改 html / agent-ui / models。",

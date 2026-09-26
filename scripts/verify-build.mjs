@@ -455,6 +455,11 @@ for (const needle of [
   "draw(t)",
   "3,393",
   "接触表",
+  "第三种路子：用现成框架",
+  "https://x.com/kaolti/status/2103481296018092204",
+  "https://www.hyperframes.dev/",
+  "https://github.com/heygen-com/hyperframes",
+  "Prompts below",
 ]) {
   if (!motionCase.includes(needle)) {
     console.error(`cases/opus-ui-motion-prompt-template/ is missing ${needle}`);

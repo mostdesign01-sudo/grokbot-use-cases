@@ -171,8 +171,8 @@
       "slug": "opus-ui-motion-prompt-template",
       "title": "一条提示词做 Dribbble 级 UI 动效视频（纯代码，不用 AE）",
       "titleEn": "One prompt for a Dribbble-level UI motion video (code only, no After Effects)",
-      "summary": "zero（@twoclipping）2026-09-25 的帖子公开了一份 UI 动效提示词模板：https://x.com/twoclipping/status/2103273003555402193 。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-24 23:58 UTC（上海时区为 2026-09-25），视频附件为 14 秒、1440×1440。作者称整支片子由 Opus 5.5 写成代码，After Effects 用了 0。模板让同一个形状沿大约 120 BPM 的节拍走完一串界面状态，样式在 seek(t) 里按时间计算。本站未重跑生成。同日 Martijn Verbove（@verbove，做 MakerMap / doczen）用同一类做法讲自己的产品 MakerMap：https://x.com/verbove/status/2103483957266268381 。fxtwitter 附件为 20 秒、1440×1440。两条都是作者自述，本站未重跑。",
-      "summaryEn": "zero (@twoclipping) published a UI-motion prompt template on 25 Sept 2026: https://x.com/twoclipping/status/2103273003555402193 . Checked via fxtwitter on 26 Sept 2026: the post was created at 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai), and the video attachment is 14 seconds at 1440×1440. The author says the whole piece was written as code by Opus 5.5, with zero After Effects. The template runs one shape through a chain of UI states on a ~120 BPM beat, with every style computed from time inside seek(t). Not re-run here. The same day, Martijn Verbove (@verbove, who builds MakerMap / doczen) used the same kind of approach to explain his own product, MakerMap: https://x.com/verbove/status/2103483957266268381 . The fxtwitter attachment is 20 seconds at 1440×1440. Both posts stay the authors’ own claims; not re-run here.",
+      "summary": "zero（@twoclipping）2026-09-25 的帖子公开了一份 UI 动效提示词模板：https://x.com/twoclipping/status/2103273003555402193 。2026-09-26 用 fxtwitter 核对，帖子创建于 2026-09-24 23:58 UTC（上海时区为 2026-09-25），视频附件为 14 秒、1440×1440。作者称整支片子由 Opus 5.5 写成代码，After Effects 用了 0。模板让同一个形状沿大约 120 BPM 的节拍走完一串界面状态，样式在 seek(t) 里按时间计算。本站未重跑生成。同日 Martijn Verbove（@verbove，做 MakerMap / doczen）用同一类做法讲自己的产品 MakerMap：https://x.com/verbove/status/2103483957266268381 。fxtwitter 附件为 20 秒、1440×1440。两条都是作者自述，本站未重跑。同日另有 Zsolt Kacso（@kaolti）的帖 https://x.com/kaolti/status/2103481296018092204 ：fxtwitter 核对创建于 2026-09-25 13:46 UTC，附件 39.5 秒、1920×1080。作者称在 HyperFrames 里给 Cosmos 做了这支片子，只用 2 条提示词、没有参考。提示词正文在他的回复串里，本站没有读到，不转写。",
+      "summaryEn": "zero (@twoclipping) published a UI-motion prompt template on 25 Sept 2026: https://x.com/twoclipping/status/2103273003555402193 . Checked via fxtwitter on 26 Sept 2026: the post was created at 23:58 UTC on 24 Sept 2026 (25 Sept in Asia/Shanghai), and the video attachment is 14 seconds at 1440×1440. The author says the whole piece was written as code by Opus 5.5, with zero After Effects. The template runs one shape through a chain of UI states on a ~120 BPM beat, with every style computed from time inside seek(t). Not re-run here. The same day, Martijn Verbove (@verbove, who builds MakerMap / doczen) used the same kind of approach to explain his own product, MakerMap: https://x.com/verbove/status/2103483957266268381 . The fxtwitter attachment is 20 seconds at 1440×1440. Both posts stay the authors’ own claims; not re-run here. The same day Zsolt Kacso (@kaolti) posted https://x.com/kaolti/status/2103481296018092204 . Checked via fxtwitter: created at 13:46 UTC on 25 Sept 2026, attachment 39.5 seconds at 1920×1080. He says he built it in HyperFrames for Cosmos with only 2 prompts and no references. The prompt text is in his reply thread; it was not retrieved here and is not paraphrased.",
       "categories": [
         "design",
         "content",
@@ -188,11 +188,15 @@
         "https://numpy.org/",
         "https://x.com/verbove/status/2103483957266268381",
         "https://www.makermap.lol/",
-        "https://www.doczen.com/"
+        "https://www.doczen.com/",
+        "https://x.com/kaolti/status/2103481296018092204",
+        "https://www.hyperframes.dev/",
+        "https://hyperframes.heygen.com/introduction",
+        "https://github.com/heygen-com/hyperframes"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "收录理由：一条可以从 X 点进来的提示词模板，结构写全了（inputs / direction / structure / build / gotchas / start），读者能照着准备状态、对节拍、再出片。2026-09-26 用 fxtwitter 核对正文与附件元数据（14 秒、1440×1440，显示名 zero，账号 @twoclipping）。核实边界：「整支视频是 Opus 5.5 写成的代码、没用 After Effects」是作者自述，本站未复跑。Mixkit 是否可商用以该曲许可页为准，不沿用模板里的举例句。预览是本站自写 HTML 的一帧，不是作者视频截图。不打星。同日另核 @verbove 帖 2103483957266268381（显示名 Martijn Verbove）：附件 20 秒、1440×1440。MakerMap 人数 3,393 为作者产品数据，未核对。",
-      "qualityNoteEn": "Why it is listed: a prompt template someone can open from X, with the structure written out (inputs / direction / structure / build / gotchas / start), so a reader can prepare states, lay them on the beat, and render. Checked via fxtwitter on 26 Sept 2026 for the text and the attachment metadata (14 seconds, 1440×1440, display name zero, account @twoclipping). Boundary: “the whole video is code written by Opus 5.5, with no After Effects” is the author’s own claim, not re-run here. Whether a Mixkit track allows commercial use follows that track’s license page, not the example line in the template. The preview is one frame of HTML written for this site, not a frame from the author’s video. Unrated. The same day, also checked @verbove post 2103483957266268381 (display name Martijn Verbove): attachment 20 seconds at 1440×1440. The MakerMap count of 3,393 is the author’s product data and was not checked here.",
+      "qualityNote": "收录理由：一条可以从 X 点进来的提示词模板，结构写全了（inputs / direction / structure / build / gotchas / start），读者能照着准备状态、对节拍、再出片。2026-09-26 用 fxtwitter 核对正文与附件元数据（14 秒、1440×1440，显示名 zero，账号 @twoclipping）。核实边界：「整支视频是 Opus 5.5 写成的代码、没用 After Effects」是作者自述，本站未复跑。Mixkit 是否可商用以该曲许可页为准，不沿用模板里的举例句。预览是本站自写 HTML 的一帧，不是作者视频截图。不打星。同日另核 @verbove 帖 2103483957266268381（显示名 Martijn Verbove）：附件 20 秒、1440×1440。MakerMap 人数 3,393 为作者产品数据，未核对。同日另核 @kaolti 帖 2103481296018092204（显示名 Zsolt Kacso）：附件 39.5 秒、1920×1080。「最大的质量跳跃」「2 条提示词、没有参考」是作者自述。回复串里的提示词没有取到，页面只链到原帖。HyperFrames 仓库 heygen-com/hyperframes，2026-09-26 gh api：Apache-2.0、53121 stars。",
+      "qualityNoteEn": "Why it is listed: a prompt template someone can open from X, with the structure written out (inputs / direction / structure / build / gotchas / start), so a reader can prepare states, lay them on the beat, and render. Checked via fxtwitter on 26 Sept 2026 for the text and the attachment metadata (14 seconds, 1440×1440, display name zero, account @twoclipping). Boundary: “the whole video is code written by Opus 5.5, with no After Effects” is the author’s own claim, not re-run here. Whether a Mixkit track allows commercial use follows that track’s license page, not the example line in the template. The preview is one frame of HTML written for this site, not a frame from the author’s video. Unrated. The same day, also checked @verbove post 2103483957266268381 (display name Martijn Verbove): attachment 20 seconds at 1440×1440. The MakerMap count of 3,393 is the author’s product data and was not checked here. The same day, also checked @kaolti post 2103481296018092204 (display name Zsolt Kacso): attachment 39.5 seconds at 1920×1080. “Biggest jump in quality,” “2 prompts, no references” are the author’s own claims. The prompts in the reply thread were not retrieved; the page only links the post. HyperFrames repo heygen-com/hyperframes, gh api on 26 Sept 2026: Apache-2.0, 53121 stars.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -418,10 +422,14 @@
           {
             "text": "「整支由 Opus 5.5 写成、没用 After Effects」对两条帖子都是作者自述。Verbove 的附件经 fxtwitter 核对为 20 秒、1440×1440。本站没有重跑，也没有使用他的视频画面。片子里点亮地球的 3,393 个 maker 是 @verbove 写在帖子里的产品数据，本站没有登录 MakerMap，也没有核对这个人数。",
             "textEn": "“Written by Opus 5.5, with no After Effects” is the author’s own claim on both posts. Verbove’s attachment, checked via fxtwitter, is 20 seconds at 1440×1440. This site did not re-run it and did not use frames from his video. The 3,393 makers lighting the globe are product data @verbove wrote in the post; this site did not sign in to MakerMap and did not check that count."
+          },
+          {
+            "text": "「Opus 5.5 是近来输出质量跳得最大的一次」「在 HyperFrames 里给 Cosmos 做的、只用 2 条提示词、没有参考」都是 @kaolti 的自述。附件时长和尺寸来自 fxtwitter（39.5 秒、1920×1080）。本站没有重跑，也没有使用他的视频画面。Prompts below 指向的两条提示词在回复串里；本站没有读到正文，所以不摘要、不引用。",
+            "textEn": "“Opus 5.5 is the biggest jump in output quality I’ve seen lately” and “built in HyperFrames for Cosmos, 2 prompts only, no references” are @kaolti’s own claims. The attachment length and size come from fxtwitter (39.5 seconds, 1920×1080). This site did not re-run it and did not use frames from his video. The two prompts under “Prompts below” are in the reply thread. The text was not retrieved here, so it is not summarized or quoted."
           }
         ],
-        "previewCredit": "预览：本站自写的一帧。暖灰底上，按钮按 seek(t) 收向加载，右侧出现圆弧；下方标了按钮 / 加载 / 勾选。Playwright 截取，1000×667。不是 @twoclipping 的视频截帧，也不是 @verbove 的视频截帧。",
-        "previewCreditEn": "Preview: one frame written for this site. On a warm-gray ground, a button tightens toward a loader via seek(t), with an arc on the right; button / loader / check are marked underneath. Captured with Playwright at 1000×667. Not a frame from @twoclipping’s video, and not a frame from @verbove’s video.",
+        "previewCredit": "预览：本站自写的一帧。暖灰底上，按钮按 seek(t) 收向加载，右侧出现圆弧；下方标了按钮 / 加载 / 勾选。Playwright 截取，1000×667。不是 @twoclipping、@verbove 或 @kaolti 的视频截帧。",
+        "previewCreditEn": "Preview: one frame written for this site. On a warm-gray ground, a button tightens toward a loader via seek(t), with an arc on the right; button / loader / check are marked underneath. Captured with Playwright at 1000×667. Not a frame from @twoclipping’s, @verbove’s, or @kaolti’s video.",
         "sections": [
           {
             "heading": "第二个例子：用它讲自己的产品",
@@ -474,11 +482,55 @@
                 "labelEn": "@twoclipping’s template post"
               }
             ]
+          },
+          {
+            "heading": "第三种路子：用现成框架",
+            "headingEn": "A third route: use a framework that already exists",
+            "paragraphs": [
+              {
+                "text": "Zsolt Kacso（显示名，账号 @kaolti，简介里写自己做设计和搭建）在 2026-09-25 13:46 UTC 发了 https://x.com/kaolti/status/2103481296018092204 。2026-09-26 用 fxtwitter 核对，附件元数据是 39.5 秒、1920×1080。正文说 Opus 5.5 大概是他近来看到的输出质量跳得最大的一次；他在 @HyperFrames_ 里给 Cosmos 做了这支片子，只用了 2 条提示词，完全没有参考；最后一句是 Prompts below。这些都是作者自己的说法。本站没有重跑，也没有从他的视频里截帧。「Cosmos」只按帖子里的词记下，没有另找一份产品页来定义它。",
+                "textEn": "Zsolt Kacso (display name, account @kaolti; the bio says he designs and builds) posted https://x.com/kaolti/status/2103481296018092204 at 13:46 UTC on 25 Sept 2026. Checked via fxtwitter on 26 Sept 2026: the attachment metadata is 39.5 seconds at 1920×1080. He writes that Opus 5.5 is probably the biggest jump in output quality he has seen lately; that he built this in @HyperFrames_ for Cosmos with only 2 prompts and no references at all; and that the prompts are below. Those are his own claims. This site did not re-run it and did not take a frame from his video. “Cosmos” is recorded as the word in the post; no separate product page was opened to define it."
+              },
+              {
+                "text": "提示词正文在他这条帖的自回复里。fxtwitter 的帖子接口只带回这一条，没有带回回复。xcancel 返回 451，试过的 nitter 镜像没有给出回复正文。这里不转写那两条提示词。要看原文，从上面的帖子点进回复串。",
+                "textEn": "The prompt text is in his self-replies under that post. The fxtwitter status endpoint returned only this post, not the replies. xcancel returned 451, and the nitter mirrors that were tried did not return the reply text. Those two prompts are not paraphrased here. To read them, open the reply thread from the post above."
+              },
+              {
+                "text": "@HyperFrames_ 的简介写着 Write HTML. Render video. Built for Agents.，并写由 @HeyGen 开源。2026-09-26 打开 https://www.hyperframes.dev/ 返回 HTTP 200，文档页 https://hyperframes.heygen.com/introduction 也是 200。仓库 https://github.com/heygen-com/hyperframes 同日用 gh api 读到 license Apache-2.0、stargazers_count 53121、pushed_at 2026-09-26T06:36:07Z。README 把它写成开源框架：用 HTML、CSS、媒体和可以 seek 的动画，渲成确定性的 MP4。时间写在 data-start、data-duration 这类属性上，动画可以交给 GSAP 等，再登记成一条暂停的时间轴；渲染器在无头 Chrome 里按帧 seek，用 FFmpeg 编码。命令是 npx hyperframes init，然后 preview、render。README 写需要 Node.js 22+ 和 FFmpeg，协议 Apache 2.0，没有按次渲染费。本站没有把 kaolti 的成片和仓库里的某一次提交对上。",
+                "textEn": "The @HyperFrames_ bio says “Write HTML. Render video. Built for Agents.” and that it was open-sourced by @HeyGen. On 26 Sept 2026, https://www.hyperframes.dev/ returned HTTP 200, and the docs page https://hyperframes.heygen.com/introduction did too. The same day the gh api read https://github.com/heygen-com/hyperframes as license Apache-2.0, stargazers_count 53121, pushed_at 2026-09-26T06:36:07Z. The README describes an open-source framework: HTML, CSS, media, and seekable animation rendered to a deterministic MP4. Timing sits on attributes such as data-start and data-duration; animation can be a GSAP timeline registered while paused; the renderer seeks each frame in headless Chrome and encodes with FFmpeg. The commands are npx hyperframes init, then preview and render. The README says it needs Node.js 22+ and FFmpeg, the license is Apache 2.0, and there is no per-render fee. This site did not match kaolti’s finished video to a specific commit in that repo."
+              },
+              {
+                "text": "zero 和 Verbove 的路子是自己写一个 HTML：一个形状，一个随时间计算的函数（zero 写 seek(t)，Verbove 写 draw(t)），不用 CSS transition，出片脚本再去采样子帧。kaolti 用的是现成框架。画面仍然是 HTML，但轨道、时间属性和渲染命令由 HyperFrames 规定，作者说他只交了两条提示词、没有参考。两条都还是代码出片。差别在于时间函数和渲染器是模板里让模型现写，还是框架已经带好。本站没有打开他的工程。HyperFrames 是独立仓库，没有另开一条目录，只从这里链出去。",
+                "textEn": "zero and Verbove’s route is to write one HTML file: one shape, one function of time (seek(t) in zero’s template, draw(t) in Verbove’s), no CSS transitions, and a render script that samples subframes. kaolti used a framework that already exists. The picture is still HTML, but the tracks, the timing attributes, and the render command are HyperFrames’. He says he handed over only two prompts and no references. Both routes are still code. The difference is whether the template asks the model to write the time function and the renderer, or the framework already ships them. This site did not open his project. HyperFrames stays a separate repo; it is linked from this page and is not a new catalog entry."
+              }
+            ],
+            "links": [
+              {
+                "href": "https://x.com/kaolti/status/2103481296018092204",
+                "label": "@kaolti 的原帖（提示词在回复串）",
+                "labelEn": "@kaolti’s post (prompts are in the replies)"
+              },
+              {
+                "href": "https://www.hyperframes.dev/",
+                "label": "HyperFrames 主页",
+                "labelEn": "HyperFrames site"
+              },
+              {
+                "href": "https://github.com/heygen-com/hyperframes",
+                "label": "heygen-com/hyperframes",
+                "labelEn": "heygen-com/hyperframes"
+              },
+              {
+                "href": "https://hyperframes.heygen.com/introduction",
+                "label": "HyperFrames 文档",
+                "labelEn": "HyperFrames docs"
+              }
+            ]
           }
         ]
       },
       "publishedAt": "2026-09-25",
-      "updatedAt": "2026-09-26T07:20:00Z"
+      "updatedAt": "2026-09-26T06:50:00Z"
     },
     {
       "id": "personal-jarvis",
@@ -5381,11 +5433,16 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-26T06:45:00Z",
+    "updatedAt": "2026-09-26T06:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.33",
+    "version": "1.4.34",
     "count": 129,
     "sourcesCrawled": [
+      "https://x.com/kaolti/status/2103481296018092204",
+      "https://api.fxtwitter.com/kaolti/status/2103481296018092204",
+      "https://www.hyperframes.dev/",
+      "https://hyperframes.heygen.com/introduction",
+      "https://github.com/heygen-com/hyperframes",
       "https://x.com/dashiAIxz/status/2103692814995632185",
       "https://api.fxtwitter.com/dashiAIxz/status/2103692814995632185",
       "https://x.com/dashiAIxz/status/2103691858698448981",
