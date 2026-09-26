@@ -1,0 +1,70 @@
+---
+import AgentUiCard from "../../components/AgentUiCard.astro";
+import CaseCard from "../../components/CaseCard.astro";
+import HtmlCard from "../../components/HtmlCard.astro";
+import Loc from "../../components/Loc.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { designAgentUi, designCases, designHtml } from "../../lib/design";
+import { ui } from "../../lib/i18n";
+
+const caseItems = designCases();
+const html = designHtml();
+const agent = designAgentUi();
+const total = caseItems.length + html.length + agent.length;
+---
+
+<BaseLayout
+  collection="lab"
+  title={ui.design.title.zh}
+  titleEn={ui.design.title.en}
+  description={ui.design.desc.zh}
+  descriptionEn={ui.design.desc.en}
+>
+  <div class="wrap-wide">
+    <section class="collection-hero">
+      <p class="kicker"><Loc zh={ui.design.kicker.zh} en={ui.design.kicker.en} /></p>
+      <h1><Loc zh={ui.design.h1.zh} en={ui.design.h1.en} /></h1>
+      <p class="lede">
+        <span class="loc-zh">{ui.design.lede.zh}</span>
+        <span class="loc-en">{ui.design.lede.en}</span>
+      </p>
+      <p class="meta-line">
+        <span class="loc-zh">{total} 条 · Grok Bot {caseItems.length} · HTML {html.length} · Agent UI {agent.length}</span>
+        <span class="loc-en">{total} items · Grok Bot {caseItems.length} · HTML {html.length} · Agent UI {agent.length}</span>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Grok Bot</h2>
+      <p class="contrast-caption">
+        <span class="loc-zh">{ui.design.casesHint.zh}</span>
+        <span class="loc-en">{ui.design.casesHint.en}</span>
+      </p>
+      <div class="tweet-feed">
+        {caseItems.map((item) => <CaseCard caseItem={item} showLibBadge />)}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></h2>
+      <p class="contrast-caption">
+        <span class="loc-zh">{ui.design.htmlHint.zh}</span>
+        <span class="loc-en">{ui.design.htmlHint.en}</span>
+      </p>
+      <div class="masonry">
+        {html.map((item) => <HtmlCard item={item} />)}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Agent UI</h2>
+      <p class="contrast-caption">
+        <span class="loc-zh">{ui.design.agentHint.zh}</span>
+        <span class="loc-en">{ui.design.agentHint.en}</span>
+      </p>
+      <div class="masonry">
+        {agent.map((item) => <AgentUiCard item={item} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

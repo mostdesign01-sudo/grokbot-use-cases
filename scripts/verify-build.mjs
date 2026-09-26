@@ -38,6 +38,7 @@ const requiredPages = [
   "models.json",
   "image-prompts/index.html",
   "image-prompts.json",
+  "design/index.html",
 ];
 
 const missing = [];
@@ -378,6 +379,11 @@ if (
   }
 }
 
+if (!home.includes("design/") || !home.includes("设计")) {
+  console.error("Homepage is missing the design index link (design/ / 设计).");
+  process.exit(1);
+}
+
 if (!home.includes("核验精选") || !home.includes("plaza-position")) {
   console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
   process.exit(1);
@@ -422,6 +428,67 @@ for (const needle of errandChecks) {
     process.exit(1);
   }
 }
+const designPage = await readFile(new URL("../dist/design/index.html", import.meta.url), "utf8");
+for (const needle of [
+  "opus-ui-motion-prompt-template",
+  "dashi-ppt-skill",
+  "html/react-bits",
+  "html/animata",
+  "html/vengeance-ui",
+  "agent-ui/shadcn-ui",
+  "设计",
+]) {
+  if (!designPage.includes(needle)) {
+    console.error(`design/ is missing ${needle}`);
+    process.exit(1);
+  }
+}
+
+const motionCase = await readFile(
+  new URL("../dist/cases/opus-ui-motion-prompt-template/index.html", import.meta.url),
+  "utf8",
+);
+for (const needle of [
+  "第二个例子：用它讲自己的产品",
+  "https://x.com/verbove/status/2103483957266268381",
+  "https://www.makermap.lol/",
+  "draw(t)",
+  "3,393",
+  "接触表",
+  "第三种路子：用现成框架",
+  "https://x.com/kaolti/status/2103481296018092204",
+  "https://www.hyperframes.dev/",
+  "https://github.com/heygen-com/hyperframes",
+  "Prompts below",
+]) {
+  if (!motionCase.includes(needle)) {
+    console.error(`cases/opus-ui-motion-prompt-template/ is missing ${needle}`);
+    process.exit(1);
+  }
+}
+
+const dashiCase = await readFile(
+  new URL("../dist/cases/dashi-ppt-skill/index.html", import.meta.url),
+  "utf8",
+);
+for (const needle of [
+  "大师 PPT Skill：文档丢给 Agent，出可改的网页 PPT 和 PPTX",
+  "https://github.com/chuspeeism/dashi-ppt-skill",
+  "https://x.com/dashiAIxz/status/2103692814995632185",
+  "https://x.com/dashiAIxz/status/2103691858698448981",
+  "AGPL-3.0",
+  "8794",
+  "npx dashi-ppt-skill@latest",
+  "theme01.jpg",
+  "1020",
+  "html-deck-to-pptx",
+]) {
+  if (!dashiCase.includes(needle)) {
+    console.error(`cases/dashi-ppt-skill/ is missing ${needle}`);
+    process.exit(1);
+  }
+}
+
 if (errandPage.includes("把跑通的步骤存成 Skill") || errandPage.includes("再上 Routine")) {
   console.error("cases/errand-opensource/ still renders the generic Skill / Routine start path.");
   process.exit(1);

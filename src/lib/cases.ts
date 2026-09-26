@@ -71,9 +71,18 @@ export interface CaseLandingContrastRow {
   rightEn: string;
 }
 
+export interface CaseLandingSection {
+  heading: string;
+  headingEn: string;
+  paragraphs: Array<{ text: string; textEn: string }>;
+  links?: CaseLandingLink[];
+}
+
 export interface CaseLanding {
   what: string;
   whatEn: string;
+  /** Extra thick-landing blocks, rendered between contrast and the try-steps. */
+  sections?: CaseLandingSection[];
   contrast?: {
     caption?: string;
     captionEn?: string;
@@ -158,6 +167,12 @@ export function caseSearchText(item: CaseItem): string {
       row.leftEn,
       row.right,
       row.rightEn,
+    ]),
+    ...(item.landing?.sections ?? []).flatMap((section) => [
+      section.heading,
+      section.headingEn,
+      ...section.paragraphs.flatMap((paragraph) => [paragraph.text, paragraph.textEn]),
+      ...(section.links ?? []).flatMap((link) => [link.label, link.labelEn, link.href]),
     ]),
     ...(item.landing?.steps ?? []).flatMap((step) => [
       step.title,

@@ -31,7 +31,7 @@
 | `titleEn` | string | 英文标题（EN 模式主标题；ZH 模式作为次要行） |
 | `summary` | string | 中文摘要 |
 | `summaryEn` | string | 英文摘要（EN 模式展示；勿编造新主张） |
-| `categories` | string[] | 分类：`sales` `automation` `content` `engineering` `daily-digest` `recruiting` `research` `marketing` `finance` `multi-agent` `coding` |
+| `categories` | string[] | 分类：`sales` `automation` `content` `engineering` `daily-digest` `recruiting` `research` `marketing` `finance` `multi-agent` `coding` `ops` `design`。`design` 不是第四套库：HTML / Agent UI 用标签 `design`，三库合集在 `/design/` |
 | `role` | string | Bot / 角色名 |
 | `sourceUrl` | string | 主来源 URL |
 | `secondaryUrls` | string[] | 可选补充来源 |
@@ -63,6 +63,7 @@
 | `what` / `whatEn` | string | 「它是什么」。不要把 `summary` 再贴一遍 |
 | `contrast` | object | 可选。`leftLabel` / `rightLabel`（及 `En`）加 `rows[]`：`aspect` `left` `right` 及对应 `En`。可选 `caption` / `captionEn`。右列只写对照理由，不编本库没核过的对方细节 |
 | `steps` | object[] | 可选。「怎么试」。每步 `title` `body`（及 `En`）和 `links[]`（`href` `label` `labelEn`），`href` 必须是真实外链 |
+| `sections` | object[] | 可选。插在「对照」和「怎么试」之间。每块 `heading` / `headingEn`、`paragraphs[]`（`text` / `textEn`）、可选 `links[]` |
 | `boundaries` | object[] | 可选。「边界」。每条 `text` / `textEn`：依赖、密钥、对外动作、不要误当成官方替代 |
 | `previewCredit` / `previewCreditEn` | string | 可选。预览图出处。有界面的产品配真实 `previewImage`，不要画假 UI |
 
